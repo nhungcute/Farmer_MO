@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "MO Farm prototype asset and animation pipeline",
+  "packageManager": "pnpm@10.4.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "engines": {
     "node": ">=22.0.0"
   },
@@ -13,6 +18,19 @@
     "assets:validate:strict": "node tools/export-assets/validate.mjs --strict-output",
     "assets:pack": "node tools/export-assets/index.mjs pack",
     "assets:preview": "node tools/export-assets/index.mjs preview",
-    "assets:build": "npm run assets:generate && npm run assets:validate && npm run assets:pack && npm run assets:validate:strict && npm run assets:preview"
+    "assets:build": "npm run assets:generate && npm run assets:validate && npm run assets:pack && npm run assets:validate:strict && npm run assets:preview",
+    "dev:api": "node apps/api/src/server.mjs",
+    "dev:web": "node apps/web/server.mjs",
+    "test:api": "node apps/api/test/smoke.mjs",
+    "test:api:full": "node --test apps/api/test/api.test.mjs",
+    "renderer:test": "node --test tests/renderer/*.test.mjs",
+    "renderer:check": "node tools/check-renderer-syntax.mjs",
+    "renderer:vendor": "node tools/vendor-pixi.mjs",
+    "check:localization": "node tools/check-localization.mjs",
+    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
+    "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run assets:validate:strict"
+  },
+  "dependencies": {
+    "pixi.js": "^8.21.0"
   }
 }

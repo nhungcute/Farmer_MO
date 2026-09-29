@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#7fc64b" />
+    <title>MO Farm — Bản xem trước Renderer Pixi</title>
+    <link rel="stylesheet" href="./src/renderer-demo.css" />
+    <!-- Uses the same pinned local Pixi bundle as the main web shell. Run npm run renderer:vendor first. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "pixi.js": "./public/vendor/pixi.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section class="demo-shell">
+      <header class="demo-toolbar">
+        <strong>🌾 MO Farm · Renderer Pixi</strong>
+        <label>Gà
+          <select id="chicken-count">
+            <option value="1">1</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+        <label>Trạng thái
+          <select id="chicken-state">
+            <option value="AUTO">Tự động</option>
+            <option value="IDLE">Đứng yên</option>
+            <option value="WALK">Đi bộ</option>
+            <option value="EAT">Ăn</option>
+            <option value="HAPPY">Vui</option>
+            <option value="SLEEP">Ngủ</option>
+            <option value="PRODUCT_READY">Sẵn trứng</option>
+          </select>
+        </label>
+        <button id="feed-event">Kiểm tra sự kiện cho ăn</button>
+        <button id="effect-harvest">Hiệu ứng thu hoạch</button>
+        <button id="effect-build">Hiệu ứng xây dựng</button>
+        <button id="focus-farm">Tập trung trang trại</button>
+        <label class="check"><input id="debug-toggle" type="checkbox" checked /> Chẩn đoán</label>
+        <span id="demo-status">Kéo để di chuyển · cuộn/chụm để thu phóng</span>
+      </header>
+      <main class="renderer-wrap">
+        <div id="renderer-host"></div>
+        <aside id="event-log" class="event-log" aria-label="Sự kiện hoạt ảnh"></aside>
+        <div class="rotate-overlay"><div><b>↔ Xoay ngang để xem Renderer Pixi</b><span>MO Farm ưu tiên chế độ ngang trên điện thoại.</span></div></div>
+      </main>
+    </section>
+    <script type="module" src="./src/game/demo/renderer-demo.js"></script>
+  </body>
+</html>

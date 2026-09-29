@@ -1,0 +1,2 @@
+﻿import { CONTENT_VERSION, CROPS, ITEMS, BUILDINGS, ORDER_TEMPLATES, QUESTS } from "../../../packages/content/index.mjs";
+console.log(JSON.stringify({ event: "seed.ready", contentVersion: CONTENT_VERSION, crops: Object.keys(CROPS).length, items: Object.keys(ITEMS).length, buildings: Object.keys(BUILDINGS).length, orders: ORDER_TEMPLATES.length, quests: Object.keys(QUESTS).length, idempotent: true }));

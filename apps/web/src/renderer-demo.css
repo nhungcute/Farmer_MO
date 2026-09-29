@@ -1,0 +1,22 @@
+:root { font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif; color: #2d3617; background: #dff0c7; }
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { min-width: 320px; }
+button, select, input { font: inherit; }
+.demo-shell { width: 100%; height: 100dvh; display: grid; grid-template-rows: auto 1fr; }
+.demo-toolbar { display: flex; align-items: center; gap: 8px; padding: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) 8px max(10px, env(safe-area-inset-left)); background: #fff7e6; border-bottom: 2px solid #b4834f; overflow-x: auto; white-space: nowrap; }
+.demo-toolbar strong { font-size: 1rem; margin-right: 4px; }
+.demo-toolbar label { display: inline-flex; gap: 5px; align-items: center; font-size: .8rem; }
+.demo-toolbar select, .demo-toolbar button { border: 1px solid #b4834f; border-radius: 9px; padding: 6px 8px; background: #fff; color: #3c2717; }
+.demo-toolbar button { background: linear-gradient(#8edc4f, #62b92d); color: #173b17; font-weight: 800; cursor: pointer; }
+.demo-toolbar .check { padding: 4px 7px; border-radius: 8px; background: #f1e0be; }
+#demo-status { margin-left: auto; color: #725036; font-size: .78rem; }
+.renderer-wrap { position: relative; min-height: 0; overflow: hidden; }
+#renderer-host { position: absolute; inset: 0; background: #9ed77d; }
+.event-log { position: absolute; left: max(10px, env(safe-area-inset-left)); bottom: max(10px, env(safe-area-inset-bottom)); z-index: 10; width: min(420px, 54vw); max-height: 120px; overflow: hidden; padding: 7px 9px; border: 1px solid #ffffff55; border-radius: 9px; background: #173b2cce; color: #f7ffe9; font: 11px/1.35 ui-monospace, Consolas, monospace; pointer-events: none; }
+.rotate-overlay { display: none; position: absolute; inset: 0; z-index: 40; place-items: center; background: #fff7e6f2; text-align: center; padding: 24px; }
+.rotate-overlay div { display: grid; gap: 8px; max-width: 300px; }
+.rotate-overlay b { font-size: 1.15rem; }
+.rotate-overlay span { color: #725036; }
+@media (orientation: portrait) and (max-width: 720px) { .rotate-overlay { display: grid; } }
+@media (max-height: 500px) { .demo-toolbar { padding-top: 5px; padding-bottom: 5px; } .demo-toolbar select, .demo-toolbar button { padding: 4px 7px; } }

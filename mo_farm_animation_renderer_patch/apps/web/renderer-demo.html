@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#7fc64b" />
+    <title>Mỡ Farm — Pixi Renderer Workstream</title>
+    <link rel="stylesheet" href="./src/renderer-demo.css" />
+    <!-- Standalone preview only. Production integration should install pixi.js v8 through npm/pnpm and let the app bundler resolve the import. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "pixi.js": "https://cdn.jsdelivr.net/npm/pixi.js@8/dist/pixi.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section class="demo-shell">
+      <header class="demo-toolbar">
+        <strong>🌾 Mỡ Farm · Renderer C1</strong>
+        <label>Gà
+          <select id="chicken-count">
+            <option value="1">1</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+        <label>State
+          <select id="chicken-state">
+            <option value="AUTO">Auto mix</option>
+            <option value="IDLE">IDLE</option>
+            <option value="WALK">WALK</option>
+            <option value="EAT">EAT</option>
+            <option value="HAPPY">HAPPY</option>
+            <option value="SLEEP">SLEEP</option>
+            <option value="PRODUCT_READY">PRODUCT_READY</option>
+          </select>
+        </label>
+        <button id="feed-event">Test FEED_CONSUMED</button>
+        <button id="effect-harvest">Harvest FX</button>
+        <button id="effect-build">Build FX</button>
+        <button id="focus-farm">Focus</button>
+        <label class="check"><input id="debug-toggle" type="checkbox" checked /> Debug</label>
+        <span id="demo-status">Kéo để pan · wheel/pinch để zoom</span>
+      </header>
+      <main class="renderer-wrap">
+        <div id="renderer-host"></div>
+        <aside id="event-log" class="event-log" aria-label="Animation events"></aside>
+        <div class="rotate-overlay"><div><b>↻ Xoay ngang để test renderer</b><span>Mỡ Farm ưu tiên landscape trên điện thoại.</span></div></div>
+      </main>
+    </section>
+    <script type="module" src="./src/game/demo/renderer-demo.js"></script>
+  </body>
+</html>

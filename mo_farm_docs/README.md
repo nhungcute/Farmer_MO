@@ -16,6 +16,7 @@ Các file `24` đến `29` là phần canonical được chốt sau cùng:
 - `27_INFRASTRUCTURE_AND_LOCAL_DEVELOPMENT.md` — Docker local/public, migration, seed, backup, CI, Nginx và Named Tunnel.
 - `28_REQUIREMENT_TRACEABILITY_AND_QA.md` — requirement IDs, acceptance, test matrix và performance budget.
 - `29_RISK_REGISTER.md` — rủi ro và điều kiện đóng.
+- `30_IMPLEMENTATION_STATUS.md` — phần đã chạy, ranh giới prototype và thứ tự tiếp theo.
 
 Nếu tài liệu cũ có giá trị “gợi ý” hoặc mâu thuẫn với các file `24` đến `29`, dùng các file canonical này.
 

@@ -1,0 +1,11 @@
+{
+  "description": "Merge snippet only — do not replace root package.json.",
+  "dependencies": {
+    "pixi.js": "^8.21.0"
+  },
+  "suggestedScripts": {
+    "renderer:test": "node --test tests/renderer/*.test.mjs",
+    "renderer:check": "node tools/check-renderer-syntax.mjs",
+    "renderer:vendor": "node tools/vendor-pixi.mjs"
+  }
+}

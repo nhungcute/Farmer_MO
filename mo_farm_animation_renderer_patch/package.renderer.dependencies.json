@@ -1,0 +1,10 @@
+{
+  "description": "Merge snippet only — do not replace root package.json.",
+  "dependencies": {
+    "pixi.js": "^8.0.0"
+  },
+  "suggestedScripts": {
+    "renderer:test": "node --test tests/renderer/*.test.mjs",
+    "renderer:check": "node --check apps/web/src/game/pixi/PixiFarmRenderer.js && node --check apps/web/src/game/pixi/scene/FarmScene.js"
+  }
+}

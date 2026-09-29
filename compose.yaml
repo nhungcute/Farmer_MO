@@ -1,4 +1,4 @@
-﻿name: mo-farm
+name: mo-farm
 
 services:
   db:
@@ -26,19 +26,23 @@ services:
       NODE_ENV: ${NODE_ENV:-development}
       TZ: ${TZ:-UTC}
       PORT: 3000
+      HOST: 0.0.0.0
       DATABASE_URL: ${DATABASE_URL:-postgresql://mo_farm:change_me@db:5432/mo_farm}
       SESSION_SECRET: ${SESSION_SECRET:-change_me_minimum_32_chars}
       SESSION_TTL_HOURS: ${SESSION_TTL_HOURS:-168}
       COOKIE_SECURE: ${COOKIE_SECURE:-false}
       COOKIE_SAME_SITE: ${COOKIE_SAME_SITE:-Lax}
-      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:8080}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:${NGINX_PORT:-8080}}
       LOG_LEVEL: ${LOG_LEVEL:-info}
+      STATE_FILE: /data/farm-state.json
     depends_on:
       db:
         condition: service_healthy
+    volumes:
+      - mo_farm_state:/data
     networks: [backend, frontend]
     healthcheck:
-      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/api/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -49,7 +53,7 @@ services:
       dockerfile: apps/web/Dockerfile
     networks: [frontend]
     healthcheck:
-      test: ["CMD-SHELL", "wget -q -O - http://localhost:4173/ >/dev/null || exit 1"]
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:4173/ >/dev/null || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -57,7 +61,7 @@ services:
   nginx:
     image: nginx:1.27.1-alpine
     ports:
-      - "127.0.0.1:8080:80"
+      - "127.0.0.1:${NGINX_PORT:-8080}:80"
     volumes:
       - ./infra/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./infra/nginx/conf.d:/etc/nginx/conf.d:ro
@@ -68,19 +72,22 @@ services:
         condition: service_healthy
     networks: [frontend, backend]
     healthcheck:
-      test: ["CMD-SHELL", "wget -q -O - http://localhost/healthz >/dev/null || exit 1"]
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1/healthz >/dev/null || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 10
 
   migrate:
     profiles: ["init"]
-    build:
-      context: .
-      dockerfile: apps/api/Dockerfile
-    command: ["node", "apps/api/src/migrate.mjs"]
+    image: postgres:16.4-alpine
+    command: ["sh", "-ec", "PGHOST=db PGPASSWORD=\"$${POSTGRES_PASSWORD}\" psql -v ON_ERROR_STOP=1 -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -f /sql/001_mvp_schema.sql"]
     environment:
+      POSTGRES_DB: ${POSTGRES_DB:-mo_farm}
+      POSTGRES_USER: ${POSTGRES_USER:-mo_farm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
       DATABASE_URL: ${DATABASE_URL:-postgresql://mo_farm:change_me@db:5432/mo_farm}
+    volumes:
+      - ./apps/api/sql:/sql:ro
     depends_on:
       db:
         condition: service_healthy
@@ -104,7 +111,7 @@ services:
     image: cloudflare/cloudflared:2025.9.1
     command: tunnel --no-autoupdate run --token $${CLOUDFLARE_TUNNEL_TOKEN}
     environment:
-      CLOUDFLARE_TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:?Set CLOUDFLARE_TUNNEL_TOKEN for public profile}
+      CLOUDFLARE_TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
     depends_on:
       nginx:
         condition: service_healthy
@@ -112,6 +119,7 @@ services:
 
 volumes:
   mo_farm_db:
+  mo_farm_state:
 
 networks:
   frontend:

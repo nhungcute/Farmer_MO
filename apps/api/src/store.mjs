@@ -1,8 +1,29 @@
 import { createHash, randomBytes, randomUUID } from "node:crypto";
-import {
-  BUILDINGS, CHICKEN, CONTENT_VERSION, CROPS, FARM, ITEMS, LEVEL_UNLOCKS,
-  ORDER_TEMPLATES, QUESTS, STARTER_OBJECTS, STARTER_ORDERS, STARTER_PLOTS, unlocked, xpLevel,
-} from "../../../packages/content/index.mjs";
+import fs from "node:fs";
+import path from "node:path";
+import * as content from "../../../packages/content/index.mjs";
+import { normalizeName as sharedNormalizeName } from "../../../packages/shared/index.mjs";
+
+// Accept the shared package's canonical lower-case exports as well as the
+// upper-case aliases used by the standalone API package during migration.
+const CONTENT_VERSION = content.CONTENT_VERSION;
+const FARM = content.FARM ?? content.farm;
+const CROPS = content.CROPS ?? content.crops;
+const ITEMS = content.ITEMS ?? content.items;
+const BUILDINGS = content.BUILDINGS ?? content.buildings;
+const CHICKEN = content.CHICKEN ?? content.chicken;
+const ORDER_TEMPLATES = content.ORDER_TEMPLATES ?? content.orders ?? content.orderTemplates;
+const QUESTS = content.QUESTS ?? content.quests;
+const LEVEL_UNLOCKS = content.LEVEL_UNLOCKS ?? content.unlocks;
+const STARTER_OBJECTS = content.STARTER_OBJECTS ?? content.starterObjects;
+const STARTER_ORDERS = content.STARTER_ORDERS ?? content.starterOrders;
+const STARTER_PLOTS = content.STARTER_PLOTS ?? content.starterPlots;
+const unlocked = content.unlocked ?? ((level, definition) => Boolean(definition && definition.unlockLevel <= level));
+const xpLevel = content.xpLevel ?? ((xp) => {
+  let level = 1;
+  for (let i = 0; i < (content.LEVEL_THRESHOLDS ?? content.levelThresholds ?? []).length; i += 1) if (xp >= (content.LEVEL_THRESHOLDS ?? content.levelThresholds)[i]) level = i + 1;
+  return level;
+});
 
 export class ApiError extends Error {
   constructor(code, message, status = 400, details = {}) {
@@ -28,12 +49,9 @@ const uuid = (value, field) => {
 };
 
 export function normalizeCharacterName(input) {
-  if (typeof input !== "string") throw new ApiError("INVALID_INPUT", "Tên nhân vật không hợp lệ.", 400, { field: "name" });
-  const displayName = input.normalize("NFC").trim().replace(/\s+/gu, " ");
-  if ([...displayName].length < 2 || [...displayName].length > 24 || /\p{Cc}/u.test(displayName)) {
+  try { return sharedNormalizeName(input); } catch {
     throw new ApiError("INVALID_INPUT", "Tên nhân vật phải dài từ 2 đến 24 ký tự và không chứa ký tự điều khiển.", 400, { field: "name", minLength: 2, maxLength: 24 });
   }
-  return { displayName, lookupName: displayName.toLocaleLowerCase("vi-VN") };
 }
 
 function createQuestState() {
@@ -41,13 +59,37 @@ function createQuestState() {
 }
 
 export class FarmStore {
-  constructor({ clock = nowDefault, sessionTtlMs = 7 * 24 * 60 * 60 * 1000 } = {}) {
+  constructor({ clock = nowDefault, sessionTtlMs = 7 * 24 * 60 * 60 * 1000, persistencePath = process.env.STATE_FILE ?? "" } = {}) {
     this.clock = clock;
     this.sessionTtlMs = sessionTtlMs;
+    this.persistencePath = persistencePath;
     this.characters = new Map();
     this.lookup = new Map();
     this.sessions = new Map();
     this.idempotency = new Map();
+    this.#load();
+  }
+
+  #load() {
+    if (!this.persistencePath) return;
+    try {
+      const value = JSON.parse(fs.readFileSync(this.persistencePath, "utf8"));
+      for (const character of value.characters ?? []) this.characters.set(character.id, character);
+      for (const [lookupName, id] of value.lookup ?? []) this.lookup.set(lookupName, id);
+      for (const [hashKey, session] of value.sessions ?? []) this.sessions.set(hashKey, { ...session, expiresAt: new Date(session.expiresAt), createdAt: new Date(session.createdAt), lastSeenAt: new Date(session.lastSeenAt), revokedAt: session.revokedAt ? new Date(session.revokedAt) : null });
+      for (const [id, record] of value.idempotency ?? []) this.idempotency.set(id, record);
+    } catch (error) {
+      if (error.code !== "ENOENT") console.warn(JSON.stringify({ event: "store.load_failed", path: this.persistencePath, message: error.message }));
+    }
+  }
+
+  #save() {
+    if (!this.persistencePath) return;
+    const directory = path.dirname(this.persistencePath);
+    fs.mkdirSync(directory, { recursive: true });
+    const temporary = `${this.persistencePath}.tmp`;
+    fs.writeFileSync(temporary, JSON.stringify({ characters: [...this.characters.values()], lookup: [...this.lookup.entries()], sessions: [...this.sessions.entries()], idempotency: [...this.idempotency.entries()] }), "utf8");
+    fs.renameSync(temporary, this.persistencePath);
   }
 
   now() { return new Date(this.clock()); }
@@ -67,6 +109,7 @@ export class FarmStore {
     if (current) {
       const character = this.characters.get(current);
       const token = this.#newSession(character.id, now);
+    this.#save();
       return { status: "existing", token, character: this.characterSummary(character) };
     }
 
@@ -74,6 +117,7 @@ export class FarmStore {
     this.characters.set(character.id, character);
     this.lookup.set(character.lookupName, character.id);
     const token = this.#newSession(character.id, now);
+    this.#save();
     return { status: "created", token, character: this.characterSummary(character) };
   }
 
@@ -94,7 +138,7 @@ export class FarmStore {
       id: characterId, displayName, lookupName, level: FARM.level, xp: FARM.xp, coins: FARM.coins, diamonds: FARM.diamonds, stateRevision: 1,
       createdAt, updatedAt: createdAt, farm: { id: farmId, characterId, width: FARM.width, height: FARM.height, orderCursor: 0, createdAt, updatedAt: createdAt },
       objects, plots, animals: [], inventory: { chicken_feed: 1 }, warehouse: { capacity: FARM.warehouseCapacity }, orders,
-      quests: createQuestState(), settings: { locale: "vi-VN", tutorialEnabled: false },
+      quests: createQuestState(), settings: { locale: "vi-VN" },
     };
   }
 
@@ -163,6 +207,7 @@ export class FarmStore {
     this.#touch(character);
     const body = { ...result, serverNow: iso(this.now()), stateRevision: character.stateRevision };
     this.idempotency.set(id, { requestHash, body: clone(body) });
+    this.#save();
     return body;
   }
 

@@ -64,3 +64,18 @@ export function xpLevel(xp) {
 export function unlocked(level, definition) {
   return Boolean(definition && definition.unlockLevel <= level);
 }
+
+// Stable lower-case aliases for shared consumers. Keep the uppercase names
+// above for older API imports during the workspace migration.
+export const farm = FARM;
+export const crops = CROPS;
+export const items = ITEMS;
+export const buildings = BUILDINGS;
+export const chicken = CHICKEN;
+export const orders = ORDER_TEMPLATES;
+export const quests = QUESTS;
+export const levelThresholds = LEVEL_THRESHOLDS;
+export const unlocks = LEVEL_UNLOCKS;
+export const starterObjects = STARTER_OBJECTS;
+export const starterPlots = STARTER_PLOTS;
+export const starterOrders = STARTER_ORDERS;

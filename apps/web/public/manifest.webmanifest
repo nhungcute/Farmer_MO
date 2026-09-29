@@ -1,0 +1,14 @@
+{
+  "name": "MO Farm – Nông trại",
+  "short_name": "MO Farm",
+  "description": "Bản thử nghiệm game nông trại MO Farm",
+  "lang": "vi-VN",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4ead5",
+  "theme_color": "#173b2c",
+  "categories": ["games", "simulation"]
+}

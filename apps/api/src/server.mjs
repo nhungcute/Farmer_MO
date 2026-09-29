@@ -1,14 +1,14 @@
 import http from "node:http";
-import { URL } from "node:url";
+import crypto from "node:crypto";
+import { URL, fileURLToPath } from "node:url";
+import path from "node:path";
 import { ApiError, FarmStore } from "./store.mjs";
 
 const JSON_LIMIT = 256 * 1024;
 const statusFor = (code) => ({ INVALID_INPUT: 400, UNAUTHORIZED: 401, SESSION_EXPIRED: 401, NOT_FOUND: 404, NOT_ENOUGH_COINS: 409, NOT_ENOUGH_ITEM: 409, WAREHOUSE_FULL: 409, NOT_UNLOCKED: 409, PLOT_NOT_EMPTY: 409, CROP_NOT_READY: 409, BUILDING_COLLISION: 409, INVALID_ROTATION: 409, UNIQUE_BUILDING_EXISTS: 409, ORDER_NOT_COMPLETABLE: 409, ANIMAL_NOT_READY: 409, IDEMPOTENCY_KEY_REUSED: 409, RATE_LIMITED: 429, INTERNAL_ERROR: 500 }[code] ?? 400);
 const parseCookies = (header = "") => Object.fromEntries(header.split(";").map((part) => part.trim().split("=")).filter(([key, value]) => key && value).map(([key, ...value]) => [key, value.join("=")]));
+const decodeCookie = (value) => { try { return decodeURIComponent(value); } catch { return undefined; } };
 const requestId = () => crypto.randomUUID();
-
-// Keep crypto import lazy-free for environments that expose it globally through node:crypto.
-import crypto from "node:crypto";
 
 async function readJson(request) {
   let size = 0; const chunks = [];
@@ -22,7 +22,10 @@ function send(response, status, body, headers = {}) {
   response.end(JSON.stringify(body));
 }
 
-function success(response, body, headers = {}) { send(response, 200, { ...body, requestId: body.requestId ?? requestId() }, headers); }
+function success(response, body, headers = {}) {
+  const responseId = headers["x-request-id"] ?? requestId();
+  send(response, 200, { ...body, requestId: body.requestId ?? responseId }, headers);
+}
 function errorResponse(response, error, id) {
   const code = error instanceof ApiError ? error.code : "INTERNAL_ERROR";
   const message = error instanceof ApiError ? error.message : "Có lỗi máy chủ. Vui lòng thử lại.";
@@ -33,28 +36,41 @@ function errorResponse(response, error, id) {
 
 function idempotencyKey(request) { return request.headers["idempotency-key"]; }
 
-export function createApiServer({ store = new FarmStore(), publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local" } = {}) {
+export function createApiServer({ store, clock, sessionTtlMs, publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local" } = {}) {
+  store ??= new FarmStore({ clock, sessionTtlMs });
   const server = http.createServer(async (request, response) => {
     const id = requestId();
     try {
-      if (request.method === "OPTIONS") { response.writeHead(204, { "access-control-allow-credentials": "true", "access-control-allow-headers": "content-type, idempotency-key", "access-control-allow-methods": "GET, POST, OPTIONS" }); response.end(); return; }
+      if (request.method === "OPTIONS") {
+        const requestedOrigin = request.headers.origin;
+        const cors = publicOrigin && requestedOrigin === publicOrigin ? { "access-control-allow-origin": requestedOrigin, "vary": "Origin" } : {};
+        response.writeHead(204, { "access-control-allow-credentials": "true", "access-control-allow-headers": "content-type, idempotency-key", "access-control-allow-methods": "GET, POST, OPTIONS", ...cors }); response.end(); return;
+      }
       const origin = request.headers.origin;
-      if (publicOrigin && origin !== publicOrigin) throw new ApiError("UNAUTHORIZED", "Nguồn truy cập không hợp lệ.", 403);
+      // Browser requests carry Origin; allow origin-less health checks and local CLI calls.
+      if (publicOrigin && origin && origin !== publicOrigin) throw new ApiError("UNAUTHORIZED", "Nguồn truy cập không hợp lệ.", 403);
+      if (origin && publicOrigin === origin) {
+        response.setHeader("access-control-allow-origin", origin);
+        response.setHeader("access-control-allow-credentials", "true");
+        response.setHeader("vary", "Origin");
+      }
       const url = new URL(request.url ?? "/", "http://localhost");
       const method = request.method ?? "GET";
       const route = `${method} ${url.pathname}`;
-      if (route === "GET /api/health/live" || route === "GET /api/health/ready") { success(response, { status: "ok", service: "mo-farm-api", checks: { memory: "ok", content: "mvp-1" } }); return; }
+      if (route === "GET /api/health/live" || route === "GET /api/health/ready" || route === "GET /api/health") { success(response, { status: "ok", service: "mo-farm-api", version: "1.0.0", checks: { memory: "ok", content: "mvp-1", persistence: "prototype-file-adapter" } }); return; }
       if (route === "GET /health/live" || route === "GET /health/ready") { success(response, { status: "ok", service: "mo-farm-api" }); return; }
 
       if (route === "POST /api/character/enter") {
         const body = await readJson(request); const result = store.enter(body?.name);
-        const secure = environment === "demo" || environment === "production" ? "; Secure" : "";
-        success(response, result, { "set-cookie": `mo_farm_session=${encodeURIComponent(result.token)}; HttpOnly; SameSite=Lax; Path=/${secure}`, "x-request-id": id });
+        const { token, ...publicResult } = result;
+        const sameSite = ["Strict", "Lax", "None"].includes(process.env.COOKIE_SAME_SITE) ? process.env.COOKIE_SAME_SITE : "Lax";
+        const secure = String(process.env.COOKIE_SECURE).toLowerCase() === "true" || environment === "demo" || environment === "production" || sameSite === "None" ? "; Secure" : "";
+        success(response, publicResult, { "set-cookie": `mo_farm_session=${encodeURIComponent(token)}; HttpOnly; SameSite=${sameSite}; Path=/${secure}`, "x-request-id": id });
         return;
       }
 
       const cookies = parseCookies(request.headers.cookie);
-      const token = cookies.mo_farm_session ? decodeURIComponent(cookies.mo_farm_session) : undefined;
+      const token = cookies.mo_farm_session ? decodeCookie(cookies.mo_farm_session) : undefined;
       const character = store.getCharacterBySession(token);
       if (route === "GET /api/game/bootstrap") { success(response, store.bootstrap(character), { "x-request-id": id }); return; }
       const key = idempotencyKey(request);
@@ -82,5 +98,5 @@ export async function start({ port = Number(process.env.PORT ?? 3001), host = pr
   return { server, store };
 }
 
-if (import.meta.url === `file://${process.argv[1]?.replaceAll("\\", "/")}`) start();
+if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) start();
 
