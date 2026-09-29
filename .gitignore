@@ -21,6 +21,8 @@ coverage/
 dist/
 .tmp/
 .cache/
+test-results/
+playwright-report/
 
 # IDE and operating-system files
 .vscode/

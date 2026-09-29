@@ -1,0 +1,26 @@
+# A02 — PostgreSQL API runtime wiring
+
+- Task ID: A02
+- Name: Select PostgreSQL runtime repository and preserve API contract
+- Status: RUNNING
+- Owner: root/backend integration
+- Dependencies: A01 REVIEW; canonical content definitions; existing API error envelope
+- Owned paths: `apps/api/src/server.mjs`, `apps/api/src/migrate.mjs`, API Docker/build wiring, root package scripts/dependencies, Compose migration entry point, PostgreSQL integration tests
+- Forbidden paths: gameplay/economy number changes, Tutorial, renderer/asset IDs, public tunnel, replacing the JSON adapter before parity tests
+- Deliverables: driver-backed repository selection, migration bootstrap, repository error mapping, all mutation routes through transaction boundary, integration/concurrency tests, explicit demo/prod persistence mode
+- Checklist: 2/8
+  - [x] add `pg` dependency and install it in the API image
+  - [x] execute numeric SQL migrations through CLI/Compose profile
+  - [ ] select Postgres repository from an explicit production persistence setting
+  - [ ] map repository errors to the existing `ApiError` envelope
+  - [ ] wire enter/session/bootstrap without changing response contract
+  - [ ] wire all gameplay mutations through `runMutation`
+  - [ ] run PostgreSQL integration and concurrency tests
+  - [ ] update health/readiness to report actual persistence mode and review rollback
+- Current activity: repository boundary review and adapter selection design; file/JSON remains the explicit demo default.
+- Last completed: A01 repository and migration review; API image builds with `pg`; numeric migration CLI and Compose loop are in place.
+- Next activity: implement and test runtime selection, then wire operations incrementally behind an explicit `PERSISTENCE_DRIVER=postgres` gate.
+- Tests: `npm run check:syntax` pending after final integration; Docker API build PASS; A01 repository 5/5 PASS; SQL 001+002 previously PASS on PostgreSQL 16.
+- Blocker: A01 repository currently exposes normalized primitives but not all route business operations; do not enable it as the default runtime until parity/concurrency tests pass.
+- Start time: 2026-09-29 15:30 UTC
+- End time: —

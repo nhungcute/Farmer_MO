@@ -44,7 +44,10 @@ export class PixiFarmRenderer {
   async init() {
     if (this.initialized) return this;
     const dpr = this.#resolutionForQuality();
-    this.host.style.position ||= 'relative';
+    // The web shell provides an absolute overlay host. Only add a positioning
+    // context for standalone callers whose host is otherwise static; never
+    // overwrite a computed absolute/fixed layout and push the game grid taller.
+    if (!this.host.style.position && getComputedStyle(this.host).position === 'static') this.host.style.position = 'relative';
     this.host.style.overflow = 'hidden';
 
     this.app = new Application();

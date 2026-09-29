@@ -1,0 +1,26 @@
+# D01 — Observability / Performance Instrumentation
+
+- Task ID: D01
+- Name: API và renderer observability/performance instrumentation
+- Status: REVIEW
+- Owner: root/infrastructure
+- Dependencies: baseline M0–M3
+- Owned paths: `apps/api/src/observability/**`, instrumentation tests/docs, renderer debug metric additions nếu không đổi renderer contract
+- Forbidden paths: gameplay/economy definitions, asset IDs/manifest schema, PostgreSQL repository owned by A01, Playwright owned by C01, Cloudflare deployment, Tutorial
+- Deliverables: bounded API metric collector; request timing/status/route/request ID metrics; no secret/token logging; renderer metric contract; testable report/reset API; load-test handoff
+- Checklist: 8/8
+  - [x] API duration histogram/counters
+  - [x] status/route/request ID correlation
+  - [x] bounded memory/cardinality policy
+  - [x] sensitive-field redaction policy
+  - [x] renderer FPS/DPR/visible/culled/animated/zoom metric contract
+  - [x] unit tests
+  - [x] load-test scenario handoff
+- [x] documentation and integration review
+- Current activity: review-ready; D02 remains queued for load execution.
+- Last completed: bounded `ApiMetrics`, optional internal metrics endpoint, API lifecycle instrumentation, renderer metric contract and regression tests.
+- Next activity: D02 runs isolated load scenario after A02; production exporter remains a later infrastructure decision.
+- Tests: `node --test apps/api/test/observability.test.mjs` — 3/3 PASS; `npm run check` PASS.
+- Blocker: none.
+- Start time: 2026-09-29 14:57 UTC
+- End time: —

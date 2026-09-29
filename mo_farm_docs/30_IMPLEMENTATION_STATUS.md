@@ -1,5 +1,9 @@
 # Trạng thái triển khai prototype
 
+> Điều phối Release Candidate: trạng thái checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). Các task đang chạy gồm A01 PostgreSQL runtime, B01 asset inventory, C01 Playwright setup và D01 observability/performance; không được báo hoàn thành toàn bộ khi các checklist Release Candidate còn mở.
+
+Sau checkpoint A01/B01/C01/D01, các task đã chuyển `REVIEW`; A02 PostgreSQL API runtime wiring đang `RUNNING`. Demo vẫn giữ `PERSISTENCE_DRIVER=file` cho tới khi route parity và concurrency test PostgreSQL đạt.
+
 Ngày kiểm tra: 2026-09-29. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
 
 ## Đã triển khai và đã kiểm tra

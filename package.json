@@ -21,16 +21,24 @@
     "assets:build": "npm run assets:generate && npm run assets:validate && npm run assets:pack && npm run assets:validate:strict && npm run assets:preview",
     "dev:api": "node apps/api/src/server.mjs",
     "dev:web": "node apps/web/server.mjs",
+    "db:migrate": "node apps/api/src/migrate.mjs",
     "test:api": "node apps/api/test/smoke.mjs",
-    "test:api:full": "node --test apps/api/test/api.test.mjs",
     "renderer:test": "node --test tests/renderer/*.test.mjs",
     "renderer:check": "node tools/check-renderer-syntax.mjs",
     "renderer:vendor": "node tools/vendor-pixi.mjs",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "test:e2e": "playwright test",
     "check:localization": "node tools/check-localization.mjs",
-    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
+    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
+    "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs",
     "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run assets:validate:strict"
   },
   "dependencies": {
+    "pg": "^8.23.0",
     "pixi.js": "^8.21.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
   }
 }

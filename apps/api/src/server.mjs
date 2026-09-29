@@ -2,7 +2,9 @@ import http from "node:http";
 import crypto from "node:crypto";
 import { URL, fileURLToPath } from "node:url";
 import path from "node:path";
+import { performance } from "node:perf_hooks";
 import { ApiError, FarmStore } from "./store.mjs";
+import { createApiMetrics } from "./observability/metrics.mjs";
 
 const JSON_LIMIT = 256 * 1024;
 const statusFor = (code) => ({ INVALID_INPUT: 400, UNAUTHORIZED: 401, SESSION_EXPIRED: 401, NOT_FOUND: 404, NOT_ENOUGH_COINS: 409, NOT_ENOUGH_ITEM: 409, WAREHOUSE_FULL: 409, NOT_UNLOCKED: 409, PLOT_NOT_EMPTY: 409, CROP_NOT_READY: 409, BUILDING_COLLISION: 409, INVALID_ROTATION: 409, UNIQUE_BUILDING_EXISTS: 409, ORDER_NOT_COMPLETABLE: 409, ANIMAL_NOT_READY: 409, IDEMPOTENCY_KEY_REUSED: 409, RATE_LIMITED: 429, INTERNAL_ERROR: 500 }[code] ?? 400);
@@ -36,10 +38,18 @@ function errorResponse(response, error, id) {
 
 function idempotencyKey(request) { return request.headers["idempotency-key"]; }
 
-export function createApiServer({ store, clock, sessionTtlMs, publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local" } = {}) {
+export function createApiServer({ store, clock, sessionTtlMs, metrics = createApiMetrics({ logRequests: process.env.LOG_LEVEL === "debug" }), exposeMetrics = process.env.METRICS_PUBLIC === "true", publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local" } = {}) {
   store ??= new FarmStore({ clock, sessionTtlMs });
   const server = http.createServer(async (request, response) => {
+    const startedAt = performance.now();
+    const method = request.method ?? "GET";
+    let requestPath = "/";
+    try { requestPath = new URL(request.url ?? "/", "http://localhost").pathname; } catch { /* route parser below returns a normal error */ }
     const id = requestId();
+    response.once("finish", () => {
+      const event = metrics.recordRequest({ method, route: requestPath, statusCode: response.statusCode, durationMs: performance.now() - startedAt, requestId: id });
+      if (metrics.logRequests) console.log(JSON.stringify(event));
+    });
     try {
       if (request.method === "OPTIONS") {
         const requestedOrigin = request.headers.origin;
@@ -55,8 +65,12 @@ export function createApiServer({ store, clock, sessionTtlMs, publicOrigin = pro
         response.setHeader("vary", "Origin");
       }
       const url = new URL(request.url ?? "/", "http://localhost");
-      const method = request.method ?? "GET";
       const route = `${method} ${url.pathname}`;
+      if (route === "GET /api/health/metrics") {
+        if (!exposeMetrics) throw new ApiError("NOT_FOUND", "Không tìm thấy đường dẫn.", 404, { path: url.pathname });
+        success(response, { status: "ok", service: "mo-farm-api", metrics: metrics.snapshot() }, { "x-request-id": id });
+        return;
+      }
       if (route === "GET /api/health/live" || route === "GET /api/health/ready" || route === "GET /api/health") { success(response, { status: "ok", service: "mo-farm-api", version: "1.0.0", checks: { memory: "ok", content: "mvp-1", persistence: "prototype-file-adapter" } }); return; }
       if (route === "GET /health/live" || route === "GET /health/ready") { success(response, { status: "ok", service: "mo-farm-api" }); return; }
 
@@ -88,7 +102,7 @@ export function createApiServer({ store, clock, sessionTtlMs, publicOrigin = pro
       throw new ApiError("NOT_FOUND", "Không tìm thấy đường dẫn.", 404, { path: url.pathname });
     } catch (error) { errorResponse(response, error, id); }
   });
-  return { server, store };
+  return { server, store, metrics };
 }
 
 export async function start({ port = Number(process.env.PORT ?? 3001), host = process.env.HOST ?? "127.0.0.1", ...options } = {}) {

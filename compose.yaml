@@ -28,12 +28,14 @@ services:
       PORT: 3000
       HOST: 0.0.0.0
       DATABASE_URL: ${DATABASE_URL:-postgresql://mo_farm:change_me@db:5432/mo_farm}
+      PERSISTENCE_DRIVER: ${PERSISTENCE_DRIVER:-file}
       SESSION_SECRET: ${SESSION_SECRET:-change_me_minimum_32_chars}
       SESSION_TTL_HOURS: ${SESSION_TTL_HOURS:-168}
       COOKIE_SECURE: ${COOKIE_SECURE:-false}
       COOKIE_SAME_SITE: ${COOKIE_SAME_SITE:-Lax}
       PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-http://localhost:${NGINX_PORT:-8080}}
       LOG_LEVEL: ${LOG_LEVEL:-info}
+      METRICS_PUBLIC: ${METRICS_PUBLIC:-false}
       STATE_FILE: /data/farm-state.json
     depends_on:
       db:
@@ -80,7 +82,7 @@ services:
   migrate:
     profiles: ["init"]
     image: postgres:16.4-alpine
-    command: ["sh", "-ec", "PGHOST=db PGPASSWORD=\"$${POSTGRES_PASSWORD}\" psql -v ON_ERROR_STOP=1 -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -f /sql/001_mvp_schema.sql"]
+    command: ["sh", "-ec", "for sql in /sql/*.sql; do echo \"Applying $$sql\"; PGPASSWORD=\"$${POSTGRES_PASSWORD}\" psql -v ON_ERROR_STOP=1 -h db -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -f \"$$sql\"; done"]
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-mo_farm}
       POSTGRES_USER: ${POSTGRES_USER:-mo_farm}

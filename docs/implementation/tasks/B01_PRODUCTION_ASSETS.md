@@ -1,0 +1,25 @@
+# B01 — Production Asset Inventory / Replacement Contract
+
+- Task ID: B01
+- Name: Production asset inventory và replacement contract
+- Status: REVIEW
+- Owner: asset workstream
+- Dependencies: asset pipeline locked v1
+- Owned paths: `tools/asset-inventory.mjs`, `docs/assets/PRODUCTION_ASSET_INVENTORY.json`, `docs/assets/PRODUCTION_ASSET_INVENTORY.md`
+- Forbidden paths: renderer, manifest schema, asset IDs/frame IDs/FPS/pivot/anchor, generated PNGs, package manifest, backend, Compose, shared status docs
+- Deliverables: deterministic inventory, category/status counts, replacement invariants, production order, evidence checklist và validation command list
+- Checklist: 7/7
+  - [x] inventory terrain/buildings/crops/animals/chicken/pond/effects/ui
+  - [x] mark `placeholder` / `production_ready` / `approved`
+  - [x] preserve static asset IDs/frame IDs/canvas/anchor/pivot/source scale
+  - [x] preserve animation directions/frame order/FPS/loop/hold-last/events
+  - [x] record license/source/tool/creator evidence fields
+  - [x] document production replacement order
+  - [x] deterministic generation and strict validation
+- Current activity: waiting for review before production artwork replacement.
+- Last completed: generated 188-asset, 10-animation inventory; all 188 current assets are explicitly `placeholder`.
+- Next activity: B02 only after approved artwork is supplied; no renderer/backend change is required for replacement.
+- Tests: `node tools/asset-inventory.mjs`, asset validation and strict output validation PASS; deterministic output verified twice.
+- Blocker: production artwork, license and style approval are not supplied; B02 is therefore queued/blocked.
+- Start time: 2026-09-29 14:57 UTC
+- End time: 2026-09-29 (review-ready)
