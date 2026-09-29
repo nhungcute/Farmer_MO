@@ -1,0 +1,1509 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "terrain_grass_tile": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "terrain_grass_variant_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "terrain_grass_variant_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "terrain_grass_variant_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "terrain_grass_variant_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "building_farmhouse_lv1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "building_warehouse_lv1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "building_chicken_coop_lv1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_base": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_coin": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_diamond": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_rice": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_carrot": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_corn": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_tomato": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_chicken_feed": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_egg": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "icon_order": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "ui_rotate_overlay": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "ui_loading": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "ui_success_toast": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "ui_error_toast": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "build_ghost_valid": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "build_ghost_invalid": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_06": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_water_07": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_ripple_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_sparkle_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_sparkle_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_sparkle_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "pond_small_lv1_sparkle_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_rice_seed": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_rice_stage_1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_rice_stage_2": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_rice_stage_3": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_rice_ready": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_carrot_seed": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_carrot_stage_1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_carrot_stage_2": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_carrot_stage_3": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_carrot_ready": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_corn_seed": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_corn_stage_1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_corn_stage_2": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_corn_stage_3": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_corn_ready": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_tomato_seed": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_tomato_stage_1": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_tomato_stage_2": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_tomato_stage_3": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_tomato_ready": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_ready_glow_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_ready_glow_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_ready_glow_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "crop_ready_glow_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_plant_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_plant_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_plant_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_plant_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_harvest_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_build_success_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_06": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_coin_gain_07": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "fx_egg_collect_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_ne_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_ne_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_se_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_se_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_sw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_sw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_nw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_idle_nw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_ne_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_se_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_sw_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_walk_nw_05": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_ne_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_ne_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_ne_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_se_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_se_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_se_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_sw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_sw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_sw_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_nw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_nw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_eat_nw_04": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_ne_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_ne_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_se_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_se_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_sw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_sw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_nw_02": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_happy_nw_03": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_sleep_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_ne_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_ne_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_se_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_se_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_sw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_sw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_nw_00": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    },
+    "animal_chicken_product_ready_nw_01": {
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team",
+      "placeholder": true
+    }
+  }
+}

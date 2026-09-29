@@ -1,0 +1,304 @@
+{
+  "frames": {
+    "pond_small_lv1_sparkle_00": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_sparkle_01": {
+      "frame": {
+        "x": 516,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_sparkle_02": {
+      "frame": {
+        "x": 1030,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_sparkle_03": {
+      "frame": {
+        "x": 2,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_00": {
+      "frame": {
+        "x": 516,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_01": {
+      "frame": {
+        "x": 1030,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_02": {
+      "frame": {
+        "x": 2,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_03": {
+      "frame": {
+        "x": 516,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_04": {
+      "frame": {
+        "x": 1030,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_05": {
+      "frame": {
+        "x": 2,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_06": {
+      "frame": {
+        "x": 516,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    },
+    "pond_small_lv1_water_07": {
+      "frame": {
+        "x": 1030,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 384
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 384
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.86
+      }
+    }
+  },
+  "meta": {
+    "app": "MO Farm deterministic asset pipeline",
+    "version": "1.0",
+    "image": "farm_common-1.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1544,
+      "h": 1546
+    },
+    "scale": "1",
+    "padding": 2
+  }
+}

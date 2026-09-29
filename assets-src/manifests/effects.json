@@ -1,0 +1,882 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "fx_plant_00": {
+      "id": "fx_plant_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_plant_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_plant_01": {
+      "id": "fx_plant_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_plant_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_plant_02": {
+      "id": "fx_plant_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_plant_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_plant_03": {
+      "id": "fx_plant_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_plant_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_00": {
+      "id": "fx_harvest_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_01": {
+      "id": "fx_harvest_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_02": {
+      "id": "fx_harvest_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_03": {
+      "id": "fx_harvest_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_04": {
+      "id": "fx_harvest_04",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_harvest_05": {
+      "id": "fx_harvest_05",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_harvest_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_00": {
+      "id": "fx_build_success_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_01": {
+      "id": "fx_build_success_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_02": {
+      "id": "fx_build_success_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_03": {
+      "id": "fx_build_success_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_04": {
+      "id": "fx_build_success_04",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_build_success_05": {
+      "id": "fx_build_success_05",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_build_success_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_00": {
+      "id": "fx_coin_gain_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_01": {
+      "id": "fx_coin_gain_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_02": {
+      "id": "fx_coin_gain_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_03": {
+      "id": "fx_coin_gain_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_04": {
+      "id": "fx_coin_gain_04",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_05": {
+      "id": "fx_coin_gain_05",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_06": {
+      "id": "fx_coin_gain_06",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_06.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_coin_gain_07": {
+      "id": "fx_coin_gain_07",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_coin_gain_07.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_00": {
+      "id": "fx_egg_collect_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_01": {
+      "id": "fx_egg_collect_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_02": {
+      "id": "fx_egg_collect_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_03": {
+      "id": "fx_egg_collect_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_04": {
+      "id": "fx_egg_collect_04",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "fx_egg_collect_05": {
+      "id": "fx_egg_collect_05",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/fx_egg_collect_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {
+    "fx_plant": {
+      "id": "fx_plant",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "fx_plant_00"
+              },
+              {
+                "id": "fx_plant_01"
+              },
+              {
+                "id": "fx_plant_02"
+              },
+              {
+                "id": "fx_plant_03"
+              }
+            ],
+            "fps": 12,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    },
+    "fx_harvest": {
+      "id": "fx_harvest",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "fx_harvest_00"
+              },
+              {
+                "id": "fx_harvest_01"
+              },
+              {
+                "id": "fx_harvest_02"
+              },
+              {
+                "id": "fx_harvest_03"
+              },
+              {
+                "id": "fx_harvest_04"
+              },
+              {
+                "id": "fx_harvest_05"
+              }
+            ],
+            "fps": 12,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    },
+    "fx_build_success": {
+      "id": "fx_build_success",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "fx_build_success_00"
+              },
+              {
+                "id": "fx_build_success_01"
+              },
+              {
+                "id": "fx_build_success_02"
+              },
+              {
+                "id": "fx_build_success_03"
+              },
+              {
+                "id": "fx_build_success_04"
+              },
+              {
+                "id": "fx_build_success_05"
+              }
+            ],
+            "fps": 12,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    },
+    "fx_coin_gain": {
+      "id": "fx_coin_gain",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "fx_coin_gain_00"
+              },
+              {
+                "id": "fx_coin_gain_01"
+              },
+              {
+                "id": "fx_coin_gain_02"
+              },
+              {
+                "id": "fx_coin_gain_03"
+              },
+              {
+                "id": "fx_coin_gain_04"
+              },
+              {
+                "id": "fx_coin_gain_05"
+              },
+              {
+                "id": "fx_coin_gain_06"
+              },
+              {
+                "id": "fx_coin_gain_07"
+              }
+            ],
+            "fps": 12,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    },
+    "fx_egg_collect": {
+      "id": "fx_egg_collect",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "fx_egg_collect_00"
+              },
+              {
+                "id": "fx_egg_collect_01"
+              },
+              {
+                "id": "fx_egg_collect_02"
+              },
+              {
+                "id": "fx_egg_collect_03"
+              },
+              {
+                "id": "fx_egg_collect_04"
+              },
+              {
+                "id": "fx_egg_collect_05"
+              }
+            ],
+            "fps": 12,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    }
+  }
+}

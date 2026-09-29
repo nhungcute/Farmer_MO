@@ -1,0 +1,572 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "crop_rice_seed": {
+      "id": "crop_rice_seed",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_rice_seed.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_rice_stage_1": {
+      "id": "crop_rice_stage_1",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_rice_stage_1.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_rice_stage_2": {
+      "id": "crop_rice_stage_2",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_rice_stage_2.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_rice_stage_3": {
+      "id": "crop_rice_stage_3",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_rice_stage_3.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_rice_ready": {
+      "id": "crop_rice_ready",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_rice_ready.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_carrot_seed": {
+      "id": "crop_carrot_seed",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_carrot_seed.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_carrot_stage_1": {
+      "id": "crop_carrot_stage_1",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_carrot_stage_1.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_carrot_stage_2": {
+      "id": "crop_carrot_stage_2",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_carrot_stage_2.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_carrot_stage_3": {
+      "id": "crop_carrot_stage_3",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_carrot_stage_3.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_carrot_ready": {
+      "id": "crop_carrot_ready",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_carrot_ready.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_corn_seed": {
+      "id": "crop_corn_seed",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_corn_seed.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_corn_stage_1": {
+      "id": "crop_corn_stage_1",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_corn_stage_1.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_corn_stage_2": {
+      "id": "crop_corn_stage_2",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_corn_stage_2.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_corn_stage_3": {
+      "id": "crop_corn_stage_3",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_corn_stage_3.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_corn_ready": {
+      "id": "crop_corn_ready",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_corn_ready.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_tomato_seed": {
+      "id": "crop_tomato_seed",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_tomato_seed.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_tomato_stage_1": {
+      "id": "crop_tomato_stage_1",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_tomato_stage_1.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_tomato_stage_2": {
+      "id": "crop_tomato_stage_2",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_tomato_stage_2.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_tomato_stage_3": {
+      "id": "crop_tomato_stage_3",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_tomato_stage_3.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_tomato_ready": {
+      "id": "crop_tomato_ready",
+      "atlas": "crops",
+      "sourceFile": "assets-src/crops/crop_tomato_ready.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_ready_glow_00": {
+      "id": "crop_ready_glow_00",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/crop_ready_glow_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_ready_glow_01": {
+      "id": "crop_ready_glow_01",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/crop_ready_glow_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_ready_glow_02": {
+      "id": "crop_ready_glow_02",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/crop_ready_glow_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "crop_ready_glow_03": {
+      "id": "crop_ready_glow_03",
+      "atlas": "effects",
+      "sourceFile": "assets-src/effects/crop_ready_glow_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {
+    "crop_ready_glow": {
+      "id": "crop_ready_glow",
+      "atlas": "effects",
+      "directions": [
+        "NONE"
+      ],
+      "defaultDirection": "NONE",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "mirrorAllowed": false,
+      "animations": {
+        "DEFAULT": {
+          "NONE": {
+            "frames": [
+              {
+                "id": "crop_ready_glow_00"
+              },
+              {
+                "id": "crop_ready_glow_01"
+              },
+              {
+                "id": "crop_ready_glow_02"
+              },
+              {
+                "id": "crop_ready_glow_03"
+              }
+            ],
+            "fps": 8,
+            "loop": false,
+            "holdLast": false
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2030 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "animal_chicken_idle_ne_00": {
+      "id": "animal_chicken_idle_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_ne_01": {
+      "id": "animal_chicken_idle_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_ne_02": {
+      "id": "animal_chicken_idle_ne_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_ne_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_ne_03": {
+      "id": "animal_chicken_idle_ne_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_ne_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_se_00": {
+      "id": "animal_chicken_idle_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_se_01": {
+      "id": "animal_chicken_idle_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_se_02": {
+      "id": "animal_chicken_idle_se_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_se_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_se_03": {
+      "id": "animal_chicken_idle_se_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_se_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_sw_00": {
+      "id": "animal_chicken_idle_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_sw_01": {
+      "id": "animal_chicken_idle_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_sw_02": {
+      "id": "animal_chicken_idle_sw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_sw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_sw_03": {
+      "id": "animal_chicken_idle_sw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_sw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_nw_00": {
+      "id": "animal_chicken_idle_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_nw_01": {
+      "id": "animal_chicken_idle_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_nw_02": {
+      "id": "animal_chicken_idle_nw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_nw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_idle_nw_03": {
+      "id": "animal_chicken_idle_nw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_idle_nw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_00": {
+      "id": "animal_chicken_walk_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_01": {
+      "id": "animal_chicken_walk_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_02": {
+      "id": "animal_chicken_walk_ne_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_03": {
+      "id": "animal_chicken_walk_ne_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_04": {
+      "id": "animal_chicken_walk_ne_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_ne_05": {
+      "id": "animal_chicken_walk_ne_05",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_ne_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_00": {
+      "id": "animal_chicken_walk_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_01": {
+      "id": "animal_chicken_walk_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_02": {
+      "id": "animal_chicken_walk_se_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_03": {
+      "id": "animal_chicken_walk_se_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_04": {
+      "id": "animal_chicken_walk_se_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_se_05": {
+      "id": "animal_chicken_walk_se_05",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_se_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_00": {
+      "id": "animal_chicken_walk_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_01": {
+      "id": "animal_chicken_walk_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_02": {
+      "id": "animal_chicken_walk_sw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_03": {
+      "id": "animal_chicken_walk_sw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_04": {
+      "id": "animal_chicken_walk_sw_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_sw_05": {
+      "id": "animal_chicken_walk_sw_05",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_sw_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_00": {
+      "id": "animal_chicken_walk_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_01": {
+      "id": "animal_chicken_walk_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_02": {
+      "id": "animal_chicken_walk_nw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_03": {
+      "id": "animal_chicken_walk_nw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_04": {
+      "id": "animal_chicken_walk_nw_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_walk_nw_05": {
+      "id": "animal_chicken_walk_nw_05",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_walk_nw_05.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_ne_00": {
+      "id": "animal_chicken_eat_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_ne_01": {
+      "id": "animal_chicken_eat_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_ne_02": {
+      "id": "animal_chicken_eat_ne_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_ne_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_ne_03": {
+      "id": "animal_chicken_eat_ne_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_ne_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_ne_04": {
+      "id": "animal_chicken_eat_ne_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_ne_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_se_00": {
+      "id": "animal_chicken_eat_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_se_01": {
+      "id": "animal_chicken_eat_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_se_02": {
+      "id": "animal_chicken_eat_se_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_se_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_se_03": {
+      "id": "animal_chicken_eat_se_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_se_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_se_04": {
+      "id": "animal_chicken_eat_se_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_se_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_sw_00": {
+      "id": "animal_chicken_eat_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_sw_01": {
+      "id": "animal_chicken_eat_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_sw_02": {
+      "id": "animal_chicken_eat_sw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_sw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_sw_03": {
+      "id": "animal_chicken_eat_sw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_sw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_sw_04": {
+      "id": "animal_chicken_eat_sw_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_sw_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_nw_00": {
+      "id": "animal_chicken_eat_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_nw_01": {
+      "id": "animal_chicken_eat_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_nw_02": {
+      "id": "animal_chicken_eat_nw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_nw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_nw_03": {
+      "id": "animal_chicken_eat_nw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_nw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_eat_nw_04": {
+      "id": "animal_chicken_eat_nw_04",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_eat_nw_04.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_ne_00": {
+      "id": "animal_chicken_happy_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_ne_01": {
+      "id": "animal_chicken_happy_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_ne_02": {
+      "id": "animal_chicken_happy_ne_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_ne_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_ne_03": {
+      "id": "animal_chicken_happy_ne_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_ne_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_se_00": {
+      "id": "animal_chicken_happy_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_se_01": {
+      "id": "animal_chicken_happy_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_se_02": {
+      "id": "animal_chicken_happy_se_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_se_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_se_03": {
+      "id": "animal_chicken_happy_se_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_se_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_sw_00": {
+      "id": "animal_chicken_happy_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_sw_01": {
+      "id": "animal_chicken_happy_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_sw_02": {
+      "id": "animal_chicken_happy_sw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_sw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_sw_03": {
+      "id": "animal_chicken_happy_sw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_sw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_nw_00": {
+      "id": "animal_chicken_happy_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_nw_01": {
+      "id": "animal_chicken_happy_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_nw_02": {
+      "id": "animal_chicken_happy_nw_02",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_nw_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_happy_nw_03": {
+      "id": "animal_chicken_happy_nw_03",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_happy_nw_03.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_ne_00": {
+      "id": "animal_chicken_sleep_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_ne_01": {
+      "id": "animal_chicken_sleep_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_se_00": {
+      "id": "animal_chicken_sleep_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_se_01": {
+      "id": "animal_chicken_sleep_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_sw_00": {
+      "id": "animal_chicken_sleep_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_sw_01": {
+      "id": "animal_chicken_sleep_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_nw_00": {
+      "id": "animal_chicken_sleep_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_sleep_nw_01": {
+      "id": "animal_chicken_sleep_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_sleep_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_ne_00": {
+      "id": "animal_chicken_product_ready_ne_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_ne_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_ne_01": {
+      "id": "animal_chicken_product_ready_ne_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_ne_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_se_00": {
+      "id": "animal_chicken_product_ready_se_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_se_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_se_01": {
+      "id": "animal_chicken_product_ready_se_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_se_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_sw_00": {
+      "id": "animal_chicken_product_ready_sw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_sw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_sw_01": {
+      "id": "animal_chicken_product_ready_sw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_sw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_nw_00": {
+      "id": "animal_chicken_product_ready_nw_00",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_nw_00.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "animal_chicken_product_ready_nw_01": {
+      "id": "animal_chicken_product_ready_nw_01",
+      "atlas": "chicken",
+      "sourceFile": "assets-src/animals/chicken/animal_chicken_product_ready_nw_01.png",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {}
+}

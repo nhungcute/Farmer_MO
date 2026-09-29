@@ -1,0 +1,63 @@
+{
+  "atlas": "farm_common",
+  "pages": [
+    {
+      "image": "farm_common-0.png",
+      "json": "farm_common-0.json",
+      "width": 1952,
+      "height": 1676,
+      "frameIds": [
+        "build_ghost_invalid",
+        "build_ghost_valid",
+        "icon_carrot",
+        "icon_chicken_feed",
+        "icon_coin",
+        "icon_corn",
+        "icon_diamond",
+        "icon_egg",
+        "icon_order",
+        "icon_rice",
+        "icon_tomato",
+        "ui_error_toast",
+        "ui_loading",
+        "ui_rotate_overlay",
+        "ui_success_toast",
+        "terrain_grass_tile",
+        "terrain_grass_variant_01",
+        "terrain_grass_variant_02",
+        "terrain_grass_variant_03",
+        "terrain_grass_variant_04",
+        "building_chicken_coop_lv1",
+        "building_farmhouse_lv1",
+        "building_warehouse_lv1",
+        "pond_small_lv1_base",
+        "pond_small_lv1_ripple_00",
+        "pond_small_lv1_ripple_01",
+        "pond_small_lv1_ripple_02",
+        "pond_small_lv1_ripple_03",
+        "pond_small_lv1_ripple_04",
+        "pond_small_lv1_ripple_05"
+      ]
+    },
+    {
+      "image": "farm_common-1.png",
+      "json": "farm_common-1.json",
+      "width": 1544,
+      "height": 1546,
+      "frameIds": [
+        "pond_small_lv1_sparkle_00",
+        "pond_small_lv1_sparkle_01",
+        "pond_small_lv1_sparkle_02",
+        "pond_small_lv1_sparkle_03",
+        "pond_small_lv1_water_00",
+        "pond_small_lv1_water_01",
+        "pond_small_lv1_water_02",
+        "pond_small_lv1_water_03",
+        "pond_small_lv1_water_04",
+        "pond_small_lv1_water_05",
+        "pond_small_lv1_water_06",
+        "pond_small_lv1_water_07"
+      ]
+    }
+  ]
+}

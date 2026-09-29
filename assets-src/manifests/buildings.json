@@ -1,0 +1,94 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "building_farmhouse_lv1": {
+      "id": "building_farmhouse_lv1",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/buildings/building_farmhouse_lv1.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "building_warehouse_lv1": {
+      "id": "building_warehouse_lv1",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/buildings/building_warehouse_lv1.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "building_chicken_coop_lv1": {
+      "id": "building_chicken_coop_lv1",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/buildings/building_chicken_coop_lv1.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_base": {
+      "id": "pond_small_lv1_base",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_base.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {}
+}

@@ -1,0 +1,292 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "icon_coin": {
+      "id": "icon_coin",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_coin.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_diamond": {
+      "id": "icon_diamond",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_diamond.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_rice": {
+      "id": "icon_rice",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_rice.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_carrot": {
+      "id": "icon_carrot",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_carrot.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_corn": {
+      "id": "icon_corn",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_corn.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_tomato": {
+      "id": "icon_tomato",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_tomato.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_chicken_feed": {
+      "id": "icon_chicken_feed",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_chicken_feed.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_egg": {
+      "id": "icon_egg",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_egg.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "icon_order": {
+      "id": "icon_order",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/icon_order.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "ui_rotate_overlay": {
+      "id": "ui_rotate_overlay",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/ui_rotate_overlay.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "ui_loading": {
+      "id": "ui_loading",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/ui_loading.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "ui_success_toast": {
+      "id": "ui_success_toast",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/ui_success_toast.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "ui_error_toast": {
+      "id": "ui_error_toast",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ui/ui_error_toast.png",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {}
+}

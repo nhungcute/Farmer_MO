@@ -1,0 +1,424 @@
+{
+  "contentVersion": "mvp-1",
+  "assets": {
+    "pond_small_lv1_base": {
+      "id": "pond_small_lv1_base",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_base.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_00": {
+      "id": "pond_small_lv1_water_00",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_00.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_01": {
+      "id": "pond_small_lv1_water_01",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_01.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_02": {
+      "id": "pond_small_lv1_water_02",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_02.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_03": {
+      "id": "pond_small_lv1_water_03",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_03.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_04": {
+      "id": "pond_small_lv1_water_04",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_04.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_05": {
+      "id": "pond_small_lv1_water_05",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_05.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_06": {
+      "id": "pond_small_lv1_water_06",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_06.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_water_07": {
+      "id": "pond_small_lv1_water_07",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_water_07.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_00": {
+      "id": "pond_small_lv1_ripple_00",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_00.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_01": {
+      "id": "pond_small_lv1_ripple_01",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_01.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_02": {
+      "id": "pond_small_lv1_ripple_02",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_02.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_03": {
+      "id": "pond_small_lv1_ripple_03",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_03.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_04": {
+      "id": "pond_small_lv1_ripple_04",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_04.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_ripple_05": {
+      "id": "pond_small_lv1_ripple_05",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_05.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_sparkle_00": {
+      "id": "pond_small_lv1_sparkle_00",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_00.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_sparkle_01": {
+      "id": "pond_small_lv1_sparkle_01",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_01.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_sparkle_02": {
+      "id": "pond_small_lv1_sparkle_02",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_02.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    },
+    "pond_small_lv1_sparkle_03": {
+      "id": "pond_small_lv1_sparkle_03",
+      "atlas": "farm_common",
+      "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_03.png",
+      "width": 512,
+      "height": 384,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": true,
+      "license": "internal-placeholder",
+      "source": "Generated deterministic placeholder",
+      "tool": "tools/export-assets/generate-placeholders.mjs",
+      "toolVersion": "1.0.0",
+      "creator": "MO Farm team"
+    }
+  },
+  "animations": {}
+}

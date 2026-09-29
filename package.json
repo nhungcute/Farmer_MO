@@ -1,0 +1,18 @@
+{
+  "name": "mo-farm-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MO Farm prototype asset and animation pipeline",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "assets:generate": "node tools/export-assets/index.mjs generate",
+    "assets:validate": "node tools/export-assets/index.mjs validate",
+    "assets:validate:strict": "node tools/export-assets/validate.mjs --strict-output",
+    "assets:pack": "node tools/export-assets/index.mjs pack",
+    "assets:preview": "node tools/export-assets/index.mjs preview",
+    "assets:build": "npm run assets:generate && npm run assets:validate && npm run assets:pack && npm run assets:validate:strict && npm run assets:preview"
+  }
+}
