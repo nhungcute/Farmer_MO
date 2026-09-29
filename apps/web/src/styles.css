@@ -17,6 +17,7 @@
 html, body, #app { width: 100%; min-height: 100%; margin: 0; }
 body { min-width: 320px; background: #0e241c; color: var(--ink); }
 button, input { font: inherit; }
+button, input { min-height: 44px; }
 button { cursor: pointer; }
 button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
@@ -33,7 +34,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
 .hint { color: var(--muted); font-size: .86rem; line-height: 1.45; margin: 14px 0 0; }
 .error { color: #ffc0a9; min-height: 1.3em; margin: 10px 0 0; }
 
-.game { min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; background: #0e241c; }
+.game { height: 100svh; min-height: 100svh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; background: #0e241c; }
 .topbar { z-index: 2; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px max(12px, env(safe-area-inset-left)) 10px max(12px, env(safe-area-inset-right)); background: #173b2cf2; border-bottom: 1px solid var(--line); }
 .topbar .brand { margin: 0; gap: 8px; }
 .topbar .brand-mark { width: 38px; height: 38px; border-radius: 11px; font-size: 20px; }
@@ -46,10 +47,10 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); ou
 .logout:hover { color: var(--ink); background: var(--panel-2); }
 
 .world-wrap { position: relative; min-height: 0; overflow: hidden; background: var(--canvas-bg); }
-#farm-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; touch-action: none; }
+#farm-canvas { display: block; width: 100%; height: 100%; min-height: 0; image-rendering: pixelated; touch-action: none; }
 #game-renderer-host { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: auto; }
 #game-renderer-host[hidden] { display: none; }
-#game-renderer-host canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+#game-renderer-host canvas { display: block; width: 100%; height: 100%; min-height: 0; touch-action: none; }
 .orientation { display: none; position: absolute; inset: 0; z-index: 5; place-items: center; text-align: center; background: #112d21dd; padding: 24px; }
 .orientation-card { max-width: 320px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
 .notice { position: absolute; z-index: 4; left: 12px; bottom: 12px; padding: 9px 12px; border-radius: 10px; background: #173b2ce8; border: 1px solid var(--line); color: var(--ink); font-size: .86rem; pointer-events: none; opacity: 0; transform: translateY(8px); transition: opacity .2s, transform .2s; }

@@ -33,6 +33,13 @@ export default defineConfig({
       name: 'mobile-chromium',
       use: { ...devices['Pixel 7'], channel: 'chrome' },
     },
+    {
+      // C03 explicitly exercises the installable web shell. Keep service
+      // workers enabled only for this opt-in project so C01/C02 retain their
+      // deterministic network behaviour.
+      name: 'mobile-pwa',
+      use: { ...devices['Pixel 7'], channel: 'chrome', serviceWorkers: 'allow' },
+    },
   ],
   webServer: {
     command: 'node tests/e2e/harness.mjs',

@@ -1,8 +1,8 @@
 # Trạng thái triển khai prototype
 
-> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02 đã có bằng chứng và đang ở `REVIEW`; các gate còn lại vẫn mở.
+> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 đã có bằng chứng và đang ở `REVIEW`; B02 đang `BLOCKED` vì chưa có artwork production được duyệt.
 
-Sau checkpoint A01/B01/C01/D01, A02 da review 8/8; A03 transaction/concurrency va C02 functional E2E da review voi bang chung PostgreSQL. Demo van giu PERSISTENCE_DRIVER=file.
+Sau checkpoint A01/B01/C01/D01, A02 da review 8/8; A03, C02, C03 va D02 da co bang chung test runtime. B02 bi block vi chua co production artwork duoc duyet. Demo van giu PERSISTENCE_DRIVER=file.
 
 Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
 
@@ -20,11 +20,11 @@ Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không 
 - API đã hỗ trợ rõ `PERSISTENCE_DRIVER=file|postgres`; file JSON FarmStore vẫn là mặc định demo, PostgreSQL runtime đã chạy enter/session/bootstrap và tất cả mutation qua repository transaction.
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, DOM HUD + PixiJS 8 world renderer cùng origin, Canvas fallback, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và gợi ý xoay màn hình. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
 - Hình trong asset pack vẫn là placeholder nội bộ; cần thay bằng asset đã duyệt, giữ nguyên manifest, frame count, FPS, pivot và ID.
-- A02, A03 và C02 đã hoàn tất các gate runtime; còn C03 QA, D02 load/backup, B02 asset production và deployment gate trước Release Candidate.
+- A02, A03, C02, C03 và D02 đã hoàn tất các gate runtime; B02 còn blocked vì thiếu production artwork, sau đó mới đến deployment gate trước Release Candidate.
 
 ## Thứ tự tiếp theo
 
-1. Chạy C03 mobile/PWA, D02 load/backup và B02 production art; sau đó mới mở deployment gate và public tunnel.
+1. Review và tích hợp evidence C03/D02; cung cấp artwork production để mở B02; chỉ sau khi các dependency đạt mới mở deployment gate và public tunnel.
 2. Chuyển web shell sang stack production hoặc giữ native shell có quyết định kiến trúc được phê duyệt; bổ sung Playwright E2E và accessibility scan.
 3. Thay placeholder bằng asset duyệt, chạy lại strict validator và visual review.
 4. Chạy performance/load test, kiểm tra backup restore định kỳ, rồi mới mở public tunnel.
