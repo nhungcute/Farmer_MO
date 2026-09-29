@@ -16,7 +16,7 @@ Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundati
 | Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
 | Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. Playwright C01: 5 passed, 7 intentionally skipped; C02 PostgreSQL: 1 passed, 1 intentionally skipped. HEAD/origin: commit pending push.
+Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. Playwright C01: 5 passed, 7 intentionally skipped; C02 PostgreSQL: 1 passed, 1 intentionally skipped. HEAD/origin: `1a21316` đã push lên `origin/main`.
 
 ## Đang chạy và review
 
