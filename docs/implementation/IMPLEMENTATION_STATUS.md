@@ -16,7 +16,7 @@ Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundati
 | Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
 | Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 9/9, asset 188/10 và strict atlas PASS. HEAD/origin: `3f1a042f41c6b3f7ff5c9db558322cef8fdbf2d9`.
+Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 12/12, PostgreSQL repository 5/5, asset 188/10 và strict atlas PASS. Playwright: 5 passed, 5 intentionally skipped across desktop/mobile projects. HEAD/origin: `966563cf522bfc1013ea9a89212dabe043116dd4`.
 
 ## Đang chạy và review
 
