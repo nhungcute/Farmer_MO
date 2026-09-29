@@ -44,6 +44,11 @@ export default defineConfig({
     env: {
       PW_PORT: String(port),
       PW_API_PORT: String(process.env.PW_API_PORT || 3101),
+      // C01 keeps the file adapter by default. C02 opts into a disposable
+      // PostgreSQL database through PW_PERSISTENCE_DRIVER=postgres.
+      PW_PERSISTENCE_DRIVER: String(process.env.PW_PERSISTENCE_DRIVER || 'file'),
+      PW_DATABASE_URL: process.env.PW_DATABASE_URL || process.env.DATABASE_URL || '',
+      RUN_POSTGRES_E2E: String(process.env.RUN_POSTGRES_E2E || '0'),
     },
   },
 });

@@ -36,7 +36,7 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 
 ## Current checkpoint
 
-- RUNNING: A02.
-- REVIEW: A01, B01, C01, D01.
+- RUNNING: none; A03 and C02 have review evidence.
+- REVIEW: A01, A02, A03, B01, C01, C02, D01.
 - DONE: API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
 - BLOCKED: B02 production art nếu chưa có artwork được duyệt; E01 Cloudflare cho tới khi các gate upstream PASS.

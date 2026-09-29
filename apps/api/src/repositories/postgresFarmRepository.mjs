@@ -1,6 +1,7 @@
 import { createHash, randomBytes, randomUUID } from "node:crypto";
 import { normalizeName as normalizeCharacterName } from "../../../../packages/shared/index.mjs";
 import * as content from "../../../../packages/content/index.mjs";
+import { FarmStore } from "../store.mjs";
 
 const CONTENT_VERSION = content.CONTENT_VERSION;
 const FARM = content.FARM;
@@ -41,6 +42,8 @@ export class PostgresFarmRepository {
     this.idempotencyTtlMs = idempotencyTtlMs;
     this.maxTransactionRetries = Math.max(0, Math.min(8, maxTransactionRetries));
     this.uuid = uuid;
+    // FarmStore is instantiated per mutation below with no file path. This
+    // reuses the canonical business rules without leaking demo state.
   }
 
   now() { return new Date(this.clock()); }
@@ -181,17 +184,18 @@ export class PostgresFarmRepository {
     const characterId = row.id;
     const farm = (await client.query("SELECT * FROM farm WHERE character_id = $1", [characterId])).rows[0];
     if (!farm) throw new Error("Character farm is missing");
-    const [objects, plots, crops, animals, inventory, warehouse, orders, lines, quests] = await Promise.all([
-      client.query("SELECT * FROM farm_object WHERE character_id = $1 ORDER BY created_at, id", [characterId]),
-      client.query("SELECT * FROM plot WHERE character_id = $1 ORDER BY grid_y, grid_x, id", [characterId]),
-      client.query("SELECT c.* FROM crop_instance c JOIN plot p ON p.id = c.plot_id WHERE p.character_id = $1", [characterId]),
-      client.query("SELECT * FROM animal WHERE character_id = $1 ORDER BY created_at, id", [characterId]),
-      client.query("SELECT item_id, quantity FROM inventory_item WHERE character_id = $1 AND quantity > 0 ORDER BY item_id", [characterId]),
-      client.query("SELECT capacity FROM warehouse WHERE character_id = $1", [characterId]),
-      client.query("SELECT * FROM farm_order WHERE character_id = $1 ORDER BY created_at, id", [characterId]),
-      client.query("SELECT l.* FROM order_line l JOIN farm_order o ON o.id = l.order_id WHERE o.character_id = $1 ORDER BY l.order_id, l.line_no", [characterId]),
-      client.query("SELECT * FROM quest_progress WHERE character_id = $1 ORDER BY quest_id", [characterId]),
-    ]);
+    // A transaction client supports one in-flight query at a time. Keep these
+    // reads sequential to preserve the snapshot and avoid pg's concurrent
+    // client-query deprecation/race warning.
+    const objects = await client.query("SELECT * FROM farm_object WHERE character_id = $1 ORDER BY created_at, id", [characterId]);
+    const plots = await client.query("SELECT * FROM plot WHERE character_id = $1 ORDER BY grid_y, grid_x, id", [characterId]);
+    const crops = await client.query("SELECT c.* FROM crop_instance c JOIN plot p ON p.id = c.plot_id WHERE p.character_id = $1", [characterId]);
+    const animals = await client.query("SELECT * FROM animal WHERE character_id = $1 ORDER BY created_at, id", [characterId]);
+    const inventory = await client.query("SELECT item_id, quantity FROM inventory_item WHERE character_id = $1 AND quantity > 0 ORDER BY item_id", [characterId]);
+    const warehouse = await client.query("SELECT capacity FROM warehouse WHERE character_id = $1", [characterId]);
+    const orders = await client.query("SELECT * FROM farm_order WHERE character_id = $1 ORDER BY created_at, id", [characterId]);
+    const lines = await client.query("SELECT l.* FROM order_line l JOIN farm_order o ON o.id = l.order_id WHERE o.character_id = $1 ORDER BY l.order_id, l.line_no", [characterId]);
+    const quests = await client.query("SELECT * FROM quest_progress WHERE character_id = $1 ORDER BY quest_id", [characterId]);
     const cropByPlot = new Map(crops.rows.map((crop) => [crop.plot_id, { id: crop.id, plotId: crop.plot_id, cropId: crop.crop_id, plantedAt: iso(crop.planted_at), readyAt: iso(crop.ready_at), createdAt: iso(crop.created_at), updatedAt: iso(crop.updated_at) }]));
     const lineByOrder = new Map();
     for (const line of lines.rows) {
@@ -221,6 +225,70 @@ export class PostgresFarmRepository {
     return this.withTransaction((client) => client.query("SELECT * FROM character WHERE id = $1", [characterId]).then(async (result) => result.rows[0] ? this.#loadAggregate(client, result.rows[0]) : null), { isolation: "READ COMMITTED" });
   }
 
+  /**
+   * Execute one of the canonical FarmStore mutations inside the repository
+   * transaction.  The aggregate is loaded after the character row lock,
+   * business rules run against that snapshot, and all normalized tables are
+   * replaced before commit.  This keeps idempotency, revision and rollback in
+   * the same transaction without creating a second gameplay implementation.
+   */
+  async mutate({ characterId, actionType, key, payload, method, args = [], lock = "farm" }) {
+    if (typeof FarmStore.prototype[method] !== "function") throw new TypeError(`Unknown farm mutation ${method}`);
+    return this.runMutation({
+      characterId,
+      actionType,
+      key,
+      payload,
+      lock,
+      operation: async (client, { character: row }) => {
+        const aggregate = await this.#loadAggregate(client, row);
+        // A unique internal key prevents the in-memory compatibility layer's
+        // idempotency map from short-circuiting a later PostgreSQL request.
+        // A fresh no-file store keeps the compatibility adapter's private
+        // idempotency map request-scoped; PostgreSQL remains the source of
+        // truth for durable idempotency and revisions.
+        const logicStore = new FarmStore({ clock: () => this.now(), sessionTtlMs: this.sessionTtlMs, persistencePath: "" });
+        const result = logicStore[method](aggregate, ...args, `postgres-${this.uuid()}`);
+        await this.#persistAggregate(client, aggregate);
+        return result;
+      },
+    });
+  }
+
+  async #persistAggregate(client, character) {
+    const now = this.now();
+    await client.query(
+      "UPDATE character SET display_name = $2, lookup_name = $3, level = $4, xp = $5, coins = $6, diamonds = $7, settings = $8::jsonb, updated_at = $9 WHERE id = $1",
+      [character.id, character.displayName, character.lookupName, character.level, character.xp, character.coins, character.diamonds, JSON.stringify(character.settings ?? { locale: "vi-VN" }), now],
+    );
+    await client.query("UPDATE farm SET order_cursor = $2, updated_at = $3 WHERE id = $1", [character.farm.id, character.farm.orderCursor ?? 0, now]);
+
+    // Child rows are all owned by the character and are recreated from the
+    // validated aggregate. Foreign-key cascades remove dependent records.
+    await client.query("DELETE FROM farm_object WHERE character_id = $1", [character.id]);
+    for (const object of character.objects) await client.query(
+      "INSERT INTO farm_object(id, farm_id, character_id, definition_id, grid_x, grid_y, rotation, level, created_at, updated_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)",
+      [object.id, character.farm.id, character.id, object.definitionId, object.gridX, object.gridY, object.rotation, object.level ?? 1, object.createdAt ?? now, object.updatedAt ?? now],
+    );
+    await client.query("DELETE FROM plot WHERE character_id = $1", [character.id]);
+    for (const plot of character.plots) {
+      await client.query("INSERT INTO plot(id, farm_id, character_id, grid_x, grid_y, created_at, updated_at) VALUES($1,$2,$3,$4,$5,$6,$7)", [plot.id, character.farm.id, character.id, plot.gridX, plot.gridY, plot.createdAt ?? now, plot.updatedAt ?? now]);
+      if (plot.crop) await client.query("INSERT INTO crop_instance(id, plot_id, crop_id, planted_at, ready_at, created_at, updated_at) VALUES($1,$2,$3,$4,$5,$6,$7)", [plot.crop.id, plot.id, plot.crop.cropId, plot.crop.plantedAt, plot.crop.readyAt, plot.crop.createdAt ?? now, plot.crop.updatedAt ?? now]);
+    }
+    await client.query("DELETE FROM animal WHERE character_id = $1", [character.id]);
+    for (const animal of character.animals) await client.query("INSERT INTO animal(id, character_id, building_id, type, state, fed_at, product_ready_at, created_at, updated_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)", [animal.id, character.id, animal.buildingId, animal.type, animal.state, animal.fedAt, animal.productReadyAt, animal.createdAt ?? now, animal.updatedAt ?? now]);
+    await client.query("DELETE FROM inventory_item WHERE character_id = $1", [character.id]);
+    for (const [itemId, quantity] of Object.entries(character.inventory)) if (quantity > 0) await client.query("INSERT INTO inventory_item(character_id, item_id, quantity, updated_at) VALUES($1,$2,$3,$4)", [character.id, itemId, quantity, now]);
+    await client.query("UPDATE warehouse SET capacity = $2, updated_at = $3 WHERE character_id = $1", [character.id, character.warehouse.capacity, now]);
+    await client.query("DELETE FROM farm_order WHERE character_id = $1", [character.id]);
+    for (const order of character.orders) {
+      await client.query("INSERT INTO farm_order(id, character_id, template_id, status, reward_coins, reward_xp, created_at, completed_at) VALUES($1,$2,$3,$4,$5,$6,$7,$8)", [order.id, character.id, order.templateId, order.status, order.rewardCoins, order.rewardXp, order.createdAt ?? now, order.completedAt]);
+      for (const [lineNo, line] of order.lines.entries()) await client.query("INSERT INTO order_line(order_id, line_no, item_id, quantity) VALUES($1,$2,$3,$4)", [order.id, lineNo, line.itemId, line.quantity]);
+    }
+    await client.query("DELETE FROM quest_progress WHERE character_id = $1", [character.id]);
+    for (const quest of Object.values(character.quests)) await client.query("INSERT INTO quest_progress(character_id, quest_id, progress, target, completed_at, claimed_at, updated_at) VALUES($1,$2,$3,$4,$5,$6,$7)", [character.id, quest.questId, quest.progress, quest.target, quest.completed ? now : null, quest.claimed ? now : null, now]);
+  }
+
   async bootstrap(characterOrId) {
     const character = typeof characterOrId === "string" ? await this.loadByCharacterId(characterOrId) : characterOrId;
     if (!character) return null;
@@ -234,6 +302,12 @@ export class PostgresFarmRepository {
     if (typeof key !== "string" || key.length < 1 || key.length > 128 || /\s/u.test(key)) { const error = new Error("Idempotency-Key is invalid"); error.code = "INVALID_INPUT"; throw error; }
     if (typeof operation !== "function") throw new TypeError("runMutation requires an operation callback");
     const requestHash = hash(payload);
+    // The character row lock below is the serialization primitive for one
+    // aggregate. READ COMMITTED lets a waiter observe the committed tuple
+    // (including a just-written idempotency row) after it acquires that lock;
+    // SERIALIZABLE can otherwise abort a healthy queue of independent
+    // mutations with avoidable 40001 errors. Enter retains stronger
+    // isolation where lookup races benefit from it.
     return this.withTransaction(async (client) => {
       const characterResult = await client.query("SELECT * FROM character WHERE id = $1 FOR UPDATE", [characterId]);
       if (!characterResult.rows[0]) { const error = new Error("Character not found"); error.code = "NOT_FOUND"; throw error; }
@@ -250,7 +324,7 @@ export class PostgresFarmRepository {
       const body = { ...(result ?? {}), serverNow: iso(now), stateRevision: revision };
       await client.query("INSERT INTO idempotency_record(character_id, action_type, key, request_hash, response, created_at, expires_at) VALUES($1, $2, $3, $4, $5::jsonb, $6, $7)", [characterId, actionType, key, requestHash, JSON.stringify(body), now, new Date(now.getTime() + this.idempotencyTtlMs)]);
       return body;
-    });
+    }, { isolation: "READ COMMITTED" });
   }
 
   async lockInventory(client, characterId) { return client.query("SELECT character_id, item_id, quantity FROM inventory_item WHERE character_id = $1 FOR UPDATE", [characterId]); }

@@ -6,6 +6,9 @@ import { fileURLToPath } from 'node:url';
 import { URL } from 'node:url';
 import { createApiServer } from '../../apps/api/src/server.mjs';
 import { FarmStore } from '../../apps/api/src/store.mjs';
+import { applyMigrations } from '../../apps/api/src/migrate.mjs';
+import { PostgresFarmRepository } from '../../apps/api/src/repositories/postgresFarmRepository.mjs';
+import pg from 'pg';
 
 // The E2E harness keeps browser requests same-origin while running the API
 // with a controllable clock. This avoids relying on Docker or waiting for the
@@ -14,6 +17,8 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../
 const webRoot = path.join(repoRoot, 'apps', 'web');
 const webPort = Number(process.env.PW_PORT || 4173);
 const apiPort = Number(process.env.PW_API_PORT || 3101);
+const persistenceDriver = String(process.env.PW_PERSISTENCE_DRIVER || 'file').trim().toLowerCase();
+const databaseUrl = process.env.PW_DATABASE_URL || process.env.DATABASE_URL;
 let fakeNow = Date.now();
 
 const mime = {
@@ -108,12 +113,45 @@ async function serveStatic(request, response) {
   }
 }
 
-const store = new FarmStore({ clock: () => fakeNow });
-const { server: apiServer } = createApiServer({ store, clock: () => fakeNow });
+let store;
+let pool;
+let repository;
+if (persistenceDriver === 'postgres') {
+  if (process.env.RUN_POSTGRES_E2E !== '1') {
+    throw new Error('PostgreSQL E2E is opt-in. Set RUN_POSTGRES_E2E=1 and use a disposable PW_DATABASE_URL.');
+  }
+  if (!databaseUrl) throw new Error('PW_DATABASE_URL or DATABASE_URL is required for PostgreSQL E2E.');
+  // The E2E database is explicitly disposable. Migrations are rerunnable and
+  // the reset prevents data from a previous local run affecting assertions.
+  await applyMigrations({ databaseUrl, driver: 'postgres' });
+  pool = new pg.Pool({ connectionString: databaseUrl, max: 4 });
+  await pool.query('TRUNCATE TABLE game_session, idempotency_record, quest_progress, order_line, farm_order, animal, crop_instance, plot, farm_object, inventory_item, warehouse, farm, character RESTART IDENTITY CASCADE');
+  repository = new PostgresFarmRepository({ pool, clock: () => fakeNow });
+} else if (persistenceDriver === 'file') {
+  store = new FarmStore({ clock: () => fakeNow, persistencePath: '' });
+} else {
+  throw new Error(`Unsupported PW_PERSISTENCE_DRIVER: ${persistenceDriver}`);
+}
+const runtimeOptions = {
+  store,
+  repository,
+  persistenceDriver,
+  clock: () => fakeNow,
+};
+let { server: apiServer } = createApiServer(runtimeOptions);
 await new Promise((resolve, reject) => {
   apiServer.once('error', reject);
   apiServer.listen(apiPort, '127.0.0.1', resolve);
 });
+
+async function restartApi() {
+  await new Promise((resolve, reject) => apiServer.close((error) => (error ? reject(error) : resolve())));
+  ({ server: apiServer } = createApiServer(runtimeOptions));
+  await new Promise((resolve, reject) => {
+    apiServer.once('error', reject);
+    apiServer.listen(apiPort, '127.0.0.1', resolve);
+  });
+}
 
 const webServer = http.createServer(async (request, response) => {
   try {
@@ -122,6 +160,11 @@ const webServer = http.createServer(async (request, response) => {
       const advanceMs = Number(requestUrl.searchParams.get('advanceMs') || 0);
       if (Number.isFinite(advanceMs) && advanceMs >= 0) fakeNow += advanceMs;
       sendJson(response, 200, { now: new Date(fakeNow).toISOString() });
+      return;
+    }
+    if (requestUrl.pathname === '/__e2e/restart' && request.method === 'POST') {
+      await restartApi();
+      sendJson(response, 200, { restarted: true, persistenceDriver });
       return;
     }
     // Chromium requests a favicon implicitly on a fresh page. Returning a
@@ -151,10 +194,12 @@ console.log(JSON.stringify({ event: 'e2e.harness.started', webPort, apiPort }));
 function shutdown() {
   webServer.close();
   apiServer.close();
+  if (pool) pool.end().catch(() => {});
 }
 process.once('SIGINT', shutdown);
 process.once('SIGTERM', shutdown);
 process.once('exit', () => {
   if (webServer.listening) webServer.close();
   if (apiServer.listening) apiServer.close();
+  if (pool) pool.end().catch(() => {});
 });

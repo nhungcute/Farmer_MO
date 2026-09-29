@@ -162,6 +162,15 @@ export class FarmStore {
     return character;
   }
 
+  revokeSession(token) {
+    if (typeof token !== "string" || !token) return false;
+    const session = this.sessions.get(this.#sessionHash(token));
+    if (!session || session.revokedAt) return false;
+    session.revokedAt = this.now();
+    this.#save();
+    return true;
+  }
+
   #itemQuantity(character, itemId) { return character.inventory[itemId] ?? 0; }
   #usedCapacity(character) { return Object.values(character.inventory).reduce((total, quantity) => total + quantity, 0); }
   #ensureCapacity(character, quantity) {

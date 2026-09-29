@@ -30,8 +30,9 @@
     "e2e:headed": "playwright test --headed",
     "test:e2e": "playwright test",
     "check:localization": "node tools/check-localization.mjs",
-    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
-    "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs",
+    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/persistence/config.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
+    "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs apps/api/test/persistence-config.test.mjs",
+    "test:api:postgres": "node --test apps/api/test/postgres/postgres-repository.test.mjs apps/api/test/postgres/postgres-integration.test.mjs",
     "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run assets:validate:strict"
   },
   "dependencies": {

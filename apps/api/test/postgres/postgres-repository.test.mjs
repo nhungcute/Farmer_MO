@@ -39,6 +39,26 @@ test("serialization failure is retried with rollback and a fresh client", async 
   assert.deepEqual(pool.clients[0].statements.map((item) => item.text), ["BEGIN", "SET TRANSACTION ISOLATION LEVEL SERIALIZABLE", "SELECT value", "ROLLBACK"]);
 });
 
+test("retryable failure is surfaced after the retry budget and every attempt rolls back", async () => {
+  for (const code of ["40001", "40P01"]) {
+    const pool = poolFor((text) => {
+      if (text === "SELECT value") {
+        const error = new Error(`${code} exhausted`);
+        error.code = code;
+        throw error;
+      }
+      return { rows: [] };
+    });
+    const repository = new PostgresFarmRepository({ pool, maxTransactionRetries: 2 });
+    await assert.rejects(() => repository.withTransaction((client) => client.query("SELECT value")), (error) => error.code === code);
+    assert.equal(pool.clients.length, 3);
+    for (const client of pool.clients) {
+      assert.equal(client.released, true);
+      assert.equal(client.statements.at(-1).text, "ROLLBACK");
+    }
+  }
+});
+
 test("runMutation rejects invalid idempotency keys before opening a transaction", async () => {
   const pool = poolFor(() => ({ rows: [] }));
   const repository = new PostgresFarmRepository({ pool });

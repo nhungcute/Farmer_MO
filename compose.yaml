@@ -84,6 +84,9 @@ services:
     image: postgres:16.4-alpine
     command: ["sh", "-ec", "for sql in /sql/*.sql; do echo \"Applying $$sql\"; PGPASSWORD=\"$${POSTGRES_PASSWORD}\" psql -v ON_ERROR_STOP=1 -h db -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\" -f \"$$sql\"; done"]
     environment:
+      # The migration job always targets PostgreSQL.  The API itself may use
+      # either PERSISTENCE_DRIVER=file (demo default) or postgres.
+      PERSISTENCE_DRIVER: postgres
       POSTGRES_DB: ${POSTGRES_DB:-mo_farm}
       POSTGRES_USER: ${POSTGRES_USER:-mo_farm}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}

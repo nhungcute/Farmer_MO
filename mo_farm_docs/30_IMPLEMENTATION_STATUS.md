@@ -1,10 +1,10 @@
 # Trạng thái triển khai prototype
 
-> Điều phối Release Candidate: trạng thái checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). Các task đang chạy gồm A01 PostgreSQL runtime, B01 asset inventory, C01 Playwright setup và D01 observability/performance; không được báo hoàn thành toàn bộ khi các checklist Release Candidate còn mở.
+> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02 đã có bằng chứng và đang ở `REVIEW`; các gate còn lại vẫn mở.
 
-Sau checkpoint A01/B01/C01/D01, các task đã chuyển `REVIEW`; A02 PostgreSQL API runtime wiring đang `RUNNING`. Demo vẫn giữ `PERSISTENCE_DRIVER=file` cho tới khi route parity và concurrency test PostgreSQL đạt.
+Sau checkpoint A01/B01/C01/D01, A02 da review 8/8; A03 transaction/concurrency va C02 functional E2E da review voi bang chung PostgreSQL. Demo van giu PERSISTENCE_DRIVER=file.
 
-Ngày kiểm tra: 2026-09-29. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
+Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
 
 ## Đã triển khai và đã kiểm tra
 
@@ -13,18 +13,18 @@ Ngày kiểm tra: 2026-09-29. Đây là prototype/demo; dữ liệu farm không 
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và orientation hint. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
 - **Animation:** 188 frame placeholder, 10 clip, 6 atlas, manifest/pivot/FPS, strict validator và preview tại `apps/web/public/assets`.
 - **Vận hành:** Docker Compose với PostgreSQL/Nginx/API/web, healthcheck, migration SQL chạy được qua profile `init`, seed report hook, PWA manifest/service worker, CI, backup/restore PostgreSQL và state JSON.
-- **Xác nhận:** `npm run check` đạt 9 test API; asset validation đạt 188/10; `npm run assets:build`, `docker compose config --quiet`, API/web image build và smoke flow qua Nginx đều đạt.
+- **Xác nhận:** `npm run check` PASS (API 17/17), `npm run test:api:postgres` PASS 20/20 (14 integration + 6 repository khi có PostgreSQL), asset 188/10; `docker compose config --quiet`, API/Web build, migration và PostgreSQL smoke PASS.
 
 ## Ranh giới còn lại trước production
 
-- API hiện chạy `FarmStore` memory hoặc file JSON tùy chọn (`STATE_FILE`). PostgreSQL và `apps/api/sql/001_mvp_schema.sql` đã có để làm hạ tầng, nhưng chưa có repository PostgreSQL/Prisma runtime.
+- API đã hỗ trợ rõ `PERSISTENCE_DRIVER=file|postgres`; file JSON FarmStore vẫn là mặc định demo, PostgreSQL runtime đã chạy enter/session/bootstrap và tất cả mutation qua repository transaction.
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, DOM HUD + PixiJS 8 world renderer cùng origin, Canvas fallback, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và gợi ý xoay màn hình. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
 - Hình trong asset pack vẫn là placeholder nội bộ; cần thay bằng asset đã duyệt, giữ nguyên manifest, frame count, FPS, pivot và ID.
-- Cần hoàn thiện repository PostgreSQL cho toàn bộ aggregate, seed transaction, backup state volume tự động, observability và kiểm thử tải trước khi gọi là production.
+- A02, A03 và C02 đã hoàn tất các gate runtime; còn C03 QA, D02 load/backup, B02 asset production và deployment gate trước Release Candidate.
 
 ## Thứ tự tiếp theo
 
-1. Viết PostgreSQL repository cho toàn bộ aggregate, mở rộng migration/seed transaction, sau đó bật transaction/constraint trong API.
+1. Chạy C03 mobile/PWA, D02 load/backup và B02 production art; sau đó mới mở deployment gate và public tunnel.
 2. Chuyển web shell sang stack production hoặc giữ native shell có quyết định kiến trúc được phê duyệt; bổ sung Playwright E2E và accessibility scan.
 3. Thay placeholder bằng asset duyệt, chạy lại strict validator và visual review.
 4. Chạy performance/load test, kiểm tra backup restore định kỳ, rồi mới mở public tunnel.
