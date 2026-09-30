@@ -41,7 +41,7 @@ The tests prove:
 
 - Current activity: review-ready; the isolated PostgreSQL gate has passed with all enabled scenarios.
 - Last completed: repository audit, READ COMMITTED aggregate-lock fix, and opt-in real-database concurrency/rollback tests.
-- Next activity: C02 has passed the PostgreSQL browser gate; keep Cloudflare gated until C03/D02 and the remaining RC dependencies pass.
+- Next activity: parent review consumes C03/D02 evidence; keep Cloudflare gated until approved B02 artwork, Docker and remaining RC dependencies pass.
 - Tests: `node --test apps/api/test/postgres/postgres-repository.test.mjs apps/api/test/postgres/postgres-integration.test.mjs` with PostgreSQL 16.4 disposable database: **20/20 PASS** (14 integration + 6 repository). All three repository syntax checks pass. Without the explicit URL/flag the integration cases are skipped by design.
 - Blocker: none for A03; the task remains REVIEW pending parent status recording.
 - Start time: 2026-09-30

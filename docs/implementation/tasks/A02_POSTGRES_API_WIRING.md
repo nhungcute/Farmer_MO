@@ -19,7 +19,7 @@
   - [x] update health/readiness to report actual persistence mode and review rollback
 - Current activity: review-ready; PERSISTENCE_DRIVER=file|postgres is explicit and the demo default remains file.
 - Last completed: PostgreSQL repository selection, all gameplay mutation routes through mutate/runMutation, durable sessions and revoke, normalized aggregate persistence, idempotency, revision locking, rollback, stable repository error mapping, and truthful readiness.
-- Next activity: A03 transaction/concurrency and C02 functional Playwright E2E have review evidence; continue C03/D02/B02 gates before any Cloudflare deployment.
+- Next activity: parent review consumes A03/C02/C03/D02 evidence; B02 remains blocked until approved production artwork is supplied, and Cloudflare stays gated.
 - Tests: `npm run check` PASS; A02-scoped PostgreSQL tests 5/5 repository + 9/9 integration, expanded A03 suite 20/20 (6 repository + 14 integration) on disposable PostgreSQL 16; `docker compose config --quiet` PASS; Docker API/Web builds PASS; migrations 001+002 PASS; Compose postgres enter/bootstrap smoke PASS.
 - Blocker: none for A02. PERSISTENCE_DRIVER=file remains the explicit prototype default; production artwork, C03/D02 and deployment gates remain outside A02.
 - Start time: 2026-09-29 15:30 UTC

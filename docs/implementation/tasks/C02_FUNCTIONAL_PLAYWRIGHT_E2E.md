@@ -13,8 +13,8 @@
 | Kết thúc | 2026-09-30 |
 | Hoat dong hien tai | REVIEW - A03 da dat gate, C02 da co bang chung PG E2E |
 | Hoạt động gần nhất | Đã chạy PG harness, workflow browser và restart/reload persistence |
-| Hoat dong tiep theo | Chay lai trong CI voi database disposable va dua vao gate C03/RC |
-| Tests | C02: 1 passed, 1 intentional skip; C01: 5 passed, 7 intentional skip |
+| Hoat dong tiep theo | Parent review tieu thu C03/D02 evidence va chay lai trong CI voi database disposable truoc RC |
+| Tests | C02: 1 passed, 2 intentional skips trên ba project; C01-scoped baseline: 5 passed, 5 intentional skips |
 | Blocker | Không có blocker kỹ thuật; cần database disposable khi chạy |
 
 ## Mục tiêu
@@ -63,10 +63,10 @@ Harness tự chạy các migration `001`/`002`, truncate các bảng runtime, kh
 
 ## Kết quả và blocker
 
-Kết quả local ngày 2026-09-30: **1 passed, 1 skipped có chủ đích** (project mobile bị skip vì C02 chạy một lần trên desktop Chromium). Test syntax và C01 suite vẫn phải chạy trong gate tổng.
+Kết quả local ngày 2026-09-30: **1 passed, 2 skipped có chủ đích** (mobile Chromium và mobile-pwa bị skip vì C02 chạy một lần trên desktop Chromium). Test syntax và C01 suite vẫn phải chạy trong gate tổng.
 
 Không có blocker kỹ thuật trong C02. C02 không mở Cloudflare; E01 chỉ được mở sau khi A03 và C02 cùng PASS theo dependency gate.
 
 ## Hoạt động kế tiếp
 
-Đưa C02 vào gate tổng cùng A03, bổ sung các kiểm tra mobile/PWA trong C03, rồi chạy lại trên database CI disposable. Không bật C02 bằng database dùng chung hoặc dữ liệu người dùng.
+Đã đưa C02 vào gate tổng cùng A03 và C03. Bước tiếp theo là chạy lại trong CI với database disposable trước RC; không bật C02 bằng database dùng chung hoặc dữ liệu người dùng.

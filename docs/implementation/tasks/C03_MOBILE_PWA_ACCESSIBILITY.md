@@ -28,6 +28,7 @@ Xác minh người chơi vào thẳng farm bằng giao diện tiếng Việt tr�
 - [x] Không có horizontal overflow hoặc vertical overflow sau khi chuyển portrait → landscape tại viewport acceptance 740×360; game grid dùng `100svh`/`minmax(0, 1fr)` để canvas không kéo dài viewport.
 - [x] Các nút điều khiển người dùng nhìn thấy có kích thước tối thiểu 44×44 CSS px.
 - [x] Manifest có `lang=vi-VN`, `display=standalone`, `orientation=any`, `start_url`, `scope` và content type đúng; service worker đăng ký, activate và tạo cache `mo-farm-static-v2`.
+- [x] Cache kh?ng ch?a response `/api/` cho API read ho?c gameplay mutation; server state v? idempotency lu?n l? ngu?n authoritative.
 - [x] Label input, focus ring, button name/type, toolbar/canvas ARIA label, orientation live status và contrast tối thiểu 4.5:1 được kiểm tra.
 
 ## Bằng chứng kiểm thử

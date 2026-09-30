@@ -115,6 +115,17 @@ test.describe('C03 mobile, PWA and accessibility gate', () => {
     expect(worker.scriptURL).toContain('/sw.js');
     expect(['activated', 'activating']).toContain(worker.state);
     expect(worker.cacheNames).toContain('mo-farm-static-v2');
+
+    // The service worker may cache same-origin static GETs only. API reads and
+    // gameplay mutations must never enter the offline cache because server
+    // state and idempotency remain authoritative.
+    const apiCacheState = await page.evaluate(async () => {
+      const cache = await caches.open('mo-farm-static-v2');
+      const apiRead = await cache.match(new Request('/api/health/ready', { method: 'GET' }));
+      const apiMutation = await cache.match(new Request('/api/market/buy', { method: 'POST', body: '{}' }));
+      return { apiReadCached: Boolean(apiRead), apiMutationCached: Boolean(apiMutation) };
+    });
+    expect(apiCacheState).toEqual({ apiReadCached: false, apiMutationCached: false });
   });
 
   test('Vietnamese controls are keyboard reachable, labelled and readable', async ({ page }) => {

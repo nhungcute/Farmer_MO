@@ -149,7 +149,10 @@ async function main() {
     await pool.query("SELECT 1");
     const truncated = await truncateIfRequested(pool);
     const health = await request("/api/health/ready", {}, metricBuckets.readiness);
-    if (health.response.status !== 200 || health.data?.checks?.persistenceReady !== true) throw new Error(`PostgreSQL readiness failed: HTTP ${health.response.status} ${JSON.stringify(health.data)}`);
+    const persistenceDriver = health.data?.checks?.persistenceDriver;
+    if (health.response.status !== 200 || health.data?.checks?.persistenceReady !== true || persistenceDriver !== "postgres" || health.data?.checks?.persistence !== "postgres") {
+      throw new Error(`PostgreSQL readiness failed or wrong driver: HTTP ${health.response.status} ${JSON.stringify(health.data)}`);
+    }
 
     // A shared normalized name proves the uniqueness race: one creation and
     // N-1 existing sessions must point at one character.
@@ -213,7 +216,7 @@ async function main() {
       status: "PASS",
       startedAt,
       finishedAt: nowIso(),
-      configuration: { apiUrl, concurrentEnters, mutationCount, duplicateCount, mutationConcurrency, timeoutMs, truncated },
+      configuration: { apiUrl, persistenceDriver, concurrentEnters, mutationCount, duplicateCount, mutationConcurrency, timeoutMs, truncated },
       characterId,
       invariants: { oneCharacter: true, oneCreatedEnter: true, durableSessions: Number(sessionRows[0].count), revisionBefore: baseRevision, revisionAfter: after.character.state_revision, expectedRevision, coinsBefore: baseCoins, coinsAfter: after.character.coins, expectedCoins: baseCoins - (mutationCount + 1) * 5, duplicateIdempotencyRows: duplicateRecords.length, rollbackPreserved: true },
       metrics: Object.fromEntries(Object.entries(metricBuckets).map(([name, bucket]) => [name, summarize(bucket)])),

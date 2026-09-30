@@ -16,10 +16,10 @@
   - [x] mobile orientation/touch/PWA smoke
   - [x] browser error capture and failure artifacts
 - Current activity: review after root installed Playwright and ran the suite.
-- Last completed: `npm run e2e -- --reporter=line` — 5 passed, 5 intentionally skipped by project-specific suites; desktop and mobile projects both exercised.
-- Next activity: C02 expands functional coverage after A02; C03 adds physical-device/accessibility sign-off.
+- Last completed: C01-scoped two-project run — 5 passed, 5 intentionally skipped; the current three-project aggregate including C03 is recorded in the C03 task note.
+- Next activity: parent review consumes C02/C03 evidence; physical-device validation remains outside this prototype gate.
 - Tests: static syntax checks for all C01 files PASS; Playwright 1.63 with local Chrome channel PASS.
-- Blocker: no blocker for local harness; physical devices and PostgreSQL-backed E2E remain future gates.
+- Blocker: no blocker for local harness; physical-device validation remains outside this prototype gate.
 - Start time: 2026-09-29 14:57 UTC
 - End time: 2026-09-29 (review-ready)
 

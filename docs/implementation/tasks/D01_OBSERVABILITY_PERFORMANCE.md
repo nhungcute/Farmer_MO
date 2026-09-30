@@ -17,10 +17,10 @@
   - [x] unit tests
   - [x] load-test scenario handoff
 - [x] documentation and integration review
-- Current activity: review-ready; D02 remains queued for load execution.
+- Current activity: review-ready; D02 load and backup/restore evidence is complete.
 - Last completed: bounded `ApiMetrics`, optional internal metrics endpoint, API lifecycle instrumentation, renderer metric contract and regression tests.
-- Next activity: D02 runs isolated load scenario after A02; production exporter remains a later infrastructure decision.
+- Next activity: parent review consumes D02 evidence; production exporter remains a later infrastructure decision.
 - Tests: `node --test apps/api/test/observability.test.mjs` — 3/3 PASS; `npm run check` PASS.
 - Blocker: none.
 - Start time: 2026-09-29 14:57 UTC
-- End time: —
+- End time: 2026-09-30 (review-ready)
