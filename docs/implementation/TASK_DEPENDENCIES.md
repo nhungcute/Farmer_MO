@@ -36,7 +36,7 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 
 ## Current checkpoint
 
-- Remote CI runs `36660295559` (commit `628f7cd`), `36662455574` (commit `7651d6a`) and current-head run `36663637314` (commit `5cf15f7`) are PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
+- Remote CI runs `36660295559` (commit `628f7cd`), `36662455574` (commit `7651d6a`) and parent-review closure run `36663637314` (commit `5cf15f7`) are PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
 - Documentation templates for E01 and RC01 are prepared, but neither runtime task is open.
 - RUNNING: none; C03 and D02 have DONE evidence; B02 audit is blocked on approved production artwork.
 - REVIEW: none for A01/A02/A03/B01/C01/C02/C03/D01/D02; parent review completed with local and remote CI evidence.
