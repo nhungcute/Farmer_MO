@@ -2,7 +2,7 @@
   "qaVersion": "ART-01-CHICKEN-QA-v1",
   "taskId": "ART-01",
   "status": "PASS",
-  "reviewStatus": "REVISION_REQUIRED",
+  "reviewStatus": "REVIEW",
   "production_ready": false,
   "approved": false,
   "fileCount": {
@@ -131,21 +131,21 @@
     "status": "PASS",
     "bodyProxy": {
       "widthMeanByDirection": {
-        "ne": 139.61,
-        "se": 139.83,
-        "sw": 142.52,
-        "nw": 142.35
+        "ne": 139.22,
+        "se": 139.09,
+        "sw": 142.48,
+        "nw": 142.22
       },
       "heightMeanByDirection": {
-        "ne": 177.3,
-        "se": 177.83,
-        "sw": 177.39,
-        "nw": 178.43
+        "ne": 176.48,
+        "se": 177.22,
+        "sw": 177.52,
+        "nw": 178.65
       },
-      "overallWidthMean": 141.08,
-      "overallHeightMean": 177.74,
-      "maxWidthDeviationPercent": 1.04,
-      "maxHeightDeviationPercent": 0.39,
+      "overallWidthMean": 140.75,
+      "overallHeightMean": 177.47,
+      "maxWidthDeviationPercent": 1.23,
+      "maxHeightDeviationPercent": 0.67,
       "targetTolerancesPercent": {
         "width": 5,
         "height": 4
@@ -158,8 +158,8 @@
     "result": "all masters use top-left soft light and restrained bottom-right volume; no baked background"
   },
   "style": {
-    "status": "PENDING_OWNER_REVIEW",
-    "result": "new internal-generated Chicken masters preserve approved eye, comb, beak, palette, wing/tail motifs and cozy silhouette"
+    "status": "PASS_PENDING_INTEGRATION_REVIEW",
+    "result": "Reduced micro-feather/high-frequency detail and glossy highlights while preserving approved Chicken identity, palette, silhouette and lighting direction."
   },
   "continuity": {
     "status": "PASS",
@@ -192,12 +192,12 @@
       "WALK_SE": {
         "frameCount": 6,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 1.0
+        "loopClosureCentroidDelta": 1.006
       },
       "WALK_SW": {
         "frameCount": 6,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 1.0
+        "loopClosureCentroidDelta": 1.012
       },
       "WALK_NW": {
         "frameCount": 6,
@@ -207,22 +207,22 @@
       "EAT_NE": {
         "frameCount": 5,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 0.996
+        "loopClosureCentroidDelta": 0.031
       },
       "EAT_SE": {
         "frameCount": 5,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 0.093
+        "loopClosureCentroidDelta": 1.057
       },
       "EAT_SW": {
         "frameCount": 5,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 0.042
+        "loopClosureCentroidDelta": 0.036
       },
       "EAT_NW": {
         "frameCount": 5,
         "allFramesDistinct": true,
-        "loopClosureCentroidDelta": 0.04
+        "loopClosureCentroidDelta": 1.954
       },
       "HAPPY_NE": {
         "frameCount": 4,
@@ -296,21 +296,59 @@
     "approved": false
   },
   "evidence": {
-    "stateDirectionSheet": "candidate/reviews/state-direction-sheet.png",
-    "eatProof": "candidate/reviews/eat-se-proof.png",
-    "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet.png",
-    "walkProof": "candidate/reviews/walk-se-proof.png"
+    "stateDirectionSheet": "candidate/reviews/state-direction-sheet-v2.png",
+    "walkProof": "candidate/reviews/walk-proof-v2.png",
+    "eatProof": "candidate/reviews/eat-proof-v2.png",
+    "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet-v2.png"
   },
-  "ownerReview": {
-    "technical": "PASS",
+  "revision2": {
+    "revision": "B02.2-WAVE1-CHICKEN-REVISION-2",
+    "styleChangedFrames": 92,
+    "motionChangedFrames": {
+      "WALK": 24,
+      "EAT": 20
+    },
+    "preservedMotionStates": [
+      "IDLE",
+      "HAPPY",
+      "SLEEP",
+      "PRODUCT_READY"
+    ],
+    "microDetail": "PASS",
+    "shading": "PASS",
+    "walkFootCycle": {
+      "status": "PASS_PENDING_INTEGRATION_REVIEW",
+      "directions": [
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ],
+      "framesPerDirection": 6,
+      "contractUnchanged": true,
+      "evidence": "candidate/reviews/walk-proof-v2.png"
+    },
+    "eatContact": {
+      "status": "PASS_PENDING_INTEGRATION_REVIEW",
+      "directions": [
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ],
+      "contactFrame": 2,
+      "event": "FEED_CONSUMED",
+      "contract": {
+        "frames": 5,
+        "fps": 10,
+        "loop": false,
+        "holdLast": true
+      },
+      "evidence": "candidate/reviews/eat-proof-v2.png"
+    },
     "identity": "PASS",
-    "style": "REVISION_REQUIRED",
-    "animation": "REVISION_REQUIRED",
-    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
-    "findings": [
-      "WALK has no clearly readable foot cycle.",
-      "EAT frame 2 does not have clear beak/contact visual despite FEED_CONSUMED@2.",
-      "Gloss/high-frequency shading remains above the soft illustrated target."
-    ]
+    "technicalContract": "PASS",
+    "production_ready": false,
+    "approved": false
   }
 }

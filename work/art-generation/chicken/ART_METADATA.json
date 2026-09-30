@@ -1,8 +1,8 @@
 {
   "taskId": "ART-01",
   "assetType": "Chicken",
-  "status": "RUNNING",
-  "generationStatus": "REVISION_REQUIRED",
+  "status": "REVIEW",
+  "generationStatus": "COMPLETE",
   "assetIds": [
     "animal_chicken_idle_ne_00",
     "animal_chicken_idle_ne_01",
@@ -108,7 +108,7 @@
   "production_ready": false,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "REVISION_REQUIRED",
+  "styleReview": "PASS_PENDING_INTEGRATION_REVIEW",
   "approvalRef": null,
   "contract": {
     "canvas": {
@@ -1776,8 +1776,8 @@
     "qa": "ART_QA.json"
   },
   "generatedAt": "2026-09-30T08:59:45.557616+00:00",
-  "animationReview": "REVISION_REQUIRED",
-  "promotionDecision": "BLOCKED_PENDING_VISUAL_REVISION",
+  "animationReview": "PASS_PENDING_INTEGRATION_REVIEW",
+  "promotionDecision": "HOLD_PENDING_INTEGRATION_REVIEW",
   "reviewEvidence": "REVIEW_REPORT.md",
   "reviewFindings": {
     "technicalReview": "PASS",
@@ -1791,5 +1791,59 @@
       "EAT frame 2 does not show a clear head/beak contact pose despite the metadata event.",
       "Gloss/high-frequency shading remains too close to a 3D mascot and needs the approved soft illustrated treatment."
     ]
+  },
+  "revision2": {
+    "revision": "B02.2-WAVE1-CHICKEN-REVISION-2",
+    "status": "PASS_PENDING_INTEGRATION_REVIEW",
+    "operation": "Deterministic source candidate revision: reduced high-frequency feather contrast/specular highlights across all 92 frames for style consistency; applied targeted readable WALK foot poses and EAT contact poses without changing the manifest contract.",
+    "pixelStyleChangedFrames": 92,
+    "motionChangedFrames": {
+      "WALK": 24,
+      "EAT": 20
+    },
+    "preservedMotionStates": [
+      "IDLE",
+      "HAPPY",
+      "SLEEP",
+      "PRODUCT_READY"
+    ],
+    "contract": {
+      "totalFrames": 92,
+      "directions": [
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ],
+      "baselineY": 230,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "mirrorAllowed": false,
+      "eat": {
+        "frames": 5,
+        "fps": 10,
+        "loop": false,
+        "holdLast": true,
+        "event": "FEED_CONSUMED@2"
+      },
+      "walk": {
+        "frames": 6,
+        "fps": 8,
+        "loop": true
+      }
+    },
+    "microDetail": "PASS ? feather groups remain readable while fine ridge contrast is reduced.",
+    "shading": "PASS ? specular/high-frequency contrast reduced; top-left light and bottom-right volume preserved.",
+    "walkFootCycle": "PASS_PENDING_INTEGRATION_REVIEW ? four directions have alternating contact/passing poses with six frames and closed loop.",
+    "eatContact": "PASS_PENDING_INTEGRATION_REVIEW ? frame 2 visibly places beak/feed contact in NE/SE/SW/NW; event index unchanged.",
+    "identity": "PASS ? eye, comb, beak, wattle, wing/tail motif, leg color, palette and silhouette retained.",
+    "evidence": {
+      "stateDirection": "candidate/reviews/state-direction-sheet-v2.png",
+      "walk": "candidate/reviews/walk-proof-v2.png",
+      "eat": "candidate/reviews/eat-proof-v2.png",
+      "runtime": "candidate/reviews/runtime-size-sheet-v2.png"
+    }
   }
 }

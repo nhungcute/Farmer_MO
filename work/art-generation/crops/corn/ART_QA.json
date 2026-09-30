@@ -1,7 +1,7 @@
 {
   "taskId": "ART-04",
   "assetType": "Corn",
-  "status": "REVISION_REQUIRED",
+  "status": "REVIEW",
   "fileCount": 5,
   "expectedFileCount": 5,
   "canonicalIds": [
@@ -16,7 +16,7 @@
   "rgbaAlphaPass": true,
   "scalePass": true,
   "lightingPass": true,
-  "stylePass": "PENDING_OWNER_REVIEW",
+  "stylePass": "PASS",
   "stageContinuityPass": true,
   "metadataPass": true,
   "baseline": {
@@ -37,52 +37,371 @@
     "allCandidatesCanonical": true
   },
   "reviewNotes": [
-    "Five stages share one generated visual identity and a continuous seed-to-ready progression.",
-    "Generated art is a candidate for owner review; it is not promoted or approved for production.",
-    "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
+    "Five canonical stages share one coherent Corn identity and a continuous seed-to-ready progression.",
+    "Revision 2 removed the visible detached alpha islands from stage_2 and stage_3 without changing seed, stage_1, or ready artwork.",
+    "Visible component QA uses alpha >= 16 with 8-connectivity; every stage has one visible connected component and no detached visible component remains.",
+    "All candidates remain isolated from assets-src; production_ready=false and approved=false.",
+    "License and image-generation tool version remain PENDING_OWNER_REVIEW."
   ],
   "ownerReview": {
     "technical": "PASS",
-    "style": "REVISION_REQUIRED",
-    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
-    "findings": [
+    "style": "PASS_PENDING_INTEGRATION_REVIEW",
+    "promotion": "HOLD_PENDING_INTEGRATION_REVIEW",
+    "findings": [],
+    "revision2": {
+      "revision": "B02.2-WAVE1-CORN-REVISION-2",
+      "status": "PASS_PENDING_INTEGRATION_REVIEW",
+      "alphaComponentThreshold": 16,
+      "connectivity": 8,
+      "criterion": "Verification treats alpha >= 16 as runtime-visible and uses 8-connectivity; all five stages have exactly one connected visible component after repair. Lower-alpha anti-aliasing pixels are retained.",
+      "changedStages": [
+        {
+          "assetId": "crop_corn_stage_2",
+          "file": "crop_corn_stage_2.png",
+          "removedVisibleComponents": [
+            {
+              "pixels": 32,
+              "bbox": [
+                185,
+                103,
+                187,
+                121
+              ]
+            },
+            {
+              "pixels": 5,
+              "bbox": [
+                186,
+                135,
+                187,
+                140
+              ]
+            }
+          ]
+        },
+        {
+          "assetId": "crop_corn_stage_3",
+          "file": "crop_corn_stage_3.png",
+          "removedVisibleComponents": [
+            {
+              "pixels": 27,
+              "bbox": [
+                189,
+                139,
+                191,
+                159
+              ]
+            },
+            {
+              "pixels": 12,
+              "bbox": [
+                190,
+                96,
+                191,
+                108
+              ]
+            }
+          ]
+        }
+      ],
+      "postRepairDetachedVisibleComponentCount": 0,
+      "postRepairAllStageDetachedVisibleComponentCount": 0,
+      "postRepairPerStage": {
+        "crop_corn_seed": {
+          "file": "crop_corn_seed.png",
+          "dimensionsPass": true,
+          "rgbaAlphaPass": true,
+          "visibleComponentCount": 1,
+          "largestComponent": {
+            "pixels": 3992,
+            "bbox": [
+              83,
+              160,
+              176,
+              229
+            ]
+          },
+          "detachedVisibleComponents": [],
+          "baselineY": 230,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.9
+          }
+        },
+        "crop_corn_stage_1": {
+          "file": "crop_corn_stage_1.png",
+          "dimensionsPass": true,
+          "rgbaAlphaPass": true,
+          "visibleComponentCount": 1,
+          "largestComponent": {
+            "pixels": 6782,
+            "bbox": [
+              71,
+              111,
+              172,
+              228
+            ]
+          },
+          "detachedVisibleComponents": [],
+          "baselineY": 230,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.9
+          }
+        },
+        "crop_corn_stage_2": {
+          "file": "crop_corn_stage_2.png",
+          "dimensionsPass": true,
+          "rgbaAlphaPass": true,
+          "visibleComponentCount": 1,
+          "largestComponent": {
+            "pixels": 8076,
+            "bbox": [
+              68,
+              73,
+              170,
+              226
+            ]
+          },
+          "detachedVisibleComponents": [],
+          "baselineY": 230,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.9
+          }
+        },
+        "crop_corn_stage_3": {
+          "file": "crop_corn_stage_3.png",
+          "dimensionsPass": true,
+          "rgbaAlphaPass": true,
+          "visibleComponentCount": 1,
+          "largestComponent": {
+            "pixels": 13008,
+            "bbox": [
+              65,
+              16,
+              174,
+              227
+            ]
+          },
+          "detachedVisibleComponents": [],
+          "baselineY": 230,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.9
+          }
+        },
+        "crop_corn_ready": {
+          "file": "crop_corn_ready.png",
+          "dimensionsPass": true,
+          "rgbaAlphaPass": true,
+          "visibleComponentCount": 1,
+          "largestComponent": {
+            "pixels": 16618,
+            "bbox": [
+              67,
+              7,
+              186,
+              227
+            ]
+          },
+          "detachedVisibleComponents": [],
+          "baselineY": 230,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.9
+          }
+        }
+      },
+      "progressionPass": true,
+      "mobileReadabilityPass": true,
+      "identityPass": true,
+      "runtimeReview": "corn-runtime-review-v2.png",
+      "productionReady": false,
+      "approved": false,
+      "repairDetectionThreshold": 8,
+      "verificationPass": true
+    }
+  },
+  "revision2": {
+    "revision": "B02.2-WAVE1-CORN-REVISION-2",
+    "status": "PASS_PENDING_INTEGRATION_REVIEW",
+    "alphaComponentThreshold": 16,
+    "connectivity": 8,
+    "criterion": "Verification treats alpha >= 16 as runtime-visible and uses 8-connectivity; all five stages have exactly one connected visible component after repair. Lower-alpha anti-aliasing pixels are retained.",
+    "changedStages": [
       {
         "assetId": "crop_corn_stage_2",
-        "components": [
-          [
-            30,
-            [
+        "file": "crop_corn_stage_2.png",
+        "removedVisibleComponents": [
+          {
+            "pixels": 32,
+            "bbox": [
               185,
-              104,
-              186,
-              120
+              103,
+              187,
+              121
             ]
-          ]
+          },
+          {
+            "pixels": 5,
+            "bbox": [
+              186,
+              135,
+              187,
+              140
+            ]
+          }
         ]
       },
       {
         "assetId": "crop_corn_stage_3",
-        "components": [
-          [
-            18,
-            [
-              190,
-              140,
-              190,
-              157
+        "file": "crop_corn_stage_3.png",
+        "removedVisibleComponents": [
+          {
+            "pixels": 27,
+            "bbox": [
+              189,
+              139,
+              191,
+              159
             ]
-          ],
-          [
-            10,
-            [
+          },
+          {
+            "pixels": 12,
+            "bbox": [
               190,
-              97,
-              190,
-              106
+              96,
+              191,
+              108
             ]
-          ]
+          }
         ]
       }
-    ]
-  }
+    ],
+    "postRepairDetachedVisibleComponentCount": 0,
+    "postRepairAllStageDetachedVisibleComponentCount": 0,
+    "postRepairPerStage": {
+      "crop_corn_seed": {
+        "file": "crop_corn_seed.png",
+        "dimensionsPass": true,
+        "rgbaAlphaPass": true,
+        "visibleComponentCount": 1,
+        "largestComponent": {
+          "pixels": 3992,
+          "bbox": [
+            83,
+            160,
+            176,
+            229
+          ]
+        },
+        "detachedVisibleComponents": [],
+        "baselineY": 230,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.9
+        }
+      },
+      "crop_corn_stage_1": {
+        "file": "crop_corn_stage_1.png",
+        "dimensionsPass": true,
+        "rgbaAlphaPass": true,
+        "visibleComponentCount": 1,
+        "largestComponent": {
+          "pixels": 6782,
+          "bbox": [
+            71,
+            111,
+            172,
+            228
+          ]
+        },
+        "detachedVisibleComponents": [],
+        "baselineY": 230,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.9
+        }
+      },
+      "crop_corn_stage_2": {
+        "file": "crop_corn_stage_2.png",
+        "dimensionsPass": true,
+        "rgbaAlphaPass": true,
+        "visibleComponentCount": 1,
+        "largestComponent": {
+          "pixels": 8076,
+          "bbox": [
+            68,
+            73,
+            170,
+            226
+          ]
+        },
+        "detachedVisibleComponents": [],
+        "baselineY": 230,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.9
+        }
+      },
+      "crop_corn_stage_3": {
+        "file": "crop_corn_stage_3.png",
+        "dimensionsPass": true,
+        "rgbaAlphaPass": true,
+        "visibleComponentCount": 1,
+        "largestComponent": {
+          "pixels": 13008,
+          "bbox": [
+            65,
+            16,
+            174,
+            227
+          ]
+        },
+        "detachedVisibleComponents": [],
+        "baselineY": 230,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.9
+        }
+      },
+      "crop_corn_ready": {
+        "file": "crop_corn_ready.png",
+        "dimensionsPass": true,
+        "rgbaAlphaPass": true,
+        "visibleComponentCount": 1,
+        "largestComponent": {
+          "pixels": 16618,
+          "bbox": [
+            67,
+            7,
+            186,
+            227
+          ]
+        },
+        "detachedVisibleComponents": [],
+        "baselineY": 230,
+        "anchor": {
+          "x": 0.5,
+          "y": 0.9
+        }
+      }
+    },
+    "progressionPass": true,
+    "mobileReadabilityPass": true,
+    "identityPass": true,
+    "runtimeReview": "corn-runtime-review-v2.png",
+    "productionReady": false,
+    "approved": false,
+    "repairDetectionThreshold": 8,
+    "verificationPass": true
+  },
+  "reviewStatus": "REVIEW",
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PASS_PENDING_INTEGRATION_REVIEW",
+  "promotionDecision": "HOLD_PENDING_INTEGRATION_REVIEW",
+  "license": "PENDING_OWNER_REVIEW"
 }

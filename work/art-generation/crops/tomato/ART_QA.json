@@ -1,7 +1,7 @@
 {
   "taskId": "ART-05",
   "assetType": "Tomato",
-  "status": "REVISION_REQUIRED",
+  "status": "REVIEW",
   "fileCount": 5,
   "expectedFileCount": 5,
   "canonicalIds": [
@@ -28,116 +28,93 @@
       230,
       230
     ],
-    "pass": true
+    "observedLastPixelY": [
+      229,
+      229,
+      229,
+      229,
+      229
+    ],
+    "pass": true,
+    "note": "logical baselineY=230; occupied contact row is y=229"
   },
   "technicalChecks": {
     "noProductionAssetWrites": true,
     "sourceStripCopied": "source-strip-tomato.png",
     "allCandidatesTransparent": true,
-    "allCandidatesCanonical": true
+    "allCandidatesCanonical": true,
+    "alphaComponentQA": "tomato-revision-qa-v2.json",
+    "strictAlphaConnectedComponents": [
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "runtimeVisibleAlphaThreshold": "> 16",
+    "unexpectedVisibleIslands": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "unexpectedVisibleIslandsPass": true,
+    "baselineAlignmentPass": true,
+    "readyUnchanged": true
   },
   "reviewNotes": [
-    "Five stages share one generated visual identity and a continuous seed-to-ready progression.",
-    "Generated art is a candidate for owner review; it is not promoted or approved for production.",
-    "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
+    "Revision 2 removed the detached right-side alpha fragments from seed, stage_1, stage_2 and stage_3 without regenerating the art.",
+    "Cleaned silhouettes were translated only as needed to restore the shared logical contact baseline y=230 (occupied pixel row y=229).",
+    "Ready was not regenerated or edited; its pre-revision SHA-256 is preserved in tomato-revision-qa-v2.json.",
+    "All five stages retain one coherent Tomato identity, lighting, palette, perspective and seed-to-ready progression.",
+    "License and image-generation tool version remain PENDING_OWNER_REVIEW; production_ready and approved remain false."
   ],
   "ownerReview": {
     "technical": "PASS",
-    "style": "REVISION_REQUIRED",
-    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
-    "findings": [
-      {
-        "assetId": "crop_tomato_seed",
-        "components": [
-          [
-            21,
-            [
-              191,
-              100,
-              194,
-              107
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_1",
-        "components": [
-          [
-            54,
-            [
-              179,
-              142,
-              185,
-              154
-            ]
-          ],
-          [
-            6,
-            [
-              184,
-              105,
-              185,
-              108
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_2",
-        "components": [
-          [
-            28,
-            [
-              184,
-              98,
-              186,
-              110
-            ]
-          ],
-          [
-            2,
-            [
-              186,
-              122,
-              186,
-              123
-            ]
-          ],
-          [
-            1,
-            [
-              120,
-              211,
-              120,
-              211
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_3",
-        "components": [
-          [
-            19,
-            [
-              185,
-              115,
-              186,
-              126
-            ]
-          ],
-          [
-            17,
-            [
-              185,
-              155,
-              186,
-              164
-            ]
-          ]
-        ]
-      }
-    ]
-  }
+    "style": "PENDING_OWNER_REVIEW",
+    "progression": "PASS",
+    "promotion": "HOLD_PENDING_INTEGRATION_REVIEW",
+    "revision": "B02.2-PROOF Revision 2",
+    "findings": [],
+    "alphaComponentQA": {
+      "threshold": "> 16",
+      "connectivity": "8-neighbor",
+      "unexpectedVisibleIslands": 0,
+      "pass": true
+    },
+    "mobileReadability": "PASS",
+    "readyUnchanged": true
+  },
+  "generationStatus": "COMPLETE",
+  "reviewStatus": "REVIEW",
+  "reviewEvidence": {
+    "runtimeReview": "tomato-runtime-review-v2.png",
+    "mobileReview": "tomato-runtime-mobile-v2.png",
+    "alphaQA": "tomato-revision-qa-v2.json"
+  },
+  "progression": {
+    "states": [
+      "seed",
+      "stage_1",
+      "stage_2",
+      "stage_3",
+      "ready"
+    ],
+    "visibleHeights": [
+      114,
+      120,
+      153,
+      174,
+      219
+    ],
+    "pass": true,
+    "readyDistinct": true
+  },
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PASS_PENDING_INTEGRATION_REVIEW",
+  "promotionDecision": "HOLD_PENDING_INTEGRATION_REVIEW",
+  "license": "PENDING_OWNER_REVIEW"
 }

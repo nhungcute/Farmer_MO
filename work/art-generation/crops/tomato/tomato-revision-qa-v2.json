@@ -1,0 +1,407 @@
+{
+  "taskId": "ART-05",
+  "assetType": "Tomato",
+  "revision": "B02.2-PROOF Revision 2 targeted cleanup",
+  "status": "REVIEW",
+  "canonicalIds": [
+    "crop_tomato_seed",
+    "crop_tomato_stage_1",
+    "crop_tomato_stage_2",
+    "crop_tomato_stage_3",
+    "crop_tomato_ready"
+  ],
+  "canonicalIdsPass": true,
+  "contract": {
+    "canvas": {
+      "width": 256,
+      "height": 256
+    },
+    "mode": "RGBA",
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "baselineY": 230,
+    "background": "transparent",
+    "staticCropStages": true
+  },
+  "alphaComponentRule": {
+    "connectivity": "8-neighbor",
+    "strictMask": "alpha > 0; revised seed/stage_1/stage_2/stage_3 retain exactly one connected component",
+    "runtimeMask": "alpha > 16; pixels at or below 16 alpha are antialias quantization and are not considered visible islands",
+    "unexpectedIslandDefinition": "any non-primary component with alpha > 16 outside the intentional plant/soil/shadow silhouette",
+    "result": "PASS ? zero unexpected visible islands in all five frames; ready remains unchanged and has one primary visible component"
+  },
+  "frames": [
+    {
+      "assetId": "crop_tomato_seed",
+      "file": "crop_tomato_seed.png",
+      "state": "seed",
+      "sha256": "ef10cbcffeaaab44aa4ffc21542c9d4029e007d819b33441ca3d592f3330c1b8",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        61,
+        116,
+        170,
+        229
+      ],
+      "alphaComponents": {
+        "connectivity": "8-neighbor",
+        "strictAlphaGreaterThan0": 1,
+        "strictComponentSizes": [
+          7912
+        ],
+        "runtimeVisibleThreshold": "alpha > 16",
+        "runtimeVisibleComponents": 1,
+        "runtimeVisibleComponentSizes": [
+          6786
+        ],
+        "runtimeVisibleDetails": [
+          {
+            "pixels": 6786,
+            "bbox": [
+              63,
+              118,
+              167,
+              226
+            ],
+            "maxAlpha": 255
+          }
+        ],
+        "unexpectedVisibleIslands": 0
+      },
+      "baseline": {
+        "targetLogicalY": 230,
+        "targetLastPixelY": 229,
+        "observedLastPixelY": 229,
+        "pass": true
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourceScale": 2,
+      "translationFromPreRevision": {
+        "dyPixels": 24,
+        "reason": "baseline alignment after detached-island cleanup"
+      },
+      "readyUntouched": false,
+      "beforeRevisionSha256": null
+    },
+    {
+      "assetId": "crop_tomato_stage_1",
+      "file": "crop_tomato_stage_1.png",
+      "state": "stage_1",
+      "sha256": "93e210db5ac1736213ca83d4ddffa3c8228f658a7d61ca234236b0296be1bdf7",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        69,
+        110,
+        166,
+        229
+      ],
+      "alphaComponents": {
+        "connectivity": "8-neighbor",
+        "strictAlphaGreaterThan0": 1,
+        "strictComponentSizes": [
+          8022
+        ],
+        "runtimeVisibleThreshold": "alpha > 16",
+        "runtimeVisibleComponents": 1,
+        "runtimeVisibleComponentSizes": [
+          6936
+        ],
+        "runtimeVisibleDetails": [
+          {
+            "pixels": 6936,
+            "bbox": [
+              69,
+              112,
+              164,
+              227
+            ],
+            "maxAlpha": 255
+          }
+        ],
+        "unexpectedVisibleIslands": 0
+      },
+      "baseline": {
+        "targetLogicalY": 230,
+        "targetLastPixelY": 229,
+        "observedLastPixelY": 229,
+        "pass": true
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourceScale": 2,
+      "translationFromPreRevision": {
+        "dyPixels": 19,
+        "reason": "baseline alignment after detached-island cleanup"
+      },
+      "readyUntouched": false,
+      "beforeRevisionSha256": null
+    },
+    {
+      "assetId": "crop_tomato_stage_2",
+      "file": "crop_tomato_stage_2.png",
+      "state": "stage_2",
+      "sha256": "5bd20805ca0364748bd09e6018dbe9d2c84bb1b4f10c8975bccb0032c6f1b785",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        69,
+        77,
+        174,
+        229
+      ],
+      "alphaComponents": {
+        "connectivity": "8-neighbor",
+        "strictAlphaGreaterThan0": 1,
+        "strictComponentSizes": [
+          11484
+        ],
+        "runtimeVisibleThreshold": "alpha > 16",
+        "runtimeVisibleComponents": 1,
+        "runtimeVisibleComponentSizes": [
+          9836
+        ],
+        "runtimeVisibleDetails": [
+          {
+            "pixels": 9836,
+            "bbox": [
+              69,
+              80,
+              172,
+              227
+            ],
+            "maxAlpha": 255
+          }
+        ],
+        "unexpectedVisibleIslands": 0
+      },
+      "baseline": {
+        "targetLogicalY": 230,
+        "targetLastPixelY": 229,
+        "observedLastPixelY": 229,
+        "pass": true
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourceScale": 2,
+      "translationFromPreRevision": {
+        "dyPixels": 15,
+        "reason": "baseline alignment after detached-island cleanup"
+      },
+      "readyUntouched": false,
+      "beforeRevisionSha256": null
+    },
+    {
+      "assetId": "crop_tomato_stage_3",
+      "file": "crop_tomato_stage_3.png",
+      "state": "stage_3",
+      "sha256": "d77f62d960f233807d0eb9998441a957dee6206de5c39f6e088f72a62d69561e",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        68,
+        56,
+        181,
+        229
+      ],
+      "alphaComponents": {
+        "connectivity": "8-neighbor",
+        "strictAlphaGreaterThan0": 1,
+        "strictComponentSizes": [
+          14049
+        ],
+        "runtimeVisibleThreshold": "alpha > 16",
+        "runtimeVisibleComponents": 1,
+        "runtimeVisibleComponentSizes": [
+          12428
+        ],
+        "runtimeVisibleDetails": [
+          {
+            "pixels": 12428,
+            "bbox": [
+              68,
+              58,
+              178,
+              228
+            ],
+            "maxAlpha": 255
+          }
+        ],
+        "unexpectedVisibleIslands": 0
+      },
+      "baseline": {
+        "targetLogicalY": 230,
+        "targetLastPixelY": 229,
+        "observedLastPixelY": 229,
+        "pass": true
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourceScale": 2,
+      "translationFromPreRevision": {
+        "dyPixels": 0,
+        "reason": "baseline alignment after detached-island cleanup"
+      },
+      "readyUntouched": false,
+      "beforeRevisionSha256": null
+    },
+    {
+      "assetId": "crop_tomato_ready",
+      "file": "crop_tomato_ready.png",
+      "state": "ready",
+      "sha256": "9f27936d90cf7a9c73e1a98b1c6cc31655a9c22847c9c2c8c3fc9961881aea8a",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        59,
+        11,
+        196,
+        229
+      ],
+      "alphaComponents": {
+        "connectivity": "8-neighbor",
+        "strictAlphaGreaterThan0": 2,
+        "strictComponentSizes": [
+          21956,
+          1
+        ],
+        "runtimeVisibleThreshold": "alpha > 16",
+        "runtimeVisibleComponents": 1,
+        "runtimeVisibleComponentSizes": [
+          19838
+        ],
+        "runtimeVisibleDetails": [
+          {
+            "pixels": 19838,
+            "bbox": [
+              59,
+              13,
+              195,
+              226
+            ],
+            "maxAlpha": 255
+          }
+        ],
+        "unexpectedVisibleIslands": 0
+      },
+      "baseline": {
+        "targetLogicalY": 230,
+        "targetLastPixelY": 229,
+        "observedLastPixelY": 229,
+        "pass": true
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourceScale": 2,
+      "translationFromPreRevision": {
+        "dyPixels": 0,
+        "reason": "unchanged; ready was not regenerated"
+      },
+      "readyUntouched": true,
+      "beforeRevisionSha256": "9f27936d90cf7a9c73e1a98b1c6cc31655a9c22847c9c2c8c3fc9961881aea8a"
+    }
+  ],
+  "progression": {
+    "states": [
+      "seed",
+      "stage_1",
+      "stage_2",
+      "stage_3",
+      "ready"
+    ],
+    "visibleHeights": [
+      114,
+      120,
+      153,
+      174,
+      219
+    ],
+    "nonDecreasing": true,
+    "readyDistinct": true,
+    "pass": true,
+    "notes": "seed ? stage_1 ? stage_2 ? stage_3 ? ready remains coherent after contact-baseline alignment"
+  },
+  "runtimeReview": {
+    "sheet": "tomato-runtime-review-v2.png",
+    "scale": "100%",
+    "pass": true,
+    "notes": "all five stages share identity and contact baseline"
+  },
+  "mobileReview": {
+    "sheet": "tomato-runtime-mobile-v2.png",
+    "scale": "50%",
+    "pass": true,
+    "notes": "all five stages readable at runtime size"
+  },
+  "qaSummary": {
+    "fileCountPass": true,
+    "dimensionsPass": true,
+    "rgbaAlphaPass": true,
+    "scalePass": true,
+    "lightingPass": true,
+    "identityPass": true,
+    "baselinePass": true,
+    "anchorPass": true,
+    "sourceScalePass": true,
+    "progressionPass": true,
+    "detachedVisibleFragmentsPass": true,
+    "readyUnchanged": true
+  },
+  "productionBoundary": {
+    "productionReady": false,
+    "approved": false,
+    "promotion": "HOLD_PENDING_INTEGRATION_REVIEW",
+    "productionFilesChanged": false,
+    "license": "PENDING_OWNER_REVIEW"
+  }
+}

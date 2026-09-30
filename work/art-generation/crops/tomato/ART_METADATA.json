@@ -1,8 +1,8 @@
 {
   "taskId": "ART-05",
   "assetType": "Tomato",
-  "status": "RUNNING",
-  "generationStatus": "REVISION_REQUIRED",
+  "status": "REVIEW",
+  "generationStatus": "COMPLETE",
   "assetIds": [
     "crop_tomato_seed",
     "crop_tomato_stage_1",
@@ -21,7 +21,7 @@
   "production_ready": false,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "REVISION_REQUIRED",
+  "styleReview": "PASS_PENDING_INTEGRATION_REVIEW",
   "approvalRef": null,
   "contract": {
     "canvas": {
@@ -70,13 +70,13 @@
       ],
       "alphaBoundingBox": [
         61,
-        25,
-        195,
-        230
+        116,
+        170,
+        229
       ],
       "baselineY": 230,
-      "visibleWidth": 134,
-      "visibleHeight": 205,
+      "visibleWidth": 110,
+      "visibleHeight": 114,
       "anchor": {
         "x": 0.5,
         "y": 0.9
@@ -86,7 +86,8 @@
         "top": 0,
         "right": 397,
         "bottom": 793
-      }
+      },
+      "sha256": "ef10cbcffeaaab44aa4ffc21542c9d4029e007d819b33441ca3d592f3330c1b8"
     },
     {
       "assetId": "crop_tomato_stage_1",
@@ -103,13 +104,13 @@
       ],
       "alphaBoundingBox": [
         69,
-        44,
-        186,
-        230
+        110,
+        166,
+        229
       ],
       "baselineY": 230,
-      "visibleWidth": 117,
-      "visibleHeight": 186,
+      "visibleWidth": 98,
+      "visibleHeight": 120,
       "anchor": {
         "x": 0.5,
         "y": 0.9
@@ -119,7 +120,8 @@
         "top": 0,
         "right": 793,
         "bottom": 793
-      }
+      },
+      "sha256": "93e210db5ac1736213ca83d4ddffa3c8228f658a7d61ca234236b0296be1bdf7"
     },
     {
       "assetId": "crop_tomato_stage_2",
@@ -136,13 +138,13 @@
       ],
       "alphaBoundingBox": [
         69,
-        17,
-        187,
-        230
+        77,
+        174,
+        229
       ],
       "baselineY": 230,
-      "visibleWidth": 118,
-      "visibleHeight": 213,
+      "visibleWidth": 106,
+      "visibleHeight": 153,
       "anchor": {
         "x": 0.5,
         "y": 0.9
@@ -152,7 +154,8 @@
         "top": 0,
         "right": 1190,
         "bottom": 793
-      }
+      },
+      "sha256": "5bd20805ca0364748bd09e6018dbe9d2c84bb1b4f10c8975bccb0032c6f1b785"
     },
     {
       "assetId": "crop_tomato_stage_3",
@@ -170,11 +173,11 @@
       "alphaBoundingBox": [
         68,
         56,
-        187,
-        230
+        181,
+        229
       ],
       "baselineY": 230,
-      "visibleWidth": 119,
+      "visibleWidth": 114,
       "visibleHeight": 174,
       "anchor": {
         "x": 0.5,
@@ -185,7 +188,8 @@
         "top": 0,
         "right": 1586,
         "bottom": 793
-      }
+      },
+      "sha256": "d77f62d960f233807d0eb9998441a957dee6206de5c39f6e088f72a62d69561e"
     },
     {
       "assetId": "crop_tomato_ready",
@@ -203,8 +207,8 @@
       "alphaBoundingBox": [
         59,
         11,
-        197,
-        230
+        196,
+        229
       ],
       "baselineY": 230,
       "visibleWidth": 138,
@@ -218,109 +222,49 @@
         "top": 0,
         "right": 1983,
         "bottom": 793
-      }
+      },
+      "sha256": "9f27936d90cf7a9c73e1a98b1c6cc31655a9c22847c9c2c8c3fc9961881aea8a"
     }
   ],
   "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation.",
-  "promotionDecision": "BLOCKED_PENDING_VISUAL_REVISION",
+  "promotionDecision": "HOLD_PENDING_INTEGRATION_REVIEW",
   "reviewEvidence": "REVIEW_REPORT.md",
   "reviewFindings": {
     "technicalReview": "PASS",
     "progression": "PASS",
-    "visualArtifact": "REVISION_REQUIRED",
-    "detachedSmallComponents": [
-      {
-        "assetId": "crop_tomato_seed",
-        "components": [
-          [
-            21,
-            [
-              191,
-              100,
-              194,
-              107
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_1",
-        "components": [
-          [
-            54,
-            [
-              179,
-              142,
-              185,
-              154
-            ]
-          ],
-          [
-            6,
-            [
-              184,
-              105,
-              185,
-              108
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_2",
-        "components": [
-          [
-            28,
-            [
-              184,
-              98,
-              186,
-              110
-            ]
-          ],
-          [
-            2,
-            [
-              186,
-              122,
-              186,
-              123
-            ]
-          ],
-          [
-            1,
-            [
-              120,
-              211,
-              120,
-              211
-            ]
-          ]
-        ]
-      },
-      {
-        "assetId": "crop_tomato_stage_3",
-        "components": [
-          [
-            19,
-            [
-              185,
-              115,
-              186,
-              126
-            ]
-          ],
-          [
-            17,
-            [
-              185,
-              155,
-              186,
-              164
-            ]
-          ]
-        ]
-      }
-    ]
-  }
+    "visualArtifact": "PASS_PENDING_INTEGRATION_REVIEW",
+    "alphaComponentRule": {
+      "connectivity": "8-neighbor",
+      "strictMask": "alpha > 0; revised seed/stage_1/stage_2/stage_3 retain exactly one connected component",
+      "runtimeMask": "alpha > 16; pixels at or below 16 alpha are antialias quantization and are not considered visible islands",
+      "unexpectedIslandDefinition": "any non-primary component with alpha > 16 outside the intentional plant/soil/shadow silhouette",
+      "result": "PASS ? zero unexpected visible islands in all five frames; ready remains unchanged and has one primary visible component"
+    },
+    "unexpectedVisibleIslandsAfterRevision": {
+      "crop_tomato_seed": 0,
+      "crop_tomato_stage_1": 0,
+      "crop_tomato_stage_2": 0,
+      "crop_tomato_stage_3": 0,
+      "crop_tomato_ready": 0
+    },
+    "baselineAlignment": {
+      "crop_tomato_seed": 24,
+      "crop_tomato_stage_1": 19,
+      "crop_tomato_stage_2": 15,
+      "crop_tomato_stage_3": 0,
+      "crop_tomato_ready": 0
+    },
+    "mobileReview": "PASS",
+    "readyUnchanged": true
+  },
+  "qaReport": "tomato-revision-qa-v2.json",
+  "revisionHistory": [
+    {
+      "revision": "B02.2-PROOF Revision 2",
+      "operation": "Removed detached alpha islands from seed/stage_1/stage_2/stage_3 using deterministic 8-connected largest-component cleanup; translated cleaned silhouettes to last occupied pixel y=229 so logical baselineY=230 remains stable.",
+      "ready": "Unchanged; no regeneration or pixel edits.",
+      "qa": "tomato-revision-qa-v2.json",
+      "result": "PASS_PENDING_INTEGRATION_REVIEW"
+    }
+  ]
 }
