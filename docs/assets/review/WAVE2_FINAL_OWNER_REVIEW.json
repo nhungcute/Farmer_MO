@@ -1,0 +1,1498 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30T23:07:51.825Z",
+  "status": "FINAL_OWNER_REVIEW_COMPLETE",
+  "reviews": [
+    {
+      "review": "FINAL-06",
+      "taskId": "ART-06",
+      "scope": "Pond",
+      "expected": 19,
+      "assets": 19,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Inner-water mask containment remains zero outside-mask pixels; water/ripple/sparkle contracts and pond geometry remain stable.",
+      "visualEvidence": [
+        "work/art-generation/pond/reviews/pond-mask-review-v2.png"
+      ],
+      "rows": [
+        {
+          "id": "pond_small_lv1_base",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "fdd3cf2a7592910d2bf92bf4ba026430cf3b83010785ccfe817e4702bf77fc85",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1030,
+            "y": 518,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_00",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "38168596426b5c15b74717567155c99b223a2411034231ef2db7a8487226c8a7",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 516,
+            "y": 388,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_01",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "8cf248a495fad4482c16f4f6c9d8a8be395bca158f614875e336078367aa747c",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 1030,
+            "y": 388,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_02",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "7bd52056238955eefc5f421c114e77a3f110055ada871f7ff3fdc2c0cbef05c8",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 2,
+            "y": 774,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_03",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "80eba5bdaffc3685c5ea2d044605fdcb4690544b35674888d40d8babe1994e62",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 516,
+            "y": 774,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_04",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "a59ac3fb3175d90ee7943492e12a584671738a49f57c97624460889c1f067548",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 1030,
+            "y": 774,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_05",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "bbbf60900c3311224f95b379bc88d19276d118ed59d6d2e8cf4e810d748bfb2c",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 2,
+            "y": 1160,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_06",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "90c1fada73c7e6ba5f429563274d5fafdf0555ba337775afd56ed0bd87d60770",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 516,
+            "y": 1160,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_water_07",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "6ed6eb1757d0bfdeeef44447a43f4df005249218319eddce1175a50cb66d2ea9",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 1030,
+            "y": 1160,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_00",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "5b0a1e8b5d25001ce8ddbde07665998fe8436c39e828426b87350e7abcd8d2b0",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 2,
+            "y": 904,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_01",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "0b6fe4343f9944a42a734da3ad1f24b5e30d3dbfb00fb5f890f2e33b5159370e",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 516,
+            "y": 904,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_02",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "7c53eb742af54c52a7ab54b159452a4d75300816d38fe4f3af334b141655152f",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1030,
+            "y": 904,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_03",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "4c2a2c9f874f1a92e6278ca644aa3712592c9faed79dd3f36c88f119c7c4b9ab",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 2,
+            "y": 1290,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_04",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "13f23447df9828a61cb56b99229ee2b651cb14d4dba95b08611f6d44e215113d",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 516,
+            "y": 1290,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_ripple_05",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "4bceef89e92f734251189ce369ca5db7d5833c1870682e41c99b34576162560f",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1030,
+            "y": 1290,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_sparkle_00",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "b65a9cf553dade6c5b2ebb34318eca18812f0d77cf58f90c80bfcf20e09b3333",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 2,
+            "y": 2,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_sparkle_01",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "bb198d07f822f4a5527a6822604184f7333d10ca1c87d3536844ec4c1bd50a3d",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 516,
+            "y": 2,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_sparkle_02",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "06daf83307ef97bfced0229437841f4401e9f93292be1a291594cc4318466f05",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 1030,
+            "y": 2,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "pond_small_lv1_sparkle_03",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "fca08bbd1ab39703e24b1c854b5422c3ff619b8179032aedbde51c00d27e6d80",
+          "atlas": "farm_common-1.png",
+          "frame": {
+            "x": 2,
+            "y": 388,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-07",
+      "taskId": "ART-07",
+      "scope": "Farmhouse",
+      "expected": 1,
+      "assets": 1,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Production farmhouse preserves isometric footprint, roof/wall proportions, top-left lighting and soft shadow.",
+      "visualEvidence": [
+        "work/art-generation/buildings/farmhouse/reviews/farmhouse-candidate.png",
+        "work/art-generation/buildings/farmhouse/reviews/mobile-scale-review.png"
+      ],
+      "rows": [
+        {
+          "id": "building_farmhouse_lv1",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "8fe1eba7e786b5fe641ad6f366d6523d91f055e1decf89caedd9e9c67a759ca0",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 2,
+            "y": 518,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-08",
+      "taskId": "ART-08",
+      "scope": "Warehouse",
+      "expected": 1,
+      "assets": 1,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Production warehouse remains visually distinct from the Farmhouse and readable as storage in the approved palette.",
+      "visualEvidence": [
+        "work/art-generation/buildings/warehouse/reviews/warehouse-candidate.png",
+        "work/art-generation/buildings/warehouse/reviews/mobile-scale-review.png"
+      ],
+      "rows": [
+        {
+          "id": "building_warehouse_lv1",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "ad905810975025c52ea0625a8c99a0bcbb8b39719af396f3533b04c5f1c92da3",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 516,
+            "y": 518,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-09",
+      "taskId": "ART-09",
+      "scope": "Chicken Coop",
+      "expected": 1,
+      "assets": 1,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Production coop keeps the approved isometric angle, entrance scale and relative scale next to production Chicken.",
+      "visualEvidence": [
+        "work/art-generation/buildings/chicken-coop/reviews/chicken-coop-scale-with-chicken.png",
+        "work/art-generation/buildings/chicken-coop/reviews/all-asset-mobile-50.png"
+      ],
+      "rows": [
+        {
+          "id": "building_chicken_coop_lv1",
+          "dimensions": [
+            512,
+            384
+          ],
+          "sourceSha256": "202a7107feb7587390b6f9755df21da52c66905c0cded75e46d1152ad76517b2",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1292,
+            "y": 132,
+            "w": 512,
+            "h": 384
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-10",
+      "taskId": "ART-10",
+      "scope": "Terrain",
+      "expected": 5,
+      "assets": 5,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Production terrain fills the canonical footprint, tiles without visible cracks and stays subordinate to crops, buildings, pond and Chicken.",
+      "visualEvidence": [
+        "work/art-generation/terrain/reviews/terrain-tiled-4x4-review-v2.png",
+        "work/art-generation/terrain/reviews/terrain-tiled-8x8-review-v2.png",
+        "work/art-generation/terrain/reviews/terrain-dpr-runtime-review-v2.png"
+      ],
+      "rows": [
+        {
+          "id": "terrain_grass_tile",
+          "dimensions": [
+            256,
+            128
+          ],
+          "sourceSha256": "da9679b113cc9b9772120e7b5ca132149c3f6e9821c5260911a3f56b6e209182",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 2,
+            "y": 132,
+            "w": 256,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "terrain_grass_variant_01",
+          "dimensions": [
+            256,
+            128
+          ],
+          "sourceSha256": "aa2ef110842e5a44420325c4c914bef8b677bb76ecd4b5ab6f31740a0a70bb1a",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 260,
+            "y": 132,
+            "w": 256,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "terrain_grass_variant_02",
+          "dimensions": [
+            256,
+            128
+          ],
+          "sourceSha256": "860cbbe0272c4092abc84044c235791a7670d829c1ca3293b8c42303fbcd3bf9",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 518,
+            "y": 132,
+            "w": 256,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "terrain_grass_variant_03",
+          "dimensions": [
+            256,
+            128
+          ],
+          "sourceSha256": "f4c3a4ac74141e562f6b6f55f77abdd06f8310d4f066fad2a423b3b7bd61ca87",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 776,
+            "y": 132,
+            "w": 256,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "terrain_grass_variant_04",
+          "dimensions": [
+            256,
+            128
+          ],
+          "sourceSha256": "b3ed6f96b1d585071fe17cd699de2a5ea127beb446c5577ad172ae781719b233",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1034,
+            "y": 132,
+            "w": 256,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-11",
+      "taskId": "ART-11",
+      "scope": "Effects",
+      "expected": 30,
+      "assets": 30,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "All five production effect families retain canonical timing and readable feedback while avoiding excessive bloom, glossy orb shading, hard specular cores and oversized halos.",
+      "visualEvidence": [
+        "work/art-generation/effects/reviews/effects-revision-v2.png"
+      ],
+      "rows": [
+        {
+          "id": "fx_plant_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "708bb0355dd373a3c36e501ef502863585f7e82946cd1e5145664106b4f3ae6a",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 518,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_plant_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "ce67e045a2a3c1c93567b3a0d6f0801e0043260eed24295c92ca1dbfc64f6cdf",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 776,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_plant_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "29ccf368d40e7e90cdfb3bc8795c485bfa0a8398d04f2a71e35ec58e6ef853f0",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1034,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_plant_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "219842df704da977a713e0899cbb1ff1ef04e494eee0151623a4d856bc3a6293",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1292,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "4eb6bd5663d7186e7b1d618f9ebe1499adbdce8228409a24ee2337981f6037c0",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 776,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "d60b33fe8a989cf4b8f572bf5f3920396c673b486ef79dee45bab1c672b8232e",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1034,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "b1b8e6a38f80ac35120bd886e39afe8d139812ca7a395789ae402f654072cc0e",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1292,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "edacc98a7c324466ae87b9c50ee9b97778415dbabdbe14c3b25ac8b5d874f0ac",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1550,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_04",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "428ddf0d0a3d40e9d9bb94ab04ed60bf7130af81467b3280dba2fc24791b2727",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 2,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_harvest_05",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "c95de0851fc7a02769f08a8bf54cd36bb5d46b150ec718f927a1e24e536424ad",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 260,
+            "y": 1034,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "0af3582320cc5edf954b2f241690e5441122a36ffa6feb8d75b2eacdaa9294fc",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1034,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "e45eb7fd3529353f59ff88292c5e044d54307aa913ec0c8570d4a36221191d09",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1292,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "965ace64e3106a67a439bee66f0f8a0fc4847d16030c5e68698bd3ec7fa5d76d",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1550,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "baf7048f8cbd9706c676cd27eca2e20b32b90e5adc4dbbcaf1891fa6519f71e5",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 2,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_04",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "bcd205a60203f1af633f115daaec7f4c80c0601f47c99d147f1ca9e2ccda9478",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 260,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_build_success_05",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "7a9492aa36c0cbaa47aa2d68fe90764859bdde4beab1f772420be194aaba55f4",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 518,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "3c2b24addf3c6104e582983e2cf852a69c605ae91353a7ea11c571fe93358dbf",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 776,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "52ef60adf0e4470812e063039681e6017567af296820f6186dce4a41a0f9adf8",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1034,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "df8feb87209ed95139fa4e3197dfa315451c6a55ce5635819af2e980b5ef3505",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1292,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "a219c866250a51ac504866fb0ad5c3536cfbf7a8ddf3baacc3b80aebac6f6e2c",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1550,
+            "y": 260,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_04",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "8c4409ba299de2b77c53f1f5ffd5864faf06623d40e7aac7cafa6d4e000071d3",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 2,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_05",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "945d4c35e91d585d751d272520b59bce44a5296943feaae67f3e38ed853244e5",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 260,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_06",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "76d02ab9d3bc5c2e027b792f2f6fdc2588e5335f177ce98a39c0a5e6877954eb",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 518,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_coin_gain_07",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "18256991106a553e86a8d20bd8fe48329c5993d54315c69af758d54657ef0146",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 776,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "2950da5e6abb4da3a61571338c11d7f1518572d1f1067aaa2564eb313829e6cc",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1034,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "5010efadd18f1cdc07f8c2da3fdb969ac5fff38ff70f07329cf6abbe41805220",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1292,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "55e8414363ec6b0a64d21384e1d776a974a1f773ae8bb2f1bf6864bb3c4b667c",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 1550,
+            "y": 518,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "9c76c4e19a2896028587f064d0fa45a27750a3e9fa5e9f1d8bf35f6c475da3e4",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 2,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_04",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "04c034e44b96410d68a74922c624ac9b03802a000922dde50530f22b4eaef542",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 260,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "fx_egg_collect_05",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "e991c0308caa414fb75137930461efcaeec07fb2e496c9fbac55ba5dc0005d1a",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 518,
+            "y": 776,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-12",
+      "taskId": "ART-12",
+      "scope": "UI",
+      "expected": 15,
+      "assets": 15,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "All production UI assets remain semantically readable as one coherent soft illustrated icon family at 128/64/32 and runtime size.",
+      "visualEvidence": [
+        "work/art-generation/ui/reviews/ui-runtime-size-comparison-v2.png"
+      ],
+      "rows": [
+        {
+          "id": "icon_coin",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "4cb8f5ca35f7b1163fb9372199b5f48ab92ecc6564b3a34931bfc6dc6aea07de",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 522,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_diamond",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "ed4451f74d539b669fe46a8c7266aeca1cc4bec91c4fb8179a34e28944f26a52",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 782,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_rice",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "a996f60d79668a543a059676bee35f83ee01c8d6960c16ad81db3f78c6f0156f",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1172,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_carrot",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "8c5e0f27cad0e22e253fa73072c54b3f85dfbea7b555b83ead3a5c90db2ebef6",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 262,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_corn",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "0be90e61e2b9536f26a9bcd39a91a518e4d1f1a1eb3b001a3b14667ac7137a5d",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 652,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_tomato",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "b0701bddaeac9bad551b2c993f2e00b9c1d3a7ca38040b235b33a25cc6768175",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1302,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_chicken_feed",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "515dc7ad3903193abc52a3f105de2fb24be7808d15e8f63b4389f747e7fad310",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 392,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_egg",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "42e9ac1e573d860e7d12d2408b4cdbebd74a2eecd4a9b5e2acea61cc5306a44f",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 912,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "icon_order",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "39ce63d6e17f26d61a73db87d53988deb21b3113cca5b9e8277509354f9ea4d4",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1042,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "ui_rotate_overlay",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "18b49c2373b0592f15c93b878d1a3a881f5a996329197e36ad32f459ae30906f",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1692,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "ui_loading",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "5d01abed75086fe9124961f80fa3aac23294fca5e670101ca1f22959d5a78ec5",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1562,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "ui_success_toast",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "53d67457532165dae4eaaecbe6a2db79bda7a1f5a842f96aafd5c5211cfb0c38",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1822,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "ui_error_toast",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "9160deeac681044c01b217d78c02643a99c7694add809004cce6fd552f805960",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 1432,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "build_ghost_valid",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "bb457e38c650f5b10bd6d892fc278ea46721387a8d06860c407144958a145aed",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 132,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "build_ghost_invalid",
+          "dimensions": [
+            128,
+            128
+          ],
+          "sourceSha256": "e954de1f231ade8b64eb214d6ad033ab5a0afa34983b9cb8a32bf1fd36726241",
+          "atlas": "farm_common-0.png",
+          "frame": {
+            "x": 2,
+            "y": 2,
+            "w": 128,
+            "h": 128
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    },
+    {
+      "review": "FINAL-13",
+      "taskId": "ART-13",
+      "scope": "Crop Extras",
+      "expected": 4,
+      "assets": 4,
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "APPROVE",
+      "mobile": "PASS",
+      "provenance": "PASS",
+      "licensePolicyEligibility": "PASS",
+      "recommendation": "APPROVE",
+      "knownIssues": [],
+      "productionBoundary": {
+        "approved": false,
+        "approvalRef": null,
+        "contentApproval": "PENDING_OWNER_REVIEW",
+        "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+        "releaseApproval": "BLOCKED"
+      },
+      "details": "Crop-ready glow remains a separate canonical effect, compatible with the approved crop palette and transparent alpha contract.",
+      "visualEvidence": [
+        "work/art-generation/crops/extras/reviews/crop-glow-overlay-review.png"
+      ],
+      "rows": [
+        {
+          "id": "crop_ready_glow_00",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "edd3d1742125b7349f458297d22b2a61cdf608507326ed3fffb22ceac11c2908",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 2,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "crop_ready_glow_01",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "62ec6c11e99bd349c778fb94d08d212d4e39344dc74acf07eeba8edcda0ac960",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 260,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "crop_ready_glow_02",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "ea28a273821d1e1b87705cb19ea369f2268419c8b80c9960a22c193e5e9b8917",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 518,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        },
+        {
+          "id": "crop_ready_glow_03",
+          "dimensions": [
+            256,
+            256
+          ],
+          "sourceSha256": "4a4de88d1905a700bf4611b5a374249303f700b221506ff4efd605d05d0e12c1",
+          "atlas": "effects.png",
+          "frame": {
+            "x": 776,
+            "y": 2,
+            "w": 256,
+            "h": 256
+          },
+          "exactSourceToAtlas": true
+        }
+      ]
+    }
+  ],
+  "crossAsset": {
+    "result": true,
+    "requiredIds": [
+      "terrain_grass_tile",
+      "building_farmhouse_lv1",
+      "building_warehouse_lv1",
+      "building_chicken_coop_lv1",
+      "pond_small_lv1_base",
+      "animal_chicken_idle_se_00",
+      "crop_rice_stage_3",
+      "crop_carrot_stage_3",
+      "crop_corn_stage_3",
+      "crop_tomato_stage_3",
+      "fx_plant_00"
+    ],
+    "runtimeSceneEvidence": "docs/assets/review/wave2-final-runtime-dpr1.png",
+    "mobileEvidence": [
+      "docs/assets/review/wave2-final-runtime-mobile-932x430.png",
+      "docs/assets/review/wave2-final-runtime-mobile-915x412.png",
+      "docs/assets/review/wave2-final-runtime-mobile-844x390.png",
+      "docs/assets/review/wave2-final-runtime-mobile-740x360.png"
+    ],
+    "resultDetail": "PASS — production runtime scene contains terrain, buildings, approved crops and runtime UI; asset-specific pond/effects/chicken evidence is recorded per review task."
+  },
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "productionBoundary": {
+    "total": 188,
+    "productionReady": 188,
+    "wave2ProductionReady": 76,
+    "approved": 112,
+    "wave2Approved": 0,
+    "placeholders": 0,
+    "wave2ContentApproval": "PENDING_OWNER_REVIEW",
+    "wave2LicenseApproval": "PENDING_OWNER_REVIEW",
+    "releaseApproval": "BLOCKED"
+  },
+  "validators": {
+    "wave1": "PASS",
+    "wave2": "PASS",
+    "runtimeAtlas": "PASS",
+    "renderer": "PASS",
+    "check": "PASS"
+  },
+  "recommendation": "READY_FOR_OWNER_APPROVAL",
+  "next": "Wait for explicit Project Owner Wave 2 content, license and release approval."
+}

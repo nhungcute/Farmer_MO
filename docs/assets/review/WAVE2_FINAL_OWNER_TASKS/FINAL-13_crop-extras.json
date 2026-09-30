@@ -1,0 +1,92 @@
+{
+  "review": "FINAL-13",
+  "taskId": "ART-13",
+  "scope": "Crop Extras",
+  "expected": 4,
+  "assets": 4,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Crop-ready glow remains a separate canonical effect, compatible with the approved crop palette and transparent alpha contract.",
+  "visualEvidence": [
+    "work/art-generation/crops/extras/reviews/crop-glow-overlay-review.png"
+  ],
+  "rows": [
+    {
+      "id": "crop_ready_glow_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "edd3d1742125b7349f458297d22b2a61cdf608507326ed3fffb22ceac11c2908",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "62ec6c11e99bd349c778fb94d08d212d4e39344dc74acf07eeba8edcda0ac960",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 260,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "ea28a273821d1e1b87705cb19ea369f2268419c8b80c9960a22c193e5e9b8917",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 518,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "4a4de88d1905a700bf4611b5a374249303f700b221506ff4efd605d05d0e12c1",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 776,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

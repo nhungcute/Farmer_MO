@@ -1,0 +1,110 @@
+{
+  "review": "FINAL-10",
+  "taskId": "ART-10",
+  "scope": "Terrain",
+  "expected": 5,
+  "assets": 5,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Production terrain fills the canonical footprint, tiles without visible cracks and stays subordinate to crops, buildings, pond and Chicken.",
+  "visualEvidence": [
+    "work/art-generation/terrain/reviews/terrain-tiled-4x4-review-v2.png",
+    "work/art-generation/terrain/reviews/terrain-tiled-8x8-review-v2.png",
+    "work/art-generation/terrain/reviews/terrain-dpr-runtime-review-v2.png"
+  ],
+  "rows": [
+    {
+      "id": "terrain_grass_tile",
+      "dimensions": [
+        256,
+        128
+      ],
+      "sourceSha256": "da9679b113cc9b9772120e7b5ca132149c3f6e9821c5260911a3f56b6e209182",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 2,
+        "y": 132,
+        "w": 256,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "terrain_grass_variant_01",
+      "dimensions": [
+        256,
+        128
+      ],
+      "sourceSha256": "aa2ef110842e5a44420325c4c914bef8b677bb76ecd4b5ab6f31740a0a70bb1a",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 260,
+        "y": 132,
+        "w": 256,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "terrain_grass_variant_02",
+      "dimensions": [
+        256,
+        128
+      ],
+      "sourceSha256": "860cbbe0272c4092abc84044c235791a7670d829c1ca3293b8c42303fbcd3bf9",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 518,
+        "y": 132,
+        "w": 256,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "terrain_grass_variant_03",
+      "dimensions": [
+        256,
+        128
+      ],
+      "sourceSha256": "f4c3a4ac74141e562f6b6f55f77abdd06f8310d4f066fad2a423b3b7bd61ca87",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 776,
+        "y": 132,
+        "w": 256,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "terrain_grass_variant_04",
+      "dimensions": [
+        256,
+        128
+      ],
+      "sourceSha256": "b3ed6f96b1d585071fe17cd699de2a5ea127beb446c5577ad172ae781719b233",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1034,
+        "y": 132,
+        "w": 256,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

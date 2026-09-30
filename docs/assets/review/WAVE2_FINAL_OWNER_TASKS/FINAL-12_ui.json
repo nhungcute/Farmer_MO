@@ -1,0 +1,268 @@
+{
+  "review": "FINAL-12",
+  "taskId": "ART-12",
+  "scope": "UI",
+  "expected": 15,
+  "assets": 15,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "All production UI assets remain semantically readable as one coherent soft illustrated icon family at 128/64/32 and runtime size.",
+  "visualEvidence": [
+    "work/art-generation/ui/reviews/ui-runtime-size-comparison-v2.png"
+  ],
+  "rows": [
+    {
+      "id": "icon_coin",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "4cb8f5ca35f7b1163fb9372199b5f48ab92ecc6564b3a34931bfc6dc6aea07de",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 522,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_diamond",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "ed4451f74d539b669fe46a8c7266aeca1cc4bec91c4fb8179a34e28944f26a52",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 782,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_rice",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "a996f60d79668a543a059676bee35f83ee01c8d6960c16ad81db3f78c6f0156f",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1172,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_carrot",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "8c5e0f27cad0e22e253fa73072c54b3f85dfbea7b555b83ead3a5c90db2ebef6",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 262,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_corn",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "0be90e61e2b9536f26a9bcd39a91a518e4d1f1a1eb3b001a3b14667ac7137a5d",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 652,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_tomato",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "b0701bddaeac9bad551b2c993f2e00b9c1d3a7ca38040b235b33a25cc6768175",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1302,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_chicken_feed",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "515dc7ad3903193abc52a3f105de2fb24be7808d15e8f63b4389f747e7fad310",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 392,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_egg",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "42e9ac1e573d860e7d12d2408b4cdbebd74a2eecd4a9b5e2acea61cc5306a44f",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 912,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "icon_order",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "39ce63d6e17f26d61a73db87d53988deb21b3113cca5b9e8277509354f9ea4d4",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1042,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "ui_rotate_overlay",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "18b49c2373b0592f15c93b878d1a3a881f5a996329197e36ad32f459ae30906f",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1692,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "ui_loading",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "5d01abed75086fe9124961f80fa3aac23294fca5e670101ca1f22959d5a78ec5",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1562,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "ui_success_toast",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "53d67457532165dae4eaaecbe6a2db79bda7a1f5a842f96aafd5c5211cfb0c38",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1822,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "ui_error_toast",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "9160deeac681044c01b217d78c02643a99c7694add809004cce6fd552f805960",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1432,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "build_ghost_valid",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "bb457e38c650f5b10bd6d892fc278ea46721387a8d06860c407144958a145aed",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 132,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "build_ghost_invalid",
+      "dimensions": [
+        128,
+        128
+      ],
+      "sourceSha256": "e954de1f231ade8b64eb214d6ad033ab5a0afa34983b9cb8a32bf1fd36726241",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 128,
+        "h": 128
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

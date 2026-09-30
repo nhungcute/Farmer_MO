@@ -68,13 +68,14 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 - npm run check: PASS.
 - docker compose config --quiet: PASS.
 - Wave 2 final source-to-atlas 76/76, 9 animation contracts, DPR1/DPR2/mobile/zoom 1.30 runtime captures: PASS.
+- Wave 2 final owner review package: FINAL-06..FINAL-13, 8/8 groups and 76/76 assets, technical/style/mobile/provenance/license eligibility PASS, cross-asset PASS; recommendation `READY_FOR_OWNER_APPROVAL` in `docs/assets/review/WAVE2_FINAL_OWNER_REVIEW.md`.
 - git diff --check: PASS.
 
 ## Giới hạn và bước kế tiếp
 
-B02 remains RUNNING for Project Owner content/release approval. All 76 Wave 2 assets passed targeted revision review and are technically/style promoted; `approved=true` remains limited to the 112 Wave 1 assets. Do not change renderer, animation, or asset contracts.
+B02 remains RUNNING for Project Owner content/license/release approval. All 76 Wave 2 assets passed targeted revision review and final owner review recommendation; `approved=true` remains limited to the 112 Wave 1 assets. Do not change renderer, animation, or asset contracts.
 
-Wave 2 generation, targeted revision review, promotion and atlas rebuild are complete for 76/76 assets. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
+Wave 2 generation, targeted revision review, promotion, atlas rebuild and final owner review package are complete for 76/76 assets. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/license/release approval.
 
 ## Quy tắc cập nhật
 

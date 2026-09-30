@@ -1,0 +1,45 @@
+{
+  "review": "FINAL-08",
+  "taskId": "ART-08",
+  "scope": "Warehouse",
+  "expected": 1,
+  "assets": 1,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Production warehouse remains visually distinct from the Farmhouse and readable as storage in the approved palette.",
+  "visualEvidence": [
+    "work/art-generation/buildings/warehouse/reviews/warehouse-candidate.png",
+    "work/art-generation/buildings/warehouse/reviews/mobile-scale-review.png"
+  ],
+  "rows": [
+    {
+      "id": "building_warehouse_lv1",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "ad905810975025c52ea0625a8c99a0bcbb8b39719af396f3533b04c5f1c92da3",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 516,
+        "y": 518,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

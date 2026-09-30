@@ -1,0 +1,45 @@
+{
+  "review": "FINAL-07",
+  "taskId": "ART-07",
+  "scope": "Farmhouse",
+  "expected": 1,
+  "assets": 1,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Production farmhouse preserves isometric footprint, roof/wall proportions, top-left lighting and soft shadow.",
+  "visualEvidence": [
+    "work/art-generation/buildings/farmhouse/reviews/farmhouse-candidate.png",
+    "work/art-generation/buildings/farmhouse/reviews/mobile-scale-review.png"
+  ],
+  "rows": [
+    {
+      "id": "building_farmhouse_lv1",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "8fe1eba7e786b5fe641ad6f366d6523d91f055e1decf89caedd9e9c67a759ca0",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 2,
+        "y": 518,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

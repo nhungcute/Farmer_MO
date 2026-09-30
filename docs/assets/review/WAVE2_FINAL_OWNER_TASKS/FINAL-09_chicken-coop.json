@@ -1,0 +1,45 @@
+{
+  "review": "FINAL-09",
+  "taskId": "ART-09",
+  "scope": "Chicken Coop",
+  "expected": 1,
+  "assets": 1,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Production coop keeps the approved isometric angle, entrance scale and relative scale next to production Chicken.",
+  "visualEvidence": [
+    "work/art-generation/buildings/chicken-coop/reviews/chicken-coop-scale-with-chicken.png",
+    "work/art-generation/buildings/chicken-coop/reviews/all-asset-mobile-50.png"
+  ],
+  "rows": [
+    {
+      "id": "building_chicken_coop_lv1",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "202a7107feb7587390b6f9755df21da52c66905c0cded75e46d1152ad76517b2",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1292,
+        "y": 132,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # Trạng thái triển khai prototype
 
-> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 đã có bằng chứng và đang ở `REVIEW`; B02 đang `BLOCKED` vì chưa có artwork production được duyệt.
+> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 đã có evidence và hoàn tất gate; B02 đang `RUNNING` để chờ Project Owner duyệt content/license/release cho Wave 2.
 
-Sau checkpoint A01/B01/C01/D01, A02 da review 8/8; A03, C02, C03 va D02 da co bang chung test runtime. B02 bi block vi chua co production artwork duoc duyet. Demo van giu PERSISTENCE_DRIVER=file.
+Sau checkpoint A01/B01/C01/D01, A02 đã review 8/8; A03, C02, C03 và D02 đã có bằng chứng test runtime. B02 đã promote đủ 76/76 Wave 2 production-ready và hoàn tất final owner review với recommendation `READY_FOR_OWNER_APPROVAL`; metadata owner approval vẫn pending. Demo vẫn hỗ trợ `PERSISTENCE_DRIVER=file`, đồng thời PostgreSQL runtime đã qua các gate đã công bố.
 
 Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
 
@@ -11,7 +11,7 @@ Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không 
 - **Nội dung và luật:** `packages/content/index.mjs` là nguồn số liệu duy nhất cho farm 24×24, 1.000 Xu, 5 kim cương, 6 ô đất, 3 lúa sẵn sàng, kho 100, thức ăn gà `chicken_feed`, giá, timer, XP, unlock, đơn hàng và nhiệm vụ.
 - **API:** direct entry, session HttpOnly, bootstrap, trồng/thu hoạch, mua/bán, xây ao/chuồng, cho ăn/thu trứng, giao đơn, nhận nhiệm vụ, error envelope, request ID, timer server và `Idempotency-Key`.
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và orientation hint. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
-- **Animation:** 188 frame placeholder, 10 clip, 6 atlas, manifest/pivot/FPS, strict validator và preview tại `apps/web/public/assets`.
+- **Animation:** 188 production frames, 10 clip, 6 atlas, manifest/pivot/FPS, strict validator và preview tại `apps/web/public/assets`.
 - **Vận hành:** Docker Compose với PostgreSQL/Nginx/API/web, healthcheck, migration SQL chạy được qua profile `init`, seed report hook, PWA manifest/service worker, CI, backup/restore PostgreSQL và state JSON.
 - **Xác nhận:** `npm run check` PASS (API 17/17), `npm run test:api:postgres` PASS 20/20 (14 integration + 6 repository khi có PostgreSQL), asset 188/10; `docker compose config --quiet`, API/Web build, migration và PostgreSQL smoke PASS.
 
@@ -19,15 +19,15 @@ Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không 
 
 - API đã hỗ trợ rõ `PERSISTENCE_DRIVER=file|postgres`; file JSON FarmStore vẫn là mặc định demo, PostgreSQL runtime đã chạy enter/session/bootstrap và tất cả mutation qua repository transaction.
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, DOM HUD + PixiJS 8 world renderer cùng origin, Canvas fallback, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và gợi ý xoay màn hình. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
-- Hình trong asset pack vẫn là placeholder nội bộ; cần thay bằng asset đã duyệt, giữ nguyên manifest, frame count, FPS, pivot và ID.
-- A02, A03, C02, C03 và D02 đã hoàn tất các gate runtime; B02 còn blocked vì thiếu production artwork, sau đó mới đến deployment gate trước Release Candidate.
+- Asset pack hiện có 188/188 asset `production_ready`, gồm 112 Wave 1 approved và 76 Wave 2 đã qua technical/style review; Wave 2 vẫn giữ `approved=false` cho tới khi Project Owner phê duyệt content/license/release.
+- A02, A03, C02, C03 và D02 đã hoàn tất các gate runtime; B02 đang chờ owner approval cho Wave 2, sau đó mới có thể mở deployment gate trước Release Candidate.
 
 ## Thứ tự tiếp theo
 
-1. Review và tích hợp evidence C03/D02; cung cấp artwork production để mở B02; chỉ sau khi các dependency đạt mới mở deployment gate và public tunnel.
+1. Chờ Project Owner duyệt content/license/release cho Wave 2 và ghi nhận approval reference; chỉ sau khi dependency này đạt mới mở deployment gate.
 2. Chuyển web shell sang stack production hoặc giữ native shell có quyết định kiến trúc được phê duyệt; bổ sung Playwright E2E và accessibility scan.
-3. Thay placeholder bằng asset duyệt, chạy lại strict validator và visual review.
-4. Chạy performance/load test, kiểm tra backup restore định kỳ, rồi mới mở public tunnel.
+3. Giữ nguyên asset/renderer/animation contracts sau owner approval; chỉ regenerate atlas nếu có thay đổi production source được duyệt.
+4. Chạy performance/load test, kiểm tra backup restore định kỳ, rồi mới xem xét public tunnel sau khi A03/C02 và RC gate mở.
 
 ## Cập nhật sau khi thực hiện guide PixiJS
 

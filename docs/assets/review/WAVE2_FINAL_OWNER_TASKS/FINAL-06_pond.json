@@ -1,0 +1,332 @@
+{
+  "review": "FINAL-06",
+  "taskId": "ART-06",
+  "scope": "Pond",
+  "expected": 19,
+  "assets": 19,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "Inner-water mask containment remains zero outside-mask pixels; water/ripple/sparkle contracts and pond geometry remain stable.",
+  "visualEvidence": [
+    "work/art-generation/pond/reviews/pond-mask-review-v2.png"
+  ],
+  "rows": [
+    {
+      "id": "pond_small_lv1_base",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "fdd3cf2a7592910d2bf92bf4ba026430cf3b83010785ccfe817e4702bf77fc85",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1030,
+        "y": 518,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_00",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "38168596426b5c15b74717567155c99b223a2411034231ef2db7a8487226c8a7",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 516,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_01",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "8cf248a495fad4482c16f4f6c9d8a8be395bca158f614875e336078367aa747c",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 1030,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_02",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "7bd52056238955eefc5f421c114e77a3f110055ada871f7ff3fdc2c0cbef05c8",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 2,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_03",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "80eba5bdaffc3685c5ea2d044605fdcb4690544b35674888d40d8babe1994e62",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 516,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_04",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "a59ac3fb3175d90ee7943492e12a584671738a49f57c97624460889c1f067548",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 1030,
+        "y": 774,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_05",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "bbbf60900c3311224f95b379bc88d19276d118ed59d6d2e8cf4e810d748bfb2c",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 2,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_06",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "90c1fada73c7e6ba5f429563274d5fafdf0555ba337775afd56ed0bd87d60770",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 516,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_water_07",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "6ed6eb1757d0bfdeeef44447a43f4df005249218319eddce1175a50cb66d2ea9",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 1030,
+        "y": 1160,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_00",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "5b0a1e8b5d25001ce8ddbde07665998fe8436c39e828426b87350e7abcd8d2b0",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 2,
+        "y": 904,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_01",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "0b6fe4343f9944a42a734da3ad1f24b5e30d3dbfb00fb5f890f2e33b5159370e",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 516,
+        "y": 904,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_02",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "7c53eb742af54c52a7ab54b159452a4d75300816d38fe4f3af334b141655152f",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1030,
+        "y": 904,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_03",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "4c2a2c9f874f1a92e6278ca644aa3712592c9faed79dd3f36c88f119c7c4b9ab",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 2,
+        "y": 1290,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_04",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "13f23447df9828a61cb56b99229ee2b651cb14d4dba95b08611f6d44e215113d",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 516,
+        "y": 1290,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_ripple_05",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "4bceef89e92f734251189ce369ca5db7d5833c1870682e41c99b34576162560f",
+      "atlas": "farm_common-0.png",
+      "frame": {
+        "x": 1030,
+        "y": 1290,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_sparkle_00",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "b65a9cf553dade6c5b2ebb34318eca18812f0d77cf58f90c80bfcf20e09b3333",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_sparkle_01",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "bb198d07f822f4a5527a6822604184f7333d10ca1c87d3536844ec4c1bd50a3d",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 516,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_sparkle_02",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "06daf83307ef97bfced0229437841f4401e9f93292be1a291594cc4318466f05",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 1030,
+        "y": 2,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "pond_small_lv1_sparkle_03",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sourceSha256": "fca08bbd1ab39703e24b1c854b5422c3ff619b8179032aedbde51c00d27e6d80",
+      "atlas": "farm_common-1.png",
+      "frame": {
+        "x": 2,
+        "y": 388,
+        "w": 512,
+        "h": 384
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "review": "FINAL-11",
+  "taskId": "ART-11",
+  "scope": "Effects",
+  "expected": 30,
+  "assets": 30,
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "APPROVE",
+  "mobile": "PASS",
+  "provenance": "PASS",
+  "licensePolicyEligibility": "PASS",
+  "recommendation": "APPROVE",
+  "knownIssues": [],
+  "productionBoundary": {
+    "approved": false,
+    "approvalRef": null,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "licenseApproval": "PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL",
+    "releaseApproval": "BLOCKED"
+  },
+  "details": "All five production effect families retain canonical timing and readable feedback while avoiding excessive bloom, glossy orb shading, hard specular cores and oversized halos.",
+  "visualEvidence": [
+    "work/art-generation/effects/reviews/effects-revision-v2.png"
+  ],
+  "rows": [
+    {
+      "id": "fx_plant_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "708bb0355dd373a3c36e501ef502863585f7e82946cd1e5145664106b4f3ae6a",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 518,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_plant_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "ce67e045a2a3c1c93567b3a0d6f0801e0043260eed24295c92ca1dbfc64f6cdf",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 776,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_plant_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "29ccf368d40e7e90cdfb3bc8795c485bfa0a8398d04f2a71e35ec58e6ef853f0",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1034,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_plant_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "219842df704da977a713e0899cbb1ff1ef04e494eee0151623a4d856bc3a6293",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1292,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "4eb6bd5663d7186e7b1d618f9ebe1499adbdce8228409a24ee2337981f6037c0",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 776,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "d60b33fe8a989cf4b8f572bf5f3920396c673b486ef79dee45bab1c672b8232e",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1034,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "b1b8e6a38f80ac35120bd886e39afe8d139812ca7a395789ae402f654072cc0e",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1292,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "edacc98a7c324466ae87b9c50ee9b97778415dbabdbe14c3b25ac8b5d874f0ac",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1550,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_04",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "428ddf0d0a3d40e9d9bb94ab04ed60bf7130af81467b3280dba2fc24791b2727",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 2,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_harvest_05",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "c95de0851fc7a02769f08a8bf54cd36bb5d46b150ec718f927a1e24e536424ad",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 260,
+        "y": 1034,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "0af3582320cc5edf954b2f241690e5441122a36ffa6feb8d75b2eacdaa9294fc",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1034,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "e45eb7fd3529353f59ff88292c5e044d54307aa913ec0c8570d4a36221191d09",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1292,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "965ace64e3106a67a439bee66f0f8a0fc4847d16030c5e68698bd3ec7fa5d76d",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1550,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "baf7048f8cbd9706c676cd27eca2e20b32b90e5adc4dbbcaf1891fa6519f71e5",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 2,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_04",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "bcd205a60203f1af633f115daaec7f4c80c0601f47c99d147f1ca9e2ccda9478",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 260,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_build_success_05",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "7a9492aa36c0cbaa47aa2d68fe90764859bdde4beab1f772420be194aaba55f4",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 518,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "3c2b24addf3c6104e582983e2cf852a69c605ae91353a7ea11c571fe93358dbf",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 776,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "52ef60adf0e4470812e063039681e6017567af296820f6186dce4a41a0f9adf8",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1034,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "df8feb87209ed95139fa4e3197dfa315451c6a55ce5635819af2e980b5ef3505",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1292,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "a219c866250a51ac504866fb0ad5c3536cfbf7a8ddf3baacc3b80aebac6f6e2c",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1550,
+        "y": 260,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_04",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "8c4409ba299de2b77c53f1f5ffd5864faf06623d40e7aac7cafa6d4e000071d3",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 2,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_05",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "945d4c35e91d585d751d272520b59bce44a5296943feaae67f3e38ed853244e5",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 260,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_06",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "76d02ab9d3bc5c2e027b792f2f6fdc2588e5335f177ce98a39c0a5e6877954eb",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 518,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_coin_gain_07",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "18256991106a553e86a8d20bd8fe48329c5993d54315c69af758d54657ef0146",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 776,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_00",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "2950da5e6abb4da3a61571338c11d7f1518572d1f1067aaa2564eb313829e6cc",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1034,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_01",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "5010efadd18f1cdc07f8c2da3fdb969ac5fff38ff70f07329cf6abbe41805220",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1292,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_02",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "55e8414363ec6b0a64d21384e1d776a974a1f773ae8bb2f1bf6864bb3c4b667c",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 1550,
+        "y": 518,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_03",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "9c76c4e19a2896028587f064d0fa45a27750a3e9fa5e9f1d8bf35f6c475da3e4",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 2,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_04",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "04c034e44b96410d68a74922c624ac9b03802a000922dde50530f22b4eaef542",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 260,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "fx_egg_collect_05",
+      "dimensions": [
+        256,
+        256
+      ],
+      "sourceSha256": "e991c0308caa414fb75137930461efcaeec07fb2e496c9fbac55ba5dc0005d1a",
+      "atlas": "effects.png",
+      "frame": {
+        "x": 518,
+        "y": 776,
+        "w": 256,
+        "h": 256
+      },
+      "exactSourceToAtlas": true
+    }
+  ]
+}
