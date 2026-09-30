@@ -19,7 +19,10 @@ const waitForServer = () => new Promise((resolve, reject) => {
 const captures = [
   { name: 'wave2-final-runtime-dpr1.png', viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1, zoom: 1 },
   { name: 'wave2-final-runtime-dpr2.png', viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2, zoom: 1 },
-  { name: 'wave2-final-runtime-mobile.png', viewport: { width: 844, height: 390 }, deviceScaleFactor: 2, zoom: 1 },
+  { name: 'wave2-final-runtime-mobile-932x430.png', viewport: { width: 932, height: 430 }, deviceScaleFactor: 2, zoom: 1 },
+  { name: 'wave2-final-runtime-mobile-915x412.png', viewport: { width: 915, height: 412 }, deviceScaleFactor: 2, zoom: 1 },
+  { name: 'wave2-final-runtime-mobile-844x390.png', viewport: { width: 844, height: 390 }, deviceScaleFactor: 2, zoom: 1 },
+  { name: 'wave2-final-runtime-mobile-740x360.png', viewport: { width: 740, height: 360 }, deviceScaleFactor: 2, zoom: 1 },
   { name: 'wave2-final-runtime-zoom130.png', viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1, zoom: 1.3 },
 ];
 let browser;
