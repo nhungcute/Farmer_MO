@@ -70,4 +70,4 @@ Their candidate workspaces remain auditable; canonical production metadata is `p
 
 ## Final promotion result
 
-All 69 targeted revision candidates were promoted. Together with the frozen initial seven, Wave 2 is 76/76 technical/style promoted; no Wave 2 asset is content-approved.
+All 69 targeted revision candidates were promoted. Together with the frozen initial seven, Wave 2 is 76/76 technical/style promoted; no Wave 2 asset is content-approved or license-approved.

@@ -21,6 +21,6 @@ The pre-review integration QA is recorded in `work/art-generation/WAVE2_CANDIDAT
 
 Integration review decision and blockers are recorded in `docs/assets/review/WAVE2_INTEGRATION_REVIEW.md`. Read-only reviews REVIEW-06/10/11/12 all recommend PROMOTE; promotion evidence is docs/assets/review/WAVE2_REVISED_PROMOTION.json.
 
-Promoted records have production_ready=true, approved=false, policy license and approvalRef=null. Candidate workspaces remain auditable; canonical production metadata is now production_ready=true and approved=false pending owner content approval.
+Promoted records have production_ready=true, approved=false, policy license and approvalRef=null. Candidate workspaces remain auditable; canonical production metadata is now production_ready=true and approved=false pending owner content and license approval.
 
 E01 Cloudflare Named Tunnel and RC01 remain CLOSED. Stop after Wave 2 technical/style promotion; do not open Cloudflare or RC01. Owner content approval is still required.

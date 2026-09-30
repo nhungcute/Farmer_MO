@@ -274,5 +274,6 @@
   "production_ready": true,
   "approved": false,
   "approvalRef": null,
-  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+  "licenseApproval": "PENDING_OWNER_REVIEW"
 }

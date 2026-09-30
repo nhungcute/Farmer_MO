@@ -7,7 +7,7 @@
   "extraIds": [],
   "technicalReview": "PASS",
   "styleReview": "PASS",
-  "licenseApproval": "APPROVED",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
   "releaseApproval": "PENDING_OWNER_REVIEW",
   "placeholder": false,
   "production_ready": true,

@@ -710,7 +710,8 @@
     "approvedBefore": 112,
     "approvedAfter": 112,
     "contentApproval": "PENDING_OWNER_REVIEW",
-    "approvalRef": null
+    "approvalRef": null,
+    "licenseApproval": "PENDING_OWNER_REVIEW"
   },
   "finalCounts": {
     "assets": 188,

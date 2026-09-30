@@ -37,7 +37,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -67,7 +67,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -97,7 +97,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -127,7 +127,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -157,7 +157,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -277,7 +277,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -307,7 +307,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -337,7 +337,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -367,7 +367,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -397,7 +397,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -427,7 +427,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -457,7 +457,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -487,7 +487,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -517,7 +517,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -547,7 +547,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -577,7 +577,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -607,7 +607,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -637,7 +637,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -667,7 +667,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -697,7 +697,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -727,7 +727,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -757,7 +757,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -787,7 +787,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -817,7 +817,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -847,7 +847,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -877,7 +877,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -907,7 +907,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -937,7 +937,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -967,7 +967,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -997,7 +997,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1027,7 +1027,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1057,7 +1057,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1087,7 +1087,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1117,7 +1117,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1147,7 +1147,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1177,7 +1177,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1207,7 +1207,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1237,7 +1237,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -1267,7 +1267,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2017,7 +2017,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2047,7 +2047,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2077,7 +2077,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2107,7 +2107,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2137,7 +2137,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2167,7 +2167,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2197,7 +2197,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2227,7 +2227,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2257,7 +2257,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2287,7 +2287,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2317,7 +2317,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2347,7 +2347,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2377,7 +2377,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2407,7 +2407,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2437,7 +2437,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2467,7 +2467,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2497,7 +2497,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2527,7 +2527,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2557,7 +2557,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2587,7 +2587,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2617,7 +2617,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2647,7 +2647,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2677,7 +2677,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2707,7 +2707,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2737,7 +2737,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2767,7 +2767,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2797,7 +2797,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2827,7 +2827,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2857,7 +2857,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
@@ -2887,7 +2887,7 @@
       "approved": false,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "APPROVED",
+      "licenseApproval": "PENDING_OWNER_REVIEW",
       "contentApproval": "PENDING_OWNER_REVIEW",
       "approvalRef": null,
       "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"

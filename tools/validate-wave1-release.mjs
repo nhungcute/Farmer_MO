@@ -5,7 +5,7 @@ const POLICY = 'MO_FARM_INTERNAL_ASSET_POLICY_V1';
 const APPROVAL_REF = 'docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md';
 const REVIEW_EVIDENCE = 'docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md';
 const REQUIRED_WAVE1 = { placeholder: false, production_ready: true, approved: true, technicalReview: 'PASS', styleReview: 'PASS', contentApproval: 'APPROVED', licenseApproval: 'APPROVED', license: POLICY, approvalRef: APPROVAL_REF, source: 'internal-generated' };
-const REQUIRED_WAVE2 = { placeholder: false, production_ready: true, approved: false, technicalReview: 'PASS', styleReview: 'PASS', license: POLICY, source: 'internal-generated', licenseApproval: 'APPROVED', contentApproval: 'PENDING_OWNER_REVIEW', approvalRef: null };
+const REQUIRED_WAVE2 = { placeholder: false, production_ready: true, approved: false, technicalReview: 'PASS', styleReview: 'PASS', license: POLICY, source: 'internal-generated', contentApproval: 'PENDING_OWNER_REVIEW', approvalRef: null };
 const FROZEN_PROMOTED_WAVE2 = {
   building_farmhouse_lv1: '198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac',
   building_warehouse_lv1: '6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806',
@@ -52,6 +52,8 @@ const outside = Object.keys(assets).filter((id) => !wave1.has(id));
 if (outside.length !== 76 || outside.some((id) => !PROMOTED_WAVE2.has(id)) || [...PROMOTED_WAVE2].some((id) => !outside.includes(id))) fail('Non-Wave1 assets do not exactly match the 76 fully promoted Wave 2 IDs');
 for (const id of outside) for (const [key, expected] of Object.entries(REQUIRED_WAVE2)) if (assets[id][key] !== expected) fail(`${id}: ${key} expected ${expected}, got ${assets[id][key]}`);
 for (const id of outside) {
+  const expectedLicenseApproval = Object.prototype.hasOwnProperty.call(FROZEN_PROMOTED_WAVE2, id) ? 'APPROVED' : 'PENDING_OWNER_REVIEW';
+  if (assets[id].licenseApproval !== expectedLicenseApproval) fail(`${id}: licenseApproval expected ${expectedLicenseApproval}, got ${assets[id].licenseApproval}`);
   const expectedEvidence = Object.prototype.hasOwnProperty.call(FROZEN_PROMOTED_WAVE2, id) ? FROZEN_WAVE2_REVIEW : REVIEW_EVIDENCE;
   if (assets[id].reviewEvidence !== expectedEvidence) fail(`${id}: reviewEvidence expected ${expectedEvidence}, got ${assets[id].reviewEvidence}`);
 }

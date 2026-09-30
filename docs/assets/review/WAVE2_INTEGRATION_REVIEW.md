@@ -99,6 +99,6 @@ check, Docker config/build, and Playwright desktop/mobile/PWA smoke gates pass.
 
 ## Final targeted-revision integration result
 
-REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI all passed their read-only re-review and were promoted by the Integration Owner. The final canonical inventory is 188 assets with 188 `production_ready=true`, 112 `approved=true`, and 0 placeholders. `approved=true` remains limited to Wave 1; Wave 2 content approval is still pending.
+REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI all passed their read-only re-review and were promoted by the Integration Owner. The final canonical inventory is 188 assets with 188 `production_ready=true`, 112 `approved=true`, and 0 placeholders. `approved=true` remains limited to Wave 1; Wave 2 content, license and release approval are still pending.
 
 Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`, `docs/assets/review/WAVE2_FINAL_PRODUCTION_RUNTIME_QA.json`, and `docs/assets/review/WAVE2_FINAL_RUNTIME_CAPTURE.json`.

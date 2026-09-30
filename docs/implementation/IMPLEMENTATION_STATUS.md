@@ -54,7 +54,7 @@ Inventory after Wave 2 targeted revision promotion:
 - 188 technical production-ready entries plus 112 approved entries in the generated inventory
 - 0 placeholder
 - 112 approved
-- license metadata của 188 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1; content approval của Wave 2 vẫn PENDING_OWNER_REVIEW
+- license metadata của 188 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1; content/license/release approval của Wave 2 vẫn PENDING_OWNER_REVIEW
 
 Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json, docs/assets/review/FINAL_OWNER_REVIEW_V2.md, docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 

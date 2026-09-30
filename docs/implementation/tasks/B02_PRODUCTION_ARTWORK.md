@@ -24,7 +24,7 @@
 
 ## Wave 2 targeted revision promotion
 
-The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI each passed read-only re-review and were selectively promoted: **69/69** additional PNGs. Wave 2 is now **76/76** promoted for technical/style use. Canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `approved=false`, and `approvalRef=null`. Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`.
+The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI each passed read-only re-review and were selectively promoted: **69/69** additional PNGs. Wave 2 is now **76/76** promoted for technical/style use. Canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `licenseApproval=PENDING_OWNER_REVIEW`, `contentApproval=PENDING_OWNER_REVIEW`, `approved=false`, and `approvalRef=null`. Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`.
 
 ## Wave 1 result
 
@@ -63,4 +63,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 artwork/content/license/release is APPROVED by Project Owner. All Wave 2 groups passed targeted revision review and are promoted for technical/style use; owner content/release approval remains pending for the 76 Wave 2 assets. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 artwork/content/license/release is APPROVED by Project Owner. All Wave 2 groups passed targeted revision review and are promoted for technical/style use; owner content, license and release approval remain pending for the 76 Wave 2 assets. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

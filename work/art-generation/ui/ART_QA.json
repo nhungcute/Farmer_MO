@@ -431,7 +431,7 @@
   "production_ready": true,
   "approved": false,
   "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
-  "licenseApproval": "APPROVED",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
   "contentApproval": "PENDING_OWNER_REVIEW",
   "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

@@ -94,7 +94,7 @@ for (const entry of all) {
     technicalReview: 'PASS',
     styleReview: 'PASS',
     license: POLICY,
-    licenseApproval: 'APPROVED',
+    licenseApproval: 'PENDING_OWNER_REVIEW',
     contentApproval: 'PENDING_OWNER_REVIEW',
     approvalRef: null,
     reviewEvidence: REVIEW_EVIDENCE,
@@ -143,7 +143,7 @@ for (const group of groups) {
     value.technicalReview = 'PASS';
     value.styleReview = 'PASS';
     value.license = POLICY;
-    value.licenseApproval = 'APPROVED';
+    value.licenseApproval = 'PENDING_OWNER_REVIEW';
     value.contentApproval = 'PENDING_OWNER_REVIEW';
     value.approvalRef = null;
     value.reviewEvidence = REVIEW_EVIDENCE;
@@ -191,7 +191,7 @@ writeJson(absolute('docs/assets/review/WAVE2_REVISED_PROMOTION.json'), {
   promotedCount: rows.length,
   promoted: rows,
   previouslyPromotedFrozen: frozen7,
-  approvalBoundary: { approvedBefore: 112, approvedAfter: 112, contentApproval: 'PENDING_OWNER_REVIEW', approvalRef: null },
+  approvalBoundary: { approvedBefore: 112, approvedAfter: 112, licenseApproval: 'PENDING_OWNER_REVIEW', contentApproval: 'PENDING_OWNER_REVIEW', approvalRef: null },
   finalCounts,
 });
 console.log(`Promoted ${rows.length} targeted Wave 2 revisions; final inventory ${finalCounts.assets}/${finalCounts.productionReady}, approved ${finalCounts.approved}, placeholders ${finalCounts.placeholders}.`);
