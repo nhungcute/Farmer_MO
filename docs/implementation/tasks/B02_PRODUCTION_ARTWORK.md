@@ -18,6 +18,13 @@
 | Tests | `node tools/asset-inventory.mjs`; `npm run assets:validate`; `npm run assets:validate:strict` |
 | Blocker | Chưa có artwork production, license/source evidence, style approval hoặc release approval |
 
+## Subtask status
+
+| Subtask | Trạng thái | Evidence |
+|---|---|---|
+| B02.1 — Production Art Style Lock | REVIEW — style guide đã soạn, chờ asset/art owner xác nhận | [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) |
+| B02.2 — Golden Asset: Chicken | BLOCKED — contract đã khóa nhưng chưa có 92 production frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md), 92 placeholder vẫn giữ nguyên |
+
 ## Checklist
 
 - [x] Inventory đầy đủ source asset, animation contract và category hiện tại.
@@ -40,6 +47,8 @@
 - `assets-src/style/style-sheet.md` xác nhận đây là placeholder style sheet và nêu rõ toàn bộ asset hiện tại không phải production art.
 - Không tìm thấy bằng chứng release artwork, commercial/open-source license có thể dùng cho production, art-director style sign-off hoặc approval record.
 - Không tự tạo/thay PNG và không thay đổi manifest contract trong khi blocker còn tồn tại.
+- B02.1 đã khóa perspective, palette direction, lighting, alpha, scale, motion, mobile readability và approval model; B02.1 chưa chuyển `DONE` trước khi asset/art owner review.
+- B02.2 đã khóa contract Chicken 92 frame, sáu state, bốn direction, canvas `256 × 256`, anchor `0.5,0.9`, `mirrorAllowed=false` và `FEED_CONSUMED@2`; chưa có candidate production để chuyển sang `REVIEW`.
 
 ## Contract audit
 

@@ -44,6 +44,8 @@ Các task RUNNING không được sửa shared canonical contract đồng thời
 | E01 | Cloudflare Named Tunnel | 0/12 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
 | RC01 | Release Candidate checklist | 0/12 | A03, B02, C03, D02, E01 | QUEUED |
 
+B02 subtask checkpoint: **B02.1 style lock đang `REVIEW`** sau khi tạo [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md); **B02.2 Chicken contract đã khóa nhưng `BLOCKED`** vì 92 production frame, license/source evidence và owner approval chưa có. Không chuyển B02 tổng sang `DONE`, không mở E01/RC01 và không bắt đầu crop/building/pond trước khi Chicken được review.
+
 ## Ranh giới còn lại
 
 - Runtime API chon ro PERSISTENCE_DRIVER=file hoac postgres; file/JSON FarmStore van la mac dinh prototype, con postgres da chay enter/session/bootstrap va tat ca mutation qua transaction repository.
