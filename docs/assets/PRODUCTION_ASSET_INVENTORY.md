@@ -1,6 +1,6 @@
 # B01 Production Asset Inventory
 
-Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `ab10fa4b48a5a068a4dbe5916df7f8cb5023e799428a1f9b306f736ee1e286e0`).
+Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `d3d7e97381647f1f2cd4f31fd61def75ba14b8ad5724bc53b5fccfdda6027e26`).
 
 This inventory is generated from the current canonical manifest. Wave 1 has 112 production candidates (Chicken, Rice, Carrot, Corn and Tomato); 76 assets remain placeholders and all release approval is pending.
 
@@ -20,7 +20,7 @@ Current totals: **188 source assets**, **10 animation contracts**, **8 categorie
 | --- | --- | --- | --- | --- |
 | `terrain` | `placeholder` | 5 | 0 | Isometric ground tile and variants. |
 | `buildings` | `placeholder` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
-| `crops` | `mixed` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
+| `crops` | `placeholder` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
 | `animals` | `production_ready` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
 | `chicken` | `production_ready` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
 | `pond` | `placeholder` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
