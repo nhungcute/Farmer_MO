@@ -46,6 +46,8 @@ Các task RUNNING không được sửa shared canonical contract đồng thời
 
 B02 subtask checkpoint: **B02.1 style lock đang `REVIEW`** sau khi tạo [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md); **B02.2 Chicken contract đã khóa nhưng `BLOCKED`** vì 92 production frame, license/source evidence và owner approval chưa có. Không chuyển B02 tổng sang `DONE`, không mở E01/RC01 và không bắt đầu crop/building/pond trước khi Chicken được review.
 
+B02.2 proof checkpoint: **`B02.2-PROOF` đang `REVIEW`** với 11 frame ngoài production, Pixi preview, scale desktop/mobile và stress evidence ở [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md). Đây chỉ là technical checkpoint; **`B02.2-FULL` vẫn `QUEUED`**, B02 tổng vẫn `BLOCKED`, chưa thay asset placeholder và chưa có style/art owner approval. Không tạo 92 frame còn lại cho tới khi owner duyệt proof.
+
 ## Ranh giới còn lại
 
 - Runtime API chon ro PERSISTENCE_DRIVER=file hoac postgres; file/JSON FarmStore van la mac dinh prototype, con postgres da chay enter/session/bootstrap va tat ca mutation qua transaction repository.

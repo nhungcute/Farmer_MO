@@ -1,0 +1,173 @@
+{
+  "proofVersion": "B02.2-PROOF-v1",
+  "status": "candidate",
+  "placeholder": true,
+  "runtimeAsset": false,
+  "production_ready": false,
+  "productionReady": false,
+  "approved": false,
+  "source": "internal generated visual proof; not copied into production source tree",
+  "creator": "Codex via OpenAI built-in image generation tool",
+  "tool": "built-in image_gen",
+  "toolVersion": "not exposed by tool",
+  "license": "PENDING_OWNER_REVIEW",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "B02.1-2026-09-30",
+  "contractVersion": "B02.2-2026-09-30",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "format": "RGBA PNG",
+  "sourceScale": 2,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.9
+  },
+  "renderOffset": {
+    "x": 0,
+    "y": 0
+  },
+  "mirrorAllowed": false,
+  "proofClips": {
+    "IDLE": {
+      "fps": 6,
+      "loop": true,
+      "holdLast": false,
+      "directions": {
+        "NE": ["chicken-proof-idle-ne-00.png"],
+        "SE": ["chicken-proof-idle-se-00.png", "chicken-proof-idle-se-01.png"],
+        "SW": ["chicken-proof-idle-sw-00.png"],
+        "NW": ["chicken-proof-idle-nw-00.png"]
+      }
+    },
+    "WALK": {
+      "fps": 8,
+      "loop": true,
+      "holdLast": false,
+      "directions": {
+        "SE": [
+          "chicken-proof-walk-se-00.png",
+          "chicken-proof-walk-se-01.png",
+          "chicken-proof-walk-se-02.png"
+        ]
+      }
+    },
+    "EAT": {
+      "fps": 10,
+      "loop": false,
+      "holdLast": true,
+      "directions": {
+        "SE": [
+          "chicken-proof-eat-se-00.png",
+          "chicken-proof-eat-se-02.png",
+          "chicken-proof-eat-se-04.png"
+        ]
+      },
+      "event": {
+        "name": "FEED_CONSUMED",
+        "contractFrame": 2,
+        "proofIndex": 1
+      }
+    }
+  },
+  "frames": [
+    {
+      "file": "chicken-proof-idle-ne-00.png",
+      "state": "IDLE",
+      "direction": "NE",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-idle-se-00.png",
+      "state": "IDLE",
+      "direction": "SE",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-idle-sw-00.png",
+      "state": "IDLE",
+      "direction": "SW",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-idle-nw-00.png",
+      "state": "IDLE",
+      "direction": "NW",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-idle-se-01.png",
+      "state": "IDLE",
+      "direction": "SE",
+      "frame": 1,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-walk-se-00.png",
+      "state": "WALK",
+      "direction": "SE",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-walk-se-01.png",
+      "state": "WALK",
+      "direction": "SE",
+      "frame": 1,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-walk-se-02.png",
+      "state": "WALK",
+      "direction": "SE",
+      "frame": 2,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-eat-se-00.png",
+      "state": "EAT",
+      "direction": "SE",
+      "frame": 0,
+      "event": null
+    },
+    {
+      "file": "chicken-proof-eat-se-02.png",
+      "state": "EAT",
+      "direction": "SE",
+      "frame": 2,
+      "event": {
+        "name": "FEED_CONSUMED",
+        "frame": 2
+      }
+    },
+    {
+      "file": "chicken-proof-eat-se-04.png",
+      "state": "EAT",
+      "direction": "SE",
+      "frame": 4,
+      "event": null
+    }
+  ],
+  "qa": {
+    "technicalReview": "PASS for technical proof normalization: all 11 files are RGBA 256x256 with transparent margin and alpha baseline y=230 (anchor-compatible .5,.9). Pixi/mobile/performance evidence is recorded in CHICKEN_PROOF_QA.json.",
+    "styleReview": "PENDING_OWNER",
+    "ownerApproval": "PENDING",
+    "approvalRef": null,
+    "anchorBaseline": {
+      "targetBottomPixel": 230,
+      "tolerancePixels": 0,
+      "method": "alpha bounding-box bottom aligned to y=230 on 256x256 canvas"
+    },
+    "directionHashes": "Recorded in CHICKEN_PROOF_QA.json; distinct files are used for NE, SE, SW and NW rather than mirroring."
+  },
+  "limitations": [
+    "Proof has 11 frames; it is not the 92-frame production Chicken set.",
+    "Proof files live outside assets-src and are not included in production atlas generation.",
+    "Production replacement remains blocked until owner accepts style and supplies/approves full source evidence."
+  ]
+}

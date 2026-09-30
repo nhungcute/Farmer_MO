@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>MỠ FARM — Bản thử Chicken trên Pixi</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #26352b; background: #f5f0e5; }
+    body { margin: 16px; line-height: 1.45; }
+    main { max-width: 920px; margin: 0 auto; }
+    article { background: #fff; border: 1px solid #d8cdb9; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    .warning { padding: 10px; background: #fff8d8; border-left: 4px solid #d5a72a; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+    label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+    select, button { font: inherit; padding: 7px 9px; border: 1px solid #b9cbb8; border-radius: 6px; background: #fff; }
+    button { cursor: pointer; background: #315d3c; color: #fff; }
+    #pixi-root { width: 512px; max-width: 100%; aspect-ratio: 1; border: 1px solid #d8cdb9; border-radius: 8px; margin-top: 16px; background: repeating-conic-gradient(#eee 0% 25%, #fff 0% 50%) 50%/16px 16px; }
+    #pixi-root canvas { width: 100%; height: 100%; display: block; }
+    code { background: #eef6e9; padding: 2px 5px; border-radius: 4px; }
+    .status { color: #53665a; font-size: 13px; }
+    @media (max-width: 600px) { body { margin: 10px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Bản thử Chicken — Pixi</h1>
+  <p class="warning">Đây là ứng viên bản thử riêng để duyệt hình ảnh, không phải tài nguyên chạy thật. Không nạp manifest/atlas sản xuất và không thay <code>assets-src/animals/chicken/**</code>.</p>
+  <article>
+    <p>Canvas bản thử: <code>256×256</code>, RGBA, anchor <code>0.5,0.9</code>, scale <code>1</code>. Khung 2 của EAT hiển thị event <code>FEED_CONSUMED</code> ở lớp trình bày.</p>
+    <div class="controls">
+      <label>Trạng thái <select id="state" aria-label="Trạng thái"></select></label>
+      <label>Hướng <select id="direction" aria-label="Hướng"></select></label>
+      <button id="toggle" type="button">Dừng</button>
+    </div>
+    <div id="pixi-root" aria-label="Bản xem trước bản thử Chicken"></div>
+    <p id="status" class="status" aria-live="polite">Đang khởi động Pixi…</p>
+  </article>
+  <article>
+    <h2>Mục kiểm tra bản thử</h2>
+    <ul>
+      <li>Đủ bốn hướng kiểm tra: NE, SE, SW, NW.</li>
+      <li>IDLE hướng SE: 2 khung.</li>
+      <li>WALK hướng SE: 3 khung.</li>
+      <li>EAT hướng SE: 3 khung; khung 2 có <code>FEED_CONSUMED</code>.</li>
+      <li>Không lật ảnh, không tự cắt khung, không atlas chạy thật.</li>
+    </ul>
+  </article>
+</main>
+<script type="module">
+import * as PIXI from '../../../apps/web/public/vendor/pixi.mjs';
+
+const proofRoot = '../proof/chicken/';
+const clips = {
+  IDLE: {
+    NE: ['chicken-proof-idle-ne-00.png'],
+    SE: ['chicken-proof-idle-se-00.png', 'chicken-proof-idle-se-01.png'],
+    SW: ['chicken-proof-idle-sw-00.png'],
+    NW: ['chicken-proof-idle-nw-00.png'],
+  },
+  WALK: {
+    SE: ['chicken-proof-walk-se-00.png', 'chicken-proof-walk-se-01.png', 'chicken-proof-walk-se-02.png'],
+  },
+  EAT: {
+    SE: ['chicken-proof-eat-se-00.png', 'chicken-proof-eat-se-02.png', 'chicken-proof-eat-se-04.png'],
+  },
+};
+const fps = { IDLE: 6, WALK: 8, EAT: 10 };
+const stateLabels = { IDLE: 'IDLE', WALK: 'WALK', EAT: 'EAT' };
+const stateSelect = document.querySelector('#state');
+const directionSelect = document.querySelector('#direction');
+const toggle = document.querySelector('#toggle');
+const status = document.querySelector('#status');
+const root = document.querySelector('#pixi-root');
+Object.keys(clips).forEach((state) => stateSelect.append(new Option(stateLabels[state], state)));
+['NE', 'SE', 'SW', 'NW'].forEach((direction) => directionSelect.append(new Option(direction, direction)));
+stateSelect.value = 'IDLE';
+directionSelect.value = 'SE';
+
+const app = new PIXI.Application();
+await app.init({ width: 256, height: 256, backgroundAlpha: 0, antialias: true, resolution: 1, autoDensity: false });
+root.replaceChildren(app.canvas);
+const sprite = new PIXI.Sprite();
+sprite.anchor.set(0.5, 0.9);
+sprite.position.set(128, 230.4);
+app.stage.addChild(sprite);
+
+const textureCache = new Map();
+async function textureFor(file) {
+  if (!textureCache.has(file)) textureCache.set(file, PIXI.Assets.load(proofRoot + file));
+  return textureCache.get(file);
+}
+
+let frameIndex = 0;
+let elapsed = 0;
+let running = true;
+let currentClip = null;
+
+async function renderFrame() {
+  const state = stateSelect.value;
+  const direction = directionSelect.value;
+  currentClip = clips[state]?.[direction] ?? null;
+  if (!currentClip) {
+    sprite.visible = false;
+    status.textContent = `Bản thử chưa có ${state} / ${direction}; chỉ có khung khóa hướng cho IDLE và chuyển động SE.`;
+    return;
+  }
+  sprite.visible = true;
+  frameIndex = Math.min(frameIndex, currentClip.length - 1);
+  sprite.texture = await textureFor(currentClip[frameIndex]);
+  const event = state === 'EAT' && frameIndex === 1 ? ' · FEED_CONSUMED@2' : '';
+  status.textContent = `${state} / ${direction} · khung ${frameIndex + 1}/${currentClip.length} · ${fps[state]} FPS${event}`;
+}
+
+async function restart() {
+  frameIndex = 0;
+  elapsed = 0;
+  running = true;
+  toggle.textContent = 'Dừng';
+  await renderFrame();
+}
+
+stateSelect.addEventListener('change', restart);
+directionSelect.addEventListener('change', restart);
+toggle.addEventListener('click', () => {
+  running = !running;
+  toggle.textContent = running ? 'Dừng' : 'Phát';
+});
+app.ticker.add(({ deltaMS }) => {
+  if (!running || !currentClip?.length) return;
+  elapsed += deltaMS;
+  if (elapsed < 1000 / fps[stateSelect.value]) return;
+  elapsed = 0;
+  if (frameIndex >= currentClip.length - 1) {
+    if (stateSelect.value === 'EAT') {
+      running = false;
+      toggle.textContent = 'Phát';
+      return;
+    }
+    frameIndex = 0;
+  } else {
+    frameIndex += 1;
+  }
+  renderFrame();
+});
+await renderFrame();
+window.__chickenProofReady = true;
+</script>
+</body>
+</html>

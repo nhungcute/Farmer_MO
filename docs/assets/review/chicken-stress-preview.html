@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>MỠ FARM — Kiểm tra tải bản thử Chicken</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #26352b; background: #f5f0e5; }
+    body { margin: 16px; line-height: 1.45; }
+    main { max-width: 920px; margin: 0 auto; }
+    article { background: #fff; border: 1px solid #d8cdb9; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    .warning { padding: 10px; background: #fff8d8; border-left: 4px solid #d5a72a; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+    label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+    select, button { font: inherit; padding: 7px 9px; border: 1px solid #b9cbb8; border-radius: 6px; background: #fff; }
+    button { cursor: pointer; background: #315d3c; color: #fff; }
+    #pixi-root { width: 740px; max-width: 100%; aspect-ratio: 740 / 360; border: 1px solid #d8cdb9; border-radius: 8px; margin-top: 16px; background: #dcebd4; overflow: hidden; }
+    #pixi-root canvas { width: 100%; height: 100%; display: block; }
+    code { background: #eef6e9; padding: 2px 5px; border-radius: 4px; }
+    .status { color: #53665a; font-size: 13px; }
+    @media (max-width: 600px) { body { margin: 10px; } article { padding: 12px; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Kiểm tra tải bản thử Chicken</h1>
+  <p class="warning">Trang này chỉ đo tải của bản thử ngoài môi trường chạy thật. Nó dùng cùng một kết cấu bản thử và không nạp manifest/atlas sản xuất.</p>
+  <article>
+    <p>Chọn số bản sao để kiểm tra nhanh ở các mốc <code>1 / 25 / 50 / 100</code>. Theo dõi FPS, DPR và bộ nhớ JavaScript khi trình duyệt cung cấp số liệu.</p>
+    <div class="controls">
+      <label>Số bản sao <select id="clone-count" aria-label="Số bản sao">
+        <option value="1">1</option><option value="25">25</option><option value="50">50</option><option value="100">100</option>
+      </select></label>
+      <button id="apply" type="button">Áp dụng</button>
+    </div>
+    <div id="pixi-root" aria-label="Bản xem trước tải bản thử Chicken"></div>
+    <p id="status" class="status" aria-live="polite">Đang khởi động Pixi…</p>
+  </article>
+  <article>
+    <h2>Phạm vi đo</h2>
+    <ul>
+      <li>Kết cấu: <code>docs/assets/proof/chicken/chicken-proof-idle-se-00.png</code>.</li>
+      <li>Số bản sao: 1, 25, 50 và 100.</li>
+      <li>FPS là giá trị trung bình cửa sổ 500 ms; DPR lấy từ trình duyệt.</li>
+      <li>Bộ nhớ dùng <code>performance.memory</code> nếu Chromium cung cấp, nếu không sẽ ghi “không khả dụng”.</li>
+    </ul>
+  </article>
+</main>
+<script type="module">
+import * as PIXI from '../../../apps/web/public/vendor/pixi.mjs';
+
+const root = document.querySelector('#pixi-root');
+const countSelect = document.querySelector('#clone-count');
+const applyButton = document.querySelector('#apply');
+const status = document.querySelector('#status');
+const app = new PIXI.Application();
+await app.init({ width: 740, height: 360, backgroundColor: 0xdcebd4, antialias: true, resolution: 1, autoDensity: false });
+root.replaceChildren(app.canvas);
+
+const texture = await PIXI.Assets.load('../proof/chicken/chicken-proof-idle-se-00.png');
+const layer = new PIXI.Container();
+app.stage.addChild(layer);
+let clones = [];
+let sampleFrames = 0;
+let sampleStarted = performance.now();
+
+function memoryText() {
+  const memory = performance.memory;
+  return memory && Number.isFinite(memory.usedJSHeapSize)
+    ? `${(memory.usedJSHeapSize / 1024 / 1024).toFixed(1)} MB`
+    : 'không khả dụng';
+}
+
+function rebuild(count) {
+  layer.removeChildren().forEach((child) => child.destroy());
+  clones = [];
+  const columns = Math.ceil(Math.sqrt(count * (740 / 360)));
+  const rows = Math.ceil(count / columns);
+  const gapX = 740 / (columns + 1);
+  const gapY = 360 / (rows + 1);
+  for (let index = 0; index < count; index += 1) {
+    const sprite = new PIXI.Sprite(texture);
+    sprite.anchor.set(0.5, 0.9);
+    const column = index % columns;
+    const row = Math.floor(index / columns);
+    sprite.position.set(gapX * (column + 1), gapY * (row + 1));
+    sprite.baseY = sprite.y;
+    sprite.scale.set(count >= 100 ? 0.55 : count >= 50 ? 0.7 : 0.9);
+    layer.addChild(sprite);
+    clones.push(sprite);
+  }
+  sampleFrames = 0;
+  sampleStarted = performance.now();
+  window.__chickenStressSnapshot = { count, fps: null, dpr: window.devicePixelRatio, memory: memoryText() };
+  status.textContent = `Đang đo ${count} bản sao · FPS: đang lấy mẫu · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memoryText()}`;
+}
+
+function applyCount() {
+  rebuild(Number(countSelect.value));
+}
+
+applyButton.addEventListener('click', applyCount);
+countSelect.addEventListener('change', applyCount);
+app.ticker.add(({ deltaMS }) => {
+  sampleFrames += 1;
+  const now = performance.now();
+  for (let index = 0; index < clones.length; index += 1) {
+    clones[index].y = clones[index].baseY + Math.sin(now / 400 + index) * 2;
+  }
+  const elapsed = now - sampleStarted;
+  if (elapsed < 500) return;
+  const fps = sampleFrames * 1000 / elapsed;
+  const count = clones.length;
+  const memory = memoryText();
+  status.textContent = `Đang đo ${count} bản sao · FPS: ${fps.toFixed(1)} · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memory}`;
+  window.__chickenStressSnapshot = { count, fps: Number(fps.toFixed(1)), dpr: window.devicePixelRatio, memory };
+  sampleFrames = 0;
+  sampleStarted = now;
+});
+
+applyCount();
+window.__chickenStressReady = true;
+</script>
+</body>
+</html>

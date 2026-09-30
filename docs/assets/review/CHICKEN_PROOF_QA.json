@@ -1,0 +1,503 @@
+{
+  "qaVersion": "B02.2-PROOF-QA-v1",
+  "generatedAt": "2026-09-30T06:08:12.643Z",
+  "browser": "Google Chrome via Playwright executablePath",
+  "proofPreview": {
+    "viewports": [
+      {
+        "width": 932,
+        "height": 430,
+        "canvas": true,
+        "status": "IDLE / SE · khung 1/2 · 6 FPS",
+        "horizontalOverflow": false,
+        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "errors": []
+      },
+      {
+        "width": 915,
+        "height": 412,
+        "canvas": true,
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "horizontalOverflow": false,
+        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "errors": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "canvas": true,
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "horizontalOverflow": false,
+        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "errors": []
+      },
+      {
+        "width": 740,
+        "height": 360,
+        "canvas": true,
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "horizontalOverflow": false,
+        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "errors": []
+      }
+    ],
+    "pixiCanvas": true,
+    "eatEvent": true,
+    "errors": []
+  },
+  "stressPreview": {
+    "viewports": [
+      {
+        "width": 932,
+        "height": 430,
+        "canvas": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      {
+        "width": 915,
+        "height": 412,
+        "canvas": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "canvas": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      {
+        "width": 740,
+        "height": 360,
+        "canvas": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    ],
+    "cloneCounts": {
+      "1": [
+        {
+          "width": 932,
+          "height": 430,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 1,
+            "fps": 61.9,
+            "dpr": 1,
+            "memory": "8.0 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 915,
+          "height": 412,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 1,
+            "fps": 62.1,
+            "dpr": 1,
+            "memory": "8.1 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 1,
+            "fps": 60.8,
+            "dpr": 1,
+            "memory": "8.1 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 1,
+            "fps": 61.9,
+            "dpr": 1,
+            "memory": "8.1 MB"
+          },
+          "errors": []
+        }
+      ],
+      "25": [
+        {
+          "width": 932,
+          "height": 430,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 25,
+            "fps": 61,
+            "dpr": 1,
+            "memory": "7.8 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 915,
+          "height": 412,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 25,
+            "fps": 60.8,
+            "dpr": 1,
+            "memory": "7.9 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 25,
+            "fps": 61.1,
+            "dpr": 1,
+            "memory": "7.9 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 25,
+            "fps": 61,
+            "dpr": 1,
+            "memory": "7.8 MB"
+          },
+          "errors": []
+        }
+      ],
+      "50": [
+        {
+          "width": 932,
+          "height": 430,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 50,
+            "fps": 61.1,
+            "dpr": 1,
+            "memory": "8.2 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 915,
+          "height": 412,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 50,
+            "fps": 60.9,
+            "dpr": 1,
+            "memory": "8.2 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 50,
+            "fps": 60.9,
+            "dpr": 1,
+            "memory": "8.2 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 50,
+            "fps": 60.9,
+            "dpr": 1,
+            "memory": "8.2 MB"
+          },
+          "errors": []
+        }
+      ],
+      "100": [
+        {
+          "width": 932,
+          "height": 430,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 100,
+            "fps": 61,
+            "dpr": 1,
+            "memory": "8.6 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 915,
+          "height": 412,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 100,
+            "fps": 61.1,
+            "dpr": 1,
+            "memory": "8.6 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 100,
+            "fps": 61,
+            "dpr": 1,
+            "memory": "8.6 MB"
+          },
+          "errors": []
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "canvas": true,
+          "horizontalOverflow": false,
+          "snapshot": {
+            "count": 100,
+            "fps": 60.9,
+            "dpr": 1,
+            "memory": "8.6 MB"
+          },
+          "errors": []
+        }
+      ]
+    },
+    "errors": []
+  },
+  "imageProof": {
+    "frameCount": 11,
+    "all256x256RGBA": true,
+    "allTransparentMargins": true,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "baselineTargetY": 230,
+    "baselineBottomPixels": [
+      230
+    ],
+    "baselineJitterPixels": 0,
+    "directionHashes": {
+      "NE": "05ca1101280db2a7f786d9a26a29191d226b38e7bb22b39bcfd6e4da33836cdd",
+      "SE": "847e8e931cca5285a92b3e67063520a2942affc9a475f76c30bec88638b9b695",
+      "SW": "5e75ca29e6a12323049a185204bd3a5b2542e177fa5474cb7228d672fe40f56b",
+      "NW": "14f47da9db33e73a8e164ca7b6a02ab0b74532ce911cd5f009671f7670a3a019"
+    },
+    "directionsDistinct": true,
+    "event": {
+      "name": "FEED_CONSUMED",
+      "contractFrame": 2,
+      "proofFile": "chicken-proof-eat-se-02.png"
+    },
+    "frames": [
+      {
+        "file": "chicken-proof-idle-ne-00.png",
+        "state": "IDLE",
+        "direction": "NE",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          49,
+          20,
+          211,
+          230
+        ],
+        "sha256": "05ca1101280db2a7f786d9a26a29191d226b38e7bb22b39bcfd6e4da33836cdd"
+      },
+      {
+        "file": "chicken-proof-idle-se-00.png",
+        "state": "IDLE",
+        "direction": "SE",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          57,
+          43,
+          197,
+          230
+        ],
+        "sha256": "847e8e931cca5285a92b3e67063520a2942affc9a475f76c30bec88638b9b695"
+      },
+      {
+        "file": "chicken-proof-idle-sw-00.png",
+        "state": "IDLE",
+        "direction": "SW",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          61,
+          39,
+          215,
+          230
+        ],
+        "sha256": "5e75ca29e6a12323049a185204bd3a5b2542e177fa5474cb7228d672fe40f56b"
+      },
+      {
+        "file": "chicken-proof-idle-nw-00.png",
+        "state": "IDLE",
+        "direction": "NW",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          55,
+          34,
+          213,
+          230
+        ],
+        "sha256": "14f47da9db33e73a8e164ca7b6a02ab0b74532ce911cd5f009671f7670a3a019"
+      },
+      {
+        "file": "chicken-proof-idle-se-01.png",
+        "state": "IDLE",
+        "direction": "SE",
+        "frame": 1,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          55,
+          38,
+          203,
+          230
+        ],
+        "sha256": "ccc3a92609d38d7c1ad64412b6289a360d4111ebe4f93e4872f2863fa2f409de"
+      },
+      {
+        "file": "chicken-proof-walk-se-00.png",
+        "state": "WALK",
+        "direction": "SE",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          53,
+          41,
+          212,
+          230
+        ],
+        "sha256": "a8df0316f93c4ad523580fbe1cbe3bb064b7f7313d994f776f75b5d5a5554086"
+      },
+      {
+        "file": "chicken-proof-walk-se-01.png",
+        "state": "WALK",
+        "direction": "SE",
+        "frame": 1,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          55,
+          40,
+          202,
+          230
+        ],
+        "sha256": "213933dfd5de0cb812648c96773c1f66327c57ab7612063380b19c740b25e324"
+      },
+      {
+        "file": "chicken-proof-walk-se-02.png",
+        "state": "WALK",
+        "direction": "SE",
+        "frame": 2,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          55,
+          37,
+          202,
+          230
+        ],
+        "sha256": "6948e21aba4a678a9e9f681111dd3624a3e40b36c331248319bff778f197890b"
+      },
+      {
+        "file": "chicken-proof-eat-se-00.png",
+        "state": "EAT",
+        "direction": "SE",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          48,
+          54,
+          224,
+          230
+        ],
+        "sha256": "c28e7cd1374b9ae22c2f27a8b7d7dca547fac1eea0cbad8c7f1f37c48e67f59f"
+      },
+      {
+        "file": "chicken-proof-eat-se-02.png",
+        "state": "EAT",
+        "direction": "SE",
+        "frame": 2,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          42,
+          40,
+          219,
+          230
+        ],
+        "sha256": "bfeb592fff2108890a5c8351819ed1dd54430944f78b209b4c494c5001469e7c"
+      },
+      {
+        "file": "chicken-proof-eat-se-04.png",
+        "state": "EAT",
+        "direction": "SE",
+        "frame": 4,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          55,
+          36,
+          202,
+          230
+        ],
+        "sha256": "0ba520559a97ec1d1a8f97c324a580aa1c746a2671c17c51e12e44638a9fff72"
+      }
+    ]
+  }
+}
