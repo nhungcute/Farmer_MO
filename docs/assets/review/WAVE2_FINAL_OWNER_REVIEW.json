@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T23:13:58.790Z",
+  "generatedAt": "2026-09-30T23:19:30.965Z",
   "status": "FINAL_OWNER_REVIEW_COMPLETE",
   "reviews": [
     {
@@ -1496,6 +1496,7 @@
       "crop_tomato_stage_3",
       "fx_plant_00"
     ],
+    "productionSceneEvidence": "docs/assets/review/wave2-final-production-cross-asset-review.png",
     "runtimeSceneEvidence": "docs/assets/review/wave2-final-runtime-dpr1.png",
     "mobileEvidence": [
       "docs/assets/review/wave2-final-runtime-mobile-932x430.png",
@@ -1503,7 +1504,7 @@
       "docs/assets/review/wave2-final-runtime-mobile-844x390.png",
       "docs/assets/review/wave2-final-runtime-mobile-740x360.png"
     ],
-    "resultDetail": "PASS — production runtime scene contains terrain, buildings, approved crops and runtime UI; asset-specific pond/effects/chicken evidence is recorded per review task."
+    "resultDetail": "PASS — production-source cross-asset sheet contains terrain, Farmhouse, Warehouse, Chicken Coop, Pond, Chicken, Rice, Carrot, Corn, Tomato and representative effects; runtime UI and mobile behavior are covered by the production runtime captures."
   },
   "provenance": "PASS",
   "licensePolicyEligibility": "PASS",

@@ -16,6 +16,7 @@ All eight read-only final owner reviews completed against production PNGs, canon
 ## Cross-asset review
 
 - Result: **PASS**
+- Production-source cross-asset sheet: `docs/assets/review/wave2-final-production-cross-asset-review.png` (Terrain, Farmhouse, Warehouse, Chicken Coop, Pond, Chicken, Rice, Carrot, Corn, Tomato and representative effects)
 - Production scene evidence: `docs/assets/review/wave2-final-runtime-dpr1.png`
 - Required mobile viewports: 932×430, 915×412, 844×390, 740×360 — PASS
 - DPR1, DPR2 and zoom 1.30 runtime evidence — PASS
