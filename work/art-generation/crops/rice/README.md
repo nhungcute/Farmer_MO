@@ -1,7 +1,7 @@
 # ART-02 Rice candidate workspace
 
-**Task status:** `RUNNING` (kickoff initialized)
-**Generation status:** `QUEUED`
+**Task status:** `REVIEW` (candidate generation complete; owner review pending)
+**Generation status:** `COMPLETE ? 5/5 candidates generated`
 **Owner:** Rice Asset Owner
 
 This directory is the only workspace owned by ART-02. It is intentionally separate from `assets-src`; files written here are candidates for review and are not production assets.
@@ -113,3 +113,7 @@ Then stop and hand the candidate to the Integration Owner. Promotion into `asset
 ## Scope boundary
 
 ART-02 must not edit Carrot, Corn, Tomato, Chicken, backend, API, PostgreSQL, economy, gameplay, renderer architecture, animation runtime, Tutorial, Cloudflare, RC01, manifests or production atlases. No other wave starts automatically from this workspace.
+
+## Generation handoff (Revision 1)
+
+Five distinct internal-generated candidate PNGs now exist under `candidates/`, with exact canonical IDs and no production-path writes. Local QA is recorded in `qa/QA.json`; provenance and handoff flags are recorded in `metadata.json`. Technical QA is PASS; style, license, tool version and release approval remain pending owner review. This workspace is now `REVIEW`.

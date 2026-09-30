@@ -1,0 +1,237 @@
+{
+  "taskId": "ART-03",
+  "assetType": "Carrot",
+  "status": "REVIEW",
+  "fileCount": 5,
+  "expectedFileCount": 5,
+  "canonicalIds": [
+    "crop_carrot_seed",
+    "crop_carrot_stage_1",
+    "crop_carrot_stage_2",
+    "crop_carrot_stage_3",
+    "crop_carrot_ready"
+  ],
+  "canonicalIdsPass": true,
+  "dimensionsPass": true,
+  "rgbaAlphaPass": true,
+  "scalePass": true,
+  "lightingPass": true,
+  "stylePass": "PENDING_OWNER_REVIEW",
+  "stageContinuityPass": true,
+  "metadataPass": true,
+  "baseline": {
+    "targetY": 230,
+    "observedY": [
+      230,
+      230,
+      230,
+      230,
+      230
+    ],
+    "pass": true
+  },
+  "technicalChecks": {
+    "noProductionAssetWrites": true,
+    "sourceStripCopied": "carrot-stage-strip.png",
+    "allCandidatesTransparent": true,
+    "allCandidatesCanonical": true
+  },
+  "scaleMetrics": {
+    "visibleWidths": [
+      33,
+      41,
+      90,
+      99,
+      131
+    ],
+    "visibleHeights": [
+      24,
+      34,
+      60,
+      102,
+      160
+    ]
+  },
+  "rootProgression": {
+    "orangePixelCounts": [
+      0,
+      0,
+      121,
+      380,
+      2008
+    ]
+  },
+  "frames": [
+    {
+      "assetId": "crop_carrot_seed",
+      "file": "crop_carrot_seed.png",
+      "state": "seed",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        114,
+        206,
+        147,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 33,
+      "visibleHeight": 24,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "5fdcad6af1e2f23170ade9b80173a0bf1b480de6f13084e4d47c79e4d90b81ad",
+      "orangePixelCount": 0
+    },
+    {
+      "assetId": "crop_carrot_stage_1",
+      "file": "crop_carrot_stage_1.png",
+      "state": "stage_1",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        106,
+        196,
+        147,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 41,
+      "visibleHeight": 34,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "eac660a1118ecd86c9633309782827cf12c0656c9c3a7c96cdbfa198f5468443",
+      "orangePixelCount": 0
+    },
+    {
+      "assetId": "crop_carrot_stage_2",
+      "file": "crop_carrot_stage_2.png",
+      "state": "stage_2",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        84,
+        170,
+        174,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 90,
+      "visibleHeight": 60,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "b8646817afc38da3dff2fc4c4e4440a80ce7cfbea60d6d0abcbb39cd5d70d8db",
+      "orangePixelCount": 121
+    },
+    {
+      "assetId": "crop_carrot_stage_3",
+      "file": "crop_carrot_stage_3.png",
+      "state": "stage_3",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        81,
+        128,
+        180,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 99,
+      "visibleHeight": 102,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "3d6f93d6baba57eda130007926c3631d9ba70f208cf316e50c851aaffbd3740f",
+      "orangePixelCount": 380
+    },
+    {
+      "assetId": "crop_carrot_ready",
+      "file": "crop_carrot_ready.png",
+      "state": "ready",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        62,
+        70,
+        193,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 131,
+      "visibleHeight": 160,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "d24f31fe1f81b7da469b863328c1bd7b4c55454f75deed5bae40fd28074f6b2a",
+      "orangePixelCount": 2008
+    }
+  ],
+  "failures": [],
+  "reviewNotes": [
+    "Five stages are distinct internal image_gen outputs with one coherent carrot identity and a seed-to-ready progression.",
+    "Generated art is a candidate for owner review; it is not promoted or approved for production.",
+    "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
+  ]
+}

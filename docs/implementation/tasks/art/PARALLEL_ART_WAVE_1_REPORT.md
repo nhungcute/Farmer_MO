@@ -2,24 +2,24 @@
 
 Date: 2026-09-30
 
-The five asset-owner tasks were initialized in parallel-safe isolated workspaces. This report is a kickoff report, not a production approval report. No PNG candidate has been generated or promoted by this kickoff.
+The five asset-owner tasks completed real generation in parallel-safe isolated workspaces. This report records candidate handoff, not production approval or promotion.
 
 | Task | Status | Expected canonical assets | Generated in workspace | Technical gate | Blocker |
 |---|---|---:|---:|---|---|
-| ART-01 Chicken | RUNNING — kickoff and contract audit | 92 frames | 0 | Contract audit PASS; metadata template ready | Production source, license and final owner approval pending; Golden Chicken full set remains queued |
-| ART-02 Rice | RUNNING — kickoff and contract audit | 5 static stages | 0 | Manifest cross-check PASS | Production source, license and owner approval pending |
-| ART-03 Carrot | RUNNING — kickoff and contract audit | 5 static stages | 0 | Manifest contract audit PASS | Production source, license and owner approval pending |
-| ART-04 Corn | RUNNING — kickoff and contract audit | 5 static stages | 0 | Manifest contract audit PASS | Production source, license and owner approval pending |
-| ART-05 Tomato | RUNNING — kickoff and contract audit | 5 static stages | 0 | Manifest contract audit PASS | Production source, license and owner approval pending |
+| ART-01 Chicken | REVIEW ? generation complete | 92 frames | 92/92 | Technical QA PASS; scale/continuity/provenance evidence | License/style/release approval pending; no promotion |
+| ART-02 Rice | REVIEW ? generation complete | 5 static stages | 5/5 | Technical QA PASS; growth/mobile/provenance evidence | License/style/release approval pending; no promotion |
+| ART-03 Carrot | REVIEW ? generation complete | 5 static stages | 5/5 | Technical QA PASS; baseline/scale/continuity/provenance evidence | License/style/release approval pending; no promotion |
+| ART-04 Corn | REVIEW ? generation complete | 5 static stages | 5/5 | Technical QA PASS; baseline/alpha/metadata evidence | License/style/release approval pending; no promotion |
+| ART-05 Tomato | REVIEW ? generation complete | 5 static stages | 5/5 | Technical QA PASS; baseline/alpha/metadata evidence | License/style/release approval pending; no promotion |
 
 Canonical total: **112 asset IDs** (`92 Chicken frames + 20 crop stages`).
 
 ## Isolation and safety result
 
 - Each task has one status file and one exclusive workspace under `work/art-generation/**`.
-- Each workspace has an `ART_METADATA.template.json` with pending provenance values and safe flags: `placeholder=true`, `production_ready=false`, `approved=false`.
+- Each workspace has an intake template and a completed candidate metadata/QA record; unknown license/tool-version values remain `PENDING_OWNER_REVIEW`.
 - No files under `assets-src/**` were modified.
 - No manifest, atlas, renderer, animation runtime, API, database, economy, gameplay, Tutorial, Cloudflare or RC01 files were modified.
 - No Wave 2 task was started.
 
-The next gate is owner generation inside each workspace, followed by task-local QA and `REVIEW`. Integration Owner must complete cross-asset scale, lighting, perspective, metadata, license and filename mapping review before any production promotion.
+The next gate is Integration Owner cross-asset visual/contract review after all five tasks are at `REVIEW`. Only that owner may map candidates into `assets-src/**`, regenerate atlases and run strict production validation. Wave 2, Cloudflare and RC01 remain closed.

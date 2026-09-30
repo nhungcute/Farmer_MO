@@ -1,17 +1,19 @@
 # ART-01 Chicken generation workspace
 
-**Status: RUNNING — kickoff only.** This directory is an isolated intake/generation workspace for the B02.2-FULL Chicken candidate. It is not a production asset directory.
+**Status: REVIEW ? generation complete.** This directory is an isolated intake/generation workspace for the B02.2-FULL Chicken candidate. It is not a production asset directory.
 
+
+The current candidate contains **92/92** canonical frames and has passed the local candidate QA in [`ART_QA.json`](ART_QA.json). Technical review is complete; style, license and owner approval remain pending. No candidate has been promoted to `assets-src`.
 ## Contract reference
 
 Read [`docs/implementation/tasks/art/ART_01_CHICKEN.md`](../../../docs/implementation/tasks/art/ART_01_CHICKEN.md) before adding anything here. The canonical source of truth is [`assets-src/manifests/animation-manifest.json`](../../../assets-src/manifests/animation-manifest.json), with the visual rules in [`docs/assets/CHICKEN_PRODUCTION_CONTRACT.md`](../../../docs/assets/CHICKEN_PRODUCTION_CONTRACT.md) and [`docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../../docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md).
 
 ## Workspace rules
 
-- Keep all drafts, source files, scripts, contact sheets, and review exports here until the candidate is complete.
+- Keep all drafts, source files, scripts, contact sheets, and review exports here until the candidate is approved and promoted by the Integration Owner.
 - Do not copy files into `assets-src/animals/chicken/` from this workspace without a separate approved replacement step.
 - Do not edit either animation manifest, renderer, animation runtime, atlas output, gameplay, economy, Tutorial, or API.
-- Do not use proof PNGs as the B02.2-FULL source. The Revision 2 proof is a separate 13-frame checkpoint outside production.
+- Do not use proof PNGs as the B02.2-FULL source. The Revision 2 proof is a separate 13-frame checkpoint outside production; the current candidates were generated from four new internal masters.
 - Never mirror directions. Generate real `NE`, `SE`, `SW`, and `NW` views.
 - Do not declare `production_ready` or `approved` from a draft. Keep provenance fields explicit and pending until evidence exists.
 

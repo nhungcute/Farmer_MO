@@ -4,9 +4,9 @@
 |---|---|
 | Task | `ART-02` — Rice production |
 | Owner | Rice Asset Owner |
-| Status | `RUNNING` (kickoff initialized) |
-| Generation sub-status | `QUEUED` |
-| Review status | `NOT_STARTED` |
+| Status | `REVIEW` ? 5/5 generated; QA PASS; not promoted |
+| Generation sub-status | `COMPLETE` |
+| Review status | `REVIEW` ? Integration Owner pending |
 | Owned candidate path | `work/art-generation/crops/rice/**` |
 | Future promotion area | `assets-src/crops/rice/**` (Integration Owner only) |
 | Canonical technical source | `assets-src/manifests/animation-manifest.json` |
@@ -14,7 +14,7 @@
 | Shared style source | `docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md` and `assets-src/style/style-sheet.md` |
 | Manifest content version | `mvp-1` |
 
-This file starts the Rice task only. No production artwork has been generated or promoted in this kickoff. The current repository files are deterministic placeholders (`placeholder=true`) and are not evidence of production approval.
+Five real Rice candidates are complete in the isolated workspace. Task-local image/contract QA is PASS; they are awaiting Integration Owner review and are not promoted.
 
 ## 1. Canonical Rice contract
 
@@ -110,9 +110,9 @@ ART-02 may move from `RUNNING` to `REVIEW` only when every item below is evidenc
 
 Technical and visual checks are independent: passing an image or manifest validator does not imply style approval or release approval. The final state after generation is expected to be `REVIEW`, not `DONE`, until the Integration Owner and asset/release approver sign off.
 
-## 6. Current kickoff blockers
+## 6. Current review gates
 
-- Production Rice source artwork has not been supplied in the repository.
+- Candidate generation is complete; cross-asset visual review, license confirmation and release approval remain pending.
 - The current five Rice files are internal placeholders; they cannot be promoted automatically.
 - License/source/creator/tool evidence and `approvalRef` are not confirmed for a production replacement.
 - The future `assets-src/crops/rice/**` promotion path differs from the current flat canonical `sourceFile` paths and requires Integration Owner mapping review.

@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | Owner | Tomato Asset Owner |
-| Status | RUNNING — kickoff and contract audit |
+| Status | REVIEW ? 5/5 generated; QA PASS; not promoted |
 | Owned workspace | `work/art-generation/crops/tomato/**` |
 | Production path | `assets-src/crops/tomato/**` — promotion only after Integration Owner review |
 | Canonical source | `assets-src/manifests/animation-manifest.json` |

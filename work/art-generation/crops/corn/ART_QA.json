@@ -1,0 +1,44 @@
+{
+  "taskId": "ART-04",
+  "assetType": "Corn",
+  "status": "REVIEW",
+  "fileCount": 5,
+  "expectedFileCount": 5,
+  "canonicalIds": [
+    "crop_corn_seed",
+    "crop_corn_stage_1",
+    "crop_corn_stage_2",
+    "crop_corn_stage_3",
+    "crop_corn_ready"
+  ],
+  "canonicalIdsPass": true,
+  "dimensionsPass": true,
+  "rgbaAlphaPass": true,
+  "scalePass": true,
+  "lightingPass": true,
+  "stylePass": "PENDING_OWNER_REVIEW",
+  "stageContinuityPass": true,
+  "metadataPass": true,
+  "baseline": {
+    "targetY": 230,
+    "observedY": [
+      230,
+      230,
+      230,
+      230,
+      230
+    ],
+    "pass": true
+  },
+  "technicalChecks": {
+    "noProductionAssetWrites": true,
+    "sourceStripCopied": "source-strip-corn.png",
+    "allCandidatesTransparent": true,
+    "allCandidatesCanonical": true
+  },
+  "reviewNotes": [
+    "Five stages share one generated visual identity and a continuous seed-to-ready progression.",
+    "Generated art is a candidate for owner review; it is not promoted or approved for production.",
+    "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
+  ]
+}

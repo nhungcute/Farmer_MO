@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Owner | Carrot Asset Owner |
-| Status | RUNNING — kickoff and contract audit |
+| Status | REVIEW ? 5/5 generated; QA PASS; not promoted |
 | Owned workspace | `work/art-generation/crops/carrot/**` |
 | Production path | `assets-src/crops/carrot/**` — promotion only after Integration Owner review |
 | Canonical source | `assets-src/manifests/animation-manifest.json` |
@@ -65,6 +65,6 @@ Until every gate passes, status remains `RUNNING` or `REVIEW`; ART-03 does not p
 
 ## Blockers at kickoff
 
-- No Carrot production source or owner style approval is supplied yet; this kickoff creates the contract only.
+- Candidate generation is complete; Integration Owner visual review, license confirmation and release approval remain pending.
 - Candidates must be generated and reviewed before any production promotion can be considered.
 - Final approval, license/source evidence, and integration review are pending.

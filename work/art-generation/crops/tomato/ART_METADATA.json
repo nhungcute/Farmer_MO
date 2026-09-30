@@ -1,0 +1,225 @@
+{
+  "taskId": "ART-05",
+  "assetType": "Tomato",
+  "status": "REVIEW",
+  "generationStatus": "COMPLETE",
+  "assetIds": [
+    "crop_tomato_seed",
+    "crop_tomato_stage_1",
+    "crop_tomato_stage_2",
+    "crop_tomato_stage_3",
+    "crop_tomato_ready"
+  ],
+  "source": "internal-generated",
+  "creator": "OpenAI image generation via Codex",
+  "tool": "image_gen.imagegen",
+  "toolVersion": "PENDING_OWNER_REVIEW",
+  "license": "PENDING_OWNER_REVIEW",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "B02.1",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "contract": {
+    "canvas": {
+      "width": 256,
+      "height": 256
+    },
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "renderOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "atlas": "crops",
+    "stateOrder": [
+      "crop_tomato_seed",
+      "crop_tomato_stage_1",
+      "crop_tomato_stage_2",
+      "crop_tomato_stage_3",
+      "crop_tomato_ready"
+    ],
+    "baselineY": 230,
+    "background": "transparent",
+    "staticCropStages": true
+  },
+  "sourceEvidence": {
+    "sourceStrip": "source-strip-tomato.png",
+    "generatedImagePath": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0ec6e-266b-7390-8a9d-0f8dbb55945e\\exec-63ea6a49-c1b7-413e-a26d-cdddb8839291.png",
+    "promptSummary": "Five-stage tomato crop progression in a cohesive 2.5D cozy farm illustration style; transparent background; top-left light; soft bottom-right shadow; readable at 256x256."
+  },
+  "frames": [
+    {
+      "assetId": "crop_tomato_seed",
+      "file": "crop_tomato_seed.png",
+      "state": "seed",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        61,
+        25,
+        195,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 134,
+      "visibleHeight": 205,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourcePanel": {
+        "left": 0,
+        "top": 0,
+        "right": 397,
+        "bottom": 793
+      }
+    },
+    {
+      "assetId": "crop_tomato_stage_1",
+      "file": "crop_tomato_stage_1.png",
+      "state": "stage_1",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        69,
+        44,
+        186,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 117,
+      "visibleHeight": 186,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourcePanel": {
+        "left": 397,
+        "top": 0,
+        "right": 793,
+        "bottom": 793
+      }
+    },
+    {
+      "assetId": "crop_tomato_stage_2",
+      "file": "crop_tomato_stage_2.png",
+      "state": "stage_2",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        69,
+        17,
+        187,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 118,
+      "visibleHeight": 213,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourcePanel": {
+        "left": 793,
+        "top": 0,
+        "right": 1190,
+        "bottom": 793
+      }
+    },
+    {
+      "assetId": "crop_tomato_stage_3",
+      "file": "crop_tomato_stage_3.png",
+      "state": "stage_3",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        68,
+        56,
+        187,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 119,
+      "visibleHeight": 174,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourcePanel": {
+        "left": 1190,
+        "top": 0,
+        "right": 1586,
+        "bottom": 793
+      }
+    },
+    {
+      "assetId": "crop_tomato_ready",
+      "file": "crop_tomato_ready.png",
+      "state": "ready",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        59,
+        11,
+        197,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 138,
+      "visibleHeight": 219,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "sourcePanel": {
+        "left": 1586,
+        "top": 0,
+        "right": 1983,
+        "bottom": 793
+      }
+    }
+  ],
+  "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation."
+}

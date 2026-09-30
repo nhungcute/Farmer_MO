@@ -4,19 +4,19 @@
 |---|---|
 | ID | B02 |
 | Tên | Production artwork replacement và approval audit |
-| Trạng thái | BLOCKED |
+| Trạng thái | RUNNING |
 | Owner | Asset workstream / art approval |
 | Phụ thuộc | B01 DONE; approved production artwork and approval evidence |
 | Đường dẫn sở hữu | `assets-src/**` chỉ khi có artwork được duyệt; `docs/assets/**`; task này |
 | Đường dẫn cấm sửa | Renderer, animation runtime, asset IDs/frame IDs, FPS, pivot/anchor, atlas schema, backend, gameplay, economy/content definitions, Tutorial |
-| Deliverables | Audit bằng chứng artwork/license/style approval và contract validation; chưa thay asset vì chưa có production source |
+| Deliverables | Candidate generation evidence, task-local QA and Integration Owner review; no production replacement yet |
 | Bắt đầu | 2026-09-30 |
-| Kết thúc | Chưa kết thúc — chờ artwork được cung cấp và duyệt |
-| Hoạt động hiện tại | BLOCKED — xác nhận tất cả source hiện tại vẫn là placeholder nội bộ |
-| Hoạt động gần nhất | Kiểm tra inventory 188 asset/10 animation, license manifest và strict output validation |
-| Hoạt động kế tiếp | Khi nhận artwork: đối chiếu ID/frame/canvas/FPS/loop/hold-last/event/pivot/anchor/atlas, rồi chạy strict validation và review approval |
+| K?t th?c | Ch?a k?t th?c ? ch? Integration Owner cross-asset review v? release approval |
+| Ho?t ??ng hi?n t?i | REVIEW handoff ? 112 candidates complete; Integration Owner cross-asset review pending |
+| Ho?t ??ng g?n nh?t | Five owner generation tasks completed 112/112 canonical candidates with task-local QA PASS |
+| Ho?t ??ng k? ti?p | Cross-asset visual/contract review; only then decide whether to promote into assets-src |
 | Tests | `node tools/asset-inventory.mjs`; `npm run assets:validate`; `npm run assets:validate:strict` |
-| Blocker | Chưa có artwork production, license/source evidence, style approval hoặc release approval |
+| Blocker | Promotion/release approval and license review remain pending; assets-src is unchanged |
 
 ## Subtask status
 
@@ -24,22 +24,22 @@
 |---|---|---|
 | B02.1 — Production Art Style Lock | DONE — style direction approved with minor production notes | [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) |
 | B02.2 — Golden Asset: Chicken | BLOCKED — contract đã khóa nhưng chưa có 92 production frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md), 92 placeholder vẫn giữ nguyên |
-| B02.2-PROOF — Chicken proof checkpoint | REVIEW — Revision 2 technical evidence đã kiểm tra; chờ final owner review, không phải production | [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md), [`CHICKEN_PROOF_QA.json`](../../assets/review/CHICKEN_PROOF_QA.json) |
-| B02.2-FULL — Chicken production set | QUEUED — chỉ mở sau khi Revision 2 được final owner duyệt; vẫn cần đủ 92 frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
+| B02.2-PROOF ? Chicken proof checkpoint | DONE ? Revision 2 owner APPROVED TO PROCEED | [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md), [`CHICKEN_PROOF_QA.json`](../../assets/review/CHICKEN_PROOF_QA.json) |
+| B02.2-FULL ? Chicken production set | RUNNING ? 92/92 candidates generated in `work/art-generation/chicken/**`; not promoted | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
 
 ## Parallel Art Wave 1 kickoff
 
-The five asset-owner tasks are initialized in isolated workspaces under [`tasks/art/`](art/README.md). They run independently because each task owns one complete asset type:
+The five asset-owner tasks completed real generation in parallel-safe isolated workspaces. All candidates are at `REVIEW`; Integration Owner cross-asset review is the next gate.
 
 | Task | Owned asset type | Workspace | Status |
 |---|---|---|---|
-| ART-01 | Chicken / `animal_chicken` | `work/art-generation/chicken/**` | RUNNING — contract audit |
-| ART-02 | Rice | `work/art-generation/crops/rice/**` | RUNNING — contract audit |
-| ART-03 | Carrot | `work/art-generation/crops/carrot/**` | RUNNING — contract audit |
-| ART-04 | Corn | `work/art-generation/crops/corn/**` | RUNNING — contract audit |
-| ART-05 | Tomato | `work/art-generation/crops/tomato/**` | RUNNING — contract audit |
+| ART-01 | Chicken / `animal_chicken` | `work/art-generation/chicken/**` | REVIEW ? real generation 92/92; task-local QA PASS |
+| ART-02 | Rice | `work/art-generation/crops/rice/**` | REVIEW ? real generation 5/5; task-local QA PASS |
+| ART-03 | Carrot | `work/art-generation/crops/carrot/**` | REVIEW ? real generation 5/5; task-local QA PASS |
+| ART-04 | Corn | `work/art-generation/crops/corn/**` | REVIEW ? real generation 5/5; task-local QA PASS |
+| ART-05 | Tomato | `work/art-generation/crops/tomato/**` | REVIEW ? real generation 5/5; task-local QA PASS |
 
-This kickoff creates no production replacement. Workers write only to their owned `work/art-generation/**` path; `assets-src/**`, manifests, atlas output and runtime remain unchanged. Each task must reach `REVIEW` with complete canonical assets and metadata before Integration Owner cross-asset review. Wave 2 is not started automatically.
+Workers write only to their owned `work/art-generation/**` path; `assets-src/**`, manifests, atlas output and runtime remain unchanged. Each task reaches `REVIEW` only after complete canonical assets and task-local QA/metadata. Integration Owner review is required before promotion; Wave 2 is not started.
 
 ## Checklist
 
@@ -66,8 +66,8 @@ This kickoff creates no production replacement. Workers write only to their owne
 - B02.1 đã khóa perspective, palette direction, lighting, alpha, scale, motion, mobile readability và approval model; style direction đã được owner xác nhận `APPROVED WITH MINOR REVISIONS`, nên B02.1 chuyển `DONE`.
 - B02.2 đã khóa contract Chicken 92 frame, sáu state, bốn direction, canvas `256 × 256`, anchor `0.5,0.9`, `mirrorAllowed=false` và `FEED_CONSUMED@2`; chưa có candidate production để chuyển sang `REVIEW`.
 - B02.2-PROOF là checkpoint kỹ thuật độc lập ở `REVIEW`: chỉ có 13 frame proof Revision 2 ngoài `assets-src`, không thay manifest/atlas, không đặt `production_ready` hoặc `approved` và không làm thay đổi trạng thái BLOCKED của B02 production.
-- B02.2-FULL vẫn `QUEUED`; dừng ở đây để chờ final owner review Revision 2 trước khi tạo 92 frame production.
-- B02.2-PROOF Revision 2 đã có 13 frame, scale comparison, EAT 5-frame strip, runtime-size comparison, Pixi/mobile/stress evidence; final owner review vẫn `PENDING` và không mở B02.2-FULL.
+- B02.2-FULL is `RUNNING`; 92 Chicken frames and 20 crop stages are complete in five isolated workspaces and await Integration Owner review.
+- ART-01 through ART-05 are all at `REVIEW` with task-local QA PASS; no candidate is promoted.
 
 ## Contract audit
 

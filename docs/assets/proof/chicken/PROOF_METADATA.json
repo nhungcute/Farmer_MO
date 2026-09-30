@@ -1,13 +1,16 @@
 {
   "proofVersion": "B02.2-PROOF-v2",
   "revisionOf": "B02.2-PROOF-v1",
-  "status": "candidate",
+  "status": "done",
+  "proofStatus": "B02.2-PROOF=DONE",
+  "generationGate": "B02.2-FULL=OPEN",
   "placeholder": true,
   "runtimeAsset": false,
   "production_ready": false,
   "productionReady": false,
   "approved": false,
   "styleDirectionApproval": "APPROVED_WITH_MINOR_REVISIONS",
+  "styleApproval": "APPROVED_TO_PROCEED",
   "source": "Revision 2 proof derived from the owner-approved Chicken concept; two EAT in-between frames generated against the existing proof references",
   "creator": "Codex via OpenAI built-in image generation tool and local proof normalization",
   "tool": "built-in image_gen plus Pillow normalization",
@@ -389,8 +392,8 @@
   },
   "qa": {
     "technicalReview": "PASS — Revision 2 image, baseline, Pixi/mobile/stress and command evidence recorded in CHICKEN_PROOF_QA.json",
-    "styleReview": "PENDING_FINAL_OWNER_REVIEW",
-    "ownerApproval": "PENDING",
+    "styleReview": "APPROVED_TO_PROCEED",
+    "ownerApproval": "APPROVED_TO_PROCEED",
     "approvalRef": null,
     "anchorBaseline": {
       "targetBottomPixel": 230,
@@ -407,7 +410,7 @@
   },
   "limitations": [
     "Revision 2 remains a proof candidate outside assets-src; it is not the 92-frame production Chicken set.",
-    "Style direction is approved with minor revisions; final owner review of Revision 2 evidence is still pending.",
+    "Style direction and Revision 2 proof were approved to proceed by the project owner; full production generation is open in isolated Wave 1 workspaces.",
     "No production atlas, manifest, renderer, runtime, gameplay, economy or backend changes are included."
   ]
 }

@@ -4,16 +4,16 @@
 |---|---|
 | Task ID | ART-01 |
 | Name | Chicken production artwork (B02.2-FULL) |
-| Status | **RUNNING — kickoff only** |
+| Status | **REVIEW ? 92/92 generated; task-local QA PASS; not promoted** |
 | Owner | Art production workstream |
-| Parent gate | B02.2-FULL (queued) |
+| Parent gate | B02.2-FULL (open; promotion gate remains closed) |
 | Contract source | [`assets-src/manifests/animation-manifest.json`](../../../../assets-src/manifests/animation-manifest.json) |
 | Visual contract | [`docs/assets/CHICKEN_PRODUCTION_CONTRACT.md`](../../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
 | Style guide | [`docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) |
 | Working area | [`work/art-generation/chicken/`](../../../../work/art-generation/chicken/) |
 | Production source | `assets-src/animals/chicken/` (locked until candidate approval) |
 
-This task records the production-artwork intake and generation contract. It does not replace any PNG, alter the canonical manifest, or change runtime behavior. The kickoff is RUNNING only because the work package has been opened; no production candidate has been submitted yet.
+The real 92-frame candidate is complete in the isolated workspace. Technical QA is PASS and the task is handed to Integration Owner for cross-asset review; no production replacement has been made.
 
 ## Scope
 
@@ -177,9 +177,9 @@ Every frame, or a source group that unambiguously covers a frame set, must provi
 
 ## Current blockers and handoff
 
-- Production artwork has not been supplied or authored in this work package.
+- 92/92 production candidates are present and task-local technical QA is PASS; source/license/style/release approval remains an owner gate.
 - Source, creator, tool version, license, technical evidence, style evidence, and owner/release approval are therefore pending.
 - Existing placeholder PNGs remain the current production source until a complete candidate batch is reviewed; do not partially replace them.
-- B02.2-FULL remains **QUEUED** and B02 production remains blocked. ART-01 may move to `REVIEW` only after the 92-frame candidate and every acceptance/provenance item above is complete.
+- B02.2-FULL is open; ART-01 is now `REVIEW`. Promotion remains blocked until Integration Owner review.
 
-The next handoff is to create or receive the complete candidate in `work/art-generation/chicken/`, validate it against this document, then submit an evidence-only review. No production copy is authorized by this kickoff document.
+The next handoff is Integration Owner cross-asset visual/contract review. No production copy is authorized by this task handoff.

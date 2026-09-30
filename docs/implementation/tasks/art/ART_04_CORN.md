@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | Owner | Corn Asset Owner |
-| Status | RUNNING — kickoff and contract audit |
+| Status | REVIEW ? 5/5 generated; QA PASS; not promoted |
 | Owned workspace | `work/art-generation/crops/corn/**` |
 | Production path | `assets-src/crops/corn/**` — promotion only after Integration Owner review |
 | Canonical source | `assets-src/manifests/animation-manifest.json` |

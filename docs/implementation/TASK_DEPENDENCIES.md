@@ -38,11 +38,11 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 
 - Remote CI runs `36660295559` (commit `628f7cd`), `36662455574` (commit `7651d6a`) and parent-review closure run `36663637314` (commit `5cf15f7`) are PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
 - Documentation templates for E01 and RC01 are prepared, but neither runtime task is open.
-- RUNNING: none; C03 and D02 have DONE evidence; B02 audit is blocked on approved production artwork.
+- RUNNING: B02 Integration Owner review after Parallel Art Wave 1 generation; C03 and D02 have DONE evidence.
 - REVIEW: none for A01/A02/A03/B01/C01/C02/C03/D01/D02; parent review completed with local and remote CI evidence.
 - DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02; API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
 - REVIEW subtask: B02.1 style direction đã `DONE` với owner kết luận `APPROVED WITH MINOR REVISIONS`; B02.2 production contract tại `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` vẫn khóa và chưa có đủ production frame.
-- REVIEW checkpoint: B02.2-PROOF Revision 2 đã có 13 frame kỹ thuật ngoài `assets-src`, scale/EAT/Pixi/mobile/stress evidence tại `docs/assets/review/CHICKEN_PROOF_QA.json`; checkpoint này không mở khóa B02 production và final owner review vẫn `PENDING`.
-- QUEUED checkpoint: B02.2-FULL vẫn chờ owner duyệt proof rồi mới tạo đủ 92 frame production; giữ nguyên manifest, atlas, renderer và animation runtime.
-- RUNNING kickoff: Parallel Art Wave 1 đã khởi tạo ART-01 Chicken, ART-02 Rice, ART-03 Carrot, ART-04 Corn và ART-05 Tomato. Mỗi task có một owner, một workspace riêng dưới `work/art-generation/**` và một status file tại `docs/implementation/tasks/art/`; hiện chỉ audit contract, chưa có promotion hoặc production replacement.
-- BLOCKED: B02 production art nếu chưa có artwork được duyệt; E01 Cloudflare cho tới khi các gate upstream PASS.
+- DONE checkpoint: B02.2-PROOF Revision 2 is owner `APPROVED TO PROCEED`; evidence remains outside `assets-src` and does not change manifest/atlas.
+- REVIEW checkpoint: B02.2-FULL generation is complete: 92 Chicken frames + 20 crop stages, all five task workspaces at `REVIEW` with technical QA PASS; promotion is not started.
+- REVIEW handoff: Parallel Art Wave 1 completed ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5; all candidate files remain under `work/art-generation/**`.
+- BLOCKED: B02 production promotion/release approval until Integration Owner cross-asset review and license/style gates pass; E01 Cloudflare remains upstream-gated.

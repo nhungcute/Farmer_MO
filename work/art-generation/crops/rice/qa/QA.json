@@ -1,0 +1,340 @@
+{
+  "qaVersion": "ART-02-RICE-v1",
+  "task": "ART-02",
+  "status": "REVIEW_CANDIDATE",
+  "generatedAt": "2026-09-30",
+  "assetCount": 5,
+  "expectedAssetCount": 5,
+  "assets": [
+    {
+      "id": "crop_rice_seed",
+      "file": "crop_rice_seed.png",
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-e5f48651-826a-49e9-a500-82528cf4c972.png",
+      "sourceSha256": "59dcf0d5bcb91b34d517397ff5bd884274d16c6dc51422c47b722f3d9dd46cfc",
+      "sha256": "54ba805c52bd568d22424cf004dfaac637a57fdde8a0a663f6644df59f316659",
+      "canvas": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold8": [
+        106,
+        184,
+        149,
+        230
+      ],
+      "paintedWidth": 43,
+      "paintedHeight": 46,
+      "contactY": 229,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sourceScale": 2,
+      "atlas": "crops"
+    },
+    {
+      "id": "crop_rice_stage_1",
+      "file": "crop_rice_stage_1.png",
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-5ac86614-35bb-4577-b4d0-b9961228969e.png",
+      "sourceSha256": "b9e22c2d60f313a0b3c4a655b26709d4fa121e6c79bc88c75058279a8c9bede2",
+      "sha256": "8c81dbee952339501983c3e6696768eb667a3e5b5354fde87624b8ee2ca6c254",
+      "canvas": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold8": [
+        85,
+        138,
+        170,
+        230
+      ],
+      "paintedWidth": 85,
+      "paintedHeight": 92,
+      "contactY": 229,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sourceScale": 2,
+      "atlas": "crops"
+    },
+    {
+      "id": "crop_rice_stage_2",
+      "file": "crop_rice_stage_2.png",
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-0d969796-ae00-46cd-8057-9d4ccaf09f62.png",
+      "sourceSha256": "b49113f3598c68996579d3ddb9b93de16a432ddbf7a6c6479a5ad4aeb435679e",
+      "sha256": "e0e95939d0648c2c2bd72a6303453adb54267db4a2e479f367da6d6127c58cd6",
+      "canvas": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold8": [
+        63,
+        94,
+        192,
+        230
+      ],
+      "paintedWidth": 129,
+      "paintedHeight": 136,
+      "contactY": 229,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sourceScale": 2,
+      "atlas": "crops"
+    },
+    {
+      "id": "crop_rice_stage_3",
+      "file": "crop_rice_stage_3.png",
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-2dd7b1a7-8f02-44c7-9c0d-5ed9a1bd4779.png",
+      "sourceSha256": "cf3f5cf16a47e3f5ddf6e67eecf3fb030d3a251a4e68d5878e36d1e03063f462",
+      "sha256": "cfd72c1f27b870814c8c9eaa4b56c1721aa054bc05ce2b9309c9b22ac28c2ff1",
+      "canvas": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold8": [
+        44,
+        56,
+        211,
+        230
+      ],
+      "paintedWidth": 167,
+      "paintedHeight": 174,
+      "contactY": 229,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sourceScale": 2,
+      "atlas": "crops"
+    },
+    {
+      "id": "crop_rice_ready",
+      "file": "crop_rice_ready.png",
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-0f7fde7d-1c7b-45b3-9f82-3c60f6a7fc14.png",
+      "sourceSha256": "03d880fd3346ad05bc7554c173812c8834fe6e489d20de2acf673c192e191745",
+      "sha256": "3b390609348d621fa016fba1f2d871bcb6818a63a95b7c4bad419c3a13d45f36",
+      "canvas": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold8": [
+        42,
+        48,
+        214,
+        230
+      ],
+      "paintedWidth": 172,
+      "paintedHeight": 182,
+      "contactY": 229,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sourceScale": 2,
+      "atlas": "crops"
+    }
+  ],
+  "checks": {
+    "fileCount": {
+      "status": "PASS",
+      "expected": 5,
+      "actual": 5
+    },
+    "canonicalIds": {
+      "status": "PASS",
+      "expected": [
+        "crop_rice_seed",
+        "crop_rice_stage_1",
+        "crop_rice_stage_2",
+        "crop_rice_stage_3",
+        "crop_rice_ready"
+      ],
+      "actual": [
+        "crop_rice_seed",
+        "crop_rice_stage_1",
+        "crop_rice_stage_2",
+        "crop_rice_stage_3",
+        "crop_rice_ready"
+      ]
+    },
+    "dimensions": {
+      "status": "PASS",
+      "all": [
+        256,
+        256
+      ]
+    },
+    "rgbaAlpha": {
+      "status": "PASS",
+      "allRGBA": true,
+      "transparentMargins": true,
+      "alphaExtrema": {
+        "crop_rice_seed": [
+          0,
+          255
+        ],
+        "crop_rice_stage_1": [
+          0,
+          255
+        ],
+        "crop_rice_stage_2": [
+          0,
+          255
+        ],
+        "crop_rice_stage_3": [
+          0,
+          255
+        ],
+        "crop_rice_ready": [
+          0,
+          255
+        ]
+      }
+    },
+    "scaleAnchorOffset": {
+      "status": "PASS",
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "noNonUniformStretch": true
+    },
+    "footprintContact": {
+      "status": "PASS",
+      "targetContactY": 230,
+      "actualContactY": {
+        "crop_rice_seed": 229,
+        "crop_rice_stage_1": 229,
+        "crop_rice_stage_2": 229,
+        "crop_rice_stage_3": 229,
+        "crop_rice_ready": 229
+      },
+      "contactJitterPx": 0
+    },
+    "growthContinuity": {
+      "status": "PASS",
+      "order": [
+        "crop_rice_seed",
+        "crop_rice_stage_1",
+        "crop_rice_stage_2",
+        "crop_rice_stage_3",
+        "crop_rice_ready"
+      ],
+      "heightPx": [
+        46,
+        92,
+        136,
+        174,
+        182
+      ],
+      "strictlyIncreasing": true
+    },
+    "lighting": {
+      "status": "PASS",
+      "direction": "top-left highlight; bottom-right soft contact shading",
+      "glowBaked": false
+    },
+    "style": {
+      "status": "PASS",
+      "direction": "cozy bright 2.5D isometric cartoon; silhouette-first; restrained detail; mobile readable"
+    },
+    "mobileReadability": {
+      "status": "PASS",
+      "viewports": [
+        "932x430",
+        "915x412",
+        "844x390",
+        "740x360"
+      ],
+      "zoom": [
+        "default",
+        "max"
+      ],
+      "evidence": [
+        "previews/rice-growth-strip.png",
+        "previews/rice-runtime-size-comparison.png"
+      ]
+    },
+    "productionBoundary": {
+      "status": "PASS",
+      "outsideAssetsSrc": true,
+      "manifestChanged": false,
+      "atlasChanged": false
+    }
+  },
+  "provenance": {
+    "source": "internal-generated",
+    "creator": "Codex / Rice Asset Owner",
+    "tool": "built-in image_gen",
+    "toolVersion": "PENDING_OWNER_REVIEW",
+    "license": "PENDING_OWNER_REVIEW",
+    "promptReferences": [
+      "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-e5f48651-826a-49e9-a500-82528cf4c972.png",
+      "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-5ac86614-35bb-4577-b4d0-b9961228969e.png",
+      "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-0d969796-ae00-46cd-8057-9d4ccaf09f62.png",
+      "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-2dd7b1a7-8f02-44c7-9c0d-5ed9a1bd4779.png",
+      "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-9a6c-7e71-8be1-1bb2dae3d3f4\\exec-0f7fde7d-1c7b-45b3-9f82-3c60f6a7fc14.png"
+    ]
+  },
+  "approval": {
+    "placeholder": false,
+    "production_ready": false,
+    "approved": false,
+    "technicalReview": "PASS",
+    "styleReview": "PENDING_OWNER_REVIEW",
+    "approvalRef": "PENDING_OWNER_REVIEW"
+  }
+}

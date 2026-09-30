@@ -804,6 +804,7 @@
     "docker compose config --quiet": "PASS",
     "git diff --check": "PASS"
   },
-  "styleApproval": "PENDING_FINAL_OWNER_REVIEW",
-  "fullProduction92": "NOT_STARTED"
+  "proofStatus": "B02.2-PROOF=DONE",
+  "styleApproval": "APPROVED_TO_PROCEED",
+  "fullProduction92": "GENERATED_REVIEW"
 }

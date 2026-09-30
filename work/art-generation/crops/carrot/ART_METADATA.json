@@ -1,0 +1,232 @@
+{
+  "taskId": "ART-03",
+  "assetType": "Carrot",
+  "status": "REVIEW",
+  "generationStatus": "COMPLETE",
+  "assetIds": [
+    "crop_carrot_seed",
+    "crop_carrot_stage_1",
+    "crop_carrot_stage_2",
+    "crop_carrot_stage_3",
+    "crop_carrot_ready"
+  ],
+  "source": "internal-generated",
+  "creator": "OpenAI image generation via Codex",
+  "tool": "image_gen.imagegen",
+  "toolVersion": "PENDING_OWNER_REVIEW",
+  "license": "PENDING_OWNER_REVIEW",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "B02.1",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "contract": {
+    "canvas": {
+      "width": 256,
+      "height": 256
+    },
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "renderOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "atlas": "crops",
+    "stateOrder": [
+      "crop_carrot_seed",
+      "crop_carrot_stage_1",
+      "crop_carrot_stage_2",
+      "crop_carrot_stage_3",
+      "crop_carrot_ready"
+    ],
+    "baselineY": 230,
+    "background": "transparent",
+    "staticCropStages": true
+  },
+  "sourceEvidence": {
+    "sourceStrip": "carrot-stage-strip.png",
+    "generatedImagePaths": {
+      "crop_carrot_seed": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-ba6c-78b0-b53d-1159c82a4130\\exec-a1452e40-1eba-4e48-adee-ec1f5aad159f.png",
+      "crop_carrot_stage_1": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-ba6c-78b0-b53d-1159c82a4130\\exec-d383cdc0-bc10-466a-b5f4-67b40b8bf9c8.png",
+      "crop_carrot_stage_2": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-ba6c-78b0-b53d-1159c82a4130\\exec-8004ed91-71fd-478a-b1cb-0c6682448f84.png",
+      "crop_carrot_stage_3": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-ba6c-78b0-b53d-1159c82a4130\\exec-57622583-0623-4168-a700-323cc8aa2ec2.png",
+      "crop_carrot_ready": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f168-ba6c-78b0-b53d-1159c82a4130\\exec-3ab85516-bbb3-4379-b71a-6fffc72d40a5.png"
+    },
+    "promptSummary": "Distinct internal image_gen outputs for five coherent carrot growth stages: seed, young rosette, small shoulder, medium root, and mature ready carrot; transparent background; cozy 2.5D illustrated farm style; top-left light; soft bottom-right shadow."
+  },
+  "frames": [
+    {
+      "assetId": "crop_carrot_seed",
+      "file": "crop_carrot_seed.png",
+      "state": "seed",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        114,
+        206,
+        147,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 33,
+      "visibleHeight": 24,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "5fdcad6af1e2f23170ade9b80173a0bf1b480de6f13084e4d47c79e4d90b81ad",
+      "orangePixelCount": 0
+    },
+    {
+      "assetId": "crop_carrot_stage_1",
+      "file": "crop_carrot_stage_1.png",
+      "state": "stage_1",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        106,
+        196,
+        147,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 41,
+      "visibleHeight": 34,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "eac660a1118ecd86c9633309782827cf12c0656c9c3a7c96cdbfa198f5468443",
+      "orangePixelCount": 0
+    },
+    {
+      "assetId": "crop_carrot_stage_2",
+      "file": "crop_carrot_stage_2.png",
+      "state": "stage_2",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        84,
+        170,
+        174,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 90,
+      "visibleHeight": 60,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "b8646817afc38da3dff2fc4c4e4440a80ce7cfbea60d6d0abcbb39cd5d70d8db",
+      "orangePixelCount": 121
+    },
+    {
+      "assetId": "crop_carrot_stage_3",
+      "file": "crop_carrot_stage_3.png",
+      "state": "stage_3",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        81,
+        128,
+        180,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 99,
+      "visibleHeight": 102,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "3d6f93d6baba57eda130007926c3631d9ba70f208cf316e50c851aaffbd3740f",
+      "orangePixelCount": 380
+    },
+    {
+      "assetId": "crop_carrot_ready",
+      "file": "crop_carrot_ready.png",
+      "state": "ready",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBoundingBox": [
+        62,
+        70,
+        193,
+        230
+      ],
+      "baselineY": 230,
+      "visibleWidth": 131,
+      "visibleHeight": 160,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "sha256": "d24f31fe1f81b7da469b863328c1bd7b4c55454f75deed5bae40fd28074f6b2a",
+      "orangePixelCount": 2008
+    }
+  ],
+  "qaReport": "ART_QA.json",
+  "notes": "Production candidates generated in isolated Wave 1 workspace. Integration Owner review is required before promotion to assets-src; license and tool version remain pending owner confirmation. No production paths or manifests were modified."
+}

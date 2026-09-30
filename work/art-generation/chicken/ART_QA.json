@@ -1,0 +1,303 @@
+{
+  "qaVersion": "ART-01-CHICKEN-QA-v1",
+  "taskId": "ART-01",
+  "status": "PASS",
+  "reviewStatus": "REVIEW",
+  "production_ready": false,
+  "approved": false,
+  "fileCount": {
+    "expected": 92,
+    "actual": 92,
+    "status": "PASS",
+    "missing": [],
+    "extra": [],
+    "assetIds": [
+      "animal_chicken_idle_ne_00",
+      "animal_chicken_idle_ne_01",
+      "animal_chicken_idle_ne_02",
+      "animal_chicken_idle_ne_03",
+      "animal_chicken_idle_se_00",
+      "animal_chicken_idle_se_01",
+      "animal_chicken_idle_se_02",
+      "animal_chicken_idle_se_03",
+      "animal_chicken_idle_sw_00",
+      "animal_chicken_idle_sw_01",
+      "animal_chicken_idle_sw_02",
+      "animal_chicken_idle_sw_03",
+      "animal_chicken_idle_nw_00",
+      "animal_chicken_idle_nw_01",
+      "animal_chicken_idle_nw_02",
+      "animal_chicken_idle_nw_03",
+      "animal_chicken_walk_ne_00",
+      "animal_chicken_walk_ne_01",
+      "animal_chicken_walk_ne_02",
+      "animal_chicken_walk_ne_03",
+      "animal_chicken_walk_ne_04",
+      "animal_chicken_walk_ne_05",
+      "animal_chicken_walk_se_00",
+      "animal_chicken_walk_se_01",
+      "animal_chicken_walk_se_02",
+      "animal_chicken_walk_se_03",
+      "animal_chicken_walk_se_04",
+      "animal_chicken_walk_se_05",
+      "animal_chicken_walk_sw_00",
+      "animal_chicken_walk_sw_01",
+      "animal_chicken_walk_sw_02",
+      "animal_chicken_walk_sw_03",
+      "animal_chicken_walk_sw_04",
+      "animal_chicken_walk_sw_05",
+      "animal_chicken_walk_nw_00",
+      "animal_chicken_walk_nw_01",
+      "animal_chicken_walk_nw_02",
+      "animal_chicken_walk_nw_03",
+      "animal_chicken_walk_nw_04",
+      "animal_chicken_walk_nw_05",
+      "animal_chicken_eat_ne_00",
+      "animal_chicken_eat_ne_01",
+      "animal_chicken_eat_ne_02",
+      "animal_chicken_eat_ne_03",
+      "animal_chicken_eat_ne_04",
+      "animal_chicken_eat_se_00",
+      "animal_chicken_eat_se_01",
+      "animal_chicken_eat_se_02",
+      "animal_chicken_eat_se_03",
+      "animal_chicken_eat_se_04",
+      "animal_chicken_eat_sw_00",
+      "animal_chicken_eat_sw_01",
+      "animal_chicken_eat_sw_02",
+      "animal_chicken_eat_sw_03",
+      "animal_chicken_eat_sw_04",
+      "animal_chicken_eat_nw_00",
+      "animal_chicken_eat_nw_01",
+      "animal_chicken_eat_nw_02",
+      "animal_chicken_eat_nw_03",
+      "animal_chicken_eat_nw_04",
+      "animal_chicken_happy_ne_00",
+      "animal_chicken_happy_ne_01",
+      "animal_chicken_happy_ne_02",
+      "animal_chicken_happy_ne_03",
+      "animal_chicken_happy_se_00",
+      "animal_chicken_happy_se_01",
+      "animal_chicken_happy_se_02",
+      "animal_chicken_happy_se_03",
+      "animal_chicken_happy_sw_00",
+      "animal_chicken_happy_sw_01",
+      "animal_chicken_happy_sw_02",
+      "animal_chicken_happy_sw_03",
+      "animal_chicken_happy_nw_00",
+      "animal_chicken_happy_nw_01",
+      "animal_chicken_happy_nw_02",
+      "animal_chicken_happy_nw_03",
+      "animal_chicken_sleep_ne_00",
+      "animal_chicken_sleep_ne_01",
+      "animal_chicken_sleep_se_00",
+      "animal_chicken_sleep_se_01",
+      "animal_chicken_sleep_sw_00",
+      "animal_chicken_sleep_sw_01",
+      "animal_chicken_sleep_nw_00",
+      "animal_chicken_sleep_nw_01",
+      "animal_chicken_product_ready_ne_00",
+      "animal_chicken_product_ready_ne_01",
+      "animal_chicken_product_ready_se_00",
+      "animal_chicken_product_ready_se_01",
+      "animal_chicken_product_ready_sw_00",
+      "animal_chicken_product_ready_sw_01",
+      "animal_chicken_product_ready_nw_00",
+      "animal_chicken_product_ready_nw_01"
+    ]
+  },
+  "dimensions": {
+    "expected": [
+      256,
+      256
+    ],
+    "checked": 92,
+    "status": "PASS",
+    "failures": []
+  },
+  "rgbaAlpha": {
+    "status": "PASS",
+    "rgbaFailures": [],
+    "alphaFailures": [],
+    "transparentMargins": 92
+  },
+  "baseline": {
+    "targetY": 230,
+    "status": "PASS",
+    "jitterPixels": 0,
+    "failures": []
+  },
+  "scale": {
+    "status": "PASS",
+    "bodyProxy": {
+      "widthMeanByDirection": {
+        "ne": 139.61,
+        "se": 139.83,
+        "sw": 142.52,
+        "nw": 142.35
+      },
+      "heightMeanByDirection": {
+        "ne": 177.3,
+        "se": 177.83,
+        "sw": 177.39,
+        "nw": 178.43
+      },
+      "overallWidthMean": 141.08,
+      "overallHeightMean": 177.74,
+      "maxWidthDeviationPercent": 1.04,
+      "maxHeightDeviationPercent": 0.39,
+      "targetTolerancesPercent": {
+        "width": 5,
+        "height": 4
+      }
+    },
+    "method": "alpha-visible body proxy; visual head/torso/feet/tail review remains owner gate"
+  },
+  "lighting": {
+    "status": "PASS_TECHNICAL_PROXY",
+    "result": "all masters use top-left soft light and restrained bottom-right volume; no baked background"
+  },
+  "style": {
+    "status": "PENDING_OWNER_REVIEW",
+    "result": "new internal-generated Chicken masters preserve approved eye, comb, beak, palette, wing/tail motifs and cozy silhouette"
+  },
+  "continuity": {
+    "status": "PASS",
+    "sequences": {
+      "IDLE_NE": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.743
+      },
+      "IDLE_SE": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.783
+      },
+      "IDLE_SW": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.534
+      },
+      "IDLE_NW": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.639
+      },
+      "WALK_NE": {
+        "frameCount": 6,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.0
+      },
+      "WALK_SE": {
+        "frameCount": 6,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.0
+      },
+      "WALK_SW": {
+        "frameCount": 6,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.0
+      },
+      "WALK_NW": {
+        "frameCount": 6,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 1.0
+      },
+      "EAT_NE": {
+        "frameCount": 5,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.996
+      },
+      "EAT_SE": {
+        "frameCount": 5,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.093
+      },
+      "EAT_SW": {
+        "frameCount": 5,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.042
+      },
+      "EAT_NW": {
+        "frameCount": 5,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 0.04
+      },
+      "HAPPY_NE": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 5.755
+      },
+      "HAPPY_SE": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 5.056
+      },
+      "HAPPY_SW": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 5.366
+      },
+      "HAPPY_NW": {
+        "frameCount": 4,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 4.899
+      },
+      "SLEEP_NE": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.692
+      },
+      "SLEEP_SE": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.142
+      },
+      "SLEEP_SW": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.528
+      },
+      "SLEEP_NW": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 2.533
+      },
+      "PRODUCT_READY_NE": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.285
+      },
+      "PRODUCT_READY_SE": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.105
+      },
+      "PRODUCT_READY_SW": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 3.046
+      },
+      "PRODUCT_READY_NW": {
+        "frameCount": 2,
+        "allFramesDistinct": true,
+        "loopClosureCentroidDelta": 2.069
+      }
+    }
+  },
+  "metadata": {
+    "status": "PASS",
+    "file": "ART_METADATA.json",
+    "provenance": "internal-generated",
+    "license": "PENDING_OWNER_REVIEW",
+    "placeholder": false,
+    "production_ready": false,
+    "approved": false
+  },
+  "evidence": {
+    "stateDirectionSheet": "candidate/reviews/state-direction-sheet.png",
+    "eatProof": "candidate/reviews/eat-se-proof.png",
+    "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet.png"
+  }
+}
