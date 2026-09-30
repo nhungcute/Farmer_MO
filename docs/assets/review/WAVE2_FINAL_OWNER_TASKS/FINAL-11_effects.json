@@ -12,6 +12,10 @@
   "licensePolicyEligibility": "PASS",
   "recommendation": "APPROVE",
   "knownIssues": [],
+  "qaEvidence": {
+    "status": "PASS",
+    "source": "work/art-generation/effects/reviews/REVISION_QA.json"
+  },
   "productionBoundary": {
     "approved": false,
     "approvalRef": null,

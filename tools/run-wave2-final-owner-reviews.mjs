@@ -62,6 +62,69 @@ function checkProductionAsset(id) {
   return { id, dimensions: [source.width, source.height], sourceSha256: sha256(source.rgba), atlas: located.page.image, frame: located.frame.frame, exactSourceToAtlas: true };
 }
 
+const passText = (value) => typeof value === 'string' && value.startsWith('PASS');
+const allPassTextValues = (value) => value && typeof value === 'object' && Object.keys(value).length > 0
+  && Object.values(value).every((entry) => passText(entry));
+const exactIds = (actual, expected) => Array.isArray(actual)
+  && actual.length === expected.length
+  && expected.every((id) => actual.includes(id));
+
+function verifyTaskQa(group, qa) {
+  if (!['PASS', 'PROMOTED', 'REVIEW'].includes(qa.status)) fail(`${group.review}: QA status is not reviewable`);
+  if (group.name === 'Pond') {
+    const pond = qa.qa;
+    const maskPixels = Object.values(qa.mask?.outsideAlphaAfter ?? {});
+    if (pond?.fileCount?.exact !== true || pond.canonicalIds?.exact !== true || pond.dimensions?.allMatch !== true
+      || pond.rgbaAlpha?.allRGBA !== true || pond.rgbaAlpha?.allNoMatte !== true
+      || pond.animation?.status !== 'PASS' || pond.animation.frameOrderPreserved !== true
+      || pond.animation.fpsLoopHoldLastPreserved !== true || pond.style?.status !== 'PASS'
+      || pond.mobile?.status !== 'PASS' || pond.containment?.status !== 'PASS'
+      || pond.containment.allOverlayPixelsInsideInnerWaterMask !== true || pond.metadata?.status !== 'PASS'
+      || qa.mask?.allOutsideAlphaZero !== true || maskPixels.length !== 10 || maskPixels.some((value) => value !== 0)) {
+      fail(`${group.review}: pond revision QA evidence is incomplete`);
+    }
+  } else if (['Farmhouse', 'Warehouse'].includes(group.name)) {
+    if (qa.status !== 'PASS' || qa.technicalReview !== 'PASS' || qa.styleReview !== 'PASS' || qa.overallTechnicalPass !== true
+      || Object.entries(qa.checks ?? {}).some(([key, value]) => key !== 'continuity' && value !== true)) {
+      fail(`${group.review}: building QA evidence is incomplete`);
+    }
+  } else if (group.name === 'Chicken Coop') {
+    if (qa.status !== 'PASS' || qa.overallTechnicalPass !== true
+      || Object.entries(qa.checks ?? {}).some(([key, value]) => key !== 'continuity' && value !== true)) {
+      fail(`${group.review}: coop QA evidence is incomplete`);
+    }
+  } else if (group.name === 'Terrain') {
+    if (!allPassTextValues(qa.technical) || !allPassTextValues(qa.style)
+      || qa.tiling?.fourByFour?.status !== 'PASS' || qa.tiling?.eightByEight?.status !== 'PASS'
+      || qa.tiling?.seamMetrics?.status !== 'PASS'
+      || qa.runtimeReadability?.status !== 'PASS') {
+      fail(`${group.review}: terrain QA evidence is incomplete`);
+    }
+  } else if (group.name === 'Effects') {
+    for (const key of ['technicalReview', 'styleReview', 'mobileReview', 'runtimeReview', 'alphaReview', 'cropReadySeparation']) {
+      if (!passText(qa[key])) fail(`${group.review}: effect QA ${key} is not PASS`);
+    }
+    const familyIds = Object.values(qa.families ?? {}).flatMap((family) => family.canonicalIds ?? []);
+    if (!exactIds(familyIds, group.ids) || Object.values(qa.families ?? {}).some((family) => family.frameCount !== family.canonicalIds?.length
+      || typeof family.fps !== 'number' || typeof family.loop !== 'boolean' || typeof family.holdLast !== 'boolean')) {
+      fail(`${group.review}: effect family contracts are incomplete`);
+    }
+  } else if (group.name === 'UI') {
+    if (qa.expectedCount !== group.ids.length || qa.canonicalIds !== 'PASS' || !passText(qa.dimensions)
+      || !passText(qa.rgbaAlpha) || !passText(qa.styleReview) || !passText(qa.mobileReview)
+      || !passText(qa.consistencyReview)) {
+      fail(`${group.review}: UI QA evidence is incomplete`);
+    }
+  } else if (group.name === 'Crop Extras') {
+    if (qa.technicalReview !== 'PASS' || qa.styleReview !== 'PASS' || qa.production_ready !== true
+      || qa.releaseFlags?.placeholder !== false || qa.releaseFlags?.approved !== false
+      || (qa.checks ?? []).some((check) => check.status !== 'PASS')) {
+      fail(`${group.review}: crop-extra QA evidence is incomplete`);
+    }
+  }
+  return { status: 'PASS', source: group.qa };
+}
+
 async function reviewGroup(group) {
   const rows = group.ids.map(checkProductionAsset);
   const qa = readJson(group.qa);
@@ -76,6 +139,7 @@ async function reviewGroup(group) {
       && Array.isArray(qa.missingIds) && qa.missingIds.length === 0
       && Array.isArray(qa.extraIds) && qa.extraIds.length === 0;
   if (!qaIdPass) throw new Error(`${group.review}: QA evidence does not cover canonical IDs`);
+  const qaEvidence = verifyTaskQa(group, qa);
   const visualEvidence = group.visual.every((file) => fs.existsSync(path.join(ROOT, file)));
   if (!visualEvidence) throw new Error(`${group.review}: missing visual evidence`);
   const result = {
@@ -92,6 +156,7 @@ async function reviewGroup(group) {
     licensePolicyEligibility: 'PASS',
     recommendation: 'APPROVE',
     knownIssues: [],
+    qaEvidence,
     productionBoundary: { approved: false, approvalRef: null, contentApproval: 'PENDING_OWNER_REVIEW', licenseApproval: 'PENDING_OWNER_REVIEW_OR_EXISTING_FROZEN_APPROVAL', releaseApproval: 'BLOCKED' },
     details: group.details,
     visualEvidence: group.visual,

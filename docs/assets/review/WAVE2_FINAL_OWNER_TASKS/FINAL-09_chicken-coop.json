@@ -12,6 +12,10 @@
   "licensePolicyEligibility": "PASS",
   "recommendation": "APPROVE",
   "knownIssues": [],
+  "qaEvidence": {
+    "status": "PASS",
+    "source": "work/art-generation/buildings/chicken-coop/ART_QA.json"
+  },
   "productionBoundary": {
     "approved": false,
     "approvalRef": null,

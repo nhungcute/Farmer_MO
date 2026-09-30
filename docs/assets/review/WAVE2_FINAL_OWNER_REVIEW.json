@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T23:07:51.825Z",
+  "generatedAt": "2026-09-30T23:13:58.790Z",
   "status": "FINAL_OWNER_REVIEW_COMPLETE",
   "reviews": [
     {
@@ -17,6 +17,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/pond/REVISION_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -349,6 +353,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/buildings/farmhouse/ART_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -394,6 +402,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/buildings/warehouse/ART_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -439,6 +451,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/buildings/chicken-coop/ART_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -484,6 +500,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/terrain/REVISION_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -594,6 +614,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/effects/reviews/REVISION_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -1102,6 +1126,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/ui/reviews/REVISION_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
@@ -1370,6 +1398,10 @@
       "licensePolicyEligibility": "PASS",
       "recommendation": "APPROVE",
       "knownIssues": [],
+      "qaEvidence": {
+        "status": "PASS",
+        "source": "work/art-generation/crops/extras/ART_QA.json"
+      },
       "productionBoundary": {
         "approved": false,
         "approvalRef": null,
