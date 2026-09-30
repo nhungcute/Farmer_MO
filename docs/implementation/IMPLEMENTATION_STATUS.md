@@ -32,8 +32,8 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | C03 | Mobile/PWA/accessibility QA | DONE |
 | D01 | Observability/performance instrumentation | DONE |
 | D02 | Load test và backup/restore drill | DONE |
-| E01 | Cloudflare Named Tunnel | QUEUED — CLOSED |
-| RC01 | Release Candidate checklist | QUEUED — CLOSED |
+| E01 | Cloudflare Named Tunnel | NOT_STARTED — CLOSED |
+| RC01 | Release Candidate checklist | NOT_STARTED — CLOSED |
 
 ## B02 Wave 1 — 2026-09-30
 
