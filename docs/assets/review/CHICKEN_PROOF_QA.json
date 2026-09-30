@@ -1,6 +1,6 @@
 {
   "qaVersion": "B02.2-PROOF-QA-v2",
-  "generatedAt": "2026-09-30T07:05:42.811456+00:00",
+  "generatedAt": "2026-09-30T07:20:49.446Z",
   "browser": "Google Chrome via Playwright executablePath",
   "proofPreview": {
     "viewports": [
@@ -19,7 +19,7 @@
         "width": 915,
         "height": 412,
         "canvas": true,
-        "status": "IDLE / SE · khung 1/2 · 6 FPS",
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
         "horizontalOverflow": false,
         "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
         "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
@@ -41,7 +41,7 @@
         "width": 740,
         "height": 360,
         "canvas": true,
-        "status": "IDLE / SE · khung 1/2 · 6 FPS",
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
         "horizontalOverflow": false,
         "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
         "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
@@ -93,7 +93,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 61.2,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -106,7 +106,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 61.2,
+            "fps": 61.4,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -119,7 +119,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 60.7,
+            "fps": 61.4,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -132,7 +132,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 61,
+            "fps": 61.7,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -147,7 +147,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 60.9,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "7.9 MB"
           },
@@ -160,7 +160,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 60.8,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "7.9 MB"
           },
@@ -173,7 +173,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 60.9,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "7.9 MB"
           },
@@ -186,7 +186,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 60.9,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "7.9 MB"
           },
@@ -201,7 +201,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.7,
+            "fps": 60.6,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -214,9 +214,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.8,
+            "fps": 60.9,
             "dpr": 1,
-            "memory": "8.2 MB"
+            "memory": "8.3 MB"
           },
           "errors": []
         },
@@ -227,7 +227,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.7,
+            "fps": 61,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -255,9 +255,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 60.9,
+            "fps": 60.8,
             "dpr": 1,
-            "memory": "7.5 MB"
+            "memory": "8.6 MB"
           },
           "errors": []
         },
@@ -268,9 +268,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 60.7,
+            "fps": 60.8,
             "dpr": 1,
-            "memory": "8.6 MB"
+            "memory": "7.5 MB"
           },
           "errors": []
         },
@@ -281,9 +281,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 60.8,
+            "fps": 60.7,
             "dpr": 1,
-            "memory": "8.6 MB"
+            "memory": "7.6 MB"
           },
           "errors": []
         },
@@ -294,7 +294,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 60.7,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "8.6 MB"
           },
@@ -316,7 +316,7 @@
       },
       "mean": {
         "bodyProxyWidth": 153.5,
-        "bodyProxyHeight": 196.0,
+        "bodyProxyHeight": 196,
         "headGuideDiameter": 86.5
       },
       "actual": {
@@ -521,7 +521,7 @@
           "width": 915,
           "height": 412,
           "canvas": true,
-          "status": "IDLE / SE · khung 1/2 · 6 FPS",
+          "status": "IDLE / SE · khung 2/2 · 6 FPS",
           "horizontalOverflow": false,
           "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
           "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
@@ -543,7 +543,7 @@
           "width": 740,
           "height": 360,
           "canvas": true,
-          "status": "IDLE / SE · khung 1/2 · 6 FPS",
+          "status": "IDLE / SE · khung 2/2 · 6 FPS",
           "horizontalOverflow": false,
           "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
           "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",

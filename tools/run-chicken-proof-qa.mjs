@@ -1,5 +1,5 @@
 import { chromium } from '@playwright/test';
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const baseUrl = 'http://127.0.0.1:4174/docs/assets/review';
 const executablePath = process.env.CHROME_PATH
@@ -14,8 +14,16 @@ const browser = await chromium.launch({
   headless: true,
   ...(executablePath ? { executablePath } : {}),
 });
+const qaPath = 'docs/assets/review/CHICKEN_PROOF_QA.json';
+let previous = {};
+try {
+  previous = JSON.parse(await readFile(qaPath, 'utf8'));
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error;
+}
 const result = {
-  qaVersion: 'B02.2-PROOF-QA-v1',
+  ...previous,
+  qaVersion: 'B02.2-PROOF-QA-v2',
   generatedAt: new Date().toISOString(),
   browser: 'Google Chrome via Playwright executablePath',
   proofPreview: { viewports: [], pixiCanvas: true, eatEvent: false, errors: [] },
@@ -78,7 +86,14 @@ for (const viewport of viewports) {
 }
 
 await browser.close();
-await writeFile('docs/assets/review/CHICKEN_PROOF_QA.json', `${JSON.stringify(result, null, 2)}\n`, 'utf8');
+if (result.revision2?.pixiEatFiveFrame) {
+  result.revision2.pixiEatFiveFrame.viewports = result.proofPreview.viewports;
+  result.revision2.pixiEatFiveFrame.status = result.proofPreview.eatEvent
+    && result.proofPreview.viewports.every((item) => item.eatFinalStatus.includes('khung 5/5'))
+    ? 'PASS'
+    : 'FAIL';
+}
+await writeFile(qaPath, `${JSON.stringify(result, null, 2)}\n`, 'utf8');
 const failures = [
   ...result.proofPreview.viewports.flatMap((item) => [
     ...(item.errors ?? []),

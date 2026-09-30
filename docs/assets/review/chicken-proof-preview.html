@@ -27,7 +27,7 @@
   <h1>Bản thử Chicken — Pixi</h1>
   <p class="warning">Đây là ứng viên bản thử riêng để duyệt hình ảnh, không phải tài nguyên chạy thật. Không nạp manifest/atlas sản xuất và không thay <code>assets-src/animals/chicken/**</code>.</p>
   <article>
-    <p>Canvas bản thử: <code>256×256</code>, RGBA, anchor <code>0.5,0.9</code>, scale <code>1</code>. Khung 2 của EAT hiển thị event <code>FEED_CONSUMED</code> ở lớp trình bày.</p>
+    <p>Canvas bản thử: <code>256×256</code>, RGBA, anchor <code>0.5,0.9</code>, scale <code>1</code>. Frame index <code>2</code> (khung hiển thị <code>3/5</code>) của EAT hiển thị event <code>FEED_CONSUMED</code> ở lớp trình bày.</p>
     <div class="controls">
       <label>Trạng thái <select id="state" aria-label="Trạng thái"></select></label>
       <label>Hướng <select id="direction" aria-label="Hướng"></select></label>
@@ -42,7 +42,7 @@
       <li>Đủ bốn hướng kiểm tra: NE, SE, SW, NW.</li>
       <li>IDLE hướng SE: 2 khung.</li>
       <li>WALK hướng SE: 3 khung.</li>
-      <li>EAT hướng SE: đủ 5 khung; khung 2 có <code>FEED_CONSUMED</code>.</li>
+      <li>EAT hướng SE: đủ 5 khung; frame index <code>2</code> (khung hiển thị <code>3/5</code>) có <code>FEED_CONSUMED</code>.</li>
       <li>Không lật ảnh, không tự cắt khung, không atlas chạy thật.</li>
     </ul>
   </article>
