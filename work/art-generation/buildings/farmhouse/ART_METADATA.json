@@ -1,6 +1,6 @@
 {
   "taskId": "ART-07",
-  "status": "REVIEW",
+  "status": "PROMOTED",
   "generationStatus": "COMPLETE",
   "owner": "Farmhouse Asset Owner",
   "assetType": "Farmhouse",
@@ -15,13 +15,13 @@
   "toolVersion": "not exposed by runtime",
   "contentVersion": "mvp-1",
   "styleGuideVersion": "docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md",
-  "license": "PENDING_OWNER_REVIEW",
-  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
   "placeholder": false,
-  "production_ready": false,
+  "production_ready": true,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "styleReview": "PASS",
   "approvalRef": null,
   "generated": 1,
   "contract": {
@@ -78,7 +78,21 @@
       "paintedWidth": 451,
       "paintedHeight": 336,
       "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-7b21301a-2d81-4074-935b-e6e1610a5eef.png",
-      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\farmhouse\\candidate\\source-masters\\farmhouse-imagegen-master.png"
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\farmhouse\\candidate\\source-masters\\farmhouse-imagegen-master.png",
+      "placeholder": false,
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Farmhouse Asset Owner"
     }
   ],
   "provenance": {
@@ -192,5 +206,6 @@
     "reviewImages": [
       "reviews/farmhouse-candidate.png"
     ]
-  }
+  },
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
 }

@@ -26,7 +26,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | A02 | PostgreSQL API runtime wiring | DONE |
 | A03 | Transaction/concurrency integration gate | DONE |
 | B01 | Production asset inventory/replacement contract | DONE |
-| B02 | Production artwork replacement | **RUNNING - Wave 2 integration review complete; 7/76 candidates selected for promotion, 69 remain outside production** |
+| B02 | Production artwork replacement | **RUNNING - Wave 2 selective promotion complete for 7/76; 69 remain revision-required** |
 | C01 | Playwright setup và E2E foundation | DONE |
 | C02 | Functional Playwright E2E trên PostgreSQL | DONE |
 | C03 | Mobile/PWA/accessibility QA | DONE |
@@ -47,11 +47,12 @@ Năm owner đã hoàn tất generation và Revision 2:
 
 Wave 1 đã promote **112/112 canonical candidates** vào assets-src/**, pack atlas và runtime manifest. Source-to-atlas byte equality đạt 112/112. Chicken production stress đã chạy trên atlas thật với 1/25/50/100 bản sao ở bốn viewport, không lỗi.
 
-Inventory:
+Inventory after Wave 2 selective promotion:
 
 - 188 canonical source assets
-- 112 production_ready
-- 76 placeholder
+- 119 `production_ready=true` flags (112 approved Wave 1 + 7 Wave 2 technical/style pass)
+- 7 `production_ready` status entries plus 112 approved entries in the generated inventory
+- 69 placeholder
 - 112 approved
 - license của 112 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1
 
@@ -71,9 +72,9 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Giới hạn và bước kế tiếp
 
-B02 remains RUNNING because 76 assets are still placeholders. Wave 1 content, license, and release approval are APPROVED by Project Owner; do not approve assets outside Wave 1, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
+B02 remains RUNNING because four Wave 2 groups (69 assets) are still revision-required. Wave 1 content, license, and release approval are APPROVED by Project Owner; do not approve assets outside Wave 1, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
 
-Wave 2 generation and Integration Owner review are complete. Farmhouse, Warehouse, Chicken Coop and Crop Extras (7/76) are selected for technical/style promotion; Pond, Terrain, Effects and UI require revision. The selected candidates remain outside `assets-src/**` until the separate promotion/production-validation commit. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
+Wave 2 generation, review, selective promotion and atlas rebuild are complete. Farmhouse, Warehouse, Chicken Coop and Crop Extras (7/76) are promoted for technical/style use; Pond, Terrain, Effects and UI require revision. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
 
 ## Quy tắc cập nhật
 

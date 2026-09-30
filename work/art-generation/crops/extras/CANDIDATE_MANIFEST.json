@@ -1,7 +1,7 @@
 {
   "taskId": "ART-13",
   "contentVersion": "mvp-1",
-  "status": "REVIEW",
+  "status": "PROMOTED",
   "canonicalCount": 4,
   "assets": [
     {
@@ -22,17 +22,23 @@
         "y": 0
       },
       "placeholder": false,
-      "production_ready": false,
+      "production_ready": true,
       "approved": false,
-      "license": "PENDING_OWNER_REVIEW",
-      "source": "internal-generated; imagegen glow sheet cropped into canonical cells",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
       "tool": "built-in image_gen",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Crop Extras Asset Owner",
       "id": "crop_ready_glow_00",
       "sourceFile": "assets-src/effects/crop_ready_glow_00.png",
       "format": "PNG",
-      "mode": "RGBA"
+      "mode": "RGBA",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
     },
     {
       "atlas": "effects",
@@ -170,7 +176,12 @@
     "approvalRef"
   ],
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "styleReview": "PASS",
   "approvalRef": null,
-  "separationInvariant": "Glow is an overlay; never bake into crop artwork."
+  "separationInvariant": "Glow is an overlay; never bake into crop artwork.",
+  "production_ready": true,
+  "approved": false,
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
 }

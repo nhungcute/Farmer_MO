@@ -1,17 +1,17 @@
 {
   "taskId": "ART-07",
   "assetType": "Farmhouse",
-  "status": "REVIEW",
+  "status": "PASS",
   "canonicalCount": 1,
   "generatedCount": 1,
   "missingIds": [],
   "extraIds": [],
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
-  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "styleReview": "PASS",
+  "licenseApproval": "APPROVED",
   "releaseApproval": "PENDING_OWNER_REVIEW",
   "placeholder": false,
-  "production_ready": false,
+  "production_ready": true,
   "approved": false,
   "checks": {
     "canonicalIds": true,
@@ -48,7 +48,21 @@
       "paintedWidth": 451,
       "paintedHeight": 336,
       "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-7b21301a-2d81-4074-935b-e6e1610a5eef.png",
-      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\farmhouse\\candidate\\source-masters\\farmhouse-imagegen-master.png"
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\farmhouse\\candidate\\source-masters\\farmhouse-imagegen-master.png",
+      "placeholder": false,
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Farmhouse Asset Owner"
     }
   ],
   "evidence": {
@@ -56,5 +70,8 @@
     "reviewImages": [
       "reviews/farmhouse-candidate.png"
     ]
-  }
+  },
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "approvalRef": null,
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
 }

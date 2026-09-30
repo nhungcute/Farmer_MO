@@ -57,11 +57,24 @@
     "approved": 112,
     "placeholder": 76
   },
-  "productionInventoryAfterPlanned": {
+  "productionInventoryAfter": {
     "total": 188,
     "production_ready": 119,
     "approved": 112,
     "placeholder": 69
   },
-  "assetsSrcModified": false
+  "assetsSrcModified": true,
+  "promotionStatus": "COMPLETE",
+  "runtimeQa": "docs/assets/review/WAVE2_PRODUCTION_RUNTIME_QA.json",
+  "validation": {
+    "assetsBuild": "PASS",
+    "assetsValidate": "PASS",
+    "assetsValidateStrict": "PASS",
+    "assetsValidateWave1": "PASS",
+    "rendererTest": "PASS (16/16)",
+    "check": "PASS",
+    "dockerComposeConfig": "PASS",
+    "dockerBuildApiWeb": "PASS",
+    "playwrightDesktopMobilePwa": "PASS (8 passed; opt-in PostgreSQL suite skipped)"
+  }
 }

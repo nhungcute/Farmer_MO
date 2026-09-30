@@ -1,15 +1,15 @@
 # B01 Production Asset Inventory
 
-Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `721a2e9f63d3765bb604d973331388404381b2aba40a5cbdf12ab59ebe298616`).
+Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `02bf9884ef5943c7743fc7d511d4c2ac6e7ec1ee1d86130e1964ba97240a4abb`).
 
-This inventory is generated from the current canonical manifest. It contains 112 production_ready assets, 112 approved assets, and 76 placeholders.
+This inventory is generated from the current canonical manifest. It contains 119 production_ready assets, 112 approved assets, and 69 placeholders.
 
 ## Status
 
 | Status | Current count | Meaning |
 | --- | --- | --- |
-| `placeholder` | 76 | Generated/internal art. Not eligible for production release. |
-| `production_ready` | 112 | Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval. |
+| `placeholder` | 69 | Generated/internal art. Not eligible for production release. |
+| `production_ready` | 119 | Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval. |
 | `approved` | 112 | Production-ready replacement explicitly approved for the target release. |
 
 `production_ready` is a technical/provenance flag; `approved` records release approval, so an approved asset is counted in both columns.
@@ -21,8 +21,8 @@ Current totals: **188 source assets**, **10 animation contracts**, **8 categorie
 | Category | Status | Assets | Animations | Scope |
 | --- | --- | --- | --- | --- |
 | `terrain` | `placeholder` | 5 | 0 | Isometric ground tile and variants. |
-| `buildings` | `placeholder` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
-| `crops` | `mixed` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
+| `buildings` | `production_ready` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
+| `crops` | `approved` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
 | `animals` | `approved` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
 | `chicken` | `approved` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
 | `pond` | `placeholder` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
@@ -40,9 +40,9 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `terrain_grass_variant_02` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_02.png` |
 | `terrain_grass_variant_03` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_03.png` |
 | `terrain_grass_variant_04` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_04.png` |
-| `building_farmhouse_lv1` | buildings | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_farmhouse_lv1.png` |
-| `building_warehouse_lv1` | buildings | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_warehouse_lv1.png` |
-| `building_chicken_coop_lv1` | buildings | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_chicken_coop_lv1.png` |
+| `building_farmhouse_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_farmhouse_lv1.png` |
+| `building_warehouse_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_warehouse_lv1.png` |
+| `building_chicken_coop_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_chicken_coop_lv1.png` |
 | `pond_small_lv1_base` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_base.png` |
 | `icon_coin` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_coin.png` |
 | `icon_diamond` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_diamond.png` |
@@ -97,10 +97,10 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `crop_tomato_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_2.png` |
 | `crop_tomato_stage_3` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_3.png` |
 | `crop_tomato_ready` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_ready.png` |
-| `crop_ready_glow_00` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_00.png` |
-| `crop_ready_glow_01` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_01.png` |
-| `crop_ready_glow_02` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_02.png` |
-| `crop_ready_glow_03` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_03.png` |
+| `crop_ready_glow_00` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_00.png` |
+| `crop_ready_glow_01` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_01.png` |
+| `crop_ready_glow_02` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_02.png` |
+| `crop_ready_glow_03` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_03.png` |
 | `fx_plant_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_00.png` |
 | `fx_plant_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_01.png` |
 | `fx_plant_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_02.png` |
@@ -231,7 +231,7 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `pond_water` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
 | `pond_ripple` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
 | `pond_sparkle` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
-| `crop_ready_glow` | crops | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
+| `crop_ready_glow` | crops | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
 | `fx_plant` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
 | `fx_harvest` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
 | `fx_build_success` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |

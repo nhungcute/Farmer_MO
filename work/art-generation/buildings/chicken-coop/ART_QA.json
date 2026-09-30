@@ -1,16 +1,16 @@
 {
   "taskId": "ART-09",
-  "status": "REVIEW",
+  "status": "PASS",
   "canonicalCount": 1,
   "generatedCount": 1,
   "missingIds": [],
   "extraIds": [],
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
-  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "styleReview": "PASS",
+  "licenseApproval": "APPROVED",
   "releaseApproval": "PENDING_OWNER_REVIEW",
   "placeholder": false,
-  "production_ready": false,
+  "production_ready": true,
   "approved": false,
   "checks": {
     "canonicalIds": true,
@@ -29,5 +29,8 @@
     "No chicken was baked into the coop interior."
   ],
   "overallTechnicalPass": true,
-  "creator": "Codex / Chicken Coop Asset Owner"
+  "creator": "Codex / Chicken Coop Asset Owner",
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "approvalRef": null,
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
 }

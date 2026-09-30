@@ -4,19 +4,19 @@
   "contentVersion": "mvp-1",
   "schemaVersion": 1,
   "manifestPath": "assets-src/manifests/animation-manifest.json",
-  "manifestSha256": "721a2e9f63d3765bb604d973331388404381b2aba40a5cbdf12ab59ebe298616",
+  "manifestSha256": "02bf9884ef5943c7743fc7d511d4c2ac6e7ec1ee1d86130e1964ba97240a4abb",
   "counts": {
     "assets": 188,
     "animations": 10,
     "categories": 8,
     "statusCounts": {
-      "placeholder": 76,
-      "production_ready": 0,
+      "placeholder": 69,
+      "production_ready": 7,
       "approved": 112
     },
     "metadataCounts": {
-      "placeholder": 76,
-      "production_ready": 112,
+      "placeholder": 69,
+      "production_ready": 119,
       "approved": 112
     },
     "allCurrentAssetsPlaceholder": false
@@ -46,7 +46,7 @@
       }
     },
     "buildings": {
-      "status": "placeholder",
+      "status": "production_ready",
       "assetCount": 3,
       "animationCount": 0,
       "assetIds": [
@@ -56,18 +56,18 @@
       ],
       "animationIds": [],
       "statusCounts": {
-        "placeholder": 3,
-        "production_ready": 0,
+        "placeholder": 0,
+        "production_ready": 3,
         "approved": 0
       },
       "metadataCounts": {
-        "placeholder": 3,
-        "production_ready": 0,
+        "placeholder": 0,
+        "production_ready": 3,
         "approved": 0
       }
     },
     "crops": {
-      "status": "mixed",
+      "status": "approved",
       "assetCount": 24,
       "animationCount": 1,
       "assetIds": [
@@ -100,13 +100,13 @@
         "crop_ready_glow"
       ],
       "statusCounts": {
-        "placeholder": 5,
-        "production_ready": 0,
+        "placeholder": 0,
+        "production_ready": 5,
         "approved": 20
       },
       "metadataCounts": {
-        "placeholder": 5,
-        "production_ready": 20,
+        "placeholder": 0,
+        "production_ready": 25,
         "approved": 20
       }
     },
@@ -632,8 +632,8 @@
     {
       "id": "building_farmhouse_lv1",
       "category": "buildings",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/buildings/building_farmhouse_lv1.png",
       "canvas": {
@@ -649,12 +649,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Farmhouse Asset Owner",
       "replacementInvariants": {
         "id": "building_farmhouse_lv1",
         "frameCount": 1,
@@ -684,8 +684,8 @@
     {
       "id": "building_warehouse_lv1",
       "category": "buildings",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/buildings/building_warehouse_lv1.png",
       "canvas": {
@@ -701,12 +701,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Warehouse Asset Owner",
       "replacementInvariants": {
         "id": "building_warehouse_lv1",
         "frameCount": 1,
@@ -736,8 +736,8 @@
     {
       "id": "building_chicken_coop_lv1",
       "category": "buildings",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/buildings/building_chicken_coop_lv1.png",
       "canvas": {
@@ -753,12 +753,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Chicken Coop Asset Owner",
       "replacementInvariants": {
         "id": "building_chicken_coop_lv1",
         "frameCount": 1,
@@ -3596,8 +3596,8 @@
     {
       "id": "crop_ready_glow_00",
       "category": "crops",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/effects/crop_ready_glow_00.png",
       "canvas": {
@@ -3613,12 +3613,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
       "replacementInvariants": {
         "id": "crop_ready_glow_00",
         "frameCount": 1,
@@ -3648,8 +3648,8 @@
     {
       "id": "crop_ready_glow_01",
       "category": "crops",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/effects/crop_ready_glow_01.png",
       "canvas": {
@@ -3665,12 +3665,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
       "replacementInvariants": {
         "id": "crop_ready_glow_01",
         "frameCount": 1,
@@ -3700,8 +3700,8 @@
     {
       "id": "crop_ready_glow_02",
       "category": "crops",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/effects/crop_ready_glow_02.png",
       "canvas": {
@@ -3717,12 +3717,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
       "replacementInvariants": {
         "id": "crop_ready_glow_02",
         "frameCount": 1,
@@ -3752,8 +3752,8 @@
     {
       "id": "crop_ready_glow_03",
       "category": "crops",
-      "status": "placeholder",
-      "productionReady": false,
+      "status": "production_ready",
+      "productionReady": true,
       "approved": false,
       "sourceFile": "assets-src/effects/crop_ready_glow_03.png",
       "canvas": {
@@ -3769,12 +3769,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
       "replacementInvariants": {
         "id": "crop_ready_glow_03",
         "frameCount": 1,
@@ -10378,9 +10378,9 @@
     {
       "id": "crop_ready_glow",
       "category": "crops",
-      "status": "placeholder",
-      "placeholder": true,
-      "productionReady": false,
+      "status": "production_ready",
+      "placeholder": false,
+      "productionReady": true,
       "approved": false,
       "atlas": "effects",
       "directions": [

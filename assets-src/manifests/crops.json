@@ -616,12 +616,20 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
     },
     "crop_ready_glow_01": {
       "id": "crop_ready_glow_01",
@@ -638,12 +646,20 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
     },
     "crop_ready_glow_02": {
       "id": "crop_ready_glow_02",
@@ -660,12 +676,20 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
     },
     "crop_ready_glow_03": {
       "id": "crop_ready_glow_03",
@@ -682,12 +706,20 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "production_ready": true,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "PENDING_OWNER_REVIEW",
+      "approvalRef": null,
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
     }
   },
   "animations": {

@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-13 |
 | Owner | Crop Extras Asset Owner |
-| Status | REVIEW - PROMOTE_PENDING |
+| Status | PROMOTED - technical/style PASS; production_ready=true; approved=false |
 | Workspace | work/art-generation/crops/extras/** |
 | Canonical count | 4 |
 | Production path | assets-src/** (Integration Owner only) |

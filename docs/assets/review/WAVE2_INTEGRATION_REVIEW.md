@@ -63,14 +63,29 @@ Wave 2 asset and no `approvalRef` is invented.
 - Crop overlay review: `work/art-generation/crops/extras/reviews/crop-glow-overlay-review.png`
 - Per-task review JSON/MD files are inside each task's `reviews/` directory.
 
-## Gate state before promotion
+## Gate state after selective promotion
 
 ```text
 production inventory: 188
-production_ready: 112
+production_ready flag: 119 (112 approved Wave 1 + 7 Wave 2 technical/style pass)
+status inventory: 7 production_ready, 112 approved, 69 placeholders
 approved: 112
-placeholders: 76
-Wave 2 candidates promoted: 0 (promotion pending this integration mutation)
+placeholders: 69
+Wave 2 candidates promoted: 7 (Farmhouse, Warehouse, Chicken Coop, Crop Extras)
+Wave 2 candidates held for revision: 69 (Pond, Terrain, Effects, UI)
+assets:build / strict validation: PASS
+assets:validate:wave1: PASS
 E01: CLOSED
 RC01: CLOSED
 ```
+
+Promotion evidence: `WAVE2_SELECTIVE_PROMOTION.json`. The seven source PNGs
+were copied byte-for-byte from their reviewed workspaces, manifests/licenses
+were rebuilt, and runtime atlas entries were regenerated. `approved` remains
+112; no Wave 2 content/release approval was invented.
+
+Production runtime evidence: `WAVE2_PRODUCTION_RUNTIME_QA.json` verifies all
+7/7 source-to-atlas pixel slices, runtime/canonical metadata parity, sidecar
+license parity, and the unchanged `crop_ready_glow` contract (4 frames, 8 FPS,
+non-looping, no hold). Full asset validation, strict validation, renderer/API
+check, Docker config/build, and Playwright desktop/mobile/PWA smoke gates pass.

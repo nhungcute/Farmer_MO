@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-09 |
 | Owner | Chicken Coop Asset Owner |
-| Status | REVIEW - PROMOTE_PENDING |
+| Status | PROMOTED - technical/style PASS; production_ready=true; approved=false |
 | Workspace | work/art-generation/buildings/chicken-coop/** |
 | Canonical count | 1 |
 | Production path | assets-src/** (Integration Owner only) |

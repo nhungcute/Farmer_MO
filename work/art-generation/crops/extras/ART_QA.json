@@ -146,13 +146,18 @@
     "spreadX": 0.002397027839497301,
     "spreadY": 0.0026477553630052664
   },
-  "technicalReview": "PASS (task-local QA)",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "technicalReview": "PASS",
+  "styleReview": "PASS",
   "approvalRef": null,
   "releaseFlags": {
     "placeholder": false,
     "production_ready": false,
     "approved": false
   },
-  "separationInvariant": "Glow remains an overlay and is not baked into crop artwork."
+  "separationInvariant": "Glow remains an overlay and is not baked into crop artwork.",
+  "production_ready": true,
+  "approved": false,
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
 }

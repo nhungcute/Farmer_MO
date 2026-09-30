@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30T15:19:24.225Z",
+  "scope": [
+    "building_farmhouse_lv1",
+    "building_warehouse_lv1",
+    "building_chicken_coop_lv1",
+    "crop_ready_glow_00",
+    "crop_ready_glow_01",
+    "crop_ready_glow_02",
+    "crop_ready_glow_03"
+  ],
+  "selectedCount": 7,
+  "rows": [
+    {
+      "id": "building_farmhouse_lv1",
+      "source": "assets-src/buildings/building_farmhouse_lv1.png",
+      "sourceSha256": "8fe1eba7e786b5fe641ad6f366d6523d91f055e1decf89caedd9e9c67a759ca0",
+      "atlas": "farm_common-0.png",
+      "atlasFrame": {
+        "x": 2,
+        "y": 518,
+        "w": 512,
+        "h": 384
+      },
+      "dimensions": [
+        512,
+        384
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "building_warehouse_lv1",
+      "source": "assets-src/buildings/building_warehouse_lv1.png",
+      "sourceSha256": "ad905810975025c52ea0625a8c99a0bcbb8b39719af396f3533b04c5f1c92da3",
+      "atlas": "farm_common-0.png",
+      "atlasFrame": {
+        "x": 516,
+        "y": 518,
+        "w": 512,
+        "h": 384
+      },
+      "dimensions": [
+        512,
+        384
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "building_chicken_coop_lv1",
+      "source": "assets-src/buildings/building_chicken_coop_lv1.png",
+      "sourceSha256": "202a7107feb7587390b6f9755df21da52c66905c0cded75e46d1152ad76517b2",
+      "atlas": "farm_common-0.png",
+      "atlasFrame": {
+        "x": 1292,
+        "y": 132,
+        "w": 512,
+        "h": 384
+      },
+      "dimensions": [
+        512,
+        384
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_00",
+      "source": "assets-src/effects/crop_ready_glow_00.png",
+      "sourceSha256": "edd3d1742125b7349f458297d22b2a61cdf608507326ed3fffb22ceac11c2908",
+      "atlas": "effects.png",
+      "atlasFrame": {
+        "x": 2,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "dimensions": [
+        256,
+        256
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_01",
+      "source": "assets-src/effects/crop_ready_glow_01.png",
+      "sourceSha256": "62ec6c11e99bd349c778fb94d08d212d4e39344dc74acf07eeba8edcda0ac960",
+      "atlas": "effects.png",
+      "atlasFrame": {
+        "x": 260,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "dimensions": [
+        256,
+        256
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_02",
+      "source": "assets-src/effects/crop_ready_glow_02.png",
+      "sourceSha256": "ea28a273821d1e1b87705cb19ea369f2268419c8b80c9960a22c193e5e9b8917",
+      "atlas": "effects.png",
+      "atlasFrame": {
+        "x": 518,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "dimensions": [
+        256,
+        256
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    },
+    {
+      "id": "crop_ready_glow_03",
+      "source": "assets-src/effects/crop_ready_glow_03.png",
+      "sourceSha256": "4a4de88d1905a700bf4611b5a374249303f700b221506ff4efd605d05d0e12c1",
+      "atlas": "effects.png",
+      "atlasFrame": {
+        "x": 776,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "dimensions": [
+        256,
+        256
+      ],
+      "rgba": true,
+      "exactSourceToAtlas": true
+    }
+  ],
+  "animationContract": {
+    "id": "crop_ready_glow",
+    "frameCount": 4,
+    "fps": 8,
+    "loop": false,
+    "holdLast": false
+  },
+  "result": "PASS"
+}

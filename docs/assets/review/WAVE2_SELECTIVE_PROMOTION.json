@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30T15:08:05.615Z",
+  "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+  "policy": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "approvalBoundary": {
+    "approvedBefore": 112,
+    "approvedAfter": 112,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "approvalRef": null
+  },
+  "selectedCount": 7,
+  "selected": [
+    {
+      "id": "building_farmhouse_lv1",
+      "taskId": "ART-07",
+      "creator": "Codex / Farmhouse Asset Owner",
+      "source": "work/art-generation/buildings/farmhouse/candidate/assets-src-compatible/buildings/building_farmhouse_lv1.png",
+      "destination": "assets-src/buildings/building_farmhouse_lv1.png",
+      "sha256": "198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac",
+      "bytes": 209689
+    },
+    {
+      "id": "building_warehouse_lv1",
+      "taskId": "ART-08",
+      "creator": "Codex / Warehouse Asset Owner",
+      "source": "work/art-generation/buildings/warehouse/candidate/assets-src-compatible/buildings/building_warehouse_lv1.png",
+      "destination": "assets-src/buildings/building_warehouse_lv1.png",
+      "sha256": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
+      "bytes": 214392
+    },
+    {
+      "id": "building_chicken_coop_lv1",
+      "taskId": "ART-09",
+      "creator": "Codex / Chicken Coop Asset Owner",
+      "source": "work/art-generation/buildings/chicken-coop/candidate/assets-src-compatible/building_chicken_coop_lv1.png",
+      "destination": "assets-src/buildings/building_chicken_coop_lv1.png",
+      "sha256": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+      "bytes": 187548
+    },
+    {
+      "id": "crop_ready_glow_00",
+      "taskId": "ART-13",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "source": "work/art-generation/crops/extras/candidate/assets-src-compatible/crop_ready_glow_00.png",
+      "destination": "assets-src/effects/crop_ready_glow_00.png",
+      "sha256": "e1a0f10dbd5ab07439ab60c1eceee8e8815ce04e8858ce74cd974c21881302b9",
+      "bytes": 15581
+    },
+    {
+      "id": "crop_ready_glow_01",
+      "taskId": "ART-13",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "source": "work/art-generation/crops/extras/candidate/assets-src-compatible/crop_ready_glow_01.png",
+      "destination": "assets-src/effects/crop_ready_glow_01.png",
+      "sha256": "ffddf058c2fed1b627c704bb1108a1b647786edbaf1b099f241d446e910897f3",
+      "bytes": 25143
+    },
+    {
+      "id": "crop_ready_glow_02",
+      "taskId": "ART-13",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "source": "work/art-generation/crops/extras/candidate/assets-src-compatible/crop_ready_glow_02.png",
+      "destination": "assets-src/effects/crop_ready_glow_02.png",
+      "sha256": "6a35832e65ff2aa9c23178d90621a0eff1b740a6334ca2eca1637645d09d519b",
+      "bytes": 30475
+    },
+    {
+      "id": "crop_ready_glow_03",
+      "taskId": "ART-13",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "source": "work/art-generation/crops/extras/candidate/assets-src-compatible/crop_ready_glow_03.png",
+      "destination": "assets-src/effects/crop_ready_glow_03.png",
+      "sha256": "754383180e50a7064e9dc42c35073b51b14fbcb112c4d79d49161c462dbaa36e",
+      "bytes": 22650
+    }
+  ],
+  "excludedRevisionGroups": [
+    "ART-06",
+    "ART-10",
+    "ART-11",
+    "ART-12"
+  ],
+  "productionPathsModified": [
+    "assets-src/buildings/building_farmhouse_lv1.png",
+    "assets-src/buildings/building_warehouse_lv1.png",
+    "assets-src/buildings/building_chicken_coop_lv1.png",
+    "assets-src/effects/crop_ready_glow_00.png",
+    "assets-src/effects/crop_ready_glow_01.png",
+    "assets-src/effects/crop_ready_glow_02.png",
+    "assets-src/effects/crop_ready_glow_03.png"
+  ]
+}
