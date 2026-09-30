@@ -33,6 +33,9 @@
 
 - Inventory deterministic hiện có **188 source assets**, **10 animation contracts** và **8 categories**.
 - Status hiện tại: `placeholder=188`, `production_ready=0`, `approved=0`.
+- Category counts được xác nhận: terrain 5, buildings 3, crops 24, chicken 92, pond 19, effects 30, UI 15; animals chỉ có 1 animation contract và không có PNG riêng.
+- Cả 188 asset đều thiếu `styleReview`, `technicalReview` và `approvalRef`; các trường này phải được bổ sung trước khi parent review.
+- `tools/asset-inventory.mjs` và strict validator chỉ xác nhận metadata/contract kỹ thuật; PASS của chúng không tự chứng minh style approval, technical approval hoặc release approval.
 - `assets-src/manifests/licenses.json` có 188/188 entry với `license=internal-placeholder` và `placeholder=true`; source được ghi là generated deterministic placeholder.
 - `assets-src/style/style-sheet.md` xác nhận đây là placeholder style sheet và nêu rõ toàn bộ asset hiện tại không phải production art.
 - Không tìm thấy bằng chứng release artwork, commercial/open-source license có thể dùng cho production, art-director style sign-off hoặc approval record.

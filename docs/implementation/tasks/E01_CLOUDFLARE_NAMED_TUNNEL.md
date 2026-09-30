@@ -39,6 +39,7 @@ Thiếu bất kỳ điều kiện nào thì giữ `QUEUED`; không chạy `cloud
 - [ ] Local stack vẫn khởi động và test được khi không có `CLOUDFLARE_TUNNEL_TOKEN`.
 - [ ] Chỉ Nginx được public; PostgreSQL và API không bind public host port, không lộ database port.
 - [ ] Cloudflared dùng image version đã pin và chạy profile `public` sau khi Nginx healthy.
+- [ ] Public runtime preflight rejects demo defaults: `PERSISTENCE_DRIVER=postgres`, `APP_ENV=demo`, `PUBLIC_ORIGIN=https://<hostname>`, secure cookies, non-default session/database secrets, and a non-empty tunnel token.
 - [ ] Public smoke kiểm tra `/`, `/api/health/live`, `/api/health/ready`, direct entry, giao diện tiếng Việt và không có Tutorial.
 - [ ] Readiness phản ánh PostgreSQL thật: DB sẵn sàng trả ready; DB dừng hoặc mất kết nối không trả ready giả.
 - [ ] Character enter/bootstrap qua hostname hoạt động; không log token, password, connection string hoặc stack trace.
@@ -53,6 +54,22 @@ Chuẩn bị secret ngoài repository:
 ```powershell
 $env:CLOUDFLARE_TUNNEL_TOKEN = '<inject-from-secret-store>'
 $env:CLOUDFLARE_HOSTNAME = 'farm.example.com'
+```
+
+Set and validate the public runtime environment before Compose config; do not run E01 with Compose demo defaults:
+
+```powershell
+$env:PERSISTENCE_DRIVER = 'postgres'
+$env:APP_ENV = 'demo'
+$env:PUBLIC_ORIGIN = "https://$env:CLOUDFLARE_HOSTNAME"
+$env:COOKIE_SECURE = 'true'
+$env:SESSION_SECRET = '<inject-at-least-32-random-chars-from-secret-store>'
+$env:POSTGRES_PASSWORD = '<inject-database-secret-from-secret-store>'
+$env:DATABASE_URL = 'postgresql://mo_farm:<url-encoded-password>@db:5432/mo_farm'
+
+if ($env:CLOUDFLARE_TUNNEL_TOKEN -eq '' -or $env:CLOUDFLARE_TUNNEL_TOKEN -eq '<inject-from-secret-store>' -or $env:CLOUDFLARE_HOSTNAME -notmatch '^[A-Za-z0-9.-]+$' -or $env:PERSISTENCE_DRIVER -ne 'postgres' -or $env:APP_ENV -ne 'demo' -or $env:PUBLIC_ORIGIN -notmatch '^https://[^/]+$' -or ([string]$env:SESSION_SECRET).Length -lt 32 -or $env:SESSION_SECRET -eq 'change_me_minimum_32_chars' -or ([string]$env:POSTGRES_PASSWORD).Length -lt 16 -or $env:POSTGRES_PASSWORD -eq 'change_me') {
+  throw 'E01 preflight failed: production persistence, HTTPS origin, tunnel token, and non-default secrets are required.'
+}
 ```
 
 Xác nhận local stack và migration trước khi bật public profile:
@@ -101,6 +118,6 @@ E01 không có test runtime nào được chạy khi còn `QUEUED`. Khi mở tas
 ## Hoạt động hiện tại
 
 - Current activity: `QUEUED`; chỉ audit dependency và chuẩn bị checklist, chưa chạy tunnel.
-- Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; B02 still lacks approved production artwork.
+- Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; read-only E01 audit passed Compose exposure checks and added a postgres/demo/HTTPS/non-default-secret preflight; B02 still lacks approved production artwork.
 - Next activity: parent review cập nhật upstream status; chỉ khi B02 và toàn bộ dependency đạt mới mở E01, cấp secret ngoài repository và chạy public smoke.
 - Blocker: B02 remains BLOCKED; no hostname/token is supplied and E01 stays QUEUED until approved artwork and release dependencies exist.
