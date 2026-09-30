@@ -1,0 +1,50 @@
+{
+  "taskId": "ART-02",
+  "assetType": "Rice",
+  "status": "RUNNING",
+  "generationStatus": "QUEUED",
+  "assetIds": [
+    "crop_rice_seed",
+    "crop_rice_stage_1",
+    "crop_rice_stage_2",
+    "crop_rice_stage_3",
+    "crop_rice_ready"
+  ],
+  "source": "PENDING_OWNER_REVIEW",
+  "creator": "PENDING_OWNER_REVIEW",
+  "tool": "PENDING_OWNER_REVIEW",
+  "toolVersion": "PENDING_OWNER_REVIEW",
+  "license": "PENDING_OWNER_REVIEW",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "B02.1",
+  "placeholder": true,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "NOT_STARTED",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "contract": {
+    "canvas": {
+      "width": 256,
+      "height": 256
+    },
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "renderOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "atlas": "crops",
+    "stateOrder": [
+      "crop_rice_seed",
+      "crop_rice_stage_1",
+      "crop_rice_stage_2",
+      "crop_rice_stage_3",
+      "crop_rice_ready"
+    ]
+  },
+  "notes": "Kickoff template only. Replace pending provenance values with verified source evidence before REVIEW; do not promote directly to assets-src."
+}

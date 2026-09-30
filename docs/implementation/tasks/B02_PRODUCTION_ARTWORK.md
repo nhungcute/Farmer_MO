@@ -27,6 +27,20 @@
 | B02.2-PROOF — Chicken proof checkpoint | REVIEW — Revision 2 technical evidence đã kiểm tra; chờ final owner review, không phải production | [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md), [`CHICKEN_PROOF_QA.json`](../../assets/review/CHICKEN_PROOF_QA.json) |
 | B02.2-FULL — Chicken production set | QUEUED — chỉ mở sau khi Revision 2 được final owner duyệt; vẫn cần đủ 92 frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
 
+## Parallel Art Wave 1 kickoff
+
+The five asset-owner tasks are initialized in isolated workspaces under [`tasks/art/`](art/README.md). They run independently because each task owns one complete asset type:
+
+| Task | Owned asset type | Workspace | Status |
+|---|---|---|---|
+| ART-01 | Chicken / `animal_chicken` | `work/art-generation/chicken/**` | RUNNING — contract audit |
+| ART-02 | Rice | `work/art-generation/crops/rice/**` | RUNNING — contract audit |
+| ART-03 | Carrot | `work/art-generation/crops/carrot/**` | RUNNING — contract audit |
+| ART-04 | Corn | `work/art-generation/crops/corn/**` | RUNNING — contract audit |
+| ART-05 | Tomato | `work/art-generation/crops/tomato/**` | RUNNING — contract audit |
+
+This kickoff creates no production replacement. Workers write only to their owned `work/art-generation/**` path; `assets-src/**`, manifests, atlas output and runtime remain unchanged. Each task must reach `REVIEW` with complete canonical assets and metadata before Integration Owner cross-asset review. Wave 2 is not started automatically.
+
 ## Checklist
 
 - [x] Inventory đầy đủ source asset, animation contract và category hiện tại.

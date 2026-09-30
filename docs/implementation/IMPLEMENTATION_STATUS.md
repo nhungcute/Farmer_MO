@@ -48,6 +48,8 @@ B02 subtask checkpoint: **B02.1 style direction đã `DONE` với owner kết lu
 
 B02.2 proof checkpoint: **`B02.2-PROOF Revision 2` đang `REVIEW`** với 13 frame ngoài production, scale comparison, EAT 5-frame proof, Pixi preview, mobile/stress evidence ở [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md). Đây chỉ là technical checkpoint; **`B02.2-FULL` vẫn `QUEUED`**, B02 tổng vẫn `BLOCKED`, chưa thay asset placeholder và final owner review vẫn `PENDING`. Không tạo 92 frame còn lại cho tới khi owner duyệt proof Revision 2.
 
+B02 Parallel Art Wave 1: **5 task owner đã được khởi tạo ở trạng thái `RUNNING — kickoff and contract audit`** trong [`tasks/art/README.md`](tasks/art/README.md): ART-01 Chicken, ART-02 Rice, ART-03 Carrot, ART-04 Corn và ART-05 Tomato. Mỗi task có workspace riêng dưới `work/art-generation/**`; chưa có PNG candidate nào được promote, chưa sửa `assets-src/**`, manifest, atlas, renderer, runtime, backend, gameplay hoặc economy. Wave 1 sẽ dừng sau task review để Integration Owner kiểm tra cross-asset; Wave 2 chưa bắt đầu.
+
 ## Ranh giới còn lại
 
 - Runtime API chon ro PERSISTENCE_DRIVER=file hoac postgres; file/JSON FarmStore van la mac dinh prototype, con postgres da chay enter/session/bootstrap va tat ca mutation qua transaction repository.

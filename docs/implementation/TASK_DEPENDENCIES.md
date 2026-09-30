@@ -44,4 +44,5 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 - REVIEW subtask: B02.1 style direction đã `DONE` với owner kết luận `APPROVED WITH MINOR REVISIONS`; B02.2 production contract tại `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` vẫn khóa và chưa có đủ production frame.
 - REVIEW checkpoint: B02.2-PROOF Revision 2 đã có 13 frame kỹ thuật ngoài `assets-src`, scale/EAT/Pixi/mobile/stress evidence tại `docs/assets/review/CHICKEN_PROOF_QA.json`; checkpoint này không mở khóa B02 production và final owner review vẫn `PENDING`.
 - QUEUED checkpoint: B02.2-FULL vẫn chờ owner duyệt proof rồi mới tạo đủ 92 frame production; giữ nguyên manifest, atlas, renderer và animation runtime.
+- RUNNING kickoff: Parallel Art Wave 1 đã khởi tạo ART-01 Chicken, ART-02 Rice, ART-03 Carrot, ART-04 Corn và ART-05 Tomato. Mỗi task có một owner, một workspace riêng dưới `work/art-generation/**` và một status file tại `docs/implementation/tasks/art/`; hiện chỉ audit contract, chưa có promotion hoặc production replacement.
 - BLOCKED: B02 production art nếu chưa có artwork được duyệt; E01 Cloudflare cho tới khi các gate upstream PASS.

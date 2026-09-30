@@ -1,0 +1,339 @@
+{
+  "taskId": "ART-01",
+  "assetType": "Chicken",
+  "status": "RUNNING",
+  "generationStatus": "QUEUED",
+  "assetIds": [
+    "animal_chicken_idle_ne_00",
+    "animal_chicken_idle_ne_01",
+    "animal_chicken_idle_ne_02",
+    "animal_chicken_idle_ne_03",
+    "animal_chicken_idle_se_00",
+    "animal_chicken_idle_se_01",
+    "animal_chicken_idle_se_02",
+    "animal_chicken_idle_se_03",
+    "animal_chicken_idle_sw_00",
+    "animal_chicken_idle_sw_01",
+    "animal_chicken_idle_sw_02",
+    "animal_chicken_idle_sw_03",
+    "animal_chicken_idle_nw_00",
+    "animal_chicken_idle_nw_01",
+    "animal_chicken_idle_nw_02",
+    "animal_chicken_idle_nw_03",
+    "animal_chicken_walk_ne_00",
+    "animal_chicken_walk_ne_01",
+    "animal_chicken_walk_ne_02",
+    "animal_chicken_walk_ne_03",
+    "animal_chicken_walk_ne_04",
+    "animal_chicken_walk_ne_05",
+    "animal_chicken_walk_se_00",
+    "animal_chicken_walk_se_01",
+    "animal_chicken_walk_se_02",
+    "animal_chicken_walk_se_03",
+    "animal_chicken_walk_se_04",
+    "animal_chicken_walk_se_05",
+    "animal_chicken_walk_sw_00",
+    "animal_chicken_walk_sw_01",
+    "animal_chicken_walk_sw_02",
+    "animal_chicken_walk_sw_03",
+    "animal_chicken_walk_sw_04",
+    "animal_chicken_walk_sw_05",
+    "animal_chicken_walk_nw_00",
+    "animal_chicken_walk_nw_01",
+    "animal_chicken_walk_nw_02",
+    "animal_chicken_walk_nw_03",
+    "animal_chicken_walk_nw_04",
+    "animal_chicken_walk_nw_05",
+    "animal_chicken_eat_ne_00",
+    "animal_chicken_eat_ne_01",
+    "animal_chicken_eat_ne_02",
+    "animal_chicken_eat_ne_03",
+    "animal_chicken_eat_ne_04",
+    "animal_chicken_eat_se_00",
+    "animal_chicken_eat_se_01",
+    "animal_chicken_eat_se_02",
+    "animal_chicken_eat_se_03",
+    "animal_chicken_eat_se_04",
+    "animal_chicken_eat_sw_00",
+    "animal_chicken_eat_sw_01",
+    "animal_chicken_eat_sw_02",
+    "animal_chicken_eat_sw_03",
+    "animal_chicken_eat_sw_04",
+    "animal_chicken_eat_nw_00",
+    "animal_chicken_eat_nw_01",
+    "animal_chicken_eat_nw_02",
+    "animal_chicken_eat_nw_03",
+    "animal_chicken_eat_nw_04",
+    "animal_chicken_happy_ne_00",
+    "animal_chicken_happy_ne_01",
+    "animal_chicken_happy_ne_02",
+    "animal_chicken_happy_ne_03",
+    "animal_chicken_happy_se_00",
+    "animal_chicken_happy_se_01",
+    "animal_chicken_happy_se_02",
+    "animal_chicken_happy_se_03",
+    "animal_chicken_happy_sw_00",
+    "animal_chicken_happy_sw_01",
+    "animal_chicken_happy_sw_02",
+    "animal_chicken_happy_sw_03",
+    "animal_chicken_happy_nw_00",
+    "animal_chicken_happy_nw_01",
+    "animal_chicken_happy_nw_02",
+    "animal_chicken_happy_nw_03",
+    "animal_chicken_sleep_ne_00",
+    "animal_chicken_sleep_ne_01",
+    "animal_chicken_sleep_se_00",
+    "animal_chicken_sleep_se_01",
+    "animal_chicken_sleep_sw_00",
+    "animal_chicken_sleep_sw_01",
+    "animal_chicken_sleep_nw_00",
+    "animal_chicken_sleep_nw_01",
+    "animal_chicken_product_ready_ne_00",
+    "animal_chicken_product_ready_ne_01",
+    "animal_chicken_product_ready_se_00",
+    "animal_chicken_product_ready_se_01",
+    "animal_chicken_product_ready_sw_00",
+    "animal_chicken_product_ready_sw_01",
+    "animal_chicken_product_ready_nw_00",
+    "animal_chicken_product_ready_nw_01"
+  ],
+  "source": "PENDING_OWNER_REVIEW",
+  "creator": "PENDING_OWNER_REVIEW",
+  "tool": "PENDING_OWNER_REVIEW",
+  "toolVersion": "PENDING_OWNER_REVIEW",
+  "license": "PENDING_OWNER_REVIEW",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "B02.1",
+  "placeholder": true,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "NOT_STARTED",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "contract": {
+    "canvas": {
+      "width": 256,
+      "height": 256
+    },
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.9
+    },
+    "renderOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "atlas": "chicken",
+    "directions": [
+      "NE",
+      "SE",
+      "SW",
+      "NW"
+    ],
+    "mirrorAllowed": false,
+    "states": {
+      "IDLE": {
+        "NE": {
+          "frameCount": 4,
+          "fps": 6,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SE": {
+          "frameCount": 4,
+          "fps": 6,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SW": {
+          "frameCount": 4,
+          "fps": 6,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "NW": {
+          "frameCount": 4,
+          "fps": 6,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        }
+      },
+      "WALK": {
+        "NE": {
+          "frameCount": 6,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SE": {
+          "frameCount": 6,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SW": {
+          "frameCount": 6,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "NW": {
+          "frameCount": 6,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        }
+      },
+      "EAT": {
+        "NE": {
+          "frameCount": 5,
+          "fps": 10,
+          "loop": false,
+          "holdLast": true,
+          "events": [
+            {
+              "frame": 2,
+              "name": "FEED_CONSUMED"
+            }
+          ]
+        },
+        "SE": {
+          "frameCount": 5,
+          "fps": 10,
+          "loop": false,
+          "holdLast": true,
+          "events": [
+            {
+              "frame": 2,
+              "name": "FEED_CONSUMED"
+            }
+          ]
+        },
+        "SW": {
+          "frameCount": 5,
+          "fps": 10,
+          "loop": false,
+          "holdLast": true,
+          "events": [
+            {
+              "frame": 2,
+              "name": "FEED_CONSUMED"
+            }
+          ]
+        },
+        "NW": {
+          "frameCount": 5,
+          "fps": 10,
+          "loop": false,
+          "holdLast": true,
+          "events": [
+            {
+              "frame": 2,
+              "name": "FEED_CONSUMED"
+            }
+          ]
+        }
+      },
+      "HAPPY": {
+        "NE": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": false,
+          "holdLast": true,
+          "events": []
+        },
+        "SE": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": false,
+          "holdLast": true,
+          "events": []
+        },
+        "SW": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": false,
+          "holdLast": true,
+          "events": []
+        },
+        "NW": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": false,
+          "holdLast": true,
+          "events": []
+        }
+      },
+      "SLEEP": {
+        "NE": {
+          "frameCount": 2,
+          "fps": 3,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SE": {
+          "frameCount": 2,
+          "fps": 3,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SW": {
+          "frameCount": 2,
+          "fps": 3,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "NW": {
+          "frameCount": 2,
+          "fps": 3,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        }
+      },
+      "PRODUCT_READY": {
+        "NE": {
+          "frameCount": 2,
+          "fps": 2,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SE": {
+          "frameCount": 2,
+          "fps": 2,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "SW": {
+          "frameCount": 2,
+          "fps": 2,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        },
+        "NW": {
+          "frameCount": 2,
+          "fps": 2,
+          "loop": true,
+          "holdLast": false,
+          "events": []
+        }
+      }
+    }
+  },
+  "notes": "Kickoff template only. Replace pending provenance values with verified source evidence before REVIEW; do not promote directly to assets-src."
+}
