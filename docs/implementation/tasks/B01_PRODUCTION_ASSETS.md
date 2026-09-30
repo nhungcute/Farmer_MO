@@ -2,7 +2,7 @@
 
 - Task ID: B01
 - Name: Production asset inventory và replacement contract
-- Status: REVIEW
+- Status: DONE
 - Owner: asset workstream
 - Dependencies: asset pipeline locked v1
 - Owned paths: `tools/asset-inventory.mjs`, `docs/assets/PRODUCTION_ASSET_INVENTORY.json`, `docs/assets/PRODUCTION_ASSET_INVENTORY.md`
@@ -16,10 +16,10 @@
   - [x] record license/source/tool/creator evidence fields
   - [x] document production replacement order
   - [x] deterministic generation and strict validation
-- Current activity: waiting for review before production artwork replacement.
+- Current activity: DONE — parent review completed; inventory/replacement contract accepted.
 - Last completed: generated 188-asset, 10-animation inventory; all 188 current assets are explicitly `placeholder`.
-- Next activity: B02 only after approved artwork is supplied; no renderer/backend change is required for replacement.
-- Tests: `node tools/asset-inventory.mjs`, asset validation and strict output validation PASS; deterministic output verified twice.
-- Blocker: production artwork, license and style approval are not supplied; B02 is therefore queued/blocked.
+- Next activity: maintenance only; B02 may start only after approved artwork is supplied, with no renderer/backend change required for replacement.
+- Tests: `node tools/asset-inventory.mjs`, asset validation and strict output validation PASS; deterministic output verified twice. Remote CI runs [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) each completed all five jobs successfully, including the Node/asset build.
+- Blocker: none for B01. B02 remains BLOCKED because production artwork, license and style approval are not supplied; no placeholder is promoted automatically.
 - Start time: 2026-09-29 14:57 UTC
-- End time: 2026-09-29 (review-ready)
+- End time: 2026-09-30 (DONE after parent review)

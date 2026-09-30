@@ -101,6 +101,6 @@ E01 không có test runtime nào được chạy khi còn `QUEUED`. Khi mở tas
 ## Hoạt động hiện tại
 
 - Current activity: `QUEUED`; chỉ audit dependency và chuẩn bị checklist, chưa chạy tunnel.
-- Last completed: local Docker/Compose, PostgreSQL, browser và operational gates đã có bằng chứng; remote CI run `36660295559` trên commit `628f7cd` đạt 5/5 job; B02 vẫn thiếu artwork production được duyệt.
+- Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; B02 still lacks approved production artwork.
 - Next activity: parent review cập nhật upstream status; chỉ khi B02 và toàn bộ dependency đạt mới mở E01, cấp secret ngoài repository và chạy public smoke.
-- Blocker: B02 đang `BLOCKED`; A01/A02/A03/B01/C01/C02/C03/D01/D02 còn `REVIEW` chờ parent review. Chưa có hostname/token được cấp trong task này.
+- Blocker: B02 remains BLOCKED; no hostname/token is supplied and E01 stays QUEUED until approved artwork and release dependencies exist.

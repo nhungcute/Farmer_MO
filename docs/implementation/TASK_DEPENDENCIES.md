@@ -36,9 +36,9 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 
 ## Current checkpoint
 
-- Remote CI run `36660295559` for commit `628f7cd` is PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
+- Remote CI runs `36660295559` (commit `628f7cd`) and `36662455574` (commit `7651d6a`) are PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
 - Documentation templates for E01 and RC01 are prepared, but neither runtime task is open.
-- RUNNING: none; C03 and D02 have review evidence; B02 audit is blocked on approved production artwork.
-- REVIEW: A01, A02, A03, B01, C01, C02, C03, D01, D02.
-- DONE: API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
+- RUNNING: none; C03 and D02 have DONE evidence; B02 audit is blocked on approved production artwork.
+- REVIEW: none for A01/A02/A03/B01/C01/C02/C03/D01/D02; parent review completed with local and remote CI evidence.
+- DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02; API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
 - BLOCKED: B02 production art nếu chưa có artwork được duyệt; E01 Cloudflare cho tới khi các gate upstream PASS.

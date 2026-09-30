@@ -4,13 +4,13 @@
 |---|---|
 | Task ID | A01 |
 | Name | PostgreSQL runtime repository |
-| Status | REVIEW |
+| Status | DONE |
 | Owner | Backend workstream |
 | Dependencies | Baseline M0–M3; canonical numbers in `packages/content/index.mjs` |
 | Owned paths | `apps/api/src/db/**`, `apps/api/src/repositories/**`, new `apps/api/sql/**` migrations, `apps/api/test/postgres/**`, this task note |
 | Forbidden paths | `package.json`, `package-lock.json`, `compose.yaml`, `.env.example`, `packages/content/**`, `apps/api/src/server.mjs`, `apps/api/src/store.mjs`, shared status documents |
 | Start time | 2026-09-29 |
-| End time | 2026-09-29 (review-ready) |
+| End time | 2026-09-30 (parent review complete) |
 
 ## Checklist
 
@@ -33,7 +33,7 @@
 
 ## Current activity
 
-Implementation is complete and handed to root for review. A02 has since selected this repository behind `PERSISTENCE_DRIVER=postgres`, while preserving the file/memory adapter for demo and test compatibility.
+Parent review is complete. A02 selects this repository behind `PERSISTENCE_DRIVER=postgres`, while preserving the file/memory adapter for demo and test compatibility.
 
 ## Last completed
 
@@ -42,10 +42,11 @@ Implementation is complete and handed to root for review. A02 has since selected
 - Root `npm run check:syntax` passed, including renderer syntax validation.
 - A02/A03 PostgreSQL runtime and concurrency evidence passed: 20/20 repository/integration tests on disposable PostgreSQL 16.
 - `001_mvp_schema.sql` followed by `002_runtime_repository.sql` applied successfully twice against a temporary PostgreSQL 16 container. The second application produced only expected `IF NOT EXISTS` notices.
+- GitHub Actions CI runs [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) completed successfully; the PostgreSQL runtime, browser, operational, container and Node/asset jobs all passed.
 
 ## Next activity
 
-Parent review should close A01 after confirming the A02/A03 evidence. The repository remains the persistence boundary for PostgreSQL runtime; no further A01 code change is required.
+No further A01 implementation is scheduled. The repository remains the persistence boundary for the PostgreSQL runtime; future changes require a new scoped task and must preserve the file/memory adapter.
 
 `runMutation` callbacks must contain database work only: a serialization retry can execute the callback again, so external messages, files or other side effects must happen after the committed response is returned.
 
@@ -57,4 +58,4 @@ The Compose `migrate` profile must execute migrations in numeric order (`001_mvp
 
 ## Tests and blocker
 
-No blocker for A01. The original repository tests use a pool/client double; A02/A03 additionally verified the repository against disposable PostgreSQL 16 and must keep that distinction in future CI reports.
+No blocker for A01; parent review is complete. The original repository tests use a pool/client double; A02/A03 additionally verified the repository against disposable PostgreSQL 16 and must keep that distinction in future CI reports.

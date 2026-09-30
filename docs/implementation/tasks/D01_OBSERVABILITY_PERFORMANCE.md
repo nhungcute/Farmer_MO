@@ -2,7 +2,7 @@
 
 - Task ID: D01
 - Name: API và renderer observability/performance instrumentation
-- Status: REVIEW
+- Status: DONE
 - Owner: root/infrastructure
 - Dependencies: baseline M0–M3
 - Owned paths: `apps/api/src/observability/**`, instrumentation tests/docs, renderer debug metric additions nếu không đổi renderer contract
@@ -17,10 +17,10 @@
   - [x] unit tests
   - [x] load-test scenario handoff
 - [x] documentation and integration review
-- Current activity: review-ready; D02 load and backup/restore evidence is complete.
+- Current activity: DONE — parent review completed; D02 load and backup/restore evidence is accepted.
 - Last completed: bounded `ApiMetrics`, optional internal metrics endpoint, API lifecycle instrumentation, renderer metric contract and regression tests.
-- Next activity: parent review consumes D02 evidence; production exporter remains a later infrastructure decision.
+- Next activity: maintenance only; production exporter remains a later infrastructure decision.
 - Tests: `node --test apps/api/test/observability.test.mjs` — 3/3 PASS; `npm run check` PASS.
 - Blocker: none.
 - Start time: 2026-09-29 14:57 UTC
-- End time: 2026-09-30 (review-ready)
+- End time: 2026-09-30 (DONE after parent review)

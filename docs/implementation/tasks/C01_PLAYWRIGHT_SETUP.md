@@ -2,7 +2,7 @@
 
 - Task ID: C01
 - Name: Playwright setup và core direct-entry/gameplay E2E
-- Status: REVIEW
+- Status: DONE
 - Owner: QA workstream
 - Dependencies: web/API baseline; A02 PostgreSQL wiring remains outside this local harness
 - Owned paths: `playwright.config.mjs`, `tests/e2e/**`, this task note
@@ -15,13 +15,13 @@
   - [x] pond and chicken/egg flow
   - [x] mobile orientation/touch/PWA smoke
   - [x] browser error capture and failure artifacts
-- Current activity: review after root installed Playwright and ran the suite.
+- Current activity: DONE — parent review completed after Playwright installation and suite execution.
 - Last completed: C01-scoped two-project run — 5 passed, 5 intentionally skipped; the current three-project aggregate including C03 is recorded in the C03 task note.
-- Next activity: parent review consumes C02/C03 evidence; physical-device validation remains outside this prototype gate.
-- Tests: static syntax checks for all C01 files PASS; Playwright 1.63 with local Chrome channel PASS.
+- Next activity: maintenance only; physical-device validation remains outside this prototype gate.
+- Tests: static syntax checks for all C01 files PASS; Playwright 1.63 with local Chrome channel PASS. Remote CI runs [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) completed all five workflow jobs successfully; C01 remains the local file-adapter harness and does not use a shared database.
 - Blocker: no blocker for local harness; physical-device validation remains outside this prototype gate.
 - Start time: 2026-09-29 14:57 UTC
-- End time: 2026-09-29 (review-ready)
+- End time: 2026-09-30 (DONE after parent review)
 
 This task adds the Playwright configuration and the canonical direct-entry smoke flows. It does not change the web, API, renderer, package manifest, or lockfile.
 

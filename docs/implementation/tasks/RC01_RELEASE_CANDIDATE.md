@@ -37,12 +37,12 @@ Không được đánh dấu một mục là PASS chỉ vì command kết thúc 
 
 | Gate | Evidence bắt buộc | Trạng thái trước khi mở RC01 |
 |---|---|---|
-| A02 runtime | `docs/implementation/tasks/A02_POSTGRES_API_WIRING.md`; API/PG test log; readiness JSON; Compose smoke | REVIEW — cần parent/CI review |
-| A03 transaction | `docs/implementation/tasks/A03_TRANSACTION_CONCURRENCY.md`; PostgreSQL 20/20 log; race/rollback assertions | REVIEW — cần parent/CI review |
-| C02 browser | docs/implementation/tasks/C02_FUNCTIONAL_PLAYWRIGHT_E2E.md; desktop Chromium report trên disposable PG; remote CI run 36660295559 | REVIEW — local và remote evidence có, parent review còn lại |
-| C03 mobile/PWA | docs/implementation/tasks/C03_MOBILE_PWA_ACCESSIBILITY.md; mobile-pwa report 3/3; remote CI run 36660295559 | REVIEW — local và remote evidence có, parent review còn lại |
-| D01 observability | `docs/implementation/tasks/D01_OBSERVABILITY_PERFORMANCE.md`; metrics tests/log redaction evidence | REVIEW — cần parent review |
-| D02 operations | docs/implementation/tasks/D02_LOAD_BACKUP_RESTORE.md; load JSON; backup/restore log; 15-table fingerprints; remote CI run 36660295559 | REVIEW — local và remote evidence có, parent review còn lại |
+| A02 runtime | docs/implementation/tasks/A02_POSTGRES_API_WIRING.md; API/PG test log; readiness JSON; Compose smoke | DONE — parent review and CI evidence complete |
+| A03 transaction | docs/implementation/tasks/A03_TRANSACTION_CONCURRENCY.md; PostgreSQL 20/20 log; race/rollback assertions | DONE — parent review and CI evidence complete |
+| C02 browser | docs/implementation/tasks/C02_FUNCTIONAL_PLAYWRIGHT_E2E.md; desktop Chromium report trên disposable PG; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
+| C03 mobile/PWA | docs/implementation/tasks/C03_MOBILE_PWA_ACCESSIBILITY.md; mobile-pwa report 3/3; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
+| D01 observability | docs/implementation/tasks/D01_OBSERVABILITY_PERFORMANCE.md; metrics tests/log redaction evidence | DONE — parent review complete |
+| D02 operations | docs/implementation/tasks/D02_LOAD_BACKUP_RESTORE.md; load JSON; backup/restore log; 15-table fingerprints; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
 | B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | BLOCKED — hiện còn placeholder, production-ready/approved = 0 |
 | Docker/CI | .github/workflows/ci.yml; remote run 36660295559 PASS for all 5 jobs; Compose/build logs | PASS for integration commit 628f7cd; release-commit rerun remains required |
 | E01 tunnel | E01 runbook, token/secret audit, external smoke, stop/revoke and rollback evidence | QUEUED — không được mở trước các gate upstream |
@@ -79,11 +79,11 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang `QUEUED`. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/C01/C02/C03/D01/D02 hiện còn ở `REVIEW`; B02 đang `BLOCKED` do chưa có production artwork được duyệt; E01 cũng đang `QUEUED`.
+RC01 đang QUEUED. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02 đã DONE; B02 đang BLOCKED do chưa có production artwork được duyệt; E01 cũng đang QUEUED.
 
 ## Next activity
 
-1. Parent review xác nhận A01/A02/A03/C01/C02/C03/D01/D02 và cập nhật status theo evidence thực tế.
+1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02; giữ các evidence và chờ B02/E01 dependency.
 2. Remote GitHub Actions run 36660295559 đã PASS 5/5 job; lưu artifact/log vào release evidence index và chờ parent review.
 3. Hoàn tất B02 bằng artwork production, license/source, style approval, release approval và visual review.
 4. Chỉ sau các bước trên mới mở E01; chạy external smoke và rollback/revoke drill.

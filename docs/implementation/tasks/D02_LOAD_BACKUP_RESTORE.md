@@ -2,9 +2,9 @@
 
 - Task ID: D02
 - Name: PostgreSQL runtime load, correctness and backup/restore gate
-- Status: REVIEW
+- Status: DONE
 - Owner: Runtime/infrastructure workstream
-- Dependencies: A02 REVIEW, A03 REVIEW, D01 REVIEW, disposable PostgreSQL 16
+- Dependencies: A02 DONE, A03 DONE, D01 DONE, disposable PostgreSQL 16
 - Owned paths: `tools/load-test/**`, `tools/backup-restore/**`, this task note
 - Forbidden paths: gameplay/economy/content definitions, Renderer/Animation/Asset pipeline, Tutorial, API payload contract, Cloudflare/public tunnel
 - Start time: 2026-09-30
@@ -49,6 +49,8 @@ expected business error: HTTP 409 NOT_ENOUGH_ITEM; no state/revision/idempotency
 postgres-drill.mjs status=PASS on separate PostgreSQL 16 source/target databases
 all 15 runtime tables fingerprinted; aggregate/session/idempotency fingerprints match
 migrations passed on source, fresh target and restored target
+
+Remote CI evidence: [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) both completed the PostgreSQL D02 load and backup/restore job successfully as part of a 5/5 workflow run.
 ```
 
 The host did not have PostgreSQL client binaries, so the run used
@@ -62,9 +64,8 @@ operations remain outside this prototype task.
 
 ## Current activity
 
-- Current activity: review-ready; tools and runbooks are implemented.
+- Current activity: DONE — parent review completed; tools and runbooks are accepted.
 - Last completed: PostgreSQL load, concurrency/idempotency/rollback probe and
   backup/restore fingerprint drill on disposable databases.
-- Next activity: parent aggregate gate may consume D02 evidence. Cloudflare stays
-  gated until all upstream dependencies and RC checks pass.
-- Blocker: no D02 technical blocker when disposable PostgreSQL and client tools are available.
+- Next activity: maintenance only. Cloudflare stays gated until all upstream dependencies and RC checks pass.
+- Blocker: none for D02 when disposable PostgreSQL and client tools are available; release path remains blocked by B02 until production artwork and approvals are supplied.

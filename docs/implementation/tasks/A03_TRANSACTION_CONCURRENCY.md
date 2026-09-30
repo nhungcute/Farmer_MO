@@ -2,9 +2,9 @@
 
 - Task ID: A03
 - Name: PostgreSQL transaction, rollback, idempotency and concurrency gate
-- Status: REVIEW
+- Status: DONE
 - Owner: Backend/runtime workstream
-- Dependencies: A02 REVIEW; disposable PostgreSQL 16 instance; canonical API/error contract
+- Dependencies: A02 DONE; disposable PostgreSQL 16 instance; canonical API/error contract
 - Owned paths: `apps/api/test/postgres/postgres-integration.test.mjs`, `apps/api/test/postgres/postgres-repository.test.mjs`, this task note
 - Forbidden paths: renderer/animation/asset pipeline, `packages/content/index.mjs`, Tutorial, API response shape, file/memory adapter removal, Cloudflare/public tunnel
 - Deliverables: real-PostgreSQL concurrent enter and mutation coverage, durable idempotency race coverage, rollback proof, retry-budget proof, state-revision/lost-update proof
@@ -39,10 +39,11 @@ The tests prove:
 
 ## Current activity
 
-- Current activity: review-ready; the isolated PostgreSQL gate has passed with all enabled scenarios.
+- Current activity: complete; the isolated PostgreSQL gate has passed with all enabled scenarios.
 - Last completed: repository audit, READ COMMITTED aggregate-lock fix, and opt-in real-database concurrency/rollback tests.
-- Next activity: parent review consumes C03/D02 evidence; keep Cloudflare gated until approved B02 artwork, Docker and remaining RC dependencies pass.
+- Next activity: maintain the completed transaction/concurrency gate; keep Cloudflare gated until approved B02 artwork, Docker and remaining RC dependencies pass.
 - Tests: `node --test apps/api/test/postgres/postgres-repository.test.mjs apps/api/test/postgres/postgres-integration.test.mjs` with PostgreSQL 16.4 disposable database: **20/20 PASS** (14 integration + 6 repository). All three repository syntax checks pass. Without the explicit URL/flag the integration cases are skipped by design.
-- Blocker: none for A03; the task remains REVIEW pending parent status recording.
+- GitHub Actions CI runs [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) completed successfully; the PostgreSQL runtime, browser, operational, container and Node/asset jobs all passed.
+- Blocker: none for A03; parent review is complete.
 - Start time: 2026-09-30
-- End time: 2026-09-30 (review-ready)
+- End time: 2026-09-30 (parent review complete)

@@ -4,16 +4,16 @@
 |---|---|
 | ID | C03 |
 | Tên | Mobile, PWA và accessibility QA |
-| Trạng thái | REVIEW |
+| Trạng thái | DONE |
 | Owner | QA / Web integration |
-| Phụ thuộc | C01 + C02 |
+| Phụ thuộc | C01 DONE + C02 DONE |
 | Đường dẫn sở hữu | `tests/e2e/c03-mobile-pwa.spec.mjs`, `playwright.config.mjs`, `apps/web/src/styles.css`, `apps/web/src/main.js` (accessibility markup only) |
 | Đường dẫn cấm sửa | gameplay, API contract, content/economy definitions, Renderer, Animation, Asset pipeline, Tutorial, PostgreSQL runtime, Cloudflare |
 | Bắt đầu | 2026-09-30 |
 | Kết thúc | 2026-09-30 |
-| Hoạt động hiện tại | REVIEW — mobile/PWA/a11y browser evidence đã đạt |
+| Hoạt động hiện tại | DONE — parent review hoàn tất; mobile/PWA/a11y evidence và remote CI đã PASS |
 | Hoạt động gần nhất | Thêm project `mobile-pwa` với service worker được phép; kiểm tra orientation, touch gesture boundary, PWA cache, keyboard semantics và contrast |
-| Hoạt động tiếp theo | Chạy lại cùng disposable database trong CI/aggregate RC gate |
+| Hoạt động tiếp theo | Maintenance only; E01 remains gated by B02 and release dependencies |
 
 ## Mục tiêu
 
@@ -39,7 +39,7 @@ Lệnh C03 riêng:
 npm run e2e -- --reporter=line tests/e2e/c03-mobile-pwa.spec.mjs --project=mobile-pwa
 ```
 
-Kết quả ngày 2026-09-30: **3 passed, 0 failed**.
+Kết quả ngày 2026-09-30: **3 passed, 0 failed**. Remote CI runs 36660295559 và 36662455574 đều PASS C03 mobile-pwa 3/3.
 
 Aggregate Playwright:
 
@@ -47,7 +47,7 @@ Aggregate Playwright:
 npm run e2e -- --reporter=line
 ```
 
-Kết quả: **8 passed, 19 intentionally skipped, 0 failed** trên ba project (`chromium`, `mobile-chromium`, `mobile-pwa`). Các skip là do test suite giới hạn project hoặc C02 PostgreSQL opt-in; không được tính là pass ngầm.
+Kết quả: **8 passed, 19 intentionally skipped, 0 failed** trên ba project (`chromium`, `mobile-chromium`, `mobile-pwa`). Các skip là do test suite giới hạn project hoặc C02 PostgreSQL opt-in; không được tính là pass ngầm. Remote CI runs 36660295559 và 36662455574 đều PASS browser gate.
 
 ## Thay đổi tối thiểu
 
@@ -61,3 +61,6 @@ Không thay đổi gameplay, API response, Renderer/Animation/Asset pipeline, co
 ## Blocker
 
 Không có blocker kỹ thuật cho C03. Production artwork vẫn là phạm vi B02 và chưa được tự thay placeholder. C03 không mở Cloudflare; E01 vẫn phụ thuộc các gate upstream.
+
+- Parent review evidence: GitHub Actions runs 36660295559 and 36662455574 completed all five jobs successfully.
+- End time: 2026-09-30 (DONE after parent review)

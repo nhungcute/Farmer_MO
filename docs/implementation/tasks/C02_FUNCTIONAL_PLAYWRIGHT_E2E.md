@@ -4,17 +4,17 @@
 |---|---|
 | ID | C02 |
 | Tên | Functional Playwright E2E trên PostgreSQL runtime thật |
-| Trạng thái | REVIEW |
+| Trạng thái | DONE |
 | Owner | QA / Web integration |
-| Phụ thuộc | A02 REVIEW |
+| Phụ thuộc | A02 DONE |
 | Đường dẫn sở hữu | `tests/e2e/c02-postgres.spec.mjs`, `tests/e2e/harness.mjs`, `playwright.config.mjs` |
 | Đường dẫn cấm sửa | Renderer, animation, asset pipeline, content/economy definitions |
 | Bắt đầu | 2026-09-30 |
 | Kết thúc | 2026-09-30 |
-| Hoat dong hien tai | REVIEW - A03 da dat gate, C02 da co bang chung PG E2E |
-| Hoạt động gần nhất | Đã chạy PG harness, workflow browser và restart/reload persistence |
-| Hoat dong tiep theo | Parent review tieu thu C03/D02 evidence va chay lai trong CI voi database disposable truoc RC |
-| Tests | C02: 1 passed, 2 intentional skips trên ba project; C01-scoped baseline: 5 passed, 5 intentional skips |
+| Hoat dong hien tai | DONE - parent review da xac nhan A03 gate va bang chung PG E2E |
+| Hoạt động gần nhất | Đã chạy PG harness, workflow browser và restart/reload persistence; remote CI runs 36660295559 và 36662455574 đều PASS |
+| Hoat dong tiep theo | Bao tri/duy tri gate; khong con hanh dong C02 truoc RC |
+| Tests | C02: 1 passed, 2 intentional skips trên ba project; C01-scoped baseline: 5 passed, 5 intentional skips; remote browser gate PASS trong [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) và [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) |
 | Blocker | Không có blocker kỹ thuật; cần database disposable khi chạy |
 
 ## Mục tiêu
@@ -69,4 +69,4 @@ Không có blocker kỹ thuật trong C02. C02 không mở Cloudflare; E01 chỉ
 
 ## Hoạt động kế tiếp
 
-Đã đưa C02 vào gate tổng cùng A03 và C03. Bước tiếp theo là chạy lại trong CI với database disposable trước RC; không bật C02 bằng database dùng chung hoặc dữ liệu người dùng.
+Đã đưa C02 vào gate tổng cùng A03 và C03. Hai remote CI run 36660295559 và 36662455574 đã chạy browser gate trên database disposable; tiếp tục không bật C02 bằng database dùng chung hoặc dữ liệu người dùng.

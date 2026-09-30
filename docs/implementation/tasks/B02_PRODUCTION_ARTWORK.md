@@ -6,7 +6,7 @@
 | Tên | Production artwork replacement và approval audit |
 | Trạng thái | BLOCKED |
 | Owner | Asset workstream / art approval |
-| Phụ thuộc | B01 REVIEW |
+| Phụ thuộc | B01 DONE; approved production artwork and approval evidence |
 | Đường dẫn sở hữu | `assets-src/**` chỉ khi có artwork được duyệt; `docs/assets/**`; task này |
 | Đường dẫn cấm sửa | Renderer, animation runtime, asset IDs/frame IDs, FPS, pivot/anchor, atlas schema, backend, gameplay, economy/content definitions, Tutorial |
 | Deliverables | Audit bằng chứng artwork/license/style approval và contract validation; chưa thay asset vì chưa có production source |
