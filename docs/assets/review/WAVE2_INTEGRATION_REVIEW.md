@@ -2,8 +2,9 @@
 
 Review checkpoint for the 76 Wave 2 candidate assets. Reviewers were read-only
 against `assets-src/**`, canonical manifests, atlases and production inventory.
-The Integration Owner collected the eight results and made a selective
-promotion decision. No Wave 2 candidate is auto-approved for release.
+The first review promoted 7 assets; the targeted revision checkpoint then
+re-reviewed the remaining 69 candidates. No Wave 2 candidate is auto-approved
+for release.
 
 ## Review results
 
@@ -18,7 +19,7 @@ promotion decision. No Wave 2 candidate is auto-approved for release.
 | REVIEW-12 UI | 15/15 | PASS | FAIL | PASS | PASS | N/A | REVISION_REQUIRED |
 | REVIEW-13 Crop Extras | 4/4 | PASS | PASS | PASS | PASS | PASS | PROMOTE |
 
-### Review blockers
+### First-review blockers, now resolved in targeted revision
 
 - **Pond:** ripple and sparkle overlays remain outside the inner water mask in
   several frames. The overlays stay inside the outer pond silhouette, but must
@@ -38,7 +39,7 @@ Farmhouse, Warehouse and Chicken Coop review evidence was corrected without
 changing artwork pixels: stale building QA hashes were refreshed, and the Coop
 received an explicit static contract and complete QA evidence.
 
-## Selective promotion decision
+## First selective promotion decision
 
 Promote only the four passing groups:
 
@@ -47,13 +48,21 @@ Promote only the four passing groups:
 - Chicken Coop: 1
 - Crop Extras: 4
 
-Promotion scope: **7/76** candidates. Pond, Terrain, Effects and UI remain in
-the candidate workspaces and are not copied to production.
+First promotion scope: **7/76** candidates. Pond, Terrain, Effects and UI were
+held for targeted revision at that checkpoint.
 
 Promotion sets `placeholder=false`, `production_ready=true`,
 `technicalReview=PASS`, `styleReview=PASS`, and the verified internal policy
 license for the seven selected assets. `approved` remains false for every
 Wave 2 asset and no `approvalRef` is invented.
+
+## Targeted revision decision
+
+The four read-only revision reviews all return `PROMOTE` for the remaining 69
+candidates. Pond (19), Terrain (5), Effects (30) and UI (15) are eligible for
+the next Integration Owner mutation, subject to the production build and
+runtime gates in the owner guide. The final 188/188 inventory is recorded only
+after that mutation.
 
 ## Evidence
 
@@ -63,7 +72,7 @@ Wave 2 asset and no `approvalRef` is invented.
 - Crop overlay review: `work/art-generation/crops/extras/reviews/crop-glow-overlay-review.png`
 - Per-task review JSON/MD files are inside each task's `reviews/` directory.
 
-## Gate state after selective promotion
+## Gate state before targeted-revision promotion
 
 ```text
 production inventory: 188
@@ -72,7 +81,8 @@ status inventory: 7 production_ready, 112 approved, 69 placeholders
 approved: 112
 placeholders: 69
 Wave 2 candidates promoted: 7 (Farmhouse, Warehouse, Chicken Coop, Crop Extras)
-Wave 2 candidates held for revision: 69 (Pond, Terrain, Effects, UI)
+Wave 2 candidates reviewed after revision: 69 (Pond, Terrain, Effects, UI)
+Wave 2 candidates awaiting selective promotion: 69
 assets:build / strict validation: PASS
 assets:validate:wave1: PASS
 E01: CLOSED
@@ -84,7 +94,11 @@ were copied byte-for-byte from their reviewed workspaces, manifests/licenses
 were rebuilt, and runtime atlas entries were regenerated. `approved` remains
 112; no Wave 2 content/release approval was invented.
 
-Production runtime evidence: `WAVE2_PRODUCTION_RUNTIME_QA.json` verifies all
+Targeted revision evidence: `WAVE2_TARGETED_REVISION_REVIEW.md` and the four
+workspace `REVIEW_RESULT_V2.json` files record PASS for all 69 candidates.
+
+Production runtime evidence from the previous selective promotion:
+`WAVE2_PRODUCTION_RUNTIME_QA.json` verifies all
 7/7 source-to-atlas pixel slices, runtime/canonical metadata parity, sidecar
 license parity, and the unchanged `crop_ready_glow` contract (4 frames, 8 FPS,
 non-looping, no hold). Full asset validation, strict validation, renderer/API

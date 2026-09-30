@@ -1,0 +1,32 @@
+{
+  "review": "REVIEW-12",
+  "scope": "UI",
+  "canonicalIds": true,
+  "dimensionsRgbaAlpha": true,
+  "size128": true,
+  "size64": true,
+  "size32": true,
+  "changedAssets": [
+    "icon_coin",
+    "icon_diamond",
+    "icon_rice",
+    "icon_carrot",
+    "icon_corn",
+    "icon_tomato",
+    "icon_chicken_feed",
+    "icon_egg",
+    "icon_order",
+    "ui_rotate_overlay",
+    "ui_loading",
+    "ui_success_toast",
+    "ui_error_toast",
+    "build_ghost_valid",
+    "build_ghost_invalid"
+  ],
+  "unchangedAssets": [],
+  "technical": "PASS - true alpha and no hidden RGB matte",
+  "style": "PASS - soft illustrated cartoon, reduced gloss/bevel/dark outline/micro-detail",
+  "mobile": "PASS - all 15 communicate at 128/64/32 px",
+  "consistency": "PASS - common padding, outline weight, light direction and center of mass",
+  "recommendation": "PROMOTE"
+}

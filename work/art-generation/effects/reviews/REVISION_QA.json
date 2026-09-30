@@ -1,0 +1,660 @@
+{
+  "taskId": "REV-11",
+  "status": "REVIEW",
+  "scope": [
+    "fx_plant_00",
+    "fx_plant_01",
+    "fx_plant_02",
+    "fx_plant_03",
+    "fx_harvest_00",
+    "fx_harvest_01",
+    "fx_harvest_02",
+    "fx_harvest_03",
+    "fx_harvest_04",
+    "fx_harvest_05",
+    "fx_build_success_00",
+    "fx_build_success_01",
+    "fx_build_success_02",
+    "fx_build_success_03",
+    "fx_build_success_04",
+    "fx_build_success_05",
+    "fx_coin_gain_00",
+    "fx_coin_gain_01",
+    "fx_coin_gain_02",
+    "fx_coin_gain_03",
+    "fx_coin_gain_04",
+    "fx_coin_gain_05",
+    "fx_coin_gain_06",
+    "fx_coin_gain_07",
+    "fx_egg_collect_00",
+    "fx_egg_collect_01",
+    "fx_egg_collect_02",
+    "fx_egg_collect_03",
+    "fx_egg_collect_04",
+    "fx_egg_collect_05"
+  ],
+  "expectedCount": 30,
+  "changedAssets": [
+    "fx_plant_00",
+    "fx_plant_01",
+    "fx_plant_02",
+    "fx_plant_03",
+    "fx_harvest_00",
+    "fx_harvest_01",
+    "fx_harvest_02",
+    "fx_harvest_03",
+    "fx_harvest_04",
+    "fx_harvest_05",
+    "fx_build_success_00",
+    "fx_build_success_01",
+    "fx_build_success_02",
+    "fx_build_success_03",
+    "fx_build_success_04",
+    "fx_build_success_05",
+    "fx_coin_gain_00",
+    "fx_coin_gain_01",
+    "fx_coin_gain_02",
+    "fx_coin_gain_03",
+    "fx_coin_gain_04",
+    "fx_coin_gain_05",
+    "fx_coin_gain_06",
+    "fx_coin_gain_07",
+    "fx_egg_collect_00",
+    "fx_egg_collect_01",
+    "fx_egg_collect_02",
+    "fx_egg_collect_03",
+    "fx_egg_collect_04",
+    "fx_egg_collect_05"
+  ],
+  "unchangedAssets": [],
+  "families": {
+    "fx_plant": {
+      "canonicalIds": [
+        "fx_plant_00",
+        "fx_plant_01",
+        "fx_plant_02",
+        "fx_plant_03"
+      ],
+      "frameCount": 4,
+      "fps": 12,
+      "loop": false,
+      "holdLast": false,
+      "visualPurpose": "soft illustrated feedback overlay",
+      "changedFrames": [
+        "fx_plant_00",
+        "fx_plant_01",
+        "fx_plant_02",
+        "fx_plant_03"
+      ],
+      "unchangedFrames": []
+    },
+    "fx_harvest": {
+      "canonicalIds": [
+        "fx_harvest_00",
+        "fx_harvest_01",
+        "fx_harvest_02",
+        "fx_harvest_03",
+        "fx_harvest_04",
+        "fx_harvest_05"
+      ],
+      "frameCount": 6,
+      "fps": 12,
+      "loop": false,
+      "holdLast": false,
+      "visualPurpose": "soft illustrated feedback overlay",
+      "changedFrames": [
+        "fx_harvest_00",
+        "fx_harvest_01",
+        "fx_harvest_02",
+        "fx_harvest_03",
+        "fx_harvest_04",
+        "fx_harvest_05"
+      ],
+      "unchangedFrames": []
+    },
+    "fx_build_success": {
+      "canonicalIds": [
+        "fx_build_success_00",
+        "fx_build_success_01",
+        "fx_build_success_02",
+        "fx_build_success_03",
+        "fx_build_success_04",
+        "fx_build_success_05"
+      ],
+      "frameCount": 6,
+      "fps": 12,
+      "loop": false,
+      "holdLast": false,
+      "visualPurpose": "soft illustrated feedback overlay",
+      "changedFrames": [
+        "fx_build_success_00",
+        "fx_build_success_01",
+        "fx_build_success_02",
+        "fx_build_success_03",
+        "fx_build_success_04",
+        "fx_build_success_05"
+      ],
+      "unchangedFrames": []
+    },
+    "fx_coin_gain": {
+      "canonicalIds": [
+        "fx_coin_gain_00",
+        "fx_coin_gain_01",
+        "fx_coin_gain_02",
+        "fx_coin_gain_03",
+        "fx_coin_gain_04",
+        "fx_coin_gain_05",
+        "fx_coin_gain_06",
+        "fx_coin_gain_07"
+      ],
+      "frameCount": 8,
+      "fps": 12,
+      "loop": false,
+      "holdLast": false,
+      "visualPurpose": "soft illustrated feedback overlay",
+      "changedFrames": [
+        "fx_coin_gain_00",
+        "fx_coin_gain_01",
+        "fx_coin_gain_02",
+        "fx_coin_gain_03",
+        "fx_coin_gain_04",
+        "fx_coin_gain_05",
+        "fx_coin_gain_06",
+        "fx_coin_gain_07"
+      ],
+      "unchangedFrames": []
+    },
+    "fx_egg_collect": {
+      "canonicalIds": [
+        "fx_egg_collect_00",
+        "fx_egg_collect_01",
+        "fx_egg_collect_02",
+        "fx_egg_collect_03",
+        "fx_egg_collect_04",
+        "fx_egg_collect_05"
+      ],
+      "frameCount": 6,
+      "fps": 12,
+      "loop": false,
+      "holdLast": false,
+      "visualPurpose": "soft illustrated feedback overlay",
+      "changedFrames": [
+        "fx_egg_collect_00",
+        "fx_egg_collect_01",
+        "fx_egg_collect_02",
+        "fx_egg_collect_03",
+        "fx_egg_collect_04",
+        "fx_egg_collect_05"
+      ],
+      "unchangedFrames": []
+    }
+  },
+  "technicalReview": "PASS",
+  "styleReview": "PASS - bloom/specular/halo reduced; soft illustrated VFX",
+  "mobileReview": "PASS - silhouettes remain readable at 128/64/32 source display",
+  "runtimeReview": "PASS - representative overlays remain subordinate over grass/crop/building/chicken",
+  "alphaReview": "PASS - transparent RGB matte count is zero for all frames",
+  "cropReadySeparation": "PASS - crop_ready_glow is outside REV-11 and remains separate",
+  "assets": [
+    {
+      "id": "fx_plant_00",
+      "changed": true,
+      "sha256": "c5fef16ff312ca2645dffaf84cff94efa50a9807cd93ae1ffd4511c5554983a8",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_plant_01",
+      "changed": true,
+      "sha256": "ae4f407cff27c4d3c2907899f7cf8a1af3db8f6510ef469034310783ed51f5bb",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_plant_02",
+      "changed": true,
+      "sha256": "e088158cd8c6fb294c15f0f892944d106076e42162616f5b759c02b639414cdd",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_plant_03",
+      "changed": true,
+      "sha256": "a6dfd9b15642996cb3d9b10a10e5962aee6e2f65b8969c35c1222ea7eb2c461c",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_00",
+      "changed": true,
+      "sha256": "e2804fe6402503b0f60c842ca81a6930fc47d003660b019a5e945d0f589dce26",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_01",
+      "changed": true,
+      "sha256": "0e9832dd45c4b57a99ac8d3eaa6108547c80b02d5ad2a2cb0523a066eb522e2f",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_02",
+      "changed": true,
+      "sha256": "5e39db34a49247d8ac62b72ca5b73a4b5d080e5994972a6dc0ed493043b230c8",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_03",
+      "changed": true,
+      "sha256": "73545fc0f79b176c77c70da402555e3f3896ba533c78b458144968661694c4d5",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_04",
+      "changed": true,
+      "sha256": "a5ac896347795f52218ff3c59d311234d5087255935768c51e9ae4c776e1d160",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_harvest_05",
+      "changed": true,
+      "sha256": "f7034a5484673f769c02b04bddf830d098845f823f99e49c3d3353b6d6700aea",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_00",
+      "changed": true,
+      "sha256": "7d76b61b2aa4e7e17b645808ccc8672d67d305481a61a7b9ead0713df5775bd9",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_01",
+      "changed": true,
+      "sha256": "f2769caec83b14d67d33e4abe81b80cf2a00e920723013eb8f7de26c1f4bd323",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_02",
+      "changed": true,
+      "sha256": "0bc2e8fcc288cc145ce0468e9da8d62632504b0e01e86e4dfccc221cd515b2e4",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_03",
+      "changed": true,
+      "sha256": "ec6f437943289a35d9aec9749d5fbda34b77ba52c510aca328ae7656c7028fba",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_04",
+      "changed": true,
+      "sha256": "e5f66b798ea720cb54054243a979e6b3e6046405c5137a683c0676f4cc0256d2",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_build_success_05",
+      "changed": true,
+      "sha256": "55f04cfe3f238ec49a646f4d61452f2346d28fb0167a9e3779edc1edf7c7af6d",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_00",
+      "changed": true,
+      "sha256": "cd5cd85d676455b7825e4ee084f3e7eae217bd9b8e5ff42025acf93c46e20749",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_01",
+      "changed": true,
+      "sha256": "c0628f241a5353fd3edf5e26918ac96c2f338489d06af89f501cb77b5ae457d0",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_02",
+      "changed": true,
+      "sha256": "2dbe588fec4ddef90f82563aef42394c6a833d548d9adb5442ac389a8d6525c5",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_03",
+      "changed": true,
+      "sha256": "79562befb3251db712236f705f09f011a4ec2cfa528cc374742a333c4ca96bbe",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_04",
+      "changed": true,
+      "sha256": "738eb69db45c19f89a46bc3ab0bdbdce3e7eb04c9eef84f5d0aaa12dd4e1cc18",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_05",
+      "changed": true,
+      "sha256": "e757666a5fe4a669ef5d451b9f42563e756ca355d2511a759715b3a2f4aab26a",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_06",
+      "changed": true,
+      "sha256": "0b12e91b172dbc206b90c3fc1e606808b8a93e45fd0b5940a797ca26578431a0",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_coin_gain_07",
+      "changed": true,
+      "sha256": "00b1f36471df25df0af0b55b8c4c31e60cf57297d88862de67c2b31cb16a1870",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_00",
+      "changed": true,
+      "sha256": "384d442f53127c9aa7d0a187060611841b14962beeef1e7ebfc43991fe48c1ba",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_01",
+      "changed": true,
+      "sha256": "6f6c1fd00a339cd04c7d49ed17ebf51406e17d10acafaa9604ccc13fa2533794",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_02",
+      "changed": true,
+      "sha256": "115a848814039b8ac101735624443b473d238d5b4a247b138cb4e481a641f5bb",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_03",
+      "changed": true,
+      "sha256": "00b2ff6ed58bb22f40a563f76696ca665d51465dee980f6f9768dc2d66d58710",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_04",
+      "changed": true,
+      "sha256": "253179ac77a9d33473c1e8a531130da94d610b29156d2cec81c5302512adb3f4",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    },
+    {
+      "id": "fx_egg_collect_05",
+      "changed": true,
+      "sha256": "652b4aab19522e68f77dcb297d14b2cde23b4b037f661de0f46225c025f0dfa8",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentRgbNonzero": 0
+    }
+  ],
+  "provenance": {
+    "source": "internal-generated",
+    "creator": "Codex / Effects Asset Owner",
+    "tool": "built-in image_gen + deterministic highlight reduction",
+    "toolVersion": "not exposed by runtime",
+    "license": "PENDING_OWNER_REVIEW",
+    "production_ready": false,
+    "approved": false,
+    "approvalRef": null
+  }
+}

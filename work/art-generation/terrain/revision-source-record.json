@@ -1,0 +1,54 @@
+{
+  "renderSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f2f0-5797-7ae1-8cba-4aff3a987dd5\\exec-cb2042bc-1ae4-4042-8f79-8367e1e3c1ad.png",
+  "source": "internal-generated",
+  "tool": "built-in image_gen",
+  "toolVersion": "not exposed by runtime",
+  "target": [
+    256,
+    128
+  ],
+  "proportionalNormalization": true,
+  "alphaReframeThreshold": 64,
+  "assets": {
+    "terrain_grass_tile": {
+      "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_tile.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
+      "sha256": "f661340f262ab107f9d2a75a86b36508ca1ce620a95380fbbd7d94110a5ef68c",
+      "width": 256,
+      "height": 128,
+      "mode": "RGBA"
+    },
+    "terrain_grass_variant_01": {
+      "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_01.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
+      "sha256": "ebe2cc94f403326613da92c3837aa37b48994e96b472254b6e5c10a867a4e600",
+      "width": 256,
+      "height": 128,
+      "mode": "RGBA"
+    },
+    "terrain_grass_variant_02": {
+      "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_02.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
+      "sha256": "e31a4bfd71877a51f776c40d3d8db5fc081cd5818cd6418435242a00437612d6",
+      "width": 256,
+      "height": 128,
+      "mode": "RGBA"
+    },
+    "terrain_grass_variant_03": {
+      "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_03.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
+      "sha256": "89235cf474c8c842304a6f4bcc14633e7b628ce2c0a5d5698c595a04a555aa16",
+      "width": 256,
+      "height": 128,
+      "mode": "RGBA"
+    },
+    "terrain_grass_variant_04": {
+      "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_04.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
+      "sha256": "84ce24683e62bb951b3660c56090ae9a6eee38ddf153965a7f0ed59419e73f82",
+      "width": 256,
+      "height": 128,
+      "mode": "RGBA"
+    }
+  }
+}

@@ -55,5 +55,7 @@
   "requiredRevision": [
     "Re-render/reframe the same terrain art to fill the 256×128 tile footprint consistently; preserve transparency and 2.5D style. Verify a 5×4 logical isometric tiling has no visible gaps before promotion."
   ],
-  "wave1CanonicalAssetsModified": false
+  "wave1CanonicalAssetsModified": false,
+  "supersededByRevision": 2,
+  "revision2Result": "reviews/REVIEW_RESULT_V2.json"
 }

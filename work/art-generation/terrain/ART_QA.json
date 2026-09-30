@@ -17,14 +17,21 @@
     "dimensions": true,
     "rgba": true,
     "alpha": true,
+    "alphaOccupancy": true,
     "source": true,
-    "metadata": true
+    "metadata": true,
+    "scaleFootprint": true,
+    "tileSeam4x4": true,
+    "tileSeam8x8": true,
+    "runtimeReadability": true
   },
   "notes": [
-    "Generated isometric grass master with controlled surface variants.",
-    "All five frames use the same diamond geometry and transparent alpha.",
-    "Brightness variation is bounded to avoid visual noise and preserve crop readability."
+    "Revision 2 re-rendered the same wide isometric grass tile identity.",
+    "All five frames use the same 256x128 geometry and transparent alpha.",
+    "4x4 and 8x8 logical tiling use the locked 128x64 placement step without visible gaps.",
+    "Candidate remains in work/art-generation/terrain; no production path was changed."
   ],
   "overallTechnicalPass": true,
-  "creator": "Codex / Terrain Asset Owner"
+  "creator": "Codex / Terrain Asset Owner",
+  "revision": 2
 }

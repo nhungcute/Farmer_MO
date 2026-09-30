@@ -1,0 +1,36 @@
+{
+  "review": "REVIEW-06",
+  "scope": "POND",
+  "canonicalIds": true,
+  "dimensionsRgba": true,
+  "maskContainment": true,
+  "animationContracts": true,
+  "changedAssets": [
+    "pond_small_lv1_ripple_00",
+    "pond_small_lv1_ripple_01",
+    "pond_small_lv1_ripple_02",
+    "pond_small_lv1_ripple_03",
+    "pond_small_lv1_ripple_04",
+    "pond_small_lv1_ripple_05",
+    "pond_small_lv1_sparkle_00",
+    "pond_small_lv1_sparkle_02",
+    "pond_small_lv1_sparkle_03"
+  ],
+  "unchangedAssets": [
+    "pond_small_lv1_base",
+    "pond_small_lv1_water_00",
+    "pond_small_lv1_water_01",
+    "pond_small_lv1_water_02",
+    "pond_small_lv1_water_03",
+    "pond_small_lv1_water_04",
+    "pond_small_lv1_water_05",
+    "pond_small_lv1_water_06",
+    "pond_small_lv1_water_07",
+    "pond_small_lv1_sparkle_01"
+  ],
+  "technical": "PASS",
+  "style": "PASS - soft cartoon pond, subtle overlays",
+  "mobile": "PASS",
+  "runtime": "PASS - mask evidence and composited frames",
+  "recommendation": "PROMOTE"
+}

@@ -1,0 +1,352 @@
+{
+  "taskId": "REV-12",
+  "status": "REVIEW",
+  "scope": [
+    "icon_coin",
+    "icon_diamond",
+    "icon_rice",
+    "icon_carrot",
+    "icon_corn",
+    "icon_tomato",
+    "icon_chicken_feed",
+    "icon_egg",
+    "icon_order",
+    "ui_rotate_overlay",
+    "ui_loading",
+    "ui_success_toast",
+    "ui_error_toast",
+    "build_ghost_valid",
+    "build_ghost_invalid"
+  ],
+  "expectedCount": 15,
+  "changedAssets": [
+    "icon_coin",
+    "icon_diamond",
+    "icon_rice",
+    "icon_carrot",
+    "icon_corn",
+    "icon_tomato",
+    "icon_chicken_feed",
+    "icon_egg",
+    "icon_order",
+    "ui_rotate_overlay",
+    "ui_loading",
+    "ui_success_toast",
+    "ui_error_toast",
+    "build_ghost_valid",
+    "build_ghost_invalid"
+  ],
+  "unchangedAssets": [],
+  "canonicalIds": "PASS",
+  "dimensions": "PASS - all 128x128",
+  "rgbaAlpha": "PASS - true alpha and no hidden RGB matte",
+  "styleReview": "PASS - soft illustrated cartoon, reduced gloss/bevel/dark outline/micro-detail",
+  "mobileReview": "PASS - all 15 communicate at 128/64/32 px",
+  "consistencyReview": "PASS - common padding, outline weight, light direction and center of mass",
+  "production_ready": false,
+  "approved": false,
+  "approvalRef": null,
+  "assets": [
+    {
+      "id": "icon_coin",
+      "changed": true,
+      "sha256": "d68a1bff1b1630b377d4a2b57f909c113314779b52bd4cd349676a4e1a024365",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_diamond",
+      "changed": true,
+      "sha256": "4f93af4ee77872bf4f85636504a9b47bf5912234ee2ed1874fc205f8e1bc5343",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_rice",
+      "changed": true,
+      "sha256": "958c1ab4757383c41e1af4ed67d5982240a2643552ba3e81eacc8479c4d6520e",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_carrot",
+      "changed": true,
+      "sha256": "b3ca54a3f1753f552a3ee628f9814ecaf35eed74dae29083c7a50f62ec2c9688",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_corn",
+      "changed": true,
+      "sha256": "eaa4333ebf4308f2946c4fbfbf635ebf1743bb232dd4050e4ae56e5a81bfcd66",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_tomato",
+      "changed": true,
+      "sha256": "b4bf007fc16354196f23ff581f79385e8d2dbe0c8ac364d980e0b498a65666a8",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_chicken_feed",
+      "changed": true,
+      "sha256": "578d9cce1544a2578289c93a56c2053a2c2bb919638c9ebcc388b760efd880b5",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_egg",
+      "changed": true,
+      "sha256": "682c86c62acb62b4c5274b965873cc6ef0119fa99cc0e62609584c620eb7d996",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "icon_order",
+      "changed": true,
+      "sha256": "be61e4dc3712f60586e33e442c2dc8a0fc5a9d6cbefc784da1cf6db7822cb51b",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "ui_rotate_overlay",
+      "changed": true,
+      "sha256": "fe24dde2a70dc24b61dbdb681fdb0da14c963e7dca88c2360b9ca7055117aac2",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "ui_loading",
+      "changed": true,
+      "sha256": "213479143afc654fcef4614bdcd8e45ef183b930fbc441ef3bd0758d8a0fafaf",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "ui_success_toast",
+      "changed": true,
+      "sha256": "d30a57d30b291289ecbe4b724cf170902e88807b8c96eb6016e9de9f0ef38e5a",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "ui_error_toast",
+      "changed": true,
+      "sha256": "dc2d4176505d3fe119e45721920c9e5af907af7674753f47a8306907e693bf97",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "build_ghost_valid",
+      "changed": true,
+      "sha256": "5c2f30a7aa235b29152dc923acc04035976c48085addebc9aab1addede2ed645",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    },
+    {
+      "id": "build_ghost_invalid",
+      "changed": true,
+      "sha256": "ee6a5b992770c3abcf270f93b09f6ebc9ed97aa06219ab74c621513125663dc4",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "sizes": {
+        "128": "PASS",
+        "64": "PASS",
+        "32": "PASS"
+      }
+    }
+  ],
+  "evidence": "reviews/ui-runtime-size-comparison-v2.png"
+}

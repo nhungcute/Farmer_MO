@@ -1,0 +1,274 @@
+{
+  "taskId": "ART-10",
+  "review": "REV-10",
+  "revision": 2,
+  "status": "REVIEW",
+  "decision": "REVIEW",
+  "canonicalIds": [
+    "terrain_grass_tile",
+    "terrain_grass_variant_01",
+    "terrain_grass_variant_02",
+    "terrain_grass_variant_03",
+    "terrain_grass_variant_04"
+  ],
+  "expectedIds": [
+    "terrain_grass_tile",
+    "terrain_grass_variant_01",
+    "terrain_grass_variant_02",
+    "terrain_grass_variant_03",
+    "terrain_grass_variant_04"
+  ],
+  "changedIds": [
+    "terrain_grass_tile",
+    "terrain_grass_variant_01",
+    "terrain_grass_variant_02",
+    "terrain_grass_variant_03",
+    "terrain_grass_variant_04"
+  ],
+  "unchangedIds": [],
+  "source": {
+    "render": "internal-generated",
+    "sourceFile": "source/terrain-master-revision2.png",
+    "tool": "built-in image_gen",
+    "toolVersion": "not exposed by runtime",
+    "normalization": "proportional 2:1 downsample to locked 256×128 contract"
+  },
+  "technical": {
+    "canonicalIds": "PASS",
+    "dimensions": "PASS",
+    "rgba": "PASS",
+    "transparentAlpha": "PASS",
+    "alphaOccupancy": "PASS",
+    "provenanceMetadata": "PASS",
+    "assetsSrcUntouched": "PASS"
+  },
+  "style": {
+    "sameTerrainIdentity": "PASS",
+    "perspective2_5D": "PASS",
+    "cozyBrightPalette": "PASS",
+    "topLeftLighting": "PASS",
+    "bottomRightShadow": "PASS",
+    "mobileSilhouette": "PASS",
+    "scaleFootprint": "PASS",
+    "tileSeamRead": "PASS"
+  },
+  "singleTile": {
+    "canvasPx": [
+      256,
+      128
+    ],
+    "targetPaintedWidthPercent": ">=88",
+    "targetPaintedHeightPercent": ">=88",
+    "frames": {
+      "terrain_grass_tile": {
+        "sha256": "f661340f262ab107f9d2a75a86b36508ca1ce620a95380fbbd7d94110a5ef68c",
+        "dimensions": [
+          256,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaPixels": 18635,
+        "alphaBounds": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt32": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt128": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "paintedWidthPercent": 100.0,
+        "paintedHeightPercent": 100.0
+      },
+      "terrain_grass_variant_01": {
+        "sha256": "ebe2cc94f403326613da92c3837aa37b48994e96b472254b6e5c10a867a4e600",
+        "dimensions": [
+          256,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaPixels": 18635,
+        "alphaBounds": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt32": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt128": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "paintedWidthPercent": 100.0,
+        "paintedHeightPercent": 100.0
+      },
+      "terrain_grass_variant_02": {
+        "sha256": "e31a4bfd71877a51f776c40d3d8db5fc081cd5818cd6418435242a00437612d6",
+        "dimensions": [
+          256,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaPixels": 18635,
+        "alphaBounds": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt32": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt128": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "paintedWidthPercent": 100.0,
+        "paintedHeightPercent": 100.0
+      },
+      "terrain_grass_variant_03": {
+        "sha256": "89235cf474c8c842304a6f4bcc14633e7b628ce2c0a5d5698c595a04a555aa16",
+        "dimensions": [
+          256,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaPixels": 18635,
+        "alphaBounds": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt32": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt128": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "paintedWidthPercent": 100.0,
+        "paintedHeightPercent": 100.0
+      },
+      "terrain_grass_variant_04": {
+        "sha256": "84ce24683e62bb951b3660c56090ae9a6eee38ddf153965a7f0ed59419e73f82",
+        "dimensions": [
+          256,
+          128
+        ],
+        "mode": "RGBA",
+        "alphaPixels": 18635,
+        "alphaBounds": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt32": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "alphaBoundsAt128": [
+          0,
+          0,
+          256,
+          128
+        ],
+        "paintedWidthPercent": 100.0,
+        "paintedHeightPercent": 100.0
+      }
+    }
+  },
+  "tiling": {
+    "logicalTilePx": [
+      128,
+      64
+    ],
+    "fourByFour": {
+      "status": "PASS",
+      "evidence": "reviews/terrain-tiled-4x4-review-v2.png",
+      "stepX": 128,
+      "stepY": 64,
+      "width": 1104,
+      "height": 592
+    },
+    "eightByEight": {
+      "status": "PASS",
+      "evidence": "reviews/terrain-tiled-8x8-review-v2.png",
+      "stepX": 77,
+      "stepY": 38,
+      "width": 1280,
+      "height": 657
+    },
+    "boundaryProbe": "PASS",
+    "seamMetrics": {
+      "thresholdAlpha": 32,
+      "eastJoinMaxGapPx": 2,
+      "westJoinMaxGapPx": 0,
+      "eastRowsOver3px": 0,
+      "westRowsOver3px": 0,
+      "tolerancePx": 3,
+      "status": "PASS"
+    },
+    "notes": "Wide diamond fills the locked footprint; diagonal joins are continuous at the 128/64 logical placement step."
+  },
+  "runtimeReadability": {
+    "status": "PASS",
+    "evidence": [
+      "reviews/terrain-runtime-size-comparison-v2.png",
+      "reviews/terrain-dpr-runtime-review-v2.png"
+    ],
+    "sizes": [
+      "100%",
+      "75%",
+      "50%",
+      "37.5%"
+    ],
+    "dpr": [
+      1,
+      2,
+      1.3
+    ],
+    "mobile": "PASS"
+  },
+  "evidence": {
+    "singleTile": "reviews/terrain-single-tile-review-v2.png",
+    "tiled4x4": "reviews/terrain-tiled-4x4-review-v2.png",
+    "tiled8x8": "reviews/terrain-tiled-8x8-review-v2.png",
+    "runtimeSizes": "reviews/terrain-runtime-size-comparison-v2.png",
+    "dprRuntime": "reviews/terrain-dpr-runtime-review-v2.png"
+  },
+  "promotion": {
+    "status": "NOT_PROMOTED",
+    "assetsSrcModified": false,
+    "productionManifestModified": false
+  }
+}

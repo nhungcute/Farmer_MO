@@ -27,13 +27,13 @@
   "styleReview": "PENDING",
   "approvalRef": null,
   "generated": 5,
-  "notes": "Wave 2 candidate workspace only. Integration Owner is the only actor allowed to promote into assets-src/**.",
+  "notes": "Revision 2: re-rendered wide source footprint; candidate remains isolated pending Integration Owner review.",
   "sourceGroups": {
-    "terrain_grass_tile": "work/art-generation/terrain/source/terrain-master.png",
-    "terrain_grass_variant_01": "work/art-generation/terrain/source/terrain-master.png",
-    "terrain_grass_variant_02": "work/art-generation/terrain/source/terrain-master.png",
-    "terrain_grass_variant_03": "work/art-generation/terrain/source/terrain-master.png",
-    "terrain_grass_variant_04": "work/art-generation/terrain/source/terrain-master.png"
+    "terrain_grass_tile": "work/art-generation/terrain/source/terrain-master-revision2.png",
+    "terrain_grass_variant_01": "work/art-generation/terrain/source/terrain-master-revision2.png",
+    "terrain_grass_variant_02": "work/art-generation/terrain/source/terrain-master-revision2.png",
+    "terrain_grass_variant_03": "work/art-generation/terrain/source/terrain-master-revision2.png",
+    "terrain_grass_variant_04": "work/art-generation/terrain/source/terrain-master-revision2.png"
   },
   "frameMetadata": {
     "terrain_grass_tile": {
@@ -50,20 +50,32 @@
       "technicalReview": "PASS",
       "styleReview": "PENDING",
       "approvalRef": null,
-      "sourceGroup": "source/terrain-master.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
       "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_tile.png",
-      "sha256": "76cc171164e91efd552baaab137978e030ae495cb50fe375bbdf8de0e392da5e",
+      "sha256": "f661340f262ab107f9d2a75a86b36508ca1ce620a95380fbbd7d94110a5ef68c",
       "width": 256,
       "height": 128,
       "expectedWidth": 256,
       "expectedHeight": 128,
       "mode": "RGBA",
-      "alphaPixels": 9379,
+      "alphaPixels": 18635,
       "alphaBounds": [
-        54,
-        7,
-        210,
-        119
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt32": [
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt128": [
+        0,
+        0,
+        256,
+        128
       ]
     },
     "terrain_grass_variant_01": {
@@ -80,20 +92,32 @@
       "technicalReview": "PASS",
       "styleReview": "PENDING",
       "approvalRef": null,
-      "sourceGroup": "source/terrain-master.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
       "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_01.png",
-      "sha256": "22cce4200d55fc2a8d074eae0c67abc5a64938352a594cc7553bb64fde2e6063",
+      "sha256": "ebe2cc94f403326613da92c3837aa37b48994e96b472254b6e5c10a867a4e600",
       "width": 256,
       "height": 128,
       "expectedWidth": 256,
       "expectedHeight": 128,
       "mode": "RGBA",
-      "alphaPixels": 9379,
+      "alphaPixels": 18635,
       "alphaBounds": [
-        54,
-        7,
-        210,
-        119
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt32": [
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt128": [
+        0,
+        0,
+        256,
+        128
       ]
     },
     "terrain_grass_variant_02": {
@@ -110,20 +134,32 @@
       "technicalReview": "PASS",
       "styleReview": "PENDING",
       "approvalRef": null,
-      "sourceGroup": "source/terrain-master.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
       "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_02.png",
-      "sha256": "7a3fd11906a4a0a361b4115e39d3bcdedabd8966dd86f477e21eda65fa993efa",
+      "sha256": "e31a4bfd71877a51f776c40d3d8db5fc081cd5818cd6418435242a00437612d6",
       "width": 256,
       "height": 128,
       "expectedWidth": 256,
       "expectedHeight": 128,
       "mode": "RGBA",
-      "alphaPixels": 9379,
+      "alphaPixels": 18635,
       "alphaBounds": [
-        54,
-        7,
-        210,
-        119
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt32": [
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt128": [
+        0,
+        0,
+        256,
+        128
       ]
     },
     "terrain_grass_variant_03": {
@@ -140,20 +176,32 @@
       "technicalReview": "PASS",
       "styleReview": "PENDING",
       "approvalRef": null,
-      "sourceGroup": "source/terrain-master.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
       "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_03.png",
-      "sha256": "e821e70290c5acfb138532932ec483b4663d1dd5351f723c3562485fb56bcdee",
+      "sha256": "89235cf474c8c842304a6f4bcc14633e7b628ce2c0a5d5698c595a04a555aa16",
       "width": 256,
       "height": 128,
       "expectedWidth": 256,
       "expectedHeight": 128,
       "mode": "RGBA",
-      "alphaPixels": 9379,
+      "alphaPixels": 18635,
       "alphaBounds": [
-        54,
-        7,
-        210,
-        119
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt32": [
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt128": [
+        0,
+        0,
+        256,
+        128
       ]
     },
     "terrain_grass_variant_04": {
@@ -170,21 +218,34 @@
       "technicalReview": "PASS",
       "styleReview": "PENDING",
       "approvalRef": null,
-      "sourceGroup": "source/terrain-master.png",
+      "sourceGroup": "source/terrain-master-revision2.png",
       "sourceFile": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_04.png",
-      "sha256": "b8ad12748b32973e8f03dabdeeadb824dc53140a808efd4863c4ed44249d4282",
+      "sha256": "84ce24683e62bb951b3660c56090ae9a6eee38ddf153965a7f0ed59419e73f82",
       "width": 256,
       "height": 128,
       "expectedWidth": 256,
       "expectedHeight": 128,
       "mode": "RGBA",
-      "alphaPixels": 9379,
+      "alphaPixels": 18635,
       "alphaBounds": [
-        54,
-        7,
-        210,
-        119
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt32": [
+        0,
+        0,
+        256,
+        128
+      ],
+      "alphaBoundsAt128": [
+        0,
+        0,
+        256,
+        128
       ]
     }
-  }
+  },
+  "revision": 2
 }
