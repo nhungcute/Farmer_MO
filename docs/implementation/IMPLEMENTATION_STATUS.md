@@ -16,9 +16,9 @@ Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundati
 | Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
 | Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. Commit baseline trước khi bổ sung CI gate: `789f037` đã push lên `origin/main`; commit hiện tại xem bằng Git.
+Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. Commit baseline trước khi bổ sung CI gate: `789f037` đã push lên `origin/main`; CI gate integration commit: `628f7cd`; commit hiện tại xem bằng Git.
 
-CI reproducibility gate đã bổ sung các job PostgreSQL repository/runtime, C02/C03 browser, và D02 load/backup-restore. Local analog đã PASS: PostgreSQL 20/20, C02 Chromium 1/1, C03 mobile-pwa 3/3, D02 load và backup/restore 15 bảng. GitHub Actions run sẽ là bằng chứng remote sau khi commit được push.
+CI reproducibility gate đã bổ sung các job PostgreSQL repository/runtime, C02/C03 browser, và D02 load/backup-restore. Local analog đã PASS: PostgreSQL 20/20, C02 Chromium 1/1, C03 mobile-pwa 3/3, D02 load và backup/restore 15 bảng. GitHub Actions run `36660295559` cho commit `628f7cd` đã PASS 5/5 job: [CI run](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559).
 
 ## Đang chạy và review
 
@@ -30,8 +30,8 @@ CI reproducibility gate đã bổ sung các job PostgreSQL repository/runtime, C
 | D01 | Observability/performance instrumentation | 8/8 | Root/infrastructure | baseline | `apps/api/src/observability/**`, renderer debug metrics, instrumentation tests/docs | REVIEW |
 | A02 | PostgreSQL API runtime wiring | 8/8 | Root/backend integration | A01 REVIEW | apps/api/src/server.mjs, migration CLI, API Docker/Compose integration, integration tests | REVIEW |
 | A03 | Transaction/concurrency integration gate | 6/6 | Backend workstream | A02 REVIEW | apps/api/test/postgres, task note | REVIEW |
-| C02 | Functional Playwright E2E tren PostgreSQL | 10/10 | QA/Web integration | A02 + C01 REVIEW | tests/e2e/c02-postgres.spec.mjs, harness/config | REVIEW |
-| C03 | Mobile/PWA/accessibility QA | 8/8 | QA/Web integration | C01 + C02 REVIEW | tests/e2e/c03-mobile-pwa.spec.mjs, styles/accessibility, task note | REVIEW |
+| C02 | Functional Playwright E2E tren PostgreSQL | 9/9 | QA/Web integration | A02 + C01 REVIEW | tests/e2e/c02-postgres.spec.mjs, harness/config | REVIEW |
+| C03 | Mobile/PWA/accessibility QA | 9/9 | QA/Web integration | C01 + C02 REVIEW | tests/e2e/c03-mobile-pwa.spec.mjs, styles/accessibility, task note | REVIEW |
 | D02 | Load test và backup/restore drill | 7/7 | Runtime/infrastructure | A02 + A03 + D01 REVIEW | tools/load-test, tools/backup-restore, task note | REVIEW |
 
 Các task RUNNING không được sửa shared canonical contract đồng thời. `package.json`, `package-lock.json`, `compose.yaml`, `.env.example`, `packages/content/index.mjs`, migration entry point, main web bootstrap và CI workflow do root quản lý khi cần tích hợp.
@@ -41,7 +41,7 @@ Các task RUNNING không được sửa shared canonical contract đồng thời
 | Task ID | Tên | Checklist | Phụ thuộc | Trạng thái |
 |---|---|---:|---|---|
 | B02 | Production artwork replacement | 5/8 | B01 + artwork được duyệt | BLOCKED — chưa có artwork production |
-| E01 | Cloudflare Named Tunnel | 0/6 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
+| E01 | Cloudflare Named Tunnel | 0/12 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
 | RC01 | Release Candidate checklist | 0/12 | A03, B02, C03, D02, E01 | QUEUED |
 
 ## Ranh giới còn lại
