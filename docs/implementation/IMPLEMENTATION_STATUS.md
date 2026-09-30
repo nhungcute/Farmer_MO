@@ -16,7 +16,9 @@ Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundati
 | Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
 | Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. HEAD/origin: `00264cc` đã push lên `origin/main`.
+Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. Commit baseline trước khi bổ sung CI gate: `789f037` đã push lên `origin/main`; commit hiện tại xem bằng Git.
+
+CI reproducibility gate đã bổ sung các job PostgreSQL repository/runtime, C02/C03 browser, và D02 load/backup-restore. Local analog đã PASS: PostgreSQL 20/20, C02 Chromium 1/1, C03 mobile-pwa 3/3, D02 load và backup/restore 15 bảng. GitHub Actions run sẽ là bằng chứng remote sau khi commit được push.
 
 ## Đang chạy và review
 

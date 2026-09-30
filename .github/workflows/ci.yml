@@ -60,3 +60,228 @@ jobs:
       - name: Tear down integration services
         if: always()
         run: docker compose down -v
+
+  postgres-runtime-gate:
+    name: PostgreSQL repository and runtime gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: quality
+    services:
+      postgres:
+        image: postgres:16.4-alpine
+        env:
+          POSTGRES_DB: mo_farm_test
+          POSTGRES_USER: mo_farm
+          POSTGRES_PASSWORD: change_me
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U mo_farm -d mo_farm_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      POSTGRES_TEST_URL: postgresql://mo_farm:change_me@127.0.0.1:5432/mo_farm_test
+      RUN_POSTGRES_INTEGRATION: '1'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run PostgreSQL repository, integration and concurrency tests
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run test:api:postgres 2>&1 | tee postgres-runtime-tests.log
+
+      - name: Upload PostgreSQL test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: postgres-runtime-test-log
+          path: postgres-runtime-tests.log
+          if-no-files-found: warn
+          retention-days: 7
+
+  postgres-browser-gate:
+    name: PostgreSQL Playwright C02 and C03 gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    needs: [quality, postgres-runtime-gate]
+    services:
+      postgres:
+        image: postgres:16.4-alpine
+        env:
+          POSTGRES_DB: mo_farm_e2e
+          POSTGRES_USER: mo_farm
+          POSTGRES_PASSWORD: change_me
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U mo_farm -d mo_farm_e2e"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      CI: 'true'
+      RUN_POSTGRES_E2E: '1'
+      PW_PERSISTENCE_DRIVER: postgres
+      PW_DATABASE_URL: postgresql://mo_farm:change_me@127.0.0.1:5432/mo_farm_e2e
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install pinned Chrome for Playwright
+        run: npx playwright install --with-deps chrome
+
+      - name: Run C02 PostgreSQL E2E on desktop Chromium
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run e2e -- --project=chromium --reporter=line tests/e2e/c02-postgres.spec.mjs 2>&1 | tee c02-postgres-e2e.log
+
+      - name: Run C03 mobile PWA E2E on mobile-pwa
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run e2e -- --project=mobile-pwa --reporter=line tests/e2e/c03-mobile-pwa.spec.mjs 2>&1 | tee c03-mobile-pwa-e2e.log
+
+      - name: Upload Playwright logs and failure artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: postgres-playwright-artifacts
+          path: |
+            c02-postgres-e2e.log
+            c03-mobile-pwa-e2e.log
+            test-results/e2e
+            playwright-report
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Stop any remaining E2E harness
+        if: always()
+        shell: bash
+        run: pkill -f '[t]ests/e2e/harness.mjs' || true
+
+  postgres-operational-gate:
+    name: PostgreSQL D02 load and backup/restore gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [quality, postgres-runtime-gate]
+    services:
+      postgres-source:
+        image: postgres:16.4-alpine
+        env:
+          POSTGRES_DB: mo_farm_d02
+          POSTGRES_USER: mo_farm
+          POSTGRES_PASSWORD: change_me
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U mo_farm -d mo_farm_d02"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+      postgres-target:
+        image: postgres:16.4-alpine
+        env:
+          POSTGRES_DB: mo_farm_d02_restore
+          POSTGRES_USER: mo_farm
+          POSTGRES_PASSWORD: change_me
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U mo_farm -d mo_farm_d02_restore"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      D02_SOURCE_DATABASE_URL: postgresql://mo_farm:change_me@127.0.0.1:5432/mo_farm_d02
+      D02_TARGET_DATABASE_URL: postgresql://mo_farm:change_me@127.0.0.1:5433/mo_farm_d02_restore
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Migrate disposable source and target databases and start API
+        shell: bash
+        run: |
+          set -euo pipefail
+          PERSISTENCE_DRIVER=postgres DATABASE_URL="$D02_SOURCE_DATABASE_URL" node apps/api/src/migrate.mjs 2>&1 | tee d02-source-migration.log
+          PERSISTENCE_DRIVER=postgres DATABASE_URL="$D02_TARGET_DATABASE_URL" node apps/api/src/migrate.mjs 2>&1 | tee d02-target-migration.log
+          nohup env PERSISTENCE_DRIVER=postgres DATABASE_URL="$D02_SOURCE_DATABASE_URL" PORT=3001 HOST=127.0.0.1 SESSION_SECRET=ci-d02-session-secret-01234567890123456789 node apps/api/src/server.mjs > d02-api.log 2>&1 &
+          echo $! > d02-api.pid
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error http://127.0.0.1:3001/api/health/ready > d02-readiness.json; then
+              break
+            fi
+            sleep 1
+          done
+          test -s d02-readiness.json
+          node -e "const data=require('./d02-readiness.json'); if (data.checks?.persistenceDriver !== 'postgres' || data.checks?.persistenceReady !== true) throw new Error('D02 API readiness is not PostgreSQL-ready: '+JSON.stringify(data));"
+
+      - name: Run D02 PostgreSQL bounded load probe
+        shell: bash
+        run: |
+          set -o pipefail
+          LOAD_TEST_DATABASE_URL="$D02_SOURCE_DATABASE_URL" LOAD_TEST_API_URL=http://127.0.0.1:3001 node tools/load-test/postgres-runtime.mjs 2>&1 | tee d02-load.log
+
+      - name: Run D02 PostgreSQL backup and restore drill
+        shell: bash
+        run: |
+          set -o pipefail
+          BACKUP_SOURCE_DATABASE_URL="$D02_SOURCE_DATABASE_URL" \
+          BACKUP_TARGET_DATABASE_URL="$D02_TARGET_DATABASE_URL" \
+          BACKUP_DUMP_PATH=artifacts/d02/mo-farm-ci.dump \
+          BACKUP_KEEP_DUMP=1 \
+          BACKUP_USE_DOCKER=1 \
+          node tools/backup-restore/postgres-drill.mjs 2>&1 | tee d02-backup-restore.log
+
+      - name: Upload D02 logs and backup artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: postgres-operational-gate-artifacts
+          path: |
+            d02-source-migration.log
+            d02-target-migration.log
+            d02-readiness.json
+            d02-api.log
+            d02-load.log
+            d02-backup-restore.log
+            artifacts/d02/mo-farm-ci.dump
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Stop D02 API and remove disposable dump
+        if: always()
+        shell: bash
+        run: |
+          if test -s d02-api.pid; then
+            kill "$(cat d02-api.pid)" 2>/dev/null || true
+            sleep 1
+          fi
+          rm -rf artifacts/d02
