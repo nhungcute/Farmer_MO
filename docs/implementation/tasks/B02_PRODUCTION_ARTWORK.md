@@ -22,10 +22,10 @@
 
 | Subtask | Trạng thái | Evidence |
 |---|---|---|
-| B02.1 — Production Art Style Lock | REVIEW — style guide đã soạn, chờ asset/art owner xác nhận | [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) |
+| B02.1 — Production Art Style Lock | DONE — style direction approved with minor production notes | [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) |
 | B02.2 — Golden Asset: Chicken | BLOCKED — contract đã khóa nhưng chưa có 92 production frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md), 92 placeholder vẫn giữ nguyên |
-| B02.2-PROOF — Chicken proof checkpoint | REVIEW — 11 frame proof kỹ thuật đã kiểm tra; chờ style/art owner, không phải production | [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md), [`CHICKEN_PROOF_QA.json`](../../assets/review/CHICKEN_PROOF_QA.json) |
-| B02.2-FULL — Chicken production set | QUEUED — chỉ mở sau khi proof được owner duyệt; vẫn cần đủ 92 frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
+| B02.2-PROOF — Chicken proof checkpoint | REVIEW — Revision 2 technical evidence đã kiểm tra; chờ final owner review, không phải production | [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md), [`CHICKEN_PROOF_QA.json`](../../assets/review/CHICKEN_PROOF_QA.json) |
+| B02.2-FULL — Chicken production set | QUEUED — chỉ mở sau khi Revision 2 được final owner duyệt; vẫn cần đủ 92 frame | [`CHICKEN_PRODUCTION_CONTRACT.md`](../../assets/CHICKEN_PRODUCTION_CONTRACT.md) |
 
 ## Checklist
 
@@ -49,10 +49,11 @@
 - `assets-src/style/style-sheet.md` xác nhận đây là placeholder style sheet và nêu rõ toàn bộ asset hiện tại không phải production art.
 - Không tìm thấy bằng chứng release artwork, commercial/open-source license có thể dùng cho production, art-director style sign-off hoặc approval record.
 - Không tự tạo/thay PNG và không thay đổi manifest contract trong khi blocker còn tồn tại.
-- B02.1 đã khóa perspective, palette direction, lighting, alpha, scale, motion, mobile readability và approval model; B02.1 chưa chuyển `DONE` trước khi asset/art owner review.
+- B02.1 đã khóa perspective, palette direction, lighting, alpha, scale, motion, mobile readability và approval model; style direction đã được owner xác nhận `APPROVED WITH MINOR REVISIONS`, nên B02.1 chuyển `DONE`.
 - B02.2 đã khóa contract Chicken 92 frame, sáu state, bốn direction, canvas `256 × 256`, anchor `0.5,0.9`, `mirrorAllowed=false` và `FEED_CONSUMED@2`; chưa có candidate production để chuyển sang `REVIEW`.
-- B02.2-PROOF là checkpoint kỹ thuật độc lập ở `REVIEW`: chỉ có 11 frame proof ngoài `assets-src`, không thay manifest/atlas, không đặt `production_ready` hoặc `approved` và không làm thay đổi trạng thái BLOCKED của B02 production.
-- B02.2-FULL vẫn `QUEUED`; dừng ở đây để chờ asset/art owner duyệt style trước khi tạo 92 frame production.
+- B02.2-PROOF là checkpoint kỹ thuật độc lập ở `REVIEW`: chỉ có 13 frame proof Revision 2 ngoài `assets-src`, không thay manifest/atlas, không đặt `production_ready` hoặc `approved` và không làm thay đổi trạng thái BLOCKED của B02 production.
+- B02.2-FULL vẫn `QUEUED`; dừng ở đây để chờ final owner review Revision 2 trước khi tạo 92 frame production.
+- B02.2-PROOF Revision 2 đã có 13 frame, scale comparison, EAT 5-frame strip, runtime-size comparison, Pixi/mobile/stress evidence; final owner review vẫn `PENDING` và không mở B02.2-FULL.
 
 ## Contract audit
 

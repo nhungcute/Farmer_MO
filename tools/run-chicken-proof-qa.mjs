@@ -39,9 +39,11 @@ for (const viewport of viewports) {
   await page.selectOption('#state', 'EAT');
   await page.selectOption('#direction', 'SE');
   await page.waitForFunction(() => document.querySelector('#status')?.textContent.includes('FEED_CONSUMED@2'));
-  const eatStatus = await page.locator('#status').textContent();
-  result.proofPreview.viewports.push({ ...viewport, ...initial, eatStatus, errors });
-  result.proofPreview.eatEvent ||= eatStatus.includes('FEED_CONSUMED@2');
+  const eatEventStatus = await page.locator('#status').textContent();
+  await page.waitForFunction(() => document.querySelector('#status')?.textContent.includes('khung 5/5'));
+  const eatFinalStatus = await page.locator('#status').textContent();
+  result.proofPreview.viewports.push({ ...viewport, ...initial, eatEventStatus, eatFinalStatus, eatFrameCount: 5, errors });
+  result.proofPreview.eatEvent ||= eatEventStatus.includes('FEED_CONSUMED@2');
   result.proofPreview.errors.push(...errors);
   await page.close();
 }
@@ -89,6 +91,7 @@ const failures = [
     ...(item.horizontalOverflow ? ['stress viewport overflow'] : []),
   ]),
   ...(result.proofPreview.eatEvent ? [] : ['FEED_CONSUMED@2 not observed']),
+  ...(result.proofPreview.viewports.every((item) => item.eatFinalStatus.includes('khung 5/5') && item.eatEventStatus.includes('FEED_CONSUMED@2')) ? [] : ['EAT preview did not expose five frames']),
 ];
 if (failures.length > 0) {
   console.error(JSON.stringify({ failures }, null, 2));

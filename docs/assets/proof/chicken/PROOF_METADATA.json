@@ -1,19 +1,53 @@
 {
-  "proofVersion": "B02.2-PROOF-v1",
+  "proofVersion": "B02.2-PROOF-v2",
+  "revisionOf": "B02.2-PROOF-v1",
   "status": "candidate",
   "placeholder": true,
   "runtimeAsset": false,
   "production_ready": false,
   "productionReady": false,
   "approved": false,
-  "source": "internal generated visual proof; not copied into production source tree",
-  "creator": "Codex via OpenAI built-in image generation tool",
-  "tool": "built-in image_gen",
-  "toolVersion": "not exposed by tool",
+  "styleDirectionApproval": "APPROVED_WITH_MINOR_REVISIONS",
+  "source": "Revision 2 proof derived from the owner-approved Chicken concept; two EAT in-between frames generated against the existing proof references",
+  "creator": "Codex via OpenAI built-in image generation tool and local proof normalization",
+  "tool": "built-in image_gen plus Pillow normalization",
+  "toolVersion": "image generation tool version not exposed; Pillow runtime local",
   "license": "PENDING_OWNER_REVIEW",
-  "contentVersion": "mvp-1",
+  "contentVersion": "mvp-1-revision-2",
   "styleGuideVersion": "B02.1-2026-09-30",
   "contractVersion": "B02.2-2026-09-30",
+  "revisionNotes": [
+    "Uniformly normalized direction proof scale while preserving proportions; baseline remains y=230.",
+    "Reduced small feather/high-frequency detail with an alpha-preserving low-pass pass and reduced highlight intensity.",
+    "Reduced glossy/specular emphasis while preserving the approved palette, silhouette and soft volume.",
+    "Expanded EAT SE proof to five ordered frames with FEED_CONSUMED on contract frame 2."
+  ],
+  "frameProvenance": {
+    "chicken-proof-eat-se-01.png": {
+      "source": "internal generated in-between proof",
+      "references": ["chicken-proof-eat-se-00.png", "chicken-proof-eat-se-02.png"],
+      "tool": "built-in image_gen followed by local normalization"
+    },
+    "chicken-proof-eat-se-03.png": {
+      "source": "internal generated in-between proof",
+      "references": ["chicken-proof-eat-se-02.png", "chicken-proof-eat-se-04.png"],
+      "tool": "built-in image_gen followed by local normalization"
+    }
+  },
+  "identityLock": {
+    "locked": true,
+    "concept": "same Chicken concept; no redesign",
+    "elements": [
+      "eye design",
+      "comb topology",
+      "beak shape",
+      "feather palette",
+      "wing motif",
+      "tail motif",
+      "leg color",
+      "overall proportion"
+    ]
+  },
   "canvas": {
     "width": 256,
     "height": 256
@@ -35,10 +69,19 @@
       "loop": true,
       "holdLast": false,
       "directions": {
-        "NE": ["chicken-proof-idle-ne-00.png"],
-        "SE": ["chicken-proof-idle-se-00.png", "chicken-proof-idle-se-01.png"],
-        "SW": ["chicken-proof-idle-sw-00.png"],
-        "NW": ["chicken-proof-idle-nw-00.png"]
+        "NE": [
+          "chicken-proof-idle-ne-00.png"
+        ],
+        "SE": [
+          "chicken-proof-idle-se-00.png",
+          "chicken-proof-idle-se-01.png"
+        ],
+        "SW": [
+          "chicken-proof-idle-sw-00.png"
+        ],
+        "NW": [
+          "chicken-proof-idle-nw-00.png"
+        ]
       }
     },
     "WALK": {
@@ -60,16 +103,106 @@
       "directions": {
         "SE": [
           "chicken-proof-eat-se-00.png",
+          "chicken-proof-eat-se-01.png",
           "chicken-proof-eat-se-02.png",
+          "chicken-proof-eat-se-03.png",
           "chicken-proof-eat-se-04.png"
         ]
       },
       "event": {
         "name": "FEED_CONSUMED",
         "contractFrame": 2,
-        "proofIndex": 1
+        "proofIndex": 2
       }
     }
+  },
+  "directionScale": {
+    "status": "PASS",
+    "method": "uniform source normalization plus side-by-side guide sheet; body dimensions are conservative alpha-inclusive proxies, head values are explicit visual guide diameters",
+    "targetTolerance": {
+      "bodyPerceivedHeightPercent": 4,
+      "bodyPerceivedWidthPercent": 5,
+      "headDiameterPercent": 4
+    },
+    "mean": {
+      "bodyProxyWidth": 153.5,
+      "bodyProxyHeight": 196.0,
+      "headGuideDiameter": 86.5
+    },
+    "actual": {
+      "NE": {
+        "bodyProxyWidth": 151,
+        "bodyProxyHeight": 196,
+        "headGuideDiameter": 88,
+        "alphaBBox": [
+          52,
+          34,
+          203,
+          230
+        ]
+      },
+      "SE": {
+        "bodyProxyWidth": 147,
+        "bodyProxyHeight": 196,
+        "headGuideDiameter": 84,
+        "alphaBBox": [
+          54,
+          34,
+          201,
+          230
+        ]
+      },
+      "SW": {
+        "bodyProxyWidth": 158,
+        "bodyProxyHeight": 196,
+        "headGuideDiameter": 86,
+        "alphaBBox": [
+          49,
+          34,
+          207,
+          230
+        ]
+      },
+      "NW": {
+        "bodyProxyWidth": 158,
+        "bodyProxyHeight": 196,
+        "headGuideDiameter": 88,
+        "alphaBBox": [
+          49,
+          34,
+          207,
+          230
+        ]
+      }
+    },
+    "baselineY": 230,
+    "anchor": {
+      "x": 128,
+      "y": 230
+    },
+    "evidence": "chicken-direction-scale-comparison-v2.png",
+    "limitations": "Proxy boxes include visible outline/shadow/feet; final art owner should confirm perceived body volume visually."
+  },
+  "microDetailReduction": {
+    "status": "PASS",
+    "targetPercent": [
+      15,
+      25
+    ],
+    "method": "alpha-masked grayscale FIND_EDGES mean-energy comparison against v1 for the 11 shared frames; visual runtime-size sheet is supplementary evidence",
+    "meanEdgeEnergyReductionPercent": 21.83,
+    "perFrameRangePercent": [
+      13.72,
+      27.91
+    ],
+    "evidence": "chicken-runtime-size-comparison-v2.png",
+    "limitations": "Edge energy is a technical proxy and does not replace final art-owner visual review."
+  },
+  "shading": {
+    "status": "PASS",
+    "method": "alpha-masked high-luminance pixel proxy plus visual review of specular/high-frequency highlight reduction",
+    "highLuminanceReductionPercent": 92.27,
+    "result": "soft illustrated volume retained; glossy/specular emphasis reduced; palette unchanged"
   },
   "frames": [
     {
@@ -87,6 +220,13 @@
       "event": null
     },
     {
+      "file": "chicken-proof-idle-se-01.png",
+      "state": "IDLE",
+      "direction": "SE",
+      "frame": 1,
+      "event": null
+    },
+    {
       "file": "chicken-proof-idle-sw-00.png",
       "state": "IDLE",
       "direction": "SW",
@@ -98,13 +238,6 @@
       "state": "IDLE",
       "direction": "NW",
       "frame": 0,
-      "event": null
-    },
-    {
-      "file": "chicken-proof-idle-se-01.png",
-      "state": "IDLE",
-      "direction": "SE",
-      "frame": 1,
       "event": null
     },
     {
@@ -136,6 +269,13 @@
       "event": null
     },
     {
+      "file": "chicken-proof-eat-se-01.png",
+      "state": "EAT",
+      "direction": "SE",
+      "frame": 1,
+      "event": null
+    },
+    {
       "file": "chicken-proof-eat-se-02.png",
       "state": "EAT",
       "direction": "SE",
@@ -146,6 +286,13 @@
       }
     },
     {
+      "file": "chicken-proof-eat-se-03.png",
+      "state": "EAT",
+      "direction": "SE",
+      "frame": 3,
+      "event": null
+    },
+    {
       "file": "chicken-proof-eat-se-04.png",
       "state": "EAT",
       "direction": "SE",
@@ -153,21 +300,114 @@
       "event": null
     }
   ],
+  "eatMotion": {
+    "status": "PASS",
+    "fps": 10,
+    "loop": false,
+    "holdLast": true,
+    "orderedFrames": [
+      {
+        "file": "chicken-proof-eat-se-00.png",
+        "alphaBBox": [
+          33,
+          40,
+          223,
+          230
+        ],
+        "centroid": {
+          "x": 118.13,
+          "y": 139.28
+        }
+      },
+      {
+        "file": "chicken-proof-eat-se-01.png",
+        "alphaBBox": [
+          36,
+          40,
+          219,
+          230
+        ],
+        "centroid": {
+          "x": 114.95,
+          "y": 144.99
+        }
+      },
+      {
+        "file": "chicken-proof-eat-se-02.png",
+        "alphaBBox": [
+          40,
+          40,
+          217,
+          230
+        ],
+        "centroid": {
+          "x": 119.45,
+          "y": 143.75
+        }
+      },
+      {
+        "file": "chicken-proof-eat-se-03.png",
+        "alphaBBox": [
+          40,
+          40,
+          217,
+          230
+        ],
+        "centroid": {
+          "x": 122.2,
+          "y": 132.78
+        }
+      },
+      {
+        "file": "chicken-proof-eat-se-04.png",
+        "alphaBBox": [
+          56,
+          40,
+          200,
+          230
+        ],
+        "centroid": {
+          "x": 131.79,
+          "y": 133.56
+        }
+      }
+    ],
+    "sequence": "frame 0→1→2 lowers head/body; frame 2 contact emits FEED_CONSUMED; frame 3→4 returns upward",
+    "continuityReview": {
+      "bodyPop": false,
+      "headScaleJump": false,
+      "torsoWidthTeleport": false,
+      "feetTeleport": false,
+      "shadowJump": false
+    },
+    "event": {
+      "name": "FEED_CONSUMED",
+      "contractFrame": 2,
+      "proofIndex": 2
+    },
+    "evidence": "chicken-eat-se-strip-v2.png"
+  },
   "qa": {
-    "technicalReview": "PASS for technical proof normalization: all 11 files are RGBA 256x256 with transparent margin and alpha baseline y=230 (anchor-compatible .5,.9). Pixi/mobile/performance evidence is recorded in CHICKEN_PROOF_QA.json.",
-    "styleReview": "PENDING_OWNER",
+    "technicalReview": "PASS — Revision 2 image, baseline, Pixi/mobile/stress and command evidence recorded in CHICKEN_PROOF_QA.json",
+    "styleReview": "PENDING_FINAL_OWNER_REVIEW",
     "ownerApproval": "PENDING",
     "approvalRef": null,
     "anchorBaseline": {
       "targetBottomPixel": 230,
       "tolerancePixels": 0,
       "method": "alpha bounding-box bottom aligned to y=230 on 256x256 canvas"
-    },
-    "directionHashes": "Recorded in CHICKEN_PROOF_QA.json; distinct files are used for NE, SE, SW and NW rather than mirroring."
+    }
+  },
+  "evidence": {
+    "directionScaleComparison": "docs/assets/review/chicken-direction-scale-comparison-v2.png",
+    "eatStrip": "docs/assets/review/chicken-eat-se-strip-v2.png",
+    "runtimeSizeComparison": "docs/assets/review/chicken-runtime-size-comparison-v2.png",
+    "pixiPreview": "docs/assets/review/chicken-proof-preview.html",
+    "qa": "docs/assets/review/CHICKEN_PROOF_QA.json"
   },
   "limitations": [
-    "Proof has 11 frames; it is not the 92-frame production Chicken set.",
-    "Proof files live outside assets-src and are not included in production atlas generation.",
-    "Production replacement remains blocked until owner accepts style and supplies/approves full source evidence."
+    "Revision 2 remains a proof candidate outside assets-src; it is not the 92-frame production Chicken set.",
+    "Style direction is approved with minor revisions; final owner review of Revision 2 evidence is still pending.",
+    "No production atlas, manifest, renderer, runtime, gameplay, economy or backend changes are included."
   ]
 }

@@ -41,7 +41,7 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 - RUNNING: none; C03 and D02 have DONE evidence; B02 audit is blocked on approved production artwork.
 - REVIEW: none for A01/A02/A03/B01/C01/C02/C03/D01/D02; parent review completed with local and remote CI evidence.
 - DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02; API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
-- REVIEW subtask: B02.1 style lock đã soạn tại `docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md`, chờ asset/art owner xác nhận; B02.2 contract tại `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` đã khóa nhưng chưa có production frame.
-- REVIEW checkpoint: B02.2-PROOF đã có 11 frame kỹ thuật ngoài `assets-src`, Pixi/mobile/stress evidence tại `docs/assets/review/CHICKEN_PROOF_QA.json`; checkpoint này không mở khóa B02 production.
+- REVIEW subtask: B02.1 style direction đã `DONE` với owner kết luận `APPROVED WITH MINOR REVISIONS`; B02.2 production contract tại `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` vẫn khóa và chưa có đủ production frame.
+- REVIEW checkpoint: B02.2-PROOF Revision 2 đã có 13 frame kỹ thuật ngoài `assets-src`, scale/EAT/Pixi/mobile/stress evidence tại `docs/assets/review/CHICKEN_PROOF_QA.json`; checkpoint này không mở khóa B02 production và final owner review vẫn `PENDING`.
 - QUEUED checkpoint: B02.2-FULL vẫn chờ owner duyệt proof rồi mới tạo đủ 92 frame production; giữ nguyên manifest, atlas, renderer và animation runtime.
 - BLOCKED: B02 production art nếu chưa có artwork được duyệt; E01 Cloudflare cho tới khi các gate upstream PASS.

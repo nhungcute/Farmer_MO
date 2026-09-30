@@ -42,7 +42,7 @@
       <li>Đủ bốn hướng kiểm tra: NE, SE, SW, NW.</li>
       <li>IDLE hướng SE: 2 khung.</li>
       <li>WALK hướng SE: 3 khung.</li>
-      <li>EAT hướng SE: 3 khung; khung 2 có <code>FEED_CONSUMED</code>.</li>
+      <li>EAT hướng SE: đủ 5 khung; khung 2 có <code>FEED_CONSUMED</code>.</li>
       <li>Không lật ảnh, không tự cắt khung, không atlas chạy thật.</li>
     </ul>
   </article>
@@ -62,7 +62,13 @@ const clips = {
     SE: ['chicken-proof-walk-se-00.png', 'chicken-proof-walk-se-01.png', 'chicken-proof-walk-se-02.png'],
   },
   EAT: {
-    SE: ['chicken-proof-eat-se-00.png', 'chicken-proof-eat-se-02.png', 'chicken-proof-eat-se-04.png'],
+    SE: [
+      'chicken-proof-eat-se-00.png',
+      'chicken-proof-eat-se-01.png',
+      'chicken-proof-eat-se-02.png',
+      'chicken-proof-eat-se-03.png',
+      'chicken-proof-eat-se-04.png',
+    ],
   },
 };
 const fps = { IDLE: 6, WALK: 8, EAT: 10 };
@@ -72,6 +78,7 @@ const directionSelect = document.querySelector('#direction');
 const toggle = document.querySelector('#toggle');
 const status = document.querySelector('#status');
 const root = document.querySelector('#pixi-root');
+window.__chickenProofEatFrameCount = 5;
 Object.keys(clips).forEach((state) => stateSelect.append(new Option(stateLabels[state], state)));
 ['NE', 'SE', 'SW', 'NW'].forEach((direction) => directionSelect.append(new Option(direction, direction)));
 stateSelect.value = 'IDLE';
@@ -108,7 +115,7 @@ async function renderFrame() {
   sprite.visible = true;
   frameIndex = Math.min(frameIndex, currentClip.length - 1);
   sprite.texture = await textureFor(currentClip[frameIndex]);
-  const event = state === 'EAT' && frameIndex === 1 ? ' · FEED_CONSUMED@2' : '';
+  const event = state === 'EAT' && frameIndex === 2 ? ' · FEED_CONSUMED@2' : '';
   status.textContent = `${state} / ${direction} · khung ${frameIndex + 1}/${currentClip.length} · ${fps[state]} FPS${event}`;
 }
 

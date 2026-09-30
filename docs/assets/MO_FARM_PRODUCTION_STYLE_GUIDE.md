@@ -2,7 +2,7 @@
 
 | Trường | Giá trị |
 |---|---|
-| Trạng thái | LOCKED FOR CHICKEN GOLDEN ASSET REVIEW |
+| Trạng thái | DONE — APPROVED WITH MINOR REVISIONS |
 | Phạm vi | B02.1 style lock và B02.2 Chicken production candidate |
 | Source of truth kỹ thuật | `assets-src/manifests/animation-manifest.json` |
 | Asset contract | `assets-src/style/style-sheet.md`, `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` |
@@ -198,3 +198,5 @@ B02.1 chỉ được chuyển `DONE` khi style guide này được owner xác nh
 - metadata/license/approval model.
 
 B02.1 không tự đóng B02 tổng và không mở E01/RC01.
+
+Owner review Revision 2 xác nhận style direction `APPROVED WITH MINOR REVISIONS`: concept Chicken, palette, facial identity, silhouette, lighting, shadow, canvas và anchor được giữ nguyên. Các minor revisions còn lại thuộc B02.2-PROOF Revision 2 (scale consistency, micro-detail, shading và EAT motion), không thay đổi style contract.

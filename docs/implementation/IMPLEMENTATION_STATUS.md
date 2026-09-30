@@ -44,9 +44,9 @@ Các task RUNNING không được sửa shared canonical contract đồng thời
 | E01 | Cloudflare Named Tunnel | 0/12 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
 | RC01 | Release Candidate checklist | 0/12 | A03, B02, C03, D02, E01 | QUEUED |
 
-B02 subtask checkpoint: **B02.1 style lock đang `REVIEW`** sau khi tạo [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md); **B02.2 Chicken contract đã khóa nhưng `BLOCKED`** vì 92 production frame, license/source evidence và owner approval chưa có. Không chuyển B02 tổng sang `DONE`, không mở E01/RC01 và không bắt đầu crop/building/pond trước khi Chicken được review.
+B02 subtask checkpoint: **B02.1 style direction đã `DONE` với owner kết luận `APPROVED WITH MINOR REVISIONS`** sau khi tạo [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md); **B02.2 Chicken production contract vẫn `BLOCKED`** vì 92 production frame, license/source evidence và final owner approval chưa có. Không chuyển B02 tổng sang `DONE`, không mở E01/RC01 và không bắt đầu crop/building/pond.
 
-B02.2 proof checkpoint: **`B02.2-PROOF` đang `REVIEW`** với 11 frame ngoài production, Pixi preview, scale desktop/mobile và stress evidence ở [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md). Đây chỉ là technical checkpoint; **`B02.2-FULL` vẫn `QUEUED`**, B02 tổng vẫn `BLOCKED`, chưa thay asset placeholder và chưa có style/art owner approval. Không tạo 92 frame còn lại cho tới khi owner duyệt proof.
+B02.2 proof checkpoint: **`B02.2-PROOF Revision 2` đang `REVIEW`** với 13 frame ngoài production, scale comparison, EAT 5-frame proof, Pixi preview, mobile/stress evidence ở [`CHICKEN_GOLDEN_ASSET_REVIEW.md`](../assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md). Đây chỉ là technical checkpoint; **`B02.2-FULL` vẫn `QUEUED`**, B02 tổng vẫn `BLOCKED`, chưa thay asset placeholder và final owner review vẫn `PENDING`. Không tạo 92 frame còn lại cho tới khi owner duyệt proof Revision 2.
 
 ## Ranh giới còn lại
 

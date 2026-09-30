@@ -201,4 +201,4 @@ B02.2 chỉ chuyển sang `REVIEW` khi tất cả điều kiện đạt:
 
 Nếu thiếu production source hoặc approval evidence, giữ `BLOCKED`. Không bắt đầu crop, building, pond hoặc E01/RC01 từ contract này.
 
-`B02.2-PROOF` là checkpoint kỹ thuật riêng cho 11 frame proof ngoài `assets-src`; trạng thái `REVIEW` của checkpoint này không thay thế điều kiện `REVIEW` của B02.2 production ở trên. Chỉ `B02.2-FULL` với đủ 92 frame, source/license evidence và style/release approval mới mở production replacement.
+`B02.2-PROOF` là checkpoint kỹ thuật riêng ngoài `assets-src` (Revision 1 có 11 frame, Revision 2 có 13 frame); trạng thái `REVIEW` của checkpoint này không thay thế điều kiện `REVIEW` của B02.2 production ở trên. Chỉ `B02.2-FULL` với đủ 92 frame, source/license evidence và style/release approval mới mở production replacement.

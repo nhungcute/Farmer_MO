@@ -1,6 +1,6 @@
 {
-  "qaVersion": "B02.2-PROOF-QA-v1",
-  "generatedAt": "2026-09-30T06:08:12.643Z",
+  "qaVersion": "B02.2-PROOF-QA-v2",
+  "generatedAt": "2026-09-30T07:05:42.811456+00:00",
   "browser": "Google Chrome via Playwright executablePath",
   "proofPreview": {
     "viewports": [
@@ -8,36 +8,44 @@
         "width": 932,
         "height": 430,
         "canvas": true,
-        "status": "IDLE / SE · khung 1/2 · 6 FPS",
+        "status": "IDLE / SE · khung 2/2 · 6 FPS",
         "horizontalOverflow": false,
-        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+        "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+        "eatFrameCount": 5,
         "errors": []
       },
       {
         "width": 915,
         "height": 412,
         "canvas": true,
-        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "status": "IDLE / SE · khung 1/2 · 6 FPS",
         "horizontalOverflow": false,
-        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+        "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+        "eatFrameCount": 5,
         "errors": []
       },
       {
         "width": 844,
         "height": 390,
         "canvas": true,
-        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "status": "IDLE / SE · khung 1/2 · 6 FPS",
         "horizontalOverflow": false,
-        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+        "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+        "eatFrameCount": 5,
         "errors": []
       },
       {
         "width": 740,
         "height": 360,
         "canvas": true,
-        "status": "IDLE / SE · khung 2/2 · 6 FPS",
+        "status": "IDLE / SE · khung 1/2 · 6 FPS",
         "horizontalOverflow": false,
-        "eatStatus": "EAT / SE · khung 2/3 · 10 FPS · FEED_CONSUMED@2",
+        "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+        "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+        "eatFrameCount": 5,
         "errors": []
       }
     ],
@@ -85,9 +93,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 61.9,
+            "fps": 61.2,
             "dpr": 1,
-            "memory": "8.0 MB"
+            "memory": "8.1 MB"
           },
           "errors": []
         },
@@ -98,7 +106,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 62.1,
+            "fps": 61.2,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -111,7 +119,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 60.8,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -124,7 +132,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 1,
-            "fps": 61.9,
+            "fps": 61,
             "dpr": 1,
             "memory": "8.1 MB"
           },
@@ -139,9 +147,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 61,
+            "fps": 60.9,
             "dpr": 1,
-            "memory": "7.8 MB"
+            "memory": "7.9 MB"
           },
           "errors": []
         },
@@ -165,7 +173,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 61.1,
+            "fps": 60.9,
             "dpr": 1,
             "memory": "7.9 MB"
           },
@@ -178,9 +186,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 25,
-            "fps": 61,
+            "fps": 60.9,
             "dpr": 1,
-            "memory": "7.8 MB"
+            "memory": "7.9 MB"
           },
           "errors": []
         }
@@ -193,7 +201,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 61.1,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -206,7 +214,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.9,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -219,7 +227,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.9,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -232,7 +240,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 50,
-            "fps": 60.9,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.2 MB"
           },
@@ -247,9 +255,9 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 61,
+            "fps": 60.9,
             "dpr": 1,
-            "memory": "8.6 MB"
+            "memory": "7.5 MB"
           },
           "errors": []
         },
@@ -260,7 +268,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 61.1,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.6 MB"
           },
@@ -273,7 +281,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 61,
+            "fps": 60.8,
             "dpr": 1,
             "memory": "8.6 MB"
           },
@@ -286,7 +294,7 @@
           "horizontalOverflow": false,
           "snapshot": {
             "count": 100,
-            "fps": 60.9,
+            "fps": 60.7,
             "dpr": 1,
             "memory": "8.6 MB"
           },
@@ -296,31 +304,287 @@
     },
     "errors": []
   },
+  "revision2": {
+    "ownerStyleDirection": "APPROVED_WITH_MINOR_REVISIONS",
+    "directionScale": {
+      "status": "PASS",
+      "method": "uniform source normalization plus side-by-side guide sheet; body dimensions are conservative alpha-inclusive proxies, head values are explicit visual guide diameters",
+      "targetTolerance": {
+        "bodyPerceivedHeightPercent": 4,
+        "bodyPerceivedWidthPercent": 5,
+        "headDiameterPercent": 4
+      },
+      "mean": {
+        "bodyProxyWidth": 153.5,
+        "bodyProxyHeight": 196.0,
+        "headGuideDiameter": 86.5
+      },
+      "actual": {
+        "NE": {
+          "bodyProxyWidth": 151,
+          "bodyProxyHeight": 196,
+          "headGuideDiameter": 88,
+          "alphaBBox": [
+            52,
+            34,
+            203,
+            230
+          ]
+        },
+        "SE": {
+          "bodyProxyWidth": 147,
+          "bodyProxyHeight": 196,
+          "headGuideDiameter": 84,
+          "alphaBBox": [
+            54,
+            34,
+            201,
+            230
+          ]
+        },
+        "SW": {
+          "bodyProxyWidth": 158,
+          "bodyProxyHeight": 196,
+          "headGuideDiameter": 86,
+          "alphaBBox": [
+            49,
+            34,
+            207,
+            230
+          ]
+        },
+        "NW": {
+          "bodyProxyWidth": 158,
+          "bodyProxyHeight": 196,
+          "headGuideDiameter": 88,
+          "alphaBBox": [
+            49,
+            34,
+            207,
+            230
+          ]
+        }
+      },
+      "baselineY": 230,
+      "anchor": {
+        "x": 128,
+        "y": 230
+      },
+      "evidence": "chicken-direction-scale-comparison-v2.png",
+      "limitations": "Proxy boxes include visible outline/shadow/feet; final art owner should confirm perceived body volume visually."
+    },
+    "microDetail": {
+      "status": "PASS",
+      "targetPercent": [
+        15,
+        25
+      ],
+      "method": "alpha-masked grayscale FIND_EDGES mean-energy comparison against v1 for the 11 shared frames; visual runtime-size sheet is supplementary evidence",
+      "meanEdgeEnergyReductionPercent": 21.83,
+      "perFrameRangePercent": [
+        13.72,
+        27.91
+      ],
+      "evidence": "chicken-runtime-size-comparison-v2.png",
+      "limitations": "Edge energy is a technical proxy and does not replace final art-owner visual review."
+    },
+    "shading": {
+      "status": "PASS",
+      "method": "alpha-masked high-luminance pixel proxy plus visual review of specular/high-frequency highlight reduction",
+      "highLuminanceReductionPercent": 92.27,
+      "result": "soft illustrated volume retained; glossy/specular emphasis reduced; palette unchanged"
+    },
+    "eatMotion": {
+      "status": "PASS",
+      "fps": 10,
+      "loop": false,
+      "holdLast": true,
+      "orderedFrames": [
+        {
+          "file": "chicken-proof-eat-se-00.png",
+          "alphaBBox": [
+            33,
+            40,
+            223,
+            230
+          ],
+          "centroid": {
+            "x": 118.13,
+            "y": 139.28
+          }
+        },
+        {
+          "file": "chicken-proof-eat-se-01.png",
+          "alphaBBox": [
+            36,
+            40,
+            219,
+            230
+          ],
+          "centroid": {
+            "x": 114.95,
+            "y": 144.99
+          }
+        },
+        {
+          "file": "chicken-proof-eat-se-02.png",
+          "alphaBBox": [
+            40,
+            40,
+            217,
+            230
+          ],
+          "centroid": {
+            "x": 119.45,
+            "y": 143.75
+          }
+        },
+        {
+          "file": "chicken-proof-eat-se-03.png",
+          "alphaBBox": [
+            40,
+            40,
+            217,
+            230
+          ],
+          "centroid": {
+            "x": 122.2,
+            "y": 132.78
+          }
+        },
+        {
+          "file": "chicken-proof-eat-se-04.png",
+          "alphaBBox": [
+            56,
+            40,
+            200,
+            230
+          ],
+          "centroid": {
+            "x": 131.79,
+            "y": 133.56
+          }
+        }
+      ],
+      "sequence": "frame 0→1→2 lowers head/body; frame 2 contact emits FEED_CONSUMED; frame 3→4 returns upward",
+      "continuityReview": {
+        "bodyPop": false,
+        "headScaleJump": false,
+        "torsoWidthTeleport": false,
+        "feetTeleport": false,
+        "shadowJump": false
+      },
+      "event": {
+        "name": "FEED_CONSUMED",
+        "contractFrame": 2,
+        "proofIndex": 2
+      },
+      "evidence": "chicken-eat-se-strip-v2.png"
+    },
+    "feedConsumed": {
+      "status": "PASS",
+      "contractFrame": 2,
+      "proofIndex": 2,
+      "event": "FEED_CONSUMED"
+    },
+    "baseline": {
+      "status": "PASS",
+      "targetY": 230,
+      "observedBottomPixels": [
+        230
+      ],
+      "jitterPixels": 0,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9
+      }
+    },
+    "pixiEatFiveFrame": {
+      "status": "PASS",
+      "frameCount": 5,
+      "fps": 10,
+      "loop": false,
+      "holdLast": true,
+      "viewports": [
+        {
+          "width": 932,
+          "height": 430,
+          "canvas": true,
+          "status": "IDLE / SE · khung 2/2 · 6 FPS",
+          "horizontalOverflow": false,
+          "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+          "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+          "eatFrameCount": 5,
+          "errors": []
+        },
+        {
+          "width": 915,
+          "height": 412,
+          "canvas": true,
+          "status": "IDLE / SE · khung 1/2 · 6 FPS",
+          "horizontalOverflow": false,
+          "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+          "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+          "eatFrameCount": 5,
+          "errors": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "canvas": true,
+          "status": "IDLE / SE · khung 1/2 · 6 FPS",
+          "horizontalOverflow": false,
+          "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+          "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+          "eatFrameCount": 5,
+          "errors": []
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "canvas": true,
+          "status": "IDLE / SE · khung 1/2 · 6 FPS",
+          "horizontalOverflow": false,
+          "eatEventStatus": "EAT / SE · khung 3/5 · 10 FPS · FEED_CONSUMED@2",
+          "eatFinalStatus": "EAT / SE · khung 5/5 · 10 FPS",
+          "eatFrameCount": 5,
+          "errors": []
+        }
+      ]
+    },
+    "identityLock": {
+      "locked": true,
+      "concept": "same Chicken concept; no redesign",
+      "elements": [
+        "eye design",
+        "comb topology",
+        "beak shape",
+        "feather palette",
+        "wing motif",
+        "tail motif",
+        "leg color",
+        "overall proportion"
+      ]
+    },
+    "styleApproval": "PENDING_FINAL_OWNER_REVIEW",
+    "fullProduction92": "NOT_STARTED"
+  },
   "imageProof": {
-    "frameCount": 11,
+    "frameCount": 13,
     "all256x256RGBA": true,
     "allTransparentMargins": true,
-    "anchor": {
-      "x": 0.5,
-      "y": 0.9
-    },
     "baselineTargetY": 230,
     "baselineBottomPixels": [
       230
     ],
     "baselineJitterPixels": 0,
     "directionHashes": {
-      "NE": "05ca1101280db2a7f786d9a26a29191d226b38e7bb22b39bcfd6e4da33836cdd",
-      "SE": "847e8e931cca5285a92b3e67063520a2942affc9a475f76c30bec88638b9b695",
-      "SW": "5e75ca29e6a12323049a185204bd3a5b2542e177fa5474cb7228d672fe40f56b",
-      "NW": "14f47da9db33e73a8e164ca7b6a02ab0b74532ce911cd5f009671f7670a3a019"
+      "NE": "f67f044d4e5a8ab61526360cd77904dfa43e1a9eb44871d6f9762a96274524e2",
+      "SE": "5bc9f511383a2d2eb7bf8799e38efb7bed690f55ce4863246dc0bf68eea137df",
+      "SW": "07de7f1f5f93c9a03bf168d8d5aec3c60ecfe899c4e17853f3e0c633ab30eafd",
+      "NW": "d8213da4680a68313e7b8249d951f1fad9f0285d877c462cd13cc4347cdcbb5e"
     },
     "directionsDistinct": true,
-    "event": {
-      "name": "FEED_CONSUMED",
-      "contractFrame": 2,
-      "proofFile": "chicken-proof-eat-se-02.png"
-    },
     "frames": [
       {
         "file": "chicken-proof-idle-ne-00.png",
@@ -331,12 +595,12 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          49,
-          20,
-          211,
+          52,
+          34,
+          203,
           230
         ],
-        "sha256": "05ca1101280db2a7f786d9a26a29191d226b38e7bb22b39bcfd6e4da33836cdd"
+        "sha256": "f67f044d4e5a8ab61526360cd77904dfa43e1a9eb44871d6f9762a96274524e2"
       },
       {
         "file": "chicken-proof-idle-se-00.png",
@@ -347,44 +611,12 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          57,
-          43,
-          197,
-          230
-        ],
-        "sha256": "847e8e931cca5285a92b3e67063520a2942affc9a475f76c30bec88638b9b695"
-      },
-      {
-        "file": "chicken-proof-idle-sw-00.png",
-        "state": "IDLE",
-        "direction": "SW",
-        "frame": 0,
-        "width": 256,
-        "height": 256,
-        "mode": "RGBA",
-        "alphaBBox": [
-          61,
-          39,
-          215,
-          230
-        ],
-        "sha256": "5e75ca29e6a12323049a185204bd3a5b2542e177fa5474cb7228d672fe40f56b"
-      },
-      {
-        "file": "chicken-proof-idle-nw-00.png",
-        "state": "IDLE",
-        "direction": "NW",
-        "frame": 0,
-        "width": 256,
-        "height": 256,
-        "mode": "RGBA",
-        "alphaBBox": [
-          55,
+          54,
           34,
-          213,
+          201,
           230
         ],
-        "sha256": "14f47da9db33e73a8e164ca7b6a02ab0b74532ce911cd5f009671f7670a3a019"
+        "sha256": "5bc9f511383a2d2eb7bf8799e38efb7bed690f55ce4863246dc0bf68eea137df"
       },
       {
         "file": "chicken-proof-idle-se-01.png",
@@ -395,12 +627,44 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          55,
-          38,
+          52,
+          34,
           203,
           230
         ],
-        "sha256": "ccc3a92609d38d7c1ad64412b6289a360d4111ebe4f93e4872f2863fa2f409de"
+        "sha256": "a728061c04f6bccaf6c070b9c5f257eb26b437cb44efffc63073fcfacfa78226"
+      },
+      {
+        "file": "chicken-proof-idle-sw-00.png",
+        "state": "IDLE",
+        "direction": "SW",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          49,
+          34,
+          207,
+          230
+        ],
+        "sha256": "07de7f1f5f93c9a03bf168d8d5aec3c60ecfe899c4e17853f3e0c633ab30eafd"
+      },
+      {
+        "file": "chicken-proof-idle-nw-00.png",
+        "state": "IDLE",
+        "direction": "NW",
+        "frame": 0,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          49,
+          34,
+          207,
+          230
+        ],
+        "sha256": "d8213da4680a68313e7b8249d951f1fad9f0285d877c462cd13cc4347cdcbb5e"
       },
       {
         "file": "chicken-proof-walk-se-00.png",
@@ -411,12 +675,12 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          53,
-          41,
-          212,
+          46,
+          34,
+          211,
           230
         ],
-        "sha256": "a8df0316f93c4ad523580fbe1cbe3bb064b7f7313d994f776f75b5d5a5554086"
+        "sha256": "66703b93e063bfe4eb7600375d033e70994b9a7976a89bbcf0ea6e7f0358b44e"
       },
       {
         "file": "chicken-proof-walk-se-01.png",
@@ -427,12 +691,12 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          55,
-          40,
-          202,
+          52,
+          34,
+          204,
           230
         ],
-        "sha256": "213933dfd5de0cb812648c96773c1f66327c57ab7612063380b19c740b25e324"
+        "sha256": "2b650abdf2f4a49b6690f3b1556d10b138306e6a778b42e0c47e896b08d3089a"
       },
       {
         "file": "chicken-proof-walk-se-02.png",
@@ -443,12 +707,12 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          55,
-          37,
-          202,
+          54,
+          34,
+          203,
           230
         ],
-        "sha256": "6948e21aba4a678a9e9f681111dd3624a3e40b36c331248319bff778f197890b"
+        "sha256": "e1a118d16ac15c873e80a39e6d2c0280883db157778bb2e956fcfb5c819d2d47"
       },
       {
         "file": "chicken-proof-eat-se-00.png",
@@ -459,12 +723,28 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          48,
-          54,
-          224,
+          33,
+          40,
+          223,
           230
         ],
-        "sha256": "c28e7cd1374b9ae22c2f27a8b7d7dca547fac1eea0cbad8c7f1f37c48e67f59f"
+        "sha256": "5b2320739f0f8673f2fd4bc06b0d3a38222086f230a24b4b801a90b72a4db0e6"
+      },
+      {
+        "file": "chicken-proof-eat-se-01.png",
+        "state": "EAT",
+        "direction": "SE",
+        "frame": 1,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          36,
+          40,
+          219,
+          230
+        ],
+        "sha256": "25c810785a6ee4bddccf6051919287f050f01ff500bc77cf9b3e914736d0d93a"
       },
       {
         "file": "chicken-proof-eat-se-02.png",
@@ -475,12 +755,28 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          42,
           40,
-          219,
+          40,
+          217,
           230
         ],
-        "sha256": "bfeb592fff2108890a5c8351819ed1dd54430944f78b209b4c494c5001469e7c"
+        "sha256": "a75a464206fe7809820fed13d55faa468b32eee9155b4660cf9da14f9514a0cb"
+      },
+      {
+        "file": "chicken-proof-eat-se-03.png",
+        "state": "EAT",
+        "direction": "SE",
+        "frame": 3,
+        "width": 256,
+        "height": 256,
+        "mode": "RGBA",
+        "alphaBBox": [
+          40,
+          40,
+          217,
+          230
+        ],
+        "sha256": "8033711fb87e6e0e072f19d5c6715243cf73162ca46e926015bbedd79f5060d7"
       },
       {
         "file": "chicken-proof-eat-se-04.png",
@@ -491,13 +787,23 @@
         "height": 256,
         "mode": "RGBA",
         "alphaBBox": [
-          55,
-          36,
-          202,
+          56,
+          40,
+          200,
           230
         ],
-        "sha256": "0ba520559a97ec1d1a8f97c324a580aa1c746a2671c17c51e12e44638a9fff72"
+        "sha256": "c9e30ac548675d5e5b44215129de81ea24c496c6c185b6d17b474df6f2eae945"
       }
     ]
-  }
+  },
+  "technicalCommands": {
+    "npm run check": "PASS",
+    "npm run renderer:test": "PASS (16/16)",
+    "npm run assets:validate": "PASS (188 assets, 10 animations)",
+    "npm run assets:validate:strict": "PASS (188 assets, 10 animations)",
+    "docker compose config --quiet": "PASS",
+    "git diff --check": "PASS"
+  },
+  "styleApproval": "PENDING_FINAL_OWNER_REVIEW",
+  "fullProduction92": "NOT_STARTED"
 }
