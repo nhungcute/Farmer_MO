@@ -16,7 +16,7 @@ Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundati
 | Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
 | Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. HEAD/origin: `4b5dc1f` đã push lên `origin/main`.
+Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. HEAD/origin: `00264cc` đã push lên `origin/main`.
 
 ## Đang chạy và review
 
