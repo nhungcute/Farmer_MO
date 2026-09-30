@@ -26,7 +26,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | A02 | PostgreSQL API runtime wiring | DONE |
 | A03 | Transaction/concurrency integration gate | DONE |
 | B01 | Production asset inventory/replacement contract | DONE |
-| B02 | Production artwork replacement | **RUNNING - Wave 1 content approved; release blocked by license owner input; 76 placeholders remain** |
+| B02 | Production artwork replacement | **RUNNING - Wave 1 content/license/release approved; 76 placeholders remain** |
 | C01 | Playwright setup và E2E foundation | DONE |
 | C02 | Functional Playwright E2E trên PostgreSQL | DONE |
 | C03 | Mobile/PWA/accessibility QA | DONE |
@@ -52,8 +52,8 @@ Inventory:
 - 188 canonical source assets
 - 112 production_ready
 - 76 placeholder
-- 0 approved
-- license của 112 asset là PENDING_OWNER_REVIEW
+- 112 approved
+- license của 112 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1
 
 Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json, docs/assets/review/FINAL_OWNER_REVIEW_V2.md, docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 
@@ -61,7 +61,8 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 - npm run assets:build: PASS.
 - npm run assets:validate: PASS — 188 assets, 10 animations.
-- npm run assets:validate:strict: PASS — cảnh báo license pending được mong đợi.
+- npm run assets:validate:strict: PASS — 112 Wave 1 entries đã được policy/license approval.
+- npm run assets:validate:wave1: PASS — 112/112 policy-approved, runtime/sidecar parity, 76 placeholder bất biến.
 - npm run renderer:test: PASS — 16/16.
 - npm run check: PASS.
 - docker compose config --quiet: PASS.
@@ -70,9 +71,9 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Giới hạn và bước kế tiếp
 
-B02 remains RUNNING: Wave 1 content is APPROVED by Project Owner, but the license input is missing; blocker=LICENSE_POLICY_OWNER_INPUT_REQUIRED. Do not set approved=true, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
+B02 remains RUNNING because 76 assets are still placeholders. Wave 1 content, license, and release approval are APPROVED by Project Owner; do not approve assets outside Wave 1, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
 
-Wave 2, Cloudflare Named Tunnel, and RC01 remain CLOSED/NOT STARTED. The only next step is Project Owner license value/policy input and license approval before evaluating the release gate.
+Wave 2, Cloudflare Named Tunnel, and RC01 remain CLOSED/NOT_STARTED. The next step is to wait for Project Owner instruction to open Wave 2; this approval does not make the whole game production-ready.
 
 ## Quy tắc cập nhật
 

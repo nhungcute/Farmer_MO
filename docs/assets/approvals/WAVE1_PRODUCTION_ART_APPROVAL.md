@@ -10,9 +10,9 @@
 | Content approval | **APPROVED** |
 | Owner | Project Owner |
 | Provenance | VERIFIED — source/tool/creator metadata được ghi theo nguồn thực tế |
-| License approval | **PENDING_OWNER_INPUT** |
-| Release approval | **BLOCKED** — chỉ APPROVED sau khi license approval hoàn tất |
-| Approval reference | Chưa ghi vào asset metadata cho tới khi release approval hoàn tất |
+| License approval | **APPROVED** — `MO_FARM_INTERNAL_ASSET_POLICY_V1` |
+| Release approval | **APPROVED** |
+| Approval reference | `docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md` |
 
 Machine-readable approval gate:
 
@@ -25,10 +25,10 @@ styleReview=PASS
 contentApproval=APPROVED
 owner=Project Owner
 provenance=VERIFIED
-licenseApproval=PENDING_OWNER_INPUT
-releaseApproval=BLOCKED
-approvalRef=null (until release approval)
-blocker=LICENSE_POLICY_OWNER_INPUT_REQUIRED
+license=MO_FARM_INTERNAL_ASSET_POLICY_V1
+licenseApproval=APPROVED
+releaseApproval=APPROVED
+approvalRef=docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md
 ```
 
 ## Phạm vi được owner duyệt
@@ -45,16 +45,16 @@ Technical và style review của 112/112 candidate đều PASS. Cross-asset revi
 
 ## License gate
 
-Repository có canonical metadata/approval policy trong [MO_FARM_PRODUCTION_STYLE_GUIDE.md](../MO_FARM_PRODUCTION_STYLE_GUIDE.md) và `tools/asset-inventory.mjs`, nhưng chưa có license value được Project Owner xác nhận cho các generated artwork này. Không sử dụng package license (MIT/Apache/BSD) để suy diễn license của artwork và không tự chọn MIT, Apache-2.0, CC0, CC-BY hoặc giá trị khác.
+License policy canonical được Project Owner xác nhận là [MO_FARM_INTERNAL_ASSET_POLICY_V1](../licenses/MO_FARM_INTERNAL_ASSET_POLICY_V1.md). Policy này chỉ áp dụng cho artwork có `source=internal-generated` trong scope Wave 1. Không sử dụng package license (MIT/Apache/BSD) để suy diễn license của artwork.
 
 Metadata production vì vậy được giữ nguyên:
 
 ```text
-license=PENDING_OWNER_REVIEW
-licenseApproval=PENDING_OWNER_INPUT
-approved=false
-approvalRef=null
-releaseApproval=BLOCKED
+license=MO_FARM_INTERNAL_ASSET_POLICY_V1
+licenseApproval=APPROVED
+approved=true
+approvalRef=docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md
+releaseApproval=APPROVED
 ```
 
 Provenance đã ghi theo nguồn thực tế:
@@ -73,11 +73,12 @@ Carrot/Corn/Tomato tool=image_gen.imagegen
 ```text
 total=188
 production_ready=112
-approved=0
+approved=112
 placeholder=76
+licensePending=0 (within Wave 1)
 ```
 
-Không thay đổi 76 placeholder còn lại. Không set `approved=true` cho 112 asset khi chưa có license policy/value và license approval rõ ràng.
+Không thay đổi 76 placeholder còn lại. Không set `approved=true` cho bất kỳ asset nào ngoài Wave 1.
 
 ## Evidence
 
@@ -87,9 +88,10 @@ Không thay đổi 76 placeholder còn lại. Không set `approved=true` cho 112
 - [Canonical animation manifest](../../../assets-src/manifests/animation-manifest.json)
 - [Canonical license manifest](../../../assets-src/manifests/licenses.json)
 - [Canonical metadata and approval policy](../MO_FARM_PRODUCTION_STYLE_GUIDE.md)
+- [MO_FARM_INTERNAL_ASSET_POLICY_V1](../licenses/MO_FARM_INTERNAL_ASSET_POLICY_V1.md)
 
 ## Blocker và bước tiếp theo
 
-Blocker duy nhất của release approval là `LICENSE_POLICY_OWNER_INPUT_REQUIRED`. Project Owner cần cung cấp canonical license policy/value và xác nhận license approval. Sau khi đủ xác nhận, Integration Owner mới được cập nhật 112 asset với `approved=true`, `approvalRef` trỏ về file này và chạy lại validation đầy đủ.
+License policy và release approval của 112 asset đã được Project Owner xác nhận. Integration Owner cập nhật đúng 112 asset theo policy này và giữ nguyên 76 placeholder còn lại.
 
 Wave 2, Pond/Building/Effects/Terrain/UI, Cloudflare Named Tunnel và RC01 vẫn đóng.

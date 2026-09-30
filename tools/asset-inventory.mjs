@@ -71,6 +71,14 @@ function statusCounts(rows) {
   return Object.fromEntries(STATUS_ORDER.map((status) => [status, rows.filter((row) => row.status === status).length]));
 }
 
+function metadataCounts(rows) {
+  return {
+    placeholder: rows.filter((row) => row.placeholder === true || row.status === 'placeholder').length,
+    production_ready: rows.filter((row) => row.productionReady === true).length,
+    approved: rows.filter((row) => row.approved === true).length,
+  };
+}
+
 const assets = Object.entries(manifest.assets || {}).map(([id, metadata]) => {
   const category = classifyAsset(id);
   if (!category) throw new Error(`Asset has no inventory category: ${id}`);
@@ -79,6 +87,8 @@ const assets = Object.entries(manifest.assets || {}).map(([id, metadata]) => {
     id,
     category,
     status: statusFor(metadata),
+    productionReady: metadata.production_ready === true,
+    approved: metadata.approved === true,
     ...source,
     replacementInvariants: {
       id,
@@ -127,6 +137,9 @@ const animations = Object.entries(manifest.animations || {}).map(([id, animation
     id,
     category,
     status: frameAssets.every((asset) => asset.status === 'approved') ? 'approved' : frameAssets.every((asset) => asset.status !== 'placeholder') ? 'production_ready' : 'placeholder',
+    placeholder: frameAssets.some((asset) => asset.placeholder === true),
+    productionReady: frameAssets.every((asset) => asset.productionReady === true),
+    approved: frameAssets.every((asset) => asset.approved === true),
     atlas: animation.atlas,
     directions: [...animation.directions],
     defaultDirection: animation.defaultDirection,
@@ -154,24 +167,31 @@ const categories = Object.fromEntries(CATEGORY_ORDER.map((category) => {
   const categoryAssets = assets.filter((asset) => asset.category === category);
   const categoryAnimations = animations.filter((animation) => animation.category === category);
   const statuses = [...categoryAssets, ...categoryAnimations];
-  return [category, {
-    status: statuses.length && statuses.every((row) => row.status === 'approved')
+  const hasPlaceholder = statuses.some((row) => row.status === 'placeholder');
+  const hasApproved = statuses.some((row) => row.status === 'approved');
+  const hasProductionReady = statuses.some((row) => row.status === 'production_ready');
+  const status = hasPlaceholder && (hasApproved || hasProductionReady)
+    ? 'mixed'
+    : hasApproved
       ? 'approved'
-      : statuses.length && statuses.every((row) => row.status !== 'placeholder')
+      : hasProductionReady
         ? 'production_ready'
-        : 'placeholder',
+        : 'placeholder';
+  return [category, {
+    status,
     assetCount: categoryAssets.length,
     animationCount: categoryAnimations.length,
     assetIds: categoryAssets.map((asset) => asset.id),
     animationIds: categoryAnimations.map((animation) => animation.id),
     statusCounts: statusCounts(statuses),
+    metadataCounts: metadataCounts(statuses),
   }];
 }));
 
 const replacementContract = {
   statusDefinitions: {
     placeholder: 'Generated/internal art. Not eligible for production release.',
-    production_ready: 'Replacement art supplied with license, style, technical validation, and source evidence; explicit content approval is still pending.',
+    production_ready: 'Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval.',
     approved: 'Production-ready replacement explicitly approved for the target release.',
   },
   invariants: [
@@ -200,6 +220,7 @@ const inventory = {
     animations: animations.length,
     categories: CATEGORY_ORDER.length,
     statusCounts: statusCounts(assets),
+    metadataCounts: metadataCounts(assets),
     allCurrentAssetsPlaceholder: assets.every((asset) => asset.status === 'placeholder'),
   },
   categories,
@@ -211,6 +232,7 @@ const inventory = {
     'node tools/export-assets/index.mjs validate',
     'node tools/export-assets/index.mjs pack',
     'node tools/export-assets/validate.mjs --strict-output',
+    'npm run assets:validate:wave1',
     'node tools/check-renderer-syntax.mjs',
     'npm run check',
   ],
@@ -239,15 +261,17 @@ const markdown = [
   '',
   `Canonical source: \`${inventory.manifestPath}\` (SHA-256 \`${inventory.manifestSha256}\`).`,
   '',
-  'This inventory is generated from the current canonical manifest. Every current source asset is an internal deterministic placeholder and remains ineligible for production approval until replaced and reviewed.',
+  `This inventory is generated from the current canonical manifest. It contains ${inventory.counts.metadataCounts.production_ready} production_ready assets, ${inventory.counts.metadataCounts.approved} approved assets, and ${inventory.counts.metadataCounts.placeholder} placeholders.`,
   '',
   '## Status',
   '',
   markdownTable([
-    { status: 'placeholder', count: inventory.counts.statusCounts.placeholder, meaning: inventory.replacementContract.statusDefinitions.placeholder },
-    { status: 'production_ready', count: inventory.counts.statusCounts.production_ready, meaning: inventory.replacementContract.statusDefinitions.production_ready },
-    { status: 'approved', count: inventory.counts.statusCounts.approved, meaning: inventory.replacementContract.statusDefinitions.approved },
+    { status: 'placeholder', count: inventory.counts.metadataCounts.placeholder, meaning: inventory.replacementContract.statusDefinitions.placeholder },
+    { status: 'production_ready', count: inventory.counts.metadataCounts.production_ready, meaning: inventory.replacementContract.statusDefinitions.production_ready },
+    { status: 'approved', count: inventory.counts.metadataCounts.approved, meaning: inventory.replacementContract.statusDefinitions.approved },
   ], [{ label: 'Status', value: (row) => `\`${row.status}\`` }, { label: 'Current count', value: (row) => row.count }, { label: 'Meaning', value: (row) => row.meaning }]),
+  '',
+  '`production_ready` is a technical/provenance flag; `approved` records release approval, so an approved asset is counted in both columns.',
   '',
   `Current totals: **${assets.length} source assets**, **${animations.length} animation contracts**, **${CATEGORY_ORDER.length} categories**.`,
   '',

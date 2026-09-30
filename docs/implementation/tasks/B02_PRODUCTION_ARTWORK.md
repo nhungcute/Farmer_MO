@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | ID | B02 |
-| Trạng thái | RUNNING - Wave 1 content approved; release blocked by license owner input; 76 placeholders remain |
+| Trạng thái | RUNNING - Wave 1 content/license/release approved; 76 placeholders remain |
 | Owner | Asset workstream / Integration Owner |
 | Phụ thuộc | B01 DONE; canonical manifest và style guide |
 | Owned paths | assets-src/** sau promote; docs/assets/**; work/art-generation/** theo từng owner |
@@ -11,7 +11,7 @@
 | Deliverables | 112/112 Wave 1 production candidates, owner QA, cross-asset V2 review, atlas/runtime promotion |
 | Bắt đầu | 2026-09-30 |
 | Hoàn tất kỹ thuật | 2026-09-30 |
-| Release approval | BLOCKED - LICENSE_POLICY_OWNER_INPUT_REQUIRED; licenseApproval=PENDING_OWNER_INPUT |
+| Release approval | APPROVED - MO_FARM_INTERNAL_ASSET_POLICY_V1 |
 
 ## Subtask status
 
@@ -20,7 +20,7 @@
 | B02.1 — Production Art Style Lock | DONE — approved with minor production notes | assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md |
 | B02.2-PROOF Revision 2 | DONE — owner APPROVED TO PROCEED | docs/assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md, CHICKEN_PROOF_QA.json |
 | B02.2-FULL | DONE — Chicken 92/92 | docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md |
-| Wave 1 | DONE - 112/112 promoted; content APPROVED; release blocked by license | docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md |
+| Wave 1 | DONE - 112/112 promoted; content/license/release APPROVED | docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md |
 
 ## Wave 1 result
 
@@ -37,17 +37,18 @@
 - Canonical IDs, atlas groups, states, directions, frame counts, FPS, loop, holdLast, event, canvas 256×256, sourceScale, anchor (0.5,0.9) và baseline y=230 giữ nguyên.
 - Production source được Integration Owner promote; workers không ghi trực tiếp assets-src/**.
 - Chicken micro-detail giảm 21,83% theo proxy edge-energy; shading chuyển về soft illustrated volume và giữ identity.
-- Tất cả 112 entries dùng source=internal-generated và metadata creator/tool/toolVersion theo thực tế. License là PENDING_OWNER_REVIEW; approved=false cho mọi entry.
+- Tất cả 112 entries dùng source=internal-generated và metadata creator/tool/toolVersion theo thực tế. License là MO_FARM_INTERNAL_ASSET_POLICY_V1; content/license/release approval đã APPROVED.
 
 ## Inventory và QA
 
-Inventory: 188 assets, 112 production_ready, 76 placeholder, 0 approved. Atlas source-to-slice byte equality 112/112.
+Inventory: 188 assets, 112 production_ready, 76 placeholder, 112 approved. Atlas source-to-slice byte equality 112/112.
 
 Đã PASS:
 
 - npm run assets:build
 - npm run assets:validate
 - npm run assets:validate:strict
+- npm run assets:validate:wave1 (112/112 policy-approved; 76 untouched placeholders)
 - npm run renderer:test (16/16)
 - npm run check
 - docker compose config --quiet
@@ -58,4 +59,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 artwork/content is APPROVED by Project Owner; licenseApproval=PENDING_OWNER_INPUT and releaseApproval=BLOCKED. Do not set approved=true, open Wave 2, start Cloudflare Named Tunnel, or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 artwork/content/license/release is APPROVED by Project Owner. Do not approve the remaining 76 placeholders, open Wave 2, start Cloudflare Named Tunnel, or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

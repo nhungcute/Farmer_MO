@@ -1,16 +1,18 @@
 # B01 Production Asset Inventory
 
-Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `d3d7e97381647f1f2cd4f31fd61def75ba14b8ad5724bc53b5fccfdda6027e26`).
+Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `721a2e9f63d3765bb604d973331388404381b2aba40a5cbdf12ab59ebe298616`).
 
-This inventory is generated from the current canonical manifest. Wave 1 has 112 production candidates (Chicken, Rice, Carrot, Corn and Tomato); 76 assets remain placeholders and all release approval is pending.
+This inventory is generated from the current canonical manifest. It contains 112 production_ready assets, 112 approved assets, and 76 placeholders.
 
 ## Status
 
 | Status | Current count | Meaning |
 | --- | --- | --- |
 | `placeholder` | 76 | Generated/internal art. Not eligible for production release. |
-| `production_ready` | 112 | Replacement art supplied with provenance, style, technical validation, and source evidence; content is owner-approved, but license/release approval is still pending. |
-| `approved` | 0 | Production-ready replacement explicitly approved for the target release. |
+| `production_ready` | 112 | Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval. |
+| `approved` | 112 | Production-ready replacement explicitly approved for the target release. |
+
+`production_ready` is a technical/provenance flag; `approved` records release approval, so an approved asset is counted in both columns.
 
 Current totals: **188 source assets**, **10 animation contracts**, **8 categories**.
 
@@ -20,9 +22,9 @@ Current totals: **188 source assets**, **10 animation contracts**, **8 categorie
 | --- | --- | --- | --- | --- |
 | `terrain` | `placeholder` | 5 | 0 | Isometric ground tile and variants. |
 | `buildings` | `placeholder` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
-| `crops` | `placeholder` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
-| `animals` | `production_ready` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
-| `chicken` | `production_ready` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
+| `crops` | `mixed` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
+| `animals` | `approved` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
+| `chicken` | `approved` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
 | `pond` | `placeholder` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
 | `effects` | `placeholder` | 30 | 5 | Plant, harvest, build, coin, and egg one-shot effects. |
 | `ui` | `placeholder` | 15 | 0 | HUD icons, loading/toast graphics, and build ghost states. |
@@ -75,26 +77,26 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `pond_small_lv1_sparkle_01` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_01.png` |
 | `pond_small_lv1_sparkle_02` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_02.png` |
 | `pond_small_lv1_sparkle_03` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_03.png` |
-| `crop_rice_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_seed.png` |
-| `crop_rice_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_1.png` |
-| `crop_rice_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_2.png` |
-| `crop_rice_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_3.png` |
-| `crop_rice_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_ready.png` |
-| `crop_carrot_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_seed.png` |
-| `crop_carrot_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_1.png` |
-| `crop_carrot_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_2.png` |
-| `crop_carrot_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_3.png` |
-| `crop_carrot_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_ready.png` |
-| `crop_corn_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_seed.png` |
-| `crop_corn_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_1.png` |
-| `crop_corn_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_2.png` |
-| `crop_corn_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_3.png` |
-| `crop_corn_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_ready.png` |
-| `crop_tomato_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_seed.png` |
-| `crop_tomato_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_1.png` |
-| `crop_tomato_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_2.png` |
-| `crop_tomato_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_3.png` |
-| `crop_tomato_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_ready.png` |
+| `crop_rice_seed` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_seed.png` |
+| `crop_rice_stage_1` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_1.png` |
+| `crop_rice_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_2.png` |
+| `crop_rice_stage_3` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_3.png` |
+| `crop_rice_ready` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_ready.png` |
+| `crop_carrot_seed` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_seed.png` |
+| `crop_carrot_stage_1` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_1.png` |
+| `crop_carrot_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_2.png` |
+| `crop_carrot_stage_3` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_3.png` |
+| `crop_carrot_ready` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_ready.png` |
+| `crop_corn_seed` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_seed.png` |
+| `crop_corn_stage_1` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_1.png` |
+| `crop_corn_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_2.png` |
+| `crop_corn_stage_3` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_3.png` |
+| `crop_corn_ready` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_ready.png` |
+| `crop_tomato_seed` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_seed.png` |
+| `crop_tomato_stage_1` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_1.png` |
+| `crop_tomato_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_2.png` |
+| `crop_tomato_stage_3` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_stage_3.png` |
+| `crop_tomato_ready` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_tomato_ready.png` |
 | `crop_ready_glow_00` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_00.png` |
 | `crop_ready_glow_01` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_01.png` |
 | `crop_ready_glow_02` | crops | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_02.png` |
@@ -129,98 +131,98 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `fx_egg_collect_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_03.png` |
 | `fx_egg_collect_04` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_04.png` |
 | `fx_egg_collect_05` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_05.png` |
-| `animal_chicken_idle_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_00.png` |
-| `animal_chicken_idle_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_01.png` |
-| `animal_chicken_idle_ne_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_02.png` |
-| `animal_chicken_idle_ne_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_03.png` |
-| `animal_chicken_idle_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_00.png` |
-| `animal_chicken_idle_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_01.png` |
-| `animal_chicken_idle_se_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_02.png` |
-| `animal_chicken_idle_se_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_03.png` |
-| `animal_chicken_idle_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_00.png` |
-| `animal_chicken_idle_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_01.png` |
-| `animal_chicken_idle_sw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_02.png` |
-| `animal_chicken_idle_sw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_03.png` |
-| `animal_chicken_idle_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_00.png` |
-| `animal_chicken_idle_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_01.png` |
-| `animal_chicken_idle_nw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_02.png` |
-| `animal_chicken_idle_nw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_03.png` |
-| `animal_chicken_walk_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_00.png` |
-| `animal_chicken_walk_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_01.png` |
-| `animal_chicken_walk_ne_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_02.png` |
-| `animal_chicken_walk_ne_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_03.png` |
-| `animal_chicken_walk_ne_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_04.png` |
-| `animal_chicken_walk_ne_05` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_05.png` |
-| `animal_chicken_walk_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_00.png` |
-| `animal_chicken_walk_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_01.png` |
-| `animal_chicken_walk_se_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_02.png` |
-| `animal_chicken_walk_se_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_03.png` |
-| `animal_chicken_walk_se_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_04.png` |
-| `animal_chicken_walk_se_05` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_05.png` |
-| `animal_chicken_walk_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_00.png` |
-| `animal_chicken_walk_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_01.png` |
-| `animal_chicken_walk_sw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_02.png` |
-| `animal_chicken_walk_sw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_03.png` |
-| `animal_chicken_walk_sw_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_04.png` |
-| `animal_chicken_walk_sw_05` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_05.png` |
-| `animal_chicken_walk_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_00.png` |
-| `animal_chicken_walk_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_01.png` |
-| `animal_chicken_walk_nw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_02.png` |
-| `animal_chicken_walk_nw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_03.png` |
-| `animal_chicken_walk_nw_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_04.png` |
-| `animal_chicken_walk_nw_05` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_05.png` |
-| `animal_chicken_eat_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_00.png` |
-| `animal_chicken_eat_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_01.png` |
-| `animal_chicken_eat_ne_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_02.png` |
-| `animal_chicken_eat_ne_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_03.png` |
-| `animal_chicken_eat_ne_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_04.png` |
-| `animal_chicken_eat_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_00.png` |
-| `animal_chicken_eat_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_01.png` |
-| `animal_chicken_eat_se_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_02.png` |
-| `animal_chicken_eat_se_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_03.png` |
-| `animal_chicken_eat_se_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_04.png` |
-| `animal_chicken_eat_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_00.png` |
-| `animal_chicken_eat_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_01.png` |
-| `animal_chicken_eat_sw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_02.png` |
-| `animal_chicken_eat_sw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_03.png` |
-| `animal_chicken_eat_sw_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_04.png` |
-| `animal_chicken_eat_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_00.png` |
-| `animal_chicken_eat_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_01.png` |
-| `animal_chicken_eat_nw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_02.png` |
-| `animal_chicken_eat_nw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_03.png` |
-| `animal_chicken_eat_nw_04` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_04.png` |
-| `animal_chicken_happy_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_00.png` |
-| `animal_chicken_happy_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_01.png` |
-| `animal_chicken_happy_ne_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_02.png` |
-| `animal_chicken_happy_ne_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_03.png` |
-| `animal_chicken_happy_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_00.png` |
-| `animal_chicken_happy_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_01.png` |
-| `animal_chicken_happy_se_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_02.png` |
-| `animal_chicken_happy_se_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_03.png` |
-| `animal_chicken_happy_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_00.png` |
-| `animal_chicken_happy_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_01.png` |
-| `animal_chicken_happy_sw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_02.png` |
-| `animal_chicken_happy_sw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_03.png` |
-| `animal_chicken_happy_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_00.png` |
-| `animal_chicken_happy_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_01.png` |
-| `animal_chicken_happy_nw_02` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_02.png` |
-| `animal_chicken_happy_nw_03` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_03.png` |
-| `animal_chicken_sleep_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_ne_00.png` |
-| `animal_chicken_sleep_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_ne_01.png` |
-| `animal_chicken_sleep_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_se_00.png` |
-| `animal_chicken_sleep_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_se_01.png` |
-| `animal_chicken_sleep_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_sw_00.png` |
-| `animal_chicken_sleep_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_sw_01.png` |
-| `animal_chicken_sleep_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_nw_00.png` |
-| `animal_chicken_sleep_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_nw_01.png` |
-| `animal_chicken_product_ready_ne_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_ne_00.png` |
-| `animal_chicken_product_ready_ne_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_ne_01.png` |
-| `animal_chicken_product_ready_se_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_se_00.png` |
-| `animal_chicken_product_ready_se_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_se_01.png` |
-| `animal_chicken_product_ready_sw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_sw_00.png` |
-| `animal_chicken_product_ready_sw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_sw_01.png` |
-| `animal_chicken_product_ready_nw_00` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_nw_00.png` |
-| `animal_chicken_product_ready_nw_01` | chicken | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_nw_01.png` |
+| `animal_chicken_idle_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_00.png` |
+| `animal_chicken_idle_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_01.png` |
+| `animal_chicken_idle_ne_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_02.png` |
+| `animal_chicken_idle_ne_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_03.png` |
+| `animal_chicken_idle_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_00.png` |
+| `animal_chicken_idle_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_01.png` |
+| `animal_chicken_idle_se_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_02.png` |
+| `animal_chicken_idle_se_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_se_03.png` |
+| `animal_chicken_idle_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_00.png` |
+| `animal_chicken_idle_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_01.png` |
+| `animal_chicken_idle_sw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_02.png` |
+| `animal_chicken_idle_sw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_sw_03.png` |
+| `animal_chicken_idle_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_00.png` |
+| `animal_chicken_idle_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_01.png` |
+| `animal_chicken_idle_nw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_02.png` |
+| `animal_chicken_idle_nw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_nw_03.png` |
+| `animal_chicken_walk_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_00.png` |
+| `animal_chicken_walk_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_01.png` |
+| `animal_chicken_walk_ne_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_02.png` |
+| `animal_chicken_walk_ne_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_03.png` |
+| `animal_chicken_walk_ne_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_04.png` |
+| `animal_chicken_walk_ne_05` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_ne_05.png` |
+| `animal_chicken_walk_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_00.png` |
+| `animal_chicken_walk_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_01.png` |
+| `animal_chicken_walk_se_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_02.png` |
+| `animal_chicken_walk_se_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_03.png` |
+| `animal_chicken_walk_se_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_04.png` |
+| `animal_chicken_walk_se_05` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_se_05.png` |
+| `animal_chicken_walk_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_00.png` |
+| `animal_chicken_walk_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_01.png` |
+| `animal_chicken_walk_sw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_02.png` |
+| `animal_chicken_walk_sw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_03.png` |
+| `animal_chicken_walk_sw_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_04.png` |
+| `animal_chicken_walk_sw_05` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_sw_05.png` |
+| `animal_chicken_walk_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_00.png` |
+| `animal_chicken_walk_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_01.png` |
+| `animal_chicken_walk_nw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_02.png` |
+| `animal_chicken_walk_nw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_03.png` |
+| `animal_chicken_walk_nw_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_04.png` |
+| `animal_chicken_walk_nw_05` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_walk_nw_05.png` |
+| `animal_chicken_eat_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_00.png` |
+| `animal_chicken_eat_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_01.png` |
+| `animal_chicken_eat_ne_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_02.png` |
+| `animal_chicken_eat_ne_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_03.png` |
+| `animal_chicken_eat_ne_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_ne_04.png` |
+| `animal_chicken_eat_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_00.png` |
+| `animal_chicken_eat_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_01.png` |
+| `animal_chicken_eat_se_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_02.png` |
+| `animal_chicken_eat_se_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_03.png` |
+| `animal_chicken_eat_se_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_se_04.png` |
+| `animal_chicken_eat_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_00.png` |
+| `animal_chicken_eat_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_01.png` |
+| `animal_chicken_eat_sw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_02.png` |
+| `animal_chicken_eat_sw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_03.png` |
+| `animal_chicken_eat_sw_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_sw_04.png` |
+| `animal_chicken_eat_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_00.png` |
+| `animal_chicken_eat_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_01.png` |
+| `animal_chicken_eat_nw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_02.png` |
+| `animal_chicken_eat_nw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_03.png` |
+| `animal_chicken_eat_nw_04` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_eat_nw_04.png` |
+| `animal_chicken_happy_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_00.png` |
+| `animal_chicken_happy_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_01.png` |
+| `animal_chicken_happy_ne_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_02.png` |
+| `animal_chicken_happy_ne_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_ne_03.png` |
+| `animal_chicken_happy_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_00.png` |
+| `animal_chicken_happy_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_01.png` |
+| `animal_chicken_happy_se_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_02.png` |
+| `animal_chicken_happy_se_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_se_03.png` |
+| `animal_chicken_happy_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_00.png` |
+| `animal_chicken_happy_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_01.png` |
+| `animal_chicken_happy_sw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_02.png` |
+| `animal_chicken_happy_sw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_sw_03.png` |
+| `animal_chicken_happy_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_00.png` |
+| `animal_chicken_happy_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_01.png` |
+| `animal_chicken_happy_nw_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_02.png` |
+| `animal_chicken_happy_nw_03` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_happy_nw_03.png` |
+| `animal_chicken_sleep_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_ne_00.png` |
+| `animal_chicken_sleep_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_ne_01.png` |
+| `animal_chicken_sleep_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_se_00.png` |
+| `animal_chicken_sleep_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_se_01.png` |
+| `animal_chicken_sleep_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_sw_00.png` |
+| `animal_chicken_sleep_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_sw_01.png` |
+| `animal_chicken_sleep_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_nw_00.png` |
+| `animal_chicken_sleep_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_sleep_nw_01.png` |
+| `animal_chicken_product_ready_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_ne_00.png` |
+| `animal_chicken_product_ready_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_ne_01.png` |
+| `animal_chicken_product_ready_se_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_se_00.png` |
+| `animal_chicken_product_ready_se_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_se_01.png` |
+| `animal_chicken_product_ready_sw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_sw_00.png` |
+| `animal_chicken_product_ready_sw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_sw_01.png` |
+| `animal_chicken_product_ready_nw_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_nw_00.png` |
+| `animal_chicken_product_ready_nw_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_product_ready_nw_01.png` |
 
 ## Animation contracts
 
@@ -235,7 +237,7 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `fx_build_success` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
 | `fx_coin_gain` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
 | `fx_egg_collect` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
-| `animal_chicken` | animals | `production_ready` | chicken | NE, SE, SW, NW | 256x256 | 0.5,0.9 |
+| `animal_chicken` | animals | `approved` | chicken | NE, SE, SW, NW | 256x256 | 0.5,0.9 |
 
 ### `pond_water`
 
@@ -359,6 +361,7 @@ node tools/asset-inventory.mjs
 node tools/export-assets/index.mjs validate
 node tools/export-assets/index.mjs pack
 node tools/export-assets/validate.mjs --strict-output
+npm run assets:validate:wave1
 node tools/check-renderer-syntax.mjs
 npm run check
 ```

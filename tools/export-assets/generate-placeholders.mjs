@@ -152,6 +152,13 @@ const manifest = {
   },
 };
 
+// Preserve promoted metadata when rebuilding deterministic placeholders. The
+// existing canonical manifest remains the source of truth for non-placeholder
+// artwork, so a later assets:build cannot silently reset production review.
+const existingManifest = fs.existsSync(MANIFEST_PATH)
+  ? JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'))
+  : null;
+
 function addAsset(id, atlas, sourceFile, width, height, anchor = { x: 0.5, y: 0.86 }) {
   const fullPath = path.join(SOURCE_ROOT, sourceFile);
   ensureDir(path.dirname(fullPath));
@@ -226,6 +233,15 @@ for (const [state, [count, fps, loop, holdLast]] of Object.entries(chickenStates
 }
 manifest.animations.animal_chicken = chickenAnimation;
 
+for (const [id, previous] of Object.entries(existingManifest?.assets ?? {})) {
+  if (manifest.assets[id] && previous.placeholder === false) {
+    manifest.assets[id] = { ...manifest.assets[id], ...previous, id };
+  }
+}
+for (const [id, previous] of Object.entries(existingManifest?.animations ?? {})) {
+  if (manifest.animations[id]) manifest.animations[id] = previous;
+}
+
 ensureDir(path.dirname(MANIFEST_PATH));
 writeJson(MANIFEST_PATH, manifest);
 // Keep focused manifests for artists and reviewers; the single manifest remains canonical for tooling.
@@ -244,16 +260,21 @@ for (const [name, predicate] of Object.entries({
 }
 writeJson(path.join(SOURCE_ROOT, 'manifests', 'licenses.json'), {
   contentVersion: 'mvp-1',
-  assets: Object.fromEntries(Object.keys(manifest.assets).map((id) => [id, {
-    license: 'internal-placeholder',
-    source: 'Generated deterministic placeholder',
-    tool: 'tools/export-assets/generate-placeholders.mjs',
-    toolVersion: '1.0.0',
-    creator: 'MO Farm team',
-    placeholder: true,
+  assets: Object.fromEntries(Object.entries(manifest.assets).map(([id, metadata]) => [id, {
+    license: metadata.license,
+    source: metadata.source,
+    tool: metadata.tool,
+    toolVersion: metadata.toolVersion,
+    creator: metadata.creator,
+    placeholder: metadata.placeholder === true,
+    ...Object.fromEntries(['reviewEvidence', 'technicalReview', 'styleReview', 'contentApproval', 'licenseApproval', 'approvalRef', 'production_ready', 'approved']
+      .filter((key) => key in metadata)
+      .map((key) => [key, metadata[key]])),
   }])),
 });
-const style = `# MO Farm placeholder style sheet\n\n- Phối cảnh: isometric 2.5D\n- Tile logic: 128x64 (nguồn raster @2x)\n- Hướng sáng: trên-trái\n- Viền: xanh lá đậm/nâu đồng nhất\n- Bảng màu: kem, gỗ, xanh cỏ, xanh nước, vàng\n- Tất cả asset trong thư mục này là placeholder nội bộ, không phải production art.\n- Không dùng PNG nguồn trực tiếp trong web bundle; chạy pipeline để tạo atlas.\n`;
+const style = `# MO Farm asset style sheet\n\n- Phối cảnh: isometric 2.5D\n- Tile logic: 128x64 (nguồn raster @2x)\n- Hướng sáng: trên-trái\n- Viền: xanh lá đậm/nâu đồng nhất\n- Bảng màu: kem, gỗ, xanh cỏ, xanh nước, vàng\n- Trạng thái asset được ghi trong manifest; Wave 1 đã có production artwork được duyệt, các nhóm còn lại vẫn là placeholder nội bộ.\n- Không dùng PNG nguồn trực tiếp trong web bundle; chạy pipeline để tạo atlas.\n`;
 ensureDir(path.join(SOURCE_ROOT, 'style'));
 fs.writeFileSync(path.join(SOURCE_ROOT, 'style', 'style-sheet.md'), style, 'utf8');
-console.log(`Đã tạo ${Object.keys(manifest.assets).length} placeholder frame và ${Object.keys(manifest.animations).length} animation.`);
+const placeholderCount = Object.values(manifest.assets).filter((asset) => asset.placeholder === true).length;
+const approvedCount = Object.values(manifest.assets).filter((asset) => asset.approved === true).length;
+console.log(`Đã tạo ${Object.keys(manifest.assets).length} frame (${placeholderCount} placeholder, ${approvedCount} approved) và ${Object.keys(manifest.animations).length} animation.`);

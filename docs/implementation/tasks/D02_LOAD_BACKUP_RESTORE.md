@@ -68,4 +68,4 @@ operations remain outside this prototype task.
 - Last completed: PostgreSQL load, concurrency/idempotency/rollback probe and
   backup/restore fingerprint drill on disposable databases.
 - Next activity: maintenance only. Cloudflare stays gated until all upstream dependencies and RC checks pass.
-- Blocker: none for D02 when disposable PostgreSQL and client tools are available; release path remains blocked by B02 until production artwork and approvals are supplied.
+- Blocker: none for D02 when disposable PostgreSQL and client tools are available; release path remains gated by the 76 placeholders outside approved Wave 1 scope.

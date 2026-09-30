@@ -42,7 +42,7 @@ for (const [id, asset] of Object.entries(assets)) {
   for (const field of ['license', 'source', 'tool', 'toolVersion', 'creator']) {
     if (typeof asset[field] !== 'string' || asset[field].trim() === '') fail(`${id}: thiếu metadata ${field}`);
   }
-  if (asset.placeholder !== true) warn(`${id}: asset chưa đánh dấu placeholder; cần license review trước production`);
+  if (asset.placeholder !== true && asset.approved !== true) warn(`${id}: asset chưa được release approval; cần license review trước production`);
 }
 
 const frameUse = new Set();

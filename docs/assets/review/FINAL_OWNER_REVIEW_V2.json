@@ -1,7 +1,7 @@
 {
   "review": "FINAL OWNER REVIEW V2",
   "reviewDate": "2026-09-30",
-  "reviewStatus": "PASS_ART_STYLE_CONTENT_APPROVED_LICENSE_BLOCKED",
+  "reviewStatus": "PASS_ART_STYLE_CONTENT_LICENSE_APPROVED",
   "scope": "Read-only final owner review of the five promoted Wave 1 asset types. No artwork was generated and no reviewer changed production files.",
   "parallelReviews": {
     "REVIEW-01": {
@@ -13,7 +13,7 @@
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "License and release provenance approval remain PENDING_OWNER_REVIEW."
+        "toolVersion remains not exposed by runtime; no value was invented."
       ],
       "evidence": [
         "docs/assets/review/CHICKEN_PROOF_QA.json",
@@ -32,7 +32,7 @@
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "License and toolVersion remain PENDING_OWNER_REVIEW."
+        "toolVersion remains PENDING_OWNER_REVIEW; no value was invented."
       ],
       "evidence": [
         "work/art-generation/crops/rice/qa/QA.json",
@@ -49,7 +49,7 @@
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "License and toolVersion remain PENDING_OWNER_REVIEW."
+        "toolVersion remains PENDING_OWNER_REVIEW; no value was invented."
       ],
       "evidence": [
         "work/art-generation/crops/carrot/ART_QA.json",
@@ -66,7 +66,7 @@
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "License and toolVersion remain PENDING_OWNER_REVIEW."
+        "toolVersion remains PENDING_OWNER_REVIEW; no value was invented."
       ],
       "evidence": [
         "work/art-generation/crops/corn/ART_QA.json",
@@ -83,7 +83,7 @@
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "License and toolVersion remain PENDING_OWNER_REVIEW."
+        "toolVersion remains PENDING_OWNER_REVIEW; no value was invented."
       ],
       "evidence": [
         "work/art-generation/crops/tomato/ART_QA.json",
@@ -94,15 +94,15 @@
     },
     "REVIEW-06": {
       "asset": "Wave 1 provenance and license",
-      "status": "PASS_FIELDS_LICENSE_BLOCKED",
+      "status": "PASS_POLICY_APPROVED",
       "technical": "PASS",
       "style": "N/A",
-      "content": "PENDING_OWNER_REVIEW",
+      "content": "APPROVED",
       "mobile": "N/A",
-      "ownerRecommendation": "REVISION_REQUIRED",
+      "ownerRecommendation": "APPROVE",
       "knownIssues": [
-        "All 112 promoted entries retain license=PENDING_OWNER_REVIEW.",
-        "No approved=true or release approval was inferred."
+        "All 112 promoted entries use license=MO_FARM_INTERNAL_ASSET_POLICY_V1.",
+        "Policy does not claim rights beyond applicable generation provider terms."
       ]
     }
   },
@@ -125,23 +125,27 @@
     "promoted": 112,
     "productionReady": 112,
     "placeholders": 76,
-    "approved": 0,
+    "approved": 112,
+    "licensePending": 0,
     "sourcePolicy": "Integration Owner only; workers did not write assets-src",
-    "license": "PENDING_OWNER_REVIEW",
+    "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
     "ownerContentApproval": "APPROVED",
-    "licensePolicy": "LICENSE_POLICY_OWNER_INPUT_REQUIRED"
+    "licensePolicy": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+    "licenseApproval": "APPROVED",
+    "releaseApproval": "APPROVED"
   },
   "provenance": {
     "requiredFieldsPresent": true,
     "source": "internal-generated",
     "creatorToolToolVersionRecorded": true,
-    "licenseApproval": "PENDING_OWNER_INPUT",
-    "releaseApproval": "BLOCKED",
-    "approvalRef": "null while licenseApproval=PENDING_OWNER_INPUT; set only after release approval"
+    "licenseApproval": "APPROVED",
+    "releaseApproval": "APPROVED",
+    "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md"
   },
   "gates": {
     "assetValidation": "PASS",
-    "strictValidation": "PASS with expected license-pending warnings",
+    "strictValidation": "PASS",
+    "wave1Invariant": "PASS 112/112 policy-approved; 76 untouched placeholders",
     "renderer": "PASS 16/16",
     "npmCheck": "PASS",
     "dockerComposeConfig": "PASS",
@@ -157,14 +161,15 @@
     "B02_1": "DONE",
     "B02_2_PROOF": "DONE",
     "B02_2_FULL": "DONE",
-    "wave1": "DONE_CONTENT_APPROVED_RELEASE_BLOCKED_LICENSE",
+    "wave1": "DONE_CONTENT_LICENSE_RELEASE_APPROVED",
     "ownerContentApproval": "APPROVED",
-    "releaseApproval": "BLOCKED_LICENSE_POLICY_OWNER_INPUT_REQUIRED",
+    "licenseApproval": "APPROVED",
+    "releaseApproval": "APPROVED",
     "approvalRecord": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
     "B02": "RUNNING",
     "wave2": "CLOSED",
     "cloudflare": "NOT_STARTED",
     "RC01": "NOT_STARTED"
   },
-  "stopCondition": "Owner content approval is recorded. Stop with LICENSE_POLICY_OWNER_INPUT_REQUIRED; do not set approved=true or open Wave 2, Cloudflare Named Tunnel or RC01."
+  "stopCondition": "Wave 1 release approval is recorded. Stop; do not open Wave 2, Cloudflare Named Tunnel or RC01."
 }

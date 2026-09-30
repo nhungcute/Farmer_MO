@@ -118,6 +118,6 @@ E01 không có test runtime nào được chạy khi còn `QUEUED`. Khi mở tas
 ## Hoạt động hiện tại
 
 - Current activity: `QUEUED`; chỉ audit dependency và chuẩn bị checklist, chưa chạy tunnel.
-- Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; read-only E01 audit passed Compose exposure checks and added a postgres/demo/HTTPS/non-default-secret preflight; B02 still lacks approved production artwork.
+- Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; read-only E01 audit passed Compose exposure checks and added a postgres/demo/HTTPS/non-default-secret preflight; B02 has Wave 1 artwork/content/license/release approval (112 assets); 76 assets outside Wave 1 remain placeholders.
 - Next activity: parent review cập nhật upstream status; chỉ khi B02 và toàn bộ dependency đạt mới mở E01, cấp secret ngoài repository và chạy public smoke.
-- Blocker: B02 remains BLOCKED; no hostname/token is supplied and E01 stays QUEUED until approved artwork and release dependencies exist.
+- Blocker: B02 remains RUNNING because 76 assets outside the approved Wave 1 are placeholders; E01 stays QUEUED/CLOSED until the remaining release dependencies, hostname, and token are supplied.

@@ -43,7 +43,7 @@ Không được đánh dấu một mục là PASS chỉ vì command kết thúc 
 | C03 mobile/PWA | docs/implementation/tasks/C03_MOBILE_PWA_ACCESSIBILITY.md; mobile-pwa report 3/3; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
 | D01 observability | docs/implementation/tasks/D01_OBSERVABILITY_PERFORMANCE.md; metrics tests/log redaction evidence | DONE — parent review complete |
 | D02 operations | docs/implementation/tasks/D02_LOAD_BACKUP_RESTORE.md; load JSON; backup/restore log; 15-table fingerprints; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
-| B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | BLOCKED — hiện còn placeholder, production-ready/approved = 0 |
+| B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | GATED — Wave 1 112/112 approved; 76 placeholders remain outside Wave 1 |
 | Docker/CI | .github/workflows/ci.yml; remote run 36660295559 PASS for all 5 jobs; Compose/build logs | PASS for integration commit 628f7cd; release-commit rerun remains required |
 | E01 tunnel | E01 runbook, token/secret audit, external smoke, stop/revoke and rollback evidence | QUEUED — không được mở trước các gate upstream |
 | RC sign-off | commit SHA, artifact checksums, environment matrix, named reviewer approvals and rollback drill result | Chưa tạo |
@@ -79,19 +79,19 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang QUEUED. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02 đã DONE; B02 đang BLOCKED do chưa có production artwork được duyệt; E01 cũng đang QUEUED.
+RC01 đang QUEUED. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02 đã DONE; B02 đang RUNNING vì còn 76 placeholder ngoài Wave 1; E01 vẫn NOT_STARTED.
 
 ## Next activity
 
 1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02; giữ các evidence và chờ B02/E01 dependency.
 2. Remote GitHub Actions run 36660295559 đã PASS 5/5 job; lưu artifact/log vào release evidence index và chờ parent review.
-3. Hoàn tất B02 bằng artwork production, license/source, style approval, release approval và visual review.
+3. Hoàn tất B02 bằng artwork production, license/source, style approval, release approval và visual review cho toàn bộ asset còn lại ngoài Wave 1.
 4. Chỉ sau các bước trên mới mở E01; chạy external smoke và rollback/revoke drill.
 5. Khi E01 PASS, tạo release commit và chạy checklist RC01 trên chính commit đó.
 
 ## Blocker
 
-- B02 chưa có production artwork, license/source evidence, style approval hoặc release approval; inventory hiện vẫn là placeholder.
+- B02 đã hoàn tất Wave 1 với 112/112 asset được duyệt theo `MO_FARM_INTERNAL_ASSET_POLICY_V1`; còn 76 asset ngoài Wave 1 là placeholder nên B02 vẫn RUNNING.
 - E01 bị khóa theo dependency cho tới khi A03, C03, D02, B02 và Docker/CI gates PASS.
 - Không có cơ sở để tuyên bố production SLO/RPO/RTO từ các prototype load/backup numbers hiện tại.
 

@@ -17,17 +17,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_ne_01": {
       "id": "animal_chicken_idle_ne_01",
@@ -45,17 +47,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_ne_02": {
       "id": "animal_chicken_idle_ne_02",
@@ -73,17 +77,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_ne_03": {
       "id": "animal_chicken_idle_ne_03",
@@ -101,17 +107,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_se_00": {
       "id": "animal_chicken_idle_se_00",
@@ -129,17 +137,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_se_01": {
       "id": "animal_chicken_idle_se_01",
@@ -157,17 +167,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_se_02": {
       "id": "animal_chicken_idle_se_02",
@@ -185,17 +197,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_se_03": {
       "id": "animal_chicken_idle_se_03",
@@ -213,17 +227,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_sw_00": {
       "id": "animal_chicken_idle_sw_00",
@@ -241,17 +257,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_sw_01": {
       "id": "animal_chicken_idle_sw_01",
@@ -269,17 +287,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_sw_02": {
       "id": "animal_chicken_idle_sw_02",
@@ -297,17 +317,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_sw_03": {
       "id": "animal_chicken_idle_sw_03",
@@ -325,17 +347,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_nw_00": {
       "id": "animal_chicken_idle_nw_00",
@@ -353,17 +377,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_nw_01": {
       "id": "animal_chicken_idle_nw_01",
@@ -381,17 +407,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_nw_02": {
       "id": "animal_chicken_idle_nw_02",
@@ -409,17 +437,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_idle_nw_03": {
       "id": "animal_chicken_idle_nw_03",
@@ -437,17 +467,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_00": {
       "id": "animal_chicken_walk_ne_00",
@@ -465,17 +497,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_01": {
       "id": "animal_chicken_walk_ne_01",
@@ -493,17 +527,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_02": {
       "id": "animal_chicken_walk_ne_02",
@@ -521,17 +557,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_03": {
       "id": "animal_chicken_walk_ne_03",
@@ -549,17 +587,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_04": {
       "id": "animal_chicken_walk_ne_04",
@@ -577,17 +617,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_ne_05": {
       "id": "animal_chicken_walk_ne_05",
@@ -605,17 +647,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_00": {
       "id": "animal_chicken_walk_se_00",
@@ -633,17 +677,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_01": {
       "id": "animal_chicken_walk_se_01",
@@ -661,17 +707,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_02": {
       "id": "animal_chicken_walk_se_02",
@@ -689,17 +737,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_03": {
       "id": "animal_chicken_walk_se_03",
@@ -717,17 +767,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_04": {
       "id": "animal_chicken_walk_se_04",
@@ -745,17 +797,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_se_05": {
       "id": "animal_chicken_walk_se_05",
@@ -773,17 +827,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_00": {
       "id": "animal_chicken_walk_sw_00",
@@ -801,17 +857,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_01": {
       "id": "animal_chicken_walk_sw_01",
@@ -829,17 +887,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_02": {
       "id": "animal_chicken_walk_sw_02",
@@ -857,17 +917,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_03": {
       "id": "animal_chicken_walk_sw_03",
@@ -885,17 +947,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_04": {
       "id": "animal_chicken_walk_sw_04",
@@ -913,17 +977,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_sw_05": {
       "id": "animal_chicken_walk_sw_05",
@@ -941,17 +1007,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_00": {
       "id": "animal_chicken_walk_nw_00",
@@ -969,17 +1037,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_01": {
       "id": "animal_chicken_walk_nw_01",
@@ -997,17 +1067,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_02": {
       "id": "animal_chicken_walk_nw_02",
@@ -1025,17 +1097,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_03": {
       "id": "animal_chicken_walk_nw_03",
@@ -1053,17 +1127,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_04": {
       "id": "animal_chicken_walk_nw_04",
@@ -1081,17 +1157,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_walk_nw_05": {
       "id": "animal_chicken_walk_nw_05",
@@ -1109,17 +1187,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_ne_00": {
       "id": "animal_chicken_eat_ne_00",
@@ -1137,17 +1217,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_ne_01": {
       "id": "animal_chicken_eat_ne_01",
@@ -1165,17 +1247,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_ne_02": {
       "id": "animal_chicken_eat_ne_02",
@@ -1193,17 +1277,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_ne_03": {
       "id": "animal_chicken_eat_ne_03",
@@ -1221,17 +1307,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_ne_04": {
       "id": "animal_chicken_eat_ne_04",
@@ -1249,17 +1337,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_se_00": {
       "id": "animal_chicken_eat_se_00",
@@ -1277,17 +1367,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_se_01": {
       "id": "animal_chicken_eat_se_01",
@@ -1305,17 +1397,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_se_02": {
       "id": "animal_chicken_eat_se_02",
@@ -1333,17 +1427,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_se_03": {
       "id": "animal_chicken_eat_se_03",
@@ -1361,17 +1457,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_se_04": {
       "id": "animal_chicken_eat_se_04",
@@ -1389,17 +1487,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_sw_00": {
       "id": "animal_chicken_eat_sw_00",
@@ -1417,17 +1517,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_sw_01": {
       "id": "animal_chicken_eat_sw_01",
@@ -1445,17 +1547,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_sw_02": {
       "id": "animal_chicken_eat_sw_02",
@@ -1473,17 +1577,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_sw_03": {
       "id": "animal_chicken_eat_sw_03",
@@ -1501,17 +1607,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_sw_04": {
       "id": "animal_chicken_eat_sw_04",
@@ -1529,17 +1637,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_nw_00": {
       "id": "animal_chicken_eat_nw_00",
@@ -1557,17 +1667,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_nw_01": {
       "id": "animal_chicken_eat_nw_01",
@@ -1585,17 +1697,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_nw_02": {
       "id": "animal_chicken_eat_nw_02",
@@ -1613,17 +1727,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_nw_03": {
       "id": "animal_chicken_eat_nw_03",
@@ -1641,17 +1757,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_eat_nw_04": {
       "id": "animal_chicken_eat_nw_04",
@@ -1669,17 +1787,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_ne_00": {
       "id": "animal_chicken_happy_ne_00",
@@ -1697,17 +1817,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_ne_01": {
       "id": "animal_chicken_happy_ne_01",
@@ -1725,17 +1847,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_ne_02": {
       "id": "animal_chicken_happy_ne_02",
@@ -1753,17 +1877,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_ne_03": {
       "id": "animal_chicken_happy_ne_03",
@@ -1781,17 +1907,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_se_00": {
       "id": "animal_chicken_happy_se_00",
@@ -1809,17 +1937,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_se_01": {
       "id": "animal_chicken_happy_se_01",
@@ -1837,17 +1967,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_se_02": {
       "id": "animal_chicken_happy_se_02",
@@ -1865,17 +1997,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_se_03": {
       "id": "animal_chicken_happy_se_03",
@@ -1893,17 +2027,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_sw_00": {
       "id": "animal_chicken_happy_sw_00",
@@ -1921,17 +2057,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_sw_01": {
       "id": "animal_chicken_happy_sw_01",
@@ -1949,17 +2087,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_sw_02": {
       "id": "animal_chicken_happy_sw_02",
@@ -1977,17 +2117,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_sw_03": {
       "id": "animal_chicken_happy_sw_03",
@@ -2005,17 +2147,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_nw_00": {
       "id": "animal_chicken_happy_nw_00",
@@ -2033,17 +2177,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_nw_01": {
       "id": "animal_chicken_happy_nw_01",
@@ -2061,17 +2207,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_nw_02": {
       "id": "animal_chicken_happy_nw_02",
@@ -2089,17 +2237,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_happy_nw_03": {
       "id": "animal_chicken_happy_nw_03",
@@ -2117,17 +2267,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_ne_00": {
       "id": "animal_chicken_sleep_ne_00",
@@ -2145,17 +2297,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_ne_01": {
       "id": "animal_chicken_sleep_ne_01",
@@ -2173,17 +2327,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_se_00": {
       "id": "animal_chicken_sleep_se_00",
@@ -2201,17 +2357,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_se_01": {
       "id": "animal_chicken_sleep_se_01",
@@ -2229,17 +2387,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_sw_00": {
       "id": "animal_chicken_sleep_sw_00",
@@ -2257,17 +2417,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_sw_01": {
       "id": "animal_chicken_sleep_sw_01",
@@ -2285,17 +2447,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_nw_00": {
       "id": "animal_chicken_sleep_nw_00",
@@ -2313,17 +2477,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_sleep_nw_01": {
       "id": "animal_chicken_sleep_nw_01",
@@ -2341,17 +2507,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_ne_00": {
       "id": "animal_chicken_product_ready_ne_00",
@@ -2369,17 +2537,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_ne_01": {
       "id": "animal_chicken_product_ready_ne_01",
@@ -2397,17 +2567,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_se_00": {
       "id": "animal_chicken_product_ready_se_00",
@@ -2425,17 +2597,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_se_01": {
       "id": "animal_chicken_product_ready_se_01",
@@ -2453,17 +2627,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_sw_00": {
       "id": "animal_chicken_product_ready_sw_00",
@@ -2481,17 +2657,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_sw_01": {
       "id": "animal_chicken_product_ready_sw_01",
@@ -2509,17 +2687,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_nw_00": {
       "id": "animal_chicken_product_ready_nw_00",
@@ -2537,17 +2717,19 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     },
     "animal_chicken_product_ready_nw_01": {
       "id": "animal_chicken_product_ready_nw_01",
@@ -2565,518 +2747,20 @@
         "y": 0
       },
       "placeholder": false,
-      "license": "PENDING_OWNER_REVIEW",
+      "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
       "source": "internal-generated",
       "tool": "built-in image_gen + deterministic pose rendering",
       "toolVersion": "not exposed by runtime",
       "creator": "Codex",
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "approvalRef": null,
+      "approvalRef": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
+      "approved": true,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED"
     }
   },
-  "animations": {
-    "animal_chicken": {
-      "id": "animal_chicken",
-      "atlas": "chicken",
-      "directions": [
-        "NE",
-        "SE",
-        "SW",
-        "NW"
-      ],
-      "defaultDirection": "SE",
-      "sourceScale": 2,
-      "anchor": {
-        "x": 0.5,
-        "y": 0.9
-      },
-      "mirrorAllowed": false,
-      "animations": {
-        "IDLE": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_idle_ne_00"
-              },
-              {
-                "id": "animal_chicken_idle_ne_01"
-              },
-              {
-                "id": "animal_chicken_idle_ne_02"
-              },
-              {
-                "id": "animal_chicken_idle_ne_03"
-              }
-            ],
-            "fps": 6,
-            "loop": true,
-            "holdLast": false
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_idle_se_00"
-              },
-              {
-                "id": "animal_chicken_idle_se_01"
-              },
-              {
-                "id": "animal_chicken_idle_se_02"
-              },
-              {
-                "id": "animal_chicken_idle_se_03"
-              }
-            ],
-            "fps": 6,
-            "loop": true,
-            "holdLast": false
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_idle_sw_00"
-              },
-              {
-                "id": "animal_chicken_idle_sw_01"
-              },
-              {
-                "id": "animal_chicken_idle_sw_02"
-              },
-              {
-                "id": "animal_chicken_idle_sw_03"
-              }
-            ],
-            "fps": 6,
-            "loop": true,
-            "holdLast": false
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_idle_nw_00"
-              },
-              {
-                "id": "animal_chicken_idle_nw_01"
-              },
-              {
-                "id": "animal_chicken_idle_nw_02"
-              },
-              {
-                "id": "animal_chicken_idle_nw_03"
-              }
-            ],
-            "fps": 6,
-            "loop": true,
-            "holdLast": false
-          }
-        },
-        "WALK": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_walk_ne_00"
-              },
-              {
-                "id": "animal_chicken_walk_ne_01"
-              },
-              {
-                "id": "animal_chicken_walk_ne_02"
-              },
-              {
-                "id": "animal_chicken_walk_ne_03"
-              },
-              {
-                "id": "animal_chicken_walk_ne_04"
-              },
-              {
-                "id": "animal_chicken_walk_ne_05"
-              }
-            ],
-            "fps": 8,
-            "loop": true,
-            "holdLast": false
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_walk_se_00"
-              },
-              {
-                "id": "animal_chicken_walk_se_01"
-              },
-              {
-                "id": "animal_chicken_walk_se_02"
-              },
-              {
-                "id": "animal_chicken_walk_se_03"
-              },
-              {
-                "id": "animal_chicken_walk_se_04"
-              },
-              {
-                "id": "animal_chicken_walk_se_05"
-              }
-            ],
-            "fps": 8,
-            "loop": true,
-            "holdLast": false
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_walk_sw_00"
-              },
-              {
-                "id": "animal_chicken_walk_sw_01"
-              },
-              {
-                "id": "animal_chicken_walk_sw_02"
-              },
-              {
-                "id": "animal_chicken_walk_sw_03"
-              },
-              {
-                "id": "animal_chicken_walk_sw_04"
-              },
-              {
-                "id": "animal_chicken_walk_sw_05"
-              }
-            ],
-            "fps": 8,
-            "loop": true,
-            "holdLast": false
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_walk_nw_00"
-              },
-              {
-                "id": "animal_chicken_walk_nw_01"
-              },
-              {
-                "id": "animal_chicken_walk_nw_02"
-              },
-              {
-                "id": "animal_chicken_walk_nw_03"
-              },
-              {
-                "id": "animal_chicken_walk_nw_04"
-              },
-              {
-                "id": "animal_chicken_walk_nw_05"
-              }
-            ],
-            "fps": 8,
-            "loop": true,
-            "holdLast": false
-          }
-        },
-        "EAT": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_eat_ne_00"
-              },
-              {
-                "id": "animal_chicken_eat_ne_01"
-              },
-              {
-                "id": "animal_chicken_eat_ne_02"
-              },
-              {
-                "id": "animal_chicken_eat_ne_03"
-              },
-              {
-                "id": "animal_chicken_eat_ne_04"
-              }
-            ],
-            "fps": 10,
-            "loop": false,
-            "holdLast": true,
-            "events": [
-              {
-                "frame": 2,
-                "name": "FEED_CONSUMED"
-              }
-            ]
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_eat_se_00"
-              },
-              {
-                "id": "animal_chicken_eat_se_01"
-              },
-              {
-                "id": "animal_chicken_eat_se_02"
-              },
-              {
-                "id": "animal_chicken_eat_se_03"
-              },
-              {
-                "id": "animal_chicken_eat_se_04"
-              }
-            ],
-            "fps": 10,
-            "loop": false,
-            "holdLast": true,
-            "events": [
-              {
-                "frame": 2,
-                "name": "FEED_CONSUMED"
-              }
-            ]
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_eat_sw_00"
-              },
-              {
-                "id": "animal_chicken_eat_sw_01"
-              },
-              {
-                "id": "animal_chicken_eat_sw_02"
-              },
-              {
-                "id": "animal_chicken_eat_sw_03"
-              },
-              {
-                "id": "animal_chicken_eat_sw_04"
-              }
-            ],
-            "fps": 10,
-            "loop": false,
-            "holdLast": true,
-            "events": [
-              {
-                "frame": 2,
-                "name": "FEED_CONSUMED"
-              }
-            ]
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_eat_nw_00"
-              },
-              {
-                "id": "animal_chicken_eat_nw_01"
-              },
-              {
-                "id": "animal_chicken_eat_nw_02"
-              },
-              {
-                "id": "animal_chicken_eat_nw_03"
-              },
-              {
-                "id": "animal_chicken_eat_nw_04"
-              }
-            ],
-            "fps": 10,
-            "loop": false,
-            "holdLast": true,
-            "events": [
-              {
-                "frame": 2,
-                "name": "FEED_CONSUMED"
-              }
-            ]
-          }
-        },
-        "HAPPY": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_happy_ne_00"
-              },
-              {
-                "id": "animal_chicken_happy_ne_01"
-              },
-              {
-                "id": "animal_chicken_happy_ne_02"
-              },
-              {
-                "id": "animal_chicken_happy_ne_03"
-              }
-            ],
-            "fps": 8,
-            "loop": false,
-            "holdLast": true
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_happy_se_00"
-              },
-              {
-                "id": "animal_chicken_happy_se_01"
-              },
-              {
-                "id": "animal_chicken_happy_se_02"
-              },
-              {
-                "id": "animal_chicken_happy_se_03"
-              }
-            ],
-            "fps": 8,
-            "loop": false,
-            "holdLast": true
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_happy_sw_00"
-              },
-              {
-                "id": "animal_chicken_happy_sw_01"
-              },
-              {
-                "id": "animal_chicken_happy_sw_02"
-              },
-              {
-                "id": "animal_chicken_happy_sw_03"
-              }
-            ],
-            "fps": 8,
-            "loop": false,
-            "holdLast": true
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_happy_nw_00"
-              },
-              {
-                "id": "animal_chicken_happy_nw_01"
-              },
-              {
-                "id": "animal_chicken_happy_nw_02"
-              },
-              {
-                "id": "animal_chicken_happy_nw_03"
-              }
-            ],
-            "fps": 8,
-            "loop": false,
-            "holdLast": true
-          }
-        },
-        "SLEEP": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_sleep_ne_00"
-              },
-              {
-                "id": "animal_chicken_sleep_ne_01"
-              }
-            ],
-            "fps": 3,
-            "loop": true,
-            "holdLast": false
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_sleep_se_00"
-              },
-              {
-                "id": "animal_chicken_sleep_se_01"
-              }
-            ],
-            "fps": 3,
-            "loop": true,
-            "holdLast": false
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_sleep_sw_00"
-              },
-              {
-                "id": "animal_chicken_sleep_sw_01"
-              }
-            ],
-            "fps": 3,
-            "loop": true,
-            "holdLast": false
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_sleep_nw_00"
-              },
-              {
-                "id": "animal_chicken_sleep_nw_01"
-              }
-            ],
-            "fps": 3,
-            "loop": true,
-            "holdLast": false
-          }
-        },
-        "PRODUCT_READY": {
-          "NE": {
-            "frames": [
-              {
-                "id": "animal_chicken_product_ready_ne_00"
-              },
-              {
-                "id": "animal_chicken_product_ready_ne_01"
-              }
-            ],
-            "fps": 2,
-            "loop": true,
-            "holdLast": false
-          },
-          "SE": {
-            "frames": [
-              {
-                "id": "animal_chicken_product_ready_se_00"
-              },
-              {
-                "id": "animal_chicken_product_ready_se_01"
-              }
-            ],
-            "fps": 2,
-            "loop": true,
-            "holdLast": false
-          },
-          "SW": {
-            "frames": [
-              {
-                "id": "animal_chicken_product_ready_sw_00"
-              },
-              {
-                "id": "animal_chicken_product_ready_sw_01"
-              }
-            ],
-            "fps": 2,
-            "loop": true,
-            "holdLast": false
-          },
-          "NW": {
-            "frames": [
-              {
-                "id": "animal_chicken_product_ready_nw_00"
-              },
-              {
-                "id": "animal_chicken_product_ready_nw_01"
-              }
-            ],
-            "fps": 2,
-            "loop": true,
-            "holdLast": false
-          }
-        }
-      }
-    }
-  }
+  "animations": {}
 }

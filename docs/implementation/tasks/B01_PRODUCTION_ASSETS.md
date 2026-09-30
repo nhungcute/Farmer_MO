@@ -17,9 +17,9 @@
   - [x] document production replacement order
   - [x] deterministic generation and strict validation
 - Current activity: DONE — parent review completed; inventory/replacement contract accepted.
-- Last completed: generated 188-asset, 10-animation inventory; all 188 current assets are explicitly `placeholder`.
+- Last completed: generated the 188-asset, 10-animation inventory; the baseline inventory classified all 188 assets as `placeholder` before Wave 1 promotion.
 - Next activity: maintenance only; B02 may start only after approved artwork is supplied, with no renderer/backend change required for replacement.
 - Tests: `node tools/asset-inventory.mjs`, asset validation and strict output validation PASS; deterministic output verified twice. Remote CI runs [36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559) and [36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574) each completed all five jobs successfully, including the Node/asset build.
-- Blocker: none for B01. B02 remains BLOCKED because production artwork, license and style approval are not supplied; no placeholder is promoted automatically.
+- Blocker: none for B01. B02 remains RUNNING because 76 assets outside the approved Wave 1 remain placeholders; no placeholder is promoted automatically.
 - Start time: 2026-09-29 14:57 UTC
 - End time: 2026-09-30 (DONE after parent review)
