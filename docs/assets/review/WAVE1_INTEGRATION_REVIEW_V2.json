@@ -1,0 +1,168 @@
+{
+  "review": "WAVE 1 INTEGRATION REVIEW V2",
+  "reviewDate": "2026-09-30",
+  "integrationOwner": "/root",
+  "status": "PASS_TECHNICAL_STYLE",
+  "releaseApproval": "PENDING_OWNER_REVIEW",
+  "scope": "Targeted Revision 2 re-review and selective promotion of the five Wave 1 owner sets. No Wave 2, Cloudflare or RC01 work is included.",
+  "evidence": {
+    "desktop": "docs/assets/review/wave1-cross-asset-review-v2.png",
+    "mobile": "docs/assets/review/wave1-cross-asset-mobile-v2.png",
+    "chickenScale": "docs/assets/review/chicken-direction-scale-comparison-v2.png",
+    "chickenRuntimeSize": "docs/assets/review/chicken-runtime-size-comparison-v2.png",
+    "chickenEat": "docs/assets/review/chicken-eat-se-strip-v2.png",
+    "chickenProofQA": "docs/assets/review/CHICKEN_PROOF_QA.json"
+  },
+  "assets": {
+    "Chicken": {
+      "owner": "ART-01",
+      "candidate": "92/92",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "PASS",
+      "event": "PASS — FEED_CONSUMED at EAT frame 2 in all four directions",
+      "revision": "Reduced micro-detail and glossy/high-frequency shading; preserved locked identity and contract; WALK six-frame cycles readable in NE/SE/SW/NW; EAT five-frame motion verified.",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW"
+    },
+    "Rice": {
+      "owner": "ART-02",
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A — static crop stages",
+      "event": "N/A",
+      "revision": "UNCHANGED",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW"
+    },
+    "Carrot": {
+      "owner": "ART-03",
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A — static crop stages",
+      "event": "N/A",
+      "revision": "UNCHANGED",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW"
+    },
+    "Corn": {
+      "owner": "ART-04",
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A — static crop stages",
+      "event": "N/A",
+      "revision": "Stage 2 and stage 3 detached visible alpha components removed; one connected visible component remains per stage.",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW"
+    },
+    "Tomato": {
+      "owner": "ART-05",
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A — static crop stages",
+      "event": "N/A",
+      "revision": "Seed and stages 1–3 detached visible alpha components removed; ready frame unchanged; baseline restored to y=230.",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW"
+    }
+  },
+  "crossAsset": {
+    "perspective": "PASS",
+    "relativeScale": "PASS",
+    "microDetailAtRuntimeSize": "PASS",
+    "palette": "PASS",
+    "outlineAndSilhouette": "PASS",
+    "lighting": "PASS",
+    "shadow": "PASS",
+    "mobileReadability": "PASS",
+    "desktopEvidence": "wave1-cross-asset-review-v2.png",
+    "mobileEvidence": "wave1-cross-asset-mobile-v2.png"
+  },
+  "promotion": {
+    "candidates": 112,
+    "promoted": 112,
+    "sourcePathPolicy": "Integration Owner only; no worker wrote assets-src",
+    "productionReady": 112,
+    "placeholders": 76,
+    "approved": 0,
+    "license": "PENDING_OWNER_REVIEW for all 112 promoted candidates",
+    "provenance": "source=internal-generated; creator/tool/toolVersion recorded from actual generation metadata; no license invented"
+  },
+  "productionInventory": {
+    "total": 188,
+    "production_ready": 112,
+    "placeholder": 76,
+    "approved": 0,
+    "wave1CanonicalCandidates": 112
+  },
+  "gates": {
+    "assetBuild": "PASS",
+    "assetValidate": "PASS — 188 assets, 10 animations",
+    "assetValidateStrict": "PASS — expected license-pending warnings",
+    "rendererTest": "PASS — 16/16",
+    "npmCheck": "PASS",
+    "dockerComposeConfig": "PASS",
+    "atlasByteEquality": "PASS — 112/112 source slices",
+    "animationContract": "PASS — four directions; IDLE 4, WALK 6, EAT 5; FEED_CONSUMED@2",
+    "dpr1": "PASS",
+    "dpr2": "PASS",
+    "mobile": "PASS",
+    "chickenStress": "PASS — production atlas, 1/25/50/100 clones, four viewports, no errors",
+    "gitDiffCheck": "PASS"
+  },
+  "technicalQA": {
+    "chicken": {
+      "directionScale": "PASS — body height ±4%, width ±5%, head guide ±4%; baseline y=230; anchor 0.5,0.9",
+      "microDetail": "PASS — mean edge-energy reduction 21.83%, target 15–25%",
+      "shading": "PASS — soft illustrated volume retained; glossy/specular emphasis reduced",
+      "walk": "PASS — six frames × four directions with readable alternating foot/contact phases",
+      "eat": "PASS — five frames × four directions; frame 2 contact; no body/head/torso/feet/shadow discontinuity",
+      "feedConsumed": "PASS — frame 2"
+    },
+    "corn": {
+      "alphaComponents": "PASS — stage 2/3 one connected visible component each at alpha >=16",
+      "baseline": "PASS — y=230",
+      "canonical": "PASS — 5/5"
+    },
+    "tomato": {
+      "alphaComponents": "PASS — seed/stage 1/2/3 one connected visible component each at alpha >=16",
+      "readyUnchanged": "PASS",
+      "baseline": "PASS — y=230",
+      "canonical": "PASS — 5/5"
+    }
+  },
+  "status": {
+    "B02_1": "DONE",
+    "B02_2_PROOF": "DONE — owner approved to proceed",
+    "B02_2_FULL": "DONE — 92/92 Chicken production candidates promoted",
+    "wave1": "DONE — 112/112 promoted and all technical/style gates pass",
+    "releaseApproval": "PENDING_OWNER_REVIEW",
+    "wave2": "CLOSED",
+    "cloudflare": "NOT_STARTED",
+    "RC01": "NOT_STARTED"
+  },
+  "next": [
+    "Wait for final owner style/license/content approval; do not set approved=true until evidence exists.",
+    "Keep Wave 2, Cloudflare Named Tunnel and RC01 closed.",
+    "Do not regenerate Rice or Carrot and do not change the locked renderer/animation/asset contract."
+  ]
+}

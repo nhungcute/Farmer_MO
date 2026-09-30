@@ -1,54 +1,42 @@
 # B02 Production Artwork — Parallel Art Wave 1
 
-Wave 1 starts five independent asset-owner tasks. Each task owns one complete asset type, including every state, stage or direction required by the canonical manifest. No task may split one asset type across workers.
+Wave 1 có năm owner độc lập. Mỗi owner sở hữu trọn một loại asset và chỉ ghi vào workspace của mình. Integration Owner là tác nhân duy nhất promote vào assets-src/**, pack atlas và cập nhật runtime manifest.
 
-| Task | Asset owner | Exclusive workspace | Canonical production family | Status |
-|---|---|---|---|---|
-| ART-01 | Chicken Asset Owner | `work/art-generation/chicken/**` | `animal_chicken` | RUNNING — 92/92; visual/style + EAT/WALK revision required |
-| ART-02 | Rice Asset Owner | `work/art-generation/crops/rice/**` | Rice crop IDs from manifest | DONE — 5/5 promoted; technical/style PASS; license pending |
-| ART-03 | Carrot Asset Owner | `work/art-generation/crops/carrot/**` | Carrot crop IDs from manifest | DONE — 5/5 promoted; technical/style PASS; license pending |
-| ART-04 | Corn Asset Owner | `work/art-generation/crops/corn/**` | Corn crop IDs from manifest | RUNNING — 5/5; detached alpha fragments require revision |
-| ART-05 | Tomato Asset Owner | `work/art-generation/crops/tomato/**` | Tomato crop IDs from manifest | RUNNING — 5/5; detached alpha fragments require revision |
+| Task | Owner | Workspace | Canonical set | Trạng thái |
+|---|---|---|---:|---|
+| ART-01 | Chicken Asset Owner | work/art-generation/chicken/** | 92/92 | **REVIEW — PASS**, đã promote |
+| ART-02 | Rice Asset Owner | work/art-generation/crops/rice/** | 5/5 | **DONE — PASS**, đã promote |
+| ART-03 | Carrot Asset Owner | work/art-generation/crops/carrot/** | 5/5 | **DONE — PASS**, đã promote |
+| ART-04 | Corn Asset Owner | work/art-generation/crops/corn/** | 5/5 | **REVIEW — PASS**, đã promote |
+| ART-05 | Tomato Asset Owner | work/art-generation/crops/tomato/** | 5/5 | **REVIEW — PASS**, đã promote |
 
-All five tasks read [`MO_FARM_PRODUCTION_STYLE_GUIDE.md`](../../../assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md) and the canonical [`animation-manifest.json`](../../../../assets-src/manifests/animation-manifest.json). The manifest is authoritative for IDs, frame counts, canvas, source scale, anchor, render offset, direction, FPS, loop, hold-last and events.
+## Quy tắc isolation
 
-## Isolation rules
+- Worker chỉ ghi work/art-generation/<asset>/**; không worker nào ghi assets-src/**, atlas, runtime, renderer, gameplay, economy, Tutorial, Cloudflare hoặc RC01.
+- Rice và Carrot không bị regenerate trong Revision 2.
+- Candidate phải giữ canonical ID, canvas 256×256, RGBA, baseline/anchor, frame order, FPS, loop, holdLast và event.
+- Provenance phải là dữ liệu thật. License chưa được xác nhận giữ PENDING_OWNER_REVIEW; không set approved=true nếu chưa có owner approval.
+- Proof/review nằm ngoài production source và không được dùng để thay thế production atlas.
 
-- A worker writes only its exclusive `work/art-generation/**` path and its own status file in this directory.
-- Workers do not edit `assets-src/**`, manifests, atlas output, runtime, renderer, API, database, economy, gameplay, Tutorial, Cloudflare or RC01.
-- Production promotion is a separate Integration Owner step after task `REVIEW`; generation workers cannot set `approved=true` or `production_ready=true`. A real generated candidate may record `placeholder=false`; the canonical production source is changed only by the Integration Owner after review (Rice/Carrot are now promoted).
-- Unknown license/source information remains `PENDING_OWNER_REVIEW`; no metadata is invented.
-- Integration Owner cross-asset review is complete for the passing Rice/Carrot candidates. Failed asset types remain isolated for targeted revision; no passing asset is regenerated.
+## Kết quả Wave 1 — Revision 2
 
-## Gate sequence
+- Chicken: 92/92 PASS. Đã giảm micro-detail và glossy shading; WALK 6 frame × 4 hướng; EAT 5 frame × 4 hướng, FEED_CONSUMED@2; identity/scale/baseline/contract giữ nguyên.
+- Rice: 5/5 PASS, UNCHANGED.
+- Carrot: 5/5 PASS, UNCHANGED.
+- Corn: 5/5 PASS; stage 2/3 không còn detached alpha island.
+- Tomato: 5/5 PASS; seed/stage 1/2/3 không còn detached alpha island, ready giữ nguyên, baseline y=230.
 
-```text
-canonical manifest audit
-        ↓
-owner generation in isolated workspace
-        ↓
-local dimensions / alpha / scale / style / continuity QA
-        ↓
-task REVIEW
-        ↓
-Integration Owner cross-asset review
-        ↓
-candidate promotion decision (separate change)
-```
+Integration Owner đã promote đủ **112/112** candidate canonical vào assets-src/**, pack atlas và xác nhận byte equality source-to-atlas. Inventory hiện có 112/188 production_ready, 76/188 placeholder, 0/188 approved.
 
-## Wave 1 integration outcome — 2026-09-30
+Evidence:
 
-- Promoted: Rice `5/5` + Carrot `5/5` = **10/112** canonical candidates.
-- Promotion metadata: `placeholder=false`, `production_ready=true`, `approved=false`, `license=PENDING_OWNER_REVIEW`.
-- Revision required: Chicken (gloss/micro-detail and WALK/EAT visual motion proof), Corn (detached alpha fragments), Tomato (detached alpha fragments).
-- No production files for Chicken, Corn or Tomato were changed. No new artwork is generated in this review stage.
+- Wave 1 Integration Review V2: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md
+- Machine-readable review: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json
+- Desktop cross-asset sheet: docs/assets/review/wave1-cross-asset-review-v2.png
+- Mobile cross-asset sheet: docs/assets/review/wave1-cross-asset-mobile-v2.png
 
-Wave 1 promotion is partial: Rice and Carrot are promoted (`10/112` candidates), while Chicken, Corn and Tomato remain in revision. Wave 2 assets such as Pond, Farmhouse, Warehouse, Chicken Coop, Effects, Terrain and UI are not started. Cloudflare and RC01 remain closed.
+## Gate đã chạy
 
-Kickoff integrity can be checked with:
+npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 112/112, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
 
-```text
-node tools/validate-art-wave.mjs
-```
-
-The validator compares each task metadata template with the canonical manifest, checks the five isolated workspaces and rejects unsafe production flags.
+Wave 1 đã **DONE ở technical/style/promotion gate**. Release/content/license approval vẫn chờ owner. Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED.

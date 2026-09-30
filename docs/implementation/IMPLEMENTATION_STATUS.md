@@ -1,71 +1,79 @@
 # MO Farm — Implementation Status
 
-Ngày cập nhật: 2026-09-30 16:00 UTC
+Ngày cập nhật: 2026-09-30
 Mốc hiện tại: **M4 — Production Persistence / Release Candidate foundation**
 
-Đây vẫn là prototype/demo. Dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên hiển thị; Tutorial không tồn tại trong runtime.
+Đây vẫn là prototype/demo. Dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên hiển thị; Tutorial không tồn tại trong runtime. Toàn bộ giao diện là tiếng Việt.
 
 ## Baseline đã hoàn thành
 
-| Hạng mục | Checklist | Trạng thái | Bằng chứng |
-|---|---:|---|---|
-| API/gameplay vertical slice | 9/9 | DONE | `npm run test:api:full` |
-| Content definitions và economy numbers | 8/8 | DONE | `packages/content/index.mjs`, `mo_farm_docs/25_MVP_CONTENT_DEFINITIONS.md` |
-| Asset pipeline locked v1 | 6/6 | DONE | 188 frame, 10 clip, 6 atlas; strict validation |
-| PixiJS renderer + Canvas fallback | 14/14 | DONE | `npm run renderer:test`, renderer syntax check |
-| Vietnamese UI/direct entry/PWA | 7/7 | DONE | `apps/web/src/locales/vi-VN.js`, web smoke |
-| Docker/Nginx/CI/backup foundation | 7/7 | DONE | Compose config/build/smoke |
+| Hạng mục | Trạng thái | Bằng chứng |
+|---|---|---|
+| API/gameplay vertical slice | DONE | npm run test:api:full |
+| Content definitions và economy numbers | DONE | packages/content/index.mjs, mo_farm_docs/25_MVP_CONTENT_DEFINITIONS.md |
+| Asset pipeline locked v1 | DONE | 188 source assets, 10 animation contracts, strict validation |
+| PixiJS renderer + Canvas fallback | DONE | npm run renderer:test |
+| Vietnamese UI/direct entry/PWA | DONE | apps/web/src/locales/vi-VN.js |
+| PostgreSQL runtime, CI, backup foundation | DONE | npm run check, Compose, integration gates |
 
-Baseline gần nhất: `npm run check` PASS — renderer syntax 24 file, localization 73 key, renderer 16/16, API 17/17, PostgreSQL repository 6/6, PostgreSQL integration 14/14, asset 188/10 và strict atlas PASS. C01 direct-entry scoped: 5 passed, 5 intentionally skipped; aggregate cùng C03: 8 passed, 19 intentionally skipped; C02 PostgreSQL: 1 passed, 2 intentionally skipped trên ba project; D02 load/backup: PASS. Commit baseline trước khi bổ sung CI gate: `789f037` đã push lên `origin/main`; CI gate integration commit: `628f7cd`; commit hiện tại xem bằng Git.
+Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note tương ứng. File/memory adapter vẫn được giữ cho test/demo compatibility đến Release Candidate.
 
-CI reproducibility gate đã bổ sung các job PostgreSQL repository/runtime, C02/C03 browser, và D02 load/backup-restore. Local analog đã PASS: PostgreSQL 20/20, C02 Chromium 1/1, C03 mobile-pwa 3/3, D02 load và backup/restore 15 bảng. GitHub Actions runs `36660295559` và `36662455574` cho các commit tích hợp `628f7cd` và `7651d6a` đều PASS 5/5 job: [run 36660295559](https://github.com/nhungcute/Farmer_MO/actions/runs/36660295559), [run 36662455574](https://github.com/nhungcute/Farmer_MO/actions/runs/36662455574); parent-review closure run [36663637314](https://github.com/nhungcute/Farmer_MO/actions/runs/36663637314) cũng PASS 5/5 job.
+## Task status
 
-## Đã review và hoàn tất
+| Task ID | Tên | Trạng thái |
+|---|---|---|
+| A01 | PostgreSQL runtime repository | DONE |
+| A02 | PostgreSQL API runtime wiring | DONE |
+| A03 | Transaction/concurrency integration gate | DONE |
+| B01 | Production asset inventory/replacement contract | DONE |
+| B02 | Production artwork replacement | **DONE — Wave 1 technical/style/promotion; release approval pending** |
+| C01 | Playwright setup và E2E foundation | DONE |
+| C02 | Functional Playwright E2E trên PostgreSQL | DONE |
+| C03 | Mobile/PWA/accessibility QA | DONE |
+| D01 | Observability/performance instrumentation | DONE |
+| D02 | Load test và backup/restore drill | DONE |
+| E01 | Cloudflare Named Tunnel | QUEUED — CLOSED |
+| RC01 | Release Candidate checklist | QUEUED — CLOSED |
 
-| Task ID | Tên | Checklist | Owner | Phụ thuộc | Owned paths | Trạng thái |
-|---|---|---:|---|---|---|---|
-| A01 | PostgreSQL runtime repository | 9/9 | Backend workstream | baseline | `apps/api/src/db/**`, `apps/api/src/repositories/**`, migration mới, Postgres tests | DONE |
-| B01 | Production asset inventory/replacement contract | 7/7 | Asset workstream | asset pipeline v1 | `tools/asset-inventory.mjs`, `docs/assets/**`, task note | DONE |
-| C01 | Playwright setup và E2E foundation | 6/6 | QA workstream | web/API baseline | `tests/e2e/**`, Playwright config, task note | DONE |
-| D01 | Observability/performance instrumentation | 8/8 | Root/infrastructure | baseline | `apps/api/src/observability/**`, renderer debug metrics, instrumentation tests/docs | DONE |
-| A02 | PostgreSQL API runtime wiring | 8/8 | Root/backend integration | A01 DONE | apps/api/src/server.mjs, migration CLI, API Docker/Compose integration, integration tests | DONE |
-| A03 | Transaction/concurrency integration gate | 6/6 | Backend workstream | A02 DONE | apps/api/test/postgres, task note | DONE |
-| C02 | Functional Playwright E2E tren PostgreSQL | 9/9 | QA/Web integration | A02 + C01 DONE | tests/e2e/c02-postgres.spec.mjs, harness/config | DONE |
-| C03 | Mobile/PWA/accessibility QA | 9/9 | QA/Web integration | C01 + C02 DONE | tests/e2e/c03-mobile-pwa.spec.mjs, styles/accessibility, task note | DONE |
-| D02 | Load test và backup/restore drill | 7/7 | Runtime/infrastructure | A02 + A03 + D01 DONE | tools/load-test, tools/backup-restore, task note | DONE |
+## B02 Wave 1 — 2026-09-30
 
-Các task RUNNING không được sửa shared canonical contract đồng thời. `package.json`, `package-lock.json`, `compose.yaml`, `.env.example`, `packages/content/index.mjs`, migration entry point, main web bootstrap và CI workflow do root quản lý khi cần tích hợp.
+Năm owner đã hoàn tất generation và Revision 2:
 
-## Đã xếp hàng
+- ART-01 Chicken: 92/92, style/identity/animation PASS, promote.
+- ART-02 Rice: 5/5, PASS, giữ nguyên và promote.
+- ART-03 Carrot: 5/5, PASS, giữ nguyên và promote.
+- ART-04 Corn: 5/5, detached alpha stage 2/3 đã sửa, PASS, promote.
+- ART-05 Tomato: 5/5, detached alpha seed/stage 1/2/3 đã sửa, ready unchanged, PASS, promote.
 
-| Task ID | Tên | Checklist | Phụ thuộc | Trạng thái |
-|---|---|---:|---|---|
-| B02 | Production artwork replacement | 5/8 — Wave 1 partial integration | B01 + approved artwork gates | RUNNING — 10/112 promoted; Chicken/Corn/Tomato revision required |
-| E01 | Cloudflare Named Tunnel | 0/12 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
-| RC01 | Release Candidate checklist | 0/12 | A03, B02, C03, D02, E01 | QUEUED |
+Wave 1 đã promote **112/112 canonical candidates** vào assets-src/**, pack atlas và runtime manifest. Source-to-atlas byte equality đạt 112/112. Chicken production stress đã chạy trên atlas thật với 1/25/50/100 bản sao ở bốn viewport, không lỗi.
 
-B02 subtask checkpoint: **B02.1 is `DONE`** and **B02.2-PROOF Revision 2 is `DONE` / `APPROVED TO PROCEED`**. **B02.2-FULL is `RUNNING`**: Rice/Carrot passed and 10/112 candidates are promoted; Chicken/Corn/Tomato remain in targeted revision. E01/RC01 remain closed.
+Inventory:
 
-B02.2 proof checkpoint: **`B02.2-PROOF Revision 2` is `DONE` / owner `APPROVED TO PROCEED`** with 13 proof frames and full QA evidence. **`B02.2-FULL` is `RUNNING`** for 92 Chicken + 20 crop candidates; only Rice/Carrot are promoted after integration review.
+- 188 canonical source assets
+- 112 production_ready
+- 76 placeholder
+- 0 approved
+- license của 112 asset là PENDING_OWNER_REVIEW
 
-B02 Parallel Art Wave 1: **five real generation tasks completed**: ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5. Integration Owner review promoted Rice/Carrot (`10/112`); Chicken/Corn/Tomato require targeted visual revision. Wave 2 is not started.
+Bằng chứng tích hợp: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md và docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json.
 
-## Wave 1 art integration checkpoint — 2026-09-30
+## Gate kỹ thuật gần nhất
 
-- **Promoted:** Rice 5/5 and Carrot 5/5 (**10/112** Wave 1 candidates).
-- **Running revision:** Chicken (gloss/micro-detail and WALK/EAT proof), Corn (detached alpha fragments), Tomato (detached alpha fragments).
-- **Production inventory:** `production_ready=10/188`, `placeholder=178/188`, `approved=0/188`; promoted provenance remains `license=PENDING_OWNER_REVIEW`.
-- **Gate status:** asset build/pack, validation/strict validation, renderer tests, full check, Docker Compose config and diff check pass.
-- **Next:** targeted revision and re-review only. Do not open Wave 2, Cloudflare E01 or RC01.
+- npm run assets:build: PASS.
+- npm run assets:validate: PASS — 188 assets, 10 animations.
+- npm run assets:validate:strict: PASS — cảnh báo license pending được mong đợi.
+- npm run renderer:test: PASS — 16/16.
+- npm run check: PASS.
+- docker compose config --quiet: PASS.
+- DPR 1/2, mobile, Chicken EAT proof và production-atlas stress: PASS.
+- git diff --check: PASS.
 
-## Ranh giới còn lại
+## Giới hạn và bước kế tiếp
 
-- Runtime API chon ro PERSISTENCE_DRIVER=file hoac postgres; file/JSON FarmStore van la mac dinh prototype, con postgres da chay enter/session/bootstrap va tat ca mutation qua transaction repository.
-- pg driver, numeric migration CLI, BOM-safe migration runner va Compose migration loop da duoc chuan bi; readiness PostgreSQL tra 503 khi DB unavailable.
-- Asset inventory is partially promoted: 10 Rice/Carrot entries are `production_ready=true` with `license=PENDING_OWNER_REVIEW`; 178/188 remain internal placeholders and 0 are approved.
-- Chưa được gọi là Release Candidate cho tới khi persistence, E2E, mobile QA, performance, backup/restore, observability và deployment gate đạt checklist.
-- Không thêm pig, cow, fishing, weather, social, multiplayer, guild, chat hoặc gameplay mới trong milestone này.
+B02 đã DONE ở technical/style/promotion gate, nhưng release/content/license approval vẫn chờ owner; không set approved=true. Không regenerate Rice/Carrot và không đổi renderer, animation hoặc asset contract.
 
-## Cách cập nhật
+Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED. Bước kế tiếp chỉ là owner review cuối cho style/license/content; sau khi có approval rõ ràng mới đánh giá release gate.
 
-Mỗi task phải có file trong `docs/implementation/tasks/` với Task ID, status, owner, dependencies, owned/forbidden paths, deliverables, checklist, current/last/next activity, tests, blocker, start/end time. Chỉ chuyển `REVIEW` sau khi checklist và test có bằng chứng; chỉ chuyển `DONE` sau review.
+## Quy tắc cập nhật
+
+Mỗi task trong docs/implementation/tasks/ phải nêu Task ID, owner, dependencies, owned/forbidden paths, deliverables, checklist, tests, blocker và bằng chứng. Chỉ chuyển REVIEW khi có evidence; chỉ chuyển DONE sau khi gate tương ứng pass.

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:,">
-  <title>MỠ FARM — Kiểm tra tải bản thử Chicken</title>
+  <title>MỠ FARM — Kiểm tra tải Chicken production atlas</title>
   <style>
     :root { font-family: system-ui, sans-serif; color: #26352b; background: #f5f0e5; }
     body { margin: 16px; line-height: 1.45; }
     main { max-width: 920px; margin: 0 auto; }
     article { background: #fff; border: 1px solid #d8cdb9; border-radius: 12px; padding: 16px; margin: 16px 0; }
-    .warning { padding: 10px; background: #fff8d8; border-left: 4px solid #d5a72a; }
+    .warning { padding: 10px; background: #eef6e9; border-left: 4px solid #315d3c; }
     .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
     label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
     select, button { font: inherit; padding: 7px 9px; border: 1px solid #b9cbb8; border-radius: 6px; background: #fff; }
@@ -24,8 +24,8 @@
 </head>
 <body>
 <main>
-  <h1>Kiểm tra tải bản thử Chicken</h1>
-  <p class="warning">Trang này chỉ đo tải của bản thử ngoài môi trường chạy thật. Nó dùng cùng một kết cấu bản thử và không nạp manifest/atlas sản xuất.</p>
+  <h1>Kiểm tra tải Chicken production atlas</h1>
+  <p class="warning">Trang này đo tải ngoài môi trường chạy thật bằng atlas production đã promote. Mỗi bản sao tuần tự phát các frame IDLE/WALK thật, giữ anchor 0.5/0.9 và không clone một texture tĩnh.</p>
   <article>
     <p>Chọn số bản sao để kiểm tra nhanh ở các mốc <code>1 / 25 / 50 / 100</code>. Theo dõi FPS, DPR và bộ nhớ JavaScript khi trình duyệt cung cấp số liệu.</p>
     <div class="controls">
@@ -34,16 +34,17 @@
       </select></label>
       <button id="apply" type="button">Áp dụng</button>
     </div>
-    <div id="pixi-root" aria-label="Bản xem trước tải bản thử Chicken"></div>
-    <p id="status" class="status" aria-live="polite">Đang khởi động Pixi…</p>
+    <div id="pixi-root" aria-label="Bản xem trước tải production Chicken"></div>
+    <p id="status" class="status" aria-live="polite">Đang tải production atlas…</p>
   </article>
   <article>
     <h2>Phạm vi đo</h2>
     <ul>
-      <li>Kết cấu: <code>docs/assets/proof/chicken/chicken-proof-idle-se-00.png</code>.</li>
+      <li>Nguồn: <code>apps/web/public/assets/atlases/chicken-0.png</code> và <code>chicken-1.png</code>.</li>
+      <li>Frame thật: IDLE và WALK của đủ bốn hướng, đổi frame mỗi 100 ms.</li>
       <li>Số bản sao: 1, 25, 50 và 100.</li>
-      <li>FPS là giá trị trung bình cửa sổ 500 ms; DPR lấy từ trình duyệt.</li>
-      <li>Bộ nhớ dùng <code>performance.memory</code> nếu Chromium cung cấp, nếu không sẽ ghi “không khả dụng”.</li>
+      <li>FPS là giá trị trung bình của cửa sổ 500 ms; DPR lấy từ trình duyệt.</li>
+      <li>Bộ nhớ dùng <code>performance.memory</code> nếu Chromium cung cấp, nếu không ghi “không khả dụng”.</li>
     </ul>
   </article>
 </main>
@@ -54,16 +55,39 @@ const root = document.querySelector('#pixi-root');
 const countSelect = document.querySelector('#clone-count');
 const applyButton = document.querySelector('#apply');
 const status = document.querySelector('#status');
+const atlasRoot = '../../../apps/web/public/assets/atlases/';
 const app = new PIXI.Application();
 await app.init({ width: 740, height: 360, backgroundColor: 0xdcebd4, antialias: true, resolution: 1, autoDensity: false });
 root.replaceChildren(app.canvas);
 
-const texture = await PIXI.Assets.load('../proof/chicken/chicken-proof-idle-se-00.png');
+const atlas = await fetch(`${atlasRoot}chicken.json`).then((response) => {
+  if (!response.ok) throw new Error(`atlas manifest HTTP ${response.status}`);
+  return response.json();
+});
+const pageData = await Promise.all(atlas.pages.map(async (page) => ({
+  ...page,
+  json: await fetch(`${atlasRoot}${page.json}`).then((response) => response.json()),
+  texture: await PIXI.Assets.load(`${atlasRoot}${page.image}`),
+})));
+const frameTextures = new Map();
+for (const page of pageData) {
+  for (const [id, value] of Object.entries(page.json.frames)) {
+    const { x, y, w, h } = value.frame;
+    frameTextures.set(id, new PIXI.Texture({ source: page.texture.source, frame: new PIXI.Rectangle(x, y, w, h) }));
+  }
+}
+const frameIds = atlas.pages.flatMap((page) => page.frameIds)
+  .filter((id) => /animal_chicken_(idle|walk)_(ne|nw|se|sw)_\d+$/.test(id));
+if (frameIds.length !== 40 || frameTextures.size !== 92) {
+  throw new Error(`production atlas frame contract mismatch: ${frameIds.length} stress frames, ${frameTextures.size} total`);
+}
+
 const layer = new PIXI.Container();
 app.stage.addChild(layer);
 let clones = [];
 let sampleFrames = 0;
 let sampleStarted = performance.now();
+let animationTick = 0;
 
 function memoryText() {
   const memory = performance.memory;
@@ -80,31 +104,38 @@ function rebuild(count) {
   const gapX = 740 / (columns + 1);
   const gapY = 360 / (rows + 1);
   for (let index = 0; index < count; index += 1) {
-    const sprite = new PIXI.Sprite(texture);
+    const id = frameIds[index % frameIds.length];
+    const sprite = new PIXI.Sprite(frameTextures.get(id));
     sprite.anchor.set(0.5, 0.9);
     const column = index % columns;
     const row = Math.floor(index / columns);
     sprite.position.set(gapX * (column + 1), gapY * (row + 1));
     sprite.baseY = sprite.y;
+    sprite.sequenceOffset = index % frameIds.length;
     sprite.scale.set(count >= 100 ? 0.55 : count >= 50 ? 0.7 : 0.9);
     layer.addChild(sprite);
     clones.push(sprite);
   }
   sampleFrames = 0;
   sampleStarted = performance.now();
-  window.__chickenStressSnapshot = { count, fps: null, dpr: window.devicePixelRatio, memory: memoryText() };
-  status.textContent = `Đang đo ${count} bản sao · FPS: đang lấy mẫu · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memoryText()}`;
+  animationTick = 0;
+  window.__chickenStressSnapshot = { count, fps: null, dpr: window.devicePixelRatio, memory: memoryText(), frameSource: 'production-atlas' };
+  status.textContent = `Đang đo ${count} bản sao · frame production thật · FPS: đang lấy mẫu · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memoryText()}`;
 }
 
-function applyCount() {
-  rebuild(Number(countSelect.value));
-}
-
+function applyCount() { rebuild(Number(countSelect.value)); }
 applyButton.addEventListener('click', applyCount);
 countSelect.addEventListener('change', applyCount);
-app.ticker.add(({ deltaMS }) => {
+app.ticker.add(() => {
   sampleFrames += 1;
   const now = performance.now();
+  const nextTick = Math.floor(now / 100);
+  if (nextTick !== animationTick) {
+    animationTick = nextTick;
+    for (const sprite of clones) {
+      sprite.texture = frameTextures.get(frameIds[(animationTick + sprite.sequenceOffset) % frameIds.length]);
+    }
+  }
   for (let index = 0; index < clones.length; index += 1) {
     clones[index].y = clones[index].baseY + Math.sin(now / 400 + index) * 2;
   }
@@ -113,8 +144,8 @@ app.ticker.add(({ deltaMS }) => {
   const fps = sampleFrames * 1000 / elapsed;
   const count = clones.length;
   const memory = memoryText();
-  status.textContent = `Đang đo ${count} bản sao · FPS: ${fps.toFixed(1)} · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memory}`;
-  window.__chickenStressSnapshot = { count, fps: Number(fps.toFixed(1)), dpr: window.devicePixelRatio, memory };
+  status.textContent = `Đang đo ${count} bản sao · frame production thật · FPS: ${fps.toFixed(1)} · DPR: ${window.devicePixelRatio} · Bộ nhớ: ${memory}`;
+  window.__chickenStressSnapshot = { count, fps: Number(fps.toFixed(1)), dpr: window.devicePixelRatio, memory, frameSource: 'production-atlas' };
   sampleFrames = 0;
   sampleStarted = now;
 });

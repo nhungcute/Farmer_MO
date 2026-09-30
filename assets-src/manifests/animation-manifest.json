@@ -957,12 +957,12 @@
       "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
       "creator": "Codex / Rice Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_rice_stage_1": {
       "id": "crop_rice_stage_1",
@@ -985,12 +985,12 @@
       "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
       "creator": "Codex / Rice Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_rice_stage_2": {
       "id": "crop_rice_stage_2",
@@ -1013,12 +1013,12 @@
       "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
       "creator": "Codex / Rice Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_rice_stage_3": {
       "id": "crop_rice_stage_3",
@@ -1041,12 +1041,12 @@
       "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
       "creator": "Codex / Rice Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_rice_ready": {
       "id": "crop_rice_ready",
@@ -1069,12 +1069,12 @@
       "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
       "creator": "Codex / Rice Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_carrot_seed": {
       "id": "crop_carrot_seed",
@@ -1094,15 +1094,15 @@
       "placeholder": false,
       "license": "PENDING_OWNER_REVIEW",
       "source": "internal-generated",
-      "tool": "image_gen.imagegen",
+      "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
-      "creator": "OpenAI image generation via Codex",
+      "creator": "Codex / Carrot Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_carrot_stage_1": {
       "id": "crop_carrot_stage_1",
@@ -1122,15 +1122,15 @@
       "placeholder": false,
       "license": "PENDING_OWNER_REVIEW",
       "source": "internal-generated",
-      "tool": "image_gen.imagegen",
+      "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
-      "creator": "OpenAI image generation via Codex",
+      "creator": "Codex / Carrot Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_carrot_stage_2": {
       "id": "crop_carrot_stage_2",
@@ -1150,15 +1150,15 @@
       "placeholder": false,
       "license": "PENDING_OWNER_REVIEW",
       "source": "internal-generated",
-      "tool": "image_gen.imagegen",
+      "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
-      "creator": "OpenAI image generation via Codex",
+      "creator": "Codex / Carrot Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_carrot_stage_3": {
       "id": "crop_carrot_stage_3",
@@ -1178,15 +1178,15 @@
       "placeholder": false,
       "license": "PENDING_OWNER_REVIEW",
       "source": "internal-generated",
-      "tool": "image_gen.imagegen",
+      "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
-      "creator": "OpenAI image generation via Codex",
+      "creator": "Codex / Carrot Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_carrot_ready": {
       "id": "crop_carrot_ready",
@@ -1206,15 +1206,15 @@
       "placeholder": false,
       "license": "PENDING_OWNER_REVIEW",
       "source": "internal-generated",
-      "tool": "image_gen.imagegen",
+      "tool": "built-in image_gen",
       "toolVersion": "PENDING_OWNER_REVIEW",
-      "creator": "OpenAI image generation via Codex",
+      "creator": "Codex / Carrot Asset Owner",
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json",
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "approvalRef": null,
       "production_ready": true,
-      "approved": false,
-      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
+      "approved": false
     },
     "crop_corn_seed": {
       "id": "crop_corn_seed",
@@ -1231,12 +1231,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_corn_stage_1": {
       "id": "crop_corn_stage_1",
@@ -1253,12 +1259,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_corn_stage_2": {
       "id": "crop_corn_stage_2",
@@ -1275,12 +1287,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_corn_stage_3": {
       "id": "crop_corn_stage_3",
@@ -1297,12 +1315,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_corn_ready": {
       "id": "crop_corn_ready",
@@ -1319,12 +1343,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_tomato_seed": {
       "id": "crop_tomato_seed",
@@ -1341,12 +1371,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_tomato_stage_1": {
       "id": "crop_tomato_stage_1",
@@ -1363,12 +1399,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_tomato_stage_2": {
       "id": "crop_tomato_stage_2",
@@ -1385,12 +1427,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_tomato_stage_3": {
       "id": "crop_tomato_stage_3",
@@ -1407,12 +1455,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_tomato_ready": {
       "id": "crop_tomato_ready",
@@ -1429,12 +1483,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
       "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "MO Farm team",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "crop_ready_glow_00": {
       "id": "crop_ready_glow_00",
@@ -2199,12 +2259,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_ne_01": {
       "id": "animal_chicken_idle_ne_01",
@@ -2221,12 +2287,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_ne_02": {
       "id": "animal_chicken_idle_ne_02",
@@ -2243,12 +2315,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_ne_03": {
       "id": "animal_chicken_idle_ne_03",
@@ -2265,12 +2343,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_se_00": {
       "id": "animal_chicken_idle_se_00",
@@ -2287,12 +2371,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_se_01": {
       "id": "animal_chicken_idle_se_01",
@@ -2309,12 +2399,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_se_02": {
       "id": "animal_chicken_idle_se_02",
@@ -2331,12 +2427,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_se_03": {
       "id": "animal_chicken_idle_se_03",
@@ -2353,12 +2455,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_sw_00": {
       "id": "animal_chicken_idle_sw_00",
@@ -2375,12 +2483,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_sw_01": {
       "id": "animal_chicken_idle_sw_01",
@@ -2397,12 +2511,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_sw_02": {
       "id": "animal_chicken_idle_sw_02",
@@ -2419,12 +2539,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_sw_03": {
       "id": "animal_chicken_idle_sw_03",
@@ -2441,12 +2567,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_nw_00": {
       "id": "animal_chicken_idle_nw_00",
@@ -2463,12 +2595,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_nw_01": {
       "id": "animal_chicken_idle_nw_01",
@@ -2485,12 +2623,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_nw_02": {
       "id": "animal_chicken_idle_nw_02",
@@ -2507,12 +2651,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_idle_nw_03": {
       "id": "animal_chicken_idle_nw_03",
@@ -2529,12 +2679,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_00": {
       "id": "animal_chicken_walk_ne_00",
@@ -2551,12 +2707,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_01": {
       "id": "animal_chicken_walk_ne_01",
@@ -2573,12 +2735,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_02": {
       "id": "animal_chicken_walk_ne_02",
@@ -2595,12 +2763,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_03": {
       "id": "animal_chicken_walk_ne_03",
@@ -2617,12 +2791,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_04": {
       "id": "animal_chicken_walk_ne_04",
@@ -2639,12 +2819,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_ne_05": {
       "id": "animal_chicken_walk_ne_05",
@@ -2661,12 +2847,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_00": {
       "id": "animal_chicken_walk_se_00",
@@ -2683,12 +2875,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_01": {
       "id": "animal_chicken_walk_se_01",
@@ -2705,12 +2903,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_02": {
       "id": "animal_chicken_walk_se_02",
@@ -2727,12 +2931,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_03": {
       "id": "animal_chicken_walk_se_03",
@@ -2749,12 +2959,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_04": {
       "id": "animal_chicken_walk_se_04",
@@ -2771,12 +2987,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_se_05": {
       "id": "animal_chicken_walk_se_05",
@@ -2793,12 +3015,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_00": {
       "id": "animal_chicken_walk_sw_00",
@@ -2815,12 +3043,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_01": {
       "id": "animal_chicken_walk_sw_01",
@@ -2837,12 +3071,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_02": {
       "id": "animal_chicken_walk_sw_02",
@@ -2859,12 +3099,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_03": {
       "id": "animal_chicken_walk_sw_03",
@@ -2881,12 +3127,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_04": {
       "id": "animal_chicken_walk_sw_04",
@@ -2903,12 +3155,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_sw_05": {
       "id": "animal_chicken_walk_sw_05",
@@ -2925,12 +3183,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_00": {
       "id": "animal_chicken_walk_nw_00",
@@ -2947,12 +3211,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_01": {
       "id": "animal_chicken_walk_nw_01",
@@ -2969,12 +3239,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_02": {
       "id": "animal_chicken_walk_nw_02",
@@ -2991,12 +3267,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_03": {
       "id": "animal_chicken_walk_nw_03",
@@ -3013,12 +3295,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_04": {
       "id": "animal_chicken_walk_nw_04",
@@ -3035,12 +3323,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_walk_nw_05": {
       "id": "animal_chicken_walk_nw_05",
@@ -3057,12 +3351,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_ne_00": {
       "id": "animal_chicken_eat_ne_00",
@@ -3079,12 +3379,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_ne_01": {
       "id": "animal_chicken_eat_ne_01",
@@ -3101,12 +3407,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_ne_02": {
       "id": "animal_chicken_eat_ne_02",
@@ -3123,12 +3435,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_ne_03": {
       "id": "animal_chicken_eat_ne_03",
@@ -3145,12 +3463,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_ne_04": {
       "id": "animal_chicken_eat_ne_04",
@@ -3167,12 +3491,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_se_00": {
       "id": "animal_chicken_eat_se_00",
@@ -3189,12 +3519,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_se_01": {
       "id": "animal_chicken_eat_se_01",
@@ -3211,12 +3547,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_se_02": {
       "id": "animal_chicken_eat_se_02",
@@ -3233,12 +3575,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_se_03": {
       "id": "animal_chicken_eat_se_03",
@@ -3255,12 +3603,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_se_04": {
       "id": "animal_chicken_eat_se_04",
@@ -3277,12 +3631,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_sw_00": {
       "id": "animal_chicken_eat_sw_00",
@@ -3299,12 +3659,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_sw_01": {
       "id": "animal_chicken_eat_sw_01",
@@ -3321,12 +3687,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_sw_02": {
       "id": "animal_chicken_eat_sw_02",
@@ -3343,12 +3715,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_sw_03": {
       "id": "animal_chicken_eat_sw_03",
@@ -3365,12 +3743,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_sw_04": {
       "id": "animal_chicken_eat_sw_04",
@@ -3387,12 +3771,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_nw_00": {
       "id": "animal_chicken_eat_nw_00",
@@ -3409,12 +3799,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_nw_01": {
       "id": "animal_chicken_eat_nw_01",
@@ -3431,12 +3827,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_nw_02": {
       "id": "animal_chicken_eat_nw_02",
@@ -3453,12 +3855,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_nw_03": {
       "id": "animal_chicken_eat_nw_03",
@@ -3475,12 +3883,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_eat_nw_04": {
       "id": "animal_chicken_eat_nw_04",
@@ -3497,12 +3911,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_ne_00": {
       "id": "animal_chicken_happy_ne_00",
@@ -3519,12 +3939,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_ne_01": {
       "id": "animal_chicken_happy_ne_01",
@@ -3541,12 +3967,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_ne_02": {
       "id": "animal_chicken_happy_ne_02",
@@ -3563,12 +3995,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_ne_03": {
       "id": "animal_chicken_happy_ne_03",
@@ -3585,12 +4023,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_se_00": {
       "id": "animal_chicken_happy_se_00",
@@ -3607,12 +4051,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_se_01": {
       "id": "animal_chicken_happy_se_01",
@@ -3629,12 +4079,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_se_02": {
       "id": "animal_chicken_happy_se_02",
@@ -3651,12 +4107,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_se_03": {
       "id": "animal_chicken_happy_se_03",
@@ -3673,12 +4135,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_sw_00": {
       "id": "animal_chicken_happy_sw_00",
@@ -3695,12 +4163,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_sw_01": {
       "id": "animal_chicken_happy_sw_01",
@@ -3717,12 +4191,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_sw_02": {
       "id": "animal_chicken_happy_sw_02",
@@ -3739,12 +4219,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_sw_03": {
       "id": "animal_chicken_happy_sw_03",
@@ -3761,12 +4247,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_nw_00": {
       "id": "animal_chicken_happy_nw_00",
@@ -3783,12 +4275,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_nw_01": {
       "id": "animal_chicken_happy_nw_01",
@@ -3805,12 +4303,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_nw_02": {
       "id": "animal_chicken_happy_nw_02",
@@ -3827,12 +4331,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_happy_nw_03": {
       "id": "animal_chicken_happy_nw_03",
@@ -3849,12 +4359,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_ne_00": {
       "id": "animal_chicken_sleep_ne_00",
@@ -3871,12 +4387,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_ne_01": {
       "id": "animal_chicken_sleep_ne_01",
@@ -3893,12 +4415,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_se_00": {
       "id": "animal_chicken_sleep_se_00",
@@ -3915,12 +4443,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_se_01": {
       "id": "animal_chicken_sleep_se_01",
@@ -3937,12 +4471,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_sw_00": {
       "id": "animal_chicken_sleep_sw_00",
@@ -3959,12 +4499,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_sw_01": {
       "id": "animal_chicken_sleep_sw_01",
@@ -3981,12 +4527,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_nw_00": {
       "id": "animal_chicken_sleep_nw_00",
@@ -4003,12 +4555,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_sleep_nw_01": {
       "id": "animal_chicken_sleep_nw_01",
@@ -4025,12 +4583,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_ne_00": {
       "id": "animal_chicken_product_ready_ne_00",
@@ -4047,12 +4611,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_ne_01": {
       "id": "animal_chicken_product_ready_ne_01",
@@ -4069,12 +4639,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_se_00": {
       "id": "animal_chicken_product_ready_se_00",
@@ -4091,12 +4667,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_se_01": {
       "id": "animal_chicken_product_ready_se_01",
@@ -4113,12 +4695,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_sw_00": {
       "id": "animal_chicken_product_ready_sw_00",
@@ -4135,12 +4723,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_sw_01": {
       "id": "animal_chicken_product_ready_sw_01",
@@ -4157,12 +4751,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_nw_00": {
       "id": "animal_chicken_product_ready_nw_00",
@@ -4179,12 +4779,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     },
     "animal_chicken_product_ready_nw_01": {
       "id": "animal_chicken_product_ready_nw_01",
@@ -4201,12 +4807,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen + deterministic pose rendering",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json"
     }
   },
   "animations": {
