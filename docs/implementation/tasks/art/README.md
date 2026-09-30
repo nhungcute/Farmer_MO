@@ -34,9 +34,10 @@ Evidence:
 - Machine-readable review: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json
 - Desktop cross-asset sheet: docs/assets/review/wave1-cross-asset-review-v2.png
 - Mobile cross-asset sheet: docs/assets/review/wave1-cross-asset-mobile-v2.png
+- Final owner review: docs/assets/review/FINAL_OWNER_REVIEW_V2.md
 
 ## Gate đã chạy
 
 npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 112/112, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
 
-Wave 1 đã **DONE ở technical/style/promotion gate**. Release/content/license approval vẫn chờ owner. Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED.
+Wave 1 đã **DONE ở technical/style/owner-review/promotion gate**. Artwork owner review PASS; release/content/license approval vẫn chờ owner. Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED.

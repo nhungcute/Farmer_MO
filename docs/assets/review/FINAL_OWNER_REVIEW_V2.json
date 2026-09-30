@@ -1,0 +1,164 @@
+{
+  "review": "FINAL OWNER REVIEW V2",
+  "reviewDate": "2026-09-30",
+  "status": "PASS_ART_STYLE_CONTENT_LICENSE_BLOCKED",
+  "scope": "Read-only final owner review of the five promoted Wave 1 asset types. No artwork was generated and no reviewer changed production files.",
+  "parallelReviews": {
+    "REVIEW-01": {
+      "asset": "Chicken",
+      "status": "PASS",
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "PASS",
+      "mobile": "PASS",
+      "ownerRecommendation": "APPROVE",
+      "knownIssues": [
+        "License and release provenance approval remain PENDING_OWNER_REVIEW."
+      ],
+      "evidence": [
+        "docs/assets/review/CHICKEN_PROOF_QA.json",
+        "docs/assets/review/chicken-direction-scale-comparison-v2.png",
+        "docs/assets/review/chicken-eat-se-strip-v2.png",
+        "docs/assets/review/chicken-runtime-size-comparison-v2.png",
+        "docs/assets/review/chicken-stress-preview.html"
+      ]
+    },
+    "REVIEW-02": {
+      "asset": "Rice",
+      "status": "PASS",
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "PASS",
+      "mobile": "PASS",
+      "ownerRecommendation": "APPROVE",
+      "knownIssues": [
+        "License and toolVersion remain PENDING_OWNER_REVIEW."
+      ],
+      "evidence": [
+        "work/art-generation/crops/rice/qa/QA.json",
+        "work/art-generation/crops/rice/previews/rice-growth-strip.png",
+        "work/art-generation/crops/rice/previews/rice-runtime-size-comparison.png"
+      ]
+    },
+    "REVIEW-03": {
+      "asset": "Carrot",
+      "status": "PASS",
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "PASS",
+      "mobile": "PASS",
+      "ownerRecommendation": "APPROVE",
+      "knownIssues": [
+        "License and toolVersion remain PENDING_OWNER_REVIEW."
+      ],
+      "evidence": [
+        "work/art-generation/crops/carrot/ART_QA.json",
+        "work/art-generation/crops/carrot/carrot-stage-strip.png",
+        "work/art-generation/crops/carrot/REVIEW_REPORT.md"
+      ]
+    },
+    "REVIEW-04": {
+      "asset": "Corn",
+      "status": "PASS",
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "PASS",
+      "mobile": "PASS",
+      "ownerRecommendation": "APPROVE",
+      "knownIssues": [
+        "License and toolVersion remain PENDING_OWNER_REVIEW."
+      ],
+      "evidence": [
+        "work/art-generation/crops/corn/ART_QA.json",
+        "work/art-generation/crops/corn/corn-runtime-review-v2.png",
+        "work/art-generation/crops/corn/REVIEW_REPORT.md"
+      ]
+    },
+    "REVIEW-05": {
+      "asset": "Tomato",
+      "status": "PASS",
+      "technical": "PASS",
+      "style": "PASS",
+      "content": "PASS",
+      "mobile": "PASS",
+      "ownerRecommendation": "APPROVE",
+      "knownIssues": [
+        "License and toolVersion remain PENDING_OWNER_REVIEW."
+      ],
+      "evidence": [
+        "work/art-generation/crops/tomato/ART_QA.json",
+        "work/art-generation/crops/tomato/tomato-runtime-review-v2.png",
+        "work/art-generation/crops/tomato/tomato-runtime-mobile-v2.png",
+        "work/art-generation/crops/tomato/REVIEW_REPORT.md"
+      ]
+    },
+    "REVIEW-06": {
+      "asset": "Wave 1 provenance and license",
+      "status": "PASS_FIELDS_LICENSE_BLOCKED",
+      "technical": "PASS",
+      "style": "N/A",
+      "content": "PENDING_OWNER_REVIEW",
+      "mobile": "N/A",
+      "ownerRecommendation": "REVISION_REQUIRED",
+      "knownIssues": [
+        "All 112 promoted entries retain license=PENDING_OWNER_REVIEW.",
+        "No approved=true or release approval was inferred."
+      ]
+    }
+  },
+  "crossAsset": {
+    "status": "PASS",
+    "relativeScale": "PASS",
+    "perspective": "PASS",
+    "palette": "PASS",
+    "detailDensity": "PASS",
+    "lighting": "PASS",
+    "outline": "PASS",
+    "mobileReadability": "PASS",
+    "evidence": [
+      "docs/assets/review/wave1-cross-asset-review-v2.png",
+      "docs/assets/review/wave1-cross-asset-mobile-v2.png"
+    ]
+  },
+  "promotion": {
+    "wave1Candidates": 112,
+    "promoted": 112,
+    "productionReady": 112,
+    "placeholders": 76,
+    "approved": 0,
+    "sourcePolicy": "Integration Owner only; workers did not write assets-src",
+    "license": "PENDING_OWNER_REVIEW"
+  },
+  "provenance": {
+    "requiredFieldsPresent": true,
+    "source": "internal-generated",
+    "creatorToolToolVersionRecorded": true,
+    "licenseApproval": "BLOCKED_PENDING_OWNER_REVIEW",
+    "approvalRef": "null until owner approval"
+  },
+  "gates": {
+    "assetValidation": "PASS",
+    "strictValidation": "PASS with expected license-pending warnings",
+    "renderer": "PASS 16/16",
+    "npmCheck": "PASS",
+    "dockerComposeConfig": "PASS",
+    "dockerApiWebBuild": "PASS",
+    "atlasEquality": "PASS 112/112",
+    "dpr1": "PASS",
+    "dpr2": "PASS",
+    "mobile": "PASS",
+    "chickenStress": "PASS production atlas at 1/25/50/100 clones",
+    "gitDiffCheck": "PASS"
+  },
+  "status": {
+    "B02_1": "DONE",
+    "B02_2_PROOF": "DONE",
+    "B02_2_FULL": "DONE",
+    "wave1": "DONE_TECHNICAL_STYLE_OWNER_REVIEW",
+    "releaseApproval": "PENDING_OWNER_REVIEW",
+    "wave2": "CLOSED",
+    "cloudflare": "NOT_STARTED",
+    "RC01": "NOT_STARTED"
+  },
+  "stopCondition": "Stop after final owner review. Do not open Wave 2, Cloudflare Named Tunnel or RC01."
+}

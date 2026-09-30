@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | ID | B02 |
-| Trạng thái | DONE — Wave 1 technical/style/promotion gate; release approval pending |
+| Trạng thái | DONE — Wave 1 technical/style/owner-review/promotion gate; release approval pending |
 | Owner | Asset workstream / Integration Owner |
 | Phụ thuộc | B01 DONE; canonical manifest và style guide |
 | Owned paths | assets-src/** sau promote; docs/assets/**; work/art-generation/** theo từng owner |
@@ -54,8 +54,8 @@ Inventory: 188 assets, 112 production_ready, 76 placeholder, 0 approved. Atlas s
 - DPR 1/2, mobile, Chicken production-atlas stress ở 1/25/50/100 bản sao
 - git diff --check
 
-Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md và docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json.
+Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json và docs/assets/review/FINAL_OWNER_REVIEW_V2.md.
 
 ## Gate tiếp theo
 
-Chờ owner xác nhận style/license/content cuối cùng. Không set approved=true, không mở Wave 2, không bắt đầu Cloudflare Named Tunnel và không mở RC01. Rice/Carrot không regenerate; renderer/animation/asset contract không thay đổi.
+Artwork owner review đã PASS; chờ owner xác nhận license/content release approval cuối cùng. Không set approved=true, không mở Wave 2, không bắt đầu Cloudflare Named Tunnel và không mở RC01. Rice/Carrot không regenerate; renderer/animation/asset contract không thay đổi.
