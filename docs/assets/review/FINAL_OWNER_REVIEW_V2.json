@@ -1,7 +1,7 @@
 {
   "review": "FINAL OWNER REVIEW V2",
   "reviewDate": "2026-09-30",
-  "status": "PASS_ART_STYLE_CONTENT_LICENSE_BLOCKED",
+  "reviewStatus": "PASS_ART_STYLE_CONTENT_APPROVED_LICENSE_BLOCKED",
   "scope": "Read-only final owner review of the five promoted Wave 1 asset types. No artwork was generated and no reviewer changed production files.",
   "parallelReviews": {
     "REVIEW-01": {
@@ -9,7 +9,7 @@
       "status": "PASS",
       "technical": "PASS",
       "style": "PASS",
-      "content": "PASS",
+      "content": "APPROVED",
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
@@ -28,7 +28,7 @@
       "status": "PASS",
       "technical": "PASS",
       "style": "PASS",
-      "content": "PASS",
+      "content": "APPROVED",
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
@@ -45,7 +45,7 @@
       "status": "PASS",
       "technical": "PASS",
       "style": "PASS",
-      "content": "PASS",
+      "content": "APPROVED",
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
@@ -62,7 +62,7 @@
       "status": "PASS",
       "technical": "PASS",
       "style": "PASS",
-      "content": "PASS",
+      "content": "APPROVED",
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
@@ -79,7 +79,7 @@
       "status": "PASS",
       "technical": "PASS",
       "style": "PASS",
-      "content": "PASS",
+      "content": "APPROVED",
       "mobile": "PASS",
       "ownerRecommendation": "APPROVE",
       "knownIssues": [
@@ -127,14 +127,17 @@
     "placeholders": 76,
     "approved": 0,
     "sourcePolicy": "Integration Owner only; workers did not write assets-src",
-    "license": "PENDING_OWNER_REVIEW"
+    "license": "PENDING_OWNER_REVIEW",
+    "ownerContentApproval": "APPROVED",
+    "licensePolicy": "LICENSE_POLICY_OWNER_INPUT_REQUIRED"
   },
   "provenance": {
     "requiredFieldsPresent": true,
     "source": "internal-generated",
     "creatorToolToolVersionRecorded": true,
-    "licenseApproval": "BLOCKED_PENDING_OWNER_REVIEW",
-    "approvalRef": "null until owner approval"
+    "licenseApproval": "PENDING_OWNER_INPUT",
+    "releaseApproval": "BLOCKED",
+    "approvalRef": "null while licenseApproval=PENDING_OWNER_INPUT; set only after release approval"
   },
   "gates": {
     "assetValidation": "PASS",
@@ -154,11 +157,14 @@
     "B02_1": "DONE",
     "B02_2_PROOF": "DONE",
     "B02_2_FULL": "DONE",
-    "wave1": "DONE_TECHNICAL_STYLE_OWNER_REVIEW",
-    "releaseApproval": "PENDING_OWNER_REVIEW",
+    "wave1": "DONE_CONTENT_APPROVED_RELEASE_BLOCKED_LICENSE",
+    "ownerContentApproval": "APPROVED",
+    "releaseApproval": "BLOCKED_LICENSE_POLICY_OWNER_INPUT_REQUIRED",
+    "approvalRecord": "docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md",
+    "B02": "RUNNING",
     "wave2": "CLOSED",
     "cloudflare": "NOT_STARTED",
     "RC01": "NOT_STARTED"
   },
-  "stopCondition": "Stop after final owner review. Do not open Wave 2, Cloudflare Named Tunnel or RC01."
+  "stopCondition": "Owner content approval is recorded. Stop with LICENSE_POLICY_OWNER_INPUT_REQUIRED; do not set approved=true or open Wave 2, Cloudflare Named Tunnel or RC01."
 }

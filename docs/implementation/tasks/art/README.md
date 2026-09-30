@@ -4,11 +4,11 @@ Wave 1 có năm owner độc lập. Mỗi owner sở hữu trọn một loại a
 
 | Task | Owner | Workspace | Canonical set | Trạng thái |
 |---|---|---|---:|---|
-| ART-01 | Chicken Asset Owner | work/art-generation/chicken/** | 92/92 | **REVIEW — PASS**, đã promote |
-| ART-02 | Rice Asset Owner | work/art-generation/crops/rice/** | 5/5 | **DONE — PASS**, đã promote |
-| ART-03 | Carrot Asset Owner | work/art-generation/crops/carrot/** | 5/5 | **DONE — PASS**, đã promote |
-| ART-04 | Corn Asset Owner | work/art-generation/crops/corn/** | 5/5 | **REVIEW — PASS**, đã promote |
-| ART-05 | Tomato Asset Owner | work/art-generation/crops/tomato/** | 5/5 | **REVIEW — PASS**, đã promote |
+| ART-01 | Chicken Asset Owner | work/art-generation/chicken/** | 92/92 | **DONE - content approved; release license blocked**, promoted |
+| ART-02 | Rice Asset Owner | work/art-generation/crops/rice/** | 5/5 | **DONE - content approved; release license blocked**, promoted |
+| ART-03 | Carrot Asset Owner | work/art-generation/crops/carrot/** | 5/5 | **DONE - content approved; release license blocked**, promoted |
+| ART-04 | Corn Asset Owner | work/art-generation/crops/corn/** | 5/5 | **DONE - content approved; release license blocked**, promoted |
+| ART-05 | Tomato Asset Owner | work/art-generation/crops/tomato/** | 5/5 | **DONE - content approved; release license blocked**, promoted |
 
 ## Quy tắc isolation
 
@@ -40,4 +40,4 @@ Evidence:
 
 npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 112/112, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
 
-Wave 1 đã **DONE ở technical/style/owner-review/promotion gate**. Artwork owner review PASS; release/content/license approval vẫn chờ owner. Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED.
+Wave 1 is DONE for technical/style/content/promotion, but release is BLOCKED by LICENSE_POLICY_OWNER_INPUT_REQUIRED. Wave 2, Cloudflare Named Tunnel, and RC01 remain CLOSED/NOT STARTED.

@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | ID | B02 |
-| Trạng thái | DONE — Wave 1 technical/style/owner-review/promotion gate; release approval pending |
+| Trạng thái | RUNNING - Wave 1 content approved; release blocked by license owner input; 76 placeholders remain |
 | Owner | Asset workstream / Integration Owner |
 | Phụ thuộc | B01 DONE; canonical manifest và style guide |
 | Owned paths | assets-src/** sau promote; docs/assets/**; work/art-generation/** theo từng owner |
@@ -11,7 +11,7 @@
 | Deliverables | 112/112 Wave 1 production candidates, owner QA, cross-asset V2 review, atlas/runtime promotion |
 | Bắt đầu | 2026-09-30 |
 | Hoàn tất kỹ thuật | 2026-09-30 |
-| Release approval | PENDING_OWNER_REVIEW — license/content approval chưa được xác nhận |
+| Release approval | BLOCKED - LICENSE_POLICY_OWNER_INPUT_REQUIRED; licenseApproval=PENDING_OWNER_INPUT |
 
 ## Subtask status
 
@@ -20,7 +20,7 @@
 | B02.1 — Production Art Style Lock | DONE — approved with minor production notes | assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md |
 | B02.2-PROOF Revision 2 | DONE — owner APPROVED TO PROCEED | docs/assets/review/CHICKEN_GOLDEN_ASSET_REVIEW.md, CHICKEN_PROOF_QA.json |
 | B02.2-FULL | DONE — Chicken 92/92 | docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md |
-| Wave 1 | DONE — 112/112 promoted | docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json |
+| Wave 1 | DONE - 112/112 promoted; content APPROVED; release blocked by license | docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md |
 
 ## Wave 1 result
 
@@ -54,8 +54,8 @@ Inventory: 188 assets, 112 production_ready, 76 placeholder, 0 approved. Atlas s
 - DPR 1/2, mobile, Chicken production-atlas stress ở 1/25/50/100 bản sao
 - git diff --check
 
-Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json và docs/assets/review/FINAL_OWNER_REVIEW_V2.md.
+Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json, docs/assets/review/FINAL_OWNER_REVIEW_V2.md, docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 
 ## Gate tiếp theo
 
-Artwork owner review đã PASS; chờ owner xác nhận license/content release approval cuối cùng. Không set approved=true, không mở Wave 2, không bắt đầu Cloudflare Named Tunnel và không mở RC01. Rice/Carrot không regenerate; renderer/animation/asset contract không thay đổi.
+Wave 1 artwork/content is APPROVED by Project Owner; licenseApproval=PENDING_OWNER_INPUT and releaseApproval=BLOCKED. Do not set approved=true, open Wave 2, start Cloudflare Named Tunnel, or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

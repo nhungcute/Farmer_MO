@@ -11051,7 +11051,7 @@
   "replacementContract": {
     "statusDefinitions": {
       "placeholder": "Generated/internal art. Not eligible for production release.",
-      "production_ready": "Replacement art supplied with license, style, technical validation, and source evidence; explicit content approval is still pending.",
+      "production_ready": "Replacement art supplied with provenance, style, technical validation, and source evidence; content is owner-approved, but license/release approval is still pending.",
       "approved": "Production-ready replacement explicitly approved for the target release."
     },
     "invariants": [

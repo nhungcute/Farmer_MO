@@ -26,7 +26,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | A02 | PostgreSQL API runtime wiring | DONE |
 | A03 | Transaction/concurrency integration gate | DONE |
 | B01 | Production asset inventory/replacement contract | DONE |
-| B02 | Production artwork replacement | **DONE — Wave 1 technical/style/owner-review/promotion; release approval pending** |
+| B02 | Production artwork replacement | **RUNNING - Wave 1 content approved; release blocked by license owner input; 76 placeholders remain** |
 | C01 | Playwright setup và E2E foundation | DONE |
 | C02 | Functional Playwright E2E trên PostgreSQL | DONE |
 | C03 | Mobile/PWA/accessibility QA | DONE |
@@ -55,7 +55,7 @@ Inventory:
 - 0 approved
 - license của 112 asset là PENDING_OWNER_REVIEW
 
-Bằng chứng tích hợp: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md và docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json. Final owner review: docs/assets/review/FINAL_OWNER_REVIEW_V2.md.
+Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json, docs/assets/review/FINAL_OWNER_REVIEW_V2.md, docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 
 ## Gate kỹ thuật gần nhất
 
@@ -70,9 +70,9 @@ Bằng chứng tích hợp: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md v�
 
 ## Giới hạn và bước kế tiếp
 
-B02 đã DONE ở technical/style/owner-review/promotion gate, nhưng release/content/license approval vẫn chờ owner; không set approved=true. Không regenerate Rice/Carrot và không đổi renderer, animation hoặc asset contract.
+B02 remains RUNNING: Wave 1 content is APPROVED by Project Owner, but the license input is missing; blocker=LICENSE_POLICY_OWNER_INPUT_REQUIRED. Do not set approved=true, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
 
-Wave 2, Cloudflare Named Tunnel và RC01 giữ CLOSED/NOT STARTED. Bước kế tiếp chỉ là owner review cuối cho style/license/content; sau khi có approval rõ ràng mới đánh giá release gate.
+Wave 2, Cloudflare Named Tunnel, and RC01 remain CLOSED/NOT STARTED. The only next step is Project Owner license value/policy input and license approval before evaluating the release gate.
 
 ## Quy tắc cập nhật
 

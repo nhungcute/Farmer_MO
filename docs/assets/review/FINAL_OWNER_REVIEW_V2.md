@@ -3,7 +3,8 @@
 Ngày review: 2026-09-30  
 Phạm vi: REVIEW-01 đến REVIEW-06 trên Wave 1 đã promote.  
 Trạng thái artwork: **PASS**.  
-Trạng thái release/license: **BLOCKED — PENDING_OWNER_REVIEW**.
+Trạng thái content owner: **APPROVED**.
+Trạng thái release/license: **BLOCKED — LICENSE_POLICY_OWNER_INPUT_REQUIRED**.
 
 Không generate artwork trong review này. Review workers chỉ đọc production assets và evidence. Không reviewer nào sửa assets-src, manifest, atlas, metadata, approval record hoặc status docs.
 
@@ -11,11 +12,11 @@ Không generate artwork trong review này. Review workers chỉ đọc productio
 
 | Review | Asset | Technical | Style | Content | Mobile | Recommendation |
 |---|---|---|---|---|---|---|
-| REVIEW-01 | Chicken | PASS | PASS | PASS | PASS | APPROVE |
-| REVIEW-02 | Rice | PASS | PASS | PASS | PASS | APPROVE |
-| REVIEW-03 | Carrot | PASS | PASS | PASS | PASS | APPROVE |
-| REVIEW-04 | Corn | PASS | PASS | PASS | PASS | APPROVE |
-| REVIEW-05 | Tomato | PASS | PASS | PASS | PASS | APPROVE |
+| REVIEW-01 | Chicken | PASS | PASS | APPROVED | PASS | APPROVE |
+| REVIEW-02 | Rice | PASS | PASS | APPROVED | PASS | APPROVE |
+| REVIEW-03 | Carrot | PASS | PASS | APPROVED | PASS | APPROVE |
+| REVIEW-04 | Corn | PASS | PASS | APPROVED | PASS | APPROVE |
+| REVIEW-05 | Tomato | PASS | PASS | APPROVED | PASS | APPROVE |
 
 ### Chicken
 
@@ -48,9 +49,11 @@ Relative scale, perspective, palette, detail density, lighting, outline và mobi
 
 ## Provenance và license
 
-Review-06 xác nhận 112 promoted entries có source, creator, tool và toolVersion record. Provenance được giữ theo nguồn thực tế: source=internal-generated. License vẫn là PENDING_OWNER_REVIEW; approved=false, approvalRef=null cho toàn bộ asset.
+Review-06 xác nhận 112 promoted entries có source, creator, tool và toolVersion record. Provenance được giữ theo nguồn thực tế: source=internal-generated. Canonical metadata/approval policy đã tồn tại, nhưng chưa có license value được Project Owner xác nhận cho generated artwork. License vẫn là PENDING_OWNER_REVIEW; approved=false, approvalRef=null cho toàn bộ asset.
 
-Vì vậy owner recommendation cho artwork là **APPROVE**, nhưng release approval vẫn **BLOCKED_PENDING_OWNER_REVIEW**. Không set approved=true và không tự suy diễn license.
+Project Owner đã xác nhận content Wave 1 là **APPROVED**. Vì chưa có license value/policy input cụ thể, release approval vẫn **BLOCKED** với blocker `LICENSE_POLICY_OWNER_INPUT_REQUIRED`. Không set approved=true và không tự suy diễn license.
+
+Approval record: [WAVE1_PRODUCTION_ART_APPROVAL.md](../approvals/WAVE1_PRODUCTION_ART_APPROVAL.md).
 
 ## Production inventory
 
@@ -68,4 +71,4 @@ npm run assets:validate, npm run assets:validate:strict, npm run renderer:test (
 
 ## Stop condition
 
-B02 Wave 1 đã hoàn tất ở technical/style/owner-review gate. Chờ owner quyết định style/license/content release approval. Dừng tại đây; không mở Wave 2, Cloudflare Named Tunnel hoặc RC01.
+B02 tiếp tục ở trạng thái **RUNNING** vì 76 asset còn placeholder và release license gate chưa hoàn tất. Wave 1 content đã APPROVED, nhưng chờ owner cung cấp license input để release approval. Dừng tại đây; không mở Wave 2, Cloudflare Named Tunnel hoặc RC01.

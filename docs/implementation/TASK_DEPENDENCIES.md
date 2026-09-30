@@ -24,10 +24,10 @@ A03 + B02 + C03 + D02 + E01 → RC01 Release Candidate.
 
 - DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02.
 - DONE: B02.1 style direction; B02.2-PROOF Revision 2 owner APPROVED TO PROCEED.
-- DONE: B02 Wave 1 technical/style/owner-review/promotion gate — 112/112 canonical candidates promoted.
-- B02 artwork owner review: PASS; release/content/license approval: REVIEW/PENDING_OWNER_REVIEW; 0 asset approved.
+- B02 Wave 1: DONE - 112/112 canonical candidates promoted; content APPROVED; release BLOCKED_LICENSE.
+- B02: RUNNING - artwork/content APPROVED; licenseApproval=PENDING_OWNER_INPUT; releaseApproval=BLOCKED; 0 asset approved.
 - Inventory: 188 total, 112 production_ready, 76 placeholder, 0 approved.
-- Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, FINAL_OWNER_REVIEW_V2.md và machine-readable JSON.
+- Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, FINAL_OWNER_REVIEW_V2.md, and docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 - CLOSED: Wave 2, E01 Cloudflare Named Tunnel, RC01 Release Candidate.
 
 ## Gate rules

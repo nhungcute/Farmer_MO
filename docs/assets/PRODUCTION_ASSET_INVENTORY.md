@@ -9,7 +9,7 @@ This inventory is generated from the current canonical manifest. Wave 1 has 112 
 | Status | Current count | Meaning |
 | --- | --- | --- |
 | `placeholder` | 76 | Generated/internal art. Not eligible for production release. |
-| `production_ready` | 112 | Replacement art supplied with license, style, technical validation, and source evidence; explicit content approval is still pending. |
+| `production_ready` | 112 | Replacement art supplied with provenance, style, technical validation, and source evidence; content is owner-approved, but license/release approval is still pending. |
 | `approved` | 0 | Production-ready replacement explicitly approved for the target release. |
 
 Current totals: **188 source assets**, **10 animation contracts**, **8 categories**.
