@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-12 |
 | Owner | UI Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - REVISION_REQUIRED |
 | Workspace | work/art-generation/ui/** |
 | Canonical count | 15 |
 | Production path | assets-src/** (Integration Owner only) |

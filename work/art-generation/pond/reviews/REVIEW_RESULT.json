@@ -1,0 +1,545 @@
+{
+  "task": "REVIEW-06 POND",
+  "expected": "19/19 exact canonical candidates; each 512?384 RGBA with transparent alpha; base/water/ripple/sparkle layers aligned to one pond footprint; water 12 FPS loop, ripple 10 FPS loop, sparkle 8 FPS loop; no layer leaves pond geometry.",
+  "found": "19/19 IDs and files. All canvases 512?384 RGBA with real alpha and zero fully-transparent RGB matte. All overlays are 100% inside the base outer alpha silhouette. Base painted bbox [18, 19, 494, 347]. Visual review shows a coherent isometric pond, readable at 50% source/mobile scale, fixed top-left light and lower-right shadow. Inner water containment: water frames 93.6?94.5%, ripple frames 72.2?93.1%, sparkle frames 52.4?70.0%; several low-opacity ripple/sparkle pixels reach the shoreline/rim rather than water-only area.",
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "PASS",
+  "mobile": "PASS",
+  "animation": "FAIL",
+  "issues": [
+    "Ripple/sparkle frames remain within the outer pond silhouette, but the transparent overlays are not clipped to the inner water mask. Ripple frames ripple_00 through ripple_05 and sparkle frames sparkle_00 through sparkle_03 include pixels on the shoreline/rim; this can read as a ripple moving onto grass/rock at runtime. Clip/reposition overlays to the water surface before promotion.",
+    "The existing reviews/QA.json is stale for base and water frame file hashes (current ART_METADATA.json and ART_QA.json match the actual files); regenerate review QA after the visual fix."
+  ],
+  "recommendation": "REVISION_REQUIRED",
+  "canonical_ids": [
+    "pond_small_lv1_base",
+    "pond_small_lv1_water_00",
+    "pond_small_lv1_water_01",
+    "pond_small_lv1_water_02",
+    "pond_small_lv1_water_03",
+    "pond_small_lv1_water_04",
+    "pond_small_lv1_water_05",
+    "pond_small_lv1_water_06",
+    "pond_small_lv1_water_07",
+    "pond_small_lv1_ripple_00",
+    "pond_small_lv1_ripple_01",
+    "pond_small_lv1_ripple_02",
+    "pond_small_lv1_ripple_03",
+    "pond_small_lv1_ripple_04",
+    "pond_small_lv1_ripple_05",
+    "pond_small_lv1_sparkle_00",
+    "pond_small_lv1_sparkle_01",
+    "pond_small_lv1_sparkle_02",
+    "pond_small_lv1_sparkle_03"
+  ],
+  "contracts": {
+    "pond_water": {
+      "frame_count": 8,
+      "fps": 12,
+      "loop": true,
+      "holdLast": false
+    },
+    "pond_ripple": {
+      "frame_count": 6,
+      "fps": 10,
+      "loop": true,
+      "holdLast": false
+    },
+    "pond_sparkle": {
+      "frame_count": 4,
+      "fps": 8,
+      "loop": true,
+      "holdLast": false
+    }
+  },
+  "stats": {
+    "pond_small_lv1_base": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_base.png",
+      "sha256": "8fceace8d4c72ba89505c7945dd8ad3830d4949c89953f5a6cb22d5e14f042af",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        18,
+        19,
+        494,
+        347
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_00": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_00.png",
+      "sha256": "8c990ab23c4af16ce698da0036e1c0f9bad4b775f2305ae267ead87069163028",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        72,
+        96,
+        481,
+        295
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_01": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_01.png",
+      "sha256": "5f5e8873f33925d553a607986a006f1f12a7d1cffb0dbd40a17e4268327461ef",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        80,
+        99,
+        433,
+        294
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_02": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_02.png",
+      "sha256": "462121d8ee6bf4e7854c55921ba91d61f44fd524401a50d8e8097bab0aaaba08",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        89,
+        101,
+        433,
+        295
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_03": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_03.png",
+      "sha256": "adf0403498dd798424cb87a975b0089411cec479fa0faa038cc1b612e7b13d19",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        98,
+        101,
+        433,
+        291
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_04": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_04.png",
+      "sha256": "e2de49cdd45c741e746de9239d7ab562a0bc1beb8739d882b31d9542892767c1",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        107,
+        103,
+        433,
+        289
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_05": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_05.png",
+      "sha256": "74356b6eea95eff946b5ad18282f57292546777f46a3cff5793166a0bea0f04d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        116,
+        102,
+        433,
+        286
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_06": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_06.png",
+      "sha256": "a0424632d27e639eae5e9d57a1a63cc332c99a7a35b601c20741a78b2cf4cc9d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        144,
+        101,
+        480,
+        286
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_water_07": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_07.png",
+      "sha256": "e8a641a36a80eb59a68179c4cc917553ab508fd55e492ab0992fa15579ba22d8",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        32
+      ],
+      "alpha_bbox": [
+        149,
+        103,
+        481,
+        286
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_00": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_00.png",
+      "sha256": "ef6381ac20fe19d17c55ef96be2f2e4745bba154e2127135cdf50a940cc358ce",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        72
+      ],
+      "alpha_bbox": [
+        169,
+        185,
+        360,
+        263
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_01": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_01.png",
+      "sha256": "fe4c14807fa5c9cd4699d985c330058b19a8a39c99fa8a4ec4671881dd99ba96",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        64
+      ],
+      "alpha_bbox": [
+        161,
+        183,
+        368,
+        265
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_02": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_02.png",
+      "sha256": "8d41861e3d60ac46d3f4e53600a9d84467dddf43597de3ed0f3160d0e27b953d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        56
+      ],
+      "alpha_bbox": [
+        153,
+        180,
+        376,
+        268
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_03": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_03.png",
+      "sha256": "dda4c1df714919e5f82deb37ade105b454ec44540cd947f3c1739e962793355d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        65
+      ],
+      "alpha_bbox": [
+        145,
+        177,
+        338,
+        271
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_04": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_04.png",
+      "sha256": "6c0879f32259b755113717ea80e01188606678b36930474809453cf048c150b2",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        57
+      ],
+      "alpha_bbox": [
+        137,
+        175,
+        346,
+        273
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_ripple_05": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_05.png",
+      "sha256": "799f361b552432b742e2522b8dc31cb5bd8db5ab90e84a7107c8d48d55ac43ec",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        66
+      ],
+      "alpha_bbox": [
+        175,
+        172,
+        354,
+        261
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_sparkle_00": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_00.png",
+      "sha256": "d71ecaaf3ef18482af8f3c3b2525f3cf925c28b1309312bb234f884016cd0fdc",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        125
+      ],
+      "alpha_bbox": [
+        216,
+        152,
+        347,
+        281
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_sparkle_01": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_01.png",
+      "sha256": "964f19bb81e5e5465b218b305e40997350f1e907fa9e016621bece66fa45725b",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        125
+      ],
+      "alpha_bbox": [
+        163,
+        150,
+        349,
+        230
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_sparkle_02": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_02.png",
+      "sha256": "144aa3bcfd19f4c461ee856a2a786de55c89da610628285940b7ed194610d78d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        125
+      ],
+      "alpha_bbox": [
+        161,
+        148,
+        288,
+        277
+      ],
+      "transparent_rgb_nonzero": 0
+    },
+    "pond_small_lv1_sparkle_03": {
+      "path": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_03.png",
+      "sha256": "b58b2464fc2fbb9b5e453ec57a5beaa56214c5f6b3a671c67410b81a74ff52d7",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        125
+      ],
+      "alpha_bbox": [
+        159,
+        183,
+        345,
+        279
+      ],
+      "transparent_rgb_nonzero": 0
+    }
+  },
+  "containment": {
+    "water": [
+      {
+        "id": "pond_small_lv1_water_00",
+        "outer_pct": 100.0,
+        "water_pct": 99.9
+      },
+      {
+        "id": "pond_small_lv1_water_01",
+        "outer_pct": 100.0,
+        "water_pct": 99.16
+      },
+      {
+        "id": "pond_small_lv1_water_02",
+        "outer_pct": 100.0,
+        "water_pct": 99.0
+      },
+      {
+        "id": "pond_small_lv1_water_03",
+        "outer_pct": 100.0,
+        "water_pct": 99.0
+      },
+      {
+        "id": "pond_small_lv1_water_04",
+        "outer_pct": 100.0,
+        "water_pct": 98.97
+      },
+      {
+        "id": "pond_small_lv1_water_05",
+        "outer_pct": 100.0,
+        "water_pct": 98.91
+      },
+      {
+        "id": "pond_small_lv1_water_06",
+        "outer_pct": 100.0,
+        "water_pct": 99.05
+      },
+      {
+        "id": "pond_small_lv1_water_07",
+        "outer_pct": 100.0,
+        "water_pct": 98.91
+      }
+    ],
+    "ripple": [
+      {
+        "id": "pond_small_lv1_ripple_00",
+        "outer_pct": 100.0,
+        "water_pct": 87.12
+      },
+      {
+        "id": "pond_small_lv1_ripple_01",
+        "outer_pct": 100.0,
+        "water_pct": 85.95
+      },
+      {
+        "id": "pond_small_lv1_ripple_02",
+        "outer_pct": 100.0,
+        "water_pct": 81.82
+      },
+      {
+        "id": "pond_small_lv1_ripple_03",
+        "outer_pct": 100.0,
+        "water_pct": 72.23
+      },
+      {
+        "id": "pond_small_lv1_ripple_04",
+        "outer_pct": 100.0,
+        "water_pct": 73.29
+      },
+      {
+        "id": "pond_small_lv1_ripple_05",
+        "outer_pct": 100.0,
+        "water_pct": 93.08
+      }
+    ],
+    "sparkle": [
+      {
+        "id": "pond_small_lv1_sparkle_00",
+        "outer_pct": 100.0,
+        "water_pct": 64.04
+      },
+      {
+        "id": "pond_small_lv1_sparkle_01",
+        "outer_pct": 100.0,
+        "water_pct": 70.04
+      },
+      {
+        "id": "pond_small_lv1_sparkle_02",
+        "outer_pct": 100.0,
+        "water_pct": 69.29
+      },
+      {
+        "id": "pond_small_lv1_sparkle_03",
+        "outer_pct": 100.0,
+        "water_pct": 52.43
+      }
+    ]
+  },
+  "evidence": [
+    "reviews/pond-animation-candidates.png",
+    "reviews/pond-composited-frames.png",
+    "reviews/pond-water-boundary-review.png",
+    "reviews/pond-ripple-boundary-review-zoom.png",
+    "reviews/pond-sparkle-boundary-review.png",
+    "ART_METADATA.json",
+    "ART_QA.json"
+  ]
+}

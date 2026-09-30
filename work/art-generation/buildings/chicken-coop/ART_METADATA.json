@@ -58,5 +58,33 @@
         346
       ]
     }
-  }
+  },
+  "contract": {
+    "canvas": {
+      "width": 512,
+      "height": 384
+    },
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.86
+    },
+    "pivot": {
+      "x": 0.5,
+      "y": 0.86
+    },
+    "renderOffset": {
+      "x": 0,
+      "y": 0
+    },
+    "atlas": "farm_common",
+    "static": true,
+    "frameIds": [
+      "building_chicken_coop_lv1"
+    ]
+  },
+  "reviewEvidence": [
+    "reviews/QA.json",
+    "reviews/chicken-coop-scale-with-chicken.png"
+  ]
 }

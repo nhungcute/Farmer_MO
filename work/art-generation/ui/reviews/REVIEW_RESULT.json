@@ -1,0 +1,243 @@
+{
+  "task": "REVIEW-12 UI",
+  "expected": "15/15",
+  "found": "15/15",
+  "technical": "PASS",
+  "style": "FAIL",
+  "content": "PASS",
+  "mobile": "PASS (128/64/32 comparison evidence)",
+  "animation": "N/A",
+  "issues": [
+    "Icon semantics and separation are clear at 128px, 64px, and 32px.",
+    "The current highlight/specular treatment is visibly glossier and more 3D than the locked Wave 1 soft illustrated style."
+  ],
+  "recommendation": "REVISION_REQUIRED",
+  "evidence": "reviews/ui-runtime-size-comparison.png",
+  "assets": [
+    {
+      "id": "icon_coin",
+      "sha256": "bc98ed841a43041fcf72488d61b5bb661a12a65d266802c5408f8681125c78c6",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_diamond",
+      "sha256": "8abd3f4583600f5cf6d69a568a9962ff7d8965be8944d95f661b23aceeda8bd0",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_rice",
+      "sha256": "b31a8ea104a88193af76258c7b2bc42042276c3d1bbb11451c95f97504f9e0e7",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_carrot",
+      "sha256": "9ed85891cf9e4bb7a9766e12500bc25a94fda3ac6bf0d8ec3f2b077b00777609",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_corn",
+      "sha256": "9aea4e6cc0a3dc2c345d1374f72455fc3faf5f386ac02bbef9cbd097dea10c3c",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_tomato",
+      "sha256": "7df253f3d804f1388db54675eacb95a84e17cde35ab0bab5cca88ee16f4e1597",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_chicken_feed",
+      "sha256": "cdadaa3c39564d9aecc67b7acd04a72bb61412402051a65323def6aafc9bd3e0",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_egg",
+      "sha256": "3d5c5d8e37b03a050b5aca480e584946ccc976590f104ad283fada0c03c46304",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "icon_order",
+      "sha256": "78409a90ec6b7bf436acd50f35bb983169a6a56254c2861de3bec32fa7ad2c39",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "ui_rotate_overlay",
+      "sha256": "3907f0409c7591bd54453c69e48062a4daa3a2279294969d53b08809133668d4",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "ui_loading",
+      "sha256": "7880d3191d15e024d89542b77578d870762d8c72a4c87ac2363f66897d7745e2",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "ui_success_toast",
+      "sha256": "4616680acb857bc6b9d66067b3e63ede5ace360644450035de930d3195b7f29f",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "ui_error_toast",
+      "sha256": "c84b0049ba00c9b9625f2b8fd976ed5760de481f5fa432551f53510cf6c458fd",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "build_ghost_valid",
+      "sha256": "ba7f55e5478ba8b291c90e47937974cb2d152d8e69afdf9aa33014a31d91fb02",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "build_ghost_invalid",
+      "sha256": "244e78f97cdbfef12232a4da6b8b07279e9e3932416a8b7222d81ebcef03a8f5",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    }
+  ]
+}

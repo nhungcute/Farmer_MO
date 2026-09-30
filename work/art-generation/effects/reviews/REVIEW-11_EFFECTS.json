@@ -1,0 +1,566 @@
+{
+  "taskId": "ART-11",
+  "review": "REVIEW-11",
+  "decision": "REVISION_REQUIRED",
+  "scope": "fx_plant, fx_harvest, fx_build_success, fx_coin_gain, fx_egg_collect",
+  "candidateCount": 30,
+  "technical": {
+    "canonicalIds": "PASS",
+    "dimensions": "PASS",
+    "rgba": "PASS",
+    "transparentAlpha": "PASS",
+    "provenanceMetadata": "PASS",
+    "assetsSrcUntouched": "PASS"
+  },
+  "frameContract": {
+    "plant": {
+      "count": 4,
+      "frames": [
+        {
+          "id": "fx_plant_00",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            80,
+            24,
+            178,
+            134
+          ],
+          "alphaPixels": 6290
+        },
+        {
+          "id": "fx_plant_01",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            74,
+            24,
+            178,
+            134
+          ],
+          "alphaPixels": 6841
+        },
+        {
+          "id": "fx_plant_02",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            72,
+            27,
+            190,
+            164
+          ],
+          "alphaPixels": 8597
+        },
+        {
+          "id": "fx_plant_03",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            63,
+            42,
+            193,
+            160
+          ],
+          "alphaPixels": 9384
+        }
+      ],
+      "centroidJumpPxMax": 12.84,
+      "centroidJumpPx": [
+        0.9,
+        10.71,
+        12.84
+      ],
+      "fps": 12,
+      "loop": false,
+      "holdLast": false
+    },
+    "harvest": {
+      "count": 6,
+      "frames": [
+        {
+          "id": "fx_harvest_00",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            48,
+            18,
+            229,
+            198
+          ],
+          "alphaPixels": 20118
+        },
+        {
+          "id": "fx_harvest_01",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            47,
+            13,
+            220,
+            182
+          ],
+          "alphaPixels": 18581
+        },
+        {
+          "id": "fx_harvest_02",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            47,
+            11,
+            216,
+            172
+          ],
+          "alphaPixels": 17835
+        },
+        {
+          "id": "fx_harvest_03",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            46,
+            12,
+            216,
+            174
+          ],
+          "alphaPixels": 18037
+        },
+        {
+          "id": "fx_harvest_04",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            46,
+            12,
+            213,
+            171
+          ],
+          "alphaPixels": 17039
+        },
+        {
+          "id": "fx_harvest_05",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            42,
+            13,
+            209,
+            169
+          ],
+          "alphaPixels": 16308
+        }
+      ],
+      "centroidJumpPxMax": 10.14,
+      "centroidJumpPx": [
+        10.14,
+        4.41,
+        2.96,
+        1.69,
+        5.52
+      ],
+      "fps": 12,
+      "loop": false,
+      "holdLast": false
+    },
+    "build_success": {
+      "count": 6,
+      "frames": [
+        {
+          "id": "fx_build_success_00",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            44,
+            3,
+            223,
+            162
+          ],
+          "alphaPixels": 14482
+        },
+        {
+          "id": "fx_build_success_01",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            44,
+            5,
+            224,
+            166
+          ],
+          "alphaPixels": 14665
+        },
+        {
+          "id": "fx_build_success_02",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            38,
+            15,
+            227,
+            183
+          ],
+          "alphaPixels": 15896
+        },
+        {
+          "id": "fx_build_success_03",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            44,
+            10,
+            229,
+            176
+          ],
+          "alphaPixels": 15185
+        },
+        {
+          "id": "fx_build_success_04",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            35,
+            13,
+            225,
+            182
+          ],
+          "alphaPixels": 15863
+        },
+        {
+          "id": "fx_build_success_05",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            40,
+            15,
+            222,
+            178
+          ],
+          "alphaPixels": 14669
+        }
+      ],
+      "centroidJumpPxMax": 14.36,
+      "centroidJumpPx": [
+        3.42,
+        14.36,
+        7.3,
+        8.17,
+        1.32
+      ],
+      "fps": 12,
+      "loop": false,
+      "holdLast": false
+    },
+    "coin_gain": {
+      "count": 8,
+      "frames": [
+        {
+          "id": "fx_coin_gain_00",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            79,
+            13,
+            194,
+            132
+          ],
+          "alphaPixels": 7674
+        },
+        {
+          "id": "fx_coin_gain_01",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            74,
+            17,
+            184,
+            130
+          ],
+          "alphaPixels": 7053
+        },
+        {
+          "id": "fx_coin_gain_02",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            70,
+            19,
+            178,
+            148
+          ],
+          "alphaPixels": 6793
+        },
+        {
+          "id": "fx_coin_gain_03",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            67,
+            23,
+            177,
+            133
+          ],
+          "alphaPixels": 6786
+        },
+        {
+          "id": "fx_coin_gain_04",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            66,
+            28,
+            183,
+            143
+          ],
+          "alphaPixels": 7399
+        },
+        {
+          "id": "fx_coin_gain_05",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            63,
+            32,
+            181,
+            146
+          ],
+          "alphaPixels": 7473
+        },
+        {
+          "id": "fx_coin_gain_06",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            59,
+            36,
+            180,
+            151
+          ],
+          "alphaPixels": 7614
+        },
+        {
+          "id": "fx_coin_gain_07",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            54,
+            39,
+            176,
+            152
+          ],
+          "alphaPixels": 7492
+        }
+      ],
+      "centroidJumpPxMax": 7.99,
+      "centroidJumpPx": [
+        7.99,
+        5.22,
+        4.05,
+        7.99,
+        4.34,
+        4.17,
+        4.66
+      ],
+      "fps": 12,
+      "loop": false,
+      "holdLast": false
+    },
+    "egg_collect": {
+      "count": 6,
+      "frames": [
+        {
+          "id": "fx_egg_collect_00",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            59,
+            15,
+            211,
+            172
+          ],
+          "alphaPixels": 15808
+        },
+        {
+          "id": "fx_egg_collect_01",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            56,
+            30,
+            211,
+            187
+          ],
+          "alphaPixels": 16384
+        },
+        {
+          "id": "fx_egg_collect_02",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            54,
+            20,
+            212,
+            179
+          ],
+          "alphaPixels": 17308
+        },
+        {
+          "id": "fx_egg_collect_03",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            42,
+            21,
+            209,
+            188
+          ],
+          "alphaPixels": 19510
+        },
+        {
+          "id": "fx_egg_collect_04",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            46,
+            24,
+            211,
+            186
+          ],
+          "alphaPixels": 18766
+        },
+        {
+          "id": "fx_egg_collect_05",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaBounds": [
+            41,
+            26,
+            208,
+            190
+          ],
+          "alphaPixels": 19402
+        }
+      ],
+      "centroidJumpPxMax": 15.14,
+      "centroidJumpPx": [
+        15.14,
+        9.34,
+        9.53,
+        3.34,
+        5.49
+      ],
+      "fps": 12,
+      "loop": false,
+      "holdLast": false
+    }
+  },
+  "runtimeEvidence": "effects-runtime-background-review.png",
+  "contentSeparation": {
+    "cropReadyGlowBakedIntoCropAssets": "PASS",
+    "cropReadyGlowCanonicalScope": "ART-13 separate",
+    "fxFramesIndependentFromCropGlow": "PASS"
+  },
+  "style": {
+    "2_5DReadability": "PASS",
+    "cozyPalette": "PASS_WITH_REVIEW",
+    "topLeftLighting": "PASS",
+    "mobileSilhouette": "PASS_AT_50_PERCENT",
+    "softIllustratedShading": "FAIL",
+    "glossy3DReduction": "FAIL",
+    "issue": "All five families use dense white/yellow bloom, high specular streaks and bright halo edges. Build/egg/coin read as glossy 3D VFX and overpower a grass/tile background at runtime size, outside the locked soft-illustrated/no-strong-glow direction."
+  },
+  "requiredRevision": [
+    "Reduce bloom/specular highlight and white halo by approximately 20–35% while preserving family silhouettes and event readability. Re-review over the runtime background at 50% and default zoom. Keep crop_ready_glow separate; do not bake it into crops."
+  ],
+  "wave1CanonicalAssetsModified": false
+}

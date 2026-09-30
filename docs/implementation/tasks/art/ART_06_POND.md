@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-06 |
 | Owner | Pond Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - REVISION_REQUIRED |
 | Workspace | work/art-generation/pond/** |
 | Canonical count | 19 |
 | Production path | assets-src/** (Integration Owner only) |

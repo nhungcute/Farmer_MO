@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-07 |
 | Owner | Farmhouse Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - PROMOTE_PENDING |
 | Workspace | work/art-generation/buildings/farmhouse/** |
 | Canonical count | 1 |
 | Production path | assets-src/** (Integration Owner only) |

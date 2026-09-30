@@ -1,0 +1,28 @@
+{
+  "taskId": "ART-09",
+  "status": "PASS",
+  "canonicalCount": 1,
+  "canonicalIds": [
+    "building_chicken_coop_lv1"
+  ],
+  "checks": {
+    "exactIds": true,
+    "dimensions": true,
+    "rgba": true,
+    "trueAlpha": true,
+    "noHiddenRgbMatte": true,
+    "productionBoundary": true,
+    "scaleWithChickenEvidence": true,
+    "continuity": "N/A (static asset)"
+  },
+  "sha256": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+  "reviewEvidence": [
+    "REVIEW_RESULT.json",
+    "chicken-coop-scale-with-chicken.png"
+  ],
+  "releaseFlags": {
+    "placeholder": false,
+    "production_ready": false,
+    "approved": false
+  }
+}

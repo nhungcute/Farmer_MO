@@ -1,0 +1,42 @@
+{
+  "task": "REVIEW-08 WAREHOUSE",
+  "expected": "1/1 canonical candidate building_warehouse_lv1; 512?384 RGBA; 2.5D isometric footprint; same world scale/style as Wave 1; mobile readable; not realistic or glossy.",
+  "found": "Exact ID building_warehouse_lv1; file [512, 384] RGBA with alpha bbox [31, 12, 465, 353], zero fully-transparent RGB matte. Anchor contract is 0.5,0.86, sourceScale 2, renderOffset 0,0; current ART_METADATA/ART_QA SHA matches actual candidate (6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806). Painted footprint is readable at 50% and 25% source mobile review. Clearly distinct storage building: large double doors, hay/crates, roof mass and wood framing; same isometric rendering language as Farmhouse and Chicken.",
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "PASS",
+  "mobile": "PASS",
+  "animation": "N/A",
+  "issues": [],
+  "recommendation": "PROMOTE",
+  "canonical_ids": [
+    "building_warehouse_lv1"
+  ],
+  "stats": {
+    "path": "work/art-generation/buildings/warehouse/candidate/assets-src-compatible/buildings/building_warehouse_lv1.png",
+    "sha256": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
+    "canvas": [
+      512,
+      384
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      31,
+      12,
+      465,
+      353
+    ],
+    "transparent_rgb_nonzero": 0
+  },
+  "evidence": [
+    "reviews/warehouse-candidate.png",
+    "ART_METADATA.json",
+    "ART_QA.json",
+    "reviews/mobile-scale-review.png",
+    "reviews/QA.json"
+  ]
+}

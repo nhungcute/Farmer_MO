@@ -40,4 +40,4 @@ Evidence:
 
 npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run assets:validate:wave1 (112/112 policy-approved; 76 untouched placeholders), npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 112/112, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
 
-Wave 1 is DONE for technical/style/content/license/release/promotion. B02 remains RUNNING while the 76 Wave 2 candidates wait at the Integration Owner review/promotion checkpoint. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED.
+Wave 1 is DONE for technical/style/content/license/release/promotion. Wave 2 Integration Owner review is complete: 7 candidates are selected for promotion and Pond/Terrain/Effects/UI remain revision-required. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED.

@@ -1,0 +1,43 @@
+{
+  "task": "REVIEW-09 CHICKEN COOP",
+  "expected": "1/1 canonical candidate building_chicken_coop_lv1; 512?384 RGBA; isometric coop identity; entrance compatible with approved Chicken; same palette/footprint/light/shadow/mobile readability as Wave 1.",
+  "found": "Exact ID and dimensions found: [512, 384] RGBA, alpha bbox [64, 5, 453, 346], zero fully-transparent RGB matte. Coop identity is clear (gable, chicken emblem, entrance/ramp, fencing); entrance is visually compatible with the Chicken beside it at common source scale (see scale evidence). Palette and warm brown outline are compatible with Wave 1; top-left light and lower-right contact shading are consistent. At 50% and 25% source scale, silhouette and entrance remain readable. Candidate remains outside assets-src and approval flags remain false.",
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "PASS",
+  "mobile": "PASS",
+  "animation": "N/A",
+  "issues": [],
+  "recommendation": "PROMOTE",
+  "canonical_ids": [
+    "building_chicken_coop_lv1"
+  ],
+  "stats": {
+    "path": "work/art-generation/buildings/chicken-coop/candidate/assets-src-compatible/building_chicken_coop_lv1.png",
+    "sha256": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+    "canvas": [
+      512,
+      384
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      64,
+      5,
+      453,
+      346
+    ],
+    "transparent_rgb_nonzero": 0
+  },
+  "scale_evidence": "reviews/chicken-coop-scale-with-chicken.png",
+  "evidence": [
+    "reviews/chicken-coop-candidates.png",
+    "reviews/chicken-coop-scale-with-chicken.png",
+    "reviews/QA.json",
+    "ART_METADATA.json",
+    "ART_QA.json"
+  ]
+}

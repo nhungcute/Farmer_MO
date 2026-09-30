@@ -94,7 +94,7 @@
     {
       "id": "building_warehouse_lv1",
       "file": "building_warehouse_lv1.png",
-      "sha256": "dae109bc0a293028d4fb22d3c7d581e155bd6111620d398977167a38f979e0dc",
+      "sha256": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
       "canvas": [
         512,
         384
@@ -127,5 +127,8 @@
     "outsideAssetsSrc": true,
     "manifestChanged": false,
     "atlasChanged": false
+  },
+  "integrationOwnerEvidence": {
+    "sha256Verified": true
   }
 }

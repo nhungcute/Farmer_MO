@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-10 |
 | Owner | Terrain Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - REVISION_REQUIRED |
 | Workspace | work/art-generation/terrain/** |
 | Canonical count | 5 |
 | Production path | assets-src/** (Integration Owner only) |

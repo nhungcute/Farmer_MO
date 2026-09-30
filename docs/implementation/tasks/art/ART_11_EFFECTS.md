@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-11 |
 | Owner | Effects Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - REVISION_REQUIRED |
 | Workspace | work/art-generation/effects/** |
 | Canonical count | 30 |
 | Production path | assets-src/** (Integration Owner only) |

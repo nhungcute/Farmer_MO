@@ -1,0 +1,42 @@
+{
+  "task": "REVIEW-07 FARMHOUSE",
+  "expected": "1/1 canonical candidate building_farmhouse_lv1; 512?384 RGBA; 2.5D isometric footprint; same world scale/style as Wave 1; mobile readable; not realistic or glossy.",
+  "found": "Exact ID building_farmhouse_lv1; file [512, 384] RGBA with alpha bbox [31, 19, 482, 355], zero fully-transparent RGB matte. Anchor contract is 0.5,0.86, sourceScale 2, renderOffset 0,0; current ART_METADATA/ART_QA SHA matches actual candidate (198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac). Painted footprint is readable at 50% and 25% source mobile review. Cozy illustrated farmhouse with strong roof/wall silhouette, warm wood/roof palette, top-left highlights and soft lower-right contact shading.",
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "PASS",
+  "mobile": "PASS",
+  "animation": "N/A",
+  "issues": [],
+  "recommendation": "PROMOTE",
+  "canonical_ids": [
+    "building_farmhouse_lv1"
+  ],
+  "stats": {
+    "path": "work/art-generation/buildings/farmhouse/candidate/assets-src-compatible/buildings/building_farmhouse_lv1.png",
+    "sha256": "198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac",
+    "canvas": [
+      512,
+      384
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_bbox": [
+      31,
+      19,
+      482,
+      355
+    ],
+    "transparent_rgb_nonzero": 0
+  },
+  "evidence": [
+    "reviews/farmhouse-candidate.png",
+    "ART_METADATA.json",
+    "ART_QA.json",
+    "reviews/mobile-scale-review.png",
+    "reviews/QA.json"
+  ]
+}

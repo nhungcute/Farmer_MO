@@ -26,7 +26,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | A02 | PostgreSQL API runtime wiring | DONE |
 | A03 | Transaction/concurrency integration gate | DONE |
 | B01 | Production asset inventory/replacement contract | DONE |
-| B02 | Production artwork replacement | **RUNNING - Wave 1 approved; Wave 2 76/76 candidates at Integration Owner review** |
+| B02 | Production artwork replacement | **RUNNING - Wave 2 integration review complete; 7/76 candidates selected for promotion, 69 remain outside production** |
 | C01 | Playwright setup và E2E foundation | DONE |
 | C02 | Functional Playwright E2E trên PostgreSQL | DONE |
 | C03 | Mobile/PWA/accessibility QA | DONE |
@@ -73,7 +73,7 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 B02 remains RUNNING because 76 assets are still placeholders. Wave 1 content, license, and release approval are APPROVED by Project Owner; do not approve assets outside Wave 1, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
 
-Wave 2 is OPEN and all eight isolated owner tasks have generated the remaining 76 candidates. They are at the Integration Owner review checkpoint; no candidate has been promoted into `assets-src/**`, and all remain `production_ready=false`/`approved=false`. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. Wave 2 candidates must pass local QA, Integration Owner review, owner content review, license approval, and release approval before any `approved=true` change.
+Wave 2 generation and Integration Owner review are complete. Farmhouse, Warehouse, Chicken Coop and Crop Extras (7/76) are selected for technical/style promotion; Pond, Terrain, Effects and UI require revision. The selected candidates remain outside `assets-src/**` until the separate promotion/production-validation commit. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
 
 ## Quy tắc cập nhật
 

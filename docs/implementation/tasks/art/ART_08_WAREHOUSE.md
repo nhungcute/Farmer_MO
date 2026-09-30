@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-08 |
 | Owner | Warehouse Asset Owner |
-| Status | REVIEW |
+| Status | REVIEW - PROMOTE_PENDING |
 | Workspace | work/art-generation/buildings/warehouse/** |
 | Canonical count | 1 |
 | Production path | assets-src/** (Integration Owner only) |

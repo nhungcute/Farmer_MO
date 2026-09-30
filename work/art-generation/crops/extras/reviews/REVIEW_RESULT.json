@@ -1,0 +1,85 @@
+{
+  "task": "REVIEW-13 CROP EXTRAS",
+  "expected": "4/4",
+  "found": "4/4",
+  "canonicalIds": [
+    "crop_ready_glow_00",
+    "crop_ready_glow_01",
+    "crop_ready_glow_02",
+    "crop_ready_glow_03"
+  ],
+  "technical": "PASS",
+  "style": "PASS",
+  "content": "PASS",
+  "mobile": "PASS (separate overlay remains readable at crop scale)",
+  "animation": "PASS",
+  "issues": [
+    "Glow remains a separate overlay and is not baked into crop artwork.",
+    "The four frames preserve the canonical 8 FPS, non-looping, no-hold contract."
+  ],
+  "recommendation": "PROMOTE",
+  "evidence": "reviews/crop-glow-overlay-review.png",
+  "assets": [
+    {
+      "id": "crop_ready_glow_00",
+      "sha256": "e1a0f10dbd5ab07439ab60c1eceee8e8815ce04e8858ce74cd974c21881302b9",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        222
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "crop_ready_glow_01",
+      "sha256": "ffddf058c2fed1b627c704bb1108a1b647786edbaf1b099f241d446e910897f3",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        247
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "crop_ready_glow_02",
+      "sha256": "6a35832e65ff2aa9c23178d90621a0eff1b740a6334ca2eca1637645d09d519b",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        249
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    },
+    {
+      "id": "crop_ready_glow_03",
+      "sha256": "754383180e50a7064e9dc42c35073b51b14fbcb112c4d79d49161c462dbaa36e",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        239
+      ],
+      "hiddenRgbMatte": false,
+      "pass": true
+    }
+  ],
+  "animationContract": true
+}

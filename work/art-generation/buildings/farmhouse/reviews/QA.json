@@ -94,7 +94,7 @@
     {
       "id": "building_farmhouse_lv1",
       "file": "building_farmhouse_lv1.png",
-      "sha256": "910147018d95d98c06a847b28629a6124221d68ebfd1e261c5df38e22e36b965",
+      "sha256": "198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac",
       "canvas": [
         512,
         384
@@ -127,5 +127,8 @@
     "outsideAssetsSrc": true,
     "manifestChanged": false,
     "atlasChanged": false
+  },
+  "integrationOwnerEvidence": {
+    "sha256Verified": true
   }
 }

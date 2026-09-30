@@ -1,0 +1,67 @@
+{
+  "status": "SELECTIVE_PROMOTION",
+  "reviews": [
+    {
+      "task": "REVIEW-06",
+      "recommendation": "REVISION_REQUIRED",
+      "count": 19
+    },
+    {
+      "task": "REVIEW-07",
+      "recommendation": "PROMOTE",
+      "count": 1
+    },
+    {
+      "task": "REVIEW-08",
+      "recommendation": "PROMOTE",
+      "count": 1
+    },
+    {
+      "task": "REVIEW-09",
+      "recommendation": "PROMOTE",
+      "count": 1
+    },
+    {
+      "task": "REVIEW-10",
+      "recommendation": "REVISION_REQUIRED",
+      "count": 5
+    },
+    {
+      "task": "REVIEW-11",
+      "recommendation": "REVISION_REQUIRED",
+      "count": 30
+    },
+    {
+      "task": "REVIEW-12",
+      "recommendation": "REVISION_REQUIRED",
+      "count": 15
+    },
+    {
+      "task": "REVIEW-13",
+      "recommendation": "PROMOTE",
+      "count": 4
+    }
+  ],
+  "promotionTasks": [
+    "REVIEW-07",
+    "REVIEW-08",
+    "REVIEW-09",
+    "REVIEW-13"
+  ],
+  "promotionCount": 7,
+  "candidateCount": 76,
+  "revisionCount": 69,
+  "productionInventoryBefore": {
+    "total": 188,
+    "production_ready": 112,
+    "approved": 112,
+    "placeholder": 76
+  },
+  "productionInventoryAfterPlanned": {
+    "total": 188,
+    "production_ready": 119,
+    "approved": 112,
+    "placeholder": 69
+  },
+  "assetsSrcModified": false
+}

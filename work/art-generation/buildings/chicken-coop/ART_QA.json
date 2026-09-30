@@ -18,7 +18,10 @@
     "rgba": true,
     "alpha": true,
     "source": true,
-    "metadata": true
+    "metadata": true,
+    "noHiddenRgbMatte": true,
+    "productionBoundary": true,
+    "continuity": "N/A (static asset)"
   },
   "notes": [
     "Transparent alpha retained from generated coop master.",
