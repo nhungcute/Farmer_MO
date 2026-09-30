@@ -1,0 +1,60 @@
+{
+  "taskId": "ART-08",
+  "assetType": "Warehouse",
+  "status": "REVIEW",
+  "canonicalCount": 1,
+  "generatedCount": 1,
+  "missingIds": [],
+  "extraIds": [],
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "releaseApproval": "PENDING_OWNER_REVIEW",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "checks": {
+    "canonicalIds": true,
+    "dimensions": true,
+    "rgba": true,
+    "alpha": true,
+    "noMatteRgb": true,
+    "source": true,
+    "metadata": true,
+    "continuity": true
+  },
+  "overallTechnicalPass": true,
+  "assets": [
+    {
+      "id": "building_warehouse_lv1",
+      "file": "building_warehouse_lv1.png",
+      "sha256": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "fullyTransparentRgbNonzero": 0,
+      "alphaBBoxThreshold1": [
+        31,
+        12,
+        465,
+        353
+      ],
+      "paintedWidth": 434,
+      "paintedHeight": 341,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-dbc0a11d-5a03-4be9-b818-71e716c66cfb.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\warehouse\\candidate\\source-masters\\warehouse-imagegen-master.png"
+    }
+  ],
+  "evidence": {
+    "candidateRoot": "candidate/assets-src-compatible/",
+    "reviewImages": [
+      "reviews/warehouse-candidate.png"
+    ]
+  }
+}

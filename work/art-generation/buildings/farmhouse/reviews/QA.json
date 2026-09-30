@@ -1,0 +1,131 @@
+{
+  "taskId": "ART-07",
+  "assetType": "Farmhouse",
+  "status": "PASS",
+  "canonicalCount": 1,
+  "canonicalIds": [
+    "building_farmhouse_lv1"
+  ],
+  "checks": {
+    "status": "PASS",
+    "fileCount": {
+      "expected": 1,
+      "actual": 1
+    },
+    "canonicalIds": {
+      "expected": [
+        "building_farmhouse_lv1"
+      ],
+      "actual": [
+        "building_farmhouse_lv1"
+      ]
+    },
+    "dimensions": {
+      "expected": [
+        512,
+        384
+      ],
+      "allMatch": true
+    },
+    "rgbaAlpha": {
+      "allRGBA": true,
+      "transparentMargins": true
+    },
+    "sourceScaleAnchorOffset": {
+      "canvas": {
+        "width": 512,
+        "height": 384
+      },
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "atlas": "farm_common",
+      "rgbaPng": true,
+      "staticAssets": true,
+      "animationContract": null
+    },
+    "lightingPerspective": {
+      "status": "PASS",
+      "perspective": "2.5D isometric",
+      "lighting": "fixed top-left highlights with lower-right soft contact shading"
+    },
+    "continuity": {
+      "status": "PASS",
+      "animationGroups": {},
+      "frameOrder": [
+        "building_farmhouse_lv1"
+      ]
+    },
+    "style": "PASS - 2.5D isometric, cozy bright illustrated cartoon, top-left light, lower-right soft shadow, mobile-readable silhouette",
+    "mobileReadability": {
+      "status": "PASS",
+      "viewports": [
+        "932x430",
+        "915x412",
+        "844x390",
+        "740x360"
+      ],
+      "zoom": [
+        "default",
+        "max"
+      ]
+    },
+    "metadata": {
+      "status": "PASS",
+      "canonicalCount": 1,
+      "canonicalIdsExact": true,
+      "provenanceComplete": true,
+      "approvalBoundaryPreserved": true
+    },
+    "productionBoundary": {
+      "status": "PASS",
+      "outsideAssetsSrc": true,
+      "manifestChanged": false,
+      "atlasChanged": false
+    }
+  },
+  "assets": [
+    {
+      "id": "building_farmhouse_lv1",
+      "file": "building_farmhouse_lv1.png",
+      "sha256": "910147018d95d98c06a847b28629a6124221d68ebfd1e261c5df38e22e36b965",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold1": [
+        31,
+        19,
+        482,
+        355
+      ],
+      "paintedWidth": 451,
+      "paintedHeight": 336,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-7b21301a-2d81-4074-935b-e6e1610a5eef.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\farmhouse\\candidate\\source-masters\\farmhouse-imagegen-master.png"
+    }
+  ],
+  "evidence": {
+    "candidateRoot": "candidate/assets-src-compatible/",
+    "reviewImages": [
+      "reviews/farmhouse-candidate.png"
+    ]
+  },
+  "productionBoundary": {
+    "status": "PASS",
+    "outsideAssetsSrc": true,
+    "manifestChanged": false,
+    "atlasChanged": false
+  }
+}

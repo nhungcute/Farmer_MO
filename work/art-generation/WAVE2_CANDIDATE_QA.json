@@ -1,0 +1,1085 @@
+{
+  "status": "PASS",
+  "tasks": {
+    "ART-06": {
+      "expected": 19,
+      "found": 19,
+      "dimensions": [
+        512,
+        384
+      ],
+      "images": [
+        {
+          "id": "pond_small_lv1_base",
+          "sha256": "8fceace8d4c72ba89505c7945dd8ad3830d4949c89953f5a6cb22d5e14f042af",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_00",
+          "sha256": "ef6381ac20fe19d17c55ef96be2f2e4745bba154e2127135cdf50a940cc358ce",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            72
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_01",
+          "sha256": "fe4c14807fa5c9cd4699d985c330058b19a8a39c99fa8a4ec4671881dd99ba96",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            64
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_02",
+          "sha256": "8d41861e3d60ac46d3f4e53600a9d84467dddf43597de3ed0f3160d0e27b953d",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            56
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_03",
+          "sha256": "dda4c1df714919e5f82deb37ade105b454ec44540cd947f3c1739e962793355d",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            65
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_04",
+          "sha256": "6c0879f32259b755113717ea80e01188606678b36930474809453cf048c150b2",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            57
+          ]
+        },
+        {
+          "id": "pond_small_lv1_ripple_05",
+          "sha256": "799f361b552432b742e2522b8dc31cb5bd8db5ab90e84a7107c8d48d55ac43ec",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            66
+          ]
+        },
+        {
+          "id": "pond_small_lv1_sparkle_00",
+          "sha256": "d71ecaaf3ef18482af8f3c3b2525f3cf925c28b1309312bb234f884016cd0fdc",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            125
+          ]
+        },
+        {
+          "id": "pond_small_lv1_sparkle_01",
+          "sha256": "964f19bb81e5e5465b218b305e40997350f1e907fa9e016621bece66fa45725b",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            125
+          ]
+        },
+        {
+          "id": "pond_small_lv1_sparkle_02",
+          "sha256": "144aa3bcfd19f4c461ee856a2a786de55c89da610628285940b7ed194610d78d",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            125
+          ]
+        },
+        {
+          "id": "pond_small_lv1_sparkle_03",
+          "sha256": "b58b2464fc2fbb9b5e453ec57a5beaa56214c5f6b3a671c67410b81a74ff52d7",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            125
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_00",
+          "sha256": "8c990ab23c4af16ce698da0036e1c0f9bad4b775f2305ae267ead87069163028",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_01",
+          "sha256": "5f5e8873f33925d553a607986a006f1f12a7d1cffb0dbd40a17e4268327461ef",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_02",
+          "sha256": "462121d8ee6bf4e7854c55921ba91d61f44fd524401a50d8e8097bab0aaaba08",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_03",
+          "sha256": "adf0403498dd798424cb87a975b0089411cec479fa0faa038cc1b612e7b13d19",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_04",
+          "sha256": "e2de49cdd45c741e746de9239d7ab562a0bc1beb8739d882b31d9542892767c1",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_05",
+          "sha256": "74356b6eea95eff946b5ad18282f57292546777f46a3cff5793166a0bea0f04d",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_06",
+          "sha256": "a0424632d27e639eae5e9d57a1a63cc332c99a7a35b601c20741a78b2cf4cc9d",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        },
+        {
+          "id": "pond_small_lv1_water_07",
+          "sha256": "e8a641a36a80eb59a68179c4cc917553ab508fd55e492ab0992fa15579ba22d8",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            32
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-07": {
+      "expected": 1,
+      "found": 1,
+      "dimensions": [
+        512,
+        384
+      ],
+      "images": [
+        {
+          "id": "building_farmhouse_lv1",
+          "sha256": "198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-08": {
+      "expected": 1,
+      "found": 1,
+      "dimensions": [
+        512,
+        384
+      ],
+      "images": [
+        {
+          "id": "building_warehouse_lv1",
+          "sha256": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-09": {
+      "expected": 1,
+      "found": 1,
+      "dimensions": [
+        512,
+        384
+      ],
+      "images": [
+        {
+          "id": "building_chicken_coop_lv1",
+          "sha256": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+          "size": [
+            512,
+            384
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-10": {
+      "expected": 5,
+      "found": 5,
+      "dimensions": [
+        256,
+        128
+      ],
+      "images": [
+        {
+          "id": "terrain_grass_tile",
+          "sha256": "76cc171164e91efd552baaab137978e030ae495cb50fe375bbdf8de0e392da5e",
+          "size": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "terrain_grass_variant_01",
+          "sha256": "22cce4200d55fc2a8d074eae0c67abc5a64938352a594cc7553bb64fde2e6063",
+          "size": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "terrain_grass_variant_02",
+          "sha256": "7a3fd11906a4a0a361b4115e39d3bcdedabd8966dd86f477e21eda65fa993efa",
+          "size": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "terrain_grass_variant_03",
+          "sha256": "e821e70290c5acfb138532932ec483b4663d1dd5351f723c3562485fb56bcdee",
+          "size": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "terrain_grass_variant_04",
+          "sha256": "b8ad12748b32973e8f03dabdeeadb824dc53140a808efd4863c4ed44249d4282",
+          "size": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-11": {
+      "expected": 30,
+      "found": 30,
+      "dimensions": [
+        256,
+        256
+      ],
+      "images": [
+        {
+          "id": "fx_build_success_00",
+          "sha256": "19abba46f9508b49ebfbb78675688c840ccf7150fd3651446105512ea4527403",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_build_success_01",
+          "sha256": "ee3fb0a3b5795ef59933b14dc1700919fab764f9cd394fa8ca731d1fc501d3a6",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_build_success_02",
+          "sha256": "8f96b9bb3ed6123c3c879c8f90e6bc61332bd87d82960761b65c786cc07cbb3f",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_build_success_03",
+          "sha256": "2e67b928836e2266d99bdeb8e079506b4fe89edaa728cd6e3fa4983a632f5615",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_build_success_04",
+          "sha256": "b57e3b4d0e4f9acbc22ca8baa32b1583f1ce36ed26b15227db0d98e58577f0e5",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_build_success_05",
+          "sha256": "0940b08aeb272bce20bcd25a298a6c11c8e70be50606a846ec8cde5682a52bc5",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_00",
+          "sha256": "fe57ded03387e1030b3300552c62c54b4eed0f625a1be3feca94dcc8849e192e",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_01",
+          "sha256": "ea38e61359603e5b9df0bdbecb90d0bd8ed17ee0291db7a6e62e9a2c13028d70",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_02",
+          "sha256": "3e7e59350682ad8616a9b19d418e8f9d86aef7de5489ccd9c19e39ab3fa6126c",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_03",
+          "sha256": "d1ff2bf9298d172fc970f9cc7ea2362420ae5a3bfb2cde37efff958d77593937",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_04",
+          "sha256": "c9cfebb9f4c2a0d942623d65908c3f5a188e6367c4186c50007bb69a3432bc22",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_05",
+          "sha256": "ca8ad34051b376cb242cb7deb0a9dc12211080a111850cb7ad621594940ecc6a",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_06",
+          "sha256": "3c90cdf9bd71c25c66f5081a44cf76a7b99de4a5c256f88a79484f8db5d3547b",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_coin_gain_07",
+          "sha256": "e202c310ca16e78469550211c0f008ea3f36e41dfdaea20ea04283c79583237f",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_00",
+          "sha256": "2947673b2118be72fe66b5dc2efc3ba3dec9ae32975a4ce166c871a640acf109",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_01",
+          "sha256": "0be864496ebdb86ea4407f298f1260d59371a76c665b8596d4b338ed328a8a13",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_02",
+          "sha256": "ca48e7aa87df0fae3a1131915a2197009024102ee40430c0b54f4a3fe44adcf1",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_03",
+          "sha256": "ea43c2979b467bb02f603f0d13360ead82786745b0ab15d2ea772e4a08258148",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_04",
+          "sha256": "d314b25f0757f7d979415e03357bf89a739d629cf837d6d9b849ea0d1b5ab880",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_egg_collect_05",
+          "sha256": "c19bdd8f01e1442afc54031041ec117c05960fb9d1bb58e173b833b46d42830e",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_00",
+          "sha256": "7cf59737b75690bd6e31ad1f4f39313714bcdaeb88d55545bed5ec938c0571ec",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_01",
+          "sha256": "56f06f3809d127edd4754df64a187570a0ea7ef723127db610139182c679c565",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_02",
+          "sha256": "2680d0b2119f7de13ac81b13a68d879a91599bc9583dfa053e392c1f2c06d200",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_03",
+          "sha256": "480e53a06f127355089d66e9849299c6eecc3e292f8c07d5f2a4c96409d97d1d",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_04",
+          "sha256": "8eb421fd1b18dba9baf86d72313e1c2323f21526ae5f881c59c7a6d8fc6c36ae",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_harvest_05",
+          "sha256": "b3473012967f04add87bdc10fb96d64f1ebd97a7e496bf6ccd0127bc09a83b29",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_plant_00",
+          "sha256": "be8e8f0887248f9f329683ee952092a8f473daad2c3e45c0dfdb780f972c878e",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_plant_01",
+          "sha256": "00fd1af2f4c11611afc04824c50c24d28e22420ea04037af79c5528d7c906e94",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_plant_02",
+          "sha256": "5edf51f4d136e5bf64d5218baec00a54b463511882fab35a7a4f8671acb7d5ad",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "fx_plant_03",
+          "sha256": "376ad23ab2fccfea1023ba3da95b22cb04e9c3ff000a2e6fd644c86b1e2e839b",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-12": {
+      "expected": 15,
+      "found": 15,
+      "dimensions": [
+        128,
+        128
+      ],
+      "images": [
+        {
+          "id": "build_ghost_invalid",
+          "sha256": "244e78f97cdbfef12232a4da6b8b07279e9e3932416a8b7222d81ebcef03a8f5",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "build_ghost_valid",
+          "sha256": "ba7f55e5478ba8b291c90e47937974cb2d152d8e69afdf9aa33014a31d91fb02",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_carrot",
+          "sha256": "9ed85891cf9e4bb7a9766e12500bc25a94fda3ac6bf0d8ec3f2b077b00777609",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_chicken_feed",
+          "sha256": "cdadaa3c39564d9aecc67b7acd04a72bb61412402051a65323def6aafc9bd3e0",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_coin",
+          "sha256": "bc98ed841a43041fcf72488d61b5bb661a12a65d266802c5408f8681125c78c6",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_corn",
+          "sha256": "9aea4e6cc0a3dc2c345d1374f72455fc3faf5f386ac02bbef9cbd097dea10c3c",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_diamond",
+          "sha256": "8abd3f4583600f5cf6d69a568a9962ff7d8965be8944d95f661b23aceeda8bd0",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_egg",
+          "sha256": "3d5c5d8e37b03a050b5aca480e584946ccc976590f104ad283fada0c03c46304",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_order",
+          "sha256": "78409a90ec6b7bf436acd50f35bb983169a6a56254c2861de3bec32fa7ad2c39",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_rice",
+          "sha256": "b31a8ea104a88193af76258c7b2bc42042276c3d1bbb11451c95f97504f9e0e7",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "icon_tomato",
+          "sha256": "7df253f3d804f1388db54675eacb95a84e17cde35ab0bab5cca88ee16f4e1597",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "ui_error_toast",
+          "sha256": "c84b0049ba00c9b9625f2b8fd976ed5760de481f5fa432551f53510cf6c458fd",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "ui_loading",
+          "sha256": "7880d3191d15e024d89542b77578d870762d8c72a4c87ac2363f66897d7745e2",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "ui_rotate_overlay",
+          "sha256": "3907f0409c7591bd54453c69e48062a4daa3a2279294969d53b08809133668d4",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        },
+        {
+          "id": "ui_success_toast",
+          "sha256": "4616680acb857bc6b9d66067b3e63ede5ace360644450035de930d3195b7f29f",
+          "size": [
+            128,
+            128
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            255
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    "ART-13": {
+      "expected": 4,
+      "found": 4,
+      "dimensions": [
+        256,
+        256
+      ],
+      "images": [
+        {
+          "id": "crop_ready_glow_00",
+          "sha256": "e1a0f10dbd5ab07439ab60c1eceee8e8815ce04e8858ce74cd974c21881302b9",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            222
+          ]
+        },
+        {
+          "id": "crop_ready_glow_01",
+          "sha256": "ffddf058c2fed1b627c704bb1108a1b647786edbaf1b099f241d446e910897f3",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            247
+          ]
+        },
+        {
+          "id": "crop_ready_glow_02",
+          "sha256": "6a35832e65ff2aa9c23178d90621a0eff1b740a6334ca2eca1637645d09d519b",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            249
+          ]
+        },
+        {
+          "id": "crop_ready_glow_03",
+          "sha256": "754383180e50a7064e9dc42c35073b51b14fbcb112c4d79d49161c462dbaa36e",
+          "size": [
+            256,
+            256
+          ],
+          "mode": "RGBA",
+          "alphaExtrema": [
+            0,
+            239
+          ]
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "totals": {
+    "expected": 76,
+    "found": 76
+  }
+}

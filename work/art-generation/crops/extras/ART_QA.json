@@ -1,0 +1,158 @@
+{
+  "taskId": "ART-13",
+  "status": "PASS",
+  "scope": [
+    "crop_ready_glow_00",
+    "crop_ready_glow_01",
+    "crop_ready_glow_02",
+    "crop_ready_glow_03"
+  ],
+  "checks": [
+    {
+      "name": "id_count",
+      "status": "PASS",
+      "detail": "expected 4, found 4"
+    },
+    {
+      "name": "exact_ids",
+      "status": "PASS",
+      "detail": "unexpected candidates: ['crop_ready_glow_00', 'crop_ready_glow_01', 'crop_ready_glow_02', 'crop_ready_glow_03']"
+    },
+    {
+      "name": "crop_ready_glow_00.dimensions",
+      "status": "PASS",
+      "detail": "(256, 256)"
+    },
+    {
+      "name": "crop_ready_glow_00.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "crop_ready_glow_00.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,222"
+    },
+    {
+      "name": "crop_ready_glow_00.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "crop_ready_glow_01.dimensions",
+      "status": "PASS",
+      "detail": "(256, 256)"
+    },
+    {
+      "name": "crop_ready_glow_01.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "crop_ready_glow_01.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,247"
+    },
+    {
+      "name": "crop_ready_glow_01.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "crop_ready_glow_02.dimensions",
+      "status": "PASS",
+      "detail": "(256, 256)"
+    },
+    {
+      "name": "crop_ready_glow_02.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "crop_ready_glow_02.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,249"
+    },
+    {
+      "name": "crop_ready_glow_02.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "crop_ready_glow_03.dimensions",
+      "status": "PASS",
+      "detail": "(256, 256)"
+    },
+    {
+      "name": "crop_ready_glow_03.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "crop_ready_glow_03.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,239"
+    },
+    {
+      "name": "crop_ready_glow_03.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "animation_alignment",
+      "status": "PASS",
+      "detail": "center spread=0.0024,0.0026"
+    },
+    {
+      "name": "manifest_count",
+      "status": "PASS",
+      "detail": "4"
+    },
+    {
+      "name": "frame_order",
+      "status": "PASS",
+      "detail": "['crop_ready_glow_00', 'crop_ready_glow_01', 'crop_ready_glow_02', 'crop_ready_glow_03']"
+    },
+    {
+      "name": "animation_contract",
+      "status": "PASS",
+      "detail": "canonical crop_ready_glow contract preserved"
+    },
+    {
+      "name": "source_evidence",
+      "status": "PASS",
+      "detail": "imagegen source sheet present"
+    }
+  ],
+  "alignment": {
+    "centers": [
+      [
+        0.49612890342724963,
+        0.4978545933190795
+      ],
+      [
+        0.4967705539839688,
+        0.49680880665342886
+      ],
+      [
+        0.49852593126674694,
+        0.4977822761561947
+      ],
+      [
+        0.49765283044947245,
+        0.4994565620164341
+      ]
+    ],
+    "spreadX": 0.002397027839497301,
+    "spreadY": 0.0026477553630052664
+  },
+  "technicalReview": "PASS (task-local QA)",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "releaseFlags": {
+    "placeholder": false,
+    "production_ready": false,
+    "approved": false
+  },
+  "separationInvariant": "Glow remains an overlay and is not baked into crop artwork."
+}

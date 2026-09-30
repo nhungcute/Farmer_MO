@@ -1,0 +1,431 @@
+{
+  "taskId": "ART-12",
+  "status": "PASS",
+  "scope": [
+    "icon_coin",
+    "icon_diamond",
+    "icon_rice",
+    "icon_carrot",
+    "icon_corn",
+    "icon_tomato",
+    "icon_chicken_feed",
+    "icon_egg",
+    "icon_order",
+    "ui_rotate_overlay",
+    "ui_loading",
+    "ui_success_toast",
+    "ui_error_toast",
+    "build_ghost_valid",
+    "build_ghost_invalid"
+  ],
+  "checks": [
+    {
+      "name": "id_count",
+      "status": "PASS",
+      "detail": "expected 15, found 15"
+    },
+    {
+      "name": "exact_ids",
+      "status": "PASS",
+      "detail": "unexpected candidates: ['build_ghost_invalid', 'build_ghost_valid', 'icon_carrot', 'icon_chicken_feed', 'icon_coin', 'icon_corn', 'icon_diamond', 'icon_egg', 'icon_order', 'icon_rice', 'icon_tomato', 'ui_error_toast', 'ui_loading', 'ui_rotate_overlay', 'ui_success_toast']"
+    },
+    {
+      "name": "icon_coin.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_coin.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_coin.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_coin.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_diamond.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_diamond.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_diamond.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_diamond.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_rice.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_rice.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_rice.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_rice.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_carrot.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_carrot.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_carrot.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_carrot.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_corn.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_corn.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_corn.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_corn.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_tomato.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_tomato.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_tomato.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_tomato.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_chicken_feed.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_chicken_feed.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_chicken_feed.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_chicken_feed.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_egg.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_egg.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_egg.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_egg.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "icon_order.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "icon_order.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "icon_order.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "icon_order.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "ui_rotate_overlay.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "ui_rotate_overlay.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "ui_rotate_overlay.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "ui_rotate_overlay.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "ui_loading.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "ui_loading.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "ui_loading.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "ui_loading.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "ui_success_toast.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "ui_success_toast.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "ui_success_toast.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "ui_success_toast.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "ui_error_toast.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "ui_error_toast.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "ui_error_toast.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "ui_error_toast.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "build_ghost_valid.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "build_ghost_valid.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "build_ghost_valid.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "build_ghost_valid.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "build_ghost_invalid.dimensions",
+      "status": "PASS",
+      "detail": "(128, 128)"
+    },
+    {
+      "name": "build_ghost_invalid.rgba",
+      "status": "PASS",
+      "detail": "RGBA"
+    },
+    {
+      "name": "build_ghost_invalid.true_alpha",
+      "status": "PASS",
+      "detail": "alpha extrema=0,255"
+    },
+    {
+      "name": "build_ghost_invalid.transparent_corners",
+      "status": "PASS",
+      "detail": "all four corners must remain transparent"
+    },
+    {
+      "name": "manifest_count",
+      "status": "PASS",
+      "detail": "15"
+    },
+    {
+      "name": "manifest_ids",
+      "status": "PASS",
+      "detail": "manifest order/IDs"
+    },
+    {
+      "name": "icon_coin.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_diamond.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_rice.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_carrot.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_corn.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_tomato.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_chicken_feed.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_egg.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "icon_order.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "ui_rotate_overlay.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "ui_loading.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "ui_success_toast.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "ui_error_toast.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "build_ghost_valid.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "build_ghost_invalid.metadata",
+      "status": "PASS",
+      "detail": "canonical metadata preserved"
+    },
+    {
+      "name": "source_evidence",
+      "status": "PASS",
+      "detail": "imagegen source sheet present"
+    }
+  ],
+  "technicalReview": "PASS (task-local QA)",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "releaseFlags": {
+    "placeholder": false,
+    "production_ready": false,
+    "approved": false
+  }
+}

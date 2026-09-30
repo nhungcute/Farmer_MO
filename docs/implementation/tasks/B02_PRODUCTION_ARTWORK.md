@@ -59,4 +59,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 artwork/content/license/release is APPROVED by Project Owner. Do not approve the remaining 76 placeholders, open Wave 2, start Cloudflare Named Tunnel, or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 artwork/content/license/release is APPROVED by Project Owner. Wave 2 is now OPEN with eight independent owners for the remaining 76 canonical assets; each task must pass its own review/license/release gate before approval. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

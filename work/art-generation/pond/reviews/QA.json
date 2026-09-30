@@ -1,0 +1,691 @@
+{
+  "taskId": "ART-06",
+  "assetType": "Pond",
+  "status": "PASS",
+  "canonicalCount": 19,
+  "canonicalIds": [
+    "pond_small_lv1_base",
+    "pond_small_lv1_water_00",
+    "pond_small_lv1_water_01",
+    "pond_small_lv1_water_02",
+    "pond_small_lv1_water_03",
+    "pond_small_lv1_water_04",
+    "pond_small_lv1_water_05",
+    "pond_small_lv1_water_06",
+    "pond_small_lv1_water_07",
+    "pond_small_lv1_ripple_00",
+    "pond_small_lv1_ripple_01",
+    "pond_small_lv1_ripple_02",
+    "pond_small_lv1_ripple_03",
+    "pond_small_lv1_ripple_04",
+    "pond_small_lv1_ripple_05",
+    "pond_small_lv1_sparkle_00",
+    "pond_small_lv1_sparkle_01",
+    "pond_small_lv1_sparkle_02",
+    "pond_small_lv1_sparkle_03"
+  ],
+  "checks": {
+    "status": "PASS",
+    "fileCount": {
+      "expected": 19,
+      "actual": 19
+    },
+    "canonicalIds": {
+      "expected": [
+        "pond_small_lv1_base",
+        "pond_small_lv1_water_00",
+        "pond_small_lv1_water_01",
+        "pond_small_lv1_water_02",
+        "pond_small_lv1_water_03",
+        "pond_small_lv1_water_04",
+        "pond_small_lv1_water_05",
+        "pond_small_lv1_water_06",
+        "pond_small_lv1_water_07",
+        "pond_small_lv1_ripple_00",
+        "pond_small_lv1_ripple_01",
+        "pond_small_lv1_ripple_02",
+        "pond_small_lv1_ripple_03",
+        "pond_small_lv1_ripple_04",
+        "pond_small_lv1_ripple_05",
+        "pond_small_lv1_sparkle_00",
+        "pond_small_lv1_sparkle_01",
+        "pond_small_lv1_sparkle_02",
+        "pond_small_lv1_sparkle_03"
+      ],
+      "actual": [
+        "pond_small_lv1_base",
+        "pond_small_lv1_water_00",
+        "pond_small_lv1_water_01",
+        "pond_small_lv1_water_02",
+        "pond_small_lv1_water_03",
+        "pond_small_lv1_water_04",
+        "pond_small_lv1_water_05",
+        "pond_small_lv1_water_06",
+        "pond_small_lv1_water_07",
+        "pond_small_lv1_ripple_00",
+        "pond_small_lv1_ripple_01",
+        "pond_small_lv1_ripple_02",
+        "pond_small_lv1_ripple_03",
+        "pond_small_lv1_ripple_04",
+        "pond_small_lv1_ripple_05",
+        "pond_small_lv1_sparkle_00",
+        "pond_small_lv1_sparkle_01",
+        "pond_small_lv1_sparkle_02",
+        "pond_small_lv1_sparkle_03"
+      ]
+    },
+    "dimensions": {
+      "expected": [
+        512,
+        384
+      ],
+      "allMatch": true
+    },
+    "rgbaAlpha": {
+      "allRGBA": true,
+      "transparentMargins": true
+    },
+    "sourceScaleAnchorOffset": {
+      "canvas": {
+        "width": 512,
+        "height": 384
+      },
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "atlas": "farm_common",
+      "rgbaPng": true,
+      "animationGroups": {
+        "pond_water": {
+          "frameCount": 8,
+          "fps": 12,
+          "loop": true,
+          "holdLast": false
+        },
+        "pond_ripple": {
+          "frameCount": 6,
+          "fps": 10,
+          "loop": true,
+          "holdLast": false
+        },
+        "pond_sparkle": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false
+        }
+      }
+    },
+    "lightingPerspective": {
+      "status": "PASS",
+      "perspective": "2.5D isometric",
+      "lighting": "fixed top-left highlights with lower-right soft contact shading"
+    },
+    "continuity": {
+      "status": "PASS",
+      "animationGroups": {
+        "pond_water": {
+          "frameCount": 8,
+          "fps": 12,
+          "loop": true,
+          "holdLast": false
+        },
+        "pond_ripple": {
+          "frameCount": 6,
+          "fps": 10,
+          "loop": true,
+          "holdLast": false
+        },
+        "pond_sparkle": {
+          "frameCount": 4,
+          "fps": 8,
+          "loop": true,
+          "holdLast": false
+        }
+      },
+      "frameOrder": [
+        "pond_small_lv1_base",
+        "pond_small_lv1_water_00",
+        "pond_small_lv1_water_01",
+        "pond_small_lv1_water_02",
+        "pond_small_lv1_water_03",
+        "pond_small_lv1_water_04",
+        "pond_small_lv1_water_05",
+        "pond_small_lv1_water_06",
+        "pond_small_lv1_water_07",
+        "pond_small_lv1_ripple_00",
+        "pond_small_lv1_ripple_01",
+        "pond_small_lv1_ripple_02",
+        "pond_small_lv1_ripple_03",
+        "pond_small_lv1_ripple_04",
+        "pond_small_lv1_ripple_05",
+        "pond_small_lv1_sparkle_00",
+        "pond_small_lv1_sparkle_01",
+        "pond_small_lv1_sparkle_02",
+        "pond_small_lv1_sparkle_03"
+      ]
+    },
+    "style": "PASS - 2.5D isometric, cozy bright illustrated cartoon, top-left light, lower-right soft shadow, mobile-readable silhouette",
+    "mobileReadability": {
+      "status": "PASS",
+      "viewports": [
+        "932x430",
+        "915x412",
+        "844x390",
+        "740x360"
+      ],
+      "zoom": [
+        "default",
+        "max"
+      ]
+    },
+    "metadata": {
+      "status": "PASS",
+      "canonicalCount": 19,
+      "canonicalIdsExact": true,
+      "provenanceComplete": true,
+      "approvalBoundaryPreserved": true
+    },
+    "productionBoundary": {
+      "status": "PASS",
+      "outsideAssetsSrc": true,
+      "manifestChanged": false,
+      "atlasChanged": false
+    }
+  },
+  "assets": [
+    {
+      "id": "pond_small_lv1_base",
+      "file": "pond_small_lv1_base.png",
+      "sha256": "70c33ba99ccdd07e501a374cbe7006acaa058e6db9ee01aac6fa4a13f5f66ca1",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold1": [
+        18,
+        19,
+        494,
+        347
+      ],
+      "paintedWidth": 476,
+      "paintedHeight": 328,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png"
+    },
+    {
+      "id": "pond_small_lv1_water_00",
+      "file": "pond_small_lv1_water_00.png",
+      "sha256": "a12bb9bdabd74d7fc04f0472d137e41b89b2f7b0316075ffabd8ed23a7e668ba",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        72,
+        96,
+        481,
+        295
+      ],
+      "paintedWidth": 409,
+      "paintedHeight": 199,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_01",
+      "file": "pond_small_lv1_water_01.png",
+      "sha256": "7b2b7ed0a73ff8f2893165eb08dafb81f35543bdbf3fe9bf5ca3fd84d2f9f2c1",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        80,
+        99,
+        433,
+        294
+      ],
+      "paintedWidth": 353,
+      "paintedHeight": 195,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_02",
+      "file": "pond_small_lv1_water_02.png",
+      "sha256": "daaa06ac49c785a01f70f5fd39d3c7d0b6fc7eed80d445a35226545dd13609dd",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        89,
+        101,
+        433,
+        295
+      ],
+      "paintedWidth": 344,
+      "paintedHeight": 194,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_03",
+      "file": "pond_small_lv1_water_03.png",
+      "sha256": "2ca407371608fa1e1e4d3c303195b31bcd12f34751c581b53f7f7a340e8e4462",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        98,
+        101,
+        433,
+        291
+      ],
+      "paintedWidth": 335,
+      "paintedHeight": 190,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_04",
+      "file": "pond_small_lv1_water_04.png",
+      "sha256": "aba30a82f0fc8d4bdd7b9d983d37b6e16608054b5e177d9bbef90987b677e30f",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        107,
+        103,
+        433,
+        290
+      ],
+      "paintedWidth": 326,
+      "paintedHeight": 187,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_05",
+      "file": "pond_small_lv1_water_05.png",
+      "sha256": "770a2d9ff63114b8ab1493713ae7c0890bfcd99615f078a5374386494312987e",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        116,
+        102,
+        433,
+        286
+      ],
+      "paintedWidth": 317,
+      "paintedHeight": 184,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_06",
+      "file": "pond_small_lv1_water_06.png",
+      "sha256": "63ea3fd82f9bd6d0d776ce57c412ae80f5926e6f1460ae0b29971b497fd65a8b",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        144,
+        101,
+        480,
+        287
+      ],
+      "paintedWidth": 336,
+      "paintedHeight": 186,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_water_07",
+      "file": "pond_small_lv1_water_07.png",
+      "sha256": "aaea48fc297461b1ba3247a1c977e234945526611fcb6045c08fb8577d876939",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        32
+      ],
+      "alphaBBoxThreshold1": [
+        149,
+        103,
+        481,
+        286
+      ],
+      "paintedWidth": 332,
+      "paintedHeight": 183,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_00",
+      "file": "pond_small_lv1_ripple_00.png",
+      "sha256": "ef6381ac20fe19d17c55ef96be2f2e4745bba154e2127135cdf50a940cc358ce",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        72
+      ],
+      "alphaBBoxThreshold1": [
+        169,
+        185,
+        360,
+        263
+      ],
+      "paintedWidth": 191,
+      "paintedHeight": 78,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_01",
+      "file": "pond_small_lv1_ripple_01.png",
+      "sha256": "fe4c14807fa5c9cd4699d985c330058b19a8a39c99fa8a4ec4671881dd99ba96",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        64
+      ],
+      "alphaBBoxThreshold1": [
+        161,
+        183,
+        368,
+        265
+      ],
+      "paintedWidth": 207,
+      "paintedHeight": 82,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_02",
+      "file": "pond_small_lv1_ripple_02.png",
+      "sha256": "8d41861e3d60ac46d3f4e53600a9d84467dddf43597de3ed0f3160d0e27b953d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        56
+      ],
+      "alphaBBoxThreshold1": [
+        153,
+        180,
+        376,
+        268
+      ],
+      "paintedWidth": 223,
+      "paintedHeight": 88,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_03",
+      "file": "pond_small_lv1_ripple_03.png",
+      "sha256": "dda4c1df714919e5f82deb37ade105b454ec44540cd947f3c1739e962793355d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        65
+      ],
+      "alphaBBoxThreshold1": [
+        145,
+        177,
+        338,
+        271
+      ],
+      "paintedWidth": 193,
+      "paintedHeight": 94,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_04",
+      "file": "pond_small_lv1_ripple_04.png",
+      "sha256": "6c0879f32259b755113717ea80e01188606678b36930474809453cf048c150b2",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        57
+      ],
+      "alphaBBoxThreshold1": [
+        137,
+        175,
+        346,
+        273
+      ],
+      "paintedWidth": 209,
+      "paintedHeight": 98,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_ripple_05",
+      "file": "pond_small_lv1_ripple_05.png",
+      "sha256": "799f361b552432b742e2522b8dc31cb5bd8db5ab90e84a7107c8d48d55ac43ec",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        66
+      ],
+      "alphaBBoxThreshold1": [
+        175,
+        172,
+        354,
+        261
+      ],
+      "paintedWidth": 179,
+      "paintedHeight": 89,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_sparkle_00",
+      "file": "pond_small_lv1_sparkle_00.png",
+      "sha256": "d71ecaaf3ef18482af8f3c3b2525f3cf925c28b1309312bb234f884016cd0fdc",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        125
+      ],
+      "alphaBBoxThreshold1": [
+        216,
+        152,
+        347,
+        281
+      ],
+      "paintedWidth": 131,
+      "paintedHeight": 129,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_sparkle_01",
+      "file": "pond_small_lv1_sparkle_01.png",
+      "sha256": "964f19bb81e5e5465b218b305e40997350f1e907fa9e016621bece66fa45725b",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        125
+      ],
+      "alphaBBoxThreshold1": [
+        163,
+        150,
+        349,
+        230
+      ],
+      "paintedWidth": 186,
+      "paintedHeight": 80,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_sparkle_02",
+      "file": "pond_small_lv1_sparkle_02.png",
+      "sha256": "144aa3bcfd19f4c461ee856a2a786de55c89da610628285940b7ed194610d78d",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        125
+      ],
+      "alphaBBoxThreshold1": [
+        161,
+        148,
+        288,
+        277
+      ],
+      "paintedWidth": 127,
+      "paintedHeight": 129,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    },
+    {
+      "id": "pond_small_lv1_sparkle_03",
+      "file": "pond_small_lv1_sparkle_03.png",
+      "sha256": "b58b2464fc2fbb9b5e453ec57a5beaa56214c5f6b3a671c67410b81a74ff52d7",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        125
+      ],
+      "alphaBBoxThreshold1": [
+        159,
+        183,
+        345,
+        279
+      ],
+      "paintedWidth": 186,
+      "paintedHeight": 96,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-662335d5-9ceb-43d9-a842-eb078c10bbf8.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\pond\\candidate\\source-masters\\pond-imagegen-master.png",
+      "derivedFrom": "pond_small_lv1_base"
+    }
+  ],
+  "evidence": {
+    "candidateRoot": "candidate/assets-src-compatible/",
+    "reviewImages": [
+      "reviews/pond-animation-candidates.png",
+      "reviews/pond-composited-frames.png"
+    ]
+  },
+  "productionBoundary": {
+    "status": "PASS",
+    "outsideAssetsSrc": true,
+    "manifestChanged": false,
+    "atlasChanged": false
+  }
+}

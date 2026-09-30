@@ -1,0 +1,62 @@
+{
+  "taskId": "ART-09",
+  "status": "REVIEW",
+  "owner": "Chicken Coop Asset Owner",
+  "assetType": "Chicken Coop",
+  "workspace": "work/art-generation/buildings/chicken-coop",
+  "canonicalCount": 1,
+  "canonicalIds": [
+    "building_chicken_coop_lv1"
+  ],
+  "source": "internal-generated",
+  "creator": "Codex / Chicken Coop Asset Owner",
+  "tool": "built-in image_gen",
+  "toolVersion": "not exposed by runtime",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md",
+  "license": "PENDING_OWNER_REVIEW",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PENDING",
+  "approvalRef": null,
+  "generated": 1,
+  "notes": "Wave 2 candidate workspace only. Integration Owner is the only actor allowed to promote into assets-src/**.",
+  "sourceGroups": {
+    "building_chicken_coop_lv1": "work/art-generation/buildings/chicken-coop/source/coop-master.png"
+  },
+  "frameMetadata": {
+    "building_chicken_coop_lv1": {
+      "source": "internal-generated",
+      "creator": "Codex / Chicken Coop Asset Owner",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "license": "PENDING_OWNER_REVIEW",
+      "contentVersion": "mvp-1",
+      "styleGuideVersion": "docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md",
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "technicalReview": "PASS",
+      "styleReview": "PENDING",
+      "approvalRef": null,
+      "sourceGroup": "source/coop-master.png",
+      "sourceFile": "work/art-generation/buildings/chicken-coop/candidate/assets-src-compatible/building_chicken_coop_lv1.png",
+      "sha256": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+      "width": 512,
+      "height": 384,
+      "expectedWidth": 512,
+      "expectedHeight": 384,
+      "mode": "RGBA",
+      "alphaPixels": 81741,
+      "alphaBounds": [
+        64,
+        5,
+        453,
+        346
+      ]
+    }
+  }
+}

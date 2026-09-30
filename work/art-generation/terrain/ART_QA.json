@@ -1,0 +1,30 @@
+{
+  "taskId": "ART-10",
+  "status": "REVIEW",
+  "canonicalCount": 5,
+  "generatedCount": 5,
+  "missingIds": [],
+  "extraIds": [],
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "releaseApproval": "PENDING_OWNER_REVIEW",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "checks": {
+    "canonicalIds": true,
+    "dimensions": true,
+    "rgba": true,
+    "alpha": true,
+    "source": true,
+    "metadata": true
+  },
+  "notes": [
+    "Generated isometric grass master with controlled surface variants.",
+    "All five frames use the same diamond geometry and transparent alpha.",
+    "Brightness variation is bounded to avoid visual noise and preserve crop readability."
+  ],
+  "overallTechnicalPass": true,
+  "creator": "Codex / Terrain Asset Owner"
+}

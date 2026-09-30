@@ -1,0 +1,31 @@
+{
+  "taskId": "ART-13",
+  "status": "REVIEW",
+  "owner": "Crop Extras Asset Owner",
+  "assetType": "Crop Extras",
+  "workspace": "work/art-generation/crops/extras",
+  "canonicalCount": 4,
+  "canonicalIds": [
+    "crop_ready_glow_00",
+    "crop_ready_glow_01",
+    "crop_ready_glow_02",
+    "crop_ready_glow_03"
+  ],
+  "source": "internal-generated",
+  "creator": "Codex / Crop Extras Asset Owner",
+  "tool": "built-in image_gen",
+  "toolVersion": "not exposed by runtime",
+  "contentVersion": "mvp-1",
+  "styleGuideVersion": "docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md",
+  "license": "PENDING_OWNER_REVIEW",
+  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "placeholder": false,
+  "production_ready": false,
+  "approved": false,
+  "technicalReview": "PASS",
+  "styleReview": "PENDING",
+  "approvalRef": null,
+  "generated": 4,
+  "notes": "Wave 2 candidate workspace only. Integration Owner is the only actor allowed to promote into assets-src/**. Generated from a transparent imagegen sheet; glow remains separate from all crop artwork.",
+  "generationStatus": "COMPLETE"
+}

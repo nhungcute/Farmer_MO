@@ -1,0 +1,176 @@
+{
+  "taskId": "ART-13",
+  "contentVersion": "mvp-1",
+  "status": "REVIEW",
+  "canonicalCount": 4,
+  "assets": [
+    {
+      "atlas": "effects",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen glow sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "id": "crop_ready_glow_00",
+      "sourceFile": "assets-src/effects/crop_ready_glow_00.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "effects",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen glow sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "id": "crop_ready_glow_01",
+      "sourceFile": "assets-src/effects/crop_ready_glow_01.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "effects",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen glow sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "id": "crop_ready_glow_02",
+      "sourceFile": "assets-src/effects/crop_ready_glow_02.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "effects",
+      "width": 256,
+      "height": 256,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen glow sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / Crop Extras Asset Owner",
+      "id": "crop_ready_glow_03",
+      "sourceFile": "assets-src/effects/crop_ready_glow_03.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    }
+  ],
+  "animation": {
+    "id": "crop_ready_glow",
+    "atlas": "effects",
+    "directions": [
+      "NONE"
+    ],
+    "defaultDirection": "NONE",
+    "sourceScale": 2,
+    "anchor": {
+      "x": 0.5,
+      "y": 0.86
+    },
+    "pivot": {
+      "x": 0.5,
+      "y": 0.86
+    },
+    "mirrorAllowed": false,
+    "canvasSizes": [
+      "256x256"
+    ],
+    "frameAnchors": [
+      "0.5,0.5"
+    ],
+    "state": "DEFAULT",
+    "frameCount": 4,
+    "frameIds": [
+      "crop_ready_glow_00",
+      "crop_ready_glow_01",
+      "crop_ready_glow_02",
+      "crop_ready_glow_03"
+    ],
+    "fps": 8,
+    "loop": false,
+    "holdLast": false,
+    "events": []
+  },
+  "requiredEvidence": [
+    "sourceFile",
+    "license",
+    "creator",
+    "styleReview",
+    "technicalReview",
+    "approvalRef"
+  ],
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "separationInvariant": "Glow is an overlay; never bake into crop artwork."
+}

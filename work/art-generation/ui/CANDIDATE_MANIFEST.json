@@ -1,0 +1,469 @@
+{
+  "taskId": "ART-12",
+  "contentVersion": "mvp-1",
+  "status": "REVIEW",
+  "canonicalCount": 15,
+  "assets": [
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_coin",
+      "sourceFile": "assets-src/ui/icon_coin.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_diamond",
+      "sourceFile": "assets-src/ui/icon_diamond.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_rice",
+      "sourceFile": "assets-src/ui/icon_rice.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_carrot",
+      "sourceFile": "assets-src/ui/icon_carrot.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_corn",
+      "sourceFile": "assets-src/ui/icon_corn.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_tomato",
+      "sourceFile": "assets-src/ui/icon_tomato.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_chicken_feed",
+      "sourceFile": "assets-src/ui/icon_chicken_feed.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_egg",
+      "sourceFile": "assets-src/ui/icon_egg.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "icon_order",
+      "sourceFile": "assets-src/ui/icon_order.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "ui_rotate_overlay",
+      "sourceFile": "assets-src/ui/ui_rotate_overlay.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "ui_loading",
+      "sourceFile": "assets-src/ui/ui_loading.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "ui_success_toast",
+      "sourceFile": "assets-src/ui/ui_success_toast.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "ui_error_toast",
+      "sourceFile": "assets-src/ui/ui_error_toast.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "build_ghost_valid",
+      "sourceFile": "assets-src/ui/build_ghost_valid.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    },
+    {
+      "atlas": "farm_common",
+      "width": 128,
+      "height": 128,
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "placeholder": false,
+      "production_ready": false,
+      "approved": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated; imagegen sprite-sheet cropped into canonical cells",
+      "tool": "built-in image_gen",
+      "toolVersion": "not exposed by runtime",
+      "creator": "Codex / UI Asset Owner",
+      "id": "build_ghost_invalid",
+      "sourceFile": "assets-src/ui/build_ghost_invalid.png",
+      "format": "PNG",
+      "mode": "RGBA"
+    }
+  ],
+  "requiredEvidence": [
+    "sourceFile",
+    "license",
+    "creator",
+    "styleReview",
+    "technicalReview",
+    "approvalRef"
+  ],
+  "technicalReview": "PASS",
+  "styleReview": "PENDING_OWNER_REVIEW",
+  "approvalRef": null
+}

@@ -1,0 +1,131 @@
+{
+  "taskId": "ART-08",
+  "assetType": "Warehouse",
+  "status": "PASS",
+  "canonicalCount": 1,
+  "canonicalIds": [
+    "building_warehouse_lv1"
+  ],
+  "checks": {
+    "status": "PASS",
+    "fileCount": {
+      "expected": 1,
+      "actual": 1
+    },
+    "canonicalIds": {
+      "expected": [
+        "building_warehouse_lv1"
+      ],
+      "actual": [
+        "building_warehouse_lv1"
+      ]
+    },
+    "dimensions": {
+      "expected": [
+        512,
+        384
+      ],
+      "allMatch": true
+    },
+    "rgbaAlpha": {
+      "allRGBA": true,
+      "transparentMargins": true
+    },
+    "sourceScaleAnchorOffset": {
+      "canvas": {
+        "width": 512,
+        "height": 384
+      },
+      "sourceScale": 2,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.86
+      },
+      "renderOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "atlas": "farm_common",
+      "rgbaPng": true,
+      "staticAssets": true,
+      "animationContract": null
+    },
+    "lightingPerspective": {
+      "status": "PASS",
+      "perspective": "2.5D isometric",
+      "lighting": "fixed top-left highlights with lower-right soft contact shading"
+    },
+    "continuity": {
+      "status": "PASS",
+      "animationGroups": {},
+      "frameOrder": [
+        "building_warehouse_lv1"
+      ]
+    },
+    "style": "PASS - 2.5D isometric, cozy bright illustrated cartoon, top-left light, lower-right soft shadow, mobile-readable silhouette",
+    "mobileReadability": {
+      "status": "PASS",
+      "viewports": [
+        "932x430",
+        "915x412",
+        "844x390",
+        "740x360"
+      ],
+      "zoom": [
+        "default",
+        "max"
+      ]
+    },
+    "metadata": {
+      "status": "PASS",
+      "canonicalCount": 1,
+      "canonicalIdsExact": true,
+      "provenanceComplete": true,
+      "approvalBoundaryPreserved": true
+    },
+    "productionBoundary": {
+      "status": "PASS",
+      "outsideAssetsSrc": true,
+      "manifestChanged": false,
+      "atlasChanged": false
+    }
+  },
+  "assets": [
+    {
+      "id": "building_warehouse_lv1",
+      "file": "building_warehouse_lv1.png",
+      "sha256": "dae109bc0a293028d4fb22d3c7d581e155bd6111620d398977167a38f979e0dc",
+      "canvas": [
+        512,
+        384
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBoxThreshold1": [
+        31,
+        12,
+        465,
+        353
+      ],
+      "paintedWidth": 434,
+      "paintedHeight": 341,
+      "sourceGeneratedFile": "C:\\Users\\Administrator\\.codex\\generated_images\\01a0f245-8620-7dc3-80d4-6e0c8c2d094b\\exec-dbc0a11d-5a03-4be9-b818-71e716c66cfb.png",
+      "sourceMasterFile": "D:\\Core_LVB_BIDC\\Project\\Farmer_MO\\work\\art-generation\\buildings\\warehouse\\candidate\\source-masters\\warehouse-imagegen-master.png"
+    }
+  ],
+  "evidence": {
+    "candidateRoot": "candidate/assets-src-compatible/",
+    "reviewImages": [
+      "reviews/warehouse-candidate.png"
+    ]
+  },
+  "productionBoundary": {
+    "status": "PASS",
+    "outsideAssetsSrc": true,
+    "manifestChanged": false,
+    "atlasChanged": false
+  }
+}
