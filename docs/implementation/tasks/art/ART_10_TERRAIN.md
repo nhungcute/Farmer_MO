@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-10 |
 | Owner | Terrain Asset Owner |
-| Status | REVIEW - REVISION_REQUIRED |
+| Status | PROMOTED - REV-10 revision PASS |
 | Workspace | work/art-generation/terrain/** |
 | Canonical count | 5 |
 | Production path | assets-src/** (Integration Owner only) |
@@ -24,4 +24,7 @@ Read the canonical metadata before generation. Preserve dimensions, RGBA alpha, 
 
 ## QA handoff
 
-Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 5 canonical candidates and evidence exist. production_ready and approved remain false until Integration Owner and owner release gates pass.
+Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 5 canonical candidates and evidence exist. production_ready=true and approved=false after Integration Owner promotion; owner content/release approval is still pending.
+
+
+Revision evidence: `work/art-generation/terrain/REVISION_REPORT.md`, `work/art-generation/terrain/REVISION_QA.json`, `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`. REV-10 footprint, 4x4/8x8 tiling, DPR and mobile QA PASS; all 5 frames were promoted by the Integration Owner.

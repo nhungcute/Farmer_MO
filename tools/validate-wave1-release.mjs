@@ -3,46 +3,31 @@ import crypto from 'node:crypto';
 
 const POLICY = 'MO_FARM_INTERNAL_ASSET_POLICY_V1';
 const APPROVAL_REF = 'docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md';
-const REQUIRED = {
-  placeholder: false,
-  production_ready: true,
-  approved: true,
-  technicalReview: 'PASS',
-  styleReview: 'PASS',
-  contentApproval: 'APPROVED',
-  licenseApproval: 'APPROVED',
-  license: POLICY,
-  approvalRef: APPROVAL_REF,
-  source: 'internal-generated',
+const REVIEW_EVIDENCE = 'docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md';
+const REQUIRED_WAVE1 = { placeholder: false, production_ready: true, approved: true, technicalReview: 'PASS', styleReview: 'PASS', contentApproval: 'APPROVED', licenseApproval: 'APPROVED', license: POLICY, approvalRef: APPROVAL_REF, source: 'internal-generated' };
+const REQUIRED_WAVE2 = { placeholder: false, production_ready: true, approved: false, technicalReview: 'PASS', styleReview: 'PASS', license: POLICY, source: 'internal-generated', licenseApproval: 'APPROVED', contentApproval: 'PENDING_OWNER_REVIEW', approvalRef: null };
+const FROZEN_PROMOTED_WAVE2 = {
+  building_farmhouse_lv1: '198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac',
+  building_warehouse_lv1: '6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806',
+  building_chicken_coop_lv1: 'ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55',
+  crop_ready_glow_00: 'e1a0f10dbd5ab07439ab60c1eceee8e8815ce04e8858ce74cd974c21881302b9',
+  crop_ready_glow_01: 'ffddf058c2fed1b627c704bb1108a1b647786edbaf1b099f241d446e910897f3',
+  crop_ready_glow_02: '6a35832e65ff2aa9c23178d90621a0eff1b740a6334ca2eca1637645d09d519b',
+  crop_ready_glow_03: '754383180e50a7064e9dc42c35073b51b14fbcb112c4d79d49161c462dbaa36e',
 };
-// Wave 2 selective promotion is allowed after Integration Owner review. This
-// gate protects the Wave 1 release invariant while requiring an explicit
-// allowlist for the current promoted Wave 2 checkpoint.
-const PROMOTED_WAVE2 = new Set([
-  'building_farmhouse_lv1',
-  'building_warehouse_lv1',
-  'building_chicken_coop_lv1',
-  'crop_ready_glow_00',
-  'crop_ready_glow_01',
-  'crop_ready_glow_02',
-  'crop_ready_glow_03',
-]);
-
-function read(file) {
-  return JSON.parse(fs.readFileSync(file, 'utf8'));
-}
-
-function fail(message) {
-  throw new Error(message);
-}
-
-function stableHash(value) {
-  return crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
-}
-
-function outsideAssetMetadataHash(manifest) {
-  return stableHash(Object.fromEntries(Object.entries(manifest.assets ?? {}).filter(([id]) => !wave1.has(id))));
-}
+const TARGETED_WAVE2 = [
+  'terrain_grass_tile', 'terrain_grass_variant_01', 'terrain_grass_variant_02', 'terrain_grass_variant_03', 'terrain_grass_variant_04',
+  'building_farmhouse_lv1', 'building_warehouse_lv1', 'building_chicken_coop_lv1',
+  'pond_small_lv1_base', ...Array.from({ length: 8 }, (_, i) => `pond_small_lv1_water_0${i}`), ...Array.from({ length: 6 }, (_, i) => `pond_small_lv1_ripple_0${i}`), ...Array.from({ length: 4 }, (_, i) => `pond_small_lv1_sparkle_0${i}`),
+  ...Array.from({ length: 4 }, (_, i) => `fx_plant_0${i}`), ...Array.from({ length: 6 }, (_, i) => `fx_harvest_0${i}`), ...Array.from({ length: 6 }, (_, i) => `fx_build_success_0${i}`), ...Array.from({ length: 8 }, (_, i) => `fx_coin_gain_0${i}`), ...Array.from({ length: 6 }, (_, i) => `fx_egg_collect_0${i}`),
+  'icon_coin', 'icon_diamond', 'icon_rice', 'icon_carrot', 'icon_corn', 'icon_tomato', 'icon_chicken_feed', 'icon_egg', 'icon_order', 'ui_rotate_overlay', 'ui_loading', 'ui_success_toast', 'ui_error_toast', 'build_ghost_valid', 'build_ghost_invalid',
+  'crop_ready_glow_00', 'crop_ready_glow_01', 'crop_ready_glow_02', 'crop_ready_glow_03',
+];
+const PROMOTED_WAVE2 = new Set(TARGETED_WAVE2);
+const FROZEN_WAVE2_REVIEW = 'docs/assets/review/WAVE2_INTEGRATION_REVIEW.md';
+const read = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
+const fail = (message) => { throw new Error(message); };
+const sha256 = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 
 const source = read('assets-src/manifests/animation-manifest.json');
 const runtime = read('apps/web/public/assets/manifests/animation-manifest.json');
@@ -50,83 +35,41 @@ const licenses = read('assets-src/manifests/licenses.json');
 const crops = read('assets-src/manifests/crops.json');
 const animals = read('assets-src/manifests/animals.json');
 const assets = source.assets ?? {};
-
 const chickenIds = new Set();
-for (const directions of Object.values(source.animations?.animal_chicken?.animations ?? {})) {
-  for (const clip of Object.values(directions ?? {})) {
-    for (const frame of clip.frames ?? []) chickenIds.add(typeof frame === 'string' ? frame : frame.id);
-  }
-}
+for (const directions of Object.values(source.animations?.animal_chicken?.animations ?? {})) for (const clip of Object.values(directions ?? {})) for (const frame of clip.frames ?? []) chickenIds.add(typeof frame === 'string' ? frame : frame.id);
 const cropIds = new Set(Object.keys(assets).filter((id) => /^crop_(rice|carrot|corn|tomato)_(seed|stage_[1-3]|ready)$/.test(id)));
 const wave1 = new Set([...chickenIds, ...cropIds]);
 if (chickenIds.size !== 92 || cropIds.size !== 20 || wave1.size !== 112) fail(`Wave 1 selection mismatch: chicken=${chickenIds.size}, crops=${cropIds.size}, total=${wave1.size}`);
-
-const outside = Object.keys(assets).filter((id) => !wave1.has(id));
-if (outside.length !== 76) fail(`Expected 76 non-Wave1 assets, found ${outside.length}`);
+if (PROMOTED_WAVE2.size !== 76 || TARGETED_WAVE2.length !== 76) fail('Wave 2 promotion allowlist must contain exactly 76 unique IDs');
+if (Object.keys(assets).length !== 188) fail(`Expected 188 canonical assets, found ${Object.keys(assets).length}`);
 
 for (const id of wave1) {
   const asset = assets[id];
   if (!asset) fail(`Missing canonical Wave 1 asset: ${id}`);
-  for (const [key, expected] of Object.entries(REQUIRED)) {
-    if (asset[key] !== expected) fail(`${id}: ${key} expected ${expected}, got ${asset[key]}`);
-  }
-  const runtimeAsset = runtime.assets?.[id];
-  if (JSON.stringify(runtimeAsset) !== JSON.stringify(asset)) fail(`${id}: runtime metadata differs from canonical source`);
+  for (const [key, expected] of Object.entries(REQUIRED_WAVE1)) if (asset[key] !== expected) fail(`${id}: ${key} expected ${expected}, got ${asset[key]}`);
+}
+const outside = Object.keys(assets).filter((id) => !wave1.has(id));
+if (outside.length !== 76 || outside.some((id) => !PROMOTED_WAVE2.has(id)) || [...PROMOTED_WAVE2].some((id) => !outside.includes(id))) fail('Non-Wave1 assets do not exactly match the 76 fully promoted Wave 2 IDs');
+for (const id of outside) for (const [key, expected] of Object.entries(REQUIRED_WAVE2)) if (assets[id][key] !== expected) fail(`${id}: ${key} expected ${expected}, got ${assets[id][key]}`);
+for (const id of outside) {
+  const expectedEvidence = Object.prototype.hasOwnProperty.call(FROZEN_PROMOTED_WAVE2, id) ? FROZEN_WAVE2_REVIEW : REVIEW_EVIDENCE;
+  if (assets[id].reviewEvidence !== expectedEvidence) fail(`${id}: reviewEvidence expected ${expectedEvidence}, got ${assets[id].reviewEvidence}`);
+}
+
+if (JSON.stringify(Object.keys(runtime.assets ?? {})) !== JSON.stringify(Object.keys(assets))) fail('Runtime manifest asset key order/set differs from canonical source');
+for (const [id, asset] of Object.entries(assets)) {
+  if (JSON.stringify(runtime.assets?.[id]) !== JSON.stringify(asset)) fail(`${id}: runtime metadata differs from canonical source`);
   const licenseAsset = licenses.assets?.[id];
   if (!licenseAsset) fail(`${id}: missing license sidecar`);
-  for (const key of ['license', 'source', 'tool', 'toolVersion', 'creator', 'placeholder', 'technicalReview', 'styleReview', 'contentApproval', 'licenseApproval', 'approvalRef', 'production_ready', 'approved']) {
-    if (licenseAsset[key] !== asset[key]) fail(`${id}: license sidecar ${key} differs from canonical source`);
-  }
+  for (const key of ['license', 'source', 'tool', 'toolVersion', 'creator', 'placeholder', 'technicalReview', 'styleReview', 'contentApproval', 'licenseApproval', 'approvalRef', 'production_ready', 'approved']) if (licenseAsset[key] !== asset[key]) fail(`${id}: license sidecar ${key} differs from canonical source`);
 }
-
-for (const id of outside) {
-  const asset = assets[id];
-  if (PROMOTED_WAVE2.has(id)) {
-    for (const [key, expected] of Object.entries({
-      placeholder: false,
-      production_ready: true,
-      approved: false,
-      technicalReview: 'PASS',
-      styleReview: 'PASS',
-      license: POLICY,
-      source: 'internal-generated',
-      licenseApproval: 'APPROVED',
-      contentApproval: 'PENDING_OWNER_REVIEW',
-      approvalRef: null,
-    })) {
-      if (asset[key] !== expected) fail(`${id}: promoted Wave 2 ${key} expected ${expected}, got ${asset[key]}`);
-    }
-  } else {
-    if (asset.placeholder !== true) fail(`${id}: unpromoted non-Wave1 asset is no longer a placeholder`);
-    if (asset.approved === true || asset.production_ready === true) fail(`${id}: unpromoted non-Wave1 asset was approved or promoted`);
-    if (asset.license !== 'internal-placeholder') fail(`${id}: unpromoted non-Wave1 license changed`);
-    if (asset.approvalRef !== undefined) fail(`${id}: unpromoted non-Wave1 approvalRef was added`);
-  }
+for (const [id, expected] of Object.entries(FROZEN_PROMOTED_WAVE2)) {
+  const file = assets[id]?.sourceFile;
+  if (!file || sha256(file) !== expected) fail(`${id}: frozen promoted PNG changed`);
 }
-
-if (JSON.stringify(Object.keys(runtime.assets ?? {})) !== JSON.stringify(Object.keys(source.assets ?? {}))) {
-  fail('Runtime manifest asset key order/set differs from canonical source');
-}
-for (const [id, asset] of Object.entries(source.assets ?? {})) {
-  if (JSON.stringify(runtime.assets?.[id]) !== JSON.stringify(asset)) fail(`${id}: runtime metadata differs from canonical source`);
-}
-
-// Wave 2 promotion changes are intentionally allowlisted above. Keep a stable
-// aggregate for the untouched non-Wave1 PNGs so later promotions cannot alter
-// unrelated candidate artwork without an explicit gate update.
-const untouchedOutside = outside.filter((id) => !PROMOTED_WAVE2.has(id)).sort();
-const sourceHash = crypto.createHash('sha256').update(JSON.stringify(untouchedOutside.map((id) => [
-  id,
-  crypto.createHash('sha256').update(fs.readFileSync(assets[id].sourceFile)).digest('hex'),
-]))).digest('hex');
-if (sourceHash !== '332cc3d741f4833784c477884c83e1de3e9e77261c881456389e3f99d4ef0f9a') fail('Unpromoted non-Wave1 source PNG aggregate changed');
-
-if (Object.values(assets).length !== 188) fail(`Expected 188 canonical assets, found ${Object.values(assets).length}`);
-if (Object.values(assets).filter((asset) => asset.production_ready === true).length !== 119) fail('production_ready flag count is not 119 (112 Wave 1 + 7 selected Wave 2)');
-if (Object.values(assets).filter((asset) => asset.approved === true).length !== 112) fail('approved flag count is not 112');
-if (Object.values(assets).filter((asset) => asset.placeholder === true).length !== 69) fail('placeholder count is not 69 after selective promotion');
-if (Object.values(assets).some((asset) => asset.approved === true && !wave1.has(asset.id))) fail('Asset outside Wave 1 is approved');
+const counts = { productionReady: Object.values(assets).filter((asset) => asset.production_ready === true).length, approved: Object.values(assets).filter((asset) => asset.approved === true).length, placeholders: Object.values(assets).filter((asset) => asset.placeholder === true).length };
+if (counts.productionReady !== 188 || counts.approved !== 112 || counts.placeholders !== 0) fail(`Final counts mismatch: ${JSON.stringify(counts)}`);
+if (outside.some((id) => assets[id].approved === true)) fail('Asset outside Wave 1 is approved');
 if (Object.keys(crops.assets ?? {}).filter((id) => wave1.has(id)).length !== 20) fail('Focused crops manifest does not contain all 20 Wave 1 crop assets');
 if (Object.keys(animals.assets ?? {}).filter((id) => wave1.has(id)).length !== 92) fail('Focused animals manifest does not contain all 92 Chicken assets');
-
-console.log('Wave 1 release invariant PASS: 112 policy-approved Wave 1 assets; 7 allowlisted Wave 2 assets promoted; 69 placeholders remain; runtime/sidecar parity verified.');
+console.log(`Wave 1 release invariant PASS: 112 approved Wave 1 assets; all 76 Wave 2 assets promoted; final ${counts.productionReady} production_ready, ${counts.approved} approved, ${counts.placeholders} placeholders; runtime/sidecar/frozen-asset parity verified.`);

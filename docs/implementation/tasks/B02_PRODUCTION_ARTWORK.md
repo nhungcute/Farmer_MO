@@ -3,15 +3,15 @@
 | Trường | Giá trị |
 |---|---|
 | ID | B02 |
-| Trạng thái | RUNNING - Wave 1 approved; Wave 2 selective promotion 7/76; 69 revision-required |
+| Trạng thái | RUNNING - Wave 1 approved; Wave 2 technical/style promotion 76/76; owner content approval pending |
 | Owner | Asset workstream / Integration Owner |
 | Phụ thuộc | B01 DONE; canonical manifest và style guide |
 | Owned paths | assets-src/** sau promote; docs/assets/**; work/art-generation/** theo từng owner |
 | Không sửa | Renderer, animation contract, asset IDs, FPS, anchor, backend, gameplay, economy, Tutorial |
-| Deliverables | 112/112 Wave 1 plus 7/76 selective Wave 2 candidates, owner QA, cross-asset review, atlas/runtime promotion |
+| Deliverables | 112/112 Wave 1 plus 76/76 Wave 2 candidates, owner QA, cross-asset review, atlas/runtime promotion |
 | Bắt đầu | 2026-09-30 |
 | Hoàn tất kỹ thuật | 2026-09-30 |
-| Release approval | APPROVED - MO_FARM_INTERNAL_ASSET_POLICY_V1 |
+| Release approval | Wave 1 APPROVED; Wave 2 content approval PENDING_OWNER_REVIEW |
 
 ## Subtask status
 
@@ -22,9 +22,9 @@
 | B02.2-FULL | DONE — Chicken 92/92 | docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md |
 | Wave 1 | DONE - 112/112 promoted; content/license/release APPROVED | docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md |
 
-## Wave 2 selective promotion
+## Wave 2 targeted revision promotion
 
-Farmhouse (ART-07), Warehouse (ART-08), Chicken Coop (ART-09) and Crop Extras (ART-13) passed Integration Owner review and were promoted: **7/76** PNGs. Their canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `approved=false`, and `approvalRef=null`. The remaining 69 candidates stay in their workspaces with revision-required status. Evidence: `docs/assets/review/WAVE2_SELECTIVE_PROMOTION.json`.
+The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI each passed read-only re-review and were selectively promoted: **69/69** additional PNGs. Wave 2 is now **76/76** promoted for technical/style use. Canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `approved=false`, and `approvalRef=null`. Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`.
 
 ## Wave 1 result
 
@@ -45,7 +45,7 @@ Farmhouse (ART-07), Warehouse (ART-08), Chicken Coop (ART-09) and Crop Extras (A
 
 ## Inventory và QA
 
-Inventory: 188 assets, 119 `production_ready=true` flags (112 approved Wave 1 + 7 Wave 2), 69 placeholders, 112 approved. Generated inventory reports 7 production-ready and 112 approved entries. Atlas/runtime rebuild and source hash checks passed for the seven promoted PNGs. Atlas source-to-slice byte equality 112/112.
+Inventory: 188 assets, 188 `production_ready=true` flags (112 approved Wave 1 + 76 Wave 2), 0 placeholders, 112 approved. Atlas/runtime rebuild, sidecar parity, frozen 7 hash checks and source-to-slice byte equality passed for 76/76 Wave 2 frames. Final runtime QA covers 9 animation contracts plus DPR1, DPR2, mobile and zoom 1.30 captures.
 
 Đã PASS:
 
@@ -63,4 +63,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 artwork/content/license/release is APPROVED by Project Owner. Wave 2 Integration Owner review and selective promotion are complete: Farmhouse, Warehouse, Chicken Coop and Crop Extras (7/76) are promoted for technical/style use, while Pond, Terrain, Effects and UI require revision. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 artwork/content/license/release is APPROVED by Project Owner. All Wave 2 groups passed targeted revision review and are promoted for technical/style use; owner content/release approval remains pending for the 76 Wave 2 assets. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

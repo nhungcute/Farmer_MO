@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-06 |
 | Owner | Pond Asset Owner |
-| Status | REVIEW - REVISION_REQUIRED |
+| Status | PROMOTED - REV-06 revision PASS |
 | Workspace | work/art-generation/pond/** |
 | Canonical count | 19 |
 | Production path | assets-src/** (Integration Owner only) |
@@ -38,6 +38,9 @@ Read the canonical metadata before generation. Preserve dimensions, RGBA alpha, 
 
 ## QA handoff
 
-Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 19 canonical candidates and evidence exist. production_ready and approved remain false until Integration Owner and owner release gates pass.
+Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 19 canonical candidates and evidence exist. production_ready=true and approved=false after Integration Owner promotion; owner content/release approval is still pending.
 
 Evidence: `work/art-generation/pond/reviews/QA.json`, `pond-animation-candidates.png`, and `pond-composited-frames.png`. All 19 IDs are present with 512×384 RGBA PNGs, exact manifest order, sourceScale 2, anchor (0.5, 0.86), atlas `farm_common`, and animation timing preserved.
+
+
+Revision evidence: `work/art-generation/pond/REVISION_REPORT.md`, `work/art-generation/pond/REVISION_QA.json`, `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`. REV-06 mask containment and animation contracts PASS; all 19 frames were promoted by the Integration Owner.

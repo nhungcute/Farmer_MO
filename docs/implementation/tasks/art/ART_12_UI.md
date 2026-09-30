@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-12 |
 | Owner | UI Asset Owner |
-| Status | REVIEW - REVISION_REQUIRED |
+| Status | PROMOTED - REV-12 revision PASS |
 | Workspace | work/art-generation/ui/** |
 | Canonical count | 15 |
 | Production path | assets-src/** (Integration Owner only) |
@@ -34,4 +34,7 @@ Read the canonical metadata before generation. Preserve dimensions, RGBA alpha, 
 
 ## QA handoff
 
-Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 15 canonical candidates and evidence exist. production_ready and approved remain false until Integration Owner and owner release gates pass.
+Task-local QA must cover ID count, filenames, dimensions, RGBA/alpha, scale, lighting, perspective, style, mobile readability, continuity, and metadata. Set status to REVIEW only when all 15 canonical candidates and evidence exist. production_ready=true and approved=false after Integration Owner promotion; owner content/release approval is still pending.
+
+
+Revision evidence: `work/art-generation/ui/REVISION_REPORT.md`, `work/art-generation/ui/reviews/REVISION_QA.json`, `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`. REV-12 style, alpha and 128/64/32 runtime-size QA PASS; all 15 frames were promoted by the Integration Owner.

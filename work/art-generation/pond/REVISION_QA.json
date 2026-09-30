@@ -1,6 +1,6 @@
 {
-  "task": "REV-06 POND \u2014 inner-water containment revision 2",
-  "status": "REVIEW",
+  "task": "REV-06 POND — inner-water containment revision 2",
+  "status": "PROMOTED",
   "expected": {
     "canonicalCount": 19,
     "canonicalIds": [
@@ -520,5 +520,9 @@
     "reviews/pond-mask-review-v2.png",
     "reviews/pond-inner-water-mask-v2.png"
   ],
-  "promotion": "NOT PERFORMED \u2014 Integration Owner review required"
+  "promotion": "NOT PERFORMED — Integration Owner review required",
+  "production_ready": true,
+  "approved": false,
+  "approvalRef": null,
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

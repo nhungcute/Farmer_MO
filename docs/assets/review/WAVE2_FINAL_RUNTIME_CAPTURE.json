@@ -1,0 +1,41 @@
+{
+  "result": "PASS",
+  "captures": [
+    {
+      "name": "wave2-final-runtime-dpr1.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "deviceScaleFactor": 1,
+      "zoom": 1
+    },
+    {
+      "name": "wave2-final-runtime-dpr2.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "deviceScaleFactor": 2,
+      "zoom": 1
+    },
+    {
+      "name": "wave2-final-runtime-mobile.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "deviceScaleFactor": 2,
+      "zoom": 1
+    },
+    {
+      "name": "wave2-final-runtime-zoom130.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "deviceScaleFactor": 1,
+      "zoom": 1.3
+    }
+  ]
+}

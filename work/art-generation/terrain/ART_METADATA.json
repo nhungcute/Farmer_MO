@@ -1,6 +1,6 @@
 {
   "taskId": "ART-10",
-  "status": "REVIEW",
+  "status": "PROMOTED",
   "owner": "Terrain Asset Owner",
   "assetType": "Terrain",
   "workspace": "work/art-generation/terrain",
@@ -18,13 +18,13 @@
   "toolVersion": "not exposed by runtime",
   "contentVersion": "mvp-1",
   "styleGuideVersion": "docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md",
-  "license": "PENDING_OWNER_REVIEW",
-  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
   "placeholder": false,
-  "production_ready": false,
+  "production_ready": true,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "PENDING",
+  "styleReview": "PASS",
   "approvalRef": null,
   "generated": 5,
   "notes": "Revision 2: re-rendered wide source footprint; candidate remains isolated pending Integration Owner review.",
@@ -247,5 +247,7 @@
       ]
     }
   },
-  "revision": 2
+  "revision": 2,
+  "contentApproval": "PENDING_OWNER_REVIEW",
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

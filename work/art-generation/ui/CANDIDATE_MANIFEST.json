@@ -1,7 +1,7 @@
 {
   "taskId": "ART-12",
   "contentVersion": "mvp-1",
-  "status": "REVIEW",
+  "status": "PROMOTED",
   "canonicalCount": 15,
   "assets": [
     {
@@ -464,6 +464,12 @@
     "approvalRef"
   ],
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
-  "approvalRef": null
+  "styleReview": "PASS",
+  "approvalRef": null,
+  "production_ready": true,
+  "approved": false,
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
+  "contentApproval": "PENDING_OWNER_REVIEW",
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

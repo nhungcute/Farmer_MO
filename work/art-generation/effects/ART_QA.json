@@ -1,16 +1,16 @@
 {
   "taskId": "ART-11",
-  "status": "REVIEW",
+  "status": "PASS",
   "canonicalCount": 30,
   "generatedCount": 30,
   "missingIds": [],
   "extraIds": [],
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
-  "licenseApproval": "PENDING_OWNER_REVIEW",
+  "styleReview": "PASS",
+  "licenseApproval": "APPROVED",
   "releaseApproval": "PENDING_OWNER_REVIEW",
   "placeholder": false,
-  "production_ready": false,
+  "production_ready": true,
   "approved": false,
   "checks": {
     "canonicalIds": true,
@@ -26,5 +26,9 @@
     "crop_ready_glow remains outside this task and is owned by ART-13."
   ],
   "overallTechnicalPass": true,
-  "creator": "Codex / Effects Asset Owner"
+  "creator": "Codex / Effects Asset Owner",
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "contentApproval": "PENDING_OWNER_REVIEW",
+  "approvalRef": null,
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

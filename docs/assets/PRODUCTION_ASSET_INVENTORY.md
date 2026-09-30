@@ -1,15 +1,15 @@
 # B01 Production Asset Inventory
 
-Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `02bf9884ef5943c7743fc7d511d4c2ac6e7ec1ee1d86130e1964ba97240a4abb`).
+Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `d49e232a486b2c48c3b6ff834059a538b2a26d6a4584608341b147b43442795e`).
 
-This inventory is generated from the current canonical manifest. It contains 119 production_ready assets, 112 approved assets, and 69 placeholders.
+This inventory is generated from the current canonical manifest. It contains 188 production_ready assets, 112 approved assets, and 0 placeholders.
 
 ## Status
 
 | Status | Current count | Meaning |
 | --- | --- | --- |
-| `placeholder` | 69 | Generated/internal art. Not eligible for production release. |
-| `production_ready` | 119 | Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval. |
+| `placeholder` | 0 | Generated/internal art. Not eligible for production release. |
+| `production_ready` | 188 | Technical/provenance eligibility flag for replacement art; it can coexist with approved=true after release approval. |
 | `approved` | 112 | Production-ready replacement explicitly approved for the target release. |
 
 `production_ready` is a technical/provenance flag; `approved` records release approval, so an approved asset is counted in both columns.
@@ -20,14 +20,14 @@ Current totals: **188 source assets**, **10 animation contracts**, **8 categorie
 
 | Category | Status | Assets | Animations | Scope |
 | --- | --- | --- | --- | --- |
-| `terrain` | `placeholder` | 5 | 0 | Isometric ground tile and variants. |
+| `terrain` | `production_ready` | 5 | 0 | Isometric ground tile and variants. |
 | `buildings` | `production_ready` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
 | `crops` | `approved` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
 | `animals` | `approved` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
 | `chicken` | `approved` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
-| `pond` | `placeholder` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
-| `effects` | `placeholder` | 30 | 5 | Plant, harvest, build, coin, and egg one-shot effects. |
-| `ui` | `placeholder` | 15 | 0 | HUD icons, loading/toast graphics, and build ghost states. |
+| `pond` | `production_ready` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
+| `effects` | `production_ready` | 30 | 5 | Plant, harvest, build, coin, and egg one-shot effects. |
+| `ui` | `production_ready` | 15 | 0 | HUD icons, loading/toast graphics, and build ghost states. |
 
 The `animals` row records the runtime contract (`animal_chicken`); the `chicken` row records its concrete frame sources. This separation leaves room for future animal species without changing the current chicken IDs.
 
@@ -35,48 +35,48 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 
 | ID | Category | Status | Canvas | Anchor/Pivot | Source |
 | --- | --- | --- | --- | --- | --- |
-| `terrain_grass_tile` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_tile.png` |
-| `terrain_grass_variant_01` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_01.png` |
-| `terrain_grass_variant_02` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_02.png` |
-| `terrain_grass_variant_03` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_03.png` |
-| `terrain_grass_variant_04` | terrain | `placeholder` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_04.png` |
+| `terrain_grass_tile` | terrain | `production_ready` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_tile.png` |
+| `terrain_grass_variant_01` | terrain | `production_ready` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_01.png` |
+| `terrain_grass_variant_02` | terrain | `production_ready` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_02.png` |
+| `terrain_grass_variant_03` | terrain | `production_ready` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_03.png` |
+| `terrain_grass_variant_04` | terrain | `production_ready` | 256×128 | 0.5,0.5 | `assets-src/terrain/terrain_grass_variant_04.png` |
 | `building_farmhouse_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_farmhouse_lv1.png` |
 | `building_warehouse_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_warehouse_lv1.png` |
 | `building_chicken_coop_lv1` | buildings | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/buildings/building_chicken_coop_lv1.png` |
-| `pond_small_lv1_base` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_base.png` |
-| `icon_coin` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_coin.png` |
-| `icon_diamond` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_diamond.png` |
-| `icon_rice` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_rice.png` |
-| `icon_carrot` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_carrot.png` |
-| `icon_corn` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_corn.png` |
-| `icon_tomato` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_tomato.png` |
-| `icon_chicken_feed` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_chicken_feed.png` |
-| `icon_egg` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_egg.png` |
-| `icon_order` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_order.png` |
-| `ui_rotate_overlay` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_rotate_overlay.png` |
-| `ui_loading` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_loading.png` |
-| `ui_success_toast` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_success_toast.png` |
-| `ui_error_toast` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_error_toast.png` |
-| `build_ghost_valid` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/build_ghost_valid.png` |
-| `build_ghost_invalid` | ui | `placeholder` | 128×128 | 0.5,0.5 | `assets-src/ui/build_ghost_invalid.png` |
-| `pond_small_lv1_water_00` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_00.png` |
-| `pond_small_lv1_water_01` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_01.png` |
-| `pond_small_lv1_water_02` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_02.png` |
-| `pond_small_lv1_water_03` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_03.png` |
-| `pond_small_lv1_water_04` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_04.png` |
-| `pond_small_lv1_water_05` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_05.png` |
-| `pond_small_lv1_water_06` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_06.png` |
-| `pond_small_lv1_water_07` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_07.png` |
-| `pond_small_lv1_ripple_00` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_00.png` |
-| `pond_small_lv1_ripple_01` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_01.png` |
-| `pond_small_lv1_ripple_02` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_02.png` |
-| `pond_small_lv1_ripple_03` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_03.png` |
-| `pond_small_lv1_ripple_04` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_04.png` |
-| `pond_small_lv1_ripple_05` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_05.png` |
-| `pond_small_lv1_sparkle_00` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_00.png` |
-| `pond_small_lv1_sparkle_01` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_01.png` |
-| `pond_small_lv1_sparkle_02` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_02.png` |
-| `pond_small_lv1_sparkle_03` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_03.png` |
+| `pond_small_lv1_base` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_base.png` |
+| `icon_coin` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_coin.png` |
+| `icon_diamond` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_diamond.png` |
+| `icon_rice` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_rice.png` |
+| `icon_carrot` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_carrot.png` |
+| `icon_corn` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_corn.png` |
+| `icon_tomato` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_tomato.png` |
+| `icon_chicken_feed` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_chicken_feed.png` |
+| `icon_egg` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_egg.png` |
+| `icon_order` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/icon_order.png` |
+| `ui_rotate_overlay` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_rotate_overlay.png` |
+| `ui_loading` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_loading.png` |
+| `ui_success_toast` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_success_toast.png` |
+| `ui_error_toast` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/ui_error_toast.png` |
+| `build_ghost_valid` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/build_ghost_valid.png` |
+| `build_ghost_invalid` | ui | `production_ready` | 128×128 | 0.5,0.5 | `assets-src/ui/build_ghost_invalid.png` |
+| `pond_small_lv1_water_00` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_00.png` |
+| `pond_small_lv1_water_01` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_01.png` |
+| `pond_small_lv1_water_02` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_02.png` |
+| `pond_small_lv1_water_03` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_03.png` |
+| `pond_small_lv1_water_04` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_04.png` |
+| `pond_small_lv1_water_05` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_05.png` |
+| `pond_small_lv1_water_06` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_06.png` |
+| `pond_small_lv1_water_07` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_water_07.png` |
+| `pond_small_lv1_ripple_00` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_00.png` |
+| `pond_small_lv1_ripple_01` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_01.png` |
+| `pond_small_lv1_ripple_02` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_02.png` |
+| `pond_small_lv1_ripple_03` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_03.png` |
+| `pond_small_lv1_ripple_04` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_04.png` |
+| `pond_small_lv1_ripple_05` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_ripple_05.png` |
+| `pond_small_lv1_sparkle_00` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_00.png` |
+| `pond_small_lv1_sparkle_01` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_01.png` |
+| `pond_small_lv1_sparkle_02` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_02.png` |
+| `pond_small_lv1_sparkle_03` | pond | `production_ready` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_03.png` |
 | `crop_rice_seed` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_seed.png` |
 | `crop_rice_stage_1` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_1.png` |
 | `crop_rice_stage_2` | crops | `approved` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_2.png` |
@@ -101,36 +101,36 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `crop_ready_glow_01` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_01.png` |
 | `crop_ready_glow_02` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_02.png` |
 | `crop_ready_glow_03` | crops | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/crop_ready_glow_03.png` |
-| `fx_plant_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_00.png` |
-| `fx_plant_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_01.png` |
-| `fx_plant_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_02.png` |
-| `fx_plant_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_03.png` |
-| `fx_harvest_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_00.png` |
-| `fx_harvest_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_01.png` |
-| `fx_harvest_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_02.png` |
-| `fx_harvest_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_03.png` |
-| `fx_harvest_04` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_04.png` |
-| `fx_harvest_05` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_05.png` |
-| `fx_build_success_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_00.png` |
-| `fx_build_success_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_01.png` |
-| `fx_build_success_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_02.png` |
-| `fx_build_success_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_03.png` |
-| `fx_build_success_04` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_04.png` |
-| `fx_build_success_05` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_05.png` |
-| `fx_coin_gain_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_00.png` |
-| `fx_coin_gain_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_01.png` |
-| `fx_coin_gain_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_02.png` |
-| `fx_coin_gain_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_03.png` |
-| `fx_coin_gain_04` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_04.png` |
-| `fx_coin_gain_05` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_05.png` |
-| `fx_coin_gain_06` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_06.png` |
-| `fx_coin_gain_07` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_07.png` |
-| `fx_egg_collect_00` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_00.png` |
-| `fx_egg_collect_01` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_01.png` |
-| `fx_egg_collect_02` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_02.png` |
-| `fx_egg_collect_03` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_03.png` |
-| `fx_egg_collect_04` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_04.png` |
-| `fx_egg_collect_05` | effects | `placeholder` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_05.png` |
+| `fx_plant_00` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_00.png` |
+| `fx_plant_01` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_01.png` |
+| `fx_plant_02` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_02.png` |
+| `fx_plant_03` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_plant_03.png` |
+| `fx_harvest_00` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_00.png` |
+| `fx_harvest_01` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_01.png` |
+| `fx_harvest_02` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_02.png` |
+| `fx_harvest_03` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_03.png` |
+| `fx_harvest_04` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_04.png` |
+| `fx_harvest_05` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_harvest_05.png` |
+| `fx_build_success_00` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_00.png` |
+| `fx_build_success_01` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_01.png` |
+| `fx_build_success_02` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_02.png` |
+| `fx_build_success_03` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_03.png` |
+| `fx_build_success_04` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_04.png` |
+| `fx_build_success_05` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_build_success_05.png` |
+| `fx_coin_gain_00` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_00.png` |
+| `fx_coin_gain_01` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_01.png` |
+| `fx_coin_gain_02` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_02.png` |
+| `fx_coin_gain_03` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_03.png` |
+| `fx_coin_gain_04` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_04.png` |
+| `fx_coin_gain_05` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_05.png` |
+| `fx_coin_gain_06` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_06.png` |
+| `fx_coin_gain_07` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_coin_gain_07.png` |
+| `fx_egg_collect_00` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_00.png` |
+| `fx_egg_collect_01` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_01.png` |
+| `fx_egg_collect_02` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_02.png` |
+| `fx_egg_collect_03` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_03.png` |
+| `fx_egg_collect_04` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_04.png` |
+| `fx_egg_collect_05` | effects | `production_ready` | 256×256 | 0.5,0.5 | `assets-src/effects/fx_egg_collect_05.png` |
 | `animal_chicken_idle_ne_00` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_00.png` |
 | `animal_chicken_idle_ne_01` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_01.png` |
 | `animal_chicken_idle_ne_02` | chicken | `approved` | 256×256 | 0.5,0.9 | `assets-src/animals/chicken/animal_chicken_idle_ne_02.png` |
@@ -228,15 +228,15 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 
 | Animation | Category | Status | Atlas | Directions | Canvas sizes | Anchor/Pivot |
 | --- | --- | --- | --- | --- | --- | --- |
-| `pond_water` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
-| `pond_ripple` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
-| `pond_sparkle` | pond | `placeholder` | farm_common | NONE | 512x384 | 0.5,0.86 |
+| `pond_water` | pond | `production_ready` | farm_common | NONE | 512x384 | 0.5,0.86 |
+| `pond_ripple` | pond | `production_ready` | farm_common | NONE | 512x384 | 0.5,0.86 |
+| `pond_sparkle` | pond | `production_ready` | farm_common | NONE | 512x384 | 0.5,0.86 |
 | `crop_ready_glow` | crops | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
-| `fx_plant` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
-| `fx_harvest` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
-| `fx_build_success` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
-| `fx_coin_gain` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
-| `fx_egg_collect` | effects | `placeholder` | effects | NONE | 256x256 | 0.5,0.86 |
+| `fx_plant` | effects | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
+| `fx_harvest` | effects | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
+| `fx_build_success` | effects | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
+| `fx_coin_gain` | effects | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
+| `fx_egg_collect` | effects | `production_ready` | effects | NONE | 256x256 | 0.5,0.86 |
 | `animal_chicken` | animals | `approved` | chicken | NE, SE, SW, NW | 256x256 | 0.5,0.9 |
 
 ### `pond_water`

@@ -64,8 +64,10 @@ Evidence: `work/art-generation/ui/reviews/REVISION_QA.json`,
 
 ## Promotion boundary
 
-The 69 revision candidates remain outside `assets-src/**` at this checkpoint.
-Their candidate metadata remains `production_ready=false`, `approved=false`
-and `approvalRef=null`. Promotion, atlas rebuild and production runtime QA are
-the next Integration Owner operation. Wave 1 and the existing seven promoted
-Wave 2 assets must remain byte-stable.
+The 69 revision candidates passed the read-only review and were promoted into `assets-src/**` by the Integration Owner.
+Their candidate workspaces remain auditable; canonical production metadata is `production_ready=true`, `approved=false` and `approvalRef=null`. Promotion, atlas rebuild and production runtime QA have completed. Wave 1 and the existing seven promoted Wave 2 assets remain byte-stable.
+
+
+## Final promotion result
+
+All 69 targeted revision candidates were promoted. Together with the frozen initial seven, Wave 2 is 76/76 technical/style promoted; no Wave 2 asset is content-approved.

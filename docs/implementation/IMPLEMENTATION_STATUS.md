@@ -26,7 +26,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | A02 | PostgreSQL API runtime wiring | DONE |
 | A03 | Transaction/concurrency integration gate | DONE |
 | B01 | Production asset inventory/replacement contract | DONE |
-| B02 | Production artwork replacement | **RUNNING - Wave 2 selective promotion complete for 7/76; 69 remain revision-required** |
+| B02 | Production artwork replacement | **RUNNING - Wave 2 technical/style promotion complete 76/76; owner content approval pending** |
 | C01 | Playwright setup và E2E foundation | DONE |
 | C02 | Functional Playwright E2E trên PostgreSQL | DONE |
 | C03 | Mobile/PWA/accessibility QA | DONE |
@@ -47,14 +47,14 @@ Năm owner đã hoàn tất generation và Revision 2:
 
 Wave 1 đã promote **112/112 canonical candidates** vào assets-src/**, pack atlas và runtime manifest. Source-to-atlas byte equality đạt 112/112. Chicken production stress đã chạy trên atlas thật với 1/25/50/100 bản sao ở bốn viewport, không lỗi.
 
-Inventory after Wave 2 selective promotion:
+Inventory after Wave 2 targeted revision promotion:
 
 - 188 canonical source assets
-- 119 `production_ready=true` flags (112 approved Wave 1 + 7 Wave 2 technical/style pass)
-- 7 `production_ready` status entries plus 112 approved entries in the generated inventory
-- 69 placeholder
+- 188 `production_ready=true` flags (112 approved Wave 1 + 76 Wave 2 technical/style pass)
+- 188 technical production-ready entries plus 112 approved entries in the generated inventory
+- 0 placeholder
 - 112 approved
-- license của 112 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1
+- license metadata của 188 asset là MO_FARM_INTERNAL_ASSET_POLICY_V1; content approval của Wave 2 vẫn PENDING_OWNER_REVIEW
 
 Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.json, docs/assets/review/FINAL_OWNER_REVIEW_V2.md, docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
 
@@ -62,19 +62,19 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 - npm run assets:build: PASS.
 - npm run assets:validate: PASS — 188 assets, 10 animations.
-- npm run assets:validate:strict: PASS — 112 Wave 1 entries đã được policy/license approval.
-- npm run assets:validate:wave1: PASS — 112/112 policy-approved, runtime/sidecar parity, 76 placeholder bất biến.
+- npm run assets:validate:strict: PASS — 188 assets, canonical atlas output and metadata contracts.
+- npm run assets:validate:wave1: PASS — 112/112 policy-approved, all 76 Wave 2 entries promoted, runtime/sidecar/frozen-asset parity.
 - npm run renderer:test: PASS — 16/16.
 - npm run check: PASS.
 - docker compose config --quiet: PASS.
-- DPR 1/2, mobile, Chicken EAT proof và production-atlas stress: PASS.
+- Wave 2 final source-to-atlas 76/76, 9 animation contracts, DPR1/DPR2/mobile/zoom 1.30 runtime captures: PASS.
 - git diff --check: PASS.
 
 ## Giới hạn và bước kế tiếp
 
-B02 remains RUNNING because four Wave 2 groups (69 assets) are still revision-required. Wave 1 content, license, and release approval are APPROVED by Project Owner; do not approve assets outside Wave 1, regenerate Rice/Carrot, or change renderer, animation, or asset contracts.
+B02 remains RUNNING for Project Owner content/release approval. All 76 Wave 2 assets passed targeted revision review and are technically/style promoted; `approved=true` remains limited to the 112 Wave 1 assets. Do not change renderer, animation, or asset contracts.
 
-Wave 2 generation, review, selective promotion and atlas rebuild are complete. Farmhouse, Warehouse, Chicken Coop and Crop Extras (7/76) are promoted for technical/style use; Pond, Terrain, Effects and UI require revision. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
+Wave 2 generation, targeted revision review, promotion and atlas rebuild are complete for 76/76 assets. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED; do not open them from technical artwork progress alone. No Wave 2 asset may become `approved=true` without Project Owner content/release approval.
 
 ## Quy tắc cập nhật
 

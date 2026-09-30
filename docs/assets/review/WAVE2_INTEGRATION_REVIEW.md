@@ -6,7 +6,7 @@ The first review promoted 7 assets; the targeted revision checkpoint then
 re-reviewed the remaining 69 candidates. No Wave 2 candidate is auto-approved
 for release.
 
-## Review results
+## Initial review results (before targeted revision)
 
 | Review | Scope | Technical | Style | Content | Mobile | Animation | Recommendation |
 |---|---:|---|---|---|---|---|---|
@@ -58,11 +58,7 @@ Wave 2 asset and no `approvalRef` is invented.
 
 ## Targeted revision decision
 
-The four read-only revision reviews all return `PROMOTE` for the remaining 69
-candidates. Pond (19), Terrain (5), Effects (30) and UI (15) are eligible for
-the next Integration Owner mutation, subject to the production build and
-runtime gates in the owner guide. The final 188/188 inventory is recorded only
-after that mutation.
+The four read-only revision reviews all returned `PROMOTE` for the remaining 69 candidates. Pond (19), Terrain (5), Effects (30) and UI (15) were promoted by the Integration Owner after the production build and runtime gates. The final 188/188 inventory is recorded below.
 
 ## Evidence
 
@@ -72,27 +68,24 @@ after that mutation.
 - Crop overlay review: `work/art-generation/crops/extras/reviews/crop-glow-overlay-review.png`
 - Per-task review JSON/MD files are inside each task's `reviews/` directory.
 
-## Gate state before targeted-revision promotion
+## Gate state after targeted-revision promotion
 
 ```text
 production inventory: 188
-production_ready flag: 119 (112 approved Wave 1 + 7 Wave 2 technical/style pass)
-status inventory: 7 production_ready, 112 approved, 69 placeholders
+production_ready flag: 188 (112 approved Wave 1 + 76 Wave 2 technical/style pass)
+status inventory: 188 production_ready, 112 approved, 0 placeholders
 approved: 112
-placeholders: 69
-Wave 2 candidates promoted: 7 (Farmhouse, Warehouse, Chicken Coop, Crop Extras)
+placeholders: 0
+Wave 2 candidates promoted: 76 (7 initial + 69 targeted revision)
 Wave 2 candidates reviewed after revision: 69 (Pond, Terrain, Effects, UI)
-Wave 2 candidates awaiting selective promotion: 69
+Wave 2 candidates awaiting selective promotion: 0
 assets:build / strict validation: PASS
 assets:validate:wave1: PASS
 E01: CLOSED
 RC01: CLOSED
 ```
 
-Promotion evidence: `WAVE2_SELECTIVE_PROMOTION.json`. The seven source PNGs
-were copied byte-for-byte from their reviewed workspaces, manifests/licenses
-were rebuilt, and runtime atlas entries were regenerated. `approved` remains
-112; no Wave 2 content/release approval was invented.
+Promotion evidence: `WAVE2_REVISED_PROMOTION.json`. All 69 targeted source PNGs were copied byte-for-byte from their reviewed workspaces, manifests/licenses were rebuilt, and runtime atlas entries were regenerated. `approved` remains 112; no Wave 2 content/release approval was invented.
 
 Targeted revision evidence: `WAVE2_TARGETED_REVISION_REVIEW.md` and the four
 workspace `REVIEW_RESULT_V2.json` files record PASS for all 69 candidates.
@@ -103,3 +96,9 @@ Production runtime evidence from the previous selective promotion:
 license parity, and the unchanged `crop_ready_glow` contract (4 frames, 8 FPS,
 non-looping, no hold). Full asset validation, strict validation, renderer/API
 check, Docker config/build, and Playwright desktop/mobile/PWA smoke gates pass.
+
+## Final targeted-revision integration result
+
+REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI all passed their read-only re-review and were promoted by the Integration Owner. The final canonical inventory is 188 assets with 188 `production_ready=true`, 112 `approved=true`, and 0 placeholders. `approved=true` remains limited to Wave 1; Wave 2 content approval is still pending.
+
+Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`, `docs/assets/review/WAVE2_FINAL_PRODUCTION_RUNTIME_QA.json`, and `docs/assets/review/WAVE2_FINAL_RUNTIME_CAPTURE.json`.

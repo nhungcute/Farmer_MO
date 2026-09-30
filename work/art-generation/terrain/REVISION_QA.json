@@ -2,7 +2,7 @@
   "taskId": "ART-10",
   "review": "REV-10",
   "revision": 2,
-  "status": "REVIEW",
+  "status": "PROMOTED",
   "decision": "REVIEW",
   "canonicalIds": [
     "terrain_grass_tile",
@@ -86,8 +86,8 @@
           256,
           128
         ],
-        "paintedWidthPercent": 100.0,
-        "paintedHeightPercent": 100.0
+        "paintedWidthPercent": 100,
+        "paintedHeightPercent": 100
       },
       "terrain_grass_variant_01": {
         "sha256": "ebe2cc94f403326613da92c3837aa37b48994e96b472254b6e5c10a867a4e600",
@@ -115,8 +115,8 @@
           256,
           128
         ],
-        "paintedWidthPercent": 100.0,
-        "paintedHeightPercent": 100.0
+        "paintedWidthPercent": 100,
+        "paintedHeightPercent": 100
       },
       "terrain_grass_variant_02": {
         "sha256": "e31a4bfd71877a51f776c40d3d8db5fc081cd5818cd6418435242a00437612d6",
@@ -144,8 +144,8 @@
           256,
           128
         ],
-        "paintedWidthPercent": 100.0,
-        "paintedHeightPercent": 100.0
+        "paintedWidthPercent": 100,
+        "paintedHeightPercent": 100
       },
       "terrain_grass_variant_03": {
         "sha256": "89235cf474c8c842304a6f4bcc14633e7b628ce2c0a5d5698c595a04a555aa16",
@@ -173,8 +173,8 @@
           256,
           128
         ],
-        "paintedWidthPercent": 100.0,
-        "paintedHeightPercent": 100.0
+        "paintedWidthPercent": 100,
+        "paintedHeightPercent": 100
       },
       "terrain_grass_variant_04": {
         "sha256": "84ce24683e62bb951b3660c56090ae9a6eee38ddf153965a7f0ed59419e73f82",
@@ -202,8 +202,8 @@
           256,
           128
         ],
-        "paintedWidthPercent": 100.0,
-        "paintedHeightPercent": 100.0
+        "paintedWidthPercent": 100,
+        "paintedHeightPercent": 100
       }
     }
   },
@@ -270,5 +270,9 @@
     "status": "NOT_PROMOTED",
     "assetsSrcModified": false,
     "productionManifestModified": false
-  }
+  },
+  "production_ready": true,
+  "approved": false,
+  "approvalRef": null,
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

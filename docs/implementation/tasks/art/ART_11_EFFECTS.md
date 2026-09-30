@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | ART-11 |
 | Owner | Effects Asset Owner |
-| Status | REVIEW - REVISION_REQUIRED |
+| Status | PROMOTED - REV-11 revision PASS |
 | Workspace | work/art-generation/effects/** |
 | Canonical count | 30 |
 | Production path | assets-src/** (Integration Owner only) |
@@ -48,4 +48,7 @@ Preserve canonical dimensions, RGBA alpha, anchor, source scale, atlas, FPS/fram
 
 ## QA handoff
 
-Set status to REVIEW only when all 30 candidates and evidence exist. production_ready and approved remain false until Integration Owner and owner release gates pass.
+Set status to REVIEW only when all 30 candidates and evidence exist. production_ready=true and approved=false after Integration Owner promotion; owner content/release approval is still pending.
+
+
+Revision evidence: `work/art-generation/effects/REVISION_REPORT.md`, `work/art-generation/effects/reviews/REVISION_QA.json`, `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`. REV-11 bloom/specular/halo reduction, family contracts and mobile readability PASS; all 30 frames were promoted by the Integration Owner.

@@ -420,12 +420,18 @@
       "detail": "imagegen source sheet present"
     }
   ],
-  "technicalReview": "PASS (task-local QA)",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "technicalReview": "PASS",
+  "styleReview": "PASS",
   "approvalRef": null,
   "releaseFlags": {
     "placeholder": false,
     "production_ready": false,
     "approved": false
-  }
+  },
+  "production_ready": true,
+  "approved": false,
+  "license": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "licenseApproval": "APPROVED",
+  "contentApproval": "PENDING_OWNER_REVIEW",
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
 }

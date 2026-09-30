@@ -1,0 +1,721 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30T16:04:49.187Z",
+  "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+  "policy": "MO_FARM_INTERNAL_ASSET_POLICY_V1",
+  "promotionType": "selective-revision-promotion",
+  "promotedCount": 69,
+  "promoted": [
+    {
+      "id": "pond_small_lv1_base",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_base.png",
+      "destination": "assets-src/ponds/pond_small_lv1_base.png",
+      "sha256": "8fceace8d4c72ba89505c7945dd8ad3830d4949c89953f5a6cb22d5e14f042af",
+      "bytes": 234251
+    },
+    {
+      "id": "pond_small_lv1_water_00",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_00.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_00.png",
+      "sha256": "8c990ab23c4af16ce698da0036e1c0f9bad4b775f2305ae267ead87069163028",
+      "bytes": 11443
+    },
+    {
+      "id": "pond_small_lv1_water_01",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_01.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_01.png",
+      "sha256": "5f5e8873f33925d553a607986a006f1f12a7d1cffb0dbd40a17e4268327461ef",
+      "bytes": 11822
+    },
+    {
+      "id": "pond_small_lv1_water_02",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_02.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_02.png",
+      "sha256": "462121d8ee6bf4e7854c55921ba91d61f44fd524401a50d8e8097bab0aaaba08",
+      "bytes": 11227
+    },
+    {
+      "id": "pond_small_lv1_water_03",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_03.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_03.png",
+      "sha256": "adf0403498dd798424cb87a975b0089411cec479fa0faa038cc1b612e7b13d19",
+      "bytes": 10860
+    },
+    {
+      "id": "pond_small_lv1_water_04",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_04.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_04.png",
+      "sha256": "e2de49cdd45c741e746de9239d7ab562a0bc1beb8739d882b31d9542892767c1",
+      "bytes": 10671
+    },
+    {
+      "id": "pond_small_lv1_water_05",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_05.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_05.png",
+      "sha256": "74356b6eea95eff946b5ad18282f57292546777f46a3cff5793166a0bea0f04d",
+      "bytes": 10718
+    },
+    {
+      "id": "pond_small_lv1_water_06",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_06.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_06.png",
+      "sha256": "a0424632d27e639eae5e9d57a1a63cc332c99a7a35b601c20741a78b2cf4cc9d",
+      "bytes": 10385
+    },
+    {
+      "id": "pond_small_lv1_water_07",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_water_07.png",
+      "destination": "assets-src/ponds/pond_small_lv1_water_07.png",
+      "sha256": "e8a641a36a80eb59a68179c4cc917553ab508fd55e492ab0992fa15579ba22d8",
+      "bytes": 10413
+    },
+    {
+      "id": "pond_small_lv1_ripple_00",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_00.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_00.png",
+      "sha256": "949154a416a62e4e43a4cae99dbbff5d5cb80fcf50ec8e9cf4817f387331bd0b",
+      "bytes": 1342
+    },
+    {
+      "id": "pond_small_lv1_ripple_01",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_01.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_01.png",
+      "sha256": "1bae5810f0d3e58782d2beff0ebdb64aa9cd23215ac790d0510348d9d0257ed1",
+      "bytes": 1437
+    },
+    {
+      "id": "pond_small_lv1_ripple_02",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_02.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_02.png",
+      "sha256": "134c45359d02c53b2c9d20867d23d8c0e4fc31606f6c030a4129d35c0bab56c4",
+      "bytes": 1554
+    },
+    {
+      "id": "pond_small_lv1_ripple_03",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_03.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_03.png",
+      "sha256": "a2e850df28fbea99ae29c5194b19ff069501132fc6b6727de62b789f505bcba0",
+      "bytes": 1421
+    },
+    {
+      "id": "pond_small_lv1_ripple_04",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_04.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_04.png",
+      "sha256": "8982d69c11960970626cda6e2286654c51edee82d9e04460f4abd280cd71a1bc",
+      "bytes": 1571
+    },
+    {
+      "id": "pond_small_lv1_ripple_05",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_ripple_05.png",
+      "destination": "assets-src/ponds/pond_small_lv1_ripple_05.png",
+      "sha256": "9847738cd36320264273633ad25804c497e6ea326d6988540ede9e6ebcff5a30",
+      "bytes": 1541
+    },
+    {
+      "id": "pond_small_lv1_sparkle_00",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_00.png",
+      "destination": "assets-src/ponds/pond_small_lv1_sparkle_00.png",
+      "sha256": "5d9043280967018e0dac72b91677ba6fe3f63fd7d5cdf1663e627271d3b16ccc",
+      "bytes": 1059
+    },
+    {
+      "id": "pond_small_lv1_sparkle_01",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_01.png",
+      "destination": "assets-src/ponds/pond_small_lv1_sparkle_01.png",
+      "sha256": "964f19bb81e5e5465b218b305e40997350f1e907fa9e016621bece66fa45725b",
+      "bytes": 1082
+    },
+    {
+      "id": "pond_small_lv1_sparkle_02",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_02.png",
+      "destination": "assets-src/ponds/pond_small_lv1_sparkle_02.png",
+      "sha256": "ad069db2de81123aebcb5813b9184d10c94c3d93fb25d6edd3912b3498a3e85d",
+      "bytes": 1037
+    },
+    {
+      "id": "pond_small_lv1_sparkle_03",
+      "review": "REVIEW-06",
+      "taskId": "ART-06",
+      "creator": "Codex / Pond Asset Owner",
+      "source": "work/art-generation/pond/candidate/assets-src-compatible/ponds/pond_small_lv1_sparkle_03.png",
+      "destination": "assets-src/ponds/pond_small_lv1_sparkle_03.png",
+      "sha256": "7056f8b5c30b1121117473cd7c39d68e5fc9b7916088fe5f7866e38b0fa2cb1c",
+      "bytes": 1044
+    },
+    {
+      "id": "terrain_grass_tile",
+      "review": "REVIEW-10",
+      "taskId": "ART-10",
+      "creator": "Codex / Terrain Asset Owner",
+      "source": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_tile.png",
+      "destination": "assets-src/terrain/terrain_grass_tile.png",
+      "sha256": "f661340f262ab107f9d2a75a86b36508ca1ce620a95380fbbd7d94110a5ef68c",
+      "bytes": 47047
+    },
+    {
+      "id": "terrain_grass_variant_01",
+      "review": "REVIEW-10",
+      "taskId": "ART-10",
+      "creator": "Codex / Terrain Asset Owner",
+      "source": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_01.png",
+      "destination": "assets-src/terrain/terrain_grass_variant_01.png",
+      "sha256": "ebe2cc94f403326613da92c3837aa37b48994e96b472254b6e5c10a867a4e600",
+      "bytes": 47437
+    },
+    {
+      "id": "terrain_grass_variant_02",
+      "review": "REVIEW-10",
+      "taskId": "ART-10",
+      "creator": "Codex / Terrain Asset Owner",
+      "source": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_02.png",
+      "destination": "assets-src/terrain/terrain_grass_variant_02.png",
+      "sha256": "e31a4bfd71877a51f776c40d3d8db5fc081cd5818cd6418435242a00437612d6",
+      "bytes": 47698
+    },
+    {
+      "id": "terrain_grass_variant_03",
+      "review": "REVIEW-10",
+      "taskId": "ART-10",
+      "creator": "Codex / Terrain Asset Owner",
+      "source": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_03.png",
+      "destination": "assets-src/terrain/terrain_grass_variant_03.png",
+      "sha256": "89235cf474c8c842304a6f4bcc14633e7b628ce2c0a5d5698c595a04a555aa16",
+      "bytes": 47336
+    },
+    {
+      "id": "terrain_grass_variant_04",
+      "review": "REVIEW-10",
+      "taskId": "ART-10",
+      "creator": "Codex / Terrain Asset Owner",
+      "source": "work/art-generation/terrain/candidate/assets-src-compatible/terrain_grass_variant_04.png",
+      "destination": "assets-src/terrain/terrain_grass_variant_04.png",
+      "sha256": "84ce24683e62bb951b3660c56090ae9a6eee38ddf153965a7f0ed59419e73f82",
+      "bytes": 47588
+    },
+    {
+      "id": "fx_plant_00",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_plant_00.png",
+      "destination": "assets-src/effects/fx_plant_00.png",
+      "sha256": "c5fef16ff312ca2645dffaf84cff94efa50a9807cd93ae1ffd4511c5554983a8",
+      "bytes": 21301
+    },
+    {
+      "id": "fx_plant_01",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_plant_01.png",
+      "destination": "assets-src/effects/fx_plant_01.png",
+      "sha256": "ae4f407cff27c4d3c2907899f7cf8a1af3db8f6510ef469034310783ed51f5bb",
+      "bytes": 22848
+    },
+    {
+      "id": "fx_plant_02",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_plant_02.png",
+      "destination": "assets-src/effects/fx_plant_02.png",
+      "sha256": "e088158cd8c6fb294c15f0f892944d106076e42162616f5b759c02b639414cdd",
+      "bytes": 27468
+    },
+    {
+      "id": "fx_plant_03",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_plant_03.png",
+      "destination": "assets-src/effects/fx_plant_03.png",
+      "sha256": "a6dfd9b15642996cb3d9b10a10e5962aee6e2f65b8969c35c1222ea7eb2c461c",
+      "bytes": 29689
+    },
+    {
+      "id": "fx_harvest_00",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_00.png",
+      "destination": "assets-src/effects/fx_harvest_00.png",
+      "sha256": "e2804fe6402503b0f60c842ca81a6930fc47d003660b019a5e945d0f589dce26",
+      "bytes": 56278
+    },
+    {
+      "id": "fx_harvest_01",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_01.png",
+      "destination": "assets-src/effects/fx_harvest_01.png",
+      "sha256": "0e9832dd45c4b57a99ac8d3eaa6108547c80b02d5ad2a2cb0523a066eb522e2f",
+      "bytes": 52591
+    },
+    {
+      "id": "fx_harvest_02",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_02.png",
+      "destination": "assets-src/effects/fx_harvest_02.png",
+      "sha256": "5e39db34a49247d8ac62b72ca5b73a4b5d080e5994972a6dc0ed493043b230c8",
+      "bytes": 50923
+    },
+    {
+      "id": "fx_harvest_03",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_03.png",
+      "destination": "assets-src/effects/fx_harvest_03.png",
+      "sha256": "73545fc0f79b176c77c70da402555e3f3896ba533c78b458144968661694c4d5",
+      "bytes": 51355
+    },
+    {
+      "id": "fx_harvest_04",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_04.png",
+      "destination": "assets-src/effects/fx_harvest_04.png",
+      "sha256": "a5ac896347795f52218ff3c59d311234d5087255935768c51e9ae4c776e1d160",
+      "bytes": 49109
+    },
+    {
+      "id": "fx_harvest_05",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_harvest_05.png",
+      "destination": "assets-src/effects/fx_harvest_05.png",
+      "sha256": "f7034a5484673f769c02b04bddf830d098845f823f99e49c3d3353b6d6700aea",
+      "bytes": 47420
+    },
+    {
+      "id": "fx_build_success_00",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_00.png",
+      "destination": "assets-src/effects/fx_build_success_00.png",
+      "sha256": "7d76b61b2aa4e7e17b645808ccc8672d67d305481a61a7b9ead0713df5775bd9",
+      "bytes": 42921
+    },
+    {
+      "id": "fx_build_success_01",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_01.png",
+      "destination": "assets-src/effects/fx_build_success_01.png",
+      "sha256": "f2769caec83b14d67d33e4abe81b80cf2a00e920723013eb8f7de26c1f4bd323",
+      "bytes": 42846
+    },
+    {
+      "id": "fx_build_success_02",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_02.png",
+      "destination": "assets-src/effects/fx_build_success_02.png",
+      "sha256": "0bc2e8fcc288cc145ce0468e9da8d62632504b0e01e86e4dfccc221cd515b2e4",
+      "bytes": 45795
+    },
+    {
+      "id": "fx_build_success_03",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_03.png",
+      "destination": "assets-src/effects/fx_build_success_03.png",
+      "sha256": "ec6f437943289a35d9aec9749d5fbda34b77ba52c510aca328ae7656c7028fba",
+      "bytes": 44062
+    },
+    {
+      "id": "fx_build_success_04",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_04.png",
+      "destination": "assets-src/effects/fx_build_success_04.png",
+      "sha256": "e5f66b798ea720cb54054243a979e6b3e6046405c5137a683c0676f4cc0256d2",
+      "bytes": 45998
+    },
+    {
+      "id": "fx_build_success_05",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_build_success_05.png",
+      "destination": "assets-src/effects/fx_build_success_05.png",
+      "sha256": "55f04cfe3f238ec49a646f4d61452f2346d28fb0167a9e3779edc1edf7c7af6d",
+      "bytes": 43174
+    },
+    {
+      "id": "fx_coin_gain_00",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_00.png",
+      "destination": "assets-src/effects/fx_coin_gain_00.png",
+      "sha256": "cd5cd85d676455b7825e4ee084f3e7eae217bd9b8e5ff42025acf93c46e20749",
+      "bytes": 23406
+    },
+    {
+      "id": "fx_coin_gain_01",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_01.png",
+      "destination": "assets-src/effects/fx_coin_gain_01.png",
+      "sha256": "c0628f241a5353fd3edf5e26918ac96c2f338489d06af89f501cb77b5ae457d0",
+      "bytes": 21926
+    },
+    {
+      "id": "fx_coin_gain_02",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_02.png",
+      "destination": "assets-src/effects/fx_coin_gain_02.png",
+      "sha256": "2dbe588fec4ddef90f82563aef42394c6a833d548d9adb5442ac389a8d6525c5",
+      "bytes": 21204
+    },
+    {
+      "id": "fx_coin_gain_03",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_03.png",
+      "destination": "assets-src/effects/fx_coin_gain_03.png",
+      "sha256": "79562befb3251db712236f705f09f011a4ec2cfa528cc374742a333c4ca96bbe",
+      "bytes": 21431
+    },
+    {
+      "id": "fx_coin_gain_04",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_04.png",
+      "destination": "assets-src/effects/fx_coin_gain_04.png",
+      "sha256": "738eb69db45c19f89a46bc3ab0bdbdce3e7eb04c9eef84f5d0aaa12dd4e1cc18",
+      "bytes": 22838
+    },
+    {
+      "id": "fx_coin_gain_05",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_05.png",
+      "destination": "assets-src/effects/fx_coin_gain_05.png",
+      "sha256": "e757666a5fe4a669ef5d451b9f42563e756ca355d2511a759715b3a2f4aab26a",
+      "bytes": 23176
+    },
+    {
+      "id": "fx_coin_gain_06",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_06.png",
+      "destination": "assets-src/effects/fx_coin_gain_06.png",
+      "sha256": "0b12e91b172dbc206b90c3fc1e606808b8a93e45fd0b5940a797ca26578431a0",
+      "bytes": 23244
+    },
+    {
+      "id": "fx_coin_gain_07",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_coin_gain_07.png",
+      "destination": "assets-src/effects/fx_coin_gain_07.png",
+      "sha256": "00b1f36471df25df0af0b55b8c4c31e60cf57297d88862de67c2b31cb16a1870",
+      "bytes": 22923
+    },
+    {
+      "id": "fx_egg_collect_00",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_00.png",
+      "destination": "assets-src/effects/fx_egg_collect_00.png",
+      "sha256": "384d442f53127c9aa7d0a187060611841b14962beeef1e7ebfc43991fe48c1ba",
+      "bytes": 38463
+    },
+    {
+      "id": "fx_egg_collect_01",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_01.png",
+      "destination": "assets-src/effects/fx_egg_collect_01.png",
+      "sha256": "6f6c1fd00a339cd04c7d49ed17ebf51406e17d10acafaa9604ccc13fa2533794",
+      "bytes": 39371
+    },
+    {
+      "id": "fx_egg_collect_02",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_02.png",
+      "destination": "assets-src/effects/fx_egg_collect_02.png",
+      "sha256": "115a848814039b8ac101735624443b473d238d5b4a247b138cb4e481a641f5bb",
+      "bytes": 41252
+    },
+    {
+      "id": "fx_egg_collect_03",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_03.png",
+      "destination": "assets-src/effects/fx_egg_collect_03.png",
+      "sha256": "00b2ff6ed58bb22f40a563f76696ca665d51465dee980f6f9768dc2d66d58710",
+      "bytes": 45571
+    },
+    {
+      "id": "fx_egg_collect_04",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_04.png",
+      "destination": "assets-src/effects/fx_egg_collect_04.png",
+      "sha256": "253179ac77a9d33473c1e8a531130da94d610b29156d2cec81c5302512adb3f4",
+      "bytes": 44387
+    },
+    {
+      "id": "fx_egg_collect_05",
+      "review": "REVIEW-11",
+      "taskId": "ART-11",
+      "creator": "Codex / Effects Asset Owner",
+      "source": "work/art-generation/effects/candidate/assets-src-compatible/fx_egg_collect_05.png",
+      "destination": "assets-src/effects/fx_egg_collect_05.png",
+      "sha256": "652b4aab19522e68f77dcb297d14b2cde23b4b037f661de0f46225c025f0dfa8",
+      "bytes": 45855
+    },
+    {
+      "id": "icon_coin",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_coin.png",
+      "destination": "assets-src/ui/icon_coin.png",
+      "sha256": "d68a1bff1b1630b377d4a2b57f909c113314779b52bd4cd349676a4e1a024365",
+      "bytes": 14634
+    },
+    {
+      "id": "icon_diamond",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_diamond.png",
+      "destination": "assets-src/ui/icon_diamond.png",
+      "sha256": "4f93af4ee77872bf4f85636504a9b47bf5912234ee2ed1874fc205f8e1bc5343",
+      "bytes": 10883
+    },
+    {
+      "id": "icon_rice",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_rice.png",
+      "destination": "assets-src/ui/icon_rice.png",
+      "sha256": "958c1ab4757383c41e1af4ed67d5982240a2643552ba3e81eacc8479c4d6520e",
+      "bytes": 16883
+    },
+    {
+      "id": "icon_carrot",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_carrot.png",
+      "destination": "assets-src/ui/icon_carrot.png",
+      "sha256": "b3ca54a3f1753f552a3ee628f9814ecaf35eed74dae29083c7a50f62ec2c9688",
+      "bytes": 11242
+    },
+    {
+      "id": "icon_corn",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_corn.png",
+      "destination": "assets-src/ui/icon_corn.png",
+      "sha256": "eaa4333ebf4308f2946c4fbfbf635ebf1743bb232dd4050e4ae56e5a81bfcd66",
+      "bytes": 15623
+    },
+    {
+      "id": "icon_tomato",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_tomato.png",
+      "destination": "assets-src/ui/icon_tomato.png",
+      "sha256": "b4bf007fc16354196f23ff581f79385e8d2dbe0c8ac364d980e0b498a65666a8",
+      "bytes": 14252
+    },
+    {
+      "id": "icon_chicken_feed",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_chicken_feed.png",
+      "destination": "assets-src/ui/icon_chicken_feed.png",
+      "sha256": "578d9cce1544a2578289c93a56c2053a2c2bb919638c9ebcc388b760efd880b5",
+      "bytes": 14589
+    },
+    {
+      "id": "icon_egg",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_egg.png",
+      "destination": "assets-src/ui/icon_egg.png",
+      "sha256": "682c86c62acb62b4c5274b965873cc6ef0119fa99cc0e62609584c620eb7d996",
+      "bytes": 10447
+    },
+    {
+      "id": "icon_order",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/icon_order.png",
+      "destination": "assets-src/ui/icon_order.png",
+      "sha256": "be61e4dc3712f60586e33e442c2dc8a0fc5a9d6cbefc784da1cf6db7822cb51b",
+      "bytes": 15016
+    },
+    {
+      "id": "ui_rotate_overlay",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/ui_rotate_overlay.png",
+      "destination": "assets-src/ui/ui_rotate_overlay.png",
+      "sha256": "fe24dde2a70dc24b61dbdb681fdb0da14c963e7dca88c2360b9ca7055117aac2",
+      "bytes": 14903
+    },
+    {
+      "id": "ui_loading",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/ui_loading.png",
+      "destination": "assets-src/ui/ui_loading.png",
+      "sha256": "213479143afc654fcef4614bdcd8e45ef183b930fbc441ef3bd0758d8a0fafaf",
+      "bytes": 11670
+    },
+    {
+      "id": "ui_success_toast",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/ui_success_toast.png",
+      "destination": "assets-src/ui/ui_success_toast.png",
+      "sha256": "d30a57d30b291289ecbe4b724cf170902e88807b8c96eb6016e9de9f0ef38e5a",
+      "bytes": 12932
+    },
+    {
+      "id": "ui_error_toast",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/ui_error_toast.png",
+      "destination": "assets-src/ui/ui_error_toast.png",
+      "sha256": "dc2d4176505d3fe119e45721920c9e5af907af7674753f47a8306907e693bf97",
+      "bytes": 15144
+    },
+    {
+      "id": "build_ghost_valid",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/build_ghost_valid.png",
+      "destination": "assets-src/ui/build_ghost_valid.png",
+      "sha256": "5c2f30a7aa235b29152dc923acc04035976c48085addebc9aab1addede2ed645",
+      "bytes": 13125
+    },
+    {
+      "id": "build_ghost_invalid",
+      "review": "REVIEW-12",
+      "taskId": "ART-12",
+      "creator": "Codex / UI Asset Owner",
+      "source": "work/art-generation/ui/candidate/assets-src-compatible/build_ghost_invalid.png",
+      "destination": "assets-src/ui/build_ghost_invalid.png",
+      "sha256": "ee6a5b992770c3abcf270f93b09f6ebc9ed97aa06219ab74c621513125663dc4",
+      "bytes": 11908
+    }
+  ],
+  "previouslyPromotedFrozen": {
+    "building_farmhouse_lv1": "198694a0eec674ecc923ba439dbad4b6790ba264cba47a25cd59b1a97c9803ac",
+    "building_warehouse_lv1": "6ff8232df104a066b805d2151f50d03dabe1e59d712843549436f6cc7d589806",
+    "building_chicken_coop_lv1": "ba0b8f16368a3a3ac96c5d5fdd2da7d9795181c4da0f491904ce46d2bdc91a55",
+    "crop_ready_glow_00": "e1a0f10dbd5ab07439ab60c1eceee8e8815ce04e8858ce74cd974c21881302b9",
+    "crop_ready_glow_01": "ffddf058c2fed1b627c704bb1108a1b647786edbaf1b099f241d446e910897f3",
+    "crop_ready_glow_02": "6a35832e65ff2aa9c23178d90621a0eff1b740a6334ca2eca1637645d09d519b",
+    "crop_ready_glow_03": "754383180e50a7064e9dc42c35073b51b14fbcb112c4d79d49161c462dbaa36e"
+  },
+  "approvalBoundary": {
+    "approvedBefore": 112,
+    "approvedAfter": 112,
+    "contentApproval": "PENDING_OWNER_REVIEW",
+    "approvalRef": null
+  },
+  "finalCounts": {
+    "assets": 188,
+    "productionReady": 188,
+    "approved": 112,
+    "placeholders": 0
+  }
+}
