@@ -1,7 +1,7 @@
 {
   "taskId": "ART-04",
   "assetType": "Corn",
-  "status": "REVIEW",
+  "status": "REVISION_REQUIRED",
   "fileCount": 5,
   "expectedFileCount": 5,
   "canonicalIds": [
@@ -40,5 +40,49 @@
     "Five stages share one generated visual identity and a continuous seed-to-ready progression.",
     "Generated art is a candidate for owner review; it is not promoted or approved for production.",
     "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
-  ]
+  ],
+  "ownerReview": {
+    "technical": "PASS",
+    "style": "REVISION_REQUIRED",
+    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+    "findings": [
+      {
+        "assetId": "crop_corn_stage_2",
+        "components": [
+          [
+            30,
+            [
+              185,
+              104,
+              186,
+              120
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_corn_stage_3",
+        "components": [
+          [
+            18,
+            [
+              190,
+              140,
+              190,
+              157
+            ]
+          ],
+          [
+            10,
+            [
+              190,
+              97,
+              190,
+              106
+            ]
+          ]
+        ]
+      }
+    ]
+  }
 }

@@ -38,11 +38,17 @@ Root là owner tạm thời của `package.json`, `package-lock.json`, `compose.
 
 - Remote CI runs `36660295559` (commit `628f7cd`), `36662455574` (commit `7651d6a`) and parent-review closure run `36663637314` (commit `5cf15f7`) are PASS across all 5 jobs; E01 and RC01 remain dependency-gated.
 - Documentation templates for E01 and RC01 are prepared, but neither runtime task is open.
-- RUNNING: B02 Integration Owner review after Parallel Art Wave 1 generation; C03 and D02 have DONE evidence.
+- RUNNING: B02 Wave 1 Integration Owner review is partially complete; Rice/Carrot promoted 10/112, Chicken/Corn/Tomato revision required. C03 and D02 have DONE evidence.
 - REVIEW: none for A01/A02/A03/B01/C01/C02/C03/D01/D02; parent review completed with local and remote CI evidence.
 - DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02; API prototype, content definitions, asset pipeline, Pixi renderer, Vietnamese direct-entry web shell, Docker/Nginx/PWA foundation.
 - REVIEW subtask: B02.1 style direction đã `DONE` với owner kết luận `APPROVED WITH MINOR REVISIONS`; B02.2 production contract tại `docs/assets/CHICKEN_PRODUCTION_CONTRACT.md` vẫn khóa và chưa có đủ production frame.
 - DONE checkpoint: B02.2-PROOF Revision 2 is owner `APPROVED TO PROCEED`; evidence remains outside `assets-src` and does not change manifest/atlas.
-- REVIEW checkpoint: B02.2-FULL generation is complete: 92 Chicken frames + 20 crop stages, all five task workspaces at `REVIEW` with technical QA PASS; promotion is not started.
-- REVIEW handoff: Parallel Art Wave 1 completed ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5; all candidate files remain under `work/art-generation/**`.
-- BLOCKED: B02 production promotion/release approval until Integration Owner cross-asset review and license/style gates pass; E01 Cloudflare remains upstream-gated.
+- REVIEW checkpoint: B02.2-FULL generation is complete: 92 Chicken frames + 20 crop stages; Rice/Carrot passed promotion, while Chicken/Corn/Tomato remain revision-required.
+- REVIEW handoff: Parallel Art Wave 1 completed ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5. Integration Owner promoted only Rice/Carrot (10/112); no passing asset is regenerated.
+- BLOCKED: B02 completion/release approval awaits Chicken/Corn/Tomato visual revision plus provenance/license review; E01 Cloudflare and RC01 remain dependency-gated and closed.
+
+## Wave 1 partial promotion checkpoint — 2026-09-30
+
+- B02 remains `RUNNING`: Rice and Carrot are technically/style approved and promoted (**10/112**); Chicken, Corn and Tomato remain `RUNNING` for targeted revision.
+- Promoted entries are `production_ready=true`, `approved=false`, `license=PENDING_OWNER_REVIEW`; no release approval is inferred.
+- Wave 2, E01 Cloudflare Named Tunnel and RC01 Release Candidate remain closed until B02 completes.

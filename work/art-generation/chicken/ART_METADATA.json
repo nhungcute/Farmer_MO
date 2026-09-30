@@ -1,8 +1,8 @@
 {
   "taskId": "ART-01",
   "assetType": "Chicken",
-  "status": "REVIEW",
-  "generationStatus": "COMPLETE",
+  "status": "RUNNING",
+  "generationStatus": "REVISION_REQUIRED",
   "assetIds": [
     "animal_chicken_idle_ne_00",
     "animal_chicken_idle_ne_01",
@@ -108,7 +108,7 @@
   "production_ready": false,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "styleReview": "REVISION_REQUIRED",
   "approvalRef": null,
   "contract": {
     "canvas": {
@@ -1775,5 +1775,21 @@
     "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet.png",
     "qa": "ART_QA.json"
   },
-  "generatedAt": "2026-09-30T08:59:45.557616+00:00"
+  "generatedAt": "2026-09-30T08:59:45.557616+00:00",
+  "animationReview": "REVISION_REQUIRED",
+  "promotionDecision": "BLOCKED_PENDING_VISUAL_REVISION",
+  "reviewEvidence": "REVIEW_REPORT.md",
+  "reviewFindings": {
+    "technicalReview": "PASS",
+    "identity": "PASS",
+    "scale": "PASS",
+    "lighting": "PASS",
+    "style": "REVISION_REQUIRED",
+    "animation": "REVISION_REQUIRED",
+    "details": [
+      "WALK leg cycle is not sufficiently readable; poses are nearly static.",
+      "EAT frame 2 does not show a clear head/beak contact pose despite the metadata event.",
+      "Gloss/high-frequency shading remains too close to a 3D mascot and needs the approved soft illustrated treatment."
+    ]
+  }
 }

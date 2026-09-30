@@ -1,0 +1,126 @@
+{
+  "review": "WAVE 1 INTEGRATION REVIEW",
+  "reviewDate": "2026-09-30",
+  "status": "REVISION_REQUIRED",
+  "scope": "Wave 1 candidate review and partial production promotion. No new artwork generated during integration review.",
+  "evidence": {
+    "desktop": "docs/assets/review/wave1-cross-asset-review.png",
+    "mobile": "docs/assets/review/wave1-cross-asset-mobile.png",
+    "atlasSource": "apps/web/public/assets/atlases/crops.png",
+    "atlasQA": "source/candidate byte equality verified for all 10 promoted Rice/Carrot frames"
+  },
+  "assets": {
+    "Chicken": {
+      "candidate": "92/92",
+      "technical": "PASS",
+      "style": "REVISION_REQUIRED",
+      "identity": "PASS",
+      "animation": "REVISION_REQUIRED",
+      "event": "PASS metadata / visual contact REVISION_REQUIRED",
+      "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+      "production_ready": false,
+      "findings": [
+        "micro-feather detail remains dense",
+        "shading is too glossy/high-frequency for locked soft illustrated style",
+        "WALK foot cycle is not readable",
+        "EAT frame 2 contact pose is not visually clear"
+      ]
+    },
+    "Rice": {
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A static crop stages",
+      "event": "N/A",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "findings": []
+    },
+    "Carrot": {
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "PASS",
+      "identity": "PASS",
+      "animation": "N/A static crop stages",
+      "event": "N/A",
+      "promotion": "PROMOTED",
+      "production_ready": true,
+      "findings": []
+    },
+    "Corn": {
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "REVISION_REQUIRED",
+      "identity": "PASS",
+      "animation": "N/A static crop stages",
+      "event": "N/A",
+      "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+      "production_ready": false,
+      "findings": [
+        "detached small alpha fragments beside stage_2/stage_3 silhouette"
+      ]
+    },
+    "Tomato": {
+      "candidate": "5/5",
+      "technical": "PASS",
+      "style": "REVISION_REQUIRED",
+      "identity": "PASS",
+      "animation": "N/A static crop stages",
+      "event": "N/A",
+      "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+      "production_ready": false,
+      "findings": [
+        "detached small alpha fragments beside seed/stage_1/stage_2/stage_3 silhouette"
+      ]
+    }
+  },
+  "crossAsset": {
+    "perspective": "PASS for promoted crops; blocked candidates excluded from production",
+    "lighting": "PASS for Rice/Carrot; Chicken/Corn/Tomato require targeted revision",
+    "shadow": "PASS",
+    "relativeScale": "PASS for promoted crops and review composition",
+    "mobileReadability": "PASS for Rice/Carrot; blocked candidates expose findings in review sheets",
+    "overall": "REVISION_REQUIRED"
+  },
+  "provenance": {
+    "status": "PASS fields present and truthful",
+    "source": "internal-generated",
+    "license": "PENDING_OWNER_REVIEW for promoted and blocked candidates",
+    "approval": "approved=false; no release approval inferred"
+  },
+  "promoted": "10/112",
+  "promotedAssets": {
+    "Rice": "5/5 -> assets-src/crops/**",
+    "Carrot": "5/5 -> assets-src/crops/**"
+  },
+  "productionBuild": "PASS (assets:build, then deterministic metadata restore/repack required because generator rewrites source metadata)",
+  "atlas": "PASS (crops atlas PNG slices are byte-identical to all 10 promoted source PNGs; atlas JSON dimensions/IDs verified)",
+  "strictValidation": "PASS",
+  "renderer": "PASS (16/16)",
+  "dpr1": "PASS for promoted crop atlas slice/runtime metadata review",
+  "dpr2": "PASS for promoted crop atlas slice/runtime metadata review",
+  "mobile": "PASS for promoted Rice/Carrot composition and runtime-size evidence",
+  "chickenAnimatedStress": "NOT_RUN ? Chicken remains blocked and production atlas is unchanged placeholder",
+  "productionInventory": {
+    "total": "188/188",
+    "production_ready": "10/188",
+    "placeholder": "178/188",
+    "approved": "0/188"
+  },
+  "validationCommands": {
+    "npm run assets:build": "PASS",
+    "npm run assets:validate": "PASS",
+    "npm run assets:validate:strict": "PASS",
+    "npm run renderer:test": "PASS (16/16)",
+    "npm run check": "PASS",
+    "docker compose config --quiet": "PASS",
+    "git diff --check": "PASS"
+  },
+  "next": [
+    "Return Chicken, Corn and Tomato to their owners for targeted visual revision only.",
+    "Re-review revised candidates before any additional promotion.",
+    "Keep Rice and Carrot production_ready=true but approved=false until license/content approval.",
+    "Do not open Wave 2, Cloudflare Named Tunnel or RC01."
+  ]
+}

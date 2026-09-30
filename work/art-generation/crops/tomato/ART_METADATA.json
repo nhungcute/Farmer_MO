@@ -1,8 +1,8 @@
 {
   "taskId": "ART-05",
   "assetType": "Tomato",
-  "status": "REVIEW",
-  "generationStatus": "COMPLETE",
+  "status": "RUNNING",
+  "generationStatus": "REVISION_REQUIRED",
   "assetIds": [
     "crop_tomato_seed",
     "crop_tomato_stage_1",
@@ -21,7 +21,7 @@
   "production_ready": false,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "styleReview": "REVISION_REQUIRED",
   "approvalRef": null,
   "contract": {
     "canvas": {
@@ -221,5 +221,106 @@
       }
     }
   ],
-  "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation."
+  "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation.",
+  "promotionDecision": "BLOCKED_PENDING_VISUAL_REVISION",
+  "reviewEvidence": "REVIEW_REPORT.md",
+  "reviewFindings": {
+    "technicalReview": "PASS",
+    "progression": "PASS",
+    "visualArtifact": "REVISION_REQUIRED",
+    "detachedSmallComponents": [
+      {
+        "assetId": "crop_tomato_seed",
+        "components": [
+          [
+            21,
+            [
+              191,
+              100,
+              194,
+              107
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_1",
+        "components": [
+          [
+            54,
+            [
+              179,
+              142,
+              185,
+              154
+            ]
+          ],
+          [
+            6,
+            [
+              184,
+              105,
+              185,
+              108
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_2",
+        "components": [
+          [
+            28,
+            [
+              184,
+              98,
+              186,
+              110
+            ]
+          ],
+          [
+            2,
+            [
+              186,
+              122,
+              186,
+              123
+            ]
+          ],
+          [
+            1,
+            [
+              120,
+              211,
+              120,
+              211
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_3",
+        "components": [
+          [
+            19,
+            [
+              185,
+              115,
+              186,
+              126
+            ]
+          ],
+          [
+            17,
+            [
+              185,
+              155,
+              186,
+              164
+            ]
+          ]
+        ]
+      }
+    ]
+  }
 }

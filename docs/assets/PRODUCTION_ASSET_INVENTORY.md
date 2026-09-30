@@ -1,15 +1,15 @@
 # B01 Production Asset Inventory
 
-Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `cc72e49dcbd281131c59c7cde8d9b5d615342cff53d70c1647a6e560139086da`).
+Canonical source: `assets-src/manifests/animation-manifest.json` (SHA-256 `10c3e60efcc4ccaa011de0fda0f86d176d2c133be0f239d11f0082e3781bcdeb`).
 
-This inventory is generated from the current canonical manifest. Every current source asset is an internal deterministic placeholder and remains ineligible for production approval until replaced and reviewed.
+This inventory is generated from the current canonical manifest. Most source assets remain internal deterministic placeholders. Ten Rice/Carrot crop frames are technical/style-passed replacements; their explicit content approval remains pending.
 
 ## Status
 
 | Status | Current count | Meaning |
 | --- | --- | --- |
-| `placeholder` | 188 | Generated/internal art. Not eligible for production release. |
-| `production_ready` | 0 | Replacement art supplied with license, style, technical validation, and source evidence; explicit content approval is still pending. |
+| `placeholder` | 178 | Generated/internal art. Not eligible for production release. |
+| `production_ready` | 10 | Replacement art supplied with license, style, technical validation, and source evidence; explicit content approval is still pending. |
 | `approved` | 0 | Production-ready replacement explicitly approved for the target release. |
 
 Current totals: **188 source assets**, **10 animation contracts**, **8 categories**.
@@ -20,7 +20,7 @@ Current totals: **188 source assets**, **10 animation contracts**, **8 categorie
 | --- | --- | --- | --- | --- |
 | `terrain` | `placeholder` | 5 | 0 | Isometric ground tile and variants. |
 | `buildings` | `placeholder` | 3 | 0 | Farmhouse, warehouse, and chicken coop static views. |
-| `crops` | `placeholder` | 24 | 1 | Crop stages plus the ready-crop glow animation. |
+| `crops` | `mixed` | 24 | 1 | Rice/Carrot replacements plus placeholder Corn/Tomato stages and ready-crop glow animation. |
 | `animals` | `placeholder` | 0 | 1 | Runtime animal animation contracts; the current MVP species is chicken. |
 | `chicken` | `placeholder` | 92 | 0 | Chicken frame PNG sources for all six states and four directions. |
 | `pond` | `placeholder` | 19 | 3 | Pond base and water/ripple/sparkle layers. |
@@ -75,16 +75,16 @@ The `animals` row records the runtime contract (`animal_chicken`); the `chicken`
 | `pond_small_lv1_sparkle_01` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_01.png` |
 | `pond_small_lv1_sparkle_02` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_02.png` |
 | `pond_small_lv1_sparkle_03` | pond | `placeholder` | 512×384 | 0.5,0.86 | `assets-src/ponds/pond_small_lv1_sparkle_03.png` |
-| `crop_rice_seed` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_seed.png` |
-| `crop_rice_stage_1` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_1.png` |
-| `crop_rice_stage_2` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_2.png` |
-| `crop_rice_stage_3` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_3.png` |
-| `crop_rice_ready` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_ready.png` |
-| `crop_carrot_seed` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_seed.png` |
-| `crop_carrot_stage_1` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_1.png` |
-| `crop_carrot_stage_2` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_2.png` |
-| `crop_carrot_stage_3` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_3.png` |
-| `crop_carrot_ready` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_ready.png` |
+| `crop_rice_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_seed.png` |
+| `crop_rice_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_1.png` |
+| `crop_rice_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_2.png` |
+| `crop_rice_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_stage_3.png` |
+| `crop_rice_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_rice_ready.png` |
+| `crop_carrot_seed` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_seed.png` |
+| `crop_carrot_stage_1` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_1.png` |
+| `crop_carrot_stage_2` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_2.png` |
+| `crop_carrot_stage_3` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_stage_3.png` |
+| `crop_carrot_ready` | crops | `production_ready` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_carrot_ready.png` |
 | `crop_corn_seed` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_seed.png` |
 | `crop_corn_stage_1` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_1.png` |
 | `crop_corn_stage_2` | crops | `placeholder` | 256×256 | 0.5,0.9 | `assets-src/crops/crop_corn_stage_2.png` |

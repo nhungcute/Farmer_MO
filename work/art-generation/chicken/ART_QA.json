@@ -2,7 +2,7 @@
   "qaVersion": "ART-01-CHICKEN-QA-v1",
   "taskId": "ART-01",
   "status": "PASS",
-  "reviewStatus": "REVIEW",
+  "reviewStatus": "REVISION_REQUIRED",
   "production_ready": false,
   "approved": false,
   "fileCount": {
@@ -298,6 +298,19 @@
   "evidence": {
     "stateDirectionSheet": "candidate/reviews/state-direction-sheet.png",
     "eatProof": "candidate/reviews/eat-se-proof.png",
-    "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet.png"
+    "runtimeSizeSheet": "candidate/reviews/runtime-size-sheet.png",
+    "walkProof": "candidate/reviews/walk-se-proof.png"
+  },
+  "ownerReview": {
+    "technical": "PASS",
+    "identity": "PASS",
+    "style": "REVISION_REQUIRED",
+    "animation": "REVISION_REQUIRED",
+    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+    "findings": [
+      "WALK has no clearly readable foot cycle.",
+      "EAT frame 2 does not have clear beak/contact visual despite FEED_CONSUMED@2.",
+      "Gloss/high-frequency shading remains above the soft illustrated target."
+    ]
   }
 }

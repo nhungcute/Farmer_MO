@@ -951,12 +951,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_rice_stage_1": {
       "id": "crop_rice_stage_1",
@@ -973,12 +979,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_rice_stage_2": {
       "id": "crop_rice_stage_2",
@@ -995,12 +1007,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_rice_stage_3": {
       "id": "crop_rice_stage_3",
@@ -1017,12 +1035,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_rice_ready": {
       "id": "crop_rice_ready",
@@ -1039,12 +1063,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_carrot_seed": {
       "id": "crop_carrot_seed",
@@ -1061,12 +1091,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_carrot_stage_1": {
       "id": "crop_carrot_stage_1",
@@ -1083,12 +1119,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_carrot_stage_2": {
       "id": "crop_carrot_stage_2",
@@ -1105,12 +1147,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_carrot_stage_3": {
       "id": "crop_carrot_stage_3",
@@ -1127,12 +1175,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_carrot_ready": {
       "id": "crop_carrot_ready",
@@ -1149,12 +1203,18 @@
         "x": 0,
         "y": 0
       },
-      "placeholder": true,
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team"
+      "placeholder": false,
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
+      "technicalReview": "PASS",
+      "styleReview": "PASS",
+      "approvalRef": null,
+      "production_ready": true,
+      "approved": false,
+      "reviewEvidence": "docs/assets/review/WAVE1_INTEGRATION_REVIEW.json"
     },
     "crop_corn_seed": {
       "id": "crop_corn_seed",

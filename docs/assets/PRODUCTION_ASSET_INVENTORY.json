@@ -4,17 +4,17 @@
   "contentVersion": "mvp-1",
   "schemaVersion": 1,
   "manifestPath": "assets-src/manifests/animation-manifest.json",
-  "manifestSha256": "cc72e49dcbd281131c59c7cde8d9b5d615342cff53d70c1647a6e560139086da",
+  "manifestSha256": "10c3e60efcc4ccaa011de0fda0f86d176d2c133be0f239d11f0082e3781bcdeb",
   "counts": {
     "assets": 188,
     "animations": 10,
     "categories": 8,
     "statusCounts": {
-      "placeholder": 188,
-      "production_ready": 0,
+      "placeholder": 178,
+      "production_ready": 10,
       "approved": 0
     },
-    "allCurrentAssetsPlaceholder": true
+    "allCurrentAssetsPlaceholder": false
   },
   "categories": {
     "terrain": {
@@ -52,7 +52,7 @@
       }
     },
     "crops": {
-      "status": "placeholder",
+      "status": "mixed",
       "assetCount": 24,
       "animationCount": 1,
       "assetIds": [
@@ -85,10 +85,11 @@
         "crop_ready_glow"
       ],
       "statusCounts": {
-        "placeholder": 25,
-        "production_ready": 0,
+        "placeholder": 15,
+        "production_ready": 10,
         "approved": 0
-      }
+      },
+      "statusMeaning": "Rice and Carrot are production_ready; Corn, Tomato and ready-crop glow remain placeholders."
     },
     "animals": {
       "status": "placeholder",
@@ -2427,7 +2428,7 @@
     {
       "id": "crop_rice_seed",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_rice_seed.png",
       "canvas": {
         "width": 256,
@@ -2442,12 +2443,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
       "replacementInvariants": {
         "id": "crop_rice_seed",
         "frameCount": 1,
@@ -2477,7 +2478,7 @@
     {
       "id": "crop_rice_stage_1",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_rice_stage_1.png",
       "canvas": {
         "width": 256,
@@ -2492,12 +2493,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
       "replacementInvariants": {
         "id": "crop_rice_stage_1",
         "frameCount": 1,
@@ -2527,7 +2528,7 @@
     {
       "id": "crop_rice_stage_2",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_rice_stage_2.png",
       "canvas": {
         "width": 256,
@@ -2542,12 +2543,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
       "replacementInvariants": {
         "id": "crop_rice_stage_2",
         "frameCount": 1,
@@ -2577,7 +2578,7 @@
     {
       "id": "crop_rice_stage_3",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_rice_stage_3.png",
       "canvas": {
         "width": 256,
@@ -2592,12 +2593,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
       "replacementInvariants": {
         "id": "crop_rice_stage_3",
         "frameCount": 1,
@@ -2627,7 +2628,7 @@
     {
       "id": "crop_rice_ready",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_rice_ready.png",
       "canvas": {
         "width": 256,
@@ -2642,12 +2643,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "built-in image_gen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "Codex / Rice Asset Owner",
       "replacementInvariants": {
         "id": "crop_rice_ready",
         "frameCount": 1,
@@ -2677,7 +2678,7 @@
     {
       "id": "crop_carrot_seed",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_carrot_seed.png",
       "canvas": {
         "width": 256,
@@ -2692,12 +2693,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
       "replacementInvariants": {
         "id": "crop_carrot_seed",
         "frameCount": 1,
@@ -2727,7 +2728,7 @@
     {
       "id": "crop_carrot_stage_1",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_carrot_stage_1.png",
       "canvas": {
         "width": 256,
@@ -2742,12 +2743,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
       "replacementInvariants": {
         "id": "crop_carrot_stage_1",
         "frameCount": 1,
@@ -2777,7 +2778,7 @@
     {
       "id": "crop_carrot_stage_2",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_carrot_stage_2.png",
       "canvas": {
         "width": 256,
@@ -2792,12 +2793,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
       "replacementInvariants": {
         "id": "crop_carrot_stage_2",
         "frameCount": 1,
@@ -2827,7 +2828,7 @@
     {
       "id": "crop_carrot_stage_3",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_carrot_stage_3.png",
       "canvas": {
         "width": 256,
@@ -2842,12 +2843,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
       "replacementInvariants": {
         "id": "crop_carrot_stage_3",
         "frameCount": 1,
@@ -2877,7 +2878,7 @@
     {
       "id": "crop_carrot_ready",
       "category": "crops",
-      "status": "placeholder",
+      "status": "production_ready",
       "sourceFile": "assets-src/crops/crop_carrot_ready.png",
       "canvas": {
         "width": 256,
@@ -2892,12 +2893,12 @@
         "x": 0,
         "y": 0
       },
-      "license": "internal-placeholder",
-      "source": "Generated deterministic placeholder",
-      "placeholder": true,
-      "tool": "tools/export-assets/generate-placeholders.mjs",
-      "toolVersion": "1.0.0",
-      "creator": "MO Farm team",
+      "license": "PENDING_OWNER_REVIEW",
+      "source": "internal-generated",
+      "placeholder": false,
+      "tool": "image_gen.imagegen",
+      "toolVersion": "PENDING_OWNER_REVIEW",
+      "creator": "OpenAI image generation via Codex",
       "replacementInvariants": {
         "id": "crop_carrot_ready",
         "frameCount": 1,

@@ -1,7 +1,7 @@
 {
   "taskId": "ART-05",
   "assetType": "Tomato",
-  "status": "REVIEW",
+  "status": "REVISION_REQUIRED",
   "fileCount": 5,
   "expectedFileCount": 5,
   "canonicalIds": [
@@ -40,5 +40,104 @@
     "Five stages share one generated visual identity and a continuous seed-to-ready progression.",
     "Generated art is a candidate for owner review; it is not promoted or approved for production.",
     "License and image-generation tool version are intentionally marked PENDING_OWNER_REVIEW."
-  ]
+  ],
+  "ownerReview": {
+    "technical": "PASS",
+    "style": "REVISION_REQUIRED",
+    "promotion": "BLOCKED_PENDING_VISUAL_REVISION",
+    "findings": [
+      {
+        "assetId": "crop_tomato_seed",
+        "components": [
+          [
+            21,
+            [
+              191,
+              100,
+              194,
+              107
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_1",
+        "components": [
+          [
+            54,
+            [
+              179,
+              142,
+              185,
+              154
+            ]
+          ],
+          [
+            6,
+            [
+              184,
+              105,
+              185,
+              108
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_2",
+        "components": [
+          [
+            28,
+            [
+              184,
+              98,
+              186,
+              110
+            ]
+          ],
+          [
+            2,
+            [
+              186,
+              122,
+              186,
+              123
+            ]
+          ],
+          [
+            1,
+            [
+              120,
+              211,
+              120,
+              211
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_tomato_stage_3",
+        "components": [
+          [
+            19,
+            [
+              185,
+              115,
+              186,
+              126
+            ]
+          ],
+          [
+            17,
+            [
+              185,
+              155,
+              186,
+              164
+            ]
+          ]
+        ]
+      }
+    ]
+  }
 }

@@ -1,8 +1,8 @@
 {
   "taskId": "ART-04",
   "assetType": "Corn",
-  "status": "REVIEW",
-  "generationStatus": "COMPLETE",
+  "status": "RUNNING",
+  "generationStatus": "REVISION_REQUIRED",
   "assetIds": [
     "crop_corn_seed",
     "crop_corn_stage_1",
@@ -21,7 +21,7 @@
   "production_ready": false,
   "approved": false,
   "technicalReview": "PASS",
-  "styleReview": "PENDING_OWNER_REVIEW",
+  "styleReview": "REVISION_REQUIRED",
   "approvalRef": null,
   "contract": {
     "canvas": {
@@ -221,5 +221,51 @@
       }
     }
   ],
-  "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation."
+  "notes": "Production candidate generated in isolated Wave 1 workspace. Integration Owner review is required before any promotion to assets-src; license and tool version remain pending owner confirmation.",
+  "promotionDecision": "BLOCKED_PENDING_VISUAL_REVISION",
+  "reviewEvidence": "REVIEW_REPORT.md",
+  "reviewFindings": {
+    "technicalReview": "PASS",
+    "progression": "PASS",
+    "visualArtifact": "REVISION_REQUIRED",
+    "detachedSmallComponents": [
+      {
+        "assetId": "crop_corn_stage_2",
+        "components": [
+          [
+            30,
+            [
+              185,
+              104,
+              186,
+              120
+            ]
+          ]
+        ]
+      },
+      {
+        "assetId": "crop_corn_stage_3",
+        "components": [
+          [
+            18,
+            [
+              190,
+              140,
+              190,
+              157
+            ]
+          ],
+          [
+            10,
+            [
+              190,
+              97,
+              190,
+              106
+            ]
+          ]
+        ]
+      }
+    ]
+  }
 }

@@ -4,17 +4,17 @@
 |---|---|
 | Task | `ART-02` — Rice production |
 | Owner | Rice Asset Owner |
-| Status | `REVIEW` ? 5/5 generated; QA PASS; not promoted |
+| Status | `DONE` — 5/5 promoted; technical/style PASS; `production_ready=true`; release approval pending |
 | Generation sub-status | `COMPLETE` |
-| Review status | `REVIEW` ? Integration Owner pending |
+| Review status | `DONE` — Integration Owner cross-asset review PASS; `approved=false`; license pending |
 | Owned candidate path | `work/art-generation/crops/rice/**` |
-| Future promotion area | `assets-src/crops/rice/**` (Integration Owner only) |
+| Production promotion | `assets-src/crops/*.png` (10 Wave 1 crop files promoted by Integration Owner) |
 | Canonical technical source | `assets-src/manifests/animation-manifest.json` |
 | Cross-check manifest | `assets-src/manifests/crops.json` |
 | Shared style source | `docs/assets/MO_FARM_PRODUCTION_STYLE_GUIDE.md` and `assets-src/style/style-sheet.md` |
 | Manifest content version | `mvp-1` |
 
-Five real Rice candidates are complete in the isolated workspace. Task-local image/contract QA is PASS; they are awaiting Integration Owner review and are not promoted.
+Five real Rice candidates completed isolated task QA and passed Integration Owner cross-asset review. The five canonical PNGs are promoted to `assets-src/crops/`; `production_ready=true`, `approved=false`, and `license=PENDING_OWNER_REVIEW`.
 
 ## 1. Canonical Rice contract
 
@@ -63,7 +63,7 @@ All work in this task is restricted to `work/art-generation/crops/rice/**`:
 
 This task must not edit `assets-src/**`, either crop manifest, atlas files, renderer/runtime code, gameplay, economy, backend, API, Tutorial, Cloudflare or RC01. It also must not modify Carrot, Corn or Tomato paths.
 
-The task instruction names `assets-src/crops/rice/**` as the future promotion area, while the current canonical `sourceFile` values are flat files under `assets-src/crops/`. Any future path mapping requires an Integration Owner review and must preserve the canonical IDs and manifest contract; ART-02 must not silently make that mapping.
+The original task instruction named `assets-src/crops/rice/**` as a future promotion area, while canonical `sourceFile` values are flat files under `assets-src/crops/`. Integration Owner review confirmed the flat mapping and preserved all canonical IDs and manifest fields; ART-02 did not silently change the mapping.
 
 ## 4. Required provenance and approval fields
 
@@ -83,18 +83,18 @@ The metadata record for the candidate set must contain all of these fields. Valu
 | `sourceScale` | `2` for every ID |
 | `anchor` | `{ "x": 0.5, "y": 0.9 }` for every ID |
 | `renderOffset` | `{ "x": 0, "y": 0 }` for every ID |
-| `placeholder` | Remains `true` until an approved production replacement is promoted |
-| `production_ready` | `false` at kickoff; only Integration Owner can set it after technical review |
-| `approved` | `false` at kickoff; only the asset/release approver can set it |
-| `technicalReview` | `PENDING` until the candidate QA is run and recorded |
-| `styleReview` | `PENDING_OWNER_REVIEW` until owner review |
-| `approvalRef` | `PENDING_OWNER_REVIEW`; never invent a reference |
+| `placeholder` | `false` for the five promoted Rice entries; the candidate workspace remains retained for evidence |
+| `production_ready` | `true` after atlas build and strict validation; only Integration Owner can set it |
+| `approved` | `false`; no release approval has been granted |
+| `technicalReview` | `PASS`; dimensions, alpha, scale, atlas and progression evidence are recorded |
+| `styleReview` | `PASS`; Integration Owner cross-asset review accepted Rice |
+| `approvalRef` | `null`; no release approval reference exists yet |
 
 The existing manifest provenance (`Generated deterministic placeholder`, `internal-placeholder`, placeholder generator) describes the current placeholder files. It must not be copied as the provenance of a future production candidate unless that source is genuinely used and the owner confirms it.
 
 ## 5. Acceptance checklist
 
-ART-02 may move from `RUNNING` to `REVIEW` only when every item below is evidenced for all five IDs:
+The generation gate moved ART-02 to `REVIEW` after all five IDs were evidenced; the Integration Owner promotion gate is now complete:
 
 - [ ] Exactly the five canonical Rice assets exist; no missing or extra Rice IDs.
 - [ ] Each file is a `256 × 256` RGBA PNG with real transparent alpha and no baked background/checkerboard.
@@ -106,24 +106,30 @@ ART-02 may move from `RUNNING` to `REVIEW` only when every item below is evidenc
 - [ ] Contact point/footprint is stable; no stage appears to jump because of a different crop or offset.
 - [ ] Shared mobile viewports and default/max zoom checks have evidence.
 - [ ] Provenance and approval fields in Section 4 are complete or explicitly marked pending; no fabricated values.
-- [ ] Candidate remains outside production assets and no manifest/atlas/runtime change is required.
+- [x] Candidate source and QA evidence remain under `work/art-generation/crops/rice/**`; the Integration Owner promotion changed only the five canonical Rice files and generated atlas output.
 
-Technical and visual checks are independent: passing an image or manifest validator does not imply style approval or release approval. The final state after generation is expected to be `REVIEW`, not `DONE`, until the Integration Owner and asset/release approver sign off.
+Technical, visual and release checks remain independent: Rice has technical/style PASS and is production-ready, while `approved=false` and the pending license keep release approval open.
 
 ## 6. Current review gates
 
-- Candidate generation is complete; cross-asset visual review, license confirmation and release approval remain pending.
-- The current five Rice files are internal placeholders; they cannot be promoted automatically.
-- License/source/creator/tool evidence and `approvalRef` are not confirmed for a production replacement.
-- The future `assets-src/crops/rice/**` promotion path differs from the current flat canonical `sourceFile` paths and requires Integration Owner mapping review.
+- Candidate generation and Integration Owner cross-asset review are complete for all five Rice IDs.
+- The five canonical Rice files are promoted in the flat `assets-src/crops/` mapping; IDs, filenames, atlas and transforms are unchanged.
+- `production_ready=true` is supported by build/pack/strict validation; `approved=false` remains locked until release approval.
+- `license=PENDING_OWNER_REVIEW` is the only release provenance blocker for this asset type; no license or approval reference is invented.
 
-No blocker in this section should be solved by changing the gameplay/content definitions or by altering the canonical manifests.
+## 7. Current integration outcome — 2026-09-30
 
-## 7. Status transition
+- **Technical:** PASS for all five canonical IDs (`256x256`, RGBA/alpha, stable contact/baseline, atlas mapping and growth progression).
+- **Style/cross-asset:** PASS in the Wave 1 integration sheet.
+- **Promotion:** `PROMOTED` to `assets-src/crops/`; no ID, filename, source scale, anchor or render offset changed.
+- **Runtime metadata:** `placeholder=false`, `production_ready=true`, `approved=false`, `license=PENDING_OWNER_REVIEW`.
+- **Release gate:** remains open until owner confirms provenance/license and release approval. Chicken, Corn and Tomato remain on targeted revision and are not changed by ART-02.
+
+## 8. Status transition
 
 ```text
 QUEUED  ->  RUNNING (this kickoff)  ->  REVIEW  ->  DONE
                                       \-> BLOCKED
 ```
 
-`DONE` requires owner/release approval and a completed promotion review. ART-02 does not open another artwork wave automatically after reaching `REVIEW`.
+`DONE` here means the Rice technical/style promotion gate is complete. Release approval remains false until provenance/license review is complete. ART-02 does not open another artwork wave automatically.

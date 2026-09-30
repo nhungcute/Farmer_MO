@@ -40,21 +40,29 @@ Các task RUNNING không được sửa shared canonical contract đồng thời
 
 | Task ID | Tên | Checklist | Phụ thuộc | Trạng thái |
 |---|---|---:|---|---|
-| B02 | Production artwork replacement | 5/8 | B01 + artwork ???c duy?t | RUNNING ? Parallel Art Wave 1, 112 candidates |
+| B02 | Production artwork replacement | 5/8 — Wave 1 partial integration | B01 + approved artwork gates | RUNNING — 10/112 promoted; Chicken/Corn/Tomato revision required |
 | E01 | Cloudflare Named Tunnel | 0/12 | A03 + B02 + C03 + D02 + Docker gate | QUEUED |
 | RC01 | Release Candidate checklist | 0/12 | A03, B02, C03, D02, E01 | QUEUED |
 
-B02 subtask checkpoint: **B02.1 is `DONE`** and **B02.2-PROOF Revision 2 is `DONE` / `APPROVED TO PROCEED`**. **B02.2-FULL is `RUNNING`** in isolated Wave 1 workspaces; no candidate is promoted, and E01/RC01 remain closed.
+B02 subtask checkpoint: **B02.1 is `DONE`** and **B02.2-PROOF Revision 2 is `DONE` / `APPROVED TO PROCEED`**. **B02.2-FULL is `RUNNING`**: Rice/Carrot passed and 10/112 candidates are promoted; Chicken/Corn/Tomato remain in targeted revision. E01/RC01 remain closed.
 
-B02.2 proof checkpoint: **`B02.2-PROOF Revision 2` is `DONE` / owner `APPROVED TO PROCEED`** with 13 proof frames and full QA evidence. **`B02.2-FULL` is `RUNNING`** for 92 Chicken + 20 crop candidates; runtime placeholders and assets-src remain unchanged.
+B02.2 proof checkpoint: **`B02.2-PROOF Revision 2` is `DONE` / owner `APPROVED TO PROCEED`** with 13 proof frames and full QA evidence. **`B02.2-FULL` is `RUNNING`** for 92 Chicken + 20 crop candidates; only Rice/Carrot are promoted after integration review.
 
-B02 Parallel Art Wave 1: **five real generation tasks ran in parallel and all reached `REVIEW`**: ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5. Task-local technical QA is PASS for all five. All output stays under `work/art-generation/**`; Integration Owner cross-asset review is the next gate, and Wave 2 is not started.
+B02 Parallel Art Wave 1: **five real generation tasks completed**: ART-01 Chicken 92/92, ART-02 Rice 5/5, ART-03 Carrot 5/5, ART-04 Corn 5/5 and ART-05 Tomato 5/5. Integration Owner review promoted Rice/Carrot (`10/112`); Chicken/Corn/Tomato require targeted visual revision. Wave 2 is not started.
+
+## Wave 1 art integration checkpoint — 2026-09-30
+
+- **Promoted:** Rice 5/5 and Carrot 5/5 (**10/112** Wave 1 candidates).
+- **Running revision:** Chicken (gloss/micro-detail and WALK/EAT proof), Corn (detached alpha fragments), Tomato (detached alpha fragments).
+- **Production inventory:** `production_ready=10/188`, `placeholder=178/188`, `approved=0/188`; promoted provenance remains `license=PENDING_OWNER_REVIEW`.
+- **Gate status:** asset build/pack, validation/strict validation, renderer tests, full check, Docker Compose config and diff check pass.
+- **Next:** targeted revision and re-review only. Do not open Wave 2, Cloudflare E01 or RC01.
 
 ## Ranh giới còn lại
 
 - Runtime API chon ro PERSISTENCE_DRIVER=file hoac postgres; file/JSON FarmStore van la mac dinh prototype, con postgres da chay enter/session/bootstrap va tat ca mutation qua transaction repository.
 - pg driver, numeric migration CLI, BOM-safe migration runner va Compose migration loop da duoc chuan bi; readiness PostgreSQL tra 503 khi DB unavailable.
-- Asset đang là placeholder nội bộ (`placeholder: true`); B01 chỉ chuẩn bị inventory và contract, không tự bịa production art.
+- Asset inventory is partially promoted: 10 Rice/Carrot entries are `production_ready=true` with `license=PENDING_OWNER_REVIEW`; 178/188 remain internal placeholders and 0 are approved.
 - Chưa được gọi là Release Candidate cho tới khi persistence, E2E, mobile QA, performance, backup/restore, observability và deployment gate đạt checklist.
 - Không thêm pig, cow, fishing, weather, social, multiplayer, guild, chat hoặc gameplay mới trong milestone này.
 
