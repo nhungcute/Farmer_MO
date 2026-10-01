@@ -34,6 +34,7 @@ function fromApiBootstrap(data) {
       y: plot.gridY,
       cropId: crop?.cropId || null,
       readyAt,
+      plantedAt: crop?.plantedAt ?? null,
       stage: crop ? (readyAt !== null && readyAt <= Date.now() ? 'ready' : 'growing') : 'empty',
     };
   });

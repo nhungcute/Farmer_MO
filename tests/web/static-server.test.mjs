@@ -33,9 +33,19 @@ describe('web static artifact boundary', () => {
   test('serves the shell entry points and required public artifacts', async () => {
     const cases = [
       ['/', 'text/html', '<html'],
-      ['/index.html', 'text/html', '<title>MO Farm'],
+      ['/index.html', 'text/html', '<title>Mỡ Farm'],
       ['/sw.js', 'text/javascript', 'mo-farm-static'],
       ['/__app/main.js', 'text/javascript', 'defaultFarm'],
+      ['/__app/ui/FarmInterface.js', 'text/javascript', 'class FarmInterface'],
+      ['/__app/ui/ReferenceEntry.js', 'text/javascript', 'loginMarkup'],
+      ['/__app/ui/PanelLayout.js', 'text/javascript', 'alignPanel'],
+      ['/__app/ui/ReferencePanels.js', 'text/javascript', 'warehouseMarkup'],
+      ['/__app/ui/LiveHud.js', 'text/javascript', 'liveGameMarkup'],
+      ['/__app/game/pixi/PixiFarmRenderer.js', 'text/javascript', 'class PixiFarmRenderer'],
+      ['/__app/live-game.css', 'text/css', '.live-game'],
+      ['/__app/reference-entry.css', 'text/css', '.reference-entry'],
+      ['/__app/reference-panels.css', 'text/css', '.reference-shop'],
+      ['/__app/game/pixi/scene/FarmLandscape.js', 'text/javascript', 'createFarmLandscape'],
       ['/__app/styles.css', 'text/css', '--'],
       ['/public/manifest.webmanifest', 'application/manifest+json', 'vi-VN'],
       ['/public/favicon.svg', 'image/svg+xml', '<svg'],
@@ -55,6 +65,7 @@ describe('web static artifact boundary', () => {
     const forbidden = [
       '/server.mjs',
       '/Dockerfile',
+      '/build/vendor-pixi.mjs',
       '/README.md',
       '/renderer-demo.html',
       '/src/main.js',

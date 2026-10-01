@@ -72,7 +72,7 @@ export async function enterFarm(page, name, { bootstrapRequests = 1 } = {}) {
     await expect(page.locator('#login-form')).toBeVisible();
     await page.locator('#farmer-name').fill(name);
     await page.getByRole('button', { name: /Vào nông trại/u }).click();
-    await expect(page.locator('#farm-canvas')).toBeVisible();
+    await waitForFarmRenderer(page);
     await expect(page.locator('#farmer-name-label')).toHaveText(name);
     await expect.poll(() => bootstrap.length, { timeout: 10_000 }).toBe(bootstrapRequests);
     await expect(page.locator('.tutorial, .tutorial-overlay, [data-tutorial]')).toHaveCount(0);
@@ -92,7 +92,7 @@ export async function reloadFarm(page, name) {
   page.on('request', listener);
   try {
     await page.reload();
-    await expect(page.locator('#farm-canvas')).toBeVisible();
+    await waitForFarmRenderer(page);
     await expect(page.locator('#farmer-name-label')).toHaveText(name);
     await expect.poll(() => bootstrap.length, { timeout: 10_000 }).toBe(1);
     await expect(page.locator('.tutorial, .tutorial-overlay, [data-tutorial]')).toHaveCount(0);
@@ -102,35 +102,48 @@ export async function reloadFarm(page, name) {
   }
 }
 
-export async function clickGrid(page, gridX, gridY) {
-  // Gameplay state is owned by the shell and the legacy Canvas fallback is a
-  // supported renderer. Route synthetic grid taps to that stable input surface
-  // so a headless WebGL implementation or a frozen RAF cannot make hit testing
-  // flaky. Renderer-specific camera/pinch coverage remains in renderer tests.
-  const host = page.locator('#game-renderer-host');
-  if (await host.isVisible().catch(() => false)) {
-    await host.evaluate((element) => { element.style.pointerEvents = 'none'; });
-  }
-  const target = page.locator('#farm-canvas');
-  const box = await target.boundingBox();
-  if (!box) throw new Error('Farm renderer canvas has no layout box.');
+export async function waitForFarmRenderer(page) {
+  await expect(page.locator('#game-renderer-host canvas[data-live-ready="true"]')).toBeVisible();
+  await expect.poll(() => page.locator('#game-renderer-host').evaluate((host) =>
+    typeof (host.__farmRenderer || host.querySelector('canvas')?.__farmRenderer)?.cellToScreen,
+  )).toBe('function');
+}
 
-  const width = box.width;
-  const height = box.height;
-  // Canvas fallback uses its own 64x32 viewport fit.
-  const zoom = Math.min(1.25, Math.max(0.45, Math.min((width - 36) / 1536, (height - 38) / 768) * 1.65));
-  const originY = height * 0.5 - (768 * zoom) * 0.5;
-  const x = width * 0.5 + (gridX - gridY) * 32 * zoom;
-  const y = originY + (gridX + gridY + 1) * 16 * zoom;
-  if (x < 2 || y < 2 || x > width - 2 || y > height - 2) throw new Error(`Grid cell ${gridX},${gridY} is outside viewport (${x},${y},${width},${height}).`);
-  await page.mouse.click(box.x + x, box.y + y);
+/** Project through the renderer actually receiving the user's pointer events. */
+export async function gridPoint(page, gridX, gridY) {
+  await waitForFarmRenderer(page);
+  const point = await page.locator('#game-renderer-host').evaluate((host, cell) => {
+    const canvas = host.querySelector('canvas');
+    const renderer = host.__farmRenderer || canvas?.__farmRenderer;
+    const position = renderer.cellToScreen(cell.x, cell.y);
+    if (!position) return null;
+    const bounds = canvas.getBoundingClientRect();
+    return { x: position.clientX ?? bounds.x + position.x, y: position.clientY ?? bounds.y + position.y };
+  }, { x: gridX, y: gridY });
+  const viewport = page.viewportSize();
+  if (!point || !Number.isFinite(point.x) || !Number.isFinite(point.y) || point.x < 0 || point.y < 0 || (viewport && (point.x >= viewport.width || point.y >= viewport.height))) {
+    throw new Error(`Grid cell ${gridX},${gridY} is outside the displayed renderer: ${JSON.stringify(point)}.`);
+  }
+  return point;
+}
+
+export async function clickGrid(page, gridX, gridY) {
+  const point = await gridPoint(page, gridX, gridY);
+  const unobstructed = await page.evaluate(({ x, y }) => Boolean(document.elementFromPoint(x, y)?.closest('#game-renderer-host')), point);
+  expect(unobstructed, `Grid cell ${gridX},${gridY} must receive a real canvas click`).toBe(true);
+  await page.mouse.click(point.x, point.y);
 }
 
 export async function selectTool(page, tool) {
-  const button = page.locator(`[data-tool="${tool}"]`);
+  const selector = `[data-tool="${tool}"]:visible`;
+  const context = { plant: 'crops', harvest: 'crops', feed: 'animals', collect: 'animals', 'buy-feed': 'animals' }[tool];
+  if (!await page.locator(selector).count() && context) {
+    await page.locator(`[data-context="${context}"]`).click();
+  }
+  const button = page.locator(selector).first();
   await expect(button).toBeVisible();
   await button.click();
-  await expect(button).toHaveClass(/active/u);
+  if (tool !== 'buy-feed') await expect(page.locator(`[data-tool="${tool}"]`).first()).toHaveClass(/active/u);
 }
 
 export async function harvestStarterRice(page, count = 3) {

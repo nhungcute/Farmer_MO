@@ -6,6 +6,7 @@ import { ChickenView } from '../entities/ChickenView.js';
 import { CropView } from '../entities/CropView.js';
 import { OneShotEffectView } from '../entities/OneShotEffectView.js';
 import { PondView } from '../entities/PondView.js';
+import { createFarmLandscape } from './FarmLandscape.js';
 
 export class FarmScene {
   constructor({ assetRegistry, animationRegistry, tileWidth = 128, tileHeight = 64, onSelect, onAnimationEvent } = {}) {
@@ -18,13 +19,15 @@ export class FarmScene {
 
     this.root = new Container();
     this.root.label = 'FarmScene';
+    this.root.eventMode = 'none';
     this.terrainLayer = new Container();
     this.entityLayer = new Container();
     this.entityLayer.sortableChildren = true;
     this.effectsLayer = new Container();
     this.effectsLayer.sortableChildren = true;
     this.selectionLayer = new Container();
-    this.root.addChild(this.terrainLayer, this.entityLayer, this.effectsLayer, this.selectionLayer);
+    this.placementLayer = new Container();
+    this.root.addChild(this.terrainLayer, this.entityLayer, this.effectsLayer, this.selectionLayer, this.placementLayer);
 
     this.entities = new Map();
     this.effects = new Set();
@@ -53,7 +56,8 @@ export class FarmScene {
     const dimensionsChanged = !this.world
       || this.world.width !== world?.width
       || this.world.height !== world?.height
-      || this.world.terrainAssetId !== world?.terrainAssetId;
+      || this.world.terrainAssetId !== world?.terrainAssetId
+      || this.#landscapeKey(this.world) !== this.#landscapeKey(world);
     this.world = world;
     if (dimensionsChanged) this.#buildTerrain();
     const incoming = new Map(this.#allModels(world).map((model) => [model.id, model]));
@@ -107,25 +111,102 @@ export class FarmScene {
     return models;
   }
 
-  #buildTerrain() {
-    this.terrainLayer.removeChildren().forEach((child) => child.destroy?.());
-    if (!this.world) return;
-    const variants = ['terrain_grass_tile', 'terrain_grass_variant_01', 'terrain_grass_variant_02', 'terrain_grass_variant_03', 'terrain_grass_variant_04'];
+  #landscapeKey(world) {
+    return [...(world?.buildings || []), ...(world?.crops || [])]
+      .map(model => `${model.id}:${model.gridX}:${model.gridY}`).join('|');
+  }
 
-    for (let y = 0; y < this.world.height; y += 1) {
-      for (let x = 0; x < this.world.width; x += 1) {
-        const variantIndex = (x * 17 + y * 31) % 13 === 0 ? 1 + ((x + y) % 4) : 0;
-        const assetId = this.assetRegistry.has(variants[variantIndex]) ? variants[variantIndex] : this.world.terrainAssetId;
-        const sprite = new Sprite(this.assetRegistry.texture(assetId));
-        const anchor = this.assetRegistry.anchor(assetId, { x: 0.5, y: 0.5 });
-        const sourceScale = this.assetRegistry.sourceScale(assetId);
-        sprite.anchor.set(anchor.x, anchor.y);
-        sprite.scale.set(1 / sourceScale);
-        const point = isoToWorld(x, y, this.tileWidth, this.tileHeight);
-        sprite.position.set(point.x, point.y);
-        this.terrainLayer.addChild(sprite);
+  #buildTerrain() {
+    this.terrainLayer.removeChildren().forEach((child) => child.destroy?.({ children: true }));
+    if (this.world) {
+      this.landscape = createFarmLandscape(this.world, this.tileWidth, this.tileHeight, {
+        treeTexture: this.assetRegistry.has('decor_orchard_tree') ? this.assetRegistry.texture('decor_orchard_tree') : null,
+      });
+      this.terrainLayer.addChild(this.landscape);
+    }
+  }
+
+  refreshLandscape() { this.#buildTerrain(); }
+
+  pick(worldX, worldY) {
+    const point = { x: worldX, y: worldY };
+    const views = [...this.entities.values()].sort((a, b) => b.container.zIndex - a.container.zIndex);
+    for (const view of views) {
+      if (view.container.visible && view.containsWorldPoint(point, this.root, this.assetRegistry)) return view.model;
+    }
+    return null;
+  }
+
+  targetForCell(gridX, gridY) {
+    const views = [...this.entities.values()];
+    const view = views.find(entry => entry.model.gridX === gridX && entry.model.gridY === gridY)
+      || views.find(entry => {
+        const model = entry.model;
+        return model.kind === 'building' && gridX >= model.gridX && gridY >= model.gridY
+          && gridX < model.gridX + (model.footprint?.[0] || 1)
+          && gridY < model.gridY + (model.footprint?.[1] || 1);
+      });
+    return view ? { ...view.targetWorldPoint(this.root), entityId: view.model.id }
+      : isoToWorld(gridX, gridY, this.tileWidth, this.tileHeight);
+  }
+
+  canPlace(gridX, gridY, footprint = [1, 1]) {
+    const [width, height] = footprint;
+    if (gridX < 0 || gridY < 0 || gridX + width > this.world.width || gridY + height > this.world.height) return false;
+    return ![...(this.world.buildings || []), ...(this.world.crops || [])].some(model => {
+      const [otherWidth, otherHeight] = model.footprint || [1, 1];
+      return gridX < model.gridX + otherWidth && gridX + width > model.gridX
+        && gridY < model.gridY + otherHeight && gridY + height > model.gridY;
+    });
+  }
+
+  setPlacement(cell, { assetId, footprint = [1, 1] } = {}) {
+    this.placementLayer.removeChildren().forEach(child => child.destroy({ children: true }));
+    this.placement = null;
+    if (!cell || !this.world) return;
+    const valid = this.canPlace(cell.x, cell.y, footprint);
+    const color = valid ? 0x71d94a : 0xf16a5b;
+    const tiles = new Graphics();
+    for (let x = 0; x < footprint[0]; x += 1) {
+      for (let y = 0; y < footprint[1]; y += 1) {
+        tiles.poly(tileDiamond(cell.x + x, cell.y + y, this.tileWidth, this.tileHeight).flatMap(p => [p.x, p.y]))
+          .fill({ color, alpha: 0.32 }).stroke({ color, width: 2.5, alpha: 0.9 });
       }
     }
+    this.placementLayer.addChild(tiles);
+    if (assetId && this.assetRegistry.has(assetId)) {
+      const ghost = new Sprite(this.assetRegistry.texture(assetId));
+      const p = isoToWorld(cell.x, cell.y, this.tileWidth, this.tileHeight);
+      const anchor = this.assetRegistry.anchor(assetId);
+      ghost.anchor.set(anchor.x, anchor.y);
+      ghost.position.set(p.x, p.y);
+      ghost.scale.set((assetId.startsWith('building_') ? 1.48 : 1) / this.assetRegistry.sourceScale(assetId));
+      ghost.alpha = 0.52;
+      ghost.tint = valid ? 0xe4ffcc : 0xffb8ac;
+      this.placementLayer.addChild(ghost);
+    }
+    this.placement = { ...cell, valid, footprint };
+    return valid;
+  }
+
+  framingBounds({ prioritizeActions = false } = {}) {
+    const models = this.#allModels(this.world);
+    if (!models.length) return this.worldBounds;
+    const bounds = { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity };
+    let firstActionY = Infinity;
+    for (const model of models) {
+      const p = isoToWorld(model.gridX, model.gridY, this.tileWidth, this.tileHeight);
+      const building = model.kind === 'building' || model.kind === 'pond';
+      if (!building) firstActionY = Math.min(firstActionY, p.y - 135);
+      bounds.minX = Math.min(bounds.minX, p.x - (building ? 205 : 110));
+      bounds.maxX = Math.max(bounds.maxX, p.x + (building ? 205 : 110));
+      bounds.minY = Math.min(bounds.minY, p.y - (building ? 285 : 135));
+      bounds.maxY = Math.max(bounds.maxY, p.y + (building ? 45 : 42));
+    }
+    // Short screens frame the reachable crops and animals at a useful size.
+    // Tall roofs may extend above the viewport and remain reachable by panning.
+    if (prioritizeActions && Number.isFinite(firstActionY)) bounds.minY = firstActionY;
+    return bounds;
   }
 
   #clearEntities() {
@@ -157,6 +238,7 @@ export class FarmScene {
 
   setSelection(gridX, gridY, { valid = null } = {}) {
     this.selectionLayer.removeChildren().forEach((child) => child.destroy?.());
+    this.selection = null;
     if (!Number.isFinite(gridX) || !Number.isFinite(gridY)) return;
     const points = tileDiamond(gridX, gridY, this.tileWidth, this.tileHeight);
     const color = valid === false ? 0xf05a4f : valid === true ? 0x6ad44c : 0xffdc63;
@@ -186,10 +268,11 @@ export class FarmScene {
 
   update(deltaMs, visibleWorldRect) {
     this.animatedCount = 0;
+    this.landscape?.update?.(deltaMs);
     for (const view of this.entities.values()) {
       if (!view.container.visible) continue;
       view.update(deltaMs);
-      if (view.player || view.water || view.glow) this.animatedCount += 1;
+      if (view.player || view.water || view.glow || view.cropSprite?.visible) this.animatedCount += 1;
     }
 
     for (const effect of [...this.effects]) effect.update(deltaMs);

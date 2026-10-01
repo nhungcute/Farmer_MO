@@ -1,4 +1,4 @@
-import { Graphics } from 'pixi.js';
+import { Container, Graphics } from 'pixi.js';
 import { EntityView } from './EntityView.js';
 import { PixiAnimationPlayer } from '../PixiAnimationPlayer.js';
 
@@ -6,7 +6,8 @@ export class ChickenView extends EntityView {
   constructor(model, deps) {
     super(model, deps);
     this.deps = deps;
-    this.shadow = new Graphics().ellipse(0, -2, 34, 13).fill({ color: 0x19351f, alpha: 0.22 });
+    this.motionTime = [...String(model.id || '')].reduce((sum, char) => sum + char.charCodeAt(0), 0) * 0.17;
+    this.shadow = new Graphics().ellipse(0, -2, 23, 9).fill({ color: 0x19351f, alpha: 0.18 });
     this.container.addChild(this.shadow);
     this.player = new PixiAnimationPlayer({
       assetRegistry: deps.assetRegistry,
@@ -17,10 +18,10 @@ export class ChickenView extends EntityView {
       phase: model.phase || 0,
       onEvent: (event) => deps.onAnimationEvent?.({ ...event, entity: this.model }),
     });
-    this.container.addChild(this.player.sprite);
-    this.container.eventMode = 'static';
-    this.container.cursor = 'pointer';
-    this.container.on('pointertap', () => deps.onSelect?.(this.model));
+    this.visual = new Container();
+    this.visual.scale.set(0.68);
+    this.visual.addChild(this.player.sprite);
+    this.container.addChild(this.visual);
     this.cullHalfWidth = 86;
     this.cullHalfHeight = 110;
   }
@@ -56,5 +57,10 @@ export class ChickenView extends EntityView {
       }
     }
     this.player.update(deltaMs);
+    this.motionTime += Math.min(100, Math.max(0, deltaMs)) / 1000;
+    const idle = ['IDLE', 'WALK', 'HAPPY'].includes(this.model.state || 'IDLE');
+    const offset = idle ? Math.sin(this.motionTime * 0.65) * 11 : 0;
+    this.player.sprite.position.set(offset, idle ? -Math.abs(Math.sin(this.motionTime * 1.4)) * 2.5 : 0);
+    this.shadow.position.x = offset * this.visual.scale.x;
   }
 }

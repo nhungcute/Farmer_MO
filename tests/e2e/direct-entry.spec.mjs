@@ -4,6 +4,7 @@ import {
   advanceServerClock,
   apiJson,
   captureBrowserErrors,
+  clickGrid,
   enterFarm,
   installServerAlignedClock,
   placeBuilding,
@@ -23,25 +24,28 @@ test.describe('direct-entry desktop gameplay', () => {
     const name = uniqueCharacterName('crop');
     await enterFarm(page, name);
 
-    // Starter rice is ready immediately. Mutation requests go through the
-    // browser session so the API remains the authority for inventory/timers;
-    // this avoids making the gameplay assertion depend on headless WebGL hit
-    // coordinates.
+    // Starter rice is ready immediately; interact with the displayed plot.
     await selectTool(page, 'harvest');
     const starter = await apiJson(page, '/api/game/bootstrap');
     const starterCrop = starter.crops.find((crop) => crop.plotId === starter.plots.find((plot) => plot.gridX === 8 && plot.gridY === 10)?.id);
     expect(starterCrop).toBeTruthy();
-    await apiJson(page, '/api/crops/harvest', { method: 'POST', body: { plotId: starterCrop.plotId } });
+    const starterHarvest = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === '/api/crops/harvest');
+    await clickGrid(page, 8, 10);
+    expect((await starterHarvest).ok()).toBeTruthy();
 
     // Plant an empty starter plot, advance both clocks, then harvest it.
     await selectTool(page, 'plant');
     const emptyPlot = starter.plots.find((plot) => plot.gridX === 8 && plot.gridY === 13);
     expect(emptyPlot).toBeTruthy();
-    await apiJson(page, '/api/crops/plant', { method: 'POST', body: { plotId: emptyPlot.id, cropId: 'rice' } });
+    const planted = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === '/api/crops/plant');
+    await clickGrid(page, 8, 13);
+    expect((await planted).ok()).toBeTruthy();
     await advanceServerClock(page, 120_001);
 
     await selectTool(page, 'harvest');
-    await apiJson(page, '/api/crops/harvest', { method: 'POST', body: { plotId: emptyPlot.id } });
+    const grownHarvest = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === '/api/crops/harvest');
+    await clickGrid(page, 8, 13);
+    expect((await grownHarvest).ok()).toBeTruthy();
 
     const beforeReload = await apiJson(page, '/api/game/bootstrap');
     expect(beforeReload.crops.some((crop) => crop.plotId === beforeReload.plots.find((plot) => plot.gridX === 8 && plot.gridY === 13)?.id)).toBe(false);
@@ -59,7 +63,8 @@ test.describe('direct-entry desktop gameplay', () => {
     const name = uniqueCharacterName('same');
     await enterFarm(page, name);
 
-    await page.locator('#logout').click();
+    await page.locator('[data-panel="settings"]:visible').first().click();
+    await page.locator('dialog [data-action="logout"]').click();
     await expect(page.locator('#login-form')).toBeVisible();
     const enterResponse = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === '/api/character/enter');
     await page.locator('#farmer-name').fill(name);
@@ -105,22 +110,24 @@ test.describe('direct-entry desktop gameplay', () => {
     // has the server-created coop/chicken before canvas interactions begin.
     await reloadFarm(page, name);
 
-    // The toolbar selects the action and the browser session performs the
-    // mutation. Server time is advanced by the harness instead of sleeping
-    // for ten minutes.
-    await selectTool(page, 'feed');
-    await apiJson(page, '/api/animals/feed', { method: 'POST', body: { animalId: chickenId } });
+    async function actOnChicken(tool, path) {
+      await selectTool(page, tool);
+      const mutation = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === path);
+      await clickGrid(page, 17, 15);
+      const response = await mutation;
+      expect(response.ok()).toBeTruthy();
+      expect(response.request().postDataJSON()).toEqual({ animalId: chickenId });
+    }
+    await actOnChicken('feed', '/api/animals/feed');
 
     await advanceServerClock(page, 600_001);
-    await selectTool(page, 'collect');
-    await apiJson(page, '/api/animals/collect', { method: 'POST', body: { animalId: chickenId } });
+    await actOnChicken('collect', '/api/animals/collect');
 
     const buyFeed = page.waitForResponse((response) => response.request().method() === 'POST' && new URL(response.url()).pathname === '/api/market/buy');
-    await page.locator('[data-tool="buy-feed"]').click();
+    await selectTool(page, 'buy-feed');
     await buyFeed;
 
-    await selectTool(page, 'feed');
-    await apiJson(page, '/api/animals/feed', { method: 'POST', body: { animalId: chickenId } });
+    await actOnChicken('feed', '/api/animals/feed');
 
     const state = await apiJson(page, '/api/game/bootstrap');
     expect(state.animals.filter((animal) => animal.id === chickenId)).toHaveLength(1);

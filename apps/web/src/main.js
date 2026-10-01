@@ -1,4 +1,7 @@
 import { formatNumber, t } from './locales/vi-VN.js';
+import { FarmInterface, ITEMS } from './ui/FarmInterface.js';
+import { loginMarkup, loadingMarkup } from './ui/ReferenceEntry.js';
+import { liveGameMarkup } from './ui/LiveHud.js';
 
 const CONFIG = {
   apiBaseUrl: '',
@@ -179,12 +182,14 @@ class FarmRenderer {
 function stageFor(plot) { const remaining = Math.max(0, (timestamp(plot.readyAt) - Date.now()) / 1000); const total = CROPS[plot.cropId]?.grow || 120; const ratio = 1 - remaining / total; return ratio > .66 ? 'stage_3' : ratio > .33 ? 'stage_2' : 'stage_1'; }
 
 class FarmApp {
-  constructor(root) { this.root = root; this.api = new FarmApi(CONFIG.apiBaseUrl); this.assets = new AssetRegistry(CONFIG.assetBase); this.farm = null; this.tool = 'inspect'; this.selectedCrop = 'rice'; this.noticeTimer = null; this.gameRenderer = null; this.rendererEpoch = 0; this.presentationTimer = null; }
-  async start() { const saved = this.loadSession(); if (saved?.farm && saved?.name) { try { const remote = await this.api.bootstrap(); this.farm = normalizeFarm(remote, saved.name); this.persist(); } catch (error) { if (error.status === 401) { localStorage.removeItem(STORAGE_KEY); this.renderLogin(t('sessionExpired')); return; } this.farm = normalizeFarm(saved.farm, saved.name); } this.renderGame(); return; } this.renderLogin(); }
+  constructor(root) { this.root = root; this.api = new FarmApi(CONFIG.apiBaseUrl); this.assets = new AssetRegistry(CONFIG.assetBase); this.farm = null; this.tool = 'inspect'; this.selectedCrop = 'rice'; this.noticeTimer = null; this.gameRenderer = null; this.rendererEpoch = 0; this.presentationTimer = null; this.ui = null; this.selectedBuilding = 'chicken_coop_lv1'; this.pendingCells = new Set(); }
+  async start() { const saved = this.loadSession(); if (saved?.farm && saved?.name) { try { const remote = await this.api.bootstrap(); this.farm = normalizeFarm(remote, saved.name); this.persist(); } catch (error) { if (error.status === 401) { localStorage.removeItem(STORAGE_KEY); this.renderLogin(t('sessionExpired')); return; } this.farm = normalizeFarm(saved.farm, saved.name); } await this.prepareGame(); return; } this.renderLogin(); }
   loadSession() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch { return null; } }
-  persist() { localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: this.farm.character.name, farm: this.farm })); }
+  persist() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: this.farm.character.name, farm: this.farm })); } catch { this.setStatus('Bộ nhớ trình duyệt đã đầy. Tiến trình trực tuyến vẫn được lưu.'); } }
   destroyGameRenderer() {
     this.rendererEpoch += 1;
+    this.ui?.destroy?.();
+    this.ui = null;
     clearInterval(this.presentationTimer);
     this.presentationTimer = null;
     this.gameRenderer?.destroy?.();
@@ -227,9 +232,11 @@ class FarmApp {
       host.style.visibility = 'visible';
       host.style.pointerEvents = 'auto';
       this.renderer?.pause?.();
-      fallbackCanvas.style.visibility = 'hidden';
+      fallbackCanvas.style.visibility = 'visible';
       fallbackCanvas.style.pointerEvents = 'none';
-      this.setStatus(t('ready'));
+      this.root.querySelector('.game').dataset.renderer = 'pixi';
+      this.syncInteraction();
+      this.root.querySelector('#status').textContent = t('ready');
     } catch (error) {
       host.hidden = true;
       host.setAttribute('aria-hidden', 'true');
@@ -238,15 +245,13 @@ class FarmApp {
       host.style.pointerEvents = 'none';
       fallbackCanvas.style.visibility = 'visible';
       fallbackCanvas.style.pointerEvents = 'auto';
+      this.root.querySelector('.game').dataset.renderer = 'canvas';
       console.info('[MO Farm] Pixi renderer unavailable; using Canvas fallback.', error);
     }
   }
   handleRendererObject(object) {
     if (!object) return;
-    // InputController also reports the same pointer as a cell tap. Action
-    // tools must be dispatched once through that path; object callbacks are
-    // reserved for inspect feedback to avoid duplicate mutations.
-    if (this.tool !== 'inspect') return;
+    // The scene emits either one object selection or one empty-cell selection.
     const plot = object.kind === 'crop' ? this.farm?.plots.find((item) => item.x === object.gridX && item.y === object.gridY) : null;
     if (plot) return this.handleCell({ x: plot.x, y: plot.y });
     const chicken = object.kind === 'chicken' ? this.farm?.chickens.find((item) => item.id === object.id) : null;
@@ -288,14 +293,104 @@ class FarmApp {
   }
   renderLogin(error = '') {
     this.destroyGameRenderer();
-    this.root.innerHTML = `<section class="screen"><form class="login-card" id="login-form" novalidate><div class="brand"><div class="brand-mark" aria-hidden="true">🌾</div><div><h1>${t('brandTitle')}</h1><p>${t('brandSubtitle')}</p></div></div><label for="farmer-name">${t('playerName')}</label><input id="farmer-name" name="name" autocomplete="nickname" maxlength="${MAX_NAME_LENGTH}" placeholder="${t('namePlaceholder')}" required /><p class="hint">${t('directEntryHint')}</p><p class="error" id="login-error" role="alert">${escapeHtml(error)}</p><button class="primary" type="submit">${t('enterFarm')}</button></form></section>`;
-    const form = this.root.querySelector('#login-form'); form.addEventListener('submit', (event) => this.login(event)); this.root.querySelector('#farmer-name').focus();
+    this.root.innerHTML = loginMarkup(error, CONFIG.assetBase);
+    this.root.querySelector('#login-form').addEventListener('submit', (event) => this.login(event));
   }
-  async login(event) { event.preventDefault(); const input = this.root.querySelector('#farmer-name'); const name = normalizeName(input.value); if (name.length < 2) { this.root.querySelector('#login-error').textContent = t('nameTooShort'); return; } const button = event.submitter; button.disabled = true; button.textContent = t('openingFarm'); let farm; try { await this.api.enter(name); farm = await this.api.bootstrap(); } catch (error) { if (!error.network) { button.disabled = false; button.textContent = t('enterFarm'); this.root.querySelector('#login-error').textContent = error.message; return; } farm = defaultFarm(name); } this.farm = normalizeFarm(farm, name); this.persist(); this.renderGame(); }
-  renderGame() { this.destroyGameRenderer(); this.root.innerHTML = `<section class="game"><header class="topbar"><div class="brand"><div class="brand-mark" aria-hidden="true">🌾</div><div><h1>${t('brandTitle')}</h1><p><span id="farm-caption"></span> <span id="farmer-name-label"></span></p></div></div><div class="resources" aria-label="${t('resources')}"><span class="resource">🪙 <b id="coins">0</b></span><span class="resource">💎 <b id="diamonds">0</b></span><span class="resource">⭐ <b id="level">${t('level',{level:1})}</b></span><span class="resource">📦 <b id="capacity">${t('capacity',{used:0,capacity:100})}</b></span></div><button class="logout" id="logout" type="button">${t('logout')}</button></header><div class="world-wrap"><canvas id="farm-canvas" aria-label="${t('farmMap')}"></canvas><div id="game-renderer-host" aria-hidden="true" hidden></div><div class="legend">${t('mapHint')}</div><div class="orientation" role="status" aria-live="polite"><div class="orientation-card"><strong>${t('rotateTitle')}</strong><p>${t('rotateHint')}</p></div></div><div class="notice" id="notice" role="status"></div></div><nav class="toolbar" aria-label="${t('tools')}"><button class="tool active" data-tool="inspect" type="button">${t('inspect')}</button><button class="tool" data-tool="plant" type="button">${t('plant')} <span class="count" id="crop-choice">${t('rice')}</span></button><button class="tool" data-tool="harvest" type="button">${t('harvest')}</button><button class="tool" data-tool="build" type="button">${t('buildCoop')}</button><button class="tool" data-tool="feed" type="button">${t('feed')}</button><button class="tool" data-tool="collect" type="button">${t('collect')}</button><button class="tool" data-tool="buy-feed" type="button">${t('buyFeed')}</button><button class="tool" data-tool="sell-rice" type="button">${t('sellRice')}</button><button class="tool" data-tool="complete-order" type="button">${t('completeOrder')}</button><button class="tool" data-tool="claim-quest" type="button">${t('claimQuest')}</button><span class="status" id="status">${t('loadingAssets')}</span></nav></section>`; this.root.querySelector('#farm-caption').textContent = t('farmOf',{name:''}).trim(); this.root.querySelector('#farmer-name-label').textContent = this.farm.character.name; this.root.querySelector('#logout').addEventListener('click', () => { localStorage.removeItem(STORAGE_KEY); this.farm = null; this.renderLogin(); }); this.root.querySelectorAll('[data-tool]').forEach((button) => button.addEventListener('click', () => { const tool = button.dataset.tool; if (tool === 'buy-feed') return this.buyFeed(); if (tool === 'sell-rice') return this.sellItem('rice', 1); if (tool === 'complete-order') return this.completeFirstOrder(); if (tool === 'claim-quest') return this.claimFirstQuest(); if (tool === 'plant' && this.tool === 'plant') return this.cycleCrop(); this.setTool(tool); })); this.updateHeader(); const canvas = this.root.querySelector('#farm-canvas'); const renderer = new FarmRenderer(canvas, this.assets, () => this.farm); renderer.onCell = (cell) => this.handleCell(cell); this.renderer = renderer; this.presentationTimer = setInterval(() => this.syncAnimalPresentation(), 1000); this.assets.load().then(() => this.setStatus(t('ready'))); this.mountPixiRenderer(); }
-  setTool(tool) { this.tool = tool; this.root.querySelectorAll('[data-tool]').forEach((button) => button.classList.toggle('active', button.dataset.tool === tool)); const names = { inspect: t('inspectHint'), plant: t('chooseCrop', { crop: CROPS[this.selectedCrop].label }), harvest: t('chooseHarvest'), build: t('chooseBuild'), feed: t('chooseFeed'), collect: t('chooseCollect'), 'buy-feed': t('buyFeedHint') }; this.setStatus(names[tool]); }
+
+  loadingProgress(value, message) {
+    const track = this.root.querySelector('.loading-track');
+    if (!track) return;
+    track.setAttribute('aria-valuenow', String(value));
+    track.querySelector('span').style.width = `${value}%`;
+    track.querySelector('b').textContent = `${value}%`;
+    this.root.querySelector('.loading-status').textContent = message;
+  }
+  async prepareGame() {
+    this.root.innerHTML = loadingMarkup(CONFIG.assetBase);
+    this.loadingProgress(55, 'Đang chuẩn bị cây trồng và công trình…');
+    await this.assets.load();
+    this.loadingProgress(100, 'Nông trại đã sẵn sàng!');
+    await this.renderGame();
+  }
+  async login(event) {
+    event.preventDefault();
+    const name = normalizeName(this.root.querySelector('#farmer-name').value);
+    if (name.length < 2) { this.root.querySelector('#login-error').textContent = t('nameTooShort'); return; }
+    this.root.innerHTML = loadingMarkup(CONFIG.assetBase);
+    let farm;
+    try {
+      await this.api.enter(name);
+      this.loadingProgress(30, 'Đang mở cánh cổng nông trại…');
+      farm = await this.api.bootstrap();
+    } catch (error) {
+      if (!error.network) { this.renderLogin(error.message); return; }
+      farm = defaultFarm(name);
+    }
+    this.farm = normalizeFarm(farm, name);
+    this.persist();
+    await this.prepareGame();
+  }
+  async renderGame() {
+    this.destroyGameRenderer();
+    this.tool = 'inspect';
+    this.selectedCrop = 'rice';
+    this.root.innerHTML = liveGameMarkup();
+    this.root.querySelector('#farmer-name-label').textContent = this.farm.character.name;
+    this.root.querySelector('#logout').addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_KEY);
+      this.farm = null;
+      this.renderLogin();
+    });
+    this.root.querySelectorAll('[data-tool]').forEach((button) => button.addEventListener('click', () => {
+      const tool = button.dataset.tool;
+      if (tool === 'buy-feed') return this.buyFeed();
+      if (tool === 'build') { this.setTool('build'); return this.ui.open('build'); }
+      if (tool === 'plant' && this.tool === 'plant') return this.cycleCrop();
+      this.setTool(tool);
+    }));
+    this.root.querySelectorAll('[data-context]').forEach((button) => button.addEventListener('click', () => {
+      this.showActions(button.dataset.context);
+    }));
+    this.ui = new FarmInterface(this, CROPS);
+    this.updateHeader();
+    const canvas = this.root.querySelector('#farm-canvas');
+    this.renderer = new FarmRenderer(canvas, this.assets, () => this.farm);
+    this.renderer.onCell = (cell) => this.handleCell(cell);
+    this.presentationTimer = setInterval(() => this.syncAnimalPresentation(), 1000);
+    await this.mountPixiRenderer();
+  }
+  showActions(context) {
+    this.root.querySelector('.action-palette').hidden = false;
+    this.root.querySelector('.crop-actions').hidden = context !== 'crops';
+    this.root.querySelector('.animal-actions').hidden = context !== 'animals';
+  }
+  setTool(tool) {
+    this.tool = tool;
+    if (tool === 'inspect') this.root.querySelector('.action-palette').hidden = true;
+    this.root.querySelectorAll('[data-tool]').forEach((button) => {
+      button.classList.toggle('active', button.dataset.tool === tool);
+      button.setAttribute('aria-pressed', String(button.dataset.tool === tool));
+    });
+    this.syncInteraction();
+    const names = { inspect: t('inspectHint'), plant: t('chooseCrop', { crop: CROPS[this.selectedCrop].label }), harvest: t('chooseHarvest'), build: t('chooseBuild'), feed: t('chooseFeed'), collect: t('chooseCollect'), 'buy-feed': t('buyFeedHint') };
+    this.setStatus(names[tool]);
+  }
+  syncInteraction() {
+    const pond = this.selectedBuilding === 'pond_small_lv1';
+    this.gameRenderer?.renderer?.setInteraction?.(this.tool, {
+      assetId: pond ? 'pond_small_lv1_base' : 'building_chicken_coop_lv1',
+      footprint: pond ? [2, 2] : [3, 2],
+    });
+  }
   cycleCrop() { const unlocked = ['rice', 'carrot', 'corn', 'tomato'].filter((id) => this.farm.level >= ({ rice: 1, carrot: 2, corn: 3, tomato: 4 }[id])); const index = unlocked.indexOf(this.selectedCrop); this.selectedCrop = unlocked[(index + 1) % unlocked.length]; this.root.querySelector('#crop-choice').textContent = CROPS[this.selectedCrop].label; this.setTool('plant'); }
   async handleCell(cell) {
+    const key = `${cell.x}:${cell.y}`;
+    if (this.pendingCells.has(key)) return;
+    this.pendingCells.add(key);
+    try { await this.performCellAction(cell); }
+    finally { this.pendingCells.delete(key); }
+  }
+  async performCellAction(cell) {
     if (!this.farm || cell.x < 0 || cell.y < 0 || cell.x >= MAP.width || cell.y >= MAP.height) return;
     const plot = this.farm.plots.find((item) => item.x === cell.x && item.y === cell.y);
     const building = this.farm.buildings.find((item) => item.x === cell.x && item.y === cell.y);
@@ -314,7 +409,7 @@ class FarmApp {
       if (plot.stage === 'ready') this.setStatus(t('readyCrop', { crop: CROPS[plot.cropId].label }));
       else if (plot.stage === 'empty') this.setStatus(t('emptyPlot'));
       else this.setStatus(t('growingCrop', { crop: CROPS[plot.cropId].label }));
-    } else if (building) this.setStatus(building.buildingId === 'chicken_coop_lv1' ? t('coopLevel') : t('fixedBuilding'));
+    } else if (building) { if (building.buildingId === 'warehouse_lv1') this.ui.open('warehouse'); else this.setStatus(building.buildingId === 'chicken_coop_lv1' ? t('coopLevel') : t('fixedBuilding')); }
     else if (chicken) this.setStatus(Number.isFinite(timestamp(chicken.productReadyAt)) && timestamp(chicken.productReadyAt) <= Date.now() ? t('chickenReady') : t('chickenResting'));
   }
   applyMutation(data) {
@@ -323,81 +418,147 @@ class FarmApp {
     for (const delta of data.inventoryDelta || []) this.farm.inventory[delta.itemId] = delta.newQuantity;
     return data;
   }
+  async refreshProgress() {
+    if (!this.farm || this.farm.character.id.startsWith('local-')) return;
+    const farm = this.farm;
+    try {
+      const fresh = normalizeFarm(await this.api.bootstrap(), farm.character.name);
+      if (this.farm !== farm) return;
+      farm.quests = fresh.quests;
+      farm.orders = fresh.orders;
+      this.persist();
+      this.ui?.refresh();
+    } catch { /* The next successful action or reload refreshes progress. */ }
+  }
   async plant(plot) {
-    const crop = CROPS[this.selectedCrop];
+    const cropId = this.selectedCrop;
+    const crop = CROPS[cropId];
     if (!crop || this.farm.coins < crop.cost) return this.setStatus(t('notEnoughCoins', { crop: crop?.label || t('rice') }));
     try {
-      const data = this.applyMutation(await this.api.plant(plot.id, this.selectedCrop));
-      plot.cropId = data.crop.cropId; plot.readyAt = Date.parse(data.crop.readyAt); plot.stage = 'growing'; this.setStatus(t('planted', { crop: crop.label }));
+      const data = this.applyMutation(await this.api.plant(plot.id, cropId));
+      plot.cropId = data.crop.cropId; plot.plantedAt = Date.parse(data.crop.plantedAt); plot.readyAt = Date.parse(data.crop.readyAt); plot.stage = 'growing'; this.setStatus(t('planted', { crop: crop.label }));
     } catch (error) {
-      if (error.network) { this.farm.coins -= crop.cost; plot.cropId = this.selectedCrop; plot.readyAt = Date.now() + crop.grow * 1000; plot.stage = 'growing'; this.setStatus(t('plantedLocal', { crop: crop.label })); }
+      if (error.network) { this.farm.coins -= crop.cost; plot.cropId = cropId; plot.plantedAt = Date.now(); plot.readyAt = plot.plantedAt + crop.grow * 1000; plot.stage = 'growing'; this.setStatus(t('plantedLocal', { crop: crop.label })); }
       else this.setStatus(error.message || t('invalidMutation'));
     }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
   async harvest(plot) {
     const crop = CROPS[plot.cropId];
+    if (!crop) return;
+    const used = Object.values(this.farm.inventory).reduce((sum, value) => sum + Number(value || 0), 0);
+    if (used + crop.yield > this.farm.warehouseCapacity) return this.setStatus('Kho đã đầy. Hãy bán bớt nông sản.');
     try {
-      const data = this.applyMutation(await this.api.harvest(plot.id)); plot.stage = 'empty'; plot.cropId = null; plot.readyAt = null;
+      const data = this.applyMutation(await this.api.harvest(plot.id)); plot.stage = 'empty'; plot.cropId = null; plot.plantedAt = null; plot.readyAt = null;
       this.gameRenderer?.renderer?.playEffectAtGrid?.('fx_harvest', plot.x, plot.y);
       this.setStatus(t('harvested', { crop: crop.label, quantity: data.harvested?.quantity || crop.yield }));
     } catch (error) {
-      if (error.network) { this.farm.inventory[plot.cropId] = (this.farm.inventory[plot.cropId] || 0) + crop.yield; this.farm.xp += crop.xp; plot.stage = 'empty'; plot.cropId = null; plot.readyAt = null; this.setStatus(t('harvestedLocal', { crop: crop.label, quantity: crop.yield })); }
+      if (error.network) { this.farm.inventory[plot.cropId] = (this.farm.inventory[plot.cropId] || 0) + crop.yield; this.farm.xp += crop.xp; plot.stage = 'empty'; plot.cropId = null; plot.plantedAt = null; plot.readyAt = null; this.setStatus(t('harvestedLocal', { crop: crop.label, quantity: crop.yield })); }
       else this.setStatus(error.message || t('invalidMutation'));
     }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
   async buildCoop(x, y) {
+    const id = this.selectedBuilding || 'chicken_coop_lv1';
+    const pond = id === 'pond_small_lv1';
+    const cost = pond ? 200 : 300;
+    const footprint = pond ? [2, 2] : [3, 2];
     if (this.farm.level < 2) return this.setStatus(t('needLevelCoop'));
-    if (this.farm.coins < 300) return this.setStatus(t('needCoinsCoop'));
-    if (this.farm.buildings.some((item) => item.buildingId === 'chicken_coop_lv1')) return this.setStatus(t('uniqueCoop'));
+    if (this.farm.coins < cost) return this.setStatus(`Cần ${cost} Xu để xây công trình này.`);
+    if (this.farm.buildings.some((item) => item.buildingId === id)) return this.setStatus('Công trình này đã có trong nông trại.');
+    // Validate the complete footprint for both online and offline placement.
+    const occupied = (cx, cy) => this.farm.plots.some((plot) => plot.x === cx && plot.y === cy) || this.farm.buildings.some((b) => cx >= b.x && cy >= b.y && cx < b.x + b.footprint[0] && cy < b.y + b.footprint[1]);
+    for (let dx = 0; dx < footprint[0]; dx++) for (let dy = 0; dy < footprint[1]; dy++) {
+      if (x + dx >= MAP.width || y + dy >= MAP.height || occupied(x + dx, y + dy)) return this.setStatus('Vị trí này không đủ chỗ. Hãy chọn khu đất trống.');
+    }
     try {
-      const data = this.applyMutation(await this.api.build('chicken_coop_lv1', x, y)); const object = data.object;
-      this.farm.buildings.push({ id: object.id, buildingId: object.definitionId, x: object.gridX, y: object.gridY, footprint: [3, 2] });
+      const data = this.applyMutation(await this.api.build(id, x, y));
+      const object = data.object;
+      this.farm.buildings.push({ id: object.id, buildingId: id, x: object.gridX, y: object.gridY, footprint });
       this.gameRenderer?.renderer?.playEffectAtGrid?.('fx_build_success', object.gridX, object.gridY);
-      if (data.animal) this.farm.chickens.push({ ...data.animal, x: x + 1, y: y + 1, direction: 'SE' }); this.setStatus(t('builtCoop'));
+      if (data.animal) this.farm.chickens.push({ ...data.animal, x: x + 1, y: y + 1, direction: 'SE' });
+      this.setStatus(pond ? 'Đã xây một ao nhỏ cho nông trại.' : t('builtCoop'));
     } catch (error) {
-      if (error.network) { this.farm.coins -= 300; this.farm.buildings.push({ id: 'local-coop-' + Date.now(), buildingId: 'chicken_coop_lv1', x, y, footprint: [3, 2] }); this.farm.chickens.push({ id: 'local-chicken-' + Date.now(), x: x + 1, y: y + 1, direction: 'SE', state: 'IDLE', productReadyAt: null }); this.setStatus(t('builtCoopLocal')); }
-      else this.setStatus(error.message || t('invalidMutation'));
+      if (error.network) {
+        this.farm.coins -= cost;
+        this.farm.buildings.push({ id: 'local-building-' + Date.now(), buildingId: id, x, y, footprint });
+        if (!pond) this.farm.chickens.push({ id: 'local-chicken-' + Date.now(), x: x + 1, y: y + 1, direction: 'SE', state: 'IDLE', productReadyAt: null });
+        this.setStatus(pond ? 'Đã xây ao nhỏ trên máy demo.' : t('builtCoopLocal'));
+      } else this.setStatus(error.message || t('invalidMutation'));
     }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
-  async buyFeed() {
-    try { this.applyMutation(await this.api.buyFeed(1)); this.setStatus(t('boughtFeed')); }
-    catch (error) { if (error.network) { if (this.farm.coins < 5) return this.setStatus(t('noCoinsFeed')); this.farm.coins -= 5; this.farm.inventory.chicken_feed = (this.farm.inventory.chicken_feed || 0) + 1; this.setStatus(t('boughtFeedLocal')); } else this.setStatus(error.message || t('invalidMutation')); }
+  async buyFeed(quantity = 1) {
+    if (this.buyingFeed || !Number.isSafeInteger(quantity) || quantity < 1 || quantity > 99) return false;
+    if (this.farm.coins < quantity * 5) { this.setStatus(t('noCoinsFeed')); return false; }
+    const used = Object.values(this.farm.inventory).reduce((sum, value) => sum + Number(value || 0), 0);
+    if (used + quantity > this.farm.warehouseCapacity) { this.setStatus('Kho đã đầy. Hãy bán bớt nông sản.'); return false; }
+    this.buyingFeed = true;
+    try {
+      this.applyMutation(await this.api.buyFeed(quantity));
+      this.setStatus(`Đã mua ${quantity} thức ăn gà với giá ${quantity * 5} Xu.`);
+    } catch (error) {
+      if (error.network) {
+        this.farm.coins -= quantity * 5;
+        this.farm.inventory.chicken_feed = (this.farm.inventory.chicken_feed || 0) + quantity;
+        this.setStatus(`Đã mua ${quantity} thức ăn gà trên máy demo.`);
+      } else { this.setStatus(error.message || t('invalidMutation')); return false; }
+    } finally { this.buyingFeed = false; }
     this.persist(); this.updateHeader();
+    return true;
   }
   async sellItem(itemId, quantity = 1) {
-    const available = this.farm.inventory[itemId] || 0; if (available < quantity) return this.setStatus(t('noRice'));
-    try { const data = this.applyMutation(await this.api.sell(itemId, quantity)); this.setStatus(t('soldRice', { quantity, coins: data.earned?.coins || 0 })); }
-    catch (error) { if (error.network) { this.farm.inventory[itemId] -= quantity; this.farm.coins += quantity * (CROPS[itemId]?.sell || 0); this.setStatus(t('soldRiceLocal', { quantity })); } else this.setStatus(error.message || t('invalidMutation')); }
+    const item = ITEMS[itemId];
+    const available = this.farm.inventory[itemId] || 0;
+    if (!item?.price || !Number.isSafeInteger(quantity) || quantity < 1 || available < quantity) return this.setStatus('Kho chưa có đủ vật phẩm để bán.');
+    try { const data = this.applyMutation(await this.api.sell(itemId, quantity)); this.setStatus(`Đã bán ${quantity} ${item.name.toLowerCase()}: +${data.earned?.coins || 0} Xu.`); }
+    catch (error) { if (error.network) { this.farm.inventory[itemId] -= quantity; this.farm.coins += quantity * item.price; this.setStatus(`Đã bán ${quantity} ${item.name.toLowerCase()} trên máy demo.`); } else this.setStatus(error.message || t('invalidMutation')); }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
-  async completeFirstOrder() {
-    const order = this.farm.orders?.find((item) => item.status === 'OPEN'); if (!order) return this.setStatus(t('noOrders'));
+  async completeFirstOrder(orderId) {
+    const order = this.farm.orders?.find((item) => item.status === 'OPEN' && (!orderId || item.id === orderId)); if (!order) return this.setStatus(t('noOrders'));
     try { const data = this.applyMutation(await this.api.completeOrder(order.id)); const index = this.farm.orders.findIndex((item) => item.id === order.id); if (index >= 0) this.farm.orders[index] = data.replacement || { ...order, status: 'COMPLETED' }; this.setStatus(t('completedOrder', { coins: data.earned?.coins || 0 })); }
     catch (error) { this.setStatus(error.message || t('invalidMutation')); }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
-  async claimFirstQuest() {
-    const quest = this.farm.quests?.find((item) => item.completed && !item.claimed); if (!quest) return this.setStatus(t('noQuest'));
+  async claimFirstQuest(questId) {
+    const quest = this.farm.quests?.find((item) => item.completed && !item.claimed && (!questId || item.questId === questId)); if (!quest) return this.setStatus(t('noQuest'));
     try { const data = this.applyMutation(await this.api.claimQuest(quest.questId)); Object.assign(quest, data.quest); this.setStatus(t('claimedQuest', { coins: data.reward?.coins || 0 })); }
     catch (error) { this.setStatus(error.message || t('invalidMutation')); }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
   async feedChicken(chicken) {
     if ((this.farm.inventory.chicken_feed || 0) < 1) return this.setStatus(t('noFeed'));
     try { const data = this.applyMutation(await this.api.feed(chicken.id)); Object.assign(chicken, data.animal, { productReadyAt: Date.parse(data.animal.productReadyAt), state: 'EAT' }); this.setStatus(t('fed')); }
     catch (error) { if (error.network) { this.farm.inventory.chicken_feed -= 1; chicken.state = 'EAT'; chicken.productReadyAt = Date.now() + 600000; this.setStatus(t('fedLocal')); } else this.setStatus(error.message || t('invalidMutation')); }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
   async collectChicken(chicken) {
     try { const data = this.applyMutation(await this.api.collect(chicken.id)); Object.assign(chicken, data.animal, { productReadyAt: null, state: 'HAPPY' }); this.gameRenderer?.renderer?.playEffectAtGrid?.('fx_egg_collect', chicken.x, chicken.y); this.setStatus(t('collectedEgg')); }
     catch (error) { if (error.network) { if (!chicken.productReadyAt || chicken.productReadyAt > Date.now()) return this.setStatus(t('eggNotReady')); this.farm.inventory.egg = (this.farm.inventory.egg || 0) + 1; chicken.productReadyAt = null; chicken.state = 'HAPPY'; this.setStatus(t('collectedEggLocal')); } else this.setStatus(error.message || t('eggNotReady')); }
     this.persist(); this.updateHeader();
+    await this.refreshProgress();
   }
-  updateHeader() { if (!this.farm) return; this.root.querySelector('#coins').textContent = formatNumber(this.farm.coins); this.root.querySelector('#diamonds').textContent = formatNumber(this.farm.diamonds); this.root.querySelector('#level').textContent = t('level', { level: this.farm.level }); const used = Object.values(this.farm.inventory).reduce((sum, value) => sum + Number(value || 0), 0); this.root.querySelector('#capacity').textContent = t('capacity', { used, capacity: this.farm.warehouseCapacity }); this.syncGameRenderer(); }
-  setStatus(message) { const status = this.root.querySelector('#status'); if (status) status.textContent = message; const notice = this.root.querySelector('#notice'); if (notice) { notice.textContent = message; notice.classList.add('show'); clearTimeout(this.noticeTimer); this.noticeTimer = setTimeout(() => notice.classList.remove('show'), 2600); } }
+  updateHeader() { if (!this.farm) return; this.root.querySelector('#coins').textContent = formatNumber(this.farm.coins); this.root.querySelector('#diamonds').textContent = formatNumber(this.farm.diamonds); this.root.querySelector('#level').textContent = this.farm.level; const used = Object.values(this.farm.inventory).reduce((sum, value) => sum + Number(value || 0), 0); this.root.querySelector('#capacity').textContent = t('capacity', { used, capacity: this.farm.warehouseCapacity }); this.syncGameRenderer(); this.ui?.refresh(); }
+  setStatus(message) {
+    if (!message) return;
+    if (this.ui?.panel) this.ui.panelNotice = message;
+    for (const element of this.root.querySelectorAll('#status, .dialog-notice')) element.textContent = message;
+    const notice = this.root.querySelector('#notice');
+    if (notice) {
+      notice.textContent = message;
+      notice.classList.add('show');
+      clearTimeout(this.noticeTimer);
+      this.noticeTimer = setTimeout(() => notice.classList.remove('show'), 2600);
+    }
+  }
 }
 
 function normalizeFarm(value, name) {
@@ -409,7 +570,8 @@ function normalizeFarm(value, name) {
     const plots = value.plots.map((plot) => {
       const crop = cropsByPlot.get(plot.id);
       const readyAt = crop?.readyAt ? Date.parse(crop.readyAt) : null;
-      return { id: plot.id, x: plot.gridX, y: plot.gridY, cropId: crop?.cropId || null, readyAt, stage: crop ? (readyAt <= Date.now() ? 'ready' : 'growing') : 'empty' };
+      const plantedAt = crop?.plantedAt ? Date.parse(crop.plantedAt) : null;
+      return { id: plot.id, x: plot.gridX, y: plot.gridY, cropId: crop?.cropId || null, plantedAt, readyAt, stage: crop ? (readyAt <= Date.now() ? 'ready' : 'growing') : 'empty' };
     });
     const inventory = { ...fallback.inventory };
     for (const entry of value.inventory || []) inventory[entry.itemId] = entry.quantity;
@@ -431,7 +593,5 @@ function normalizeFarm(value, name) {
   if (!source || typeof source !== 'object') return fallback;
   return { ...fallback, ...source, character: { ...fallback.character, ...(source.character || {}), name: normalizeName(source.character?.name || name) }, inventory: { ...fallback.inventory, ...(source.inventory || {}) }, plots: Array.isArray(source.plots) ? source.plots : fallback.plots, buildings: Array.isArray(source.buildings) ? source.buildings : fallback.buildings, chickens: Array.isArray(source.chickens) ? source.chickens : fallback.chickens, orders: Array.isArray(source.orders) ? source.orders : fallback.orders, quests: Array.isArray(source.quests) ? source.quests : fallback.quests };
 }
-function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char])); }
-
 const app = new FarmApp(document.querySelector('#app'));
 app.start();

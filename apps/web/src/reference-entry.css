@@ -1,0 +1,186 @@
+/* The source image is cropped in CSS so its original pixels remain untouched. */
+.reference-entry {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #537b36;
+}
+
+.reference-entry__scene {
+  position: relative;
+  container-type: inline-size;
+  width: min(100vw, calc(100svh * var(--entry-ratio)));
+  aspect-ratio: var(--entry-ratio);
+  overflow: hidden;
+  clip-path: inset(0 0 .5% 0 round 1.7cqw);
+  isolation: isolate;
+}
+
+.reference-entry__sheet {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.reference-entry__form {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.reference-entry__name {
+  position: absolute;
+  left: 41.1%;
+  top: 56.35%;
+  width: 25.7%;
+  height: 8%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: .7cqw;
+  background: transparent;
+  color: #815529;
+  font: 500 1.8cqw/1.2 'Trebuchet MS', 'Segoe UI', sans-serif;
+  caret-color: #6e3e1a;
+  box-shadow: none;
+}
+
+.reference-entry__name:not(:placeholder-shown) {
+  background: #fff9e7;
+}
+
+.reference-entry__name:focus-visible {
+  outline: 1px solid #d6ab64;
+  outline-offset: .2cqw;
+}
+
+.reference-entry__enter {
+  position: absolute;
+  left: 35.25%;
+  top: 68.3%;
+  width: 32.4%;
+  height: 14.8%;
+  padding: 0;
+  border: 0;
+  border-radius: 2.5cqw;
+  background: transparent;
+  box-shadow: none;
+  touch-action: manipulation;
+}
+
+.reference-entry__enter:not(:disabled):hover {
+  background: rgb(255 255 255 / 8%);
+  filter: none;
+}
+
+.reference-entry__enter:not(:disabled):active {
+  background: rgb(94 45 5 / 10%);
+  transform: none;
+}
+
+.reference-entry__enter:focus-visible {
+  outline: .35cqw solid #fff5a8;
+  outline-offset: .35cqw;
+}
+
+.reference-entry__error {
+  position: absolute;
+  left: 31.5%;
+  bottom: 1.5%;
+  width: 40%;
+  margin: 0;
+  padding: .5cqw 1cqw;
+  border-radius: 1cqw;
+  background: #fff5d8;
+  color: #9b2f1c;
+  font-size: 1.6cqw;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reference-entry__error:empty {
+  display: none;
+}
+
+.reference-entry .reference-entry__progress {
+  position: absolute;
+  left: 27.13%;
+  top: 68.38%;
+  width: 40.96%;
+  height: 6.62%;
+  margin: 0;
+  padding: 1px;
+  overflow: visible;
+  border: 1px solid #593511;
+  border-radius: 2cqw;
+  background: linear-gradient(#754b2c, #95673d);
+  box-shadow: inset 0 1px 2px #362309;
+}
+
+.reference-entry .reference-entry__progress > span {
+  display: block;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  border: 1px solid #47990c;
+  border-radius: inherit;
+  background: linear-gradient(#b8f758 0%, #75dc30 45%, #43be0d 90%);
+  box-shadow: inset 0 1px #e5ffb2;
+  transition: width 220ms ease;
+}
+
+.reference-entry .reference-entry__progress > b {
+  position: absolute;
+  left: 102%;
+  top: -3%;
+  display: grid;
+  place-items: center;
+  width: 18%;
+  height: 113%;
+  border-radius: 1cqw;
+  background: linear-gradient(#b17a42, #a97039);
+  color: #fff9e6;
+  font: 800 2.2cqw/1 'Trebuchet MS', 'Segoe UI', sans-serif;
+  text-shadow: 0 1px #754416;
+  transform: none;
+}
+
+.reference-entry .reference-entry__status {
+  position: absolute;
+  left: 41.5%;
+  top: 90.07%;
+  width: 25.9%;
+  height: 5.9%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 1cqw;
+  background: #fff3cf;
+  color: #533017;
+  font: 700 1.5cqw/1 'Trebuchet MS', 'Segoe UI', sans-serif;
+  white-space: nowrap;
+}
+
+.reference-entry__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reference-entry .reference-entry__progress > span {
+    transition: none;
+  }
+}

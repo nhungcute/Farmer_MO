@@ -1,7 +1,7 @@
 import { Application } from 'pixi.js';
 import { ManifestAnimationRegistry } from '../core/ManifestAnimationRegistry.js';
 import { adaptFarmToRenderWorld, createRendererDemoWorld } from '../core/WorldAdapter.js';
-import { isoToWorld, worldToCell } from '../core/iso.js';
+import { isoToWorld, worldToIso } from '../core/iso.js';
 import { PixiAssetRegistry } from './PixiAssetRegistry.js';
 import { FarmScene } from './scene/FarmScene.js';
 import { CameraController } from './systems/CameraController.js';
@@ -39,6 +39,9 @@ export class PixiFarmRenderer {
     this.events = new Map();
     this.world = null;
     this.initialized = false;
+    this.interaction = { tool: 'inspect', assetId: null, footprint: [1, 1] };
+    this.hoverCell = null;
+    this.cameraTouched = false;
   }
 
   async init() {
@@ -56,10 +59,13 @@ export class PixiFarmRenderer {
       resolution: dpr,
       autoDensity: true,
       antialias: true,
-      background: '#9ed77d',
+      background: '#96cd61',
       backgroundAlpha: 1,
     });
     this.app.canvas.classList.add('mo-farm-pixi-canvas');
+    this.app.canvas.dataset.liveReady = 'false';
+    this.app.canvas.__farmRenderer = this;
+    this.host.__farmRenderer = this;
     Object.assign(this.app.canvas.style, { width: '100%', height: '100%', display: 'block', touchAction: 'none' });
     this.host.appendChild(this.app.canvas);
 
@@ -70,7 +76,6 @@ export class PixiFarmRenderer {
     this.scene = new FarmScene({
       assetRegistry: this.assetRegistry,
       animationRegistry: this.animationRegistry,
-      onSelect: (model) => this.emit('objectSelected', model),
       onAnimationEvent: (event) => this.emit('animationEvent', event),
     });
     this.app.stage.addChild(this.scene.root);
@@ -80,7 +85,7 @@ export class PixiFarmRenderer {
       worldContainer: this.scene.root,
       viewportWidth: this.host.clientWidth || 1,
       viewportHeight: this.host.clientHeight || 1,
-      minZoom: mobile ? 0.7 : 0.65,
+      minZoom: 0.2,
       maxZoom: mobile ? 1.3 : 1.5,
     });
 
@@ -88,6 +93,8 @@ export class PixiFarmRenderer {
       canvas: this.app.canvas,
       camera: this.camera,
       onTap: (screenX, screenY) => this.#onCanvasTap(screenX, screenY),
+      onHover: (point) => this.#onHover(point),
+      onGesture: () => { this.cameraTouched = true; },
     });
 
     this.debugHud = new DebugHudController({ host: this.host, enabled: this.debugEnabled });
@@ -112,15 +119,72 @@ export class PixiFarmRenderer {
     const width = Math.max(1, this.host.clientWidth);
     const height = Math.max(1, this.host.clientHeight);
     this.camera.setViewport(width, height);
+    if (this.world && !this.cameraTouched) this.#frameFarm();
+  }
+
+  #frameFarm() {
+    if (!this.camera) return;
+    const { viewportWidth: width, viewportHeight: height } = this.camera.model;
+    const bounds = this.scene?.framingBounds({ prioritizeActions: height < 600 });
+    if (!bounds) return;
+    // The playable area stays between the portrait, action dock and quest card.
+    const desktop = width >= 1200;
+    const left = width >= 700 ? 98 : 32;
+    const right = desktop ? 295 : 32;
+    const top = height >= 600 ? 105 : 50;
+    // Reserve the open action palette too, so feeding and planting never place
+    // the target behind DOM controls when a tool is selected.
+    const bottom = height >= 600 ? 210 : 132;
+    const availableWidth = Math.max(240, width - left - right);
+    const availableHeight = Math.max(180, height - top - bottom);
+    const zoom = Math.max(this.camera.model.minZoom, Math.min(1.12,
+      availableWidth / Math.max(600, bounds.maxX - bounds.minX + 100),
+      availableHeight / Math.max(460, bounds.maxY - bounds.minY + 40)));
+    const centerX = (bounds.minX + bounds.maxX) / 2;
+    const centerY = (bounds.minY + bounds.maxY) / 2;
+    this.camera.focus(centerX + (right - left) / (2 * zoom), centerY + (bottom - top) / (2 * zoom), zoom);
   }
 
   #onCanvasTap(screenX, screenY) {
     if (!this.camera || !this.scene) return;
     const world = this.camera.model.screenToWorld(screenX, screenY);
-    const cell = worldToCell(world.x, world.y);
+    const object = this.interaction.tool.startsWith('build') ? null : this.scene.pick(world.x, world.y);
+    if (object) {
+      this.scene.setSelection(object.gridX, object.gridY);
+      this.emit('objectSelected', object);
+      return;
+    }
+    const cell = this.#cellAt(world.x, world.y);
     if (cell.x < 0 || cell.y < 0 || cell.x >= (this.world?.width || this.mapWidth) || cell.y >= (this.world?.height || this.mapHeight)) return;
     this.scene.setSelection(cell.x, cell.y);
     this.emit('cellSelected', cell);
+  }
+
+  #cellAt(worldX, worldY) {
+    // Gameplay objects are centered on integer grid coordinates.
+    const p = worldToIso(worldX, worldY, this.scene.tileWidth, this.scene.tileHeight);
+    return { x: Math.round(p.x), y: Math.round(p.y) };
+  }
+
+  #onHover(point) {
+    if (!this.scene || !this.camera || !this.world) return;
+    if (!point) {
+      this.hoverCell = null;
+      this.scene.setPlacement(null);
+      this.app.canvas.style.cursor = this.input?.pointers.size ? 'grabbing' : 'grab';
+      return;
+    }
+    const world = this.camera.model.screenToWorld(point.x, point.y);
+    if (this.interaction.tool.startsWith('build')) {
+      const cell = this.#cellAt(world.x, world.y);
+      if (cell.x !== this.hoverCell?.x || cell.y !== this.hoverCell?.y) {
+        this.hoverCell = cell;
+        this.scene.setPlacement(cell, this.interaction);
+      }
+      this.app.canvas.style.cursor = 'crosshair';
+    } else {
+      this.app.canvas.style.cursor = this.scene.pick(world.x, world.y) ? 'pointer' : 'grab';
+    }
   }
 
   #update(deltaMs) {
@@ -139,7 +203,10 @@ export class PixiFarmRenderer {
     if (!this.initialized) throw new Error('Call renderer.init() before setWorld().');
     this.world = world;
     const bounds = this.scene.loadWorld(world);
-    this.camera.setBounds(bounds, { padding: 160, fit });
+    this.camera.setBounds(bounds, { padding: 240, fit: false });
+    if (fit) this.#frameFarm();
+    this.app.render();
+    this.app.canvas.dataset.liveReady = 'true';
     this.emit('worldLoaded', { world, bounds });
   }
 
@@ -154,7 +221,8 @@ export class PixiFarmRenderer {
   syncWorld(world) {
     this.world = world;
     const bounds = this.scene.syncWorld(world);
-    if (bounds) this.camera.setBounds(bounds, { padding: 160, fit: false });
+    if (bounds) this.camera.setBounds(bounds, { padding: 240, fit: false });
+    if (this.hoverCell) this.scene.setPlacement(this.hoverCell, this.interaction);
   }
 
   updateEntity(entityModel) {
@@ -174,6 +242,38 @@ export class PixiFarmRenderer {
   focusGrid(gridX, gridY, zoom = 1.05) {
     const point = isoToWorld(gridX, gridY);
     this.camera.focus(point.x, point.y, zoom);
+  }
+
+  focusHome() {
+    this.cameraTouched = false;
+    this.#frameFarm();
+  }
+
+  zoomBy(factor) {
+    if (!this.camera || !Number.isFinite(factor) || factor <= 0) return;
+    const camera = this.camera.model;
+    this.cameraTouched = true;
+    this.camera.zoomAt(camera.viewportWidth / 2, camera.viewportHeight / 2, camera.zoom * factor);
+  }
+
+  cellToScreen(gridX, gridY) {
+    if (!this.scene || !this.camera || !Number.isFinite(gridX) || !Number.isFinite(gridY)) return null;
+    const target = this.interaction.tool.startsWith('build')
+      ? isoToWorld(gridX, gridY, this.scene.tileWidth, this.scene.tileHeight)
+      : this.scene.targetForCell(gridX, gridY);
+    const point = this.camera.model.worldToScreen(target.x, target.y);
+    const rect = this.app.canvas.getBoundingClientRect();
+    return { ...point, clientX: point.x + rect.left, clientY: point.y + rect.top, entityId: target.entityId || null };
+  }
+
+  setInteraction(tool = 'inspect', { assetId = null, footprint = [1, 1] } = {}) {
+    this.interaction = {
+      tool: String(tool), assetId,
+      footprint: [0, 1].map(index => Math.max(1, Math.min(24, Math.floor(Number(footprint?.[index]) || 1)))),
+    };
+    this.hoverCell = null;
+    this.scene?.setPlacement(null);
+    if (this.app) this.app.canvas.style.cursor = String(tool).startsWith('build') ? 'crosshair' : 'grab';
   }
 
   playEffectAtGrid(animationId, gridX, gridY) {
@@ -201,12 +301,18 @@ export class PixiFarmRenderer {
   }
 
   destroy() {
+    if (this.host.__farmRenderer === this) delete this.host.__farmRenderer;
+    if (this.app?.renderer) {
+      delete this.app.canvas.__farmRenderer;
+      this.app.canvas.dataset.liveReady = 'false';
+    }
     this.resizeObserver?.disconnect();
     this.input?.destroy();
     this.debugHud?.destroy();
     this.scene?.destroy();
     this.assetRegistry?.destroy();
-    this.app?.destroy(true, { children: true, texture: false, textureSource: false });
+    if (this.app?.renderer) this.app.destroy(true, { children: true, texture: false, textureSource: false });
+    else this.app?.stage?.destroy({ children: true });
     this.events.clear();
     this.initialized = false;
   }

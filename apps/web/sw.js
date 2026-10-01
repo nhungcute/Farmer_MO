@@ -1,12 +1,24 @@
-const CACHE_NAME = 'mo-farm-static-v2';
+const CACHE_NAME = 'mo-farm-static-v6-live-world-csp';
 const STATIC_URLS = [
   './',
   './index.html',
   './src/main.js',
   './src/locales/vi-VN.js',
   './src/styles.css',
+  './src/ui/FarmInterface.js',
+  './src/reference-entry.css',
+  './src/reference-panels.css',
+  './src/ui/ReferenceEntry.js',
+  './src/ui/PanelLayout.js',
+  './src/ui/ReferencePanels.js',
+  './src/ui/LiveHud.js',
+  './src/live-game.css',
+  './src/game/integration/mountPixiFarmRenderer.js',
+  './src/game/pixi/PixiFarmRenderer.js',
+  './public/assets/design/sprites/orchard-tree-v1.png',
+  ...['01_Login', '02_Loading', '05_Warehouse', '06_Shop'].map((name) => `./public/assets/design/reference/${name}.png`),
   './public/manifest.webmanifest',
-  './public/vendor/pixi.mjs',
+  './public/vendor/pixi.mjs?v=8.21.0-csp1',
   './public/assets/manifests/animation-manifest.json',
 ];
 

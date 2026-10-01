@@ -1,0 +1,249 @@
+/* Native game controls. The farm scene is drawn exclusively by the renderer. */
+.live-game { --hud-ink:#70441f; --hud-cream:#fff7da; --hud-border:#b78343; position:relative; width:100%; height:100svh; min-height:100svh; overflow:hidden; background:#a8ce78; color:var(--hud-ink); font-family:'Arial Rounded MT Bold','Trebuchet MS','Segoe UI',sans-serif; isolation:isolate; }
+.live-game .reference-stage.live-stage { position:absolute; inset:0; width:100%; height:100%; max-width:none; max-height:none; min-width:0; aspect-ratio:auto; margin:0; padding:0; border:0; border-radius:0; background:none!important; box-shadow:none; transform:none; overflow:hidden; }
+.live-game .live-stage::before,.live-game .live-stage::after { content:none; display:none; }
+.live-stage .world-wrap { position:absolute; inset:0; z-index:0; width:100%; height:100%; overflow:hidden; background:#a7ce72; }
+.live-stage #farm-canvas,.live-stage #game-renderer-host,.live-stage #game-renderer-host canvas { position:absolute; inset:0; width:100%; height:100%; display:block; touch-action:none; }
+.live-stage #game-renderer-host { z-index:1; }
+.live-game button { touch-action:manipulation; transition:filter 120ms,background 120ms,box-shadow 120ms; }
+.live-game button:focus-visible { outline:3px solid #1783c5; outline-offset:3px; }
+.live-game button:hover:not(:disabled) { filter:brightness(1.07); }
+.live-game button:active:not(:disabled) { filter:brightness(.98); }
+.live-game button[hidden],.live-game [hidden] { display:none!important; }
+.hud-icon { display:block; width:44px; height:44px; overflow:visible; filter:drop-shadow(0 2px 0 #79452022); }
+.hud-emoji { display:grid; place-items:center; width:44px; height:44px; font-size:37px; line-height:1; filter:drop-shadow(0 2px 0 #79452022); }
+.hud-art { position:relative; display:inline-grid; place-items:center; width:38px; height:38px; flex:0 0 auto; font-size:30px; line-height:1; }
+.hud-art canvas { display:none; position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
+.hud-art.art-loaded canvas { display:block; }
+.hud-art.art-loaded .art-fallback { visibility:hidden; }
+.live-hud { position:absolute; z-index:12; top:max(18px,env(safe-area-inset-top)); left:max(20px,env(safe-area-inset-left)); right:max(20px,env(safe-area-inset-right)); display:flex; align-items:center; gap:10px; pointer-events:none; }
+.live-hud>* { pointer-events:auto; }
+.live-profile { position:relative; display:flex; align-items:center; gap:11px; flex:0 0 auto; width:239px; min-height:65px; padding:7px 15px 7px 7px; border:2px solid #bb8d4c; border-radius:40px 20px 20px 40px; background:linear-gradient(#fffceb,#ffefc3); box-shadow:inset 0 2px #fff,0 4px 0 #75563333,0 5px 16px #4263311f; }
+.hud-avatar { display:grid; place-items:center; flex-shrink:0; width:54px; height:54px; margin:-6px 0 -6px -5px; overflow:hidden; border:3px solid #fff7d4; border-radius:50%; outline:2px solid #c18c47; background:radial-gradient(ellipse at center bottom,#f5db9a,#acd676); font-size:39px; line-height:1; }
+.hud-profile-info { flex:1; min-width:0; }
+#farmer-name-label { display:block; max-width:150px; margin:0 0 6px; overflow:hidden; color:#71451d; font-size:14px; font-weight:900; text-overflow:ellipsis; white-space:nowrap; }
+.live-profile .xp-track { position:relative; width:100%; height:16px; min-width:0; margin:0; overflow:hidden; border:1px solid #a77b43; border-radius:10px; background:#a18251; box-shadow:inset 0 1px 3px #5b452938,0 1px #fffbe1; }
+.live-profile #xp-fill { position:absolute; inset:0 auto 0 0; display:block; width:0; height:100%; border-radius:8px; background:linear-gradient(#bbe96a,#79c23e 48%,#51a333); box-shadow:inset 0 1px #e2ffb0; transition:width 300ms; }
+.live-profile #xp-label { position:absolute; inset:0; display:grid; place-items:center; color:#fffef0; font-size:10px; font-weight:900; line-height:1; text-shadow:0 1px #66502c; }
+.live-profile .xp-track::after { content:none; }
+.hud-level { position:absolute; bottom:-6px; left:34px; display:grid; place-items:center; width:29px; height:28px; border:2px solid #c99128; border-radius:9px; background:linear-gradient(#fff1a1,#fccc47); box-shadow:inset 0 0 0 1px #fff7c4,0 2px 0 #7d522c25; transform:rotate(-8deg); }
+.hud-level b { font-size:14px; font-weight:900; transform:rotate(8deg); }
+.hud-resources { display:flex; align-items:center; gap:0; margin-left:auto; padding:4px 5px; border:2px solid #c19a59; border-radius:15px; background:linear-gradient(#fffdf0,#fff2cf); box-shadow:inset 0 2px #fff,0 4px 0 #87622d30,0 5px 16px #4263311c; }
+.hud-resource { display:flex; align-items:center; gap:7px; min-height:37px; padding:0 10px; border-right:1px solid #e3c697; }
+.hud-resource:last-child { border-right:0; }
+.hud-resource>b { min-width:32px; color:#71441c; font-size:14px; font-weight:900; text-align:center; white-space:nowrap; }
+.hud-resource-emoji { display:grid; place-items:center; width:32px; height:32px; font-size:27px; line-height:1; }
+.hud-add { position:relative; display:grid; place-items:center; width:25px; height:26px; min-height:26px; padding:0; border:1px solid #4f8830; border-radius:7px; background:linear-gradient(#b3df6f,#68ac3c); box-shadow:inset 0 1px #e9ffc2,0 2px 0 #467a2826; color:white; font-size:23px; font-weight:900; line-height:1; text-shadow:0 1px #41782c; }
+.hud-add::after { content:''; position:absolute; inset:-6px; }
+.hud-settings { display:grid; place-items:center; flex-shrink:0; width:45px; height:45px; min-height:45px; padding:6px; border:2px solid #bf995f; border-radius:13px; background:linear-gradient(#fffdeb,#fff0c2); box-shadow:inset 0 2px #fff,0 4px 0 #87622d30; }
+.hud-settings .hud-icon { width:29px; height:29px; }
+.live-farm-label { position:absolute; top:101px; right:max(22px,env(safe-area-inset-right)); z-index:6; display:flex; align-items:center; gap:6px; padding:7px 11px; border:1px solid #d2b37c; border-radius:11px; background:#fff8dfea; box-shadow:0 2px 0 #7b6a3430; color:#755127; font-size:14px; font-weight:900; pointer-events:none; }
+.live-farm-tagline { padding-left:8px; border-left:1px solid #dfc795; color:#977949; font-size:10px; font-weight:600; }
+.live-side-nav { position:absolute; z-index:10; top:129px; left:max(20px,env(safe-area-inset-left)); display:flex; flex-direction:column; gap:11px; }
+.live-nav-button { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; width:76px; height:79px; min-height:44px; padding:6px 4px; border:2px solid #b98c4d; border-radius:15px; background:linear-gradient(#fffdf0,#fff1c7); box-shadow:inset 0 0 0 2px #fff9e5,0 4px 0 #94703d45,0 5px 12px #48682b24; font-size:11px; font-weight:900; line-height:1.2; }
+.live-nav-button .hud-icon { width:43px; height:43px; }
+.live-nav-button .notification-dot { position:absolute; top:-7px; right:-7px; display:grid; place-items:center; width:23px; height:23px; border:2px solid #fff8dd; border-radius:50%; background:#ef7653; box-shadow:0 2px 0 #a65c3544; color:white; font-size:13px; font-weight:900; font-style:normal; }
+.live-toolbar { position:absolute; z-index:12; bottom:max(21px,env(safe-area-inset-bottom)); left:50%; display:flex; align-items:stretch; gap:5px; max-width:calc(100% - 265px); padding:7px; border:3px solid #b88543; border-radius:20px; background:linear-gradient(#fff9df,#ffe8aa); box-shadow:inset 0 0 0 2px #fffbe7,0 5px 0 #88602f55,0 10px 22px #38512640; transform:translateX(-50%); }
+.live-tool { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; flex:0 0 auto; width:76px; min-height:75px; padding:6px 4px; border:1px solid #dfbf85; border-radius:12px; background:linear-gradient(#fffdf1,#fff6d9); box-shadow:inset 0 1px #fff; color:#71441f; font-size:11px; font-weight:900; line-height:1.2; white-space:nowrap; }
+.live-tool.active,.live-tool[aria-pressed='true'] { border-color:#d59625; background:linear-gradient(#fff4ab,#ffde77); box-shadow:inset 0 0 0 2px #fffbdc,0 0 0 1px #dba33f; }
+.live-tool .hud-icon,.live-tool .hud-emoji { width:41px; height:41px; }
+.live-tool .hud-emoji { font-size:34px; }
+.live-game .action-palette { position:absolute; inset:auto auto 128px 50%; z-index:14; display:flex; align-items:center; gap:7px; width:max-content; max-width:calc(100% - 150px); padding:8px; border:2px solid #c49a53; border-radius:16px; background:#fff9e5; box-shadow:inset 0 1px #fff,0 4px 0 #946b3238,0 7px 18px #425c2533; transform:translateX(-50%); }
+.live-game .crop-actions,.live-game .animal-actions { display:flex; align-items:stretch; gap:6px; }
+.live-game .palette-tool { display:flex; flex-direction:row; align-items:center; gap:7px; width:auto; min-height:43px; padding:6px 10px; border:1px solid #e0be7f; border-radius:10px; background:linear-gradient(#fffef2,#fff1c5); color:#744b25; font-size:12px; font-weight:700; white-space:nowrap; }
+.live-game .palette-tool.active { border-color:#7aa444; background:linear-gradient(#edf8c7,#c3e38c); box-shadow:inset 0 0 0 1px #f7ffe5; }
+.palette-tool .hud-icon,.palette-tool .hud-art { width:29px; height:29px; font-size:25px; }
+.palette-close { display:grid; place-items:center; width:32px; height:32px; min-height:32px; padding:0; border:1px solid #cd9974; border-radius:9px; background:#fae4c1; color:#9d6946; font-size:24px; font-weight:900; }
+.live-game .world-status { position:absolute; inset:auto auto 127px 50%; z-index:8; display:block!important; width:max-content; max-width:min(600px,calc(100% - 310px)); margin:0; padding:8px 15px; border:1px solid #d5b681; border-radius:20px; background:#fff9dfee; box-shadow:0 2px 0 #96753c27; color:#765732; font-size:11px; line-height:1.5; text-align:center; transform:translateX(-50%); pointer-events:none; }
+.live-game .action-palette:not([hidden])~.world-status { bottom:196px; }
+.live-camera { position:absolute; z-index:10; bottom:max(23px,env(safe-area-inset-bottom)); right:max(21px,env(safe-area-inset-right)); display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+.camera-hint { max-width:155px; padding:4px 7px; border-radius:8px; background:#fff9ddc9; color:#755932; font-size:9px; line-height:1.5; text-align:center; pointer-events:none; }
+.camera-buttons { display:flex; gap:6px; }
+.camera-buttons button { display:grid; place-items:center; width:37px; height:38px; min-height:38px; padding:0; border:2px solid #bd9557; border-radius:11px; background:linear-gradient(#fffceb,#fff0c2); box-shadow:inset 0 1px #fff,0 3px 0 #81643435; color:#85633a; font-size:24px; font-weight:900; }
+.live-game .notice { position:absolute; inset:103px auto auto 50%; z-index:30; width:max-content; max-width:min(580px,calc(100% - 180px)); margin:0; padding:11px 19px; border:2px solid #c59a54; border-radius:14px; background:#fffbe7f5; box-shadow:0 5px 20px #4e662732; color:#7a4e24; font-size:13px; line-height:1.5; text-align:center; opacity:0; transform:translate(-50%,-8px); pointer-events:none; transition:opacity 180ms,transform 180ms; }
+.live-game .notice.show { opacity:1; transform:translate(-50%,0); }
+.live-game .quest-sidebar { position:absolute; z-index:7; top:159px; right:max(22px,env(safe-area-inset-right)); display:block!important; width:244px; max-height:calc(100svh - 282px); overflow:auto; padding:0 0 5px; scrollbar-width:none; }
+.live-game .quest-card { margin-bottom:13px; border:2px solid #bc934f; border-radius:17px; background:linear-gradient(120deg,#fffbe6,#fff1c4); box-shadow:inset 0 0 0 3px #fff9dc,0 3px 0 #8d673c3d; }
+.live-game .card-heading { margin:0; padding:11px 13px; border-bottom:1px solid #e4c58a; background:#fbe9b54f; color:#73481f; font-size:17px; font-weight:900; }
+.live-game .card-content { padding:12px; }
+.live-game .quest-message { display:flex; align-items:center; gap:9px; margin:0 0 11px; color:#967346; font-size:11px; line-height:1.6; }
+.live-game .quest-message>span { flex-shrink:0; font-size:37px; }
+.live-game .card-content>strong { display:block; margin-bottom:8px; font-size:12px; }
+.live-game .quest-progress { position:relative; height:16px; margin:8px 0 12px; overflow:hidden; border:1px solid #b88c50; border-radius:10px; background:#be9d6f; }
+.live-game .quest-progress>span { display:block; height:100%; border-radius:inherit; background:linear-gradient(#b8e867,#69b83b); box-shadow:inset 0 1px #e6ffaf; }
+.live-game .quest-progress>b { position:absolute; inset:0; display:grid; place-items:center; color:#fff; font-size:10px; text-shadow:0 1px #76552b; }
+.live-game .quest-card .primary,.live-game .quest-card .success { width:100%; min-height:37px; padding:7px; font-size:12px; border-radius:11px; }
+.live-game .order-preview { display:flex; justify-content:center; gap:8px; margin:0 0 8px; }
+.live-game .order-preview>div { display:flex; flex-direction:column; align-items:center; min-width:51px; padding:5px; border:1px solid #efd3a0; border-radius:10px; background:#fff9e6; }
+.live-game .order-preview .item-art { position:relative; width:41px; height:37px; margin:0; font-size:29px; }
+.live-game .order-preview .item-art canvas { width:41px; height:37px; }
+.live-game .order-preview strong { font-size:10px; }
+.live-game .reward-line { margin:7px 0 11px; font-size:12px; }
+.live-game .live-orientation { position:absolute; inset:127px 15px auto; z-index:8; display:none; align-items:center; justify-content:center; gap:7px; width:auto; max-width:100%; padding:8px 11px; border:1px solid #dfc292; border-radius:10px; background:#fff9dde3; color:#8d7047; font-size:10px; line-height:1.4; text-align:center; pointer-events:none; }
+.live-orientation>span:first-child { font-size:21px; }
+.live-game dialog.farm-dialog:not([open]) { display:none; }
+
+@media(min-width:1600px) {
+  .live-hud { top:23px; left:25px; right:25px; }
+  .live-profile { width:260px; min-height:72px; }
+  .hud-avatar { width:60px; height:60px; font-size:42px; }
+  #farmer-name-label { font-size:16px; }
+  .hud-resource { gap:10px; padding:0 13px; min-height:40px; }
+  .hud-resource>b { font-size:16px; }
+  .live-nav-button { width:82px; height:86px; font-size:12px; }
+  .live-side-nav { top:142px; left:25px; gap:13px; }
+  .live-toolbar { bottom:26px; }
+  .live-tool { width:85px; min-height:82px; font-size:12px; }
+  .live-tool .hud-icon,.live-tool .hud-emoji { width:46px; height:46px; }
+  .live-game .world-status { bottom:141px; }
+  .live-game .action-palette { bottom:140px; }
+  .live-game .action-palette:not([hidden])~.world-status { bottom:209px; }
+  .live-game .quest-sidebar { width:271px; top:174px; }
+  .live-game .card-content { padding:15px; }
+  .live-game .quest-message { font-size:12px; }
+}
+@media(min-width:1200px) and (max-height:799px) {
+  .live-game .quest-card { margin-bottom:9px; }
+  .live-game .card-heading { padding:8px 12px; }
+  .live-game .card-content { padding:9px; }
+  .live-game .quest-message { margin-bottom:6px; }
+  .live-game .quest-message>span { font-size:32px; }
+  .live-game .quest-progress { margin:6px 0 8px; }
+  .live-game .order-preview .item-art,.live-game .order-preview .item-art canvas { width:36px; height:32px; }
+  .live-game .reward-line { margin:5px 0 8px; }
+}
+@media(max-width:1199px) {
+  .live-game .quest-sidebar { display:none!important; }
+  .live-hud { top:14px; left:15px; right:15px; gap:8px; }
+  .live-profile { width:215px; min-height:59px; gap:9px; }
+  .hud-avatar { width:50px; height:50px; font-size:35px; }
+  #farmer-name-label { font-size:13px; }
+  .hud-resource { gap:5px; padding:0 7px; }
+  .hud-resource>b { font-size:12px; }
+  .hud-resource .hud-art { width:33px; height:33px; font-size:27px; }
+  .hud-resource-emoji { width:28px; height:28px; font-size:24px; }
+  .live-farm-label { top:89px; right:16px; }
+  .live-side-nav { top:114px; left:16px; gap:10px; }
+  .live-nav-button { width:68px; height:72px; font-size:10px; }
+  .live-nav-button .hud-icon { width:39px; height:39px; }
+  .live-toolbar { max-width:calc(100% - 215px); bottom:17px; gap:4px; padding:6px; }
+  .live-tool { width:66px; min-height:65px; font-size:10px; }
+  .live-tool .hud-icon,.live-tool .hud-emoji { width:35px; height:35px; }
+  .live-tool .hud-emoji { font-size:30px; }
+  .live-game .world-status { bottom:112px; }
+  .live-game .action-palette { bottom:111px; }
+  .live-game .action-palette:not([hidden])~.world-status { bottom:179px; }
+  .live-camera { right:16px; bottom:19px; }
+  .camera-hint { max-width:117px; font-size:8px; }
+  .camera-buttons { gap:5px; }
+  .camera-buttons button { width:33px; height:35px; min-height:35px; font-size:22px; }
+}
+@media(max-width:900px) {
+  .live-profile { width:183px; min-height:56px; padding-right:10px; }
+  .hud-avatar { width:46px; height:46px; font-size:32px; }
+  #farmer-name-label { max-width:115px; font-size:12px; }
+  .hud-resources { padding:3px; border-radius:12px; }
+  .hud-resource { gap:4px; padding:0 5px; min-height:31px; }
+  .hud-resource>b { min-width:24px; font-size:11px; }
+  .hud-resource .hud-art { width:29px; height:29px; font-size:24px; }
+  .hud-resource-emoji { width:24px; height:24px; font-size:22px; }
+  .hud-add { width:21px; height:23px; min-height:23px; border-radius:6px; font-size:19px; }
+  .hud-settings { width:38px; height:40px; min-height:40px; padding:5px; }
+  .hud-settings .hud-icon { width:25px; height:25px; }
+  .live-toolbar { max-width:calc(100% - 145px); }
+  .live-tool { width:61px; }
+  .camera-buttons { flex-direction:column; }
+  .camera-hint { display:none; }
+  .live-game .world-status { max-width:calc(100% - 170px); font-size:10px; }
+}
+@media(max-height:600px) and (orientation:landscape) {
+  .live-hud { top:max(8px,env(safe-area-inset-top)); left:max(10px,env(safe-area-inset-left)); right:max(10px,env(safe-area-inset-right)); gap:7px; }
+  .live-profile { width:183px; min-height:44px; padding:5px 10px 5px 5px; gap:9px; border-radius:30px 14px 14px 30px; }
+  .hud-avatar { width:40px; height:40px; margin:-5px 0 -5px -4px; border-width:2px; font-size:28px; }
+  #farmer-name-label { max-width:115px; margin-bottom:4px; font-size:11px; }
+  .live-profile .xp-track { height:13px; }
+  .live-profile #xp-label { font-size:8px; }
+  .hud-level { left:25px; bottom:-5px; width:22px; height:22px; border-radius:7px; }
+  .hud-level b { font-size:11px; }
+  .hud-resources { padding:2px; border-radius:10px; }
+  .hud-resource { gap:4px; padding:0 6px; min-height:27px; }
+  .hud-resource>b { min-width:24px; font-size:10px; }
+  .hud-resource .hud-art { width:25px; height:25px; font-size:21px; }
+  .hud-resource-emoji { width:22px; height:22px; font-size:20px; }
+  .hud-add { width:20px; height:21px; min-height:21px; border-radius:5px; font-size:18px; }
+  .hud-settings { width:33px; height:34px; min-height:34px; padding:4px; border-radius:10px; }
+  .hud-settings .hud-icon { width:22px; height:22px; }
+  .live-farm-label { top:61px; right:11px; padding:5px 8px; border-radius:8px; font-size:10px; }
+  .live-farm-tagline { font-size:8px; padding-left:6px; }
+  .live-side-nav { top:75px; left:max(11px,env(safe-area-inset-left)); gap:7px; }
+  .live-nav-button { width:53px; height:54px; padding:4px 3px; border-width:1px; border-radius:11px; gap:2px; font-size:8px; }
+  .live-nav-button .hud-icon { width:31px; height:31px; }
+  .live-nav-button .notification-dot { width:17px; height:17px; font-size:10px; right:-5px; top:-5px; }
+  .live-toolbar { bottom:max(10px,env(safe-area-inset-bottom)); max-width:calc(100% - 150px); gap:3px; padding:5px; border-width:2px; border-radius:13px; }
+  .live-tool { width:54px; min-height:49px; padding:3px; border-radius:8px; gap:3px; font-size:8px; }
+  .live-tool .hud-icon,.live-tool .hud-emoji { width:27px; height:27px; }
+  .live-tool .hud-emoji { font-size:24px; }
+  .live-game .world-status { bottom:79px; max-width:calc(100% - 165px); padding:5px 10px; font-size:9px; }
+  .live-game .action-palette { bottom:79px; max-width:calc(100% - 140px); padding:5px; gap:5px; border-radius:12px; }
+  .live-game .crop-actions,.live-game .animal-actions { gap:4px; }
+  .live-game .palette-tool { min-height:33px; padding:4px 8px; border-radius:8px; gap:5px; font-size:10px; }
+  .palette-tool .hud-icon,.palette-tool .hud-art { width:22px; height:22px; font-size:20px; }
+  .palette-close { width:30px; height:32px; min-height:32px; font-size:22px; }
+  .live-game .action-palette:not([hidden])~.world-status { bottom:132px; }
+  .live-camera { right:max(11px,env(safe-area-inset-right)); bottom:max(11px,env(safe-area-inset-bottom)); gap:5px; }
+  .camera-buttons { flex-direction:column; gap:5px; }
+  .camera-buttons button { width:32px; height:32px; min-height:32px; border-radius:9px; font-size:21px; }
+  .camera-hint { display:none; }
+  .live-game .notice { top:63px; padding:8px 12px; border-radius:10px; font-size:11px; }
+  .live-game .quest-sidebar { display:none!important; }
+}
+@media(max-width:700px) and (max-height:600px) and (orientation:landscape) {
+  .live-profile { width:158px; }
+  #farmer-name-label { max-width:96px; }
+  .hud-resource { gap:3px; padding:0 4px; }
+  .hud-add { display:none; }
+  .hud-resource>b { font-size:10px; }
+  .live-toolbar { max-width:calc(100% - 130px); }
+  .live-tool { width:46px; font-size:7px; }
+  .live-game .palette-tool { padding:4px 6px; font-size:9px; }
+  .live-farm-tagline { display:none; }
+}
+@media(max-width:600px) and (orientation:portrait) {
+  .live-hud { top:12px; left:12px; right:12px; flex-wrap:wrap; gap:9px; }
+  .live-profile { flex:1; width:auto; min-height:52px; }
+  .hud-avatar { width:45px; height:45px; font-size:31px; }
+  #farmer-name-label { max-width:200px; font-size:13px; }
+  .hud-profile-info { max-width:180px; }
+  .hud-settings { order:1; width:41px; height:41px; min-height:41px; }
+  .hud-resources { order:2; justify-content:space-between; width:100%; margin:0; }
+  .hud-resource { flex:1; justify-content:center; padding:0 4px; gap:4px; }
+  .hud-resource>b { min-width:22px; font-size:10px; }
+  .hud-resource .hud-art { width:26px; height:26px; font-size:23px; }
+  .hud-resource-emoji { width:23px; height:23px; font-size:20px; }
+  .hud-add { display:none; }
+  .live-game .live-orientation { display:flex; top:123px; }
+  .live-farm-label { top:174px; right:12px; font-size:10px; }
+  .live-farm-tagline { display:none; }
+  .live-side-nav { top:174px; left:12px; gap:9px; }
+  .live-nav-button { width:57px; height:63px; border-radius:12px; font-size:9px; }
+  .live-nav-button .hud-icon { width:33px; height:33px; }
+  .live-toolbar { left:11px; right:11px; bottom:max(15px,env(safe-area-inset-bottom)); width:auto; max-width:none; justify-content:space-between; gap:2px; padding:5px; border-width:2px; border-radius:14px; transform:none; }
+  .live-tool { flex:1; width:auto; min-width:0; min-height:57px; padding:4px 2px; gap:4px; border-radius:9px; font-size:7px; }
+  .live-tool .hud-icon,.live-tool .hud-emoji { width:29px; height:29px; }
+  .live-tool .hud-emoji { font-size:26px; }
+  .live-game .world-status { left:12px; bottom:97px; max-width:calc(100% - 64px); padding:7px 10px; font-size:9px; text-align:left; transform:none; }
+  .live-camera { right:12px; bottom:99px; }
+  .camera-buttons { gap:5px; }
+  .camera-buttons button { width:31px; height:33px; min-height:33px; border-radius:9px; font-size:20px; }
+  .live-game .action-palette { left:12px; right:52px; bottom:96px; width:auto; max-width:none; padding:5px; gap:4px; border-radius:12px; transform:none; }
+  .live-game .crop-actions,.live-game .animal-actions { flex:1; justify-content:space-between; gap:4px; }
+  .live-game .palette-tool { flex:1; flex-direction:column; justify-content:center; min-width:0; min-height:55px; padding:5px 4px; gap:3px; font-size:9px; }
+  .palette-tool .hud-icon,.palette-tool .hud-art { width:24px; height:24px; }
+  .palette-close { width:25px; height:33px; min-height:33px; flex-shrink:0; font-size:22px; }
+  .live-game .action-palette:not([hidden])~.world-status { bottom:173px; }
+  .live-game .notice { top:176px; left:83px; right:12px; max-width:none; width:auto; padding:9px 12px; font-size:11px; transform:translateY(-8px); }
+  .live-game .notice.show { transform:translateY(0); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .live-game *,.live-game *::before,.live-game *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+}

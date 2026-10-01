@@ -1,3 +1,5 @@
+import { cropPresentationAt } from './cropPresentation.js';
+
 const BUILDING_ASSETS = Object.freeze({
   farmhouse_lv1: 'building_farmhouse_lv1',
   building_farmhouse_lv1: 'building_farmhouse_lv1',
@@ -11,13 +13,7 @@ const BUILDING_ASSETS = Object.freeze({
 });
 
 function cropStageAsset(cropId, stage) {
-  if (!cropId || stage === 'empty') return null;
-  const normalized = String(stage || '').toLowerCase();
-  if (normalized === 'ready') return `crop_${cropId}_ready`;
-  if (normalized === 'seed' || normalized === 'planted') return `crop_${cropId}_seed`;
-  const match = normalized.match(/(?:stage[_-]?)?(\d+)/);
-  if (match) return `crop_${cropId}_stage_${Math.max(1, Math.min(3, Number(match[1])))}`;
-  return `crop_${cropId}_stage_1`;
+  return cropPresentationAt({ cropId, stage }).assetId;
 }
 
 export function adaptFarmToRenderWorld(farm, { width = 24, height = 24 } = {}) {
@@ -36,20 +32,18 @@ export function adaptFarmToRenderWorld(farm, { width = 24, height = 24 } = {}) {
   });
 
   const crops = (farm?.plots || []).map((plot) => {
-    const ready = String(plot.stage || '').toLowerCase() === 'ready' || isReadyAt(plot.readyAt);
-    const stage = ready ? 'ready' : (plot.stage || 'empty');
+    const presentation = cropPresentationAt(plot);
     return {
       id: plot.id,
       kind: 'crop',
-      assetId: cropStageAsset(plot.cropId, stage),
+      ...presentation,
       cropId: plot.cropId,
-      stage,
       // Presentation metadata from the server/application timer. Renderer does
       // not grant harvest or inventory; it only switches the displayed stage.
       readyAt: plot.readyAt ?? null,
+      plantedAt: plot.plantedAt ?? null,
       gridX: Number(plot.x ?? plot.gridX) || 0,
       gridY: Number(plot.y ?? plot.gridY) || 0,
-      ready,
     };
   });
 

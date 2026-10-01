@@ -19,9 +19,6 @@ export class PondView extends EntityView {
     this.sparkle = this.#makeLayer('pond_sparkle', 0.71, 0.75);
     this.container.addChild(this.water.sprite, this.ripple.sprite, this.sparkle.sprite);
 
-    this.container.eventMode = 'static';
-    this.container.cursor = 'pointer';
-    this.container.on('pointertap', () => deps.onSelect?.(this.model));
     this.cullHalfWidth = Math.max(180, this.base.width * 0.55);
     this.cullHalfHeight = Math.max(150, this.base.height * 0.6);
     this.updateDepth(8);
