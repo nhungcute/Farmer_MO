@@ -27,6 +27,8 @@
     "dev:web": "node apps/web/server.mjs",
     "db:migrate": "node apps/api/src/migrate.mjs",
     "test:api": "node apps/api/test/smoke.mjs",
+    "test:e01:security": "node --test apps/api/test/rate-limiter.test.mjs tests/e01/*.test.mjs tests/web/*.test.mjs tests/e01-preflight.test.mjs",
+    "e01:preflight": "node tools/e01-preflight.mjs",
     "renderer:test": "node --test tests/renderer/*.test.mjs",
     "renderer:check": "node tools/check-renderer-syntax.mjs",
     "renderer:vendor": "node tools/vendor-pixi.mjs",
@@ -34,10 +36,10 @@
     "e2e:headed": "playwright test --headed",
     "test:e2e": "playwright test",
     "check:localization": "node tools/check-localization.mjs",
-    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/persistence/config.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && npm run renderer:check",
-    "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs apps/api/test/persistence-config.test.mjs",
+    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/security/rateLimiter.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/persistence/config.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && node --check tools/e01-preflight.mjs && npm run renderer:check",
+    "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs apps/api/test/persistence-config.test.mjs apps/api/test/rate-limiter.test.mjs",
     "test:api:postgres": "node --test apps/api/test/postgres/postgres-repository.test.mjs apps/api/test/postgres/postgres-integration.test.mjs",
-    "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run assets:validate:strict"
+    "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run test:e01:security && npm run assets:validate:strict"
   },
   "dependencies": {
     "pg": "^8.23.0",

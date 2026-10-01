@@ -32,7 +32,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | C03 | Mobile/PWA/accessibility QA | DONE |
 | D01 | Observability/performance instrumentation | DONE |
 | D02 | Load test và backup/restore drill | DONE |
-| E01 | Cloudflare Named Tunnel | **BLOCKED_CONFIG - preflight complete; public profile not started** |
+| E01 | Cloudflare Named Tunnel | **BLOCKED_CONFIG - repository remediation complete; owner-only runtime configuration pending** |
 | RC01 | Release Candidate checklist | **BLOCKED_BY_E01; NOT_STARTED** |
 
 ## B02 production artwork - 2026-10-01
@@ -78,11 +78,17 @@ B02 is DONE. Wave 2 has explicit Project Owner content, license and release appr
 
 Wave 2 generation, targeted revision review, promotion, atlas rebuild, final owner review and release approval are complete for 76/76 assets. E01 Cloudflare Named Tunnel preflight is complete but blocked; RC01 remains blocked by E01 and not started.
 
-## E01 preflight checkpoint - 2026-10-01
+## E01 initial preflight checkpoint - 2026-10-01
 
-The eight E01 preflight tasks completed read-only inspection. E01 is **BLOCKED_CONFIG** because the required production environment is absent: PostgreSQL driver, demo environment, fixed HTTPS origin, secure cookies, non-default session/database secrets, Cloudflare token and verified hostname are not configured. E01 also has **BLOCKED_SECURITY** findings for unresolved cloudflared token expansion, missing machine-checked Named Tunnel ingress mapping, public web source exposure, and absent effective rate limiting. No public profile, tunnel or public endpoint was started. Evidence: `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
+The eight E01 preflight tasks completed read-only inspection. That initial checkpoint found **BLOCKED_CONFIG** because the required production environment was absent and **BLOCKED_SECURITY** findings for unresolved cloudflared token expansion, missing machine-checked Named Tunnel ingress mapping, public web source exposure, and absent effective rate limiting. The repository-side findings were resolved by E01-FIX-01 through E01-FIX-06; the current remaining blocker is owner-only runtime configuration. No public profile, tunnel or public endpoint was started. Historical evidence: `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
 
 RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**.
+
+## E01 repository remediation - 2026-10-01
+
+The six repository-side remediation tasks are complete: web static-root hardening, native Cloudflared token transport, machine-readable Named Tunnel contract, bounded API rate limiting, proxy/HTTPS security headers, and automated status-only preflight. Evidence and verification are recorded in `docs/implementation/tasks/E01_REMEDIATION.md`.
+
+The current local environment still has no owner-supplied production values, so `npm run e01:preflight` correctly returns `BLOCKED_CONFIG` (exit code 2). No public profile, tunnel, Quick Tunnel, public hostname, or RC01 was started.
 
 ## Quy tắc cập nhật
 

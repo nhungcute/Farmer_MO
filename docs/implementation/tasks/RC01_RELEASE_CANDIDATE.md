@@ -79,20 +79,19 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang QUEUED. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02 đã DONE; B02 đang RUNNING vì còn 76 placeholder ngoài Wave 1; E01 vẫn NOT_STARTED.
+RC01 đang QUEUED/BLOCKED_BY_E01. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 repository remediation đã hoàn tất nhưng runtime vẫn BLOCKED_CONFIG vì thiếu cấu hình owner-only.
 
 ## Next activity
 
-1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02; giữ các evidence và chờ B02/E01 dependency.
+1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02/B02; giữ các evidence và chờ E01 runtime dependency.
 2. Remote GitHub Actions run 36660295559 đã PASS 5/5 job; lưu artifact/log vào release evidence index và chờ parent review.
-3. Hoàn tất B02 bằng artwork production, license/source, style approval, release approval và visual review cho toàn bộ asset còn lại ngoài Wave 1.
-4. Chỉ sau các bước trên mới mở E01; chạy external smoke và rollback/revoke drill.
-5. Khi E01 PASS, tạo release commit và chạy checklist RC01 trên chính commit đó.
+3. Cấp cấu hình owner-only cho E01 ngoài repository và chạy runtime preflight, external smoke cùng rollback/revoke drill.
+4. Chỉ sau khi E01 PASS mới tạo release commit và chạy checklist RC01.
 
 ## Blocker
 
-- B02 đã hoàn tất Wave 1 với 112/112 asset được duyệt theo `MO_FARM_INTERNAL_ASSET_POLICY_V1`; còn 76 asset ngoài Wave 1 là placeholder nên B02 vẫn RUNNING.
-- E01 bị khóa theo dependency cho tới khi A03, C03, D02, B02 và Docker/CI gates PASS.
+- B02 đã hoàn tất Wave 1 và Wave 2 với 188/188 asset đã được duyệt; không còn placeholder trong inventory production.
+- E01 repository remediation đã PASS, nhưng E01 runtime vẫn BLOCKED_CONFIG cho tới khi cấu hình owner-only và external runtime evidence hoàn tất.
 - Không có cơ sở để tuyên bố production SLO/RPO/RTO từ các prototype load/backup numbers hiện tại.
 
 Không được bắt đầu RC01 bằng cách tự tạo artwork, tự phê duyệt license, bỏ qua skip, mở tunnel sớm, dùng database dùng chung hoặc thay đổi gameplay/API contract để làm checklist đạt.

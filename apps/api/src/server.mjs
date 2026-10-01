@@ -8,6 +8,7 @@ import { createApiMetrics } from "./observability/metrics.mjs";
 import { PostgresFarmRepository } from "./repositories/postgresFarmRepository.mjs";
 import pg from "pg";
 import { checkPersistenceReadiness, resolvePersistenceDriver } from "./persistence/config.mjs";
+import { ApiRateLimiter } from "./security/rateLimiter.mjs";
 
 const JSON_LIMIT = 256 * 1024;
 const statusFor = (code) => ({ INVALID_INPUT: 400, UNAUTHORIZED: 401, SESSION_EXPIRED: 401, NOT_FOUND: 404, NOT_ENOUGH_COINS: 409, NOT_ENOUGH_ITEM: 409, WAREHOUSE_FULL: 409, NOT_UNLOCKED: 409, PLOT_NOT_EMPTY: 409, CROP_NOT_READY: 409, BUILDING_COLLISION: 409, INVALID_ROTATION: 409, UNIQUE_BUILDING_EXISTS: 409, ORDER_NOT_COMPLETABLE: 409, ANIMAL_NOT_READY: 409, IDEMPOTENCY_KEY_REUSED: 409, SERIALIZATION_RETRY_EXHAUSTED: 409, DEADLOCK_RETRY_EXHAUSTED: 409, PERSISTENCE_CONFLICT: 409, PERSISTENCE_UNAVAILABLE: 503, RATE_LIMITED: 429, INTERNAL_ERROR: 500 }[code] ?? 400);
@@ -36,7 +37,8 @@ function errorResponse(response, error, id) {
   const message = error instanceof ApiError ? error.message : "Có lỗi máy chủ. Vui lòng thử lại.";
   const details = error instanceof ApiError ? error.details : {};
   if (!(error instanceof ApiError)) console.error(JSON.stringify({ event: "api.error", requestId: id, error: error?.stack ?? String(error) }));
-  send(response, error instanceof ApiError ? error.status : statusFor(code), { error: { code, message, details }, requestId: id });
+  const headers = code === "RATE_LIMITED" && Number.isFinite(details.retryAfterSeconds) ? { "retry-after": String(Math.max(1, Math.ceil(details.retryAfterSeconds))) } : {};
+  send(response, error instanceof ApiError ? error.status : statusFor(code), { error: { code, message, details }, requestId: id }, headers);
 }
 
 function repositoryApiError(error) {
@@ -54,7 +56,7 @@ function repositoryApiError(error) {
 
 function idempotencyKey(request) { return request.headers["idempotency-key"]; }
 
-export function createApiServer({ store, repository, persistenceDriver, databaseUrl = process.env.DATABASE_URL, pool, clock, sessionTtlMs, metrics = createApiMetrics({ logRequests: process.env.LOG_LEVEL === "debug" }), exposeMetrics = process.env.METRICS_PUBLIC === "true", publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local" } = {}) {
+export function createApiServer({ store, repository, persistenceDriver, databaseUrl = process.env.DATABASE_URL, pool, clock, sessionTtlMs, metrics = createApiMetrics({ logRequests: process.env.LOG_LEVEL === "debug" }), exposeMetrics = process.env.METRICS_PUBLIC === "true", publicOrigin = process.env.PUBLIC_ORIGIN ?? "", environment = process.env.APP_ENV ?? "local", rateLimiter = new ApiRateLimiter() } = {}) {
   const driver = resolvePersistenceDriver(persistenceDriver ?? (repository ? "postgres" : (process.env.PERSISTENCE_DRIVER ?? "file")));
   if (driver === "postgres" && !repository) {
     if (!databaseUrl) throw new Error("DATABASE_URL is required when PERSISTENCE_DRIVER=postgres");
@@ -97,6 +99,13 @@ export function createApiServer({ store, repository, persistenceDriver, database
       }
       const url = new URL(request.url ?? "/", "http://localhost");
       const route = `${method} ${url.pathname}`;
+      if (url.pathname.startsWith("/api/") && !url.pathname.startsWith("/api/health/")) {
+        // nginx overwrites X-Real-IP from its trusted socket peer. The API is
+        // not published directly, so clients cannot supply this identity path.
+        const clientKey = request.headers["x-real-ip"] || request.socket.remoteAddress || "unknown";
+        const decision = rateLimiter?.consume?.(clientKey);
+        if (decision && !decision.allowed) throw new ApiError("RATE_LIMITED", "Quá nhiều yêu cầu. Vui lòng thử lại sau.", 429, { retryAfterSeconds: Math.max(1, Math.ceil(decision.retryAfterMs / 1000)) });
+      }
       if (route === "GET /api/health/metrics") {
         if (!exposeMetrics) throw new ApiError("NOT_FOUND", "Không tìm thấy đường dẫn.", 404, { path: url.pathname });
         success(response, { status: "ok", service: "mo-farm-api", metrics: metrics.snapshot() }, { "x-request-id": id });

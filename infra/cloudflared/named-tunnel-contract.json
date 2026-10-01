@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "tunnelType": "named",
+  "expectedOriginService": "http://nginx:80",
+  "hostnameSource": "CLOUDFLARE_HOSTNAME",
+  "publicOriginSource": "PUBLIC_ORIGIN",
+  "cloudflaredTokenEnv": "TUNNEL_TOKEN",
+  "quickTunnelAllowed": false,
+  "requiredCommand": ["tunnel", "--no-autoupdate", "run"]
+}

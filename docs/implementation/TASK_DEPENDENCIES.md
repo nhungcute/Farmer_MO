@@ -30,13 +30,20 @@ A03 + B02 + C03 + D02 + E01 → RC01 Release Candidate.
 - Evidence: Wave 1 review/approval records plus docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md and npm run assets:validate:wave2-release.
 - RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. E01 preflight is complete but **BLOCKED_CONFIG** with additional **BLOCKED_SECURITY** findings; no public profile was started. RC01 is **BLOCKED_BY_E01 / NOT_STARTED**.
 
-## E01 preflight checkpoint - 2026-10-01
+## E01 initial preflight checkpoint - 2026-10-01
 
 - Eight read-only preflight tasks completed: E01-01 through E01-08.
 - E01 status: **BLOCKED_CONFIG** because required non-default production/demo environment values and the Named Tunnel token/hostname are absent.
-- Security status: **BLOCKED_SECURITY** because public web source exposure, unresolved cloudflared token expansion/ingress evidence, and missing effective rate limiting require resolution before public access.
-- No shared configuration was changed and no container or tunnel was started. Full evidence is in `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
+- Security status at the initial checkpoint: **BLOCKED_SECURITY** because public web source exposure, unresolved cloudflared token expansion/ingress evidence, and missing effective rate limiting required resolution before public access.
+- No container or tunnel was started. Initial evidence is in `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`; remediation evidence is in `docs/implementation/tasks/E01_REMEDIATION.md`.
 - RC01 status: **BLOCKED_BY_E01 / NOT_STARTED**.
+
+## E01 remediation checkpoint - 2026-10-01
+
+- E01-FIX-01 through E01-FIX-06 are complete and pass repository/static verification.
+- `npm run test:e01:security` passes 15 tests; the status-only validator reports all static checks PASS with a synthetic valid environment.
+- The real local environment remains absent, therefore `npm run e01:preflight` is intentionally `BLOCKED_CONFIG` until the owner supplies ignored local secrets and the exact HTTPS hostname/origin pair.
+- No public profile, Cloudflare process, Quick Tunnel, or RC01 was started. See `docs/implementation/tasks/E01_REMEDIATION.md`.
 
 ## Gate rules
 
