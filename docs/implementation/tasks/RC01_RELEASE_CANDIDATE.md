@@ -4,7 +4,7 @@
 |---|---|
 | Task ID | RC01 |
 | Name | Release Candidate evidence, sign-off and rollback gate |
-| Status | QUEUED |
+| Status | BLOCKED_BY_E01 / NOT_STARTED |
 | Owner | Root/release integration |
 | Dependencies | A03 DONE; B02 DONE; C03 DONE; D02 DONE; E01 DONE; A02/C02/Docker/CI gates PASS |
 | Owned paths | `docs/implementation/tasks/RC01_RELEASE_CANDIDATE.md`, release evidence index, release/rollback runbooks and generated release artifacts |
@@ -79,7 +79,7 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang QUEUED/BLOCKED_BY_E01. Chưa chạy release, chưa mở Cloudflare Named Tunnel và chưa tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 repository remediation đã hoàn tất nhưng runtime vẫn BLOCKED_CONFIG vì thiếu cấu hình owner-only.
+RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, chưa start cloudflared hoặc tạo public URL/release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 demo hiện là PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG vì thiếu ignored local demo/PostgreSQL configuration. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Sau khi E01 actual runtime/public/preservation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
 
 ## Next activity
 

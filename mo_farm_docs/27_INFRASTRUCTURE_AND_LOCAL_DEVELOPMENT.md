@@ -6,7 +6,7 @@ Có hai chế độ chạy:
 
 ```text
 local  = web + api + db + nginx, không cần Cloudflare
-public = local stack + Named Tunnel
+public = local stack + persistent Quick Tunnel (separate Compose lifecycle)
 ```
 
 Prototype local phải chạy được khi không có Cloudflare token. Cloudflare chỉ là lớp public access, không phải dependency của gameplay hoặc test.
@@ -22,12 +22,12 @@ web
 nginx
 ```
 
-`cloudflared` chỉ nằm trong profile `public`. `migrate` và `seed` là one-shot profile `init`.
+`cloudflared` chỉ nằm trong `compose.tunnel.yaml`, project `mo-farm-tunnel`; không nằm trong application Compose. `migrate` và `seed` là one-shot profile `init` của application project `mo-farm`.
 
 Network:
 
 ```text
-frontend: web, nginx, cloudflared
+frontend (mo-farm-frontend): web, api, nginx + external cloudflared
 backend: nginx, api, db
 ```
 
@@ -119,6 +119,7 @@ DEMO_MODE=true
 NODE_ENV=development
 TZ=UTC
 NODE_VERSION=22
+PERSISTENCE_DRIVER=file
 POSTGRES_DB=mo_farm
 POSTGRES_USER=mo_farm
 POSTGRES_PASSWORD=change_me
@@ -131,8 +132,6 @@ PUBLIC_ORIGIN=http://localhost:8080
 TRUST_PROXY=false
 LOG_LEVEL=info
 VITE_API_BASE=/api
-CLOUDFLARE_TUNNEL_TOKEN=
-CLOUDFLARE_HOSTNAME=farm.example.com
 BACKUP_DIR=./backups
 ```
 
@@ -141,8 +140,10 @@ Quy tắc:
 - API validate environment khi boot và fail fast khi thiếu biến bắt buộc.
 - `.env.example` không chứa secret thật.
 - Public secret inject qua environment hoặc secret file có permission phù hợp.
-- Không commit database password, session secret hoặc Cloudflare token.
+- Không commit database password, session secret hoặc runtime state `.runtime/`.
 - `DEMO_MODE=true` chỉ mô tả threat model; không bỏ qua validation.
+
+Đây là ví dụ local, không phải public preflight configuration. E01 public demo bắt buộc `PERSISTENCE_DRIVER=postgres`, `APP_ENV=demo`, `COOKIE_SECURE=true`, session secret tối thiểu 32 ký tự và PostgreSQL password tối thiểu 16 ký tự, không default/placeholder; `DATABASE_URL` hợp lệ dùng PostgreSQL nội bộ. Không cần Cloudflare token, fixed hostname hoặc `PUBLIC_ORIGIN` public trước khi tunnel được tạo. Sau URL capture, ignored `.runtime/quick-tunnel.env` cung cấp `PUBLIC_ORIGIN=https://<generated>.trycloudflare.com` chính xác. API giữ exact Origin validation; không chấp nhận `*` hoặc wildcard trycloudflare.
 
 ## 6. Docker command chuẩn
 
@@ -162,19 +163,26 @@ Invoke-WebRequest http://localhost:8080/healthz
 docker compose logs -f api nginx
 ```
 
-Public:
+Public demo (Phase 2, chỉ sau lệnh riêng của Project Owner; Phase 1 không start container/tunnel):
 
 ```powershell
-docker compose --profile public up -d cloudflared
+npm run e01:preflight
+npm run e01:quick:start
+npm run e01:quick:status
+npm run e01:app:update
+npm run e01:app:update -- --nginx
+npm run e01:quick:stop
 ```
 
-`cloudflared` dùng Named Tunnel token đã cấp sẵn:
+`cloudflared` dùng Quick Tunnel không token:
 
 ```text
-cloudflared tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+cloudflared tunnel --no-autoupdate --url http://nginx:80
 ```
 
 Image version của Node, PostgreSQL, Nginx và cloudflared phải được pin. Không dùng `latest`.
+
+Start lần hai reuse cloudflared đang chạy, không recreate tunnel. App update chỉ build/recreate `api/web`, refresh Nginx upstream DNS, và tùy chọn recreate Nginx qua `--nginx`; không dùng `docker compose down`. Stop chỉ dừng cloudflared, đánh dấu URL stale và giữ database volume. Chi tiết: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## 7. Nginx
 
@@ -265,19 +273,17 @@ CI phải fail khi:
 - Migration không chạy từ database rỗng.
 - Docker image không build được.
 
-## 10. Cloudflare Named Tunnel
+## 10. Persistent Cloudflare Quick Tunnel
 
-Named Tunnel là acceptance riêng cho public demo:
+Project Owner chọn **PERSISTENT_QUICK_TUNNEL** cho E01 demo. Application Compose quản lý network tên cố định `mo-farm-frontend`; tunnel Compose tham gia với `external: true` để resolve `nginx` qua Docker DNS. Tunnel có image `cloudflare/cloudflared:2025.9.1`, `restart: unless-stopped`, log rotation giới hạn; không có build, token hoặc dependency lifecycle vào application stack.
 
-- Domain đã quản lý trong Cloudflare.
-- Hostname cố định, ví dụ `farm.example.com`.
-- Token không commit và không xuất hiện trong log.
-- Cloudflared chạy profile `public`.
-- Cloudflared phụ thuộc Nginx healthy.
-- Rebuild `web/api/nginx` không recreate tunnel.
-- DB và API không có public port.
+Start script chờ Nginx healthy ở lần đầu rồi mới start cloudflared. Khi API/web/Nginx update hoặc tạm mất readiness, cloudflared vẫn sống. Runtime URL được parse/validate strict: HTTPS origin với subdomain hợp lệ của `.trycloudflare.com`, không root domain, localhost, domain khác, path/query/fragment hoặc wildcard.
 
-Quick Tunnel `trycloudflare.com` chỉ dùng debug tạm thời, không dùng làm acceptance stable URL.
+Ignored state `.runtime/quick-tunnel.json` và `.runtime/quick-tunnel.env` ghi current URL và exact `PUBLIC_ORIGIN`; không chứa local secrets. App update so sánh container ID, `StartedAt`, `RestartCount` và current URL trước/sau. Unexpected rotation/restart báo `TUNNEL_LIFECYCLE_REGRESSION`; giữ tunnel sống khi sửa lỗi app.
+
+Phạm vi ổn định URL là **SAME CLOUDFLARED LIFETIME**, không phải URL vĩnh viễn. Process/container restart, host reboot hoặc Cloudflare tái tạo session có thể đổi URL. Restart policy không bảo đảm URL cũ. Production/stable hostname nên dùng Named Tunnel sau này. Named Tunnel contract và báo cáo trước migration được giữ như historical evidence `SUPERSEDED`.
+
+Phase 1 không start runtime: E01 `BLOCKED_CONFIG` nếu thiếu ignored local configuration, hoặc `READY_FOR_QUICK_TUNNEL_START` khi đủ. Phase 2 đang chạy nhưng QA chưa hoàn tất là `RUNNING`; chỉ `DONE — PERSISTENT_QUICK_TUNNEL` khi public QA, persistence và thực tế app-update URL preservation PASS. RC01 chờ E01 và lệnh riêng từ Project Owner.
 
 ## 11. Acceptance hạ tầng
 
@@ -288,7 +294,7 @@ Quick Tunnel `trycloudflare.com` chỉ dùng debug tạm thời, không dùng l�
 - API readiness chuyển từ `503` sang `200` sau khi DB sẵn sàng.
 - Nginx route đúng `/` và `/api/`.
 - Backup → xóa database tạm → restore → health/bootstrap thành công.
-- Public Named Tunnel giữ nguyên hostname sau rebuild.
+- Public Quick Tunnel giữ container/process và URL sau application rebuild trong cùng cloudflared lifetime; ghi evidence trước/sau thực tế, không suy ra PASS từ static test.
 - Không lộ DB port, API port hoặc secret.
 ## 12. Infrastructure artifacts cần tạo ở Phase G1
 
@@ -298,11 +304,14 @@ Quick Tunnel `trycloudflare.com` chỉ dùng debug tạm thời, không dùng l�
 package.json
 pnpm-lock.yaml
 compose.yaml
+compose.tunnel.yaml
 apps/api/Dockerfile
 apps/web/Dockerfile
 infra/nginx/nginx.conf
 infra/nginx/conf.d/default.conf
-infra/cloudflared/config.yml
+infra/cloudflared/quick-tunnel-contract.json
+tools/quick-tunnel.mjs
+tools/update-app.mjs
 ops/backup-db.ps1
 ops/backup-db.sh
 ops/restore-db.ps1
@@ -310,7 +319,7 @@ ops/restore-db.sh
 .github/workflows/ci.yml
 ```
 
-`compose.yaml` dùng profiles `init` và `public`; không tạo một compose file local bắt buộc token Cloudflare. `infra/cloudflared/config.yml` không chứa token; token chỉ inject qua environment/secret.
+`compose.yaml` chỉ quản lý application và profile `init`; `compose.tunnel.yaml` chỉ quản lý cloudflared. Quick Tunnel contract là nguồn machine-readable hiện hành. Local application không cần Cloudflare, runtime state không được commit.
 
 Các artifact này là infrastructure scope của Phase G1/G7, không được để AI coder tự bỏ qua với lý do chưa có gameplay.
 

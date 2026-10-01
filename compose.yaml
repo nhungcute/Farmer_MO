@@ -111,23 +111,11 @@ services:
         condition: service_healthy
     networks: [backend]
 
-  cloudflared:
-    profiles: ["public"]
-    image: cloudflare/cloudflared:2025.9.1
-    command: tunnel --no-autoupdate run
-    environment:
-      # cloudflared reads the Named Tunnel token from its native TUNNEL_TOKEN
-      # environment variable; keep the source variable external to the repo.
-      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
-    depends_on:
-      nginx:
-        condition: service_healthy
-    networks: [frontend]
-
 volumes:
   mo_farm_db:
   mo_farm_state:
 
 networks:
   frontend:
+    name: mo-farm-frontend
   backend:

@@ -64,7 +64,9 @@ Mỗi feature phải có:
 | INFRA-02 | Migration/seed repeatable | CI database job |
 | INFRA-03 | DB không public | Compose/network inspection |
 | INFRA-04 | Backup/restore thành công | Restore drill |
-| INFRA-05 | Named Tunnel giữ hostname sau rebuild | Public smoke test |
+| INFRA-05 | Persistent Quick Tunnel giữ container/process và URL khi app rebuild trong SAME CLOUDFLARED LIFETIME | Phase-2 actual redeploy + public smoke; so sánh ID/StartedAt/RestartCount/URL |
+| INFRA-06 | PUBLIC_ORIGIN exact current HTTPS trycloudflare origin, không wildcard | Strict URL parser tests + Phase-2 Origin/cookie QA |
+| INFRA-07 | Tunnel/application lifecycle riêng; stop tunnel không xóa DB/state | Compose/static isolation tests + Phase-2 persistence/stop evidence |
 | PERF-01 | TTI dưới 4 giây Wi-Fi tốt sau cache | Lighthouse/trace |
 | PERF-02 | FPS/frame-time trên Android trung bình | Device profile |
 | PERF-03 | Không tăng memory khi mở modal 50 lần | Browser memory test |
@@ -79,6 +81,8 @@ Mỗi feature phải có:
 - Fake clock: crop và chicken không chờ thời gian thật.
 - Docker Compose: migration, seed, health và routing.
 - Không dùng Cloudflare cho unit/API/E2E CI.
+
+E01 Phase 1 chỉ repository/static/build verification, không start container hoặc tạo public URL. Public acceptance chỉ ghi PASS sau Phase 2 thực tế: HTTPS enter/bootstrap/session/refresh/idempotent mutation, 188 approved assets, mobile 932×430/915×412/844×390/740×360, restricted static paths, cookie/security headers, bounded rate limit và farm persistence. Quick Tunnel URL vẫn ephemeral; không cố ý restart cloudflared để thử rotation. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## 4. Bắt buộc test race và retry
 

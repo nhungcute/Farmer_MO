@@ -21,16 +21,28 @@ Copy-Item .env.example .env
 docker compose up --build -d
 ```
 
-Mặc định gateway ở `http://127.0.0.1:8080`. Nếu cổng đã được dùng, chạy với biến môi trường khác, ví dụ `$env:NGINX_PORT='18080'`. API trong Compose dùng file adapter tại volume `/data`; PostgreSQL và schema tham chiếu đã được dựng cho bước persistence tiếp theo, nhưng runtime prototype chưa kết nối trực tiếp vào PostgreSQL.
+Mặc định gateway ở `http://127.0.0.1:8080`. Nếu cổng đã được dùng, đặt `NGINX_PORT` khác trong ignored local environment. API hỗ trợ file adapter cho local compatibility và PostgreSQL persistence; E01 public demo bắt buộc PostgreSQL, Secure cookies và session/database secrets không default.
 
-Profile public chỉ chạy sau khi đặt `CLOUDFLARE_TUNNEL_TOKEN`; không bật profile này cho local demo nếu chưa có token.
+E01 demo dùng **persistent Quick Tunnel** tại `*.trycloudflare.com`, không cần token hoặc fixed hostname. `compose.yaml` quản lý application; `compose.tunnel.yaml` quản lý cloudflared riêng, dùng external network `mo-farm-frontend`. Phase 1 chỉ implementation/static regression: **không start container/tunnel hoặc tạo URL**. Runtime hiện `BLOCKED_CONFIG` vì ignored local configuration chưa có; RC01 `BLOCKED_BY_E01 / NOT_STARTED`.
+
+Sau lệnh riêng của Project Owner để bắt đầu Phase 2:
+
+```powershell
+npm run e01:quick:start
+npm run e01:quick:status
+npm run e01:app:update
+npm run e01:app:update -- --nginx
+npm run e01:quick:stop
+```
+
+Start reuse cloudflared đang chạy; app update chỉ recreate application services và refresh Nginx routing. Stop chỉ dừng tunnel, giữ database/game state. Runtime URL và exact `PUBLIC_ORIGIN` nằm trong ignored `.runtime/`; không dùng origin wildcard. URL là ephemeral: app rebuild giữ tunnel sống để giảm đổi URL trong **SAME CLOUDFLARED LIFETIME**, không bảo đảm vĩnh viễn; restart/recreation có thể đổi URL. Production cần stable hostname nên dùng Named Tunnel sau này. Runbook và Phase-2 public QA: [`E01_PERSISTENT_QUICK_TUNNEL.md`](docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## Các phần đã chạy
 
 - Direct entry, session HttpOnly, bootstrap farm 24×24 và toàn bộ luật server cho trồng/thu hoạch, mua/bán, xây dựng, cho ăn/thu trứng, đơn hàng, nhiệm vụ.
 - Web shell canvas isometric responsive, thao tác tiếng Việt, đọc manifest/atlas animation; PixiJS 8 renderer được mount sau bootstrap với Canvas fallback.
 - Pixi bundle same-origin cho buildless shell: `npm run renderer:vendor`; Docker tự tạo bundle trong image và PWA cache bundle cùng asset manifest.
-- 188 frame PNG placeholder, 10 animation clip, atlas JSON/PNG và validator strict.
+- 188/188 production-ready approved assets, 0 placeholder, 10 animation clip, atlas JSON/PNG và validator strict.
 - Idempotency cho mutation, timer server, giới hạn kho, unlock theo cấp và state JSON tùy chọn.
 - Healthcheck Docker, Nginx reverse proxy, migration/seed hooks, CI và script backup/restore.
 

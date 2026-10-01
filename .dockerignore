@@ -5,6 +5,7 @@
 node_modules/
 backups/
 data/
+.runtime/
 .env
 .env.*
 *.zip

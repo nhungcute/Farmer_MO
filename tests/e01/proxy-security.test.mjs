@@ -4,20 +4,32 @@ import fs from "node:fs";
 
 const nginx = fs.readFileSync("infra/nginx/conf.d/default.conf", "utf8");
 const nginxRoot = fs.readFileSync("infra/nginx/nginx.conf", "utf8");
-const contract = JSON.parse(fs.readFileSync("infra/cloudflared/named-tunnel-contract.json", "utf8"));
+const contract = JSON.parse(fs.readFileSync("infra/cloudflared/quick-tunnel-contract.json", "utf8"));
+const historicalContract = JSON.parse(fs.readFileSync("infra/cloudflared/named-tunnel-contract.json", "utf8"));
 
-test("E01 local Named Tunnel contract is non-secret and fixed to nginx", () => {
+test("E01 local Quick Tunnel contract preserves exact origins and independent lifecycle", () => {
   assert.deepEqual(contract, {
     schemaVersion: 1,
-    tunnelType: "named",
-    expectedOriginService: "http://nginx:80",
-    hostnameSource: "CLOUDFLARE_HOSTNAME",
-    publicOriginSource: "PUBLIC_ORIGIN",
-    cloudflaredTokenEnv: "TUNNEL_TOKEN",
-    quickTunnelAllowed: false,
-    requiredCommand: ["tunnel", "--no-autoupdate", "run"],
+    tunnelType: "quick",
+    originService: "http://nginx:80",
+    publicHostnameType: "ephemeral-trycloudflare",
+    hostnameSuffix: ".trycloudflare.com",
+    tokenRequired: false,
+    fixedHostnameRequired: false,
+    publicOriginMode: "runtime-generated-exact",
+    persistentContainerLifecycle: true,
+    appRedeployMustPreserveTunnel: true,
+    quickTunnelAllowed: true,
+    requiredCommand: ["tunnel", "--no-autoupdate", "--url", "http://nginx:80"],
+    sharedNetwork: "mo-farm-frontend",
   });
   assert.doesNotMatch(JSON.stringify(contract), /token\s*[:=]\s*[^<\s]/iu);
+});
+
+test("E01 Named Tunnel evidence is superseded by the project owner decision", () => {
+  assert.equal(historicalContract.status, "SUPERSEDED");
+  assert.equal(historicalContract.reason, "PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO");
+  assert.equal(historicalContract.tunnelType, "named");
 });
 
 test("E01 nginx boundary has body limit, HSTS edge awareness and safe forwarded headers", () => {

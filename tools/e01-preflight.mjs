@@ -1,18 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateQuickTunnelUrl } from './lib/quick-tunnel.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const REQUIRED_ENV = Object.freeze([
   'PERSISTENCE_DRIVER',
   'APP_ENV',
-  'PUBLIC_ORIGIN',
   'COOKIE_SECURE',
   'SESSION_SECRET',
   'POSTGRES_PASSWORD',
-  'CLOUDFLARE_TUNNEL_TOKEN',
-  'CLOUDFLARE_HOSTNAME',
 ]);
 
 // DATABASE_URL is included in the public-runtime gate because a postgres
@@ -20,8 +18,9 @@ export const REQUIRED_ENV = Object.freeze([
 const SUPPORTING_ENV = Object.freeze(['DATABASE_URL']);
 const DEFAULT_SESSION_SECRET = 'change_me_minimum_32_chars';
 const DEFAULT_POSTGRES_PASSWORD = 'change_me';
-const DEFAULT_HOSTNAME = 'farm.example.com';
 const EXPECTED_TUNNEL_TARGET = 'http://nginx:80';
+const SHARED_NETWORK = 'mo-farm-frontend';
+const TUNNEL_COMMAND = ['tunnel', '--no-autoupdate', '--url', EXPECTED_TUNNEL_TARGET];
 const PLACEHOLDER_RE = /^(?:<[^>]+>|change(?:[_-]?)me(?:[^ ]*)?|example(?:\.com)?|placeholder)$/i;
 const ENV_STATUS = Object.freeze({ SET: 'SET', MISSING: 'MISSING', INVALID: 'INVALID', DEFAULT: 'DEFAULT', PLACEHOLDER: 'PLACEHOLDER' });
 
@@ -43,7 +42,7 @@ function envValue(env, name) {
 }
 
 function parseDotEnv(text) {
-  const values = {};
+  const values = Object.create(null);
   for (const line of String(text ?? '').split(/\r?\n/)) {
     const match = /^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$/.exec(line);
     if (!match) continue;
@@ -54,10 +53,13 @@ function parseDotEnv(text) {
   return values;
 }
 
-function loadLocalEnv(root, processEnv) {
+export function loadLocalEnv(root = ROOT, processEnv = process.env) {
   const base = parseDotEnv(readText(root, '.env'));
   const selectedEnvironment = envValue(processEnv, 'APP_ENV') || base.APP_ENV || 'local';
-  const selected = parseDotEnv(readText(root, `.env.${selectedEnvironment}`));
+  // Never turn an untrusted APP_ENV into a path outside the root directory.
+  const selected = /^[a-z][a-z0-9_-]*$/i.test(selectedEnvironment)
+    ? parseDotEnv(readText(root, `.env.${selectedEnvironment}`))
+    : {};
   // Explicit process variables always win over ignored dotenv files. The
   // files are read only to mirror Compose's local configuration resolution.
   return { ...base, ...selected, ...processEnv };
@@ -68,26 +70,9 @@ function isPlaceholder(value, defaults = []) {
   return defaults.includes(value) || PLACEHOLDER_RE.test(value) || value.includes('<inject-');
 }
 
-function hostnameValid(value) {
-  if (!value || value.length > 253 || value.includes('..')) return false;
-  if (!/^[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?$/.test(value)) return false;
-  return value.split('.').every((label) => label.length > 0 && label.length <= 63 && !label.startsWith('-') && !label.endsWith('-'));
-}
-
 function parsePublicOrigin(value) {
-  if (!value) return { valid: false };
   try {
-    const origin = new URL(value);
-    const valid = origin.protocol === 'https:'
-      && !origin.username
-      && !origin.password
-      && !origin.port
-      && origin.pathname === '/'
-      && !origin.search
-      && !origin.hash
-      && hostnameValid(origin.hostname)
-      && origin.hostname.toLowerCase() !== 'localhost';
-    return { valid, hostname: origin.hostname.toLowerCase() };
+    return { valid: true, origin: validateQuickTunnelUrl(value) };
   } catch {
     return { valid: false };
   }
@@ -119,21 +104,20 @@ function classify(name, raw, { fallback, placeholderDefaults = [], valid } = {})
   return { name, status: ENV_STATUS.SET, source: 'environment' };
 }
 
-function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true } = {}) {
+function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true, runtime = false, publicUrl } = {}) {
   const effectiveEnv = loadDotEnv ? loadLocalEnv(root, env) : env;
-  const nginxPort = envValue(effectiveEnv, 'NGINX_PORT') || '8080';
   const defaults = {
     PERSISTENCE_DRIVER: 'file',
     APP_ENV: 'local',
-    PUBLIC_ORIGIN: `http://localhost:${nginxPort}`,
+    PUBLIC_ORIGIN: '',
     COOKIE_SECURE: 'false',
     SESSION_SECRET: DEFAULT_SESSION_SECRET,
     POSTGRES_PASSWORD: DEFAULT_POSTGRES_PASSWORD,
-    CLOUDFLARE_TUNNEL_TOKEN: '',
-    CLOUDFLARE_HOSTNAME: DEFAULT_HOSTNAME,
     DATABASE_URL: 'postgresql://mo_farm:change_me@db:5432/mo_farm',
   };
-  const values = Object.fromEntries([...REQUIRED_ENV, ...SUPPORTING_ENV].map((name) => [name, envValue(effectiveEnv, name)]));
+  const values = Object.fromEntries([...REQUIRED_ENV, 'PUBLIC_ORIGIN', ...SUPPORTING_ENV].map((name) => [name, envValue(effectiveEnv, name)]));
+  // Origin equality uses the supplied bytes, including forbidden whitespace.
+  if (typeof effectiveEnv.PUBLIC_ORIGIN === 'string') values.PUBLIC_ORIGIN = effectiveEnv.PUBLIC_ORIGIN;
   const entries = [
     classify('PERSISTENCE_DRIVER', values.PERSISTENCE_DRIVER, { fallback: defaults.PERSISTENCE_DRIVER, valid: (value) => ['file', 'postgres'].includes(value.toLowerCase()) }),
     classify('APP_ENV', values.APP_ENV, { fallback: defaults.APP_ENV, valid: (value) => ['local', 'demo', 'production'].includes(value.toLowerCase()) }),
@@ -141,56 +125,64 @@ function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true
     classify('COOKIE_SECURE', values.COOKIE_SECURE, { fallback: defaults.COOKIE_SECURE, valid: (value) => ['true', 'false'].includes(value.toLowerCase()) }),
     classify('SESSION_SECRET', values.SESSION_SECRET, { fallback: defaults.SESSION_SECRET, placeholderDefaults: [DEFAULT_SESSION_SECRET], valid: (value) => value.length >= 32 }),
     classify('POSTGRES_PASSWORD', values.POSTGRES_PASSWORD, { fallback: defaults.POSTGRES_PASSWORD, placeholderDefaults: [DEFAULT_POSTGRES_PASSWORD], valid: (value) => value.length >= 16 }),
-    classify('CLOUDFLARE_TUNNEL_TOKEN', values.CLOUDFLARE_TUNNEL_TOKEN, { fallback: defaults.CLOUDFLARE_TUNNEL_TOKEN, valid: (value) => !/\s/.test(value) && value.length >= 16 }),
-    classify('CLOUDFLARE_HOSTNAME', values.CLOUDFLARE_HOSTNAME, { fallback: defaults.CLOUDFLARE_HOSTNAME, placeholderDefaults: [DEFAULT_HOSTNAME], valid: hostnameValid }),
     classify('DATABASE_URL', values.DATABASE_URL, { fallback: defaults.DATABASE_URL, placeholderDefaults: [defaults.DATABASE_URL], valid: (value) => parseDatabaseUrl(value).valid && !parseDatabaseUrl(value).placeholderPassword }),
   ];
-  const byName = Object.fromEntries(entries.map((entry) => [entry.name, entry]));
-  const origin = parsePublicOrigin(values.PUBLIC_ORIGIN || defaults.PUBLIC_ORIGIN);
-  const hostname = values.CLOUDFLARE_HOSTNAME || defaults.CLOUDFLARE_HOSTNAME;
+  const origin = parsePublicOrigin(values.PUBLIC_ORIGIN);
+  const generated = parsePublicOrigin(publicUrl);
   const comparison = {
-    status: origin.valid && hostnameValid(hostname) && origin.hostname === hostname.toLowerCase() ? 'PASS' : 'BLOCKED_CONFIG',
-    detail: 'PUBLIC_ORIGIN must be an HTTPS origin whose hostname exactly matches CLOUDFLARE_HOSTNAME.',
+    status: runtime
+      ? origin.valid && generated.valid && values.PUBLIC_ORIGIN === publicUrl ? 'PASS' : 'BLOCKED_CONFIG'
+      : !values.PUBLIC_ORIGIN || origin.valid ? 'PASS' : 'BLOCKED_CONFIG',
+    detail: runtime
+      ? 'PUBLIC_ORIGIN must exactly equal the validated generated Quick Tunnel URL.'
+      : 'PUBLIC_ORIGIN may be absent before start; an explicit value must be a strict HTTPS Quick Tunnel origin.',
   };
   const requirements = [
     ['PERSISTENCE_DRIVER', (value) => value.toLowerCase() === 'postgres', 'PERSISTENCE_DRIVER must be postgres for public runtime.'],
     ['APP_ENV', (value) => value.toLowerCase() === 'demo', 'APP_ENV must be demo for public runtime.'],
-    ['PUBLIC_ORIGIN', (value) => parsePublicOrigin(value).valid, 'PUBLIC_ORIGIN must be a fixed HTTPS origin.'],
+    ['PUBLIC_ORIGIN', (value) => (!runtime && !value) || parsePublicOrigin(value).valid, 'An explicit PUBLIC_ORIGIN must be a strict HTTPS Quick Tunnel origin.'],
     ['COOKIE_SECURE', (value) => value.toLowerCase() === 'true', 'COOKIE_SECURE must be true for public runtime.'],
     ['SESSION_SECRET', (value) => value.length >= 32 && !isPlaceholder(value, [DEFAULT_SESSION_SECRET]), 'SESSION_SECRET must be non-default and at least 32 characters.'],
     ['POSTGRES_PASSWORD', (value) => value.length >= 16 && !isPlaceholder(value, [DEFAULT_POSTGRES_PASSWORD]), 'POSTGRES_PASSWORD must be non-default and at least 16 characters.'],
-    ['CLOUDFLARE_TUNNEL_TOKEN', (value) => value.length >= 16 && !/\s/.test(value) && !isPlaceholder(value), 'CLOUDFLARE_TUNNEL_TOKEN must be injected and non-empty.'],
-    ['CLOUDFLARE_HOSTNAME', (value) => hostnameValid(value) && !isPlaceholder(value, [DEFAULT_HOSTNAME]), 'CLOUDFLARE_HOSTNAME must be a fixed non-example hostname.'],
     ['DATABASE_URL', (value) => parseDatabaseUrl(value).valid && !parseDatabaseUrl(value).placeholderPassword, 'DATABASE_URL must be a valid PostgreSQL URL with a non-default password.'],
   ];
   const failures = requirements.filter(([name, predicate]) => {
     const value = values[name] || defaults[name] || '';
     return !predicate(value);
   }).map(([name, , detail]) => ({ name: `env:${name}`, status: 'BLOCKED_CONFIG', detail }));
-  if (comparison.status !== 'PASS') failures.push({ name: 'env:PUBLIC_ORIGIN_HOSTNAME_MATCH', ...comparison });
-  return { entries: [...REQUIRED_ENV.map((name) => byName[name]), byName.DATABASE_URL], values, defaults, checks: failures, hostnameComparison: comparison };
+  if (comparison.status !== 'PASS') failures.push({ name: 'env:PUBLIC_ORIGIN_GENERATED_MATCH', ...comparison });
+  return { entries, checks: failures, hostnameComparison: comparison };
 }
 
-function serviceBlock(compose, service) {
-  if (!compose) return undefined;
+function sectionBlock(compose, section) {
+  const header = new RegExp(`^${section}:\\r?\\n`, 'm').exec(compose ?? '');
+  if (!header) return undefined;
+  const start = header.index + header[0].length;
+  const next = /^[A-Za-z0-9_-]+:/m.exec(compose.slice(start));
+  return compose.slice(start, next ? start + next.index : compose.length);
+}
+
+function serviceBlock(compose, service, section = 'services') {
+  const services = sectionBlock(compose, section);
+  if (!services) return undefined;
   const escaped = service.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const header = new RegExp(`^  ${escaped}:\\r?\\n`, 'm').exec(compose);
+  const header = new RegExp(`^  ${escaped}:\\r?\\n`, 'm').exec(services);
   if (!header) return undefined;
   const bodyStart = header.index + header[0].length;
-  const nextService = /^  [A-Za-z0-9_-]+:/m.exec(compose.slice(bodyStart));
-  const bodyEnd = nextService ? bodyStart + nextService.index : compose.length;
-  return compose.slice(bodyStart, bodyEnd);
+  const nextService = /^  [A-Za-z0-9_-]+:/m.exec(services.slice(bodyStart));
+  const bodyEnd = nextService ? bodyStart + nextService.index : services.length;
+  return services.slice(bodyStart, bodyEnd);
 }
 
 function checkPortExposure(compose) {
   const findings = [];
-  for (const service of ['api', 'db', 'web', 'cloudflared']) {
+  for (const service of ['api', 'db', 'web']) {
     const block = serviceBlock(compose, service);
     if (!block) {
       findings.push({ name: `ports:${service}-service`, status: 'BLOCKED_SECURITY', detail: `Compose service ${service} is missing.` });
       continue;
     }
-    if (/^[ \t]{4}ports:[ \t]*$/m.test(block)) findings.push({ name: `ports:${service}-public`, status: 'BLOCKED_SECURITY', detail: `${service} must not publish a host port.` });
+    if (/^[ \t]{4}ports:/m.test(block)) findings.push({ name: `ports:${service}-public`, status: 'BLOCKED_SECURITY', detail: `${service} must not publish a host port.` });
     else findings.push({ name: `ports:${service}-public`, status: 'PASS', detail: `${service} has no host port mapping.` });
   }
   const nginx = serviceBlock(compose, 'nginx');
@@ -198,50 +190,68 @@ function checkPortExposure(compose) {
   // accidentally classify unrelated list entries as host port mappings.
   const portsBlock = nginx?.match(/^ {4}ports:\s*\r?\n((?:^ {6}-[^\r\n]*(?:\r?\n|$))+)/m)?.[1] ?? '';
   const nginxPorts = portsBlock.split(/\r?\n/).filter(Boolean);
-  const nginxPublic = nginxPorts.filter((line) => !/(127\.0\.0\.1|::1|localhost)/i.test(line));
-  findings.push({ name: 'ports:nginx-bind', status: nginx && nginxPublic.length === 0 ? 'PASS' : 'BLOCKED_SECURITY', detail: nginxPublic.length ? 'Nginx must bind only to loopback for this local preflight.' : 'Nginx host mapping is loopback-only.' });
+  const nginxPublic = nginxPorts.filter((line) => !/^ {6}-[ \t]+['"]?(?:127\.0\.0\.1|\[::1\]):/.test(line));
+  const unparsedMapping = /^ {4}ports:/m.test(nginx ?? '') && nginxPorts.length === 0;
+  const safeBind = Boolean(nginx) && nginxPublic.length === 0 && !unparsedMapping;
+  findings.push({ name: 'ports:nginx-bind', status: safeBind ? 'PASS' : 'BLOCKED_SECURITY', detail: safeBind ? 'Nginx host mapping is loopback-only.' : 'Nginx must use an explicit loopback-only host port mapping.' });
   return findings;
 }
 
 function checkCloudflared(root, compose) {
-  const block = serviceBlock(compose, 'cloudflared');
+  const tunnelCompose = readText(root, 'compose.tunnel.yaml');
+  const block = serviceBlock(tunnelCompose, 'cloudflared');
   const findings = [];
-  if (!block) return [{ name: 'cloudflared:service', status: 'BLOCKED_SECURITY', detail: 'Compose public profile must define cloudflared.' }];
-  const imagePinned = /image:\s*cloudflare\/cloudflared:\d+\.\d+\.\d+(?:[-.][A-Za-z0-9.-]+)?/i.test(block);
-  findings.push({ name: 'cloudflared:image-pin', status: imagePinned ? 'PASS' : 'BLOCKED_SECURITY', detail: 'cloudflared image must use an explicit version.' });
-  const command = block.match(/^\s{4}command:\s*(.+)$/m)?.[1] ?? '';
-  const quickTunnel = /(?:--url|trycloudflare\.com|quick\s+tunnel)/i.test(command);
-  findings.push({ name: 'cloudflared:quick-tunnel-disabled', status: quickTunnel ? 'BLOCKED_SECURITY' : 'PASS', detail: 'Quick Tunnel flags and trycloudflare.com endpoints are forbidden.' });
-  const tokenInCommand = /CLOUDFLARE_TUNNEL_TOKEN|TUNNEL_TOKEN|--token/i.test(command);
-  const tokenTransport = /\bTUNNEL_TOKEN:\s*\$\{CLOUDFLARE_TUNNEL_TOKEN:-\}/m.test(block);
-  findings.push({ name: 'cloudflared:token-transport', status: !tokenInCommand && tokenTransport ? 'PASS' : 'BLOCKED_SECURITY', detail: 'The token must travel through cloudflared native TUNNEL_TOKEN environment, never command arguments.' });
-  const dependency = /depends_on:\s*\r?\n\s+nginx:\s*\r?\n\s+condition:\s*service_healthy/m.test(block);
-  findings.push({ name: 'cloudflared:nginx-dependency', status: dependency ? 'PASS' : 'BLOCKED_SECURITY', detail: 'cloudflared must wait for a healthy Nginx service.' });
-  const frontendNetwork = /networks:\s*\[frontend\]/.test(block);
-  findings.push({ name: 'cloudflared:frontend-network', status: frontendNetwork ? 'PASS' : 'BLOCKED_SECURITY', detail: 'cloudflared must use the frontend network.' });
-  const targetConfigCandidates = ['infra/cloudflared/config.yml', 'infra/cloudflared/config.yaml', '.cloudflared/config.yml', '.cloudflared/config.yaml', 'infra/cloudflared/named-tunnel-contract.json'];
-  const targetConfig = targetConfigCandidates.map((candidate) => ({ candidate, text: readText(root, candidate) })).find(({ candidate, text }) => {
-    if (!text) return false;
-    if (candidate.endsWith('.json')) {
-      try { return JSON.parse(text).expectedOriginService === EXPECTED_TUNNEL_TARGET; } catch { return false; }
-    }
-    return /service:\s*['"]?http:\/\/nginx:80['"]?/i.test(text);
-  });
-  const composeTarget = /(?:TUNNEL_ORIGIN|TUNNEL_TARGET|CLOUDFLARE_ORIGIN):\s*['"]?http:\/\/nginx:80['"]?/i.test(block);
-  findings.push({ name: 'cloudflared:target-contract', status: targetConfig || composeTarget ? 'PASS' : 'BLOCKED_SECURITY', detail: `Named Tunnel ingress must declare the fixed target ${EXPECTED_TUNNEL_TARGET} in machine-readable configuration.` });
-  const contractText = readText(root, 'infra/cloudflared/named-tunnel-contract.json');
+  const check = (name, passed, detail) => findings.push({ name: 'cloudflared:' + name, status: passed ? 'PASS' : 'BLOCKED_SECURITY', detail });
+  check('app-lifecycle-isolation', !serviceBlock(compose, 'cloudflared') && !/cloudflared|compose\.tunnel/i.test(compose ?? ''), 'Application Compose must not include or manage cloudflared.');
+  check('tunnel-project', /^name:\s*mo-farm-tunnel\s*$/m.test(tunnelCompose ?? ''), 'Tunnel Compose must use the independent mo-farm-tunnel project.');
+  const serviceNames = [...(sectionBlock(tunnelCompose, 'services') ?? '').matchAll(/^  ([A-Za-z0-9_-]+):/gm)].map((match) => match[1]);
+  check('tunnel-only-service', serviceNames.length === 1 && serviceNames[0] === 'cloudflared', 'Tunnel Compose must contain only cloudflared.');
+  if (!block) {
+    check('service', false, 'The independent tunnel Compose must define cloudflared.');
+    return findings;
+  }
+  check('image-pin', /^ {4}image:\s*cloudflare\/cloudflared:2025\.9\.1\s*$/m.test(block), 'cloudflared image must be pinned to repository version 2025.9.1.');
+  let command;
+  try { command = JSON.parse(block.match(/^ {4}command:\s*(.+)$/m)?.[1] ?? ''); } catch { command = undefined; }
+  check('quick-command', Array.isArray(command) && JSON.stringify(command) === JSON.stringify(TUNNEL_COMMAND), 'Quick Tunnel command must exactly target http://nginx:80 without extra arguments.');
+  check('no-named-credentials', !/TUNNEL_TOKEN|CLOUDFLARE_HOSTNAME|--token|credentials|(?:^|[\s/])config\.ya?ml|^ {4}(?:environment|env_file|volumes|configs|secrets):/im.test(block), 'Quick Tunnel must not mount configuration or carry Named Tunnel credentials.');
+  check('no-app-dependencies', !/^ {4}(?:build|depends_on|links|extends|network_mode|volumes_from):/m.test(block), 'cloudflared must have no application build or lifecycle dependencies.');
+  check('no-host-ports', !/^ {4}ports:/m.test(block), 'cloudflared must not publish host ports.');
+  check('restart-policy', /^ {4}restart:\s*unless-stopped\s*$/m.test(block), 'cloudflared must persist with restart unless-stopped.');
+  const logging = block.match(/^ {4}logging:\s*\r?\n((?:^ {6,}[^\r\n]*(?:\r?\n|$))+)/m)?.[1] ?? '';
+  const boundedLogs = /^ {6}driver:\s*json-file\s*$/m.test(logging)
+    && /^ {8}max-size:\s*['"]?[1-9]\d*[kmg]['"]?\s*$/im.test(logging)
+    && /^ {8}max-file:\s*['"]?[1-9]\d*['"]?\s*$/m.test(logging);
+  check('bounded-logs', boundedLogs, 'Tunnel logging must use json-file with bounded max-size and max-file.');
+  const appNetwork = serviceBlock(compose, 'frontend', 'networks');
+  const tunnelNetwork = serviceBlock(tunnelCompose, 'frontend', 'networks');
+  const shared = /^ {4}networks:\s*\[frontend\]\s*$/m.test(block)
+    && /^ {4}name:\s*mo-farm-frontend\s*$/m.test(appNetwork ?? '')
+    && /^ {4}name:\s*mo-farm-frontend\s*$/m.test(tunnelNetwork ?? '')
+    && /^ {4}external:\s*true\s*$/m.test(tunnelNetwork ?? '')
+    && /^ {4}networks:\s*\[[^\]\r\n]*\bfrontend\b[^\]\r\n]*\]\s*$/m.test(serviceBlock(compose, 'nginx') ?? '');
+  check('frontend-network', shared, 'Application Nginx and independent tunnel must share the explicitly named mo-farm-frontend network.');
   let contract;
-  try { contract = contractText ? JSON.parse(contractText) : undefined; } catch { contract = undefined; }
-  const contractValid = contract?.schemaVersion === 1
-    && contract?.tunnelType === 'named'
-    && contract.expectedOriginService === EXPECTED_TUNNEL_TARGET
-    && contract.hostnameSource === 'CLOUDFLARE_HOSTNAME'
-    && contract.publicOriginSource === 'PUBLIC_ORIGIN'
-    && contract.cloudflaredTokenEnv === 'TUNNEL_TOKEN'
-    && contract.quickTunnelAllowed === false
-    && Array.isArray(contract.requiredCommand)
-    && contract.requiredCommand.join(' ') === 'tunnel --no-autoupdate run';
-  findings.push({ name: 'cloudflared:contract-document', status: contractValid ? 'PASS' : 'BLOCKED_SECURITY', detail: 'Named Tunnel target, hostname, token transport and no-Quick-Tunnel policy must be declared in the local contract.' });
+  let historical;
+  try { contract = JSON.parse(readText(root, 'infra/cloudflared/quick-tunnel-contract.json')); } catch { contract = undefined; }
+  try { historical = JSON.parse(readText(root, 'infra/cloudflared/named-tunnel-contract.json')); } catch { historical = undefined; }
+  const expectedContract = {
+    schemaVersion: 1,
+    tunnelType: 'quick',
+    originService: EXPECTED_TUNNEL_TARGET,
+    publicHostnameType: 'ephemeral-trycloudflare',
+    hostnameSuffix: '.trycloudflare.com',
+    tokenRequired: false,
+    fixedHostnameRequired: false,
+    publicOriginMode: 'runtime-generated-exact',
+    persistentContainerLifecycle: true,
+    appRedeployMustPreserveTunnel: true,
+    quickTunnelAllowed: true,
+    requiredCommand: TUNNEL_COMMAND,
+    sharedNetwork: SHARED_NETWORK,
+  };
+  check('contract-document', Object.entries(expectedContract).every(([key, value]) => JSON.stringify(contract?.[key]) === JSON.stringify(value)), 'Quick Tunnel deployment, exact origin and independent container lifecycle must match the canonical contract.');
+  check('named-contract-superseded', historical?.status === 'SUPERSEDED' && historical?.reason === 'PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO', 'Historical Named Tunnel evidence must be explicitly superseded by the owner decision.');
   return findings;
 }
 
@@ -297,8 +307,8 @@ function checkSecurityHeaders(root) {
   return findings;
 }
 
-export async function runPreflight({ root = ROOT, env = process.env, loadDotEnv = true } = {}) {
-  const evaluatedEnvironment = evaluateEnvironment(env, { root, loadDotEnv });
+export async function runPreflight({ root = ROOT, env = process.env, loadDotEnv = true, runtime = false, publicUrl } = {}) {
+  const evaluatedEnvironment = evaluateEnvironment(env, { root, loadDotEnv, runtime, publicUrl });
   // Keep raw values private to this module. Even programmatic consumers get
   // status-only environment data, so accidental logging cannot leak secrets.
   const environment = {

@@ -1,5 +1,7 @@
 # E01 - Cloudflare Named Tunnel preflight
 
+> **SUPERSEDED — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** Historical preflight findings/evidence remain unchanged below. Current runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Token/fixed-hostname blockers and Quick Tunnel rejection describe the earlier deployment model.
+
 | Field | Value |
 |---|---|
 | Task | E01 - Cloudflare Named Tunnel |

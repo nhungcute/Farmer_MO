@@ -1,5 +1,7 @@
 {
   "schemaVersion": 1,
+  "status": "SUPERSEDED",
+  "reason": "PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO",
   "tunnelType": "named",
   "expectedOriginService": "http://nginx:80",
   "hostnameSource": "CLOUDFLARE_HOSTNAME",

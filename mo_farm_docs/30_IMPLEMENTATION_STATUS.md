@@ -1,10 +1,12 @@
 # Trạng thái triển khai prototype
 
-> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 đã có evidence và hoàn tất gate; B02 đang `RUNNING` để chờ Project Owner duyệt content/license/release cho Wave 2.
+> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 và B02 đã DONE. E01 demo chọn PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG; cloudflared NOT_STARTED, URL NOT_CREATED. RC01 BLOCKED_BY_E01 / NOT_STARTED.
 
-Sau checkpoint A01/B01/C01/D01, A02 đã review 8/8; A03, C02, C03 và D02 đã có bằng chứng test runtime. B02 đã promote đủ 76/76 Wave 2 production-ready và hoàn tất final owner review với recommendation `READY_FOR_OWNER_APPROVAL`; metadata owner approval vẫn pending. Demo vẫn hỗ trợ `PERSISTENCE_DRIVER=file`, đồng thời PostgreSQL runtime đã qua các gate đã công bố.
+Sau checkpoint A01/B01/C01/D01, A02 đã review 8/8; A03, C02, C03 và D02 đã có bằng chứng test runtime. B02 đã nhận owner content/license/release approval cho toàn bộ Wave 2: tổng 188/188 production_ready, 188/188 approved, 0 placeholders. Local compatibility vẫn hỗ trợ `PERSISTENCE_DRIVER=file`; public E01 bắt buộc PostgreSQL và không downgrade security.
 
-Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
+Ngày cập nhật trạng thái: 2026-10-01; runtime baseline checks bên dưới được ghi tại checkpoint 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
+
+Phase 1 E01 chỉ triển khai repository/static/build; không start application hoặc tunnel container. Runtime còn thiếu ignored local configuration nên BLOCKED_CONFIG; cấu hình đủ thì READY_FOR_QUICK_TUNNEL_START. Chờ Project Owner yêu cầu Phase 2 để capture URL, bind exact PUBLIC_ORIGIN và chạy actual public/mobile/security/persistence/URL-preservation QA. Application Compose và tunnel Compose có lifecycle riêng; URL là ephemeral với scope SAME CLOUDFLARED LIFETIME. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## Đã triển khai và đã kiểm tra
 
@@ -19,15 +21,15 @@ Ngày kiểm tra: 2026-09-30. Đây là prototype/demo; dữ liệu farm không 
 
 - API đã hỗ trợ rõ `PERSISTENCE_DRIVER=file|postgres`; file JSON FarmStore vẫn là mặc định demo, PostgreSQL runtime đã chạy enter/session/bootstrap và tất cả mutation qua repository transaction.
 - **Web:** vào chơi ngay, giao diện tiếng Việt `vi-VN`, DOM HUD + PixiJS 8 world renderer cùng origin, Canvas fallback, canvas isometric 24×24, thao tác crop/build/chicken/market/order/quest, responsive mobile và gợi ý xoay màn hình. Catalog text nằm tại `apps/web/src/locales/vi-VN.js`.
-- Asset pack hiện có 188/188 asset `production_ready`, gồm 112 Wave 1 approved và 76 Wave 2 đã qua technical/style review; Wave 2 vẫn giữ `approved=false` cho tới khi Project Owner phê duyệt content/license/release.
-- A02, A03, C02, C03 và D02 đã hoàn tất các gate runtime; B02 đang chờ owner approval cho Wave 2, sau đó mới có thể mở deployment gate trước Release Candidate.
+- Asset pack có 188/188 asset `production_ready` và `approved`, gồm 112 Wave 1 + 76 Wave 2; content/license/release approval đã ghi nhận.
+- A02, A03, C02, C03, D02 và B02 đã DONE; E01 runtime/public QA và actual app-redeploy URL preservation còn pending. Không suy ra runtime PASS từ Phase-1 static checks.
 
 ## Thứ tự tiếp theo
 
-1. Chờ Project Owner duyệt content/license/release cho Wave 2 và ghi nhận approval reference; chỉ sau khi dependency này đạt mới mở deployment gate.
-2. Chuyển web shell sang stack production hoặc giữ native shell có quyết định kiến trúc được phê duyệt; bổ sung Playwright E2E và accessibility scan.
-3. Giữ nguyên asset/renderer/animation contracts sau owner approval; chỉ regenerate atlas nếu có thay đổi production source được duyệt.
-4. Chạy performance/load test, kiểm tra backup restore định kỳ, rồi mới xem xét public tunnel sau khi A03/C02 và RC gate mở.
+1. Hoàn tất E01 Phase-1 static regression và repository evidence; giữ cloudflared NOT_STARTED, URL NOT_CREATED.
+2. Chờ Project Owner yêu cầu start Quick Tunnel; cung cấp ignored local demo/PostgreSQL configuration và rerun preflight.
+3. Phase 2: actual public/browser/mobile/security/persistence QA và app redeploy giữ container/process/URL trong cùng cloudflared lifetime.
+4. Khi E01 DONE, chỉ chuyển RC01 QUEUED / READY và chờ Project Owner; tiếp tục backup/restore định kỳ và giữ asset/renderer/animation contracts đã duyệt.
 
 ## Cập nhật sau khi thực hiện guide PixiJS
 

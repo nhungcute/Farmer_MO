@@ -64,4 +64,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 Cloudflare Named Tunnel is QUEUED/NOT_STARTED and RC01 is QUEUED/BLOCKED_BY_E01; do not start either task from this artwork checkpoint. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 demo now selects persistent Quick Tunnel; runtime BLOCKED_CONFIG, cloudflared NOT_STARTED, URL NOT_CREATED. RC01 remains BLOCKED_BY_E01 / NOT_STARTED; do not start either runtime or RC01 from this artwork checkpoint. Current deployment runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

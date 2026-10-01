@@ -32,7 +32,7 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | C03 | Mobile/PWA/accessibility QA | DONE |
 | D01 | Observability/performance instrumentation | DONE |
 | D02 | Load test và backup/restore drill | DONE |
-| E01 | Cloudflare Named Tunnel | **BLOCKED_CONFIG - repository remediation complete; owner-only runtime configuration pending** |
+| E01 | Persistent Cloudflare Quick Tunnel | **BLOCKED_CONFIG - repository migration implemented; ignored local configuration absent; runtime NOT_STARTED** |
 | RC01 | Release Candidate checklist | **BLOCKED_BY_E01; NOT_STARTED** |
 
 ## B02 production artwork - 2026-10-01
@@ -74,11 +74,13 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Giới hạn và bước kế tiếp
 
-B02 is DONE. Wave 2 has explicit Project Owner content, license and release approval for exactly 76 assets; no artwork was regenerated and the reviewed PNG aggregate is unchanged. E01 preflight is BLOCKED_CONFIG with additional BLOCKED_SECURITY findings. RC01 is BLOCKED_BY_E01 and NOT_STARTED. Do not start the public profile, Cloudflare Named Tunnel, RC01 or public deployment until the documented blockers are resolved and preflight is rerun. Renderer, animation, gameplay, economy and asset contracts remain unchanged.
+B02 is DONE: 188/188 production_ready, 188/188 approved, 0 placeholders. Project Owner selected **PERSISTENT_QUICK_TUNNEL** for E01 demo on 2026-10-01. The application and cloudflared use separate Compose lifecycles. Existing security hardening remains required. The current remaining runtime blocker is absent ignored local configuration, not a Cloudflare token/domain requirement. RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**.
 
-Wave 2 generation, targeted revision review, promotion, atlas rebuild, final owner review and release approval are complete for 76/76 assets. E01 Cloudflare Named Tunnel preflight is complete but blocked; RC01 remains blocked by E01 and not started.
+Phase 1 is repository-only: no application container or tunnel is started and no trycloudflare URL is created. After static gates pass, repository migration can be recorded DONE while runtime stays `BLOCKED_CONFIG` (or `READY_FOR_QUICK_TUNNEL_START` when valid local configuration exists). Wait for the explicit Project Owner command before Phase 2 public runtime QA and URL-preservation test. Current runbook and integration evidence: [`E01_PERSISTENT_QUICK_TUNNEL.md`](tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## E01 initial preflight checkpoint - 2026-10-01
+
+Historical Named Tunnel checkpoint; deployment model superseded by the persistent Quick Tunnel runbook above. The findings and results below describe the original checkpoint.
 
 The eight E01 preflight tasks completed read-only inspection. That initial checkpoint found **BLOCKED_CONFIG** because the required production environment was absent and **BLOCKED_SECURITY** findings for unresolved cloudflared token expansion, missing machine-checked Named Tunnel ingress mapping, public web source exposure, and absent effective rate limiting. The repository-side findings were resolved by E01-FIX-01 through E01-FIX-06; the current remaining blocker is owner-only runtime configuration. No public profile, tunnel or public endpoint was started. Historical evidence: `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
 
@@ -86,9 +88,24 @@ RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**.
 
 ## E01 repository remediation - 2026-10-01
 
+Historical pre-migration remediation. Named Tunnel token/hostname requirements below are superseded; static-root, rate-limit, proxy and PWA hardening remain in effect.
+
 The six repository-side remediation tasks are complete: web static-root hardening, native Cloudflared token transport, machine-readable Named Tunnel contract, bounded API rate limiting, proxy/HTTPS security headers, and automated status-only preflight. Evidence and verification are recorded in `docs/implementation/tasks/E01_REMEDIATION.md`.
 
 The current local environment still has no owner-supplied production values, so `npm run e01:preflight` correctly returns `BLOCKED_CONFIG` (exit code 2). No public profile, tunnel, Quick Tunnel, public hostname, or RC01 was started.
+
+## E01 persistent Quick Tunnel migration - 2026-10-01
+
+- Deployment model: **PERSISTENT_QUICK_TUNNEL**; origin service `http://nginx:80`.
+- App stack: `compose.yaml` (`db`, `api`, `web`, `nginx`); tunnel stack: `compose.tunnel.yaml` (`cloudflared` only).
+- Shared network: application-managed `mo-farm-frontend`, external in tunnel stack.
+- No token, fixed hostname or preknown public origin is required; preflight still requires PostgreSQL demo configuration and non-default session/database secrets.
+- Ignored `.runtime/quick-tunnel.json` and `.runtime/quick-tunnel.env` synchronize exact generated PUBLIC_ORIGIN and track container/process lifetime.
+- App updates preserve tunnel ID, StartedAt, RestartCount and URL; unexpected changes are `TUNNEL_LIFECYCLE_REGRESSION`.
+- URL is ephemeral. Preservation scope: **SAME CLOUDFLARED LIFETIME**. Production should eventually use Named Tunnel for a stable hostname.
+- Runtime: **BLOCKED_CONFIG**; cloudflared **NOT_STARTED**; public URL **NOT_CREATED**. No public/runtime PASS is claimed.
+- Repository implementation: **DONE**. Final Phase-1 regression PASS: E01 security 37/37, Renderer 16/16, API 20/20, all asset/Wave release gates, aggregate check, both Compose validators and API/web Docker build. Integration evidence is recorded in the current E01 runbook.
+- Public QA, mobile matrix, cookies, persistence and actual redeploy-preservation test are pending Phase 2. RC01 stays blocked; after E01 DONE it becomes QUEUED/READY and waits for Project Owner.
 
 ## Quy tắc cập nhật
 

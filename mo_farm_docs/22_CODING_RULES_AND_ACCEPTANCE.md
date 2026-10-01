@@ -118,4 +118,6 @@ Bảng số liệu bắt buộc dùng `25_MVP_CONTENT_DEFINITIONS.md`; không đ
 
 ## 12. Infrastructure rule
 
-Local Docker không phụ thuộc Cloudflare. Named Tunnel chỉ chạy profile public. Migration phải dùng `prisma migrate deploy`; seed phải idempotent và không ghi đè runtime state.
+Local Docker không phụ thuộc Cloudflare. E01 demo dùng persistent Quick Tunnel với `compose.tunnel.yaml` riêng; application update không stop/recreate cloudflared hoặc xóa PostgreSQL volume. Runtime `PUBLIC_ORIGIN` phải đúng exact generated HTTPS origin, không wildcard. Giữ Secure/HttpOnly cookie, rate limit, trusted proxy/security headers, restricted static root và service worker không cache `/api/**`.
+
+URL preservation chỉ có scope SAME CLOUDFLARED LIFETIME; Quick Tunnel không có URL vĩnh viễn. Public QA/persistence/URL-preservation test phải chạy thực tế ở Phase 2; Phase 1 không start container hoặc tạo URL. Migration phải dùng `prisma migrate deploy`; seed phải idempotent và không ghi đè runtime state. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).

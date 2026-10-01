@@ -1,5 +1,7 @@
 # E01 — Cloudflare Named Tunnel public demo gate
 
+> **SUPERSEDED — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** Historical plan retained below. Current deployment model, configuration and gates: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Named Tunnel token/hostname/profile requirements below no longer apply to E01 demo.
+
 - Task ID: E01
 - Name: Cloudflare Named Tunnel deployment and public smoke gate
 - Status: QUEUED

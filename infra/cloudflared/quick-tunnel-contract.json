@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "tunnelType": "quick",
+  "originService": "http://nginx:80",
+  "publicHostnameType": "ephemeral-trycloudflare",
+  "hostnameSuffix": ".trycloudflare.com",
+  "tokenRequired": false,
+  "fixedHostnameRequired": false,
+  "publicOriginMode": "runtime-generated-exact",
+  "persistentContainerLifecycle": true,
+  "appRedeployMustPreserveTunnel": true,
+  "quickTunnelAllowed": true,
+  "requiredCommand": ["tunnel", "--no-autoupdate", "--url", "http://nginx:80"],
+  "sharedNetwork": "mo-farm-frontend"
+}

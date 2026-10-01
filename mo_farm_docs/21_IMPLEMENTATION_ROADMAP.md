@@ -112,8 +112,9 @@ Roadmap này triển khai một vertical slice sớm và không có Tutorial. Ch
 - DPR adaptive.
 - Memory/FPS profile.
 - Backup/restore.
-- Cloudflare Named Tunnel profile.
-- Stable hostname rebuild test.
+- Persistent Cloudflare Quick Tunnel trong `compose.tunnel.yaml`, lifecycle riêng với app.
+- Exact runtime PUBLIC_ORIGIN; app rebuild giữ container/process và URL trong SAME CLOUDFLARED LIFETIME.
+- Phase 1 repository-only; chờ Project Owner trước runtime public QA. Quick Tunnel URL vẫn ephemeral; production sau này dùng Named Tunnel.
 - Language scan/accessibility review cho toàn bộ màn hình.
 
 **DoD:** direct-entry E2E, mobile matrix, performance budget, backup/restore và public smoke test pass.

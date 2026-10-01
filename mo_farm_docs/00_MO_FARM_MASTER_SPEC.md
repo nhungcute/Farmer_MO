@@ -22,8 +22,8 @@ Mục tiêu kỹ thuật:
 - Dữ liệu game lưu server.
 - Không có kênh nước/irrigation canal.
 - **Ao nước** là một công trình có footprint trên grid.
-- Public qua **Cloudflare Named Tunnel** để URL không đổi khi rebuild.
-- Quick Tunnel `*.trycloudflare.com` chỉ dùng dev tạm thời vì URL có thể đổi.
+- Public demo qua **persistent Cloudflare Quick Tunnel** tại `*.trycloudflare.com`, lifecycle cloudflared riêng với application Compose.
+- Giữ cloudflared sống khi app rebuild để giảm đổi URL trong **SAME CLOUDFLARED LIFETIME**; URL vẫn ephemeral, restart/session recreation có thể đổi URL. Production cần stable hostname nên dùng Named Tunnel sau này.
 
 ---
 
@@ -43,7 +43,7 @@ Mục tiêu kỹ thuật:
 | Reverse proxy | Nginx |
 | PWA | vite-plugin-pwa |
 | Deployment | Docker Compose |
-| Public access | Cloudflare Named Tunnel |
+| Public access | Persistent Cloudflare Quick Tunnel (demo; separate lifecycle) |
 | Asset format | WebP/PNG RGBA + JSON Texture Atlas; AVIF chỉ dùng background future |
 
 ---
@@ -368,14 +368,14 @@ Internet
   ↓
 Cloudflare
   ↓
-Named Tunnel
+Persistent Quick Tunnel (separate Compose lifecycle)
   ↓
 nginx
 ├── web
 └── api
 ```
 
-Rebuild web/api không làm đổi URL tunnel.
+App update phải giữ cloudflared container/process và URL trong cùng lifetime; kiểm tra ID, StartedAt, RestartCount và URL trước/sau thực tế. Không bảo đảm URL vĩnh viễn. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Phase 1 không start runtime; Phase 2 chờ lệnh riêng của Project Owner.
 
 ---
 

@@ -11,7 +11,7 @@
 | R-07 | AI coder tự bịa economy | Cao | Bảng definitions `25`, version `mvp-1`, traceability | Content review pass |
 | R-08 | Tutorial làm kẹt flow | Đã loại bỏ | Không tạo tutorial state/route/reward; direct entry | Bootstrap không có tutorial |
 | R-09 | Crop/chicken timer bị cheat bằng đổi giờ | Cao | Server `TIMESTAMPTZ`, readyAt server-side, fake clock test | Time trust suite pass |
-| R-10 | Cloudflare token/domain thiếu ở local | Trung bình | Cloudflare profile riêng, local không phụ thuộc token | Local compose smoke pass |
+| R-10 | Quick Tunnel URL đổi khi process/container/session restart | Trung bình | Tunnel Compose riêng; app update giữ cloudflared sống, detect ID/StartedAt/RestartCount/URL regression; URL ephemeral, production sau này dùng Named Tunnel | Actual Phase-2 redeploy-preservation PASS trong SAME CLOUDFLARED LIFETIME |
 | R-11 | DB mất dữ liệu khi volume hỏng | Cao | Backup/restore script, retention, restore drill | Restore acceptance pass |
 | R-12 | Migration chạy khi DB chưa ready | Trung bình | Healthcheck + init profile + retry | Empty DB compose pass |
 | R-13 | Service worker phục vụ app shell cũ | Trung bình | Hashed assets, update policy, API no-store/network-first | SW update test pass |
@@ -23,6 +23,8 @@
 | R-19 | Chưa có production art nhưng coder đánh dấu animation hoàn thành | Cao | Placeholder-first manifest ở G1/G2; art source/license/sign-off bắt buộc trước G7 | ANIM-01..09 pass |
 | R-20 | Frame/pivot/atlas sai làm sprite rung hoặc tụt FPS | Cao | Canvas cố định, anchor metadata, atlas 2048, shared ticker và mobile profile | Animation visual/performance pass |
 | R-21 | English technical ID lọt ra giao diện | Trung bình | Localization key, vi-VN catalog, CI missing-key/English scan | LANG-01..05 pass |
+| R-22 | Captured URL stale hoặc origin wildcard làm yếu Origin security | Cao | Validate strict HTTPS trycloudflare origin; exact runtime PUBLIC_ORIGIN; process identity check; stop đánh dấu state stale; ignored runtime state không chứa secrets | Static parser/lifecycle tests + Phase-2 Origin/cookie QA PASS |
+| R-23 | App update đổi IP upstream khiến Nginx route lỗi | Trung bình | Reload Nginx routing sau selective API/web recreate; giữ tunnel sống khi sửa app | Actual Phase-2 public smoke sau app update PASS |
 
 ## Nguyên tắc xử lý
 
