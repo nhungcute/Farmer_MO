@@ -79,7 +79,7 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, chưa start cloudflared hoặc tạo public URL/release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 demo hiện là PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG vì thiếu ignored local demo/PostgreSQL configuration. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Sau khi E01 actual runtime/public/preservation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
+RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, start cloudflared/Named Tunnel hoặc tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; canonical E01 là NAMED_TUNNEL, runtime BLOCKED_CONFIG vì real owner environment/token/fixed hostname chưa validate. Runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Sau actual E01 runtime/public/update-isolation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
 
 ## Next activity
 

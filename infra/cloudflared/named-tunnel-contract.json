@@ -1,12 +1,16 @@
 {
   "schemaVersion": 1,
-  "status": "SUPERSEDED",
-  "reason": "PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO",
+  "canonical": true,
   "tunnelType": "named",
-  "expectedOriginService": "http://nginx:80",
+  "originService": "http://nginx:80",
+  "tokenRequired": true,
+  "fixedHostnameRequired": true,
   "hostnameSource": "CLOUDFLARE_HOSTNAME",
   "publicOriginSource": "PUBLIC_ORIGIN",
   "cloudflaredTokenEnv": "TUNNEL_TOKEN",
   "quickTunnelAllowed": false,
-  "requiredCommand": ["tunnel", "--no-autoupdate", "run"]
+  "persistentContainerLifecycle": true,
+  "appRedeployMustPreserveTunnel": true,
+  "requiredCommand": ["tunnel", "--no-autoupdate", "run"],
+  "sharedNetwork": "mo-farm-frontend"
 }

@@ -1,16 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validateQuickTunnelUrl } from './lib/quick-tunnel.mjs';
+import { isNamedTunnelPlaceholder, validateNamedTunnelHostname, validateNamedTunnelOrigin } from './lib/named-tunnel.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const REQUIRED_ENV = Object.freeze([
   'PERSISTENCE_DRIVER',
   'APP_ENV',
+  'PUBLIC_ORIGIN',
   'COOKIE_SECURE',
   'SESSION_SECRET',
   'POSTGRES_PASSWORD',
+  'CLOUDFLARE_TUNNEL_TOKEN',
+  'CLOUDFLARE_HOSTNAME',
 ]);
 
 // DATABASE_URL is included in the public-runtime gate because a postgres
@@ -18,9 +21,10 @@ export const REQUIRED_ENV = Object.freeze([
 const SUPPORTING_ENV = Object.freeze(['DATABASE_URL']);
 const DEFAULT_SESSION_SECRET = 'change_me_minimum_32_chars';
 const DEFAULT_POSTGRES_PASSWORD = 'change_me';
+const DEFAULT_HOSTNAME = 'farm.example.com';
 const EXPECTED_TUNNEL_TARGET = 'http://nginx:80';
 const SHARED_NETWORK = 'mo-farm-frontend';
-const TUNNEL_COMMAND = ['tunnel', '--no-autoupdate', '--url', EXPECTED_TUNNEL_TARGET];
+const TUNNEL_COMMAND = ['tunnel', '--no-autoupdate', 'run'];
 const PLACEHOLDER_RE = /^(?:<[^>]+>|change(?:[_-]?)me(?:[^ ]*)?|example(?:\.com)?|placeholder)$/i;
 const ENV_STATUS = Object.freeze({ SET: 'SET', MISSING: 'MISSING', INVALID: 'INVALID', DEFAULT: 'DEFAULT', PLACEHOLDER: 'PLACEHOLDER' });
 
@@ -70,12 +74,21 @@ function isPlaceholder(value, defaults = []) {
   return defaults.includes(value) || PLACEHOLDER_RE.test(value) || value.includes('<inject-');
 }
 
-function parsePublicOrigin(value) {
+function parsePublicOrigin(value, hostname) {
   try {
-    return { valid: true, origin: validateQuickTunnelUrl(value) };
+    const originHostname = hostname ?? new URL(value).hostname;
+    return { valid: true, origin: validateNamedTunnelOrigin(value, originHostname) };
   } catch {
     return { valid: false };
   }
+}
+
+function hostnameValid(value) {
+  try { return validateNamedTunnelHostname(value) === value; } catch { return false; }
+}
+
+function tokenValid(value) {
+  return value.length >= 16 && !/\s/.test(value) && !isPlaceholder(value);
 }
 
 function parseDatabaseUrl(value) {
@@ -104,7 +117,7 @@ function classify(name, raw, { fallback, placeholderDefaults = [], valid } = {})
   return { name, status: ENV_STATUS.SET, source: 'environment' };
 }
 
-function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true, runtime = false, publicUrl } = {}) {
+function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true } = {}) {
   const effectiveEnv = loadDotEnv ? loadLocalEnv(root, env) : env;
   const defaults = {
     PERSISTENCE_DRIVER: 'file',
@@ -113,44 +126,46 @@ function evaluateEnvironment(env = process.env, { root = ROOT, loadDotEnv = true
     COOKIE_SECURE: 'false',
     SESSION_SECRET: DEFAULT_SESSION_SECRET,
     POSTGRES_PASSWORD: DEFAULT_POSTGRES_PASSWORD,
+    CLOUDFLARE_TUNNEL_TOKEN: '',
+    CLOUDFLARE_HOSTNAME: DEFAULT_HOSTNAME,
     DATABASE_URL: 'postgresql://mo_farm:change_me@db:5432/mo_farm',
   };
-  const values = Object.fromEntries([...REQUIRED_ENV, 'PUBLIC_ORIGIN', ...SUPPORTING_ENV].map((name) => [name, envValue(effectiveEnv, name)]));
-  // Origin equality uses the supplied bytes, including forbidden whitespace.
-  if (typeof effectiveEnv.PUBLIC_ORIGIN === 'string') values.PUBLIC_ORIGIN = effectiveEnv.PUBLIC_ORIGIN;
+  const values = Object.fromEntries([...REQUIRED_ENV, ...SUPPORTING_ENV].map((name) => [name, envValue(effectiveEnv, name)]));
+  // Validate supplied bytes exactly; whitespace must not change token or origin semantics.
+  for (const name of ['PUBLIC_ORIGIN', 'CLOUDFLARE_HOSTNAME', 'CLOUDFLARE_TUNNEL_TOKEN']) {
+    if (typeof effectiveEnv[name] === 'string') values[name] = effectiveEnv[name];
+  }
   const entries = [
-    classify('PERSISTENCE_DRIVER', values.PERSISTENCE_DRIVER, { fallback: defaults.PERSISTENCE_DRIVER, valid: (value) => ['file', 'postgres'].includes(value.toLowerCase()) }),
-    classify('APP_ENV', values.APP_ENV, { fallback: defaults.APP_ENV, valid: (value) => ['local', 'demo', 'production'].includes(value.toLowerCase()) }),
+    classify('PERSISTENCE_DRIVER', values.PERSISTENCE_DRIVER, { fallback: defaults.PERSISTENCE_DRIVER, valid: (value) => ['file', 'postgres'].includes(value) }),
+    classify('APP_ENV', values.APP_ENV, { fallback: defaults.APP_ENV, valid: (value) => ['local', 'demo', 'production'].includes(value) }),
     classify('PUBLIC_ORIGIN', values.PUBLIC_ORIGIN, { fallback: defaults.PUBLIC_ORIGIN, valid: (value) => parsePublicOrigin(value).valid }),
-    classify('COOKIE_SECURE', values.COOKIE_SECURE, { fallback: defaults.COOKIE_SECURE, valid: (value) => ['true', 'false'].includes(value.toLowerCase()) }),
+    classify('COOKIE_SECURE', values.COOKIE_SECURE, { fallback: defaults.COOKIE_SECURE, valid: (value) => ['true', 'false'].includes(value) }),
     classify('SESSION_SECRET', values.SESSION_SECRET, { fallback: defaults.SESSION_SECRET, placeholderDefaults: [DEFAULT_SESSION_SECRET], valid: (value) => value.length >= 32 }),
     classify('POSTGRES_PASSWORD', values.POSTGRES_PASSWORD, { fallback: defaults.POSTGRES_PASSWORD, placeholderDefaults: [DEFAULT_POSTGRES_PASSWORD], valid: (value) => value.length >= 16 }),
+    classify('CLOUDFLARE_TUNNEL_TOKEN', values.CLOUDFLARE_TUNNEL_TOKEN, { valid: tokenValid }),
+    classify('CLOUDFLARE_HOSTNAME', values.CLOUDFLARE_HOSTNAME, { fallback: defaults.CLOUDFLARE_HOSTNAME, placeholderDefaults: [DEFAULT_HOSTNAME], valid: (value) => hostnameValid(value) && !isNamedTunnelPlaceholder(value) }),
     classify('DATABASE_URL', values.DATABASE_URL, { fallback: defaults.DATABASE_URL, placeholderDefaults: [defaults.DATABASE_URL], valid: (value) => parseDatabaseUrl(value).valid && !parseDatabaseUrl(value).placeholderPassword }),
   ];
-  const origin = parsePublicOrigin(values.PUBLIC_ORIGIN);
-  const generated = parsePublicOrigin(publicUrl);
   const comparison = {
-    status: runtime
-      ? origin.valid && generated.valid && values.PUBLIC_ORIGIN === publicUrl ? 'PASS' : 'BLOCKED_CONFIG'
-      : !values.PUBLIC_ORIGIN || origin.valid ? 'PASS' : 'BLOCKED_CONFIG',
-    detail: runtime
-      ? 'PUBLIC_ORIGIN must exactly equal the validated generated Quick Tunnel URL.'
-      : 'PUBLIC_ORIGIN may be absent before start; an explicit value must be a strict HTTPS Quick Tunnel origin.',
+    status: parsePublicOrigin(values.PUBLIC_ORIGIN, values.CLOUDFLARE_HOSTNAME).valid ? 'PASS' : 'BLOCKED_CONFIG',
+    detail: 'PUBLIC_ORIGIN must exactly equal https:// followed by the fixed CLOUDFLARE_HOSTNAME.',
   };
   const requirements = [
-    ['PERSISTENCE_DRIVER', (value) => value.toLowerCase() === 'postgres', 'PERSISTENCE_DRIVER must be postgres for public runtime.'],
-    ['APP_ENV', (value) => value.toLowerCase() === 'demo', 'APP_ENV must be demo for public runtime.'],
-    ['PUBLIC_ORIGIN', (value) => (!runtime && !value) || parsePublicOrigin(value).valid, 'An explicit PUBLIC_ORIGIN must be a strict HTTPS Quick Tunnel origin.'],
-    ['COOKIE_SECURE', (value) => value.toLowerCase() === 'true', 'COOKIE_SECURE must be true for public runtime.'],
+    ['PERSISTENCE_DRIVER', (value) => value === 'postgres', 'PERSISTENCE_DRIVER must be postgres for public runtime.'],
+    ['APP_ENV', (value) => value === 'demo', 'APP_ENV must be demo for public runtime.'],
+    ['PUBLIC_ORIGIN', (value) => parsePublicOrigin(value).valid, 'PUBLIC_ORIGIN must be a fixed HTTPS origin without credentials, port, path, query or wildcard.'],
+    ['COOKIE_SECURE', (value) => value === 'true', 'COOKIE_SECURE must be true for public runtime.'],
     ['SESSION_SECRET', (value) => value.length >= 32 && !isPlaceholder(value, [DEFAULT_SESSION_SECRET]), 'SESSION_SECRET must be non-default and at least 32 characters.'],
     ['POSTGRES_PASSWORD', (value) => value.length >= 16 && !isPlaceholder(value, [DEFAULT_POSTGRES_PASSWORD]), 'POSTGRES_PASSWORD must be non-default and at least 16 characters.'],
+    ['CLOUDFLARE_TUNNEL_TOKEN', tokenValid, 'CLOUDFLARE_TUNNEL_TOKEN must be non-placeholder, whitespace-free and at least 16 characters.'],
+    ['CLOUDFLARE_HOSTNAME', (value) => hostnameValid(value) && !isPlaceholder(value, [DEFAULT_HOSTNAME]) && !isNamedTunnelPlaceholder(value), 'CLOUDFLARE_HOSTNAME must be a fixed public DNS hostname, excluding IP, localhost and trycloudflare domains.'],
     ['DATABASE_URL', (value) => parseDatabaseUrl(value).valid && !parseDatabaseUrl(value).placeholderPassword, 'DATABASE_URL must be a valid PostgreSQL URL with a non-default password.'],
   ];
   const failures = requirements.filter(([name, predicate]) => {
     const value = values[name] || defaults[name] || '';
     return !predicate(value);
   }).map(([name, , detail]) => ({ name: `env:${name}`, status: 'BLOCKED_CONFIG', detail }));
-  if (comparison.status !== 'PASS') failures.push({ name: 'env:PUBLIC_ORIGIN_GENERATED_MATCH', ...comparison });
+  if (comparison.status !== 'PASS') failures.push({ name: 'env:PUBLIC_ORIGIN_HOSTNAME_MATCH', ...comparison });
   return { entries, checks: failures, hostnameComparison: comparison };
 }
 
@@ -213,8 +228,18 @@ function checkCloudflared(root, compose) {
   check('image-pin', /^ {4}image:\s*cloudflare\/cloudflared:2025\.9\.1\s*$/m.test(block), 'cloudflared image must be pinned to repository version 2025.9.1.');
   let command;
   try { command = JSON.parse(block.match(/^ {4}command:\s*(.+)$/m)?.[1] ?? ''); } catch { command = undefined; }
-  check('quick-command', Array.isArray(command) && JSON.stringify(command) === JSON.stringify(TUNNEL_COMMAND), 'Quick Tunnel command must exactly target http://nginx:80 without extra arguments.');
-  check('no-named-credentials', !/TUNNEL_TOKEN|CLOUDFLARE_HOSTNAME|--token|credentials|(?:^|[\s/])config\.ya?ml|^ {4}(?:environment|env_file|volumes|configs|secrets):/im.test(block), 'Quick Tunnel must not mount configuration or carry Named Tunnel credentials.');
+  check('named-command', Array.isArray(command) && JSON.stringify(command) === JSON.stringify(TUNNEL_COMMAND)
+    && !/^ {4}entrypoint:/m.test(block), 'Named Tunnel command must be exactly tunnel --no-autoupdate run without entrypoint overrides.');
+  check('quick-tunnel-disabled', !/--url|trycloudflare\.com|quick[ -]tunnel/i.test(block), 'Quick Tunnel flags and endpoints are forbidden in the E01 release path.');
+  const environmentBlock = block.match(/^ {4}environment:[ \t]*\r?\n((?:^ {6}[^\r\n]*(?:\r?\n|$))+)/m)?.[1] ?? '';
+  const nativeTokenMapping = /^ {6}TUNNEL_TOKEN:[ \t]*\$\{CLOUDFLARE_TUNNEL_TOKEN:-\}[ \t]*$/m.test(environmentBlock);
+  const environmentKeys = [...environmentBlock.matchAll(/^ {6}([A-Za-z_][A-Za-z0-9_]*):/gm)].map((match) => match[1]);
+  check('token-transport', nativeTokenMapping && environmentKeys.filter((key) => key === 'TUNNEL_TOKEN').length === 1
+    && environmentKeys.every((key) => ['TUNNEL_TOKEN', 'TUNNEL_METRICS'].includes(key))
+    && !/--token|TUNNEL_TOKEN/i.test(JSON.stringify(command ?? '')), 'Only cloudflared native TUNNEL_TOKEN may receive the externally injected token; command arguments must never contain it.');
+  check('internal-metrics', environmentKeys.filter((key) => key === 'TUNNEL_METRICS').length === 1
+    && /^ {6}TUNNEL_METRICS:[ \t]*0\.0\.0\.0:2000[ \t]*$/m.test(environmentBlock), 'cloudflared readiness metrics must use the internal network endpoint 0.0.0.0:2000 without a host port.');
+  check('no-mounted-credentials', !/^ {4}(?:env_file|volumes|configs|secrets):/m.test(block), 'Named Tunnel credentials and configuration must not be mounted from the repository.');
   check('no-app-dependencies', !/^ {4}(?:build|depends_on|links|extends|network_mode|volumes_from):/m.test(block), 'cloudflared must have no application build or lifecycle dependencies.');
   check('no-host-ports', !/^ {4}ports:/m.test(block), 'cloudflared must not publish host ports.');
   check('restart-policy', /^ {4}restart:\s*unless-stopped\s*$/m.test(block), 'cloudflared must persist with restart unless-stopped.');
@@ -233,25 +258,30 @@ function checkCloudflared(root, compose) {
   check('frontend-network', shared, 'Application Nginx and independent tunnel must share the explicitly named mo-farm-frontend network.');
   let contract;
   let historical;
-  try { contract = JSON.parse(readText(root, 'infra/cloudflared/quick-tunnel-contract.json')); } catch { contract = undefined; }
-  try { historical = JSON.parse(readText(root, 'infra/cloudflared/named-tunnel-contract.json')); } catch { historical = undefined; }
+  try { contract = JSON.parse(readText(root, 'infra/cloudflared/named-tunnel-contract.json')); } catch { contract = undefined; }
+  try { historical = JSON.parse(readText(root, 'infra/cloudflared/quick-tunnel-contract.json')); } catch { historical = undefined; }
   const expectedContract = {
     schemaVersion: 1,
-    tunnelType: 'quick',
+    canonical: true,
+    tunnelType: 'named',
     originService: EXPECTED_TUNNEL_TARGET,
-    publicHostnameType: 'ephemeral-trycloudflare',
-    hostnameSuffix: '.trycloudflare.com',
-    tokenRequired: false,
-    fixedHostnameRequired: false,
-    publicOriginMode: 'runtime-generated-exact',
+    tokenRequired: true,
+    fixedHostnameRequired: true,
+    hostnameSource: 'CLOUDFLARE_HOSTNAME',
+    publicOriginSource: 'PUBLIC_ORIGIN',
+    cloudflaredTokenEnv: 'TUNNEL_TOKEN',
     persistentContainerLifecycle: true,
     appRedeployMustPreserveTunnel: true,
-    quickTunnelAllowed: true,
+    quickTunnelAllowed: false,
     requiredCommand: TUNNEL_COMMAND,
     sharedNetwork: SHARED_NETWORK,
   };
-  check('contract-document', Object.entries(expectedContract).every(([key, value]) => JSON.stringify(contract?.[key]) === JSON.stringify(value)), 'Quick Tunnel deployment, exact origin and independent container lifecycle must match the canonical contract.');
-  check('named-contract-superseded', historical?.status === 'SUPERSEDED' && historical?.reason === 'PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO', 'Historical Named Tunnel evidence must be explicitly superseded by the owner decision.');
+  check('contract-document', Object.entries(expectedContract).every(([key, value]) => JSON.stringify(contract?.[key]) === JSON.stringify(value))
+    && contract?.status !== 'SUPERSEDED', 'Named Tunnel deployment, token transport, fixed origin and independent lifecycle must match the canonical contract.');
+  check('quick-contract-superseded', historical?.status === 'SUPERSEDED'
+    && historical?.reason === 'PROJECT_OWNER_CONFIRMED_EXISTING_NAMED_TUNNEL_PLAN'
+    && historical?.debugOnly === true && historical?.canonical === false && historical?.e01ReleasePath === false,
+  'Historical Quick Tunnel evidence must be superseded and excluded from E01 releases.');
   return findings;
 }
 
@@ -307,8 +337,8 @@ function checkSecurityHeaders(root) {
   return findings;
 }
 
-export async function runPreflight({ root = ROOT, env = process.env, loadDotEnv = true, runtime = false, publicUrl } = {}) {
-  const evaluatedEnvironment = evaluateEnvironment(env, { root, loadDotEnv, runtime, publicUrl });
+export async function runPreflight({ root = ROOT, env = process.env, loadDotEnv = true } = {}) {
+  const evaluatedEnvironment = evaluateEnvironment(env, { root, loadDotEnv });
   // Keep raw values private to this module. Even programmatic consumers get
   // status-only environment data, so accidental logging cannot leak secrets.
   const environment = {

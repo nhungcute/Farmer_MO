@@ -22,8 +22,8 @@ Mục tiêu kỹ thuật:
 - Dữ liệu game lưu server.
 - Không có kênh nước/irrigation canal.
 - **Ao nước** là một công trình có footprint trên grid.
-- Public demo qua **persistent Cloudflare Quick Tunnel** tại `*.trycloudflare.com`, lifecycle cloudflared riêng với application Compose.
-- Giữ cloudflared sống khi app rebuild để giảm đổi URL trong **SAME CLOUDFLARED LIFETIME**; URL vẫn ephemeral, restart/session recreation có thể đổi URL. Production cần stable hostname nên dùng Named Tunnel sau này.
+- Public qua **persistent Cloudflare Named Tunnel**, dedicated tunnel, fixed hostname và native environment token; lifecycle cloudflared riêng với application Compose.
+- App rebuild giữ cloudflared sống; configured fixed hostname/PUBLIC_ORIGIN giữ nguyên. Canonical E01 không dùng Quick Tunnel/generated origin.
 
 ---
 
@@ -43,7 +43,7 @@ Mục tiêu kỹ thuật:
 | Reverse proxy | Nginx |
 | PWA | vite-plugin-pwa |
 | Deployment | Docker Compose |
-| Public access | Persistent Cloudflare Quick Tunnel (demo; separate lifecycle) |
+| Public access | Persistent Cloudflare Named Tunnel (fixed hostname; separate lifecycle) |
 | Asset format | WebP/PNG RGBA + JSON Texture Atlas; AVIF chỉ dùng background future |
 
 ---
@@ -368,14 +368,14 @@ Internet
   ↓
 Cloudflare
   ↓
-Persistent Quick Tunnel (separate Compose lifecycle)
+Persistent Named Tunnel (separate Compose lifecycle)
   ↓
 nginx
 ├── web
 └── api
 ```
 
-App update phải giữ cloudflared container/process và URL trong cùng lifetime; kiểm tra ID, StartedAt, RestartCount và URL trước/sau thực tế. Không bảo đảm URL vĩnh viễn. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Phase 1 không start runtime; Phase 2 chờ lệnh riêng của Project Owner.
+App update phải giữ cloudflared container/process và configured fixed PUBLIC_ORIGIN; kiểm tra ID, StartedAt, RestartCount và origin trước/sau thực tế. Owner cấu hình fixed hostname/token và HTTPS origin trước startup, ingress `http://nginx:80`. Runbook hiện hành: [`E01_PERSISTENT_NAMED_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md). Correction chỉ repository; runtime chờ lệnh riêng của Project Owner.
 
 ---
 

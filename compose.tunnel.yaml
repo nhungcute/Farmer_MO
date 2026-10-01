@@ -3,7 +3,10 @@ name: mo-farm-tunnel
 services:
   cloudflared:
     image: cloudflare/cloudflared:2025.9.1
-    command: ["tunnel", "--no-autoupdate", "--url", "http://nginx:80"]
+    command: ["tunnel", "--no-autoupdate", "run"]
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
+      TUNNEL_METRICS: 0.0.0.0:2000
     restart: unless-stopped
     logging:
       driver: json-file

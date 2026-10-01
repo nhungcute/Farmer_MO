@@ -1,5 +1,7 @@
 # E01 — Persistent Quick Tunnel lifecycle
 
+> **SUPERSEDED / NON_CANONICAL / DEBUG EXPERIMENT.** This document preserves the implementation, decisions and static results of historical commit `5c8132f`. Reason: `PROJECT_OWNER_CONFIRMED_EXISTING_NAMED_TUNNEL_PLAN`. Project Owner subsequently restored the canonical **NAMED_TUNNEL** plan with fixed hostname and token, retaining lifecycle isolation. Current release runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel, generated URL/origin and commands below are historical/debug-only and cannot satisfy current E01 preflight. All claims of “canonical”, current status, PASS or required configuration below are attributed to that historical checkpoint, not the restored deployment.
+
 Date: 2026-10-01
 Deployment model: **PERSISTENT_QUICK_TUNNEL**
 Phase: **1 — repository implementation only**
@@ -8,7 +10,7 @@ Cloudflared: **NOT_STARTED**
 Public URL: **NOT_CREATED**
 RC01: **BLOCKED_BY_E01 / NOT_STARTED**
 
-This is the canonical E01 demo deployment runbook selected by Project Owner. Named Tunnel plans, preflight reports, remediation evidence and `infra/cloudflared/named-tunnel-contract.json` are retained as **SUPERSEDED** historical records. Their past verification results remain historical evidence; token/hostname requirements no longer apply to this demo architecture.
+This section records the temporary Quick Tunnel decision made at commit `5c8132f`; it is historical evidence only. The Named Tunnel plan, preflight reports, remediation evidence and `infra/cloudflared/named-tunnel-contract.json` are active again under the current runbook linked above. The Quick Tunnel configuration and generated-origin requirements below do not apply to the restored E01 deployment.
 
 ## Ownership and scope
 

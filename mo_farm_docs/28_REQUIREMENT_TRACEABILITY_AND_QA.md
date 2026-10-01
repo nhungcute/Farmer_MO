@@ -64,8 +64,8 @@ Mỗi feature phải có:
 | INFRA-02 | Migration/seed repeatable | CI database job |
 | INFRA-03 | DB không public | Compose/network inspection |
 | INFRA-04 | Backup/restore thành công | Restore drill |
-| INFRA-05 | Persistent Quick Tunnel giữ container/process và URL khi app rebuild trong SAME CLOUDFLARED LIFETIME | Phase-2 actual redeploy + public smoke; so sánh ID/StartedAt/RestartCount/URL |
-| INFRA-06 | PUBLIC_ORIGIN exact current HTTPS trycloudflare origin, không wildcard | Strict URL parser tests + Phase-2 Origin/cookie QA |
+| INFRA-05 | Persistent Named Tunnel giữ container/process và fixed hostname khi app rebuild | Actual authorized runtime redeploy + public smoke; so sánh ID/StartedAt/RestartCount/PUBLIC_ORIGIN |
+| INFRA-06 | PUBLIC_ORIGIN exact fixed HTTPS khớp CLOUDFLARE_HOSTNAME, không wildcard/trycloudflare | Named origin/preflight tests + actual Origin/cookie QA |
 | INFRA-07 | Tunnel/application lifecycle riêng; stop tunnel không xóa DB/state | Compose/static isolation tests + Phase-2 persistence/stop evidence |
 | PERF-01 | TTI dưới 4 giây Wi-Fi tốt sau cache | Lighthouse/trace |
 | PERF-02 | FPS/frame-time trên Android trung bình | Device profile |
@@ -82,7 +82,7 @@ Mỗi feature phải có:
 - Docker Compose: migration, seed, health và routing.
 - Không dùng Cloudflare cho unit/API/E2E CI.
 
-E01 Phase 1 chỉ repository/static/build verification, không start container hoặc tạo public URL. Public acceptance chỉ ghi PASS sau Phase 2 thực tế: HTTPS enter/bootstrap/session/refresh/idempotent mutation, 188 approved assets, mobile 932×430/915×412/844×390/740×360, restricted static paths, cookie/security headers, bounded rate limit và farm persistence. Quick Tunnel URL vẫn ephemeral; không cố ý restart cloudflared để thử rotation. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
+E01 correction chỉ repository/static/build verification, không start runtime, liên hệ Cloudflare hoặc public QA. Public acceptance chỉ ghi PASS sau actual runtime được Owner yêu cầu: HTTPS enter/bootstrap/session/refresh/idempotent mutation, 188 approved assets, mobile 932×430/915×412/844×390/740×360, restricted static paths, cookie/security headers, bounded rate limit và farm persistence. Named Tunnel fixed hostname/PUBLIC_ORIGIN phải giữ nguyên qua app update; actual tunnel container/process isolation cần evidence trước/sau. Runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md).
 
 ## 4. Bắt buộc test race và retry
 

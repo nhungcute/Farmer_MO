@@ -1,6 +1,8 @@
 # E01-FIX-06 — Automated security preflight
 
-> **SUPERSEDED deployment model — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** This historical validator report preserves earlier tests and Named Tunnel requirements. The current validator now permits Quick Tunnel and exact runtime-generated origin; current requirements: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+> **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The notices/results below are chronological history, including the intermediate Quick Tunnel change. Current validator again requires dedicated token/fixed hostname and exact configured origin, rejects Quick Tunnel, and validates separate lifecycle; current runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md).
+
+> **HISTORICAL INTERMEDIATE CHECKPOINT — SUPERSEDED / NON_CANONICAL.** This validator report preserves the earlier test evidence and intermediate Quick Tunnel decision. The current validator again requires the dedicated Named Tunnel token, fixed hostname and exact configured HTTPS origin; active requirements are in [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel is debug-only and cannot satisfy E01 preflight.
 
 `tools/e01-preflight.mjs` là kiểm tra chỉ đọc cho public demo trước khi bật
 Cloudflare Named Tunnel. Script không khởi động Docker, không gọi Cloudflare,

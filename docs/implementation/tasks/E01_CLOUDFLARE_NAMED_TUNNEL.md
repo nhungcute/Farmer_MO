@@ -1,6 +1,8 @@
 # E01 — Cloudflare Named Tunnel public demo gate
 
-> **SUPERSEDED — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** Historical plan retained below. Current deployment model, configuration and gates: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Named Tunnel token/hostname/profile requirements below no longer apply to E01 demo.
+> **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The supersession notice below is chronological history. Current fixed-hostname/token workflow retains independent tunnel lifecycle and is documented in [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Original plan/evidence below remains historical; do not use its old Compose public-profile commands as the current runbook.
+
+> **HISTORICAL INTERMEDIATE CHECKPOINT — SUPERSEDED / NON_CANONICAL.** Commit `5c8132f` briefly selected a Persistent Quick Tunnel. That experiment is retained in [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md) as debug history. The restored canonical deployment, token/hostname requirements and current gates are in [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md); the historical plan and old Compose profile commands below are not the current runbook.
 
 - Task ID: E01
 - Name: Cloudflare Named Tunnel deployment and public smoke gate

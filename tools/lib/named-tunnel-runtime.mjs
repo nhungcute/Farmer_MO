@@ -3,16 +3,15 @@ import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { loadLocalEnv, runPreflight } from '../e01-preflight.mjs';
-import { discoverQuickTunnelUrl, sameTunnelLifetime, validateQuickTunnelUrl } from './quick-tunnel.mjs';
+import { isNamedTunnelPlaceholder, sameTunnelLifetime, validateNamedTunnelHostname, validateNamedTunnelOrigin } from './named-tunnel.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const APP_PROJECT = 'mo-farm';
 const TUNNEL_PROJECT = 'mo-farm-tunnel';
-const BOOTSTRAP_ORIGIN = 'https://bootstrap.invalid';
 const ERROR_CODES = new Set([
-  'INVALID_QUICK_TUNNEL_URL', 'AMBIGUOUS_QUICK_TUNNEL_URL', 'INVALID_RUNTIME_STATE',
+  'INVALID_NAMED_TUNNEL_ORIGIN', 'INVALID_NAMED_TUNNEL_HOSTNAME',
   'TUNNEL_OPERATION_LOCKED', 'AMBIGUOUS_SERVICE_CONTAINER', 'TUNNEL_NOT_RUNNING',
-  'TUNNEL_LIFECYCLE_REGRESSION', 'QUICK_TUNNEL_URL_NOT_FOUND', 'BLOCKED_CONFIG',
+  'TUNNEL_LIFECYCLE_REGRESSION', 'TUNNEL_NOT_CONNECTED', 'BLOCKED_CONFIG',
   'BLOCKED_SECURITY', 'INTERNAL_READINESS_FAILED', 'PUBLIC_HTTPS_SMOKE_FAILED',
   'PUBLIC_ORIGIN_MISMATCH', 'APP_NOT_RUNNING', 'DOCKER_UNAVAILABLE',
   'TUNNEL_RUNTIME_CONFIG_MISMATCH',
@@ -20,7 +19,7 @@ const ERROR_CODES = new Set([
 
 export function safeErrorCode(error) {
   return ERROR_CODES.has(error?.message) || /^DOCKER_COMMAND_FAILED:(?:compose|logs|ps|inspect|stop|tag)$/.test(error?.message ?? '')
-    ? error.message : 'QUICK_TUNNEL_OPERATION_FAILED';
+    ? error.message : 'NAMED_TUNNEL_OPERATION_FAILED';
 }
 
 export function dockerCommand(args, { root = ROOT, env = process.env } = {}) {
@@ -41,7 +40,7 @@ export function dockerCommand(args, { root = ROOT, env = process.env } = {}) {
   });
 }
 
-export class QuickTunnelRuntime {
+export class NamedTunnelRuntime {
   constructor({ root = ROOT, env = process.env, command = dockerCommand, fetcher = fetch,
     sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)), report = console.log } = {}) {
     this.root = root;
@@ -60,27 +59,13 @@ export class QuickTunnelRuntime {
     return this.docker(['compose', '-p', project, '-f', file, ...args]);
   }
 
-  readState() {
-    try { return JSON.parse(fs.readFileSync(path.join(this.runtimePath, 'quick-tunnel.json'), 'utf8')); }
-    catch (error) { if (error.code === 'ENOENT') return undefined; throw new Error('INVALID_RUNTIME_STATE'); }
-  }
-
-  atomicWrite(name, contents) {
-    fs.mkdirSync(this.runtimePath, { recursive: true });
-    const destination = path.join(this.runtimePath, name);
-    const temporary = `${destination}.${process.pid}.tmp`;
-    fs.writeFileSync(temporary, contents, { mode: 0o600 });
-    fs.renameSync(temporary, destination);
-  }
-
-  saveState(state) {
-    this.atomicWrite('quick-tunnel.json', `${JSON.stringify(state, null, 2)}\n`);
-    this.atomicWrite('quick-tunnel.env', state.status === 'running' ? `PUBLIC_ORIGIN=${validateQuickTunnelUrl(state.publicUrl)}\n` : '# STALE: tunnel stopped; capture a new URL before application deployment.\n');
+  configuredOrigin() {
+    return validateNamedTunnelOrigin(this.env.PUBLIC_ORIGIN, this.env.CLOUDFLARE_HOSTNAME);
   }
 
   async locked(action) {
     fs.mkdirSync(this.runtimePath, { recursive: true });
-    const lock = path.join(this.runtimePath, 'quick-tunnel.lock');
+    const lock = path.join(this.runtimePath, 'named-tunnel.lock');
     try { fs.mkdirSync(lock); } catch { throw new Error('TUNNEL_OPERATION_LOCKED'); }
     try {
       fs.writeFileSync(path.join(lock, 'owner.json'), JSON.stringify({ pid: process.pid, createdAt: new Date().toISOString() }));
@@ -103,54 +88,67 @@ export class QuickTunnelRuntime {
       imageId: raw.Image, imageTag: raw.Config.Image,
       publicOrigin: raw.Config.Env?.find((value) => value.startsWith('PUBLIC_ORIGIN='))?.slice(14),
       tunnelConfigValid: service !== 'cloudflared' || (raw.Config.Image === 'cloudflare/cloudflared:2025.9.1'
-        && JSON.stringify(raw.Config.Cmd) === JSON.stringify(['tunnel', '--no-autoupdate', '--url', 'http://nginx:80'])
+        && JSON.stringify(raw.Config.Cmd) === JSON.stringify(['tunnel', '--no-autoupdate', 'run'])
         && raw.HostConfig.RestartPolicy.Name === 'unless-stopped'
         && Boolean(raw.NetworkSettings.Networks['mo-farm-frontend'])
-        && !raw.Config.Env?.some((value) => /^(?:TUNNEL_TOKEN|CLOUDFLARE_TUNNEL_TOKEN|CLOUDFLARE_HOSTNAME)=/.test(value))
+        && Boolean(this.env.CLOUDFLARE_TUNNEL_TOKEN)
+        && raw.Config.Env?.find((value) => value.startsWith('TUNNEL_TOKEN='))?.slice(13) === this.env.CLOUDFLARE_TUNNEL_TOKEN
+        && raw.Config.Env?.includes('TUNNEL_METRICS=0.0.0.0:2000')
         && !(raw.Mounts?.length) && !Object.keys(raw.HostConfig.PortBindings ?? {}).length) };
   }
 
   async tunnel() { return this.inspect('cloudflared', TUNNEL_PROJECT); }
 
-  async capture(container, { wait = false } = {}) {
+  async snapshot(container = undefined) {
+    container ??= await this.tunnel();
     if (!container?.running) throw new Error('TUNNEL_NOT_RUNNING');
     if (!container.tunnelConfigValid) throw new Error('TUNNEL_RUNTIME_CONFIG_MISMATCH');
-    const saved = this.readState();
-    const savedForLifetime = saved?.status === 'running' && saved.containerId === container.containerId
-      && saved.startedAt === container.startedAt && saved.restartCount === container.restartCount;
-    for (let attempt = 0; attempt < (wait ? 60 : 1); attempt += 1) {
-      const logs = await this.docker(['logs', '--since', container.startedAt, '--tail', '500', container.containerId]);
-      const discovered = discoverQuickTunnelUrl(logs);
-      const publicUrl = discovered ?? (savedForLifetime ? validateQuickTunnelUrl(saved.publicUrl) : undefined);
-      if (savedForLifetime && discovered && discovered !== saved.publicUrl) throw new Error('TUNNEL_LIFECYCLE_REGRESSION');
-      if (publicUrl) {
-        const latest = await this.tunnel();
-        const snapshot = { ...container, publicUrl };
-        if (!sameTunnelLifetime(snapshot, { ...latest, publicUrl })) throw new Error('TUNNEL_LIFECYCLE_REGRESSION');
-        return snapshot;
-      }
-      if (wait) await this.sleep(1000);
-    }
-    throw new Error('QUICK_TUNNEL_URL_NOT_FOUND');
+    return { ...container, publicOrigin: this.configuredOrigin() };
   }
 
   async assertLifetime(before) {
     const container = await this.tunnel();
-    // Classify a stopped/replaced process before attempting to read its logs.
-    if (!sameTunnelLifetime(before, { ...container, publicUrl: before.publicUrl })) {
+    if (!sameTunnelLifetime(before, { ...container, publicOrigin: this.configuredOrigin() })) {
       throw new Error('TUNNEL_LIFECYCLE_REGRESSION');
     }
-    const after = await this.capture(container);
-    if (!sameTunnelLifetime(before, after)) throw new Error('TUNNEL_LIFECYCLE_REGRESSION');
+    const after = await this.snapshot(container);
+    const api = await this.inspect('api');
+    if (api?.publicOrigin !== before.publicOrigin) throw new Error('PUBLIC_ORIGIN_MISMATCH');
     return after;
   }
 
-  async preflight(publicUrl) {
-    const result = await runPreflight({ root: this.root, env: this.env, loadDotEnv: false,
-      runtime: Boolean(publicUrl), publicUrl });
+  async preflight() {
+    const result = await runPreflight({ root: this.root, env: this.env, loadDotEnv: false });
     if (result.status !== 'PASS') throw new Error(result.status);
     await this.compose('app', ['config', '--quiet']);
     await this.compose('tunnel', ['config', '--quiet']);
+  }
+
+  async connectionState() {
+    // API/web provide Node on the shared network, independently of Nginx health.
+    const probe = "fetch(process.argv[1],{signal:AbortSignal.timeout(5000)}).then(async r=>{await r.body?.cancel();console.log(r.status===200?'CONNECTED':r.status===503?'DISCONNECTED':'UNVERIFIED')}).catch(()=>console.log('UNVERIFIED'))";
+    for (const service of ['api', 'web']) {
+      const container = await this.inspect(service);
+      if (!container?.running) continue;
+      try {
+        const state = await this.compose('app', ['exec', '-T', service, 'node', '-e', probe, 'http://cloudflared:2000/ready']);
+        if (state === 'CONNECTED' || state === 'DISCONNECTED') return state;
+      } catch { /* Try the other internal probe service without contacting the public hostname. */ }
+    }
+    return 'UNVERIFIED';
+  }
+
+  async connected() {
+    return await this.connectionState() === 'CONNECTED';
+  }
+
+  async waitConnected(before) {
+    for (let attempt = 0; attempt < 60; attempt += 1) {
+      await this.assertLifetime(before);
+      if (await this.connected()) return;
+      await this.sleep(1000);
+    }
+    throw new Error('TUNNEL_NOT_CONNECTED');
   }
 
   async reloadNginx() {
@@ -162,8 +160,8 @@ export class QuickTunnelRuntime {
   async internalReady() {
     for (let attempt = 0; attempt < 60; attempt += 1) {
       try {
-        await this.compose('app', ['exec', '-T', 'nginx', 'wget', '-q', '-O', '/dev/null', 'http://127.0.0.1/api/health/ready']);
-        await this.compose('app', ['exec', '-T', 'nginx', 'wget', '-q', '-O', '/dev/null', 'http://127.0.0.1/']);
+        await this.compose('app', ['exec', '-T', 'nginx', 'wget', '-q', '-T', '5', '-O', '/dev/null', 'http://127.0.0.1/api/health/ready']);
+        await this.compose('app', ['exec', '-T', 'nginx', 'wget', '-q', '-T', '5', '-O', '/dev/null', 'http://127.0.0.1/']);
         return;
       } catch { await this.sleep(1000); }
     }
@@ -171,7 +169,7 @@ export class QuickTunnelRuntime {
   }
 
   async smoke(publicUrl) {
-    validateQuickTunnelUrl(publicUrl);
+    validateNamedTunnelOrigin(publicUrl, this.env.CLOUDFLARE_HOSTNAME);
     const paths = ['/', '/api/health/ready', '/healthz'];
     for (const pathname of paths) {
       let passed = false;
@@ -198,26 +196,25 @@ export class QuickTunnelRuntime {
   async start() {
     return this.locked(async () => {
       await this.preflight();
+      const origin = this.configuredOrigin();
       const existing = await this.tunnel();
+      if (existing && !existing.tunnelConfigValid) throw new Error('TUNNEL_RUNTIME_CONFIG_MISMATCH');
       let before;
       if (existing?.running) {
-        before = await this.capture(existing);
+        before = await this.snapshot(existing);
         this.report('TUNNEL_ALREADY_RUNNING');
-      }
-      this.env.PUBLIC_ORIGIN = before?.publicUrl ?? BOOTSTRAP_ORIGIN;
-      if (before) {
         const services = await Promise.all(['db', 'api', 'web', 'nginx'].map((service) => this.inspect(service)));
         if (services.every((service) => service?.running && service.health === 'healthy')
-          && services[1].publicOrigin === before.publicUrl) {
-          await this.preflight(before.publicUrl);
+          && services[1].publicOrigin === origin) {
           await this.internalReady();
-          await this.smoke(before.publicUrl);
+          await this.waitConnected(before);
+          await this.smoke(origin);
           await this.assertLifetime(before);
-          this.recordRunning(before);
-          this.reportRunning(before);
+          this.reportRunning();
           return;
         }
       }
+      // The fixed origin is configured before any application or tunnel starts.
       await this.compose('app', ['build', '--quiet', 'api', 'web']);
       await this.compose('app', ['up', '-d', '--wait', 'db']);
       await this.compose('app', ['--profile', 'init', 'run', '--rm', '--no-deps', 'migrate']);
@@ -225,47 +222,43 @@ export class QuickTunnelRuntime {
       await this.reloadNginx();
       await this.internalReady();
       if (!before) {
-        // --no-recreate also protects a stopped container; no app dependency exists here.
         await this.compose('tunnel', ['up', '-d', '--no-recreate', 'cloudflared']);
-        before = await this.capture(await this.tunnel(), { wait: true });
-      } else await this.assertLifetime(before);
-      this.recordRunning(before);
-      this.env.PUBLIC_ORIGIN = before.publicUrl;
-      await this.preflight(before.publicUrl);
-      const api = await this.inspect('api');
-      if (api?.publicOrigin !== before.publicUrl) await this.compose('app', ['up', '-d', '--no-deps', '--force-recreate', '--wait', 'api']);
-      await this.reloadNginx();
-      await this.internalReady();
+        before = await this.snapshot();
+      }
       await this.assertLifetime(before);
-      await this.smoke(before.publicUrl);
+      await this.waitConnected(before);
+      await this.smoke(origin);
       await this.assertLifetime(before);
-      this.reportRunning(before);
+      this.reportRunning();
     });
   }
 
-  recordRunning(container) {
-    this.saveState({ publicUrl: container.publicUrl, containerId: container.containerId, startedAt: container.startedAt,
-      restartCount: container.restartCount, capturedAt: new Date().toISOString(), status: 'running', qaStatus: 'PENDING' });
-  }
-
-  reportRunning(container) {
-    this.report(`E01=RUNNING\nPUBLIC_URL=${container.publicUrl}\nURL_STABILITY_SCOPE=SAME_CLOUDFLARED_LIFETIME`);
+  reportRunning() {
+    this.report('E01=RUNNING\nNAMED_TUNNEL=CONNECTED\nPUBLIC_ORIGIN=FIXED_HTTPS\nPUBLIC_QA=PENDING');
   }
 
   async status() {
     const container = await this.tunnel();
-    let current;
-    if (container?.running) {
-      try { current = await this.capture(container); } catch (error) { this.report(`URL_STATUS=${safeErrorCode(error)}`); }
-    }
     const services = {};
     for (const service of ['nginx', 'api', 'db']) services[service] = await this.inspect(service);
+    // Keep the public status contract binary; Docker's `stopped`/`running`
+    // details are implementation state and must not leak into the report.
+    const healthStatus = (service) => service?.health === 'healthy' ? 'healthy' : 'unhealthy';
+    let hostname = 'INVALID';
+    let originMatches = false;
+    try {
+      validateNamedTunnelHostname(this.env.CLOUDFLARE_HOSTNAME);
+      if (isNamedTunnelPlaceholder(this.env.CLOUDFLARE_HOSTNAME)) throw new Error('INVALID_NAMED_TUNNEL_HOSTNAME');
+      hostname = 'CONFIGURED';
+      originMatches = services.api?.publicOrigin === this.configuredOrigin();
+    } catch { /* Report only statuses; local configuration may be incomplete. */ }
     const safe = { cloudflared: container?.running ? 'RUNNING' : 'STOPPED',
+      namedTunnel: !container ? 'NOT_STARTED' : container.running ? await this.connectionState() : 'DISCONNECTED',
+      tunnelConfiguration: !container ? 'NOT_CREATED' : container.tunnelConfigValid ? 'MATCH' : 'MISMATCH',
       container: container?.containerId.slice(0, 12) ?? 'NOT_CREATED',
-      publicUrl: current?.publicUrl ?? (this.readState()?.publicUrl ? 'STALE_OR_UNVERIFIED' : 'NOT_CREATED'),
-      nginx: services.nginx?.health ?? 'stopped', api: services.api?.health ?? 'stopped',
-      postgres: services.db?.health ?? 'stopped',
-      publicOriginMatch: current && services.api?.publicOrigin === current.publicUrl ? 'PASS' : 'FAIL' };
+      nginx: healthStatus(services.nginx), api: healthStatus(services.api),
+      postgres: healthStatus(services.db),
+      publicOrigin: originMatches ? 'MATCH' : 'MISMATCH', hostname };
     this.report(JSON.stringify(safe, null, 2));
     return safe;
   }
@@ -274,29 +267,27 @@ export class QuickTunnelRuntime {
     return this.locked(async () => {
       const container = await this.tunnel();
       if (container?.running) await this.docker(['stop', container.containerId]);
-      let state;
-      try { state = this.readState(); } catch { /* Explicit stop must still invalidate corrupt runtime state. */ }
-      this.saveState({ publicUrl: state?.publicUrl, containerId: container?.containerId ?? state?.containerId,
-        startedAt: state?.startedAt, restartCount: state?.restartCount,
-        status: 'stale', stoppedAt: new Date().toISOString() });
-      this.report('CLOUDFLARED=STOPPED\nPUBLIC_URL=STALE');
+      // Stopping a Named Tunnel does not rotate its configured hostname.
+      this.report('CLOUDFLARED=STOPPED\nNAMED_TUNNEL=DISCONNECTED\nPUBLIC_ORIGIN=UNCHANGED');
     });
   }
 
   async update({ nginx = false } = {}) {
     return this.locked(async () => {
-      const before = await this.capture(await this.tunnel());
+      // Validate the fixed-origin and security contract before inspecting or
+      // mutating any container. Invalid owner configuration must be a pure
+      // BLOCKED_CONFIG failure with no lifecycle side effects.
+      await this.preflight();
+      const before = await this.snapshot();
       const api = await this.inspect('api');
-      if (api?.publicOrigin !== before.publicUrl) throw new Error('PUBLIC_ORIGIN_MISMATCH');
-      this.env.PUBLIC_ORIGIN = before.publicUrl;
-      await this.preflight(before.publicUrl);
+      if (api?.publicOrigin !== before.publicOrigin) throw new Error('PUBLIC_ORIGIN_MISMATCH');
       const images = [];
       for (const service of ['api', 'web']) {
         const container = await this.inspect(service);
         if (!container?.running) throw new Error('APP_NOT_RUNNING');
         images.push({ service, imageId: container.imageId, imageTag: container.imageTag });
       }
-      this.report(`URL_BEFORE=${before.publicUrl}\nTUNNEL_CONTAINER_BEFORE=${before.containerId.slice(0, 12)}`);
+      this.report(`URL_BEFORE=${before.publicOrigin}\nTUNNEL_CONTAINER_BEFORE=${before.containerId.slice(0, 12)}`);
       try {
         await this.compose('app', ['build', '--quiet', 'api', 'web']);
         await this.compose('app', ['up', '-d', '--no-deps', '--force-recreate', '--wait', 'api', 'web']);
@@ -304,7 +295,7 @@ export class QuickTunnelRuntime {
         await this.reloadNginx();
         await this.internalReady();
         await this.assertLifetime(before);
-        await this.smoke(before.publicUrl);
+        await this.smoke(before.publicOrigin);
       } catch (error) {
         // Restore previous app image tags only. Never touch tunnel or database.
         let rollback = 'PASS';
@@ -319,13 +310,13 @@ export class QuickTunnelRuntime {
         throw error;
       }
       await this.assertLifetime(before);
-      this.report(`URL_AFTER=${before.publicUrl}\nTUNNEL_CONTAINER_AFTER=${before.containerId.slice(0, 12)}\nPASS — URL PRESERVED`);
+      this.report(`URL_AFTER=${before.publicOrigin}\nTUNNEL_CONTAINER_AFTER=${before.containerId.slice(0, 12)}\nPASS — URL PRESERVED`);
     });
   }
 }
 
 export async function runCli(action, options = {}) {
-  try { await new QuickTunnelRuntime()[action](options); }
+  try { await new NamedTunnelRuntime()[action](options); }
   catch (error) {
     // Emit only predefined diagnostic codes; external exception messages can contain secrets.
     console.error(safeErrorCode(error));

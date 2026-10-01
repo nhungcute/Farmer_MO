@@ -1,5 +1,10 @@
 {
   "schemaVersion": 1,
+  "status": "SUPERSEDED",
+  "debugOnly": true,
+  "canonical": false,
+  "e01ReleasePath": false,
+  "reason": "PROJECT_OWNER_CONFIRMED_EXISTING_NAMED_TUNNEL_PLAN",
   "tunnelType": "quick",
   "originService": "http://nginx:80",
   "publicHostnameType": "ephemeral-trycloudflare",

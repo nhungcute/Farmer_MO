@@ -1,27 +1,24 @@
 ﻿# 19 — DOCKER & CLOUDFLARE DEPLOYMENT
 
-Đây là prototype/demo. Theo quyết định Project Owner ngày 2026-10-01, E01 dùng **PERSISTENT_QUICK_TUNNEL** tại `*.trycloudflare.com`. Local chạy độc lập với Cloudflare. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
+Canonical E01 deployment: **NAMED_TUNNEL** — dedicated Cloudflare Named Tunnel, fixed hostname, native environment token transport and ingress `http://nginx:80`. Independent cloudflared lifecycle introduced in `5c8132f` is retained. Quick Tunnel migration is historical/noncanonical; current runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md).
 
-## 1. Hai lifecycle riêng
+## 1. Separate application and tunnel lifecycles
 
 ```text
 APPLICATION: compose.yaml (mo-farm)
   db (PostgreSQL) + api + web + nginx
-
 TUNNEL: compose.tunnel.yaml (mo-farm-tunnel)
   cloudflared
 
-Internet → https://<generated>.trycloudflare.com
-         → cloudflared → http://nginx:80 → web / api → PostgreSQL
+Internet → https://<fixed-hostname> → Cloudflare Named Tunnel
+         → persistent cloudflared → http://nginx:80 → web / api → PostgreSQL
 ```
 
-Application Compose quản lý network tên cố định `mo-farm-frontend`; tunnel Compose dùng network đó với `external: true`. Tunnel không có `build`, token hoặc dependency Compose vào application services. Chỉ Nginx bind loopback `127.0.0.1:8080:80`; API, web và PostgreSQL không publish host port.
+Application Compose owns stable network `mo-farm-frontend`; tunnel Compose joins it with `external: true`. Cloudflared resolves `nginx` through Docker DNS. Tunnel is image-only, with no build or application dependency. Only Nginx binds loopback `127.0.0.1:8080:80`; API, web and PostgreSQL have no host-published ports.
 
-## 2. Phase 1 — repository only
+## 2. Repository correction only
 
-Phase 1 chỉ triển khai và kiểm tra repository, Compose config và Docker build. **Không start application container hoặc cloudflared; không tạo public URL.** Runtime hiện `BLOCKED_CONFIG` vì chưa có cấu hình local cần thiết. Khi cấu hình đủ, trạng thái là `READY_FOR_QUICK_TUNNEL_START`; chỉ bắt đầu runtime sau lệnh riêng của Project Owner.
-
-Preflight chỉ đọc, không gọi Cloudflare hoặc start container:
+Do not start application containers, PostgreSQL public runtime, cloudflared or RC01, contact Cloudflare, publish hostname or perform public QA in this correction task. Config validation and Docker image build do not start runtime.
 
 ```powershell
 npm run e01:preflight
@@ -29,45 +26,47 @@ docker compose config --quiet
 docker compose -f compose.tunnel.yaml config --quiet
 ```
 
-Public demo cần `PERSISTENCE_DRIVER=postgres`, `APP_ENV=demo`, `COOKIE_SECURE=true`, `SESSION_SECRET` và `POSTGRES_PASSWORD` không default, cùng `DATABASE_URL` PostgreSQL hợp lệ. Không cần token, fixed hostname hoặc biết trước public origin.
+Current runtime is **BLOCKED_CONFIG**: real owner environment, fixed hostname and Named Tunnel credentials are not yet validated. Cloudflared and Named Tunnel are **NOT_STARTED**; RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**. Repository hardening and lifecycle isolation are signed off separately from actual runtime gates.
 
-## 3. Phase 2 — operator commands
+## 3. Named Tunnel configuration
 
-Chỉ chạy sau khi Project Owner yêu cầu start runtime:
-
-```powershell
-# Start/reuse tunnel, discover URL, synchronize exact PUBLIC_ORIGIN and smoke.
-npm run e01:quick:start
-npm run e01:quick:status
-
-# Build/update api + web, refresh nginx routing, preserve cloudflared.
-npm run e01:app:update
-
-# Also recreate nginx when its configuration changes.
-npm run e01:app:update -- --nginx
-
-# Stop cloudflared only; mark captured URL stale, retain application/data.
-npm run e01:quick:stop
-```
-
-Không dùng `docker compose down` cho update ứng dụng. Start lần hai phải reuse tunnel đang chạy và báo `TUNNEL_ALREADY_RUNNING`; không gọi tunnel Compose `up` cho container đang chạy. Update kiểm tra container ID, `StartedAt`, `RestartCount` và URL trước/sau; thay đổi bất ngờ phải báo `TUNNEL_LIFECYCLE_REGRESSION`.
-
-## 4. Quick Tunnel contract
-
-Image pin: `cloudflare/cloudflared:2025.9.1`; restart policy `unless-stopped`.
+Pinned image: `cloudflare/cloudflared:2025.9.1`; restart policy: `unless-stopped`; bounded log rotation.
 
 ```text
-cloudflared tunnel --no-autoupdate --url http://nginx:80
+cloudflared tunnel --no-autoupdate run
+TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+PUBLIC_ORIGIN=https://<CLOUDFLARE_HOSTNAME>
 ```
 
-Không có `TUNNEL_TOKEN`, `CLOUDFLARE_TUNNEL_TOKEN`, `CLOUDFLARE_HOSTNAME`, Named Tunnel credentials hoặc yêu cầu cấu hình Cloudflare dashboard. Contract hiện hành là `infra/cloudflared/quick-tunnel-contract.json`; Named Tunnel contract và báo cáo cũ đã `SUPERSEDED`.
+Token is supplied through the container environment, never command arguments. The owner provisions a dedicated Named Tunnel and fixed published hostname pointing only to `http://nginx:80`. Do not put token/password/cookies/database credentials in Git, logs or evidence. Do not use Quick Tunnel `--url` or `--token` arguments in canonical E01.
 
-URL runtime chỉ nhận HTTPS origin với subdomain hợp lệ của `.trycloudflare.com`. `.runtime/quick-tunnel.json` lưu trạng thái và nhận diện container; `.runtime/quick-tunnel.env` lưu `PUBLIC_ORIGIN` đúng bằng URL đã capture. Cả thư mục được gitignore; không nhân bản secret vào state hoặc evidence. Không chấp nhận origin wildcard.
+Active contract: `infra/cloudflared/named-tunnel-contract.json`. Preflight requires `PERSISTENCE_DRIVER=postgres`, `APP_ENV=demo`, `COOKIE_SECURE=true`, non-default session/database secrets, valid `DATABASE_URL`, `CLOUDFLARE_TUNNEL_TOKEN`, `CLOUDFLARE_HOSTNAME` and exact fixed HTTPS `PUBLIC_ORIGIN`. Its hostname must match CLOUDFLARE_HOSTNAME; localhost/IP/HTTP/trycloudflare/wildcard origins are rejected.
 
-## 5. Giới hạn URL và acceptance
+There is no runtime URL discovery, bootstrap origin or generated PUBLIC_ORIGIN. The canonical workflow does not depend on `.runtime/quick-tunnel.json` or `.runtime/quick-tunnel.env`.
 
-URL là **ephemeral**, phạm vi kiểm tra giữ URL là **SAME CLOUDFLARED LIFETIME**. Rebuild/recreate API, web hoặc Nginx giữ cloudflared sống và giảm khả năng đổi URL. Quick Tunnel không bảo đảm URL vĩnh viễn hoặc luôn không đổi: process restart, container recreation, host reboot hoặc Cloudflare tái tạo session có thể sinh URL mới. `unless-stopped` hỗ trợ khôi phục process nhưng không bảo đảm giữ URL. Production cần hostname ổn định nên chuyển sang Named Tunnel.
+## 4. Future runtime operator commands
 
-Phase 2 phải kiểm tra HTTPS public smoke, enter/bootstrap, session/refresh/idempotent mutation, 188 approved assets, mobile matrix, negative static paths, cookie/security headers, bounded rate-limit test và farm persistence. Chạy update thực tế rồi xác nhận container/process và URL giữ nguyên. Không cố ý restart cloudflared để thử URL rotation.
+Use only after the separate Project Owner runtime instruction and valid owner configuration:
 
-E01 chỉ `DONE — PERSISTENT_QUICK_TUNNEL` sau runtime/public QA và preservation test PASS. RC01 vẫn `BLOCKED_BY_E01 / NOT_STARTED`; sau E01 DONE chỉ chuyển `QUEUED / READY` và chờ Project Owner.
+```powershell
+# Start/reuse Named Tunnel and validate fixed HTTPS public smoke.
+npm run e01:tunnel:start
+npm run e01:tunnel:status
+
+# Selective API/web update, refresh Nginx routing, preserve cloudflared.
+npm run e01:app:update
+npm run e01:app:update -- --nginx
+
+# Stop cloudflared only; retain application/database and fixed hostname config.
+npm run e01:tunnel:stop
+```
+
+A healthy repeated start validates the existing tunnel without recreating it. App update builds/recreates API/web and refreshes Nginx upstream routing; `--nginx` selectively recreates Nginx. Never run tunnel `docker compose down` or `--force-recreate cloudflared` during normal app deployment. Verify tunnel container ID, StartedAt, RestartCount and fixed PUBLIC_ORIGIN before/after; unexpected changes report `TUNNEL_LIFECYCLE_REGRESSION`.
+
+Stop does not delete data or turn a fixed Named Tunnel hostname into a stale generated URL. The endpoint is unavailable while disconnected, but its configured hostname remains fixed. Status is read-only, uses local connection/readiness evidence and makes no public endpoint requests.
+
+## 5. Runtime acceptance still pending
+
+Fixed hostname and PUBLIC_ORIGIN must remain unchanged after API/web rebuild and Nginx recreation. Independent container lifecycle avoids disrupting cloudflared during normal application deployment. Repair failing app services while leaving the tunnel alive.
+
+Actual runtime QA must verify HTTPS smoke, enter/bootstrap/session/refresh/idempotent mutation, 188 approved assets, mobile matrix, static negative paths, browser Secure/HttpOnly/SameSite cookie, exact-origin validation, controlled bounded API 429 and persistence across a real selective update. Static/mock tests do not prove public operation. RC01 stays blocked until E01 actual runtime gates DONE, then becomes QUEUED / READY and waits for Project Owner.

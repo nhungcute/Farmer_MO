@@ -1,12 +1,12 @@
 # Trạng thái triển khai prototype
 
-> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 và B02 đã DONE. E01 demo chọn PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG; cloudflared NOT_STARTED, URL NOT_CREATED. RC01 BLOCKED_BY_E01 / NOT_STARTED.
+> Điều phối Release Candidate: checklist chi tiết và dependency graph nằm tại [`docs/implementation/IMPLEMENTATION_STATUS.md`](../docs/implementation/IMPLEMENTATION_STATUS.md) và [`docs/implementation/TASK_DEPENDENCIES.md`](../docs/implementation/TASK_DEPENDENCIES.md). A01/B01/C01/D01/A02/A03/C02/C03/D02 và B02 đã DONE. Canonical E01 là NAMED_TUNNEL, runtime BLOCKED_CONFIG; cloudflared và Named Tunnel NOT_STARTED. RC01 BLOCKED_BY_E01 / NOT_STARTED.
 
 Sau checkpoint A01/B01/C01/D01, A02 đã review 8/8; A03, C02, C03 và D02 đã có bằng chứng test runtime. B02 đã nhận owner content/license/release approval cho toàn bộ Wave 2: tổng 188/188 production_ready, 188/188 approved, 0 placeholders. Local compatibility vẫn hỗ trợ `PERSISTENCE_DRIVER=file`; public E01 bắt buộc PostgreSQL và không downgrade security.
 
 Ngày cập nhật trạng thái: 2026-10-01; runtime baseline checks bên dưới được ghi tại checkpoint 2026-09-30. Đây là prototype/demo; dữ liệu farm không được coi là riêng tư. Người chơi vào thẳng farm bằng tên, không có Tutorial.
 
-Phase 1 E01 chỉ triển khai repository/static/build; không start application hoặc tunnel container. Runtime còn thiếu ignored local configuration nên BLOCKED_CONFIG; cấu hình đủ thì READY_FOR_QUICK_TUNNEL_START. Chờ Project Owner yêu cầu Phase 2 để capture URL, bind exact PUBLIC_ORIGIN và chạy actual public/mobile/security/persistence/URL-preservation QA. Application Compose và tunnel Compose có lifecycle riêng; URL là ephemeral với scope SAME CLOUDFLARED LIFETIME. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
+E01 correction chỉ repository/static/build; không start runtime, liên hệ Cloudflare hoặc public QA. Runtime BLOCKED_CONFIG vì real owner environment/token/hostname chưa validate. Application Compose và tunnel Compose giữ lifecycle riêng; Named Tunnel dùng fixed hostname/token và exact fixed PUBLIC_ORIGIN trước startup, ingress http://nginx:80. Chờ Project Owner cấu hình và yêu cầu actual runtime/public/mobile/security/persistence/update-isolation QA. Runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel `5c8132f` giữ historical/debug-only, không current release path.
 
 ## Đã triển khai và đã kiểm tra
 
@@ -26,9 +26,9 @@ Phase 1 E01 chỉ triển khai repository/static/build; không start application
 
 ## Thứ tự tiếp theo
 
-1. Hoàn tất E01 Phase-1 static regression và repository evidence; giữ cloudflared NOT_STARTED, URL NOT_CREATED.
-2. Chờ Project Owner yêu cầu start Quick Tunnel; cung cấp ignored local demo/PostgreSQL configuration và rerun preflight.
-3. Phase 2: actual public/browser/mobile/security/persistence QA và app redeploy giữ container/process/URL trong cùng cloudflared lifetime.
+1. Hoàn tất Named Tunnel correction static regression và audit `5c8132f`; giữ cloudflared/Named Tunnel NOT_STARTED.
+2. Project Owner cung cấp ignored local Named Tunnel token, fixed hostname và demo/PostgreSQL configuration; rerun preflight, chờ runtime instruction.
+3. Actual authorized runtime: public/browser/mobile/security/persistence QA và app redeploy giữ cloudflared container/process cùng fixed PUBLIC_ORIGIN.
 4. Khi E01 DONE, chỉ chuyển RC01 QUEUED / READY và chờ Project Owner; tiếp tục backup/restore định kỳ và giữ asset/renderer/animation contracts đã duyệt.
 
 ## Cập nhật sau khi thực hiện guide PixiJS

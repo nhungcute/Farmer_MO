@@ -1,6 +1,8 @@
 # E01 - Cloudflare Named Tunnel preflight
 
-> **SUPERSEDED — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** Historical preflight findings/evidence remain unchanged below. Current runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Token/fixed-hostname blockers and Quick Tunnel rejection describe the earlier deployment model.
+> **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The supersession notice and findings below preserve the original timeline/evidence. Current token/fixed-hostname/exact-origin preflight and independent lifecycle: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Old token-expansion/public-profile blockers describe the earlier implementation, not the current restored contract.
+
+> **HISTORICAL INTERMEDIATE CHECKPOINT — SUPERSEDED / NON_CANONICAL.** The preflight findings below preserve the original timeline, including the temporary Quick Tunnel decision. The restored canonical preflight requires the Named Tunnel token, fixed hostname and exact HTTPS origin described in [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Do not use the historical Quick Tunnel workflow as an E01 release path.
 
 | Field | Value |
 |---|---|

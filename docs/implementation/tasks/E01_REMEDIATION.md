@@ -1,6 +1,8 @@
 # E01 repository remediation
 
-> **SUPERSEDED deployment model — PROJECT_OWNER_SELECTED_PERSISTENT_QUICK_TUNNEL_FOR_DEMO (2026-10-01).** Historical remediation evidence remains unchanged below. Static-root/rate-limit/proxy/PWA hardening remains required; Named Tunnel token/hostname/Quick Tunnel rejection is historical. Current runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+> **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** Keep the chronological supersession notice and original remediation results below. The security hardening remains required; current native token/fixed origin and separate lifecycle workflow: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md).
+
+> **HISTORICAL INTERMEDIATE CHECKPOINT — SUPERSEDED / NON_CANONICAL.** The remediation evidence below preserves the temporary Quick Tunnel checkpoint. Static-root/rate-limit/proxy/PWA hardening and Named Tunnel token/hostname/Quick Tunnel rejection remain current requirements. The active runbook is [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md).
 
 Date: 2026-10-01
 Status: `BLOCKED_CONFIG` (repository hardening complete; owner-only runtime configuration is still absent)
