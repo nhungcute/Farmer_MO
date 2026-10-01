@@ -287,6 +287,8 @@ Phạm vi ổn định URL là **SAME CLOUDFLARED LIFETIME**: URL dự kiến kh
 
 Phase 1 không start runtime: E01 `BLOCKED_CONFIG` nếu thiếu ignored local configuration, hoặc `READY_FOR_QUICK_TUNNEL_START` khi đủ. Phase 2 đang chạy nhưng QA chưa hoàn tất là `RUNNING`; chỉ `DONE — PERSISTENT_QUICK_TUNNEL` khi public QA, persistence và thực tế app-update URL preservation PASS. RC01 chờ E01 và lệnh riêng từ Project Owner.
 
+Trạng thái hiện hành ngày 2026-10-01: **E01 DONE — PERSISTENT_QUICK_TUNNEL** sau Phase 1 và actual Phase 2 acceptance; actual preflight PASS, runtime vẫn RUNNING, cloudflared CONNECTED, PostgreSQL/API/web/Nginx healthy và exact PUBLIC_ORIGIN MATCH. Public URL: https://francisco-ohio-camcorder-industrial.trycloudflare.com. Start lặp lại và actual API/web/Nginx redeploy giữ nguyên tunnel ID, StartedAt, RestartCount và URL. Public/API/mobile/security/persistence QA và actual app-redeploy preservation đều PASS; RC01 **QUEUED / READY, NOT_STARTED**, chờ lệnh riêng của Project Owner. Nginx local dùng `127.0.0.1:8081` vì cổng `8080` thuộc service khác; PostgreSQL volume hiện có được giữ nguyên. Evidence chi tiết nằm trong [biên bản nghiệm thu runtime](../docs/implementation/tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) và runbook hiện hành.
+
 ## 11. Acceptance hạ tầng
 
 - Local stack chạy không cần Cloudflare token.

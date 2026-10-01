@@ -2,6 +2,8 @@
 
 Date: 2026-10-01 (Asia/Bangkok)
 
+Historical Phase-1 repository-correction report. The statuses and next-step boundary below describe that completed checkpoint. Current E01 is DONE — PERSISTENT_QUICK_TUNNEL with runtime RUNNING / CONNECTED; see [Phase-2 runtime acceptance](E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) and the [canonical runbook](E01_PERSISTENT_QUICK_TUNNEL.md). RC01 is QUEUED / READY, NOT_STARTED and awaits a separate Project Owner command.
+
 Previous HEAD: `0b12ec44a31a33afeaf237b75b5c74b95e61ec8a`
 
 Scope: repository and planning correction under the final Project Owner decision. Existing work was reviewed and completed without blindly reverting commits. No application or tunnel container was started, restarted, recreated or stopped. No public URL was created, public QA performed or RC01 started.

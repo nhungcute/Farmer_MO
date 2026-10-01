@@ -1,0 +1,1201 @@
+{
+  "startedAt": "2026-10-01T04:59:27.762Z",
+  "status": "PASS",
+  "stages": {
+    "idempotentStart": "PASS",
+    "publicQa": "PASS",
+    "mobileQa": "PASS",
+    "appRedeploy": "PASS",
+    "persistence": "PASS",
+    "rateLimit": "PASS"
+  },
+  "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+  "tunnelBefore": {
+    "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+    "containerId": "09bdb7c21343bc44085f16bdb35531c8cddf92e81996f6ab8091fca08bd3ca09",
+    "startedAt": "2026-10-01T04:52:44.115964882Z",
+    "restartCount": 0
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "deviceScaleFactor": 2,
+      "status": "PASS",
+      "stage": "complete",
+      "screenshots": [
+        "mobile-932x430.png"
+      ],
+      "entryApiStatuses": [
+        200,
+        200
+      ],
+      "layout": {
+        "width": 932,
+        "height": 430,
+        "dpr": 2,
+        "documentWidth": 932,
+        "documentHeight": 430,
+        "bodyWidth": 932,
+        "bodyHeight": 430,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 932,
+          "height": 300,
+          "right": 932,
+          "bottom": 365
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 932,
+              "height": 300,
+              "right": 932,
+              "bottom": 365
+            },
+            "backingWidth": 1864,
+            "backingHeight": 600,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "touchTools": "PASS",
+      "reloadApiStatuses": [
+        200
+      ],
+      "reloadLayout": {
+        "width": 932,
+        "height": 430,
+        "dpr": 2,
+        "documentWidth": 932,
+        "documentHeight": 430,
+        "bodyWidth": 932,
+        "bodyHeight": 430,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 932,
+          "height": 300,
+          "right": 932,
+          "bottom": 365
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 932,
+              "height": 300,
+              "right": 932,
+              "bottom": 365
+            },
+            "backingWidth": 1864,
+            "backingHeight": 600,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "sessionReload": "PASS",
+      "reentryApiStatuses": [
+        200,
+        200
+      ],
+      "screenOpenClose": {
+        "status": "PASS",
+        "surface": "name-entry-screen",
+        "contentPanel": "NOT_PRESENT_IN_CURRENT_UI"
+      },
+      "serviceWorker": {
+        "status": "PASS",
+        "secureContext": true,
+        "serviceWorker": true,
+        "cacheStorage": true,
+        "cacheCount": 1,
+        "entryCount": 41,
+        "apiEntryCount": 0,
+        "controlled": true
+      },
+      "browserErrors": [],
+      "failedAssets": [],
+      "assets": {
+        "manifestLoaded": true,
+        "manifestInvalid": false,
+        "expectedAtlasFiles": 12,
+        "loadedAtlasFiles": 12
+      }
+    },
+    {
+      "viewport": {
+        "width": 915,
+        "height": 412
+      },
+      "deviceScaleFactor": 2,
+      "status": "PASS",
+      "stage": "complete",
+      "screenshots": [
+        "mobile-915x412.png"
+      ],
+      "entryApiStatuses": [
+        200,
+        200
+      ],
+      "layout": {
+        "width": 915,
+        "height": 412,
+        "dpr": 2,
+        "documentWidth": 915,
+        "documentHeight": 412,
+        "bodyWidth": 915,
+        "bodyHeight": 412,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 915,
+          "height": 282,
+          "right": 915,
+          "bottom": 347
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 915,
+              "height": 282,
+              "right": 915,
+              "bottom": 347
+            },
+            "backingWidth": 1830,
+            "backingHeight": 564,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "touchTools": "PASS",
+      "reloadApiStatuses": [
+        200
+      ],
+      "reloadLayout": {
+        "width": 915,
+        "height": 412,
+        "dpr": 2,
+        "documentWidth": 915,
+        "documentHeight": 412,
+        "bodyWidth": 915,
+        "bodyHeight": 412,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 915,
+          "height": 282,
+          "right": 915,
+          "bottom": 347
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 915,
+              "height": 282,
+              "right": 915,
+              "bottom": 347
+            },
+            "backingWidth": 1830,
+            "backingHeight": 564,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "sessionReload": "PASS",
+      "reentryApiStatuses": [
+        200,
+        200
+      ],
+      "screenOpenClose": {
+        "status": "PASS",
+        "surface": "name-entry-screen",
+        "contentPanel": "NOT_PRESENT_IN_CURRENT_UI"
+      },
+      "serviceWorker": {
+        "status": "PASS",
+        "secureContext": true,
+        "serviceWorker": true,
+        "cacheStorage": true,
+        "cacheCount": 1,
+        "entryCount": 41,
+        "apiEntryCount": 0,
+        "controlled": true
+      },
+      "browserErrors": [],
+      "failedAssets": [],
+      "assets": {
+        "manifestLoaded": true,
+        "manifestInvalid": false,
+        "expectedAtlasFiles": 12,
+        "loadedAtlasFiles": 12
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "deviceScaleFactor": 2,
+      "status": "PASS",
+      "stage": "complete",
+      "screenshots": [
+        "mobile-844x390.png"
+      ],
+      "entryApiStatuses": [
+        200,
+        200
+      ],
+      "layout": {
+        "width": 844,
+        "height": 390,
+        "dpr": 2,
+        "documentWidth": 844,
+        "documentHeight": 390,
+        "bodyWidth": 844,
+        "bodyHeight": 390,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 844,
+          "height": 260,
+          "right": 844,
+          "bottom": 325
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 844,
+              "height": 260,
+              "right": 844,
+              "bottom": 325
+            },
+            "backingWidth": 1688,
+            "backingHeight": 520,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "touchTools": "PASS",
+      "reloadApiStatuses": [
+        200
+      ],
+      "reloadLayout": {
+        "width": 844,
+        "height": 390,
+        "dpr": 2,
+        "documentWidth": 844,
+        "documentHeight": 390,
+        "bodyWidth": 844,
+        "bodyHeight": 390,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 844,
+          "height": 260,
+          "right": 844,
+          "bottom": 325
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 844,
+              "height": 260,
+              "right": 844,
+              "bottom": 325
+            },
+            "backingWidth": 1688,
+            "backingHeight": 520,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "sessionReload": "PASS",
+      "reentryApiStatuses": [
+        200,
+        200
+      ],
+      "screenOpenClose": {
+        "status": "PASS",
+        "surface": "name-entry-screen",
+        "contentPanel": "NOT_PRESENT_IN_CURRENT_UI"
+      },
+      "serviceWorker": {
+        "status": "PASS",
+        "secureContext": true,
+        "serviceWorker": true,
+        "cacheStorage": true,
+        "cacheCount": 1,
+        "entryCount": 41,
+        "apiEntryCount": 0,
+        "controlled": true
+      },
+      "browserErrors": [],
+      "failedAssets": [],
+      "assets": {
+        "manifestLoaded": true,
+        "manifestInvalid": false,
+        "expectedAtlasFiles": 12,
+        "loadedAtlasFiles": 12
+      }
+    },
+    {
+      "viewport": {
+        "width": 740,
+        "height": 360
+      },
+      "deviceScaleFactor": 2,
+      "status": "PASS",
+      "stage": "complete",
+      "screenshots": [
+        "mobile-740x360.png"
+      ],
+      "entryApiStatuses": [
+        200,
+        200
+      ],
+      "layout": {
+        "width": 740,
+        "height": 360,
+        "dpr": 2,
+        "documentWidth": 740,
+        "documentHeight": 360,
+        "bodyWidth": 740,
+        "bodyHeight": 360,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 740,
+          "height": 230,
+          "right": 740,
+          "bottom": 295
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 740,
+              "height": 230,
+              "right": 740,
+              "bottom": 295
+            },
+            "backingWidth": 1480,
+            "backingHeight": 460,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "touchTools": "PASS",
+      "reloadApiStatuses": [
+        200
+      ],
+      "reloadLayout": {
+        "width": 740,
+        "height": 360,
+        "dpr": 2,
+        "documentWidth": 740,
+        "documentHeight": 360,
+        "bodyWidth": 740,
+        "bodyHeight": 360,
+        "scrollX": 0,
+        "scrollY": 0,
+        "coarsePointer": true,
+        "maxTouchPoints": 1,
+        "world": {
+          "x": 0,
+          "y": 65,
+          "width": 740,
+          "height": 230,
+          "right": 740,
+          "bottom": 295
+        },
+        "canvases": [
+          {
+            "renderer": "canvas",
+            "rect": {
+              "x": 0,
+              "y": 65,
+              "width": 740,
+              "height": 230,
+              "right": 740,
+              "bottom": 295
+            },
+            "backingWidth": 1480,
+            "backingHeight": 460,
+            "touchAction": "none"
+          }
+        ],
+        "buttons": [
+          {
+            "index": 0,
+            "width": 63.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 1,
+            "width": 81.703125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 2,
+            "width": 116.109375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 3,
+            "width": 124.234375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 4,
+            "width": 132.375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 5,
+            "width": 120.921875,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 6,
+            "width": 120.84375,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": true
+          },
+          {
+            "index": 7,
+            "width": 138.5,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 8,
+            "width": 116.890625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 9,
+            "width": 145.8125,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          },
+          {
+            "index": 10,
+            "width": 142.265625,
+            "height": 44,
+            "named": true,
+            "intersectsViewport": false
+          }
+        ],
+        "orientationOverlayVisible": false
+      },
+      "sessionReload": "PASS",
+      "reentryApiStatuses": [
+        200,
+        200
+      ],
+      "screenOpenClose": {
+        "status": "PASS",
+        "surface": "name-entry-screen",
+        "contentPanel": "NOT_PRESENT_IN_CURRENT_UI"
+      },
+      "serviceWorker": {
+        "status": "PASS",
+        "secureContext": true,
+        "serviceWorker": true,
+        "cacheStorage": true,
+        "cacheCount": 1,
+        "entryCount": 41,
+        "apiEntryCount": 0,
+        "controlled": true
+      },
+      "browserErrors": [],
+      "failedAssets": [],
+      "assets": {
+        "manifestLoaded": true,
+        "manifestInvalid": false,
+        "expectedAtlasFiles": 12,
+        "loadedAtlasFiles": 12
+      }
+    }
+  ],
+  "tunnelAfter": {
+    "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+    "containerId": "09bdb7c21343bc44085f16bdb35531c8cddf92e81996f6ab8091fca08bd3ca09",
+    "startedAt": "2026-10-01T04:52:44.115964882Z",
+    "restartCount": 0
+  },
+  "applicationContainers": {
+    "before": {
+      "api": "7857f763948bb805e075c8be2c62d1e13b71ccaf8d14258b39a23d9c17fc3d7c",
+      "web": "7023b577613964ec237c009fe7fb4700fb8b7e687e06c9caff1a19f39e9fb7f3",
+      "nginx": "ac19d38a11474a501c8f7407cef3c4e7b0d4e6fd40cc6c8228255c7040c5e143",
+      "db": "2ba8639c0172148c40beb2d8f555f2e1b56547daae542b5a21420c71b9bce209"
+    },
+    "after": {
+      "api": "924ec0e1d0de87e65944f7ccb3224af94b9467bc5a3c041d09f87a34de9d7f30",
+      "web": "447b2816ccfda8a4dedbf7355562f3079140286219f3d1b24d45585e49d59abc",
+      "nginx": "8ee5c4432c706affecc86d590ac6d6a4e0d9ff5d5b54a96adc8480b2cc921a78",
+      "db": "2ba8639c0172148c40beb2d8f555f2e1b56547daae542b5a21420c71b9bce209"
+    }
+  },
+  "persistence": {
+    "status": "PASS",
+    "checkedAt": "2026-10-01T05:01:44.727Z",
+    "sameSession": true,
+    "sameCharacter": true,
+    "sameFarm": true,
+    "inventoryPersisted": true,
+    "harvestPersisted": true,
+    "idempotencyPersisted": true,
+    "browserResumed": true
+  },
+  "rateLimit": {
+    "status": "PASS",
+    "requests": 120,
+    "maximumRequests": 125,
+    "concurrency": 4,
+    "retryAfterSeconds": 37,
+    "recoveredStatus": 401
+  },
+  "finalStatus": {
+    "cloudflared": "RUNNING",
+    "quickTunnel": "CONNECTED",
+    "container": "09bdb7c21343",
+    "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+    "publicUrlStatus": "CURRENT",
+    "nginx": "healthy",
+    "api": "healthy",
+    "postgres": "healthy",
+    "publicOrigin": "MATCH",
+    "publicOriginMatch": "MATCH"
+  },
+  "completedAt": "2026-10-01T05:02:48.767Z"
+}

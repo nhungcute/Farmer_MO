@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-01T06:20:54.232Z",
+  "timezone": "Asia/Bangkok",
+  "status": "PASS",
+  "scope": "Read-only resumption verification; original runtime QA and redeploy were not repeated.",
+  "preflight": "PASS",
+  "securityRegression": {
+    "command": "npm run test:e01:security",
+    "exitCode": 0,
+    "passed": 52,
+    "failed": 0
+  },
+  "nginxConfiguration": {
+    "command": "docker exec mo-farm-nginx-1 nginx -t",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  "runtime": {
+    "cloudflared": "RUNNING",
+    "quickTunnel": "CONNECTED",
+    "container": "09bdb7c21343",
+    "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+    "publicUrlStatus": "CURRENT",
+    "nginx": "healthy",
+    "api": "healthy",
+    "postgres": "healthy",
+    "publicOrigin": "MATCH",
+    "publicOriginMatch": "MATCH"
+  },
+  "tunnel": {
+    "publicUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+    "containerId": "09bdb7c21343bc44085f16bdb35531c8cddf92e81996f6ab8091fca08bd3ca09",
+    "startedAt": "2026-10-01T04:52:44.115964882Z",
+    "restartCount": 0
+  },
+  "matchesAcceptedTunnelLifetime": true,
+  "applicationContainers": {
+    "api": {
+      "containerId": "924ec0e1d0de87e65944f7ccb3224af94b9467bc5a3c041d09f87a34de9d7f30",
+      "health": "healthy"
+    },
+    "web": {
+      "containerId": "447b2816ccfda8a4dedbf7355562f3079140286219f3d1b24d45585e49d59abc",
+      "health": "healthy"
+    },
+    "nginx": {
+      "containerId": "8ee5c4432c706affecc86d590ac6d6a4e0d9ff5d5b54a96adc8480b2cc921a78",
+      "health": "healthy"
+    },
+    "db": {
+      "containerId": "2ba8639c0172148c40beb2d8f555f2e1b56547daae542b5a21420c71b9bce209",
+      "health": "healthy"
+    }
+  },
+  "publicChecks": [
+    {
+      "path": "/",
+      "httpStatus": 200,
+      "contentTypeOptions": "nosniff"
+    },
+    {
+      "path": "/api/health/ready",
+      "httpStatus": 200,
+      "contentTypeOptions": "nosniff",
+      "persistenceDriver": "postgres",
+      "persistenceReady": true
+    },
+    {
+      "path": "/healthz",
+      "httpStatus": 200,
+      "contentTypeOptions": "nosniff"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ Các file `24` đến `29` là phần canonical được chốt sau cùng:
 
 Nếu tài liệu cũ có giá trị “gợi ý” hoặc mâu thuẫn với các file `24` đến `29`, dùng các file canonical này.
 
-E01 demo hiện chọn **PERSISTENT_QUICK_TUNNEL**; runbook cuối cùng là [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Named Tunnel task/preflight/remediation notes được giữ như lịch sử `SUPERSEDED` và không phải release path hiện hành. Phase 1 không start runtime; URL preservation có scope SAME CLOUDFLARED LIFETIME, không phải URL vĩnh viễn. Bất kỳ stable-hostname migration nào cũng cần quyết định mới của Project Owner.
+E01 demo hiện chọn **PERSISTENT_QUICK_TUNNEL**; runbook cuối cùng là [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Named Tunnel task/preflight/remediation notes được giữ như lịch sử `SUPERSEDED` và không phải release path hiện hành. **E01 DONE — PERSISTENT_QUICK_TUNNEL**: Phase 1 và actual Phase 2 acceptance hoàn tất, toàn bộ gates PASS; runtime RUNNING / CONNECTED. RC01 QUEUED / READY, NOT_STARTED và chờ lệnh riêng của Project Owner. [Biên bản nghiệm thu](../docs/implementation/tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md). URL preservation có scope SAME CLOUDFLARED LIFETIME, không phải URL vĩnh viễn. Bất kỳ stable-hostname migration nào cũng cần quyết định mới của Project Owner.
 
 Phần tạo animation nằm trong `16_ASSET_ANIMATION_PIPELINE.md`. File này mô tả source frame, style lock, canvas/pivot, frame count/FPS/direction, manifest, atlas, lệnh export, placeholder, runtime loader và QA. Không coi animation hoàn thành chỉ vì có một ảnh tĩnh hoặc một `AnimatedSprite` chạy được trên desktop.
 

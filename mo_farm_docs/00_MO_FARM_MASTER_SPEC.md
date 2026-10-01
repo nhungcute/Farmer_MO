@@ -375,7 +375,7 @@ nginx
 └── api
 ```
 
-App update phải giữ cloudflared container/process và URL trong cùng lifetime; kiểm tra ID, StartedAt, RestartCount và URL trước/sau thực tế. Không bảo đảm URL vĩnh viễn. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Phase 1 không start runtime; Phase 2 chờ lệnh riêng của Project Owner.
+App update phải giữ cloudflared container/process và URL trong cùng lifetime; kiểm tra ID, StartedAt, RestartCount và URL trước/sau thực tế. Không bảo đảm URL vĩnh viễn. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Phase 1 đã DONE mà không start runtime; Phase 2 đã nghiệm thu **E01 DONE — PERSISTENT_QUICK_TUNNEL** theo yêu cầu tiếp tục của Project Owner, toàn bộ actual acceptance gates PASS. Runtime vẫn RUNNING / CONNECTED. RC01 QUEUED / READY, NOT_STARTED và chờ lệnh riêng của Project Owner.
 
 ---
 

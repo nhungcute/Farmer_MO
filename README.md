@@ -23,9 +23,9 @@ docker compose up --build -d
 
 Mặc định gateway ở `http://127.0.0.1:8080`. Nếu cổng đã được dùng, đặt `NGINX_PORT` khác trong ignored local environment. API hỗ trợ file adapter cho local compatibility và PostgreSQL persistence; E01 public demo bắt buộc PostgreSQL, Secure cookies và session/database secrets không default.
 
-**OFFICIAL PUBLIC DEPLOYMENT: PERSISTENT_QUICK_TUNNEL** tại `https://<generated>.trycloudflare.com`, theo quyết định Project Owner ngày 2026-10-01; đây là deployment chính thức, không phải debug tooling. Không cần token, custom domain hoặc fixed hostname. `compose.yaml` quản lý application; `compose.tunnel.yaml` quản lý cloudflared riêng, dùng network `mo-farm-frontend`. Phase 1 chỉ implementation/static regression: **không start container/tunnel hoặc tạo URL**. Runtime hiện `BLOCKED_CONFIG` vì ignored local configuration chưa có; cloudflared/Quick Tunnel `NOT_STARTED`, Public URL `NOT_CREATED`; RC01 `BLOCKED_BY_E01 / NOT_STARTED`.
+**OFFICIAL PUBLIC DEPLOYMENT: PERSISTENT_QUICK_TUNNEL** tại `https://<generated>.trycloudflare.com`, theo quyết định Project Owner ngày 2026-10-01; đây là deployment chính thức, không phải debug tooling. Không cần token, custom domain hoặc fixed hostname. `compose.yaml` quản lý application; `compose.tunnel.yaml` quản lý cloudflared riêng, dùng network `mo-farm-frontend`. **E01 DONE — PERSISTENT_QUICK_TUNNEL** sau đầy đủ Phase 1 và actual Phase 2 acceptance. Runtime tiếp tục RUNNING tại [public demo](https://francisco-ohio-camcorder-industrial.trycloudflare.com): preflight PASS, cloudflared RUNNING/CONNECTED, application healthy, exact `PUBLIC_ORIGIN` MATCH. Public/API/mobile/security/persistence và actual app-redeploy preservation đều PASS. RC01 `QUEUED / READY, NOT_STARTED`, chờ lệnh riêng của Project Owner. [Biên bản nghiệm thu và evidence](docs/implementation/tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md).
 
-Sau lệnh riêng của Project Owner để bắt đầu Phase 2:
+Các lệnh vận hành Phase 2 đã được mở theo yêu cầu tiếp tục của Project Owner:
 
 ```powershell
 npm run e01:quick:start

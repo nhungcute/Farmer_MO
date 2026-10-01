@@ -32,8 +32,8 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | C03 | Mobile/PWA/accessibility QA | DONE |
 | D01 | Observability/performance instrumentation | DONE |
 | D02 | Load test và backup/restore drill | DONE |
-| E01 | Persistent Cloudflare Quick Tunnel | **Repository implementation DONE; lifecycle isolation DONE; runtime BLOCKED_CONFIG / NOT_STARTED** |
-| RC01 | Release Candidate checklist | **BLOCKED_BY_E01; NOT_STARTED** |
+| E01 | Persistent Cloudflare Quick Tunnel | **DONE — PERSISTENT_QUICK_TUNNEL; runtime RUNNING / CONNECTED; all acceptance gates PASS** |
+| RC01 | Release Candidate checklist | **QUEUED / READY; NOT_STARTED — await Project Owner** |
 
 ## B02 production artwork - 2026-10-01
 
@@ -76,9 +76,9 @@ Các kết quả dưới đây là evidence của checkpoint đã có. Kết qu�
 
 ## Giới hạn và bước kế tiếp
 
-B02 is DONE: 188/188 production_ready, 188/188 approved, 0 placeholders. Project Owner selected **PERSISTENT_QUICK_TUNNEL** as the canonical E01 release path on 2026-10-01 (`PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`). The application and cloudflared use separate Compose lifecycles. Existing security hardening remains required. The current remaining runtime blocker is absent ignored local configuration, not a Cloudflare token/domain requirement. RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**.
+B02 is DONE: 188/188 production_ready, 188/188 approved, 0 placeholders. Project Owner selected **PERSISTENT_QUICK_TUNNEL** as the canonical E01 release path on 2026-10-01 (`PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`). The application and cloudflared use separate Compose lifecycles. Existing security hardening remains required. Ignored local configuration is supplied and actual preflight passes. **E01 DONE — PERSISTENT_QUICK_TUNNEL**: all actual public/API/mobile/security/persistence and real app-redeploy preservation gates PASS; runtime remains **RUNNING / CONNECTED**. RC01 is **QUEUED / READY, NOT_STARTED**, awaiting a separate Project Owner command. [Actual runtime acceptance](tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md).
 
-Phase 1 is repository-only: no application container or tunnel is started and no trycloudflare URL is created. After static gates pass, repository migration can be recorded DONE while runtime stays `BLOCKED_CONFIG` (or `READY_FOR_QUICK_TUNNEL_START` when valid local configuration exists). Wait for the explicit Project Owner command before Phase 2 public runtime QA and URL-preservation test. Current runbook and integration evidence: [`E01_PERSISTENT_QUICK_TUNNEL.md`](tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
+Phase 1 repository correction and static gates completed without starting runtime. Phase 2 subsequently started under the Project Owner continuation request; current URL is [the public demo](https://francisco-ohio-camcorder-industrial.trycloudflare.com), cloudflared is RUNNING/CONNECTED, application services are healthy and exact PUBLIC_ORIGIN is MATCH. Repeated start and actual API/web/Nginx redeploy preserved tunnel identity and URL; PostgreSQL container and farm/session/idempotency state were retained. Current runbook and separate Phase-1/Phase-2 evidence: [`E01_PERSISTENT_QUICK_TUNNEL.md`](tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## E01 initial preflight checkpoint - 2026-10-01
 
@@ -97,6 +97,8 @@ The six repository-side remediation tasks are complete: web static-root hardenin
 The current local environment still has no owner-supplied production values, so `npm run e01:preflight` correctly returns `BLOCKED_CONFIG` (exit code 2). No public profile, tunnel, Quick Tunnel, public hostname, or RC01 was started.
 
 ## E01 persistent Quick Tunnel migration - 2026-10-01
+
+Historical Phase-1 completion checkpoint. The runtime/configuration status below was recorded before Phase-2 startup; current E01 status is DONE with runtime RUNNING / CONNECTED as described above.
 
 - Deployment model: **PERSISTENT_QUICK_TUNNEL**; origin service `http://nginx:80`.
 - App stack: `compose.yaml` (`db`, `api`, `web`, `nginx`); tunnel stack: `compose.tunnel.yaml` (`cloudflared` only).

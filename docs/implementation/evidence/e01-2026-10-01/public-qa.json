@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-01T04:59:32.778Z",
+  "baseUrl": "https://francisco-ohio-camcorder-industrial.trycloudflare.com",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "public_https_root_and_security_headers",
+      "status": "PASS",
+      "durationMs": 5651,
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "security": {
+        "cspSelf": true,
+        "hsts": true,
+        "nosniff": true,
+        "referrerPolicy": true,
+        "frameProtection": true,
+        "permissionsPolicy": true
+      }
+    },
+    {
+      "name": "postgres_readiness_and_api_headers",
+      "status": "PASS",
+      "durationMs": 208,
+      "httpStatus": 200,
+      "persistenceDriver": "postgres",
+      "persistenceReady": true,
+      "security": {
+        "cspSelf": true,
+        "hsts": true,
+        "nosniff": true,
+        "referrerPolicy": true,
+        "frameProtection": true,
+        "permissionsPolicy": true
+      }
+    },
+    {
+      "name": "unauthenticated_bootstrap_rejected",
+      "status": "PASS",
+      "durationMs": 768,
+      "httpStatus": 401
+    },
+    {
+      "name": "display_name_browser_entry_and_session",
+      "status": "PASS",
+      "durationMs": 2034,
+      "created": true,
+      "displayNameBound": true,
+      "displayNameLabelVisible": false,
+      "canvasVisible": true,
+      "sessionFlags": {
+        "present": true,
+        "secure": true,
+        "httpOnly": true,
+        "sameSite": true,
+        "pathRoot": true
+      },
+      "sessionTokenInResponse": false
+    },
+    {
+      "name": "bootstrap_with_private_session",
+      "status": "PASS",
+      "durationMs": 340,
+      "plots": 6,
+      "crops": 3,
+      "contentVersion": "mvp-1"
+    },
+    {
+      "name": "safe_harvest_and_idempotent_retry",
+      "status": "PASS",
+      "durationMs": 667,
+      "operation": "starter_rice_harvest",
+      "retryResponseMatches": true,
+      "riceDelta": 3,
+      "remainingCrops": 2
+    },
+    {
+      "name": "exact_origin_validation",
+      "status": "PASS",
+      "durationMs": 2403,
+      "exactOriginAllowed": true,
+      "rejected": [
+        {
+          "origin": "https://other-session.trycloudflare.com",
+          "httpStatus": 403
+        },
+        {
+          "origin": "https://*.trycloudflare.com",
+          "httpStatus": 403
+        },
+        {
+          "origin": "null",
+          "httpStatus": 403
+        },
+        {
+          "origin": "https://francisco-ohio-camcorder-industrial.trycloudflare.com.example.com",
+          "httpStatus": 403
+        }
+      ]
+    },
+    {
+      "name": "static_boundary:/server.mjs",
+      "status": "PASS",
+      "durationMs": 361,
+      "path": "/server.mjs",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/Dockerfile",
+      "status": "PASS",
+      "durationMs": 452,
+      "path": "/Dockerfile",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/README.md",
+      "status": "PASS",
+      "durationMs": 360,
+      "path": "/README.md",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/package.json",
+      "status": "PASS",
+      "durationMs": 1089,
+      "path": "/package.json",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/src/main.js",
+      "status": "PASS",
+      "durationMs": 376,
+      "path": "/src/main.js",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/.env",
+      "status": "PASS",
+      "durationMs": 429,
+      "path": "/.env",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/.git/config",
+      "status": "PASS",
+      "durationMs": 367,
+      "path": "/.git/config",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/node_modules/",
+      "status": "PASS",
+      "durationMs": 367,
+      "path": "/node_modules/",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/tools/",
+      "status": "PASS",
+      "durationMs": 420,
+      "path": "/tools/",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/docs/",
+      "status": "PASS",
+      "durationMs": 355,
+      "path": "/docs/",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/renderer-demo.html",
+      "status": "PASS",
+      "durationMs": 364,
+      "path": "/renderer-demo.html",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/src/",
+      "status": "PASS",
+      "durationMs": 404,
+      "path": "/src/",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/assets/%252e%252e/app/main.js",
+      "status": "PASS",
+      "durationMs": 554,
+      "path": "/assets/%252e%252e/app/main.js",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/assets/%2e%2e%2fserver.mjs",
+      "status": "PASS",
+      "durationMs": 397,
+      "path": "/assets/%2e%2e%2fserver.mjs",
+      "httpStatus": 404
+    },
+    {
+      "name": "static_boundary:/assets/..%5cserver.mjs",
+      "status": "PASS",
+      "durationMs": 485,
+      "path": "/assets/..%5cserver.mjs",
+      "httpStatus": 404
+    },
+    {
+      "name": "runtime_approved_assets_and_atlas_bytes",
+      "status": "PASS",
+      "durationMs": 21254,
+      "approved": 188,
+      "productionReady": 188,
+      "placeholders": 0,
+      "framesCovered": 188,
+      "atlasPages": 6,
+      "uniqueUrls": 12,
+      "atlases": [
+        {
+          "path": "/assets/atlases/farm_common-0.json",
+          "httpStatus": 200,
+          "bytes": 12540,
+          "sha256": "3de0bc1a83fe617ce05352317a397d1a6beef23c683703f43fe8737637abd501",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/farm_common-0.png",
+          "httpStatus": 200,
+          "bytes": 1742429,
+          "sha256": "a5b8f0d6b1da38acd12e4adcebc005ecfae62fb2f76311fca4044503deabc836",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/farm_common-1.json",
+          "httpStatus": 200,
+          "bytes": 5253,
+          "sha256": "09d090c013e8e4d7649f8a98ce6e11d9a77c81f82e52ba816c37dbae70ace131",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/farm_common-1.png",
+          "httpStatus": 200,
+          "bytes": 63505,
+          "sha256": "b92227ea5ae06f127da723c52e1de992c961687040ef8d8930e424e41a349865",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/crops.json",
+          "httpStatus": 200,
+          "bytes": 8419,
+          "sha256": "c949d517e00d79294a9becff5fec0a200df231e6711ed8c6191a18d70aeb769c",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/crops.png",
+          "httpStatus": 200,
+          "bytes": 681632,
+          "sha256": "bff4184a9d12fbf79a64fcca1160bfb627f0e2a5772f0c8088163fea8a20b31e",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/chicken-0.json",
+          "httpStatus": 200,
+          "bytes": 20699,
+          "sha256": "d9e6acf659261e722a6214ab0f0cd110692fe5884d7d0633583a1283811e881c",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/chicken-0.png",
+          "httpStatus": 200,
+          "bytes": 2233784,
+          "sha256": "6a4d5849e7f57a0c2ef12124c64e74df933fc9de7594b519b1d3c985a913e745",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/chicken-1.json",
+          "httpStatus": 200,
+          "bytes": 18272,
+          "sha256": "de65d9a382a04d1223efbdc15d770590182d807429a32415552577e61b8a1b92",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/chicken-1.png",
+          "httpStatus": 200,
+          "bytes": 2000356,
+          "sha256": "c10ea9e2a2626e6deb7c848b7cdc47aeefe68704e33173d79eb1a406e2cafdff",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/effects.json",
+          "httpStatus": 200,
+          "bytes": 14108,
+          "sha256": "5ca9a73b5b7809c0ac4a3b524c0d2d7e4ce0e53fd9c4af6a75fb1c2c48f808e5",
+          "repositoryMatches": true
+        },
+        {
+          "path": "/assets/atlases/effects.png",
+          "httpStatus": 200,
+          "bytes": 1381276,
+          "sha256": "a46f0c3a0a00b8dc8feead14810b84535250e311dcdfe4ab86de81b1c7e67102",
+          "repositoryMatches": true
+        }
+      ]
+    },
+    {
+      "name": "browser_errors_and_service_worker_api_exclusion",
+      "status": "PASS",
+      "durationMs": 7,
+      "pageErrors": 0,
+      "consoleErrors": 0,
+      "cachedApiEntries": 0
+    }
+  ],
+  "persistence": {
+    "status": "PASS",
+    "checkedAt": "2026-10-01T05:01:44.727Z",
+    "sameSession": true,
+    "sameCharacter": true,
+    "sameFarm": true,
+    "inventoryPersisted": true,
+    "harvestPersisted": true,
+    "idempotencyPersisted": true,
+    "browserResumed": true
+  },
+  "rateLimit": {
+    "status": "NOT_RUN",
+    "limit": 120,
+    "windowMs": 60000,
+    "maxClients": 4096,
+    "proposal": "After all functional QA, send sequential unauthenticated GET /api/game/bootstrap requests at 10 per second, stop at first 429 or 125 requests, verify RATE_LIMITED and positive Retry-After, then wait Retry-After and check recovery. The nginx socket identity can share one bucket across tunnel users; run only when QA traffic is exclusive."
+  },
+  "completedAt": "2026-10-01T05:00:12.894Z"
+}

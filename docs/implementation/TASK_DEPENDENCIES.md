@@ -28,7 +28,7 @@ A03 + B02 + C03 + D02 + E01 → RC01 Release Candidate.
 - B02: DONE ? Wave 2 release approval recorded for all 76 assets; canonical inventory is 188/188 production_ready, 188/188 approved, 0 placeholders.
 - Inventory: 188 total; metadata flags production_ready=188, approved=188, placeholder=0. Wave 1=112 approved; Wave 2=76 approved.
 - Evidence: Wave 1 review/approval records plus docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md and npm run assets:validate:wave2-release.
-- RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. E01 repository model is **PERSISTENT_QUICK_TUNNEL**; runtime remains **BLOCKED_CONFIG** because ignored local demo/PostgreSQL secrets are absent. Cloudflared **NOT_STARTED**, URL **NOT_CREATED**. RC01 is **BLOCKED_BY_E01 / NOT_STARTED**.
+- RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. **E01 DONE — PERSISTENT_QUICK_TUNNEL**: all actual public/API/mobile/security/persistence and app-redeploy preservation gates PASS. Runtime remains **RUNNING**, preflight PASS, cloudflared RUNNING/CONNECTED and exact PUBLIC_ORIGIN MATCH. Public URL is in the [current runbook](tasks/E01_PERSISTENT_QUICK_TUNNEL.md); [acceptance evidence](tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) records actual gates. RC01 is **QUEUED / READY, NOT_STARTED**, awaiting a separate Project Owner command.
 
 ## E01 initial preflight checkpoint - 2026-10-01
 
@@ -52,11 +52,11 @@ Historical pre-migration verification, **SUPERSEDED / NON_CANONICAL / NOT_CURREN
 ## E01 persistent Quick Tunnel migration - 2026-10-01
 
 - E01-QT-01..06 cover Compose separation, Quick Tunnel contract, exact runtime URL/PUBLIC_ORIGIN, isolated application update, start/status/stop tooling and static regression.
-- Repository implementation **DONE**; lifecycle isolation **DONE** after final Phase-1 gates PASS (security 52/52, focused lifecycle 28/28 and the complete required regression). Actual runtime/public URL preservation remains untested; current runtime is **BLOCKED_CONFIG**.
-- Phase 1 must finish repository/static gates without starting any application or tunnel container. Missing local configuration means **BLOCKED_CONFIG**, otherwise **READY_FOR_QUICK_TUNNEL_START**; no token/domain requirement remains.
-- Phase 2 starts only on an explicit Project Owner command. Capture current URL, complete public/mobile/security/persistence QA and perform a real application redeploy proving identical cloudflared ID, StartedAt, RestartCount and URL.
+- Repository implementation **DONE**; lifecycle isolation **DONE** after final Phase-1 gates PASS (security 52/52, focused lifecycle 28/28 and the complete required regression). **E01 DONE — PERSISTENT_QUICK_TUNNEL** after actual public QA and app-redeploy URL preservation PASS; runtime remains **RUNNING / CONNECTED**.
+- Phase 1 completed repository/static gates without starting application or tunnel containers. Its missing-configuration blocker was resolved during Phase 2 using ignored local configuration; actual preflight now PASS. No token/domain requirement exists.
+- Phase 2 started under the Project Owner continuation request. URL capture, exact Origin binding, healthy services, idempotent repeat-start, actual public/API/mobile/security/persistence QA and real API/web/Nginx redeploy all PASS. Cloudflared ID, StartedAt, RestartCount and URL remained identical; PostgreSQL container and data were retained.
 - Preservation scope is **SAME CLOUDFLARED LIFETIME**. URL is ephemeral and may rotate on process/session restart. Runtime QA pending means **RUNNING**; all required runtime gates PASS means **DONE — PERSISTENT_QUICK_TUNNEL**.
-- RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**. After E01 DONE, transition only to **QUEUED / READY** and await Project Owner; do not start RC01 automatically.
+- RC01 is **QUEUED / READY, NOT_STARTED** after E01 DONE. Await a separate Project Owner command; do not start RC01 automatically.
 
 ## Gate rules
 

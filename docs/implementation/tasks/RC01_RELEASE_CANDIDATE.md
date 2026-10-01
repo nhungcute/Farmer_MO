@@ -4,12 +4,12 @@
 |---|---|
 | Task ID | RC01 |
 | Name | Release Candidate evidence, sign-off and rollback gate |
-| Status | BLOCKED_BY_E01 / NOT_STARTED |
+| Status | QUEUED / READY, NOT_STARTED — await separate Project Owner command |
 | Owner | Root/release integration |
 | Dependencies | A03 DONE; B02 DONE; C03 DONE; D02 DONE; E01 DONE; A02/C02/Docker/CI gates PASS |
 | Owned paths | `docs/implementation/tasks/RC01_RELEASE_CANDIDATE.md`, release evidence index, release/rollback runbooks and generated release artifacts |
 | Forbidden paths | gameplay/economy/content definitions, Renderer, Animation, Asset pipeline contracts, Tutorial, PostgreSQL migrations `001/002`, API response contract, file/memory adapter removal, unapproved production artwork, tunnel secrets or credentials |
-| Start time | Chưa bắt đầu — chỉ mở sau khi toàn bộ dependency hoàn tất |
+| Start time | Chưa bắt đầu — E01 dependency DONE; chờ lệnh riêng của Project Owner |
 | End time | Chưa xác định |
 
 RC01 là gate phát hành cho prototype/demo MỠ FARM. Task này xác nhận bằng chứng đã tồn tại và có thể rollback; nó không mở thêm gameplay, không thay đổi economy/content numbers và không biến dữ liệu farm thành dữ liệu riêng tư. Người chơi vẫn vào thẳng farm, toàn bộ giao diện vẫn là tiếng Việt và Tutorial không được đưa trở lại.
@@ -45,7 +45,7 @@ Không được đánh dấu một mục là PASS chỉ vì command kết thúc 
 | D02 operations | docs/implementation/tasks/D02_LOAD_BACKUP_RESTORE.md; load JSON; backup/restore log; 15-table fingerprints; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
 | B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | DONE — Wave 1 + Wave 2, 188/188 approved and production_ready, 0 placeholders |
 | Docker/CI | .github/workflows/ci.yml; remote run 36660295559 PASS for all 5 jobs; Compose/build logs | PASS for integration commit 628f7cd; release-commit rerun remains required |
-| E01 tunnel | `E01_PERSISTENT_QUICK_TUNNEL.md`; exact runtime Origin/secret audit, actual public/mobile/security/persistence QA and app-redeploy URL preservation | BLOCKED_CONFIG — PERSISTENT_QUICK_TUNNEL repository correction; public runtime NOT_STARTED |
+| E01 tunnel | `E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md`; exact runtime Origin/secret audit, actual public/mobile/security/persistence QA and app-redeploy URL preservation | DONE — PERSISTENT_QUICK_TUNNEL; all actual acceptance gates PASS; runtime RUNNING / CONNECTED |
 | RC sign-off | commit SHA, artifact checksums, environment matrix, named reviewer approvals and rollback drill result | Chưa tạo |
 
 Các bằng chứng phải cùng trỏ về một release commit. Evidence từ commit khác chỉ được dùng làm lịch sử tham khảo và không đủ để ký RC.
@@ -79,19 +79,19 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, chưa start cloudflared hoặc tạo public URL/release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 demo hiện là PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG vì thiếu ignored local demo/PostgreSQL configuration. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Sau khi E01 actual runtime/public/preservation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
+RC01 đang **QUEUED / READY, NOT_STARTED**; chưa chạy release hoặc tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 và E01 đã DONE. E01 PERSISTENT_QUICK_TUNNEL có preflight và toàn bộ actual public/API/mobile/security/persistence/redeploy-preservation gates PASS; runtime vẫn RUNNING / CONNECTED, application healthy và exact PUBLIC_ORIGIN MATCH. [Biên bản nghiệm thu E01](E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) ghi URL cùng evidence thực tế. RC01 chờ lệnh riêng từ Project Owner; không tự chạy RC01.
 
 ## Next activity
 
-1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02/B02; giữ các evidence và chờ E01 runtime dependency.
+1. Giữ các evidence A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 và E01 đã DONE; E01 runtime dependency đã hoàn tất.
 2. Remote GitHub Actions run 36660295559 đã PASS 5/5 job; lưu artifact/log vào release evidence index và chờ parent review.
-3. Cấp cấu hình demo/PostgreSQL ngoài repository; không cần token, custom domain hoặc hostname cố định. Sau lệnh runtime riêng của Project Owner, chạy E01 actual public/mobile/security/persistence QA và app-update URL-preservation gate; không dừng tunnel để thử rotation.
-4. Chỉ sau khi E01 runtime DONE mới chuyển RC01 sang QUEUED / READY; chờ lệnh riêng của Project Owner trước khi tạo release artifact hoặc chạy checklist RC01.
+3. Giữ runtime E01 và tunnel session hiện hành; toàn bộ actual public/mobile/security/persistence và app-update URL-preservation gates PASS. Không dừng tunnel để thử rotation; cấu hình demo/PostgreSQL vẫn nằm ngoài repository.
+4. RC01 đã QUEUED / READY; chờ lệnh riêng của Project Owner trước khi tạo release artifact hoặc chạy checklist RC01.
 
 ## Blocker
 
 - B02 đã hoàn tất Wave 1 và Wave 2 với 188/188 asset đã được duyệt; không còn placeholder trong inventory production.
-- E01 repository remediation đã PASS, nhưng E01 runtime vẫn BLOCKED_CONFIG cho tới khi cấu hình owner-only và external runtime evidence hoàn tất.
+- E01 đã DONE; actual preflight, public QA và app-redeploy preservation evidence hoàn tất. RC01 còn chờ lệnh riêng của Project Owner và các gate release/sign-off riêng.
 - Không có cơ sở để tuyên bố production SLO/RPO/RTO từ các prototype load/backup numbers hiện tại.
 
 Không được bắt đầu RC01 bằng cách tự tạo artwork, tự phê duyệt license, bỏ qua skip, mở tunnel sớm, dùng database dùng chung hoặc thay đổi gameplay/API contract để làm checklist đạt.

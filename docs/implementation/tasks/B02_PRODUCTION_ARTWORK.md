@@ -64,4 +64,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 demo now selects persistent Quick Tunnel; runtime BLOCKED_CONFIG, cloudflared NOT_STARTED, URL NOT_CREATED. RC01 remains BLOCKED_BY_E01 / NOT_STARTED; do not start either runtime or RC01 from this artwork checkpoint. Current deployment runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 is DONE — PERSISTENT_QUICK_TUNNEL after all actual Phase-2 acceptance gates PASS; runtime remains RUNNING / CONNECTED. RC01 is QUEUED / READY, NOT_STARTED and awaits a separate Project Owner command; this artwork checkpoint does not authorize RC01. Current deployment status, public URL and evidence: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

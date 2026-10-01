@@ -15,11 +15,11 @@ Internet → https://<generated>.trycloudflare.com
          → cloudflared → http://nginx:80 → web / api → PostgreSQL
 ```
 
-Application Compose quản lý network tên cố định `mo-farm-frontend`; tunnel Compose dùng network đó với `external: true`. Tunnel không có `build`, token hoặc dependency Compose vào application services. Chỉ Nginx bind loopback `127.0.0.1:8080:80`; API, web và PostgreSQL không publish host port.
+Application Compose quản lý network tên cố định `mo-farm-frontend`; tunnel Compose dùng network đó với `external: true`. Tunnel không có `build`, token hoặc dependency Compose vào application services. Chỉ Nginx bind loopback (mặc định `127.0.0.1:8080:80`, runtime hiện dùng `8081` vì `8080` thuộc service khác); API, web và PostgreSQL không publish host port.
 
 ## 2. Phase 1 — repository only
 
-Phase 1 chỉ triển khai và kiểm tra repository, Compose config và Docker build. **Không start application container hoặc cloudflared; không tạo public URL.** Runtime hiện `BLOCKED_CONFIG` vì chưa có cấu hình local cần thiết. Khi cấu hình đủ, trạng thái là `READY_FOR_QUICK_TUNNEL_START`; chỉ bắt đầu runtime sau lệnh riêng của Project Owner.
+Phase 1 đã hoàn tất triển khai và kiểm tra repository, Compose config và Docker build. **Trong Phase 1 không start application container hoặc cloudflared và không tạo public URL.** Checkpoint đó là `BLOCKED_CONFIG`; cấu hình ignored local hiện đã được cấp và actual preflight PASS. Phase 2 đã nghiệm thu theo yêu cầu tiếp tục của Project Owner: **E01 DONE — PERSISTENT_QUICK_TUNNEL**, toàn bộ actual public/API/mobile/security/persistence và redeploy-preservation QA PASS. Runtime vẫn **RUNNING**, cloudflared **CONNECTED**, app healthy và exact PUBLIC_ORIGIN MATCH. Public URL và [biên bản nghiệm thu](../docs/implementation/tasks/E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) nằm trong runbook.
 
 Preflight chỉ đọc, không gọi Cloudflare hoặc start container:
 
@@ -70,4 +70,4 @@ URL là **ephemeral**, phạm vi kiểm tra giữ URL là **SAME CLOUDFLARED LIF
 
 Phase 2 phải kiểm tra HTTPS public smoke, enter/bootstrap, session/refresh/idempotent mutation, 188 approved assets, mobile matrix, negative static paths, cookie/security headers, bounded rate-limit test và farm persistence. Chạy update thực tế rồi xác nhận container/process và URL giữ nguyên. Không cố ý restart cloudflared để thử URL rotation.
 
-E01 chỉ `DONE — PERSISTENT_QUICK_TUNNEL` sau runtime/public QA và preservation test PASS. RC01 vẫn `BLOCKED_BY_E01 / NOT_STARTED`; sau E01 DONE chỉ chuyển `QUEUED / READY` và chờ Project Owner.
+E01 chỉ `DONE — PERSISTENT_QUICK_TUNNEL` sau runtime/public QA và preservation test PASS. Các gate đó hiện đã PASS; E01 DONE và runtime vẫn RUNNING / CONNECTED. RC01 `QUEUED / READY, NOT_STARTED`, chờ lệnh riêng của Project Owner.

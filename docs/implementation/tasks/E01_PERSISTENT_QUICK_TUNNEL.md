@@ -2,12 +2,13 @@
 
 Date: 2026-10-01
 Deployment model: **PERSISTENT_QUICK_TUNNEL**
-Phase: **1 — repository implementation only**
-Runtime: **BLOCKED_CONFIG** — ignored local demo/PostgreSQL configuration is absent
-Cloudflared: **NOT_STARTED**
-Quick Tunnel: **NOT_STARTED**
-Public URL: **NOT_CREATED**
-RC01: **BLOCKED_BY_E01 / NOT_STARTED**
+Phase: **2 — public runtime acceptance complete**
+E01: **DONE — PERSISTENT_QUICK_TUNNEL**
+Runtime: **RUNNING** — actual preflight and all acceptance gates PASS
+Cloudflared: **RUNNING**
+Quick Tunnel: **CONNECTED**
+Public URL: https://francisco-ohio-camcorder-industrial.trycloudflare.com
+RC01: **QUEUED / READY, NOT_STARTED** — await a separate Project Owner command
 
 **OFFICIAL PUBLIC DEPLOYMENT: PERSISTENT QUICK TUNNEL.** This is the canonical deployment selected by Project Owner on 2026-10-01, not temporary debug tooling. The public domain form is `*.trycloudflare.com`; no custom domain, fixed hostname or tunnel token is required. The wildcard describes the domain form only: an actual `PUBLIC_ORIGIN` must always be one exact generated HTTPS origin.
 
@@ -24,11 +25,11 @@ This decision supersedes all previous Named Tunnel decisions, including the rest
 
 | Task | Repository deliverable | Runtime evidence |
 |---|---|---|
-| E01-QT-01 | Separate Compose projects and shared named network | Pending Phase 2 |
-| E01-QT-02 | Pinned no-token Quick Tunnel contract | Pending Phase 2 |
-| E01-QT-03 | Strict URL capture and ignored exact PUBLIC_ORIGIN state | Pending Phase 2 |
-| E01-QT-04 | App update preserves tunnel container and process | Actual redeploy pending Phase 2 |
-| E01-QT-05 | Idempotent start, safe status and tunnel-only stop | Pending Phase 2 |
+| E01-QT-01 | Separate Compose projects and shared named network | PASS — services healthy and shared routing verified |
+| E01-QT-02 | Pinned no-token Quick Tunnel contract | Tunnel RUNNING/CONNECTED |
+| E01-QT-03 | Strict URL capture and ignored exact PUBLIC_ORIGIN state | Current URL captured; exact Origin MATCH |
+| E01-QT-04 | App update preserves tunnel container and process | PASS — real API/web/Nginx redeploy preserved tunnel identity and URL |
+| E01-QT-05 | Idempotent start, safe status and tunnel-only stop | Repeat-start and status PASS; tunnel not stopped for testing |
 | E01-QT-06 | Security/lifecycle static tests and regression | Final static evidence recorded by Integration Owner |
 
 ## Architecture and lifecycle
@@ -116,7 +117,7 @@ No `CLOUDFLARE_TUNNEL_TOKEN`, `TUNNEL_TOKEN`, `CLOUDFLARE_HOSTNAME` or preknown 
 npm run e01:preflight
 ```
 
-Exit `0` means repository/config checks PASS, `2` means `BLOCKED_CONFIG`, `3` means a repository security blocker. Safe synthetic test configuration validates repository gates without authorizing runtime or creating real secrets. Current absent local configuration is an expected `BLOCKED_CONFIG`, not a claimed runtime pass.
+Exit `0` means repository/config checks PASS, `2` means `BLOCKED_CONFIG`, `3` means a repository security blocker. Safe synthetic test configuration validates repository gates without authorizing runtime or creating real secrets. At the Phase-1 checkpoint, absent local configuration was an expected `BLOCKED_CONFIG`, not a claimed runtime pass. Phase 2 now has valid ignored local configuration and actual preflight PASS.
 
 Required Phase-1 regression:
 
@@ -198,7 +199,7 @@ Lifecycle operations use an exclusive `.runtime/quick-tunnel.lock` directory con
 
 ## Required public QA and preservation evidence
 
-Script smoke checks root/readiness/healthz only. The following browser/security/data tests remain **PENDING Phase 2**, even if smoke is successful:
+Script smoke checks root/readiness/healthz only. The following browser/security/data tests are separate acceptance gates; all passed during Phase 2, with [actual acceptance evidence](E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md):
 
 - HTTPS `/` and `/api/health/ready`, display-name enter, farm bootstrap, all 188 approved assets, session/refresh and safe idempotent mutation.
 - Actual browser cookie: HttpOnly, Secure, canonical SameSite; exact current PUBLIC_ORIGIN. Verify mismatched/wildcard Origins remain rejected.
@@ -236,6 +237,8 @@ No RC01 work starts automatically. Named Tunnel migration is historical/non-cano
 
 ## Phase-1 integration evidence — 2026-10-01
 
+Historical repository-only checkpoint. The results and end-of-phase state below precede the current Phase-2 runtime; the subsequent runtime evidence follows this section.
+
 The Integration Owner reran the gates below during this correction. Repository implementation: **DONE**. Lifecycle isolation: **DONE** for repository implementation and simulated verification. Actual public/session/mobile/data-preservation and live URL-preservation results remain pending Phase 2; static success does not establish live runtime PASS.
 
 | Gate | Current Phase-1 result |
@@ -261,4 +264,24 @@ The Integration Owner reran the gates below during this correction. Repository i
 
 The Wave 2 validator refreshed only its historical evidence timestamp; that generated-only change was restored to the original bytes. No MỠ FARM runtime containers exist and `.runtime/` remains absent. CLI cloudflared status STOPPED means no running container; project lifecycle state is NOT_STARTED. Application/gameplay, renderer, animation contracts, production assets and PostgreSQL schema remain outside this correction.
 
-Current state: B02 **DONE**; E01 deployment **PERSISTENT_QUICK_TUNNEL**; repository implementation **DONE**; lifecycle isolation **DONE**; runtime **BLOCKED_CONFIG**; cloudflared **NOT_STARTED**; Quick Tunnel **NOT_STARTED**; public URL **NOT_CREATED**; RC01 **BLOCKED_BY_E01 / NOT_STARTED**. No public runtime or RC01 work was started. The next runtime step requires an explicit Project Owner command to start the official Persistent Quick Tunnel and perform actual public QA and URL preservation testing.
+State at the end of Phase 1: B02 **DONE**; E01 deployment **PERSISTENT_QUICK_TUNNEL**; repository implementation **DONE**; lifecycle isolation **DONE**; runtime **BLOCKED_CONFIG**; cloudflared **NOT_STARTED**; Quick Tunnel **NOT_STARTED**; public URL **NOT_CREATED**; RC01 **BLOCKED_BY_E01 / NOT_STARTED**. No public runtime or RC01 work was started during that phase. The subsequent runtime step required an explicit Project Owner command.
+
+## Phase-2 runtime evidence — 2026-10-01
+
+Phase 2 started following the Project Owner continuation request after repository correction. **E01 DONE — PERSISTENT_QUICK_TUNNEL**: actual public/API/mobile/security/persistence and application redeploy-preservation gates all PASS. Runtime remains **RUNNING / CONNECTED**. RC01 is **QUEUED / READY, NOT_STARTED**, awaiting a separate Project Owner command. See the [runtime acceptance report](E01_QUICK_TUNNEL_RUNTIME_ACCEPTANCE.md) for full before/after container evidence, public checks and screenshots.
+
+| Runtime check | Observed result |
+|---|---|
+| Actual local preflight | PASS with ignored local demo/PostgreSQL configuration |
+| Public URL | https://francisco-ohio-camcorder-industrial.trycloudflare.com |
+| Cloudflared / Quick Tunnel | RUNNING / CONNECTED |
+| PostgreSQL / API / web / Nginx | Healthy |
+| PUBLIC_ORIGIN | MATCH — exact generated HTTPS origin |
+| Repeated `npm run e01:quick:start` | PASS — `TUNNEL_ALREADY_RUNNING`, same container ID, StartedAt, RestartCount and URL |
+| Container ID | `09bdb7c21343bc44085f16bdb35531c8cddf92e81996f6ab8091fca08bd3ca09` |
+| Container StartedAt | `2026-10-01T04:52:44.115964882Z` |
+| RestartCount | `0` |
+| Public/API/browser/mobile/security/persistence QA | PASS — all actual runtime gates; mobile 4/4, assets 188/188 and all 12 atlas URLs byte-identical |
+| Actual application redeploy preservation | PASS — API/web/Nginx IDs changed; PostgreSQL and tunnel ID, StartedAt, RestartCount and URL unchanged |
+
+Ignored local configuration uses cryptographically generated session/database secrets; values are not included in repository evidence. Nginx binds loopback port `8081` because `8080` belongs to an unrelated service. The existing PostgreSQL volume and game data were retained; database role authentication was synchronized with the configured password for Docker network connectivity. No volume reset or game-data discard was performed. Tunnel stop/restart is not part of acceptance testing. The final bounded rate-limit check passed after 120 requests with Retry-After 37 seconds and recovery to expected unauthenticated 401. Duplicate upstream/Nginx nosniff was corrected using `proxy_hide_header X-Content-Type-Options`; Nginx-only reload preserved the tunnel and security regression reran 52/52 PASS.
