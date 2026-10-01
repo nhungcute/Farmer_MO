@@ -32,8 +32,8 @@ Các gate nền A01/A02/A03/C01/C02/C03/D01/D02 đã DONE theo các task note t�
 | C03 | Mobile/PWA/accessibility QA | DONE |
 | D01 | Observability/performance instrumentation | DONE |
 | D02 | Load test và backup/restore drill | DONE |
-| E01 | Cloudflare Named Tunnel | QUEUED - NOT_STARTED (blocked until explicit post-B02 start) |
-| RC01 | Release Candidate checklist | QUEUED - BLOCKED_BY_E01; NOT_STARTED |
+| E01 | Cloudflare Named Tunnel | **BLOCKED_CONFIG - preflight complete; public profile not started** |
+| RC01 | Release Candidate checklist | **BLOCKED_BY_E01; NOT_STARTED** |
 
 ## B02 production artwork - 2026-10-01
 
@@ -74,9 +74,15 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Giới hạn và bước kế tiếp
 
-B02 is DONE. Wave 2 has explicit Project Owner content, license and release approval for exactly 76 assets; no artwork was regenerated and the reviewed PNG aggregate is unchanged. E01 is QUEUED and NOT_STARTED. RC01 is QUEUED and BLOCKED_BY_E01. Do not start E01, Cloudflare Named Tunnel, RC01 or public deployment until a separate explicit start command is issued. Renderer, animation, gameplay, economy and asset contracts remain unchanged.
+B02 is DONE. Wave 2 has explicit Project Owner content, license and release approval for exactly 76 assets; no artwork was regenerated and the reviewed PNG aggregate is unchanged. E01 preflight is BLOCKED_CONFIG with additional BLOCKED_SECURITY findings. RC01 is BLOCKED_BY_E01 and NOT_STARTED. Do not start the public profile, Cloudflare Named Tunnel, RC01 or public deployment until the documented blockers are resolved and preflight is rerun. Renderer, animation, gameplay, economy and asset contracts remain unchanged.
 
-Wave 2 generation, targeted revision review, promotion, atlas rebuild, final owner review and release approval are complete for 76/76 assets. E01 Cloudflare Named Tunnel is QUEUED/NOT_STARTED; RC01 is QUEUED/BLOCKED_BY_E01/NOT_STARTED.
+Wave 2 generation, targeted revision review, promotion, atlas rebuild, final owner review and release approval are complete for 76/76 assets. E01 Cloudflare Named Tunnel preflight is complete but blocked; RC01 remains blocked by E01 and not started.
+
+## E01 preflight checkpoint - 2026-10-01
+
+The eight E01 preflight tasks completed read-only inspection. E01 is **BLOCKED_CONFIG** because the required production environment is absent: PostgreSQL driver, demo environment, fixed HTTPS origin, secure cookies, non-default session/database secrets, Cloudflare token and verified hostname are not configured. E01 also has **BLOCKED_SECURITY** findings for unresolved cloudflared token expansion, missing machine-checked Named Tunnel ingress mapping, public web source exposure, and absent effective rate limiting. No public profile, tunnel or public endpoint was started. Evidence: `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
+
+RC01 remains **BLOCKED_BY_E01 / NOT_STARTED**.
 
 ## Quy tắc cập nhật
 

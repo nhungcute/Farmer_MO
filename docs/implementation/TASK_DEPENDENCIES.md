@@ -28,7 +28,15 @@ A03 + B02 + C03 + D02 + E01 → RC01 Release Candidate.
 - B02: DONE ? Wave 2 release approval recorded for all 76 assets; canonical inventory is 188/188 production_ready, 188/188 approved, 0 placeholders.
 - Inventory: 188 total; metadata flags production_ready=188, approved=188, placeholder=0. Wave 1=112 approved; Wave 2=76 approved.
 - Evidence: Wave 1 review/approval records plus docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md and npm run assets:validate:wave2-release.
-- RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. E01 is QUEUED/NOT_STARTED; RC01 is QUEUED/BLOCKED_BY_E01/NOT_STARTED.
+- RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. E01 preflight is complete but **BLOCKED_CONFIG** with additional **BLOCKED_SECURITY** findings; no public profile was started. RC01 is **BLOCKED_BY_E01 / NOT_STARTED**.
+
+## E01 preflight checkpoint - 2026-10-01
+
+- Eight read-only preflight tasks completed: E01-01 through E01-08.
+- E01 status: **BLOCKED_CONFIG** because required non-default production/demo environment values and the Named Tunnel token/hostname are absent.
+- Security status: **BLOCKED_SECURITY** because public web source exposure, unresolved cloudflared token expansion/ingress evidence, and missing effective rate limiting require resolution before public access.
+- No shared configuration was changed and no container or tunnel was started. Full evidence is in `docs/implementation/tasks/E01_CLOUDFLARE_NAMED_TUNNEL_PREFLIGHT.md`.
+- RC01 status: **BLOCKED_BY_E01 / NOT_STARTED**.
 
 ## Gate rules
 
