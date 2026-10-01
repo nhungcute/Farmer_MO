@@ -83,7 +83,7 @@ Có:
 - Quest.
 - PWA.
 - Docker.
-- Persistent Cloudflare Named Tunnel, fixed hostname/token và origin `http://nginx:80`; lifecycle cloudflared riêng với app update, exact fixed PUBLIC_ORIGIN trước startup.
+- Persistent Cloudflare Quick Tunnel cho demo, lifecycle riêng; URL ephemeral, preservation scope SAME CLOUDFLARED LIFETIME. Named Tunnel plans are historical/non-canonical and are not an E01 release path; any stable-hostname migration requires a new Project Owner decision.
 
 Không có trong MVP:
 

@@ -23,19 +23,19 @@ docker compose up --build -d
 
 Mặc định gateway ở `http://127.0.0.1:8080`. Nếu cổng đã được dùng, đặt `NGINX_PORT` khác trong ignored local environment. API hỗ trợ file adapter cho local compatibility và PostgreSQL persistence; E01 public demo bắt buộc PostgreSQL, Secure cookies và session/database secrets không default.
 
-Canonical E01 dùng **NAMED_TUNNEL**: fixed hostname, dedicated Cloudflare Named Tunnel, token qua native container environment và origin `http://nginx:80`. Giữ `compose.yaml` cho application, `compose.tunnel.yaml` riêng cho cloudflared và external network `mo-farm-frontend`. Task correction chỉ repository/static/build: **không start runtime, liên hệ Cloudflare hoặc public QA**. Runtime `BLOCKED_CONFIG` vì real owner environment/token/hostname chưa validate; cloudflared/Named Tunnel `NOT_STARTED`, RC01 `BLOCKED_BY_E01 / NOT_STARTED`.
+**OFFICIAL PUBLIC DEPLOYMENT: PERSISTENT_QUICK_TUNNEL** tại `https://<generated>.trycloudflare.com`, theo quyết định Project Owner ngày 2026-10-01; đây là deployment chính thức, không phải debug tooling. Không cần token, custom domain hoặc fixed hostname. `compose.yaml` quản lý application; `compose.tunnel.yaml` quản lý cloudflared riêng, dùng network `mo-farm-frontend`. Phase 1 chỉ implementation/static regression: **không start container/tunnel hoặc tạo URL**. Runtime hiện `BLOCKED_CONFIG` vì ignored local configuration chưa có; cloudflared/Quick Tunnel `NOT_STARTED`, Public URL `NOT_CREATED`; RC01 `BLOCKED_BY_E01 / NOT_STARTED`.
 
-Chỉ sau lệnh riêng của Project Owner và cấu hình Named Tunnel hợp lệ:
+Sau lệnh riêng của Project Owner để bắt đầu Phase 2:
 
 ```powershell
-npm run e01:tunnel:start
-npm run e01:tunnel:status
+npm run e01:quick:start
+npm run e01:quick:status
 npm run e01:app:update
 npm run e01:app:update -- --nginx
-npm run e01:tunnel:stop
+npm run e01:quick:stop
 ```
 
-Owner cấu hình `CLOUDFLARE_TUNNEL_TOKEN`, `CLOUDFLARE_HOSTNAME` và exact `PUBLIC_ORIGIN=https://<CLOUDFLARE_HOSTNAME>` trước startup. Token mapping là `TUNNEL_TOKEN`, không command argument hoặc log. Start reuse cloudflared đang chạy; app update chỉ recreate application services và refresh Nginx routing. Stop chỉ dừng tunnel, giữ database/game state và fixed hostname configuration. Canonical E01 không capture URL hoặc dùng generated origin/runtime URL files; không wildcard origin. Fixed hostname/PUBLIC_ORIGIN giữ nguyên qua app update. Runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel experiment của `5c8132f` chỉ còn lịch sử SUPERSEDED / NON_CANONICAL / DEBUG EXPERIMENT.
+Start reuse cloudflared đang chạy; app update chỉ recreate application services và refresh Nginx routing. Stop chỉ dừng tunnel, giữ database/game state. Runtime URL và exact `PUBLIC_ORIGIN` nằm trong ignored `.runtime/`; không dùng origin wildcard. URL là ephemeral: app rebuild giữ tunnel sống để giảm đổi URL trong **SAME CLOUDFLARED LIFETIME**, không bảo đảm vĩnh viễn; restart/recreation có thể đổi URL. Named Tunnel plans remain historical and non-canonical; this release has no stable-hostname migration. Runbook và Phase-2 public QA: [`E01_PERSISTENT_QUICK_TUNNEL.md`](docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md).
 
 ## Các phần đã chạy
 

@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01-FIX-06 — Automated security preflight
 
 > **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The notices/results below are chronological history, including the intermediate Quick Tunnel change. Current validator again requires dedicated token/fixed hostname and exact configured origin, rejects Quick Tunnel, and validates separate lifecycle; current runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md).
@@ -83,3 +88,5 @@ node --test tests/e01-preflight.test.mjs
 
 Tests xác nhận baseline placeholder status, valid public environment chuyển tới
 static gate, hostname mismatch bị chặn và formatter không rò rỉ secret/origin.
+
+</details>

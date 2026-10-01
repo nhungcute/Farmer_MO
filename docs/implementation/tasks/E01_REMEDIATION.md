@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01 repository remediation
 
 > **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** Keep the chronological supersession notice and original remediation results below. The security hardening remains required; current native token/fixed origin and separate lifecycle workflow: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md).
@@ -44,3 +49,5 @@ FIX-01 through FIX-06 were executed as independent parallel workstreams. The Int
 ## Next owner action
 
 Configure the required values in the local ignored environment, then rerun the complete E01 runtime preflight. Confirm the Named Tunnel reaches only Nginx, readiness reflects PostgreSQL, no secret appears in logs, and rollback works. RC01 remains blocked until that runtime preflight passes.
+
+</details>

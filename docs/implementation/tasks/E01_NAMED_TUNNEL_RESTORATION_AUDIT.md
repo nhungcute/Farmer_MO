@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01 Named Tunnel restoration audit
 
 Date: 2026-10-01
@@ -90,3 +95,5 @@ The Wave 2 validator's generated-only timestamp change is restored to retain his
 B02: DONE; E01 repository hardening: DONE; E01 tunnel lifecycle isolation: DONE; E01 runtime: BLOCKED_CONFIG; cloudflared: NOT_STARTED; Named Tunnel: NOT_STARTED; RC01: BLOCKED_BY_E01 / NOT_STARTED.
 
 Current workflow: [E01_PERSISTENT_NAMED_TUNNEL.md](E01_PERSISTENT_NAMED_TUNNEL.md). Project Owner must configure ignored local Named token, fixed hostname, exact HTTPS origin and demo/PostgreSQL environment, then rerun preflight. Runtime startup remains a separate explicit task.
+
+</details>

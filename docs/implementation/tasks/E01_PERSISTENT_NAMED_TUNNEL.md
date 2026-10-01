@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01 — Persistent Named Tunnel lifecycle
 
 Date: 2026-10-01
@@ -179,3 +184,5 @@ Keep the web static allowlist, internal-path/symlink/traversal protection, bound
 Actual runtime QA is NOT_STARTED and must verify HTTPS smoke, display-name enter/bootstrap, 188 approved assets, session/refresh/idempotent mutation, Secure/HttpOnly/canonical SameSite cookie, negative static paths, a controlled bounded API rate-limit 429, mobile viewports 932×430/915×412/844×390/740×360 and persistent farm state. Perform a real API/web redeploy and optional Nginx recreation, proving identical cloudflared ID/StartedAt/RestartCount and fixed PUBLIC_ORIGIN plus working public endpoint/data. Static lifecycle mocks do not replace this evidence.
 
 After repository gates PASS, repository hardening and lifecycle isolation can be DONE while actual E01 runtime stays BLOCKED_CONFIG and cloudflared/Named Tunnel NOT_STARTED. RC01 remains BLOCKED_BY_E01 / NOT_STARTED. E01 runtime becomes DONE only after actual required runtime gates PASS; RC01 then becomes QUEUED / READY and awaits Project Owner, never starts automatically.
+
+</details>

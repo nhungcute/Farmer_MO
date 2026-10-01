@@ -155,7 +155,7 @@ E2E direct-entry
 mobile QA
 performance profile
 backup/restore drill
-public persistent Named Tunnel smoke + actual app-redeploy isolation/fixed-origin test (authorized runtime only)
+public persistent Quick Tunnel smoke + actual app-redeploy preservation test (Phase 2)
 ```
 
 Canonical matrix nằm trong `28_REQUIREMENT_TRACEABILITY_AND_QA.md`.

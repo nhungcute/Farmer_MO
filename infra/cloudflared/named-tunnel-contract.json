@@ -1,16 +1,14 @@
 {
   "schemaVersion": 1,
-  "canonical": true,
+  "canonical": false,
+  "status": "SUPERSEDED",
+  "e01ReleasePath": false,
+  "reason": "PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT",
   "tunnelType": "named",
-  "originService": "http://nginx:80",
-  "tokenRequired": true,
-  "fixedHostnameRequired": true,
+  "expectedOriginService": "http://nginx:80",
   "hostnameSource": "CLOUDFLARE_HOSTNAME",
   "publicOriginSource": "PUBLIC_ORIGIN",
   "cloudflaredTokenEnv": "TUNNEL_TOKEN",
   "quickTunnelAllowed": false,
-  "persistentContainerLifecycle": true,
-  "appRedeployMustPreserveTunnel": true,
-  "requiredCommand": ["tunnel", "--no-autoupdate", "run"],
-  "sharedNetwork": "mo-farm-frontend"
+  "requiredCommand": ["tunnel", "--no-autoupdate", "run"]
 }

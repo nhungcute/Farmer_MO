@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01 — Cloudflare Named Tunnel public demo gate
 
 > **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The supersession notice below is chronological history. Current fixed-hostname/token workflow retains independent tunnel lifecycle and is documented in [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Original plan/evidence below remains historical; do not use its old Compose public-profile commands as the current runbook.
@@ -125,3 +130,5 @@ E01 không có test runtime nào được chạy khi còn `QUEUED`. Khi mở tas
 - Last completed: local Docker/Compose, PostgreSQL, browser and operational gates; remote CI runs 36660295559 and 36662455574 on commits 628f7cd and 7651d6a completed 5/5 jobs; read-only E01 audit passed Compose exposure checks and added a postgres/demo/HTTPS/non-default-secret preflight; B02 has Wave 1 artwork/content/license/release approval (112 assets); 76 assets outside Wave 1 remain placeholders.
 - Next activity: parent review cập nhật upstream status; chỉ khi B02 và toàn bộ dependency đạt mới mở E01, cấp secret ngoài repository và chạy public smoke.
 - Blocker: B02 remains RUNNING because 76 assets outside the approved Wave 1 are placeholders; E01 stays QUEUED/CLOSED until the remaining release dependencies, hostname, and token are supplied.
+
+</details>

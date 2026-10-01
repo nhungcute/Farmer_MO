@@ -36,14 +36,14 @@
     "e2e:headed": "playwright test --headed",
     "test:e2e": "playwright test",
     "check:localization": "node tools/check-localization.mjs",
-    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/security/rateLimiter.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/persistence/config.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && node --check tools/e01-preflight.mjs && npm run renderer:check && node --check tools/tunnel.mjs && node --check tools/update-app.mjs && node --check tools/lib/named-tunnel.mjs && node --check tools/lib/named-tunnel-runtime.mjs",
+    "check:syntax": "node --check packages/content/index.mjs && node --check packages/shared/index.mjs && node --check apps/api/src/server.mjs && node --check apps/api/src/security/rateLimiter.mjs && node --check apps/api/src/store.mjs && node --check apps/api/src/migrate.mjs && node --check apps/api/src/persistence/config.mjs && node --check apps/api/src/observability/metrics.mjs && node --check apps/api/src/repositories/postgresFarmRepository.mjs && node --check apps/web/src/main.js && node --check apps/web/server.mjs && node --check tools/e01-preflight.mjs && npm run renderer:check && node --check tools/quick-tunnel.mjs && node --check tools/update-app.mjs && node --check tools/lib/quick-tunnel.mjs && node --check tools/lib/quick-tunnel-runtime.mjs",
     "test:api:full": "node --test apps/api/test/api.test.mjs apps/api/test/observability.test.mjs apps/api/test/persistence-config.test.mjs apps/api/test/rate-limiter.test.mjs",
     "test:api:postgres": "node --test apps/api/test/postgres/postgres-repository.test.mjs apps/api/test/postgres/postgres-integration.test.mjs",
     "check": "npm run check:syntax && npm run check:localization && npm run renderer:test && npm run assets:validate && npm run test:api:full && npm run test:e01:security && npm run assets:validate:strict",
-    "e01:app:update": "node tools/update-app.mjs",
-    "e01:tunnel:start": "node tools/tunnel.mjs start",
-    "e01:tunnel:status": "node tools/tunnel.mjs status",
-    "e01:tunnel:stop": "node tools/tunnel.mjs stop"
+    "e01:quick:start": "node tools/quick-tunnel.mjs start",
+    "e01:quick:status": "node tools/quick-tunnel.mjs status",
+    "e01:quick:stop": "node tools/quick-tunnel.mjs stop",
+    "e01:app:update": "node tools/update-app.mjs"
   },
   "dependencies": {
     "pg": "^8.23.0",

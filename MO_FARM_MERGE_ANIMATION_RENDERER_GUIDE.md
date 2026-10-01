@@ -1534,7 +1534,7 @@ Mobile performance
 ↓
 PWA final
 ↓
-Persistent Cloudflare Named Tunnel (separate lifecycle)
+Persistent Cloudflare Quick Tunnel (separate lifecycle)
 ↓
 Release Candidate
 ```
@@ -1556,20 +1556,20 @@ Mobile LAN
 ↓
 PWA
 ↓
-Persistent Named Tunnel (fixed hostname)
+Persistent Quick Tunnel (*.trycloudflare.com)
 ```
 
-Project Owner xác nhận canonical E01 là NAMED_TUNNEL: dedicated tunnel, fixed hostname và token. Giữ `compose.tunnel.yaml` riêng cho cloudflared; application `compose.yaml` quản lý PostgreSQL/API/web/Nginx. Hai stack dùng `mo-farm-frontend`; ingress vẫn `http://nginx:80`. Token chỉ qua native `TUNNEL_TOKEN` mapping từ owner `CLOUDFLARE_TUNNEL_TOKEN`, không command argument/log.
+Theo quyết định Project Owner ngày 2026-10-01, E01 demo dùng `compose.tunnel.yaml` riêng cho cloudflared; application `compose.yaml` quản lý PostgreSQL/API/web/Nginx. Hai stack dùng network `mo-farm-frontend`. Tunnel không dùng token hoặc fixed hostname; ingress vẫn chỉ qua Nginx.
 
-Configured fixed PUBLIC_ORIGIN trước startup:
+URL runtime:
 
 ```text
-https://<CLOUDFLARE_HOSTNAME>
+https://<generated>.trycloudflare.com
 ```
 
-`npm run e01:app:update` rebuild/recreate API/web và refresh Nginx routing mà giữ cloudflared sống; tùy chọn `-- --nginx` recreate Nginx. Script kiểm tra container ID, StartedAt, RestartCount và configured fixed PUBLIC_ORIGIN trước/sau. API origin khớp exact fixed hostname; không wildcard, localhost/IP/HTTP hoặc trycloudflare. Named hostname giữ nguyên qua update và tunnel restart nếu owner route không đổi; availability khi downtime được kiểm tra riêng. Canonical flow không capture URL hoặc tạo origin runtime files.
+`npm run e01:app:update` rebuild/recreate API/web và refresh Nginx routing mà giữ cloudflared sống; tùy chọn `-- --nginx` recreate Nginx. Script kiểm tra container ID, StartedAt, RestartCount và URL trước/sau. API PUBLIC_ORIGIN khớp exact runtime URL; không wildcard. Scope URL preservation là **SAME CLOUDFLARED LIFETIME**. URL không vĩnh viễn và có thể đổi khi process/container restart, host reboot hoặc Cloudflare tạo lại session. Named Tunnel remains historical/non-canonical and is not an E01 release path; any stable-hostname migration requires a new Project Owner decision.
 
-Task correction chỉ repository/static/build; không start runtime, liên hệ Cloudflare hoặc public QA. Sau lệnh riêng từ Project Owner mới chạy `e01:tunnel:start/status/stop` và actual public/mobile/security/persistence/app-redeploy QA. Runbook hiện hành: [`E01_PERSISTENT_NAMED_TUNNEL.md`](docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel report `5c8132f` là SUPERSEDED / NON_CANONICAL / DEBUG EXPERIMENT. RC01 không tự động bắt đầu.
+Phase 1 chỉ implementation/static regression; không start container/tunnel hoặc tạo URL. Phase 2 cần lệnh riêng từ Project Owner để start và chạy public/mobile/security/persistence/URL-preservation QA. Runbook hiện hành: [`E01_PERSISTENT_QUICK_TUNNEL.md`](docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). RC01 không tự động bắt đầu.
 
 ---
 

@@ -1,3 +1,5 @@
+> Deployment references only: **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH** (2026-10-01), reason `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. Any Named Tunnel mention below records the historical checkpoint. Current deployment: [`PERSISTENT_QUICK_TUNNEL`](../E01_PERSISTENT_QUICK_TUNNEL.md). Artwork findings and approvals below are unchanged.
+
 # Parallel Art Wave 2
 
 Owner decision: Wave 2 OPEN. Eight isolated owner contracts ran in parallel against the canonical manifest and are now at the review checkpoint.

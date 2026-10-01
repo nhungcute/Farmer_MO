@@ -1,3 +1,8 @@
+> **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH (2026-10-01).** Reason: `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. This is an unchanged historical record of an earlier Named Tunnel decision. Its requirements, commands, statuses and test results describe that earlier checkpoint only. The current official deployment is **PERSISTENT_QUICK_TUNNEL**; use [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md).
+
+<details>
+<summary>Archived text from previous HEAD 0b12ec44a31a33afeaf237b75b5c74b95e61ec8a; all canonical/current claims inside describe that historical snapshot</summary>
+
 # E01 - Cloudflare Named Tunnel preflight
 
 > **CANONICAL NAMED TUNNEL RESTORED after `5c8132f`.** The supersession notice and findings below preserve the original timeline/evidence. Current token/fixed-hostname/exact-origin preflight and independent lifecycle: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Old token-expansion/public-profile blockers describe the earlier implementation, not the current restored contract.
@@ -94,3 +99,5 @@ Do not start `docker compose --profile public up cloudflared` until all of the f
 - the full final validation command set passes again.
 
 E01 status is **BLOCKED_CONFIG**. RC01 stays **BLOCKED_BY_E01 / NOT_STARTED**. Quick Tunnel fallback is prohibited.
+
+</details>

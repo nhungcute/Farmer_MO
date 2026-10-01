@@ -1,4 +1,4 @@
-import { runCli } from './lib/named-tunnel-runtime.mjs';
+import { runCli } from './lib/quick-tunnel-runtime.mjs';
 
 if (process.argv.slice(2).some((argument) => argument !== '--nginx')) {
   console.error('USAGE: node tools/update-app.mjs [--nginx]');

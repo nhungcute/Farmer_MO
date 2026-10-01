@@ -37,7 +37,7 @@ Nếu tài liệu cũ mâu thuẫn với các file trên, dùng file canonical. 
 14. Nguồn thức ăn gà là starter `chicken_feed` 1 unit và Market buy 5 coin/unit.
 15. Dùng đúng bảng definitions trong file `25`.
 16. Không mở rộng nội dung ngoài roadmap trước khi G7 đạt.
-17. Canonical E01 dùng persistent Named Tunnel, fixed hostname/token, native TUNNEL_TOKEN environment và origin http://nginx:80. Lifecycle cloudflared tách application Compose; exact fixed PUBLIC_ORIGIN khớp CLOUDFLARE_HOSTNAME trước startup. Không Quick Tunnel/generated origin trong release path. Task correction không start runtime/liên hệ Cloudflare; RC01 chờ Project Owner.
+17. E01 demo dùng persistent Quick Tunnel tại `*.trycloudflare.com`, lifecycle cloudflared tách application Compose. Exact runtime PUBLIC_ORIGIN, không token/hostname cố định. URL ephemeral, scope preservation SAME CLOUDFLARED LIFETIME. Named Tunnel is historical/non-canonical and is not a current E01 release path; Phase 1 không start runtime; RC01 chờ Project Owner.
 18. MVP animation dùng Pixi `AnimatedSprite + JSON atlas`; Spine để future.
 19. Không tự bịa frame count, FPS, direction, anchor hoặc asset ID; dùng file `16_ASSET_ANIMATION_PIPELINE.md`.
 20. Nếu production art chưa có, tạo placeholder atlas/manifest ở G1/G2 và ghi rõ asset còn thiếu; không chặn backend nhưng không đánh dấu animation final.
@@ -97,8 +97,8 @@ mở PWA
 → feed bằng chicken_feed
 → collect Egg
 → reload/resume đúng state
-→ local Docker và persistent Named Tunnel public QA pass
-→ app rebuild giữ cloudflared container/process và fixed hostname/PUBLIC_ORIGIN
+→ local Docker và persistent Quick Tunnel public QA pass
+→ app rebuild giữ cloudflared container/process và URL trong cùng lifetime
 ```
 
 Animation acceptance phải gồm:

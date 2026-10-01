@@ -1,16 +1,17 @@
 # E01 — Persistent Quick Tunnel lifecycle
 
-> **SUPERSEDED / NON_CANONICAL / DEBUG EXPERIMENT.** This document preserves the implementation, decisions and static results of historical commit `5c8132f`. Reason: `PROJECT_OWNER_CONFIRMED_EXISTING_NAMED_TUNNEL_PLAN`. Project Owner subsequently restored the canonical **NAMED_TUNNEL** plan with fixed hostname and token, retaining lifecycle isolation. Current release runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Quick Tunnel, generated URL/origin and commands below are historical/debug-only and cannot satisfy current E01 preflight. All claims of “canonical”, current status, PASS or required configuration below are attributed to that historical checkpoint, not the restored deployment.
-
 Date: 2026-10-01
 Deployment model: **PERSISTENT_QUICK_TUNNEL**
 Phase: **1 — repository implementation only**
 Runtime: **BLOCKED_CONFIG** — ignored local demo/PostgreSQL configuration is absent
 Cloudflared: **NOT_STARTED**
+Quick Tunnel: **NOT_STARTED**
 Public URL: **NOT_CREATED**
 RC01: **BLOCKED_BY_E01 / NOT_STARTED**
 
-This section records the temporary Quick Tunnel decision made at commit `5c8132f`; it is historical evidence only. The Named Tunnel plan, preflight reports, remediation evidence and `infra/cloudflared/named-tunnel-contract.json` are active again under the current runbook linked above. The Quick Tunnel configuration and generated-origin requirements below do not apply to the restored E01 deployment.
+**OFFICIAL PUBLIC DEPLOYMENT: PERSISTENT QUICK TUNNEL.** This is the canonical deployment selected by Project Owner on 2026-10-01, not temporary debug tooling. The public domain form is `*.trycloudflare.com`; no custom domain, fixed hostname or tunnel token is required. The wildcard describes the domain form only: an actual `PUBLIC_ORIGIN` must always be one exact generated HTTPS origin.
+
+This decision supersedes all previous Named Tunnel decisions, including the restoration at previous HEAD `0b12ec44a31a33afeaf237b75b5c74b95e61ec8a`. Named Tunnel plans, preflight reports, remediation evidence and `infra/cloudflared/named-tunnel-contract.json` remain **SUPERSEDED / NON_CANONICAL / NOT_CURRENT_E01_RELEASE_PATH**, reason `PROJECT_OWNER_SELECTED_TRYCLOUDFLARE_AS_OFFICIAL_PUBLIC_DEPLOYMENT`. Their past verification results remain historical evidence; canonical E01 preflight uses only the Quick Tunnel contract. Preserve independent lifecycle and security improvements instead of reverting old commits wholesale.
 
 ## Ownership and scope
 
@@ -62,6 +63,8 @@ No tunnel token, credentials file, fixed hostname or Cloudflare dashboard setup 
 
 ```json
 {
+  "canonical": true,
+  "e01ReleasePath": true,
   "tunnelType": "quick",
   "originService": "http://nginx:80",
   "publicHostnameType": "ephemeral-trycloudflare",
@@ -76,11 +79,11 @@ No tunnel token, credentials file, fixed hostname or Cloudflare dashboard setup 
 
 ## URL lifetime and security
 
-The URL is **EPHEMERAL**. Preservation scope is **SAME CLOUDFLARED LIFETIME**. Keeping the same process/container alive during application updates minimizes URL changes; it does not guarantee a permanent URL. Stopping/restarting the process, recreating the container, host reboot or Cloudflare recreating the Quick Tunnel session may produce a new hostname. Docker restart policy restores availability but cannot promise the old URL. Quick Tunnels are intended for testing/development, have no uptime guarantee, and the URL stops working when cloudflared stops. Production/stable deployment should eventually use Named Tunnel. [Cloudflare Quick Tunnels documentation](https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/).
+The URL is **EPHEMERAL**. Preservation scope is **SAME CLOUDFLARED LIFETIME**: the current URL should remain unchanged while the same tunnel session/process remains alive. This does not guarantee a permanent URL. The URL may change if the process exits, the container restarts or is recreated, the Docker host reboots and recreates the session, Cloudflare terminates the Quick Tunnel, or an operator explicitly stops/restarts it. Docker `restart: unless-stopped` improves availability but cannot promise the old URL after an actual process restart. These limitations do not change the Project Owner decision to use Quick Tunnel as the official public deployment. Named Tunnel is historical/non-canonical; any future fixed-hostname migration requires a new Project Owner decision.
 
-Existing hardening remains required: restricted web static root and internal-path/traversal blocking, bounded API rate limiting, trusted Nginx forwarding, request body limits, CSP/security headers, Secure/HttpOnly cookies, PostgreSQL persistence and service worker bypass of `/api/**`.
+Existing hardening remains required: restricted web static root, internal-path/traversal blocking and symlink escape protection; bounded API rate limiting with `429` and `Retry-After`; trusted proxy normalization and request body limits; CSP, applicable HSTS, nosniff, Referrer-Policy, frame protection and Permissions-Policy; Secure/HttpOnly/SameSite cookies and exact Origin validation; PostgreSQL persistence without public database/API ports; and service worker bypass of `/api/**`.
 
-URL capture validates the entire origin, not a loose substring: HTTPS, valid subdomain of `.trycloudflare.com`, no root `trycloudflare.com`, other domain, localhost, HTTP, port, path, query, fragment or credentials. No wildcard origin is allowed. Once discovered, API `PUBLIC_ORIGIN` equals the exact captured URL.
+URL capture validates the entire origin, not a loose substring: HTTPS, valid subdomain of `.trycloudflare.com`, no root `trycloudflare.com`, other domain, localhost, IP literal, HTTP, port, path, query, fragment, userinfo or malformed URL. Neither `*` nor `https://*.trycloudflare.com` is an allowed origin. Once discovered, API `PUBLIC_ORIGIN` equals the exact captured URL.
 
 Ignored runtime files:
 
@@ -90,7 +93,9 @@ Ignored runtime files:
 .runtime/quick-tunnel.lock/owner.json   exclusive lock directory with PID/createdAt
 ```
 
-State records container ID plus `startedAt` and `restartCount`; an unchanged container ID alone cannot prove the same process lifetime. Root `.env` remains the source for local secrets; generated runtime state/env must not duplicate them. Stop marks the URL stale; stale state is not reusable proof of a currently live URL. These files are ignored by Git and must not be committed or included as secret-bearing evidence.
+The running JSON state contains `publicUrl`, `capturedAt`, `containerId`, `containerStartedAt`, `restartCount` and `status: "running"`. The companion env file contains only `PUBLIC_ORIGIN=<exact-generated-url>` while the tunnel is running.
+
+State records container ID plus `containerStartedAt` and `restartCount`; an unchanged container ID alone cannot prove the same process lifetime. Process environment and ignored local `.env` / `.env.<APP_ENV>` files remain the sources for application configuration and secrets; generated runtime state/env must not duplicate them. Stop marks the URL stale; stale state is not reusable proof of a currently live URL. These files are ignored by Git and must not be committed or included as secret-bearing evidence.
 
 ## Phase 1 — static verification only
 
@@ -155,7 +160,7 @@ The canonical first-start sequence is:
 8. Verify API readiness, Nginx health and public HTTPS `/`, `/api/health/ready`, `/healthz` smoke.
 9. Record current tunnel state and report E01 RUNNING with full QA pending.
 
-Repeated start with a healthy running tunnel reports `TUNNEL_ALREADY_RUNNING` and the same current URL, validates readiness/smoke and records current state without build/up/migration. If application state needs repair, it updates only those application services and still preserves cloudflared. Existing tunnel command/image/network/restart-policy/credential drift is rejected before reuse. A restart or URL rotation found during an operation is a regression, not silently accepted as success.
+Repeated start with a healthy running tunnel reports `TUNNEL_ALREADY_RUNNING` and the same current URL, validates readiness/smoke and records current state without build/up/migration. If application state needs repair, it updates only those application services and still preserves cloudflared. Repair snapshots existing application images and restores them if application readiness or public smoke fails; rollback never restarts the tunnel or recreates PostgreSQL. Existing tunnel command/image/network/restart-policy/credential drift is rejected before reuse. A restart or URL rotation found during an operation is a regression, not silently accepted as success.
 
 ## Selective application update
 
@@ -167,7 +172,7 @@ npm run e01:app:update
 npm run e01:app:update -- --nginx
 ```
 
-Update requires a live tunnel, validated current state and exact origin match. It records cloudflared ID, StartedAt, RestartCount and URL, builds API/web, selectively recreates API/web, and waits for readiness. Nginx reload resolves newly assigned upstream IPs; `--nginx` selectively recreates Nginx then reloads. Database and tunnel are not recreated, and volumes are retained. Afterward it independently rediscovers/verifies tunnel identity/lifetime and URL and performs public smoke. Any unexpected change reports `TUNNEL_LIFECYCLE_REGRESSION`.
+Update requires a live tunnel, validated current state and exact origin match. It records cloudflared ID, StartedAt, RestartCount and URL, builds API/web, selectively recreates API/web, and waits for readiness. Nginx reload resolves newly assigned upstream IPs; `--nginx` selectively recreates Nginx then reloads. Existing application image tags are snapshotted before changes and restored after application readiness/smoke failure, including the prior Nginx image when `--nginx` participates. Database and tunnel are not recreated, and volumes are retained. Afterward it independently rediscovers/verifies tunnel identity/lifetime and URL and performs public smoke. Any unexpected change reports `TUNNEL_LIFECYCLE_REGRESSION`.
 
 Never use `docker compose down`, tunnel `--force-recreate`, tunnel stack rebuild or database volume deletion in a normal app update. If app update fails, repair/restart/roll back the affected app services while leaving cloudflared alive. If Nginx is briefly unavailable, public traffic can return transient origin/gateway errors and should recover on the same URL after readiness returns. Do not restart cloudflared as a routine app repair.
 
@@ -183,9 +188,11 @@ npm run e01:quick:stop
 docker compose -f compose.tunnel.yaml logs --tail 100 cloudflared
 ```
 
-Status reports RUNNING/STOPPED, a safe container ID, current URL if known, Nginx/API/PostgreSQL health and PUBLIC_ORIGIN match PASS/FAIL. It must not print session secret, PostgreSQL password, cookies, database credentials or full expanded Docker environments. Tooling suppresses raw Docker output that could contain expanded secrets.
+Status reports `cloudflared` RUNNING/STOPPED, Quick Tunnel CONNECTED/DISCONNECTED/NOT_STARTED, a safe container ID, current or unavailable URL, Nginx/API/PostgreSQL `healthy`/`unhealthy` state and PUBLIC_ORIGIN MATCH/MISMATCH. It must not print session secret, PostgreSQL password, cookies, database credentials or full expanded Docker environments. Tooling suppresses raw Docker output that could contain expanded secrets.
 
-Stop targets cloudflared only and marks captured state stale. It does not delete PostgreSQL volume, reset the farm or claim the old URL is reusable. A later start may generate a new URL and must bind its exact origin again.
+For a running tunnel with a validated current URL, status uses a bounded HTTPS `/healthz` probe and validates the expected JSON response before reporting CONNECTED. Process state or historical registration logs alone are insufficient. If the tunnel is absent or stopped, no public probe is performed; the read-only status command does not create runtime state.
+
+Stop targets cloudflared only and marks the captured URL **STALE** (`status: "stale"` in stored state). It does not delete PostgreSQL volume, reset the farm or claim the old URL is reusable. A later start may generate a new URL and must bind its exact origin again.
 
 Lifecycle operations use an exclusive `.runtime/quick-tunnel.lock` directory containing `owner.json` with PID/createdAt. If interruption leaves a stale lock, verify that PID and prove no lifecycle CLI is active before removing only `owner.json` and then the empty lock directory. Never clear an active lock, delete runtime state or restart a healthy tunnel to clear a lock. Diagnose application readiness independently of tunnel lifetime.
 
@@ -210,7 +217,7 @@ StartedAt: SAME
 RestartCount: SAME
 Public application: PASS
 Farm persistence: PASS
-Result: PASS — URL PRESERVED
+Result: PASS — QUICK TUNNEL URL PRESERVED DURING APP REDEPLOY
 Scope: SAME CLOUDFLARED LIFETIME
 ```
 
@@ -225,38 +232,33 @@ Do not deliberately restart cloudflared to prove URL rotation. Retain a useful c
 | Tunnel active, public QA/preservation pending | RUNNING | BLOCKED_BY_E01 / NOT_STARTED |
 | All required actual runtime gates PASS | DONE — PERSISTENT_QUICK_TUNNEL | QUEUED / READY; await Project Owner |
 
-No RC01 work starts automatically. Production hostname migration is a future Named Tunnel decision, not part of this Phase-1 demo migration.
+No RC01 work starts automatically. Named Tunnel migration is historical/non-canonical and not part of this Phase-1 demo; any stable-hostname migration requires a new Project Owner decision.
 
 ## Phase-1 integration evidence — 2026-10-01
 
-Repository implementation: **DONE**. These results validate repository behavior and simulated lifecycle operations; actual public/session/mobile/data-preservation and live URL-preservation results remain pending Phase 2.
+The Integration Owner reran the gates below during this correction. Repository implementation: **DONE**. Lifecycle isolation: **DONE** for repository implementation and simulated verification. Actual public/session/mobile/data-preservation and live URL-preservation results remain pending Phase 2; static success does not establish live runtime PASS.
 
-| Gate | Actual Phase-1 result |
+| Gate | Current Phase-1 result |
 |---|---|
 | Application Compose / tunnel Compose | PASS — both config validators |
-| Shared network / origin service | PASS — named `mo-farm-frontend`, target `http://nginx:80` |
-| Quick Tunnel contract / Named supersession | PASS |
-| Start / status / stop / app update | PASS — lifecycle tests; real status reports container NOT_CREATED |
-| Repeated healthy start | PASS — no build/up/migration; no tunnel recreation |
-| App redeploy isolation | PASS — simulated update preserves container/process/URL; live proof pending |
-| Restart/URL drift detection | PASS — same-container restarts and unexpected rotations fail closed |
-| App failure rollback | PASS — previous app image tags restored; tunnel/database untouched |
-| PUBLIC_ORIGIN / exact Origin / cookies | PASS — synthetic runtime equality and real local API negative-origin/Secure/HttpOnly tests |
-| Rate limit / static root / PWA API exclusion / security headers | PASS — existing hardening gates retained |
-| `npm run test:e01:security` | PASS — 37/37, no skips |
-| `npm run e01:preflight` with actual local configuration | Expected BLOCKED_CONFIG — missing demo/PostgreSQL values and non-default secrets; every static check PASS |
-| Preflight with safe synthetic pre-start configuration | PASS — no token/hostname/PUBLIC_ORIGIN required |
-| Preflight with safe synthetic exact generated origin | PASS — no public URL created |
-| `npm run assets:validate` / `assets:validate:strict` | PASS — 188 assets, 10 animations |
-| `npm run assets:validate:wave1` | PASS — 112 approved Wave 1 assets |
-| `npm run assets:validate:wave2` | PASS — 76 source-to-atlas frames, 9 contracts, 7 frozen frames |
-| `npm run assets:validate:wave2-release` | PASS — 188/188 production_ready and approved, 0 placeholders |
-| `npm run renderer:test` | PASS — 16/16 |
-| `npm run test:api:full` | PASS — 20/20 |
-| `npm run check` | PASS — syntax, localization and all aggregate gates |
-| `docker compose build --quiet api web` | PASS — images built; no containers started |
-| `git diff --check` | PASS |
+| Shared network / origin service | PASS — static preflight checks for named mo-farm-frontend and http://nginx:80 |
+| Quick Tunnel contract / Named supersession | PASS — static preflight |
+| Read-only npm run e01:quick:status | PASS — exit 0; cloudflared STOPPED, Quick Tunnel NOT_STARTED, container NOT_CREATED, URL NOT_CREATED/UNAVAILABLE; absent app services unhealthy and unset PUBLIC_ORIGIN MISMATCH; no public probe or runtime directory created |
+| Start / status / stop / idempotence / rollback / app-update lifecycle tests | PASS — 28/28 focused tests; includes application-start repair and optional Nginx rollback; actual app redeploy proof pending Phase 2 |
+| Exact Origin / cookie / limiter / static-root / PWA security regression | PASS — security suite and static preflight; real public browser/edge verification pending Phase 2 |
+| E01 preflight focused tests | PASS — 15/15 |
+| npm run e01:preflight with actual local configuration | BLOCKED_CONFIG — exit 2; required demo/PostgreSQL values are absent or defaults; PUBLIC_ORIGIN may be missing before capture; every static check PASS |
+| npm run test:e01:security | PASS — 52/52, no skips |
+| npm run assets:validate / assets:validate:strict | PASS — 188 assets, 10 animations |
+| npm run assets:validate:wave1 | PASS — 112 approved Wave 1 assets |
+| npm run assets:validate:wave2 | PASS — 76 exact atlas frames, 9 contracts, 7 frozen frames |
+| npm run assets:validate:wave2-release | PASS — 188/188 production_ready and approved, 0 placeholders |
+| npm run renderer:test | PASS — 16/16 |
+| npm run test:api:full | PASS — 20/20 |
+| npm run check | PASS — exit 0, syntax/localization/renderer/assets/API/E01 security/strict asset gates |
+| docker compose build --quiet api web | PASS — images built; no containers started |
+| git diff --check | PASS |
 
-The Wave 2 validator refreshed only its historical evidence timestamp; that generated-only change was restored. Application code, gameplay/economy, renderer, animation contracts, production assets and PostgreSQL schema remain unchanged.
+The Wave 2 validator refreshed only its historical evidence timestamp; that generated-only change was restored to the original bytes. No MỠ FARM runtime containers exist and `.runtime/` remains absent. CLI cloudflared status STOPPED means no running container; project lifecycle state is NOT_STARTED. Application/gameplay, renderer, animation contracts, production assets and PostgreSQL schema remain outside this correction.
 
-Final Phase-1 state: B02 **DONE**; E01 deployment model **PERSISTENT_QUICK_TUNNEL**; repository implementation **DONE**; runtime **BLOCKED_CONFIG**; cloudflared **NOT_STARTED**; public URL **NOT_CREATED**; RC01 **BLOCKED_BY_E01 / NOT_STARTED**. No app/tunnel service was started or stopped. The next step requires the explicit Project Owner command to start the tunnel and perform the actual public QA and URL-preservation runtime test.
+Current state: B02 **DONE**; E01 deployment **PERSISTENT_QUICK_TUNNEL**; repository implementation **DONE**; lifecycle isolation **DONE**; runtime **BLOCKED_CONFIG**; cloudflared **NOT_STARTED**; Quick Tunnel **NOT_STARTED**; public URL **NOT_CREATED**; RC01 **BLOCKED_BY_E01 / NOT_STARTED**. No public runtime or RC01 work was started. The next runtime step requires an explicit Project Owner command to start the official Persistent Quick Tunnel and perform actual public QA and URL preservation testing.

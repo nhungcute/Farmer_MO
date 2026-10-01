@@ -43,9 +43,9 @@ Không được đánh dấu một mục là PASS chỉ vì command kết thúc 
 | C03 mobile/PWA | docs/implementation/tasks/C03_MOBILE_PWA_ACCESSIBILITY.md; mobile-pwa report 3/3; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
 | D01 observability | docs/implementation/tasks/D01_OBSERVABILITY_PERFORMANCE.md; metrics tests/log redaction evidence | DONE — parent review complete |
 | D02 operations | docs/implementation/tasks/D02_LOAD_BACKUP_RESTORE.md; load JSON; backup/restore log; 15-table fingerprints; remote CI runs 36660295559 and 36662455574 | DONE — parent review and CI evidence complete |
-| B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | GATED — Wave 1 112/112 approved; 76 placeholders remain outside Wave 1 |
+| B02 assets | `docs/implementation/tasks/B02_PRODUCTION_ARTWORK.md`; inventory, license/source, style/release approval, visual sign-off | DONE — Wave 1 + Wave 2, 188/188 approved and production_ready, 0 placeholders |
 | Docker/CI | .github/workflows/ci.yml; remote run 36660295559 PASS for all 5 jobs; Compose/build logs | PASS for integration commit 628f7cd; release-commit rerun remains required |
-| E01 tunnel | E01 runbook, token/secret audit, external smoke, stop/revoke and rollback evidence | QUEUED — không được mở trước các gate upstream |
+| E01 tunnel | `E01_PERSISTENT_QUICK_TUNNEL.md`; exact runtime Origin/secret audit, actual public/mobile/security/persistence QA and app-redeploy URL preservation | BLOCKED_CONFIG — PERSISTENT_QUICK_TUNNEL repository correction; public runtime NOT_STARTED |
 | RC sign-off | commit SHA, artifact checksums, environment matrix, named reviewer approvals and rollback drill result | Chưa tạo |
 
 Các bằng chứng phải cùng trỏ về một release commit. Evidence từ commit khác chỉ được dùng làm lịch sử tham khảo và không đủ để ký RC.
@@ -57,11 +57,11 @@ Trước khi phát hành phải lưu lại commit SHA, image digest, asset bundl
 Rollback tối thiểu phải thực hiện theo thứ tự:
 
 1. Dừng traffic/release candidate theo runbook; giữ `/healthz` và `/api/health/ready` để quan sát trạng thái.
-2. Revoke/stop E01 tunnel nếu tunnel đã được mở; không xóa log hoặc evidence của incident.
+2. Giữ cloudflared và phiên Quick Tunnel sống khi rollback ứng dụng; không restart/recreate tunnel. Chỉ dùng `npm run e01:quick:stop` nếu operator cần thu hồi public access vì sự cố, ghi URL là STALE và chấp nhận lần start sau có thể đổi URL. Không cố ý stop/restart tunnel chỉ để thử nghiệm, không xóa log hoặc evidence của incident.
 3. Quay API/Web về image digest và commit SHA đã được ký trước đó.
 4. Chỉ chạy migration rollback nếu đã có migration rollback được review; không chạy SQL destructive ad-hoc và không sửa ngược `001/002`.
 5. Nếu cần phục hồi dữ liệu, restore vào database đích được kiểm tra trước rồi chuyển traffic theo runbook; không ghi đè database nguồn khi chưa có approval.
-6. Chạy smoke `/healthz`, `/api/health/ready`, direct entry, bootstrap và một mutation idempotent; ghi kết quả và quyết định mở lại traffic.
+6. Chạy smoke `/healthz`, `/api/health/ready`, direct entry, bootstrap và một mutation idempotent; đối chiếu URL, cloudflared ID, StartedAt và RestartCount với trước rollback; ghi kết quả và quyết định mở lại traffic.
 
 Rollback evidence phải ghi thời điểm, người thực hiện, commit/image trước và sau, database/backup identifier, kết quả smoke và các lỗi còn lại. RPO/RTO production không được suy ra từ D02 prototype baseline nếu chưa có SLO được phê duyệt.
 
@@ -79,14 +79,14 @@ Thiếu bất kỳ chữ ký, artifact, checksum hoặc blocker record nào thì
 
 ## Current activity
 
-RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, start cloudflared/Named Tunnel hoặc tạo release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; canonical E01 là NAMED_TUNNEL, runtime BLOCKED_CONFIG vì real owner environment/token/fixed hostname chưa validate. Runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Sau actual E01 runtime/public/update-isolation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
+RC01 đang BLOCKED_BY_E01 / NOT_STARTED. Chưa chạy release, chưa start cloudflared hoặc tạo public URL/release artifact. A01/A02/A03/B01/C01/C02/C03/D01/D02/B02 đã DONE; E01 demo hiện là PERSISTENT_QUICK_TUNNEL, runtime BLOCKED_CONFIG vì thiếu ignored local demo/PostgreSQL configuration. Runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Sau khi E01 actual runtime/public/preservation gates DONE, RC01 chỉ chuyển QUEUED / READY và chờ lệnh riêng từ Project Owner; không tự chạy RC01.
 
 ## Next activity
 
 1. Parent review đã xác nhận A01/A02/A03/B01/C01/C02/C03/D01/D02/B02; giữ các evidence và chờ E01 runtime dependency.
 2. Remote GitHub Actions run 36660295559 đã PASS 5/5 job; lưu artifact/log vào release evidence index và chờ parent review.
-3. Cấp cấu hình owner-only cho E01 ngoài repository và chạy runtime preflight, external smoke cùng rollback/revoke drill.
-4. Chỉ sau khi E01 PASS mới tạo release commit và chạy checklist RC01.
+3. Cấp cấu hình demo/PostgreSQL ngoài repository; không cần token, custom domain hoặc hostname cố định. Sau lệnh runtime riêng của Project Owner, chạy E01 actual public/mobile/security/persistence QA và app-update URL-preservation gate; không dừng tunnel để thử rotation.
+4. Chỉ sau khi E01 runtime DONE mới chuyển RC01 sang QUEUED / READY; chờ lệnh riêng của Project Owner trước khi tạo release artifact hoặc chạy checklist RC01.
 
 ## Blocker
 

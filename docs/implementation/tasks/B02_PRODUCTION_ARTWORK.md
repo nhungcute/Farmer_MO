@@ -64,4 +64,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. Canonical E01 is persistent Named Tunnel with fixed hostname/token; runtime BLOCKED_CONFIG, cloudflared/Named Tunnel NOT_STARTED. RC01 remains BLOCKED_BY_E01 / NOT_STARTED; do not start runtime or RC01 from this artwork checkpoint. Current runbook: [`E01_PERSISTENT_NAMED_TUNNEL.md`](E01_PERSISTENT_NAMED_TUNNEL.md). Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 demo now selects persistent Quick Tunnel; runtime BLOCKED_CONFIG, cloudflared NOT_STARTED, URL NOT_CREATED. RC01 remains BLOCKED_BY_E01 / NOT_STARTED; do not start either runtime or RC01 from this artwork checkpoint. Current deployment runbook: [`E01_PERSISTENT_QUICK_TUNNEL.md`](E01_PERSISTENT_QUICK_TUNNEL.md). Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

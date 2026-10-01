@@ -13,14 +13,14 @@ Các file `24` đến `29` là phần canonical được chốt sau cùng:
 - `24_DECISIONS_AND_PROTOTYPE_SCOPE.md` — phạm vi prototype, direct entry, stack và quyết định không có Tutorial.
 - `25_MVP_CONTENT_DEFINITIONS.md` — toàn bộ số liệu crops, items, chicken feed, buildings, orders, XP và unlock.
 - `26_API_DATABASE_CONTRACTS.md` — API, error codes, session, idempotency, transaction và database constraints.
-- `27_INFRASTRUCTURE_AND_LOCAL_DEVELOPMENT.md` — Docker local/public, migration, seed, backup, CI, Nginx và persistent Named Tunnel fixed hostname/token với lifecycle riêng.
+- `27_INFRASTRUCTURE_AND_LOCAL_DEVELOPMENT.md` — Docker local/public, migration, seed, backup, CI, Nginx và persistent Quick Tunnel với lifecycle riêng.
 - `28_REQUIREMENT_TRACEABILITY_AND_QA.md` — requirement IDs, acceptance, test matrix và performance budget.
 - `29_RISK_REGISTER.md` — rủi ro và điều kiện đóng.
 - `30_IMPLEMENTATION_STATUS.md` — phần đã chạy, ranh giới prototype và thứ tự tiếp theo.
 
 Nếu tài liệu cũ có giá trị “gợi ý” hoặc mâu thuẫn với các file `24` đến `29`, dùng các file canonical này.
 
-Canonical E01 được Owner xác nhận là **NAMED_TUNNEL**: dedicated tunnel, fixed hostname/token, ingress http://nginx:80 và fixed exact PUBLIC_ORIGIN trước startup. Runbook hiện hành: [`E01_PERSISTENT_NAMED_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_NAMED_TUNNEL.md). Giữ separate lifecycle từ `5c8132f`; Quick Tunnel report được giữ SUPERSEDED / NON_CANONICAL / DEBUG EXPERIMENT. Historical Named preflight/remediation giữ chronological evidence nhưng current requirements theo runbook mới. Task correction không start runtime, liên hệ Cloudflare hoặc public QA.
+E01 demo hiện chọn **PERSISTENT_QUICK_TUNNEL**; runbook cuối cùng là [`E01_PERSISTENT_QUICK_TUNNEL.md`](../docs/implementation/tasks/E01_PERSISTENT_QUICK_TUNNEL.md). Named Tunnel task/preflight/remediation notes được giữ như lịch sử `SUPERSEDED` và không phải release path hiện hành. Phase 1 không start runtime; URL preservation có scope SAME CLOUDFLARED LIFETIME, không phải URL vĩnh viễn. Bất kỳ stable-hostname migration nào cũng cần quyết định mới của Project Owner.
 
 Phần tạo animation nằm trong `16_ASSET_ANIMATION_PIPELINE.md`. File này mô tả source frame, style lock, canvas/pivot, frame count/FPS/direction, manifest, atlas, lệnh export, placeholder, runtime loader và QA. Không coi animation hoàn thành chỉ vì có một ảnh tĩnh hoặc một `AnimatedSprite` chạy được trên desktop.
 
