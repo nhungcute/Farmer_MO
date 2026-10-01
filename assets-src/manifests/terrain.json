@@ -23,13 +23,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Terrain Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "terrain_grass_variant_01": {
       "id": "terrain_grass_variant_01",
@@ -53,13 +54,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Terrain Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "terrain_grass_variant_02": {
       "id": "terrain_grass_variant_02",
@@ -83,13 +85,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Terrain Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "terrain_grass_variant_03": {
       "id": "terrain_grass_variant_03",
@@ -113,13 +116,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Terrain Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "terrain_grass_variant_04": {
       "id": "terrain_grass_variant_04",
@@ -143,13 +147,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Terrain Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     }
   },
   "animations": {}

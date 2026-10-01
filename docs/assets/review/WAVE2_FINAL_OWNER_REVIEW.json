@@ -1519,6 +1519,14 @@
     "wave2LicenseApproval": "PENDING_OWNER_REVIEW",
     "releaseApproval": "BLOCKED"
   },
+  "ownerApproval": {
+    "status": "APPROVED",
+    "owner": "Project Owner",
+    "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+    "commitReviewed": "ba69671599a3d618994c94b1c9537460681315f4",
+    "approvedAssetCount": 76,
+    "recordedAt": "2026-10-01"
+  },
   "validators": {
     "wave1": "PASS",
     "wave2": "PASS",

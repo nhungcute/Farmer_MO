@@ -623,13 +623,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Crop Extras Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "crop_ready_glow_01": {
       "id": "crop_ready_glow_01",
@@ -653,13 +654,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Crop Extras Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "crop_ready_glow_02": {
       "id": "crop_ready_glow_02",
@@ -683,13 +685,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Crop Extras Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "crop_ready_glow_03": {
       "id": "crop_ready_glow_03",
@@ -713,13 +716,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Crop Extras Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     }
   },
   "animations": {

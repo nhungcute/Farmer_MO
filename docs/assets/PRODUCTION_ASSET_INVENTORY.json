@@ -4,26 +4,26 @@
   "contentVersion": "mvp-1",
   "schemaVersion": 1,
   "manifestPath": "assets-src/manifests/animation-manifest.json",
-  "manifestSha256": "d49e232a486b2c48c3b6ff834059a538b2a26d6a4584608341b147b43442795e",
+  "manifestSha256": "053437fa47cc6f62a4a120438cfac863fa2c512f28df02893fdf0c32bd738a38",
   "counts": {
     "assets": 188,
     "animations": 10,
     "categories": 8,
     "statusCounts": {
       "placeholder": 0,
-      "production_ready": 76,
-      "approved": 112
+      "production_ready": 0,
+      "approved": 188
     },
     "metadataCounts": {
       "placeholder": 0,
       "production_ready": 188,
-      "approved": 112
+      "approved": 188
     },
     "allCurrentAssetsPlaceholder": false
   },
   "categories": {
     "terrain": {
-      "status": "production_ready",
+      "status": "approved",
       "assetCount": 5,
       "animationCount": 0,
       "assetIds": [
@@ -36,17 +36,17 @@
       "animationIds": [],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 5,
-        "approved": 0
+        "production_ready": 0,
+        "approved": 5
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 5,
-        "approved": 0
+        "approved": 5
       }
     },
     "buildings": {
-      "status": "production_ready",
+      "status": "approved",
       "assetCount": 3,
       "animationCount": 0,
       "assetIds": [
@@ -57,13 +57,13 @@
       "animationIds": [],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 3,
-        "approved": 0
+        "production_ready": 0,
+        "approved": 3
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 3,
-        "approved": 0
+        "approved": 3
       }
     },
     "crops": {
@@ -101,13 +101,13 @@
       ],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 5,
-        "approved": 20
+        "production_ready": 0,
+        "approved": 25
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 25,
-        "approved": 20
+        "approved": 25
       }
     },
     "animals": {
@@ -240,7 +240,7 @@
       }
     },
     "pond": {
-      "status": "production_ready",
+      "status": "approved",
       "assetCount": 19,
       "animationCount": 3,
       "assetIds": [
@@ -271,17 +271,17 @@
       ],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 22,
-        "approved": 0
+        "production_ready": 0,
+        "approved": 22
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 22,
-        "approved": 0
+        "approved": 22
       }
     },
     "effects": {
-      "status": "production_ready",
+      "status": "approved",
       "assetCount": 30,
       "animationCount": 5,
       "assetIds": [
@@ -325,17 +325,17 @@
       ],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 35,
-        "approved": 0
+        "production_ready": 0,
+        "approved": 35
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 35,
-        "approved": 0
+        "approved": 35
       }
     },
     "ui": {
-      "status": "production_ready",
+      "status": "approved",
       "assetCount": 15,
       "animationCount": 0,
       "assetIds": [
@@ -358,13 +358,13 @@
       "animationIds": [],
       "statusCounts": {
         "placeholder": 0,
-        "production_ready": 15,
-        "approved": 0
+        "production_ready": 0,
+        "approved": 15
       },
       "metadataCounts": {
         "placeholder": 0,
         "production_ready": 15,
-        "approved": 0
+        "approved": 15
       }
     }
   },
@@ -372,9 +372,9 @@
     {
       "id": "terrain_grass_tile",
       "category": "terrain",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/terrain/terrain_grass_tile.png",
       "canvas": {
         "width": 256,
@@ -424,9 +424,9 @@
     {
       "id": "terrain_grass_variant_01",
       "category": "terrain",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/terrain/terrain_grass_variant_01.png",
       "canvas": {
         "width": 256,
@@ -476,9 +476,9 @@
     {
       "id": "terrain_grass_variant_02",
       "category": "terrain",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/terrain/terrain_grass_variant_02.png",
       "canvas": {
         "width": 256,
@@ -528,9 +528,9 @@
     {
       "id": "terrain_grass_variant_03",
       "category": "terrain",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/terrain/terrain_grass_variant_03.png",
       "canvas": {
         "width": 256,
@@ -580,9 +580,9 @@
     {
       "id": "terrain_grass_variant_04",
       "category": "terrain",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/terrain/terrain_grass_variant_04.png",
       "canvas": {
         "width": 256,
@@ -632,9 +632,9 @@
     {
       "id": "building_farmhouse_lv1",
       "category": "buildings",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/buildings/building_farmhouse_lv1.png",
       "canvas": {
         "width": 512,
@@ -684,9 +684,9 @@
     {
       "id": "building_warehouse_lv1",
       "category": "buildings",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/buildings/building_warehouse_lv1.png",
       "canvas": {
         "width": 512,
@@ -736,9 +736,9 @@
     {
       "id": "building_chicken_coop_lv1",
       "category": "buildings",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/buildings/building_chicken_coop_lv1.png",
       "canvas": {
         "width": 512,
@@ -788,9 +788,9 @@
     {
       "id": "pond_small_lv1_base",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_base.png",
       "canvas": {
         "width": 512,
@@ -840,9 +840,9 @@
     {
       "id": "icon_coin",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_coin.png",
       "canvas": {
         "width": 128,
@@ -892,9 +892,9 @@
     {
       "id": "icon_diamond",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_diamond.png",
       "canvas": {
         "width": 128,
@@ -944,9 +944,9 @@
     {
       "id": "icon_rice",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_rice.png",
       "canvas": {
         "width": 128,
@@ -996,9 +996,9 @@
     {
       "id": "icon_carrot",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_carrot.png",
       "canvas": {
         "width": 128,
@@ -1048,9 +1048,9 @@
     {
       "id": "icon_corn",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_corn.png",
       "canvas": {
         "width": 128,
@@ -1100,9 +1100,9 @@
     {
       "id": "icon_tomato",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_tomato.png",
       "canvas": {
         "width": 128,
@@ -1152,9 +1152,9 @@
     {
       "id": "icon_chicken_feed",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_chicken_feed.png",
       "canvas": {
         "width": 128,
@@ -1204,9 +1204,9 @@
     {
       "id": "icon_egg",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_egg.png",
       "canvas": {
         "width": 128,
@@ -1256,9 +1256,9 @@
     {
       "id": "icon_order",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/icon_order.png",
       "canvas": {
         "width": 128,
@@ -1308,9 +1308,9 @@
     {
       "id": "ui_rotate_overlay",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/ui_rotate_overlay.png",
       "canvas": {
         "width": 128,
@@ -1360,9 +1360,9 @@
     {
       "id": "ui_loading",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/ui_loading.png",
       "canvas": {
         "width": 128,
@@ -1412,9 +1412,9 @@
     {
       "id": "ui_success_toast",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/ui_success_toast.png",
       "canvas": {
         "width": 128,
@@ -1464,9 +1464,9 @@
     {
       "id": "ui_error_toast",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/ui_error_toast.png",
       "canvas": {
         "width": 128,
@@ -1516,9 +1516,9 @@
     {
       "id": "build_ghost_valid",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/build_ghost_valid.png",
       "canvas": {
         "width": 128,
@@ -1568,9 +1568,9 @@
     {
       "id": "build_ghost_invalid",
       "category": "ui",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ui/build_ghost_invalid.png",
       "canvas": {
         "width": 128,
@@ -1620,9 +1620,9 @@
     {
       "id": "pond_small_lv1_water_00",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_00.png",
       "canvas": {
         "width": 512,
@@ -1672,9 +1672,9 @@
     {
       "id": "pond_small_lv1_water_01",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_01.png",
       "canvas": {
         "width": 512,
@@ -1724,9 +1724,9 @@
     {
       "id": "pond_small_lv1_water_02",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_02.png",
       "canvas": {
         "width": 512,
@@ -1776,9 +1776,9 @@
     {
       "id": "pond_small_lv1_water_03",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_03.png",
       "canvas": {
         "width": 512,
@@ -1828,9 +1828,9 @@
     {
       "id": "pond_small_lv1_water_04",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_04.png",
       "canvas": {
         "width": 512,
@@ -1880,9 +1880,9 @@
     {
       "id": "pond_small_lv1_water_05",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_05.png",
       "canvas": {
         "width": 512,
@@ -1932,9 +1932,9 @@
     {
       "id": "pond_small_lv1_water_06",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_06.png",
       "canvas": {
         "width": 512,
@@ -1984,9 +1984,9 @@
     {
       "id": "pond_small_lv1_water_07",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_water_07.png",
       "canvas": {
         "width": 512,
@@ -2036,9 +2036,9 @@
     {
       "id": "pond_small_lv1_ripple_00",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_00.png",
       "canvas": {
         "width": 512,
@@ -2088,9 +2088,9 @@
     {
       "id": "pond_small_lv1_ripple_01",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_01.png",
       "canvas": {
         "width": 512,
@@ -2140,9 +2140,9 @@
     {
       "id": "pond_small_lv1_ripple_02",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_02.png",
       "canvas": {
         "width": 512,
@@ -2192,9 +2192,9 @@
     {
       "id": "pond_small_lv1_ripple_03",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_03.png",
       "canvas": {
         "width": 512,
@@ -2244,9 +2244,9 @@
     {
       "id": "pond_small_lv1_ripple_04",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_04.png",
       "canvas": {
         "width": 512,
@@ -2296,9 +2296,9 @@
     {
       "id": "pond_small_lv1_ripple_05",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_ripple_05.png",
       "canvas": {
         "width": 512,
@@ -2348,9 +2348,9 @@
     {
       "id": "pond_small_lv1_sparkle_00",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_00.png",
       "canvas": {
         "width": 512,
@@ -2400,9 +2400,9 @@
     {
       "id": "pond_small_lv1_sparkle_01",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_01.png",
       "canvas": {
         "width": 512,
@@ -2452,9 +2452,9 @@
     {
       "id": "pond_small_lv1_sparkle_02",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_02.png",
       "canvas": {
         "width": 512,
@@ -2504,9 +2504,9 @@
     {
       "id": "pond_small_lv1_sparkle_03",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/ponds/pond_small_lv1_sparkle_03.png",
       "canvas": {
         "width": 512,
@@ -3596,9 +3596,9 @@
     {
       "id": "crop_ready_glow_00",
       "category": "crops",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/crop_ready_glow_00.png",
       "canvas": {
         "width": 256,
@@ -3648,9 +3648,9 @@
     {
       "id": "crop_ready_glow_01",
       "category": "crops",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/crop_ready_glow_01.png",
       "canvas": {
         "width": 256,
@@ -3700,9 +3700,9 @@
     {
       "id": "crop_ready_glow_02",
       "category": "crops",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/crop_ready_glow_02.png",
       "canvas": {
         "width": 256,
@@ -3752,9 +3752,9 @@
     {
       "id": "crop_ready_glow_03",
       "category": "crops",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/crop_ready_glow_03.png",
       "canvas": {
         "width": 256,
@@ -3804,9 +3804,9 @@
     {
       "id": "fx_plant_00",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_plant_00.png",
       "canvas": {
         "width": 256,
@@ -3856,9 +3856,9 @@
     {
       "id": "fx_plant_01",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_plant_01.png",
       "canvas": {
         "width": 256,
@@ -3908,9 +3908,9 @@
     {
       "id": "fx_plant_02",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_plant_02.png",
       "canvas": {
         "width": 256,
@@ -3960,9 +3960,9 @@
     {
       "id": "fx_plant_03",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_plant_03.png",
       "canvas": {
         "width": 256,
@@ -4012,9 +4012,9 @@
     {
       "id": "fx_harvest_00",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_00.png",
       "canvas": {
         "width": 256,
@@ -4064,9 +4064,9 @@
     {
       "id": "fx_harvest_01",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_01.png",
       "canvas": {
         "width": 256,
@@ -4116,9 +4116,9 @@
     {
       "id": "fx_harvest_02",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_02.png",
       "canvas": {
         "width": 256,
@@ -4168,9 +4168,9 @@
     {
       "id": "fx_harvest_03",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_03.png",
       "canvas": {
         "width": 256,
@@ -4220,9 +4220,9 @@
     {
       "id": "fx_harvest_04",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_04.png",
       "canvas": {
         "width": 256,
@@ -4272,9 +4272,9 @@
     {
       "id": "fx_harvest_05",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_harvest_05.png",
       "canvas": {
         "width": 256,
@@ -4324,9 +4324,9 @@
     {
       "id": "fx_build_success_00",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_00.png",
       "canvas": {
         "width": 256,
@@ -4376,9 +4376,9 @@
     {
       "id": "fx_build_success_01",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_01.png",
       "canvas": {
         "width": 256,
@@ -4428,9 +4428,9 @@
     {
       "id": "fx_build_success_02",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_02.png",
       "canvas": {
         "width": 256,
@@ -4480,9 +4480,9 @@
     {
       "id": "fx_build_success_03",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_03.png",
       "canvas": {
         "width": 256,
@@ -4532,9 +4532,9 @@
     {
       "id": "fx_build_success_04",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_04.png",
       "canvas": {
         "width": 256,
@@ -4584,9 +4584,9 @@
     {
       "id": "fx_build_success_05",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_build_success_05.png",
       "canvas": {
         "width": 256,
@@ -4636,9 +4636,9 @@
     {
       "id": "fx_coin_gain_00",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_00.png",
       "canvas": {
         "width": 256,
@@ -4688,9 +4688,9 @@
     {
       "id": "fx_coin_gain_01",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_01.png",
       "canvas": {
         "width": 256,
@@ -4740,9 +4740,9 @@
     {
       "id": "fx_coin_gain_02",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_02.png",
       "canvas": {
         "width": 256,
@@ -4792,9 +4792,9 @@
     {
       "id": "fx_coin_gain_03",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_03.png",
       "canvas": {
         "width": 256,
@@ -4844,9 +4844,9 @@
     {
       "id": "fx_coin_gain_04",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_04.png",
       "canvas": {
         "width": 256,
@@ -4896,9 +4896,9 @@
     {
       "id": "fx_coin_gain_05",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_05.png",
       "canvas": {
         "width": 256,
@@ -4948,9 +4948,9 @@
     {
       "id": "fx_coin_gain_06",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_06.png",
       "canvas": {
         "width": 256,
@@ -5000,9 +5000,9 @@
     {
       "id": "fx_coin_gain_07",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_coin_gain_07.png",
       "canvas": {
         "width": 256,
@@ -5052,9 +5052,9 @@
     {
       "id": "fx_egg_collect_00",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_00.png",
       "canvas": {
         "width": 256,
@@ -5104,9 +5104,9 @@
     {
       "id": "fx_egg_collect_01",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_01.png",
       "canvas": {
         "width": 256,
@@ -5156,9 +5156,9 @@
     {
       "id": "fx_egg_collect_02",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_02.png",
       "canvas": {
         "width": 256,
@@ -5208,9 +5208,9 @@
     {
       "id": "fx_egg_collect_03",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_03.png",
       "canvas": {
         "width": 256,
@@ -5260,9 +5260,9 @@
     {
       "id": "fx_egg_collect_04",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_04.png",
       "canvas": {
         "width": 256,
@@ -5312,9 +5312,9 @@
     {
       "id": "fx_egg_collect_05",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "sourceFile": "assets-src/effects/fx_egg_collect_05.png",
       "canvas": {
         "width": 256,
@@ -10150,10 +10150,10 @@
     {
       "id": "pond_water",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "farm_common",
       "directions": [
         "NONE"
@@ -10228,10 +10228,10 @@
     {
       "id": "pond_ripple",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "farm_common",
       "directions": [
         "NONE"
@@ -10304,10 +10304,10 @@
     {
       "id": "pond_sparkle",
       "category": "pond",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "farm_common",
       "directions": [
         "NONE"
@@ -10378,10 +10378,10 @@
     {
       "id": "crop_ready_glow",
       "category": "crops",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"
@@ -10452,10 +10452,10 @@
     {
       "id": "fx_plant",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"
@@ -10526,10 +10526,10 @@
     {
       "id": "fx_harvest",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"
@@ -10602,10 +10602,10 @@
     {
       "id": "fx_build_success",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"
@@ -10678,10 +10678,10 @@
     {
       "id": "fx_coin_gain",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"
@@ -10756,10 +10756,10 @@
     {
       "id": "fx_egg_collect",
       "category": "effects",
-      "status": "production_ready",
+      "status": "approved",
       "placeholder": false,
       "productionReady": true,
-      "approved": false,
+      "approved": true,
       "atlas": "effects",
       "directions": [
         "NONE"

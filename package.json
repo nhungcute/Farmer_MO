@@ -18,6 +18,7 @@
     "assets:validate:strict": "node tools/export-assets/validate.mjs --strict-output",
     "assets:validate:wave1": "node tools/validate-wave1-release.mjs",
     "assets:validate:wave2": "node tools/verify-wave2-final-production-runtime.mjs",
+    "assets:validate:wave2-release": "node tools/validate-wave2-release.mjs",
     "assets:capture:wave2": "node tools/capture-wave2-final-production-runtime.mjs",
     "assets:pack": "node tools/export-assets/index.mjs pack",
     "assets:preview": "node tools/export-assets/index.mjs preview",

@@ -3,7 +3,7 @@
 | Trường | Giá trị |
 |---|---|
 | ID | B02 |
-| Trạng thái | RUNNING - Wave 1 approved; Wave 2 technical/style promotion 76/76; owner content approval pending |
+| Tr?ng th?i | **DONE ? Wave 1 + Wave 2 release approved (188/188)** |
 | Owner | Asset workstream / Integration Owner |
 | Phụ thuộc | B01 DONE; canonical manifest và style guide |
 | Owned paths | assets-src/** sau promote; docs/assets/**; work/art-generation/** theo từng owner |
@@ -11,7 +11,7 @@
 | Deliverables | 112/112 Wave 1 plus 76/76 Wave 2 candidates, owner QA, cross-asset review, atlas/runtime promotion |
 | Bắt đầu | 2026-09-30 |
 | Hoàn tất kỹ thuật | 2026-09-30 |
-| Release approval | Wave 1 APPROVED; Wave 2 content approval PENDING_OWNER_REVIEW |
+| Release approval | Wave 1 APPROVED; Wave 2 content/license/release APPROVED by Project Owner (76/76) |
 
 ## Subtask status
 
@@ -24,7 +24,7 @@
 
 ## Wave 2 targeted revision promotion
 
-The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI each passed read-only re-review and were selectively promoted: **69/69** additional PNGs. Wave 2 is now **76/76** promoted for technical/style use. Canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `licenseApproval=PENDING_OWNER_REVIEW`, `contentApproval=PENDING_OWNER_REVIEW`, `approved=false`, and `approvalRef=null`. Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`.
+The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 Effects and REV-12 UI passed read-only re-review and 69/69 additional PNGs were promoted; Wave 2 reached 76/76 technical/style production-ready. Project Owner then approved the exact 76-asset scope for content, license and release. Canonical records are `placeholder=false`, `production_ready=true`, `technicalReview=PASS`, `styleReview=PASS`, `licenseApproval=APPROVED`, `contentApproval=APPROVED`, `releaseApproval=APPROVED`, `approved=true`, and `approvalRef=docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md`. Evidence: `docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md`, `docs/assets/review/WAVE2_REVISED_PROMOTION.json`, `docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md`.
 
 ## Wave 1 result
 
@@ -41,18 +41,19 @@ The initial 7/76 promotion remained frozen. REV-06 Pond, REV-10 Terrain, REV-11 
 - Canonical IDs, atlas groups, states, directions, frame counts, FPS, loop, holdLast, event, canvas 256×256, sourceScale, anchor (0.5,0.9) và baseline y=230 giữ nguyên.
 - Production source được Integration Owner promote; workers không ghi trực tiếp assets-src/**.
 - Chicken micro-detail giảm 21,83% theo proxy edge-energy; shading chuyển về soft illustrated volume và giữ identity.
-- Tất cả 112 entries dùng source=internal-generated và metadata creator/tool/toolVersion theo thực tế. License là MO_FARM_INTERNAL_ASSET_POLICY_V1; content/license/release approval đã APPROVED.
+- All 188 entries use source=internal-generated with truthful creator/tool/toolVersion provenance. License is MO_FARM_INTERNAL_ASSET_POLICY_V1; content/license/release approval is APPROVED for Wave 1 and Wave 2.
 
 ## Inventory và QA
 
-Inventory: 188 assets, 188 `production_ready=true` flags (112 approved Wave 1 + 76 Wave 2), 0 placeholders, 112 approved. Atlas/runtime rebuild, sidecar parity, frozen 7 hash checks and source-to-slice byte equality passed for 76/76 Wave 2 frames. Final runtime QA covers 9 animation contracts plus DPR1, DPR2, mobile and zoom 1.30 captures.
+Inventory: 188 assets, 188 `production_ready=true` flags, 188 `approved=true` flags (112 Wave 1 + 76 Wave 2), 0 placeholders. Atlas/runtime rebuild, sidecar parity, frozen PNG aggregate hash checks and source-to-slice byte equality passed for 76/76 Wave 2 frames. Final runtime QA covers 9 animation contracts plus DPR1, DPR2, mobile and zoom 1.30 captures.
 
 Đã PASS:
 
 - npm run assets:build
 - npm run assets:validate
 - npm run assets:validate:strict
-- npm run assets:validate:wave1 (112/112 policy-approved; 76 untouched placeholders)
+- npm run assets:validate:wave1 (112/112 Wave 1 approved; Wave 2 scope 76/76 approved)
+- npm run assets:validate:wave2-release (76/76 Wave 2 approved; 188/188 final inventory; PNG aggregate unchanged)
 - npm run renderer:test (16/16)
 - npm run check
 - docker compose config --quiet
@@ -63,4 +64,4 @@ Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, docs/assets/review/
 
 ## Gate tiếp theo
 
-Wave 1 artwork/content/license/release is APPROVED by Project Owner. All Wave 2 groups passed targeted revision review and are promoted for technical/style use; owner content, license and release approval remain pending for the 76 Wave 2 assets. Do not start Cloudflare Named Tunnel or open RC01. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.
+Wave 1 and Wave 2 artwork/content/license/release are APPROVED by Project Owner. B02 is DONE. E01 Cloudflare Named Tunnel is QUEUED/NOT_STARTED and RC01 is QUEUED/BLOCKED_BY_E01; do not start either task from this artwork checkpoint. Rice/Carrot, renderer, animation, and asset contracts remain unchanged.

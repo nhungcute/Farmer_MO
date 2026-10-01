@@ -26,7 +26,14 @@ All eight read-only final owner reviews completed against production PNGs, canon
 
 The review recommendation is **READY_FOR_OWNER_APPROVAL**. It does not infer Project Owner approval. Wave 2 remains `approved=false`, `approvalRef=null`, `contentApproval=PENDING_OWNER_REVIEW`, `licenseApproval=PENDING_OWNER_REVIEW` for the new revision scope, and `releaseApproval=BLOCKED` until explicit Project Owner approval.
 
+
+## Project Owner approval
+
+The historical review boundary above records the pre-approval state. Project Owner approval was subsequently recorded for the exact 76-asset Wave 2 scope in `docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md` at reviewed commit `ba69671599a3d618994c94b1c9537460681315f4`. Content, license and release approval are APPROVED; provenance is VERIFIED. This overlay preserves the original review evidence and does not rewrite its historical recommendation or boundary snapshot.
+
 ## Inventory
+
+The inventory bullets below are the historical pre-approval snapshot. Current canonical inventory after approval is 188 total, 188 production_ready, 188 approved and 0 placeholders (Wave 1=112, Wave 2=76).
 
 - Total: 188
 - production_ready: 188

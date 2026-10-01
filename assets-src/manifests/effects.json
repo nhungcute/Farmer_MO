@@ -23,13 +23,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_plant_01": {
       "id": "fx_plant_01",
@@ -53,13 +54,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_plant_02": {
       "id": "fx_plant_02",
@@ -83,13 +85,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_plant_03": {
       "id": "fx_plant_03",
@@ -113,13 +116,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_00": {
       "id": "fx_harvest_00",
@@ -143,13 +147,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_01": {
       "id": "fx_harvest_01",
@@ -173,13 +178,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_02": {
       "id": "fx_harvest_02",
@@ -203,13 +209,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_03": {
       "id": "fx_harvest_03",
@@ -233,13 +240,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_04": {
       "id": "fx_harvest_04",
@@ -263,13 +271,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_harvest_05": {
       "id": "fx_harvest_05",
@@ -293,13 +302,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_00": {
       "id": "fx_build_success_00",
@@ -323,13 +333,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_01": {
       "id": "fx_build_success_01",
@@ -353,13 +364,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_02": {
       "id": "fx_build_success_02",
@@ -383,13 +395,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_03": {
       "id": "fx_build_success_03",
@@ -413,13 +426,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_04": {
       "id": "fx_build_success_04",
@@ -443,13 +457,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_build_success_05": {
       "id": "fx_build_success_05",
@@ -473,13 +488,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_00": {
       "id": "fx_coin_gain_00",
@@ -503,13 +519,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_01": {
       "id": "fx_coin_gain_01",
@@ -533,13 +550,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_02": {
       "id": "fx_coin_gain_02",
@@ -563,13 +581,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_03": {
       "id": "fx_coin_gain_03",
@@ -593,13 +612,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_04": {
       "id": "fx_coin_gain_04",
@@ -623,13 +643,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_05": {
       "id": "fx_coin_gain_05",
@@ -653,13 +674,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_06": {
       "id": "fx_coin_gain_06",
@@ -683,13 +705,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_coin_gain_07": {
       "id": "fx_coin_gain_07",
@@ -713,13 +736,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_00": {
       "id": "fx_egg_collect_00",
@@ -743,13 +767,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_01": {
       "id": "fx_egg_collect_01",
@@ -773,13 +798,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_02": {
       "id": "fx_egg_collect_02",
@@ -803,13 +829,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_03": {
       "id": "fx_egg_collect_03",
@@ -833,13 +860,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_04": {
       "id": "fx_egg_collect_04",
@@ -863,13 +891,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "fx_egg_collect_05": {
       "id": "fx_egg_collect_05",
@@ -893,13 +922,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Effects Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     }
   },
   "animations": {

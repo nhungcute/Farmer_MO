@@ -23,13 +23,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_00": {
       "id": "pond_small_lv1_water_00",
@@ -53,13 +54,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_01": {
       "id": "pond_small_lv1_water_01",
@@ -83,13 +85,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_02": {
       "id": "pond_small_lv1_water_02",
@@ -113,13 +116,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_03": {
       "id": "pond_small_lv1_water_03",
@@ -143,13 +147,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_04": {
       "id": "pond_small_lv1_water_04",
@@ -173,13 +178,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_05": {
       "id": "pond_small_lv1_water_05",
@@ -203,13 +209,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_06": {
       "id": "pond_small_lv1_water_06",
@@ -233,13 +240,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_water_07": {
       "id": "pond_small_lv1_water_07",
@@ -263,13 +271,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_00": {
       "id": "pond_small_lv1_ripple_00",
@@ -293,13 +302,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_01": {
       "id": "pond_small_lv1_ripple_01",
@@ -323,13 +333,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_02": {
       "id": "pond_small_lv1_ripple_02",
@@ -353,13 +364,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_03": {
       "id": "pond_small_lv1_ripple_03",
@@ -383,13 +395,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_04": {
       "id": "pond_small_lv1_ripple_04",
@@ -413,13 +426,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_ripple_05": {
       "id": "pond_small_lv1_ripple_05",
@@ -443,13 +457,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_sparkle_00": {
       "id": "pond_small_lv1_sparkle_00",
@@ -473,13 +488,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_sparkle_01": {
       "id": "pond_small_lv1_sparkle_01",
@@ -503,13 +519,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_sparkle_02": {
       "id": "pond_small_lv1_sparkle_02",
@@ -533,13 +550,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_sparkle_03": {
       "id": "pond_small_lv1_sparkle_03",
@@ -563,13 +581,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     }
   },
   "animations": {}

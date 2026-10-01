@@ -23,13 +23,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Farmhouse Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "building_warehouse_lv1": {
       "id": "building_warehouse_lv1",
@@ -53,13 +54,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Warehouse Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "building_chicken_coop_lv1": {
       "id": "building_chicken_coop_lv1",
@@ -83,13 +85,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Chicken Coop Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
       "licenseApproval": "APPROVED",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md"
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_INTEGRATION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     },
     "pond_small_lv1_base": {
       "id": "pond_small_lv1_base",
@@ -113,13 +116,14 @@
       "toolVersion": "not exposed by runtime",
       "creator": "Codex / Pond Asset Owner",
       "production_ready": true,
-      "approved": false,
+      "approved": true,
       "technicalReview": "PASS",
       "styleReview": "PASS",
-      "licenseApproval": "PENDING_OWNER_REVIEW",
-      "contentApproval": "PENDING_OWNER_REVIEW",
-      "approvalRef": null,
-      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md"
+      "licenseApproval": "APPROVED",
+      "contentApproval": "APPROVED",
+      "approvalRef": "docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md",
+      "reviewEvidence": "docs/assets/review/WAVE2_TARGETED_REVISION_REVIEW.md",
+      "releaseApproval": "APPROVED"
     }
   },
   "animations": {}

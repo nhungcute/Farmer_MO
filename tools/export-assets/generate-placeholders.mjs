@@ -267,12 +267,12 @@ writeJson(path.join(SOURCE_ROOT, 'manifests', 'licenses.json'), {
     toolVersion: metadata.toolVersion,
     creator: metadata.creator,
     placeholder: metadata.placeholder === true,
-    ...Object.fromEntries(['reviewEvidence', 'technicalReview', 'styleReview', 'contentApproval', 'licenseApproval', 'approvalRef', 'production_ready', 'approved']
+    ...Object.fromEntries(['reviewEvidence', 'technicalReview', 'styleReview', 'contentApproval', 'licenseApproval', 'releaseApproval', 'approvalRef', 'production_ready', 'approved']
       .filter((key) => key in metadata)
       .map((key) => [key, metadata[key]])),
   }])),
 });
-const style = `# MO Farm asset style sheet\n\n- Phối cảnh: isometric 2.5D\n- Tile logic: 128x64 (nguồn raster @2x)\n- Hướng sáng: trên-trái\n- Viền: xanh lá đậm/nâu đồng nhất\n- Bảng màu: kem, gỗ, xanh cỏ, xanh nước, vàng\n- Trạng thái asset được ghi trong manifest; Wave 1 đã có production artwork được duyệt, các nhóm còn lại vẫn là placeholder nội bộ.\n- Không dùng PNG nguồn trực tiếp trong web bundle; chạy pipeline để tạo atlas.\n`;
+const style = `# MO Farm asset style sheet\n\n- Phối cảnh: isometric 2.5D\n- Tile logic: 128x64 (nguồn raster @2x)\n- Hướng sáng: trên-trái\n- Viền: xanh lá đậm/nâu đồng nhất\n- Bảng màu: kem, gỗ, xanh cỏ, xanh nước, vàng\n- Trạng thái asset được ghi trong manifest; production approval và license/release approval được theo dõi riêng trong metadata.\n- Không dùng PNG nguồn trực tiếp trong web bundle; chạy pipeline để tạo atlas.\n`;
 ensureDir(path.join(SOURCE_ROOT, 'style'));
 fs.writeFileSync(path.join(SOURCE_ROOT, 'style', 'style-sheet.md'), style, 'utf8');
 const placeholderCount = Object.values(manifest.assets).filter((asset) => asset.placeholder === true).length;

@@ -15,7 +15,7 @@ Wave 1 có năm owner độc lập. Mỗi owner sở hữu trọn một loại a
 - Worker chỉ ghi work/art-generation/<asset>/**; không worker nào ghi assets-src/**, atlas, runtime, renderer, gameplay, economy, Tutorial, Cloudflare hoặc RC01.
 - Rice và Carrot không bị regenerate trong Revision 2.
 - Candidate phải giữ canonical ID, canvas 256×256, RGBA, baseline/anchor, frame order, FPS, loop, holdLast và event.
-- Provenance phải là dữ liệu thật. Wave 1 dùng license MO_FARM_INTERNAL_ASSET_POLICY_V1; 76 asset ngoài Wave 1 vẫn là placeholder.
+- Provenance uses truthful metadata. Wave 1 and Wave 2 use MO_FARM_INTERNAL_ASSET_POLICY_V1; all 188 assets are owner approved and there are no placeholders.
 - Proof/review nằm ngoài production source và không được dùng để thay thế production atlas.
 
 ## Kết quả Wave 1 — Revision 2
@@ -26,7 +26,7 @@ Wave 1 có năm owner độc lập. Mỗi owner sở hữu trọn một loại a
 - Corn: 5/5 PASS; stage 2/3 không còn detached alpha island.
 - Tomato: 5/5 PASS; seed/stage 1/2/3 không còn detached alpha island, ready giữ nguyên, baseline y=230.
 
-Integration Owner đã promote đủ **112/112** candidate canonical vào assets-src/**, pack atlas và xác nhận byte equality source-to-atlas. Inventory hiện có 112/188 production_ready, 76/188 placeholder, 112/188 approved.
+Integration Owner promoted **188/188** canonical candidates into assets-src/**, rebuilt atlases and verified runtime parity. Inventory: 188/188 production_ready=true, 188/188 approved=true, 0 placeholders; Wave 1=112 and Wave 2=76. Wave 2 approval: `docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md`.
 
 Evidence:
 
@@ -38,6 +38,6 @@ Evidence:
 
 ## Gate đã chạy
 
-npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run assets:validate:wave1 (112/112 policy-approved; 76 untouched placeholders), npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 112/112, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
+npm run assets:build, npm run assets:validate, npm run assets:validate:strict, npm run assets:validate:wave1, npm run assets:validate:wave2-release (188/188 approved; 0 placeholders), npm run renderer:test (16/16), npm run check, docker compose config --quiet, atlas byte equality 188/188, DPR 1/2, mobile và Chicken stress production atlas đều PASS. git diff --check PASS.
 
-Wave 1 is DONE for technical/style/content/license/release/promotion. Wave 2 Integration Owner review is complete: 7 candidates are selected for promotion and Pond/Terrain/Effects/UI remain revision-required. Cloudflare Named Tunnel and RC01 remain CLOSED/NOT_STARTED.
+Wave 1 and Wave 2 are DONE for technical/style/content/license/release/promotion. E01 Cloudflare Named Tunnel is QUEUED/NOT_STARTED and RC01 is QUEUED/BLOCKED_BY_E01.

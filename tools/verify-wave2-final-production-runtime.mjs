@@ -32,7 +32,8 @@ const rows = ids.map((id) => {
   const metadata = sourceManifest.assets?.[id];
   if (!metadata) fail(`${id}: missing source metadata`);
   if (JSON.stringify(runtimeManifest.assets?.[id]) !== JSON.stringify(metadata)) fail(`${id}: runtime metadata mismatch`);
-  if (metadata.placeholder !== false || metadata.production_ready !== true || metadata.approved !== false) fail(`${id}: production flags invalid`);
+  if (metadata.placeholder !== false || metadata.production_ready !== true || metadata.approved !== true) fail(`${id}: production flags invalid`);
+  if (metadata.technicalReview !== 'PASS' || metadata.styleReview !== 'PASS' || metadata.contentApproval !== 'APPROVED' || metadata.licenseApproval !== 'APPROVED' || metadata.releaseApproval !== 'APPROVED' || metadata.approvalRef !== 'docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md') fail(`${id}: release approval metadata invalid`);
   if (licenses.assets?.[id]?.license !== metadata.license) fail(`${id}: license sidecar mismatch`);
   const source = readPng(path.join(ROOT, metadata.sourceFile));
   if (source.width !== metadata.width || source.height !== metadata.height) fail(`${id}: source dimensions mismatch`);

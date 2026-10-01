@@ -20,15 +20,15 @@ A03 + B02 + C03 + D02 + E01 → RC01 Release Candidate.
 - Không regenerate Rice/Carrot khi re-review Chicken/Corn/Tomato.
 - E01 không mở trước khi A03, B02, C03, D02 và Docker gate PASS.
 
-## Current checkpoint — 2026-09-30
+## Current checkpoint ? 2026-10-01
 
 - DONE: A01, A02, A03, B01, C01, C02, C03, D01, D02.
 - DONE: B02.1 style direction; B02.2-PROOF Revision 2 owner APPROVED TO PROCEED.
 - B02 Wave 1: DONE - 112/112 canonical candidates promoted; content/license/release APPROVED.
-- B02: RUNNING - Wave 2 Integration Owner review complete; 7/76 selected for technical/style promotion, 69 remain revision-required, and release approval is still open.
-- Inventory: 188 total, 112 production_ready, 76 placeholder, 112 approved.
-- Evidence: docs/assets/review/WAVE1_INTEGRATION_REVIEW_V2.md, FINAL_OWNER_REVIEW_V2.md, and docs/assets/approvals/WAVE1_PRODUCTION_ART_APPROVAL.md.
-- REVIEW/PROMOTION: Wave 2 ART-06 through ART-13 review complete; selective promotion is limited to 7/76 while four groups require revision. CLOSED: E01 Cloudflare Named Tunnel and RC01 Release Candidate.
+- B02: DONE ? Wave 2 release approval recorded for all 76 assets; canonical inventory is 188/188 production_ready, 188/188 approved, 0 placeholders.
+- Inventory: 188 total; metadata flags production_ready=188, approved=188, placeholder=0. Wave 1=112 approved; Wave 2=76 approved.
+- Evidence: Wave 1 review/approval records plus docs/assets/approvals/WAVE2_PRODUCTION_ART_APPROVAL.md and npm run assets:validate:wave2-release.
+- RELEASE: Wave 2 ART-06 through ART-13 are approved 76/76. E01 is QUEUED/NOT_STARTED; RC01 is QUEUED/BLOCKED_BY_E01/NOT_STARTED.
 
 ## Gate rules
 
