@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mo-farm-static-v6-live-world-csp';
+const CACHE_NAME = 'mo-farm-static-v7-ui-foundation';
 const STATIC_URLS = [
   './',
   './index.html',
@@ -12,6 +12,12 @@ const STATIC_URLS = [
   './src/ui/PanelLayout.js',
   './src/ui/ReferencePanels.js',
   './src/ui/LiveHud.js',
+  './src/ui/foundation/index.js',
+  './src/ui/foundation/foundation.css',
+  './src/ui/foundation/tokens.css',
+  './src/ui/foundation/content.js',
+  './src/ui/foundation/content.generated.mjs',
+  ...['contract', 'html', 'icons', 'primitives', 'runtime', 'shell'].map(name => `./src/ui/foundation/${name}.js`),
   './src/live-game.css',
   './src/game/integration/mountPixiFarmRenderer.js',
   './src/game/pixi/PixiFarmRenderer.js',

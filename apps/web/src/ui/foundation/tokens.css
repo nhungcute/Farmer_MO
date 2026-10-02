@@ -1,0 +1,28 @@
+:root {
+  --farm-ink:#653719; --farm-muted:#87663f; --farm-cream:#fff8df; --farm-cream-light:#fffdf2;
+  --farm-cream-deep:#f9e9b5; --farm-line:#d9ae68; --farm-wood:#a56832; --farm-wood-light:#d39a58;
+  --farm-wood-dark:#764320; --farm-green:#63af2e; --farm-green-light:#a4d64b; --farm-green-dark:#397e24;
+  --farm-orange:#ffab23; --farm-orange-light:#ffd15a; --farm-orange-dark:#c97611;
+  --farm-red:#de654e; --farm-red-dark:#a43f31; --farm-blue:#338ecb; --farm-blue-light:#78bee9;
+  --farm-grass:#96c966; --farm-focus:#1477bb; --farm-overlay:#36522655;
+  --farm-font:'Trebuchet MS','Segoe UI',system-ui,sans-serif;
+  --farm-font-display:'Arial Rounded MT Bold','Trebuchet MS','Segoe UI',sans-serif;
+  --farm-text-xs:12px; --farm-text-sm:14px; --farm-text-md:16px; --farm-text-lg:20px; --farm-text-title:clamp(22px,2.5vw,32px);
+  --farm-space-1:4px; --farm-space-2:8px; --farm-space-3:12px; --farm-space-4:16px; --farm-space-5:24px; --farm-space-6:32px;
+  --farm-radius-sm:9px; --farm-radius-md:15px; --farm-radius-lg:23px; --farm-radius-pill:999px;
+  --farm-shadow-small:0 3px 0 #95632d33; --farm-shadow-panel:0 5px 0 #80532844,0 12px 28px #42642b30;
+  --farm-shadow-inset:inset 0 2px 0 #ffffffbd,inset 0 -3px 0 #75441925;
+  --farm-panel-surface:linear-gradient(130deg,var(--farm-cream-light),var(--farm-cream));
+  --farm-wood-surface:linear-gradient(180deg,#d09a5a,#bd803f 45%,#a66b34 48%,#b97b3d);
+  --farm-action-surface:linear-gradient(var(--farm-green-light),var(--farm-green) 54%,#55a426);
+  --farm-control-height:48px; --farm-touch-size:44px; --farm-icon-size:36px;
+  --farm-hud-height:86px; --farm-toolbar-height:96px; --farm-nav-width:90px; --farm-context-width:296px;
+  --farm-shell-gap:20px; --farm-modal-width:1080px; --farm-toast-width:480px;
+  --farm-z-world:0; --farm-z-hud:20; --farm-z-context:30; --farm-z-toolbar:35; --farm-z-modal:50; --farm-z-toast:60;
+  --farm-safe-top:max(var(--farm-shell-gap),env(safe-area-inset-top));
+  --farm-safe-right:max(var(--farm-shell-gap),env(safe-area-inset-right));
+  --farm-safe-bottom:max(var(--farm-shell-gap),env(safe-area-inset-bottom));
+  --farm-safe-left:max(var(--farm-shell-gap),env(safe-area-inset-left));
+}
+@media(max-width:1199px) { :root { --farm-shell-gap:12px; --farm-hud-height:72px; --farm-toolbar-height:78px; --farm-nav-width:68px; --farm-context-width:264px; } }
+@media(max-height:600px) { :root { --farm-shell-gap:8px; --farm-hud-height:54px; --farm-toolbar-height:64px; --farm-nav-width:56px; --farm-control-height:44px; --farm-icon-size:28px; --farm-text-md:14px; --farm-text-lg:18px; --farm-text-title:23px; } }

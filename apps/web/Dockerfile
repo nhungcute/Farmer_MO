@@ -4,9 +4,11 @@ ENV NODE_ENV=production
 COPY package.json package-lock.json ./
 COPY apps/api/package.json ./apps/api/package.json
 COPY packages/content/package.json ./packages/content/package.json
+COPY packages/content/index.mjs ./packages/content/index.mjs
 RUN npm ci --include=dev
 COPY apps/web ./apps/web
-RUN node apps/web/build/vendor-pixi.mjs \
+RUN node apps/web/build/sync-content.mjs \
+  && node apps/web/build/vendor-pixi.mjs \
   && mkdir -p apps/web/public/app \
   && cp apps/web/index.html apps/web/public/index.html \
   && cp apps/web/sw.js apps/web/public/sw.js \
